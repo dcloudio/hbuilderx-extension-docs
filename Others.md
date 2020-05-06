@@ -1,0 +1,1 @@
+更多示例代码请参考[hbuilderx-extension-samples](https://github.com/dcloudio/hbuilderx-extension-samples)
