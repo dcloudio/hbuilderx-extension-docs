@@ -2,7 +2,7 @@
 
 ### configuration
 configuration扩展点，会将扩展的配置项注册到HBuilderX的全局可视化配置里`设置`-`插件配置`。
-扩展
+
 #### 示例
 ```json
     "contributes": {
