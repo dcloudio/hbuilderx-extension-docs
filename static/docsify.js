@@ -3443,20 +3443,20 @@
 		 * 处理侧边栏的索引会指向其它页面锚点的情况
 		 * 例如：uni-ui 会指向 component/README 的 id=uniui
 		 */
-		var matchCurrentPath = false;
+		// var matchCurrentPath = false;
 		var tocLength = toc.length;
-		if (activeEl && tocLength) {
-			for (var i = 0; i < tocLength; i++) {
-				if (toc[i].slug === currentPath) {
-					matchCurrentPath = true;
-					break;
-				}
-			}
-		}
-		if (matchCurrentPath) {
-			this.toc = [];
-			return;
-		}
+		// if (activeEl && tocLength) {
+		// 	for (var i = 0; i < tocLength; i++) {
+		// 		if (toc[i].slug === currentPath) {
+		// 			matchCurrentPath = true;
+		// 			break;
+		// 		}
+		// 	}
+		// }
+		// if (matchCurrentPath) {
+		// 	this.toc = [];
+		// 	return;
+		// }
 		
 		var homepage = $docsify.homepage.split('.').slice(0,-1).join('.')
 
