@@ -550,6 +550,7 @@ workspace二级模块对象，用于处理和工作空间以及文档事件有�
 |isUntitled		|Boolean							| 是否是无标题文件											|
 |lineCount		|Number								|文档总行数													|
 |uri			|[Uri](#Uri)						|文档的uri，如果是本地文件，可通过uri.fsPath获取本地文件路径|
+|languageId|String|编程语言Id，如'javascript','html'等，完整id列表参见[这里](/ExtensionDocs/Api/README.md#languageId)									|
 |workspaceFolder|[WorkspaceFolder](#WorkspaceFolder)|该文档文件所属的项目对象									|
 
 ### getText
