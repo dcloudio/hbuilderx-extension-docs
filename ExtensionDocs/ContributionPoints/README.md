@@ -3,6 +3,19 @@
 ### configuration
 configuration扩展点，会将扩展的配置项注册到HBuilderX的全局可视化配置里`设置`-`插件配置`。
 
+#### 属性列表
+
+##### title
+每个插件扩展的配置是分配到同一组下的，title指的是该组的名称，一般写的是插件名称。
+
+##### properties
+properties内配置的是一个jsonobject对象，该对象的key代表着要扩展的配置项id，value是一个符合[JSON Schema](https://json-schema.org/understanding-json-schema/reference/index.html)规范的jsonobject，目前支持的字段包括：
+
+- type 类型。支持的类型包括：string、boolean、number。
+- description 描述
+- default 默认值
+- enum  可选值，目前只有type为string或number时可用
+
 #### 示例
 ```json
     "contributes": {
