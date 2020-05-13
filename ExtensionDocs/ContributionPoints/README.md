@@ -36,10 +36,14 @@ properties内配置的是一个jsonobject对象，该对象的key代表着要扩
         }
     }
 ```
+效果图如下：
+
+<img src="/static/snapshots/settings.png" style="zoom:50%" />
+
 
 ### commands
 commands扩展点用于声明一个`命令`，`命令`可以通过`menus`扩展点和菜单关联到一起
-> 注意：当一个`命令`将要执行时，将会触发一个`onCommand:${commandId}`的activationEvent用于激活监听该`命令`的插件
+> 注意：当一个`命令`将要执行时，将会触发一个`onCommand:${commandId}`的[activationEvent](/ExtensionDocs/activation_event.md)用于激活监听该`命令`的插件
 
 #### 示例
 ```json
