@@ -56,7 +56,10 @@ commands二级模块对象，用于处理和`命令`相关的逻辑。`命令`�
 |command	|String		|要执行的`命令`id	|
 
 #### 返回值
-无
+|返回类型	|描述		|
+|--			|--			|
+|Promise	|Promise对象|
+
 
 #### 示例
 ``` javascript
@@ -115,12 +118,12 @@ hx.commands.executeCommand('workbench.action.closeAllEditors')
 languages二级模块对象，用于处理和编程语言相关的逻辑，目前仅支持校验文档时创建问题列表。
 
 ### createDiagnosticCollection
-创建一个问题列表
+创建一个问题列表，可用于文档校验时在文档出错区域显示波浪线标识问题。
 #### 参数说明
 
 |参数名称	|参数类型	|描述			|
 |--			|--			|--				|
-|name		|String		|问题列表名称	|
+|name		|String		|问题列表名称，当鼠标移至波浪线上时会显示在tooltips中|
 
 #### 返回值
 |返回类型										|描述			|
@@ -292,7 +295,7 @@ window二级模块对象，用于处理主窗口相关的逻辑。
 ```
 
 ### getActiveTextEditor
-获取当前激活的编辑器
+获取当前激活的编辑器,如果没有打开的编辑器返回undefined
 #### 参数说明
 无
 
@@ -301,6 +304,7 @@ window二级模块对象，用于处理主窗口相关的逻辑。
 |返回类型				|描述									|
 |--						|--										|
 |Promise&lt;[TextEditor](#TextEditor)&gt;	|返回当前激活的编辑器|
+
 #### 示例
 ``` javascript
     let activeEditor = hx.window.getActiveTextEditor();
@@ -334,12 +338,12 @@ window二级模块对象，用于处理主窗口相关的逻辑。
 ```
 
 ### createOutputChannel
-创建一个输出控制台，可用于在控制台打印日志信息。
+创建一个输出控制台通道，可用于在控制台输出文本内容。
 #### 参数说明
 
-|参数名称	|参数类型	|描述			|
-|--			|--			|--				|
-|channel	|String		|控制台通道名称	|
+|参数名称	|参数类型	|描述																								|
+|--			|--			|--																									|
+|channel	|String		|控制台通道名称，在添加内容到控制台时，会将该名称作为前缀输出，eg:[${channel}] 这是要输出的内容。	|
 
 #### 返回值
 |返回类型						|描述		|
@@ -440,7 +444,7 @@ workspace二级模块对象，用于处理和工作空间以及文档事件有�
 ```
 
 ### applyEdit
-执行指定的文档uri编辑工作空间内已打开的文档。
+根据指定的WorkspaceEdit对象编辑文档。WorkspaceEdit对象内要设定被修改文档的uri和要执行修改的TextEdit操作对象。
 #### 参数说明
 
 |参数名称	|参数类型									|描述			|
@@ -567,7 +571,7 @@ workspace二级模块对象，用于处理和工作空间以及文档事件有�
 
 
 ### lineAt
-获取指定的行信息
+获取指定行号的行信息
 
 |参数名称	|参数类型	|描述			|
 |--			|--			|--				|
@@ -684,7 +688,7 @@ workspace二级模块对象，用于处理和工作空间以及文档事件有�
 |end	|Number		|结束位置	|
 
 ## OutputChannel
-输出通道
+输出通道，在添加内容到控制台时，会将通道名称作为前缀输出，eg:[${channel}] 这是要输出的内容。	
 ### 属性列表
 |属性名	|属性类型	|描述		|
 |--		|--			|--			|
@@ -820,9 +824,9 @@ workspace二级模块对象，用于处理和工作空间以及文档事件有�
 
 #### 示例
 ``` javascript
-    let workspaceEdit = new WorkspaceEdit();
+    let workspaceEdit = new hx.WorkspaceEdit();
     let edits = [];
-    edits.push(new TextEdit({
+    edits.push(new hx.TextEdit({
         start: 0,
         end: 0
     }, "foo"));
