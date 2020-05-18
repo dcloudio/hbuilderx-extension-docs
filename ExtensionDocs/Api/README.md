@@ -636,6 +636,57 @@ env二级模块对象，包含运行环境信息和系统交互相关的方法
         });
     });
 ```
+
+### setSelection
+设置主选择区域，该API会首先清除原来的光标选择，如果要使用多光标，请使用[addSelection](#addSelection)方法
+#### 参数说明
+
+|参数名称	|参数类型	|描述		|
+|--			|--			|--			|
+|active		|Number		|选择区域中带光标的一侧，详情见下图|
+|anchor		|Number		|选择区域中不带光标的一侧，详情见下图	|
+
+<img src="/static/snapshots/anchor_active.jpg" style="zoom:50%" />
+
+#### 返回值
+|返回类型	|描述	|
+|--			|--		|
+|Promise&lt;void&gt;	|Promise	|
+
+#### 示例
+``` javascript
+let editor = hx.window.getActiveTextEditor();
+editor.then((editor)=>{
+    editor.setSelection(10,12);
+})
+```
+
+### addSelection
+增加新的选择区域，调用后会在编辑器内追加一个新一个光标。
+#### 参数说明
+
+|参数名称	|参数类型	|描述		|
+|--			|--			|--			|
+|active		|Number		|选择区域中带光标的一侧，详情见下图|
+|anchor		|Number		|选择区域中不带光标的一侧，详情见下图	|
+
+<img src="/static/snapshots/anchor_active.jpg" style="zoom:50%" />
+
+#### 返回值
+|返回类型	|描述	|
+|--			|--		|
+|Promise&lt;void&gt;	|Promise	|
+
+#### 示例
+``` javascript
+let editorPromise = hx.window.getActiveTextEditor();
+editorPromise.then((editor)=>{
+    editor.setSelection(10,12).then(()=>{
+        editor.addSelection(16,18);
+    });
+})
+```
+
 ## TextDocument
 编辑器打开的文档文件
 ### 属性列表
