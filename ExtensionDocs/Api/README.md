@@ -527,7 +527,7 @@ env二级模块对象，包含运行环境信息和系统交互相关的方法
 |appData	|String					|应用程序数据存放路径													|
 |clipboard	|[Clipboard](#Clipboard)|剪切板对象，可用于读取剪切板内容和写入内容到剪切板，目前仅支持文本格式	|
 
-### openExtenerl
+### openExternal
 打开一个外部链接，比如`https://www.dcloud.io`、`mailto:ide@dcloud.io`
 #### 参数说明
 
@@ -542,7 +542,7 @@ env二级模块对象，包含运行环境信息和系统交互相关的方法
 
 #### 示例
 ``` javascript
-    var openPromise = hx.env.openExtenerl("https://www.dcloud.io");
+    var openPromise = hx.env.openExternal("https://www.dcloud.io");
 	openPromise.then(function(success) {
 		console.log("打开链接结果：",success);
 	});
