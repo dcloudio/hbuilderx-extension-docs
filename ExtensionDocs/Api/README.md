@@ -577,9 +577,9 @@ env二级模块对象，包含运行环境信息和系统交互相关的方法
 |value		|String		|要写入剪切板的字符串|
 
 #### 返回值
-|返回类型				|描述				|
-|--						|--					|
-|Promise&lt;void&gt;	||
+|返回类型			|描述	|
+|--					|--		|
+|Promise&lt;void&gt;|Promise|
 
 #### 示例
 ``` javascript
