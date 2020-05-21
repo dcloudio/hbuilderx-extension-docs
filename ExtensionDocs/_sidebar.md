@@ -1,8 +1,7 @@
-* 参考文档
-	* [插件API](/ExtensionDocs/Api/README.md)
-	* [扩展点](/ExtensionDocs/ContributionPoints/README.md) 
-	* [插件激活机制](/ExtensionDocs/activation_event.md) 
-	* [插件规范](/ExtensionDocs/manifest.md) 
+* [API文档](/ExtensionDocs/Api/README.md)
+* [扩展点](/ExtensionDocs/ContributionPoints/README.md) 
+* [插件激活机制](/ExtensionDocs/activation_event.md) 
+* [插件规范](/ExtensionDocs/manifest.md) 
 <div class="contact-box">
 	<div class="contact-item">
 	  <img src="//img-cdn-qiniu.dcloud.net.cn/uniapp/doc/qq@2x.png" width="20" height="20"/>
