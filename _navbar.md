@@ -1,5 +1,5 @@
 * [插件开发指南](README.md)
-* [参考文档](/ExtensionDocs/Api/README.md)
+* [API文档](/ExtensionDocs/Api/README.md)
 
 <ul class="nav-href">
 	<li><a href="//dev.dcloud.net.cn/wish/?channel=hbuilder" target="__blank">需求墙</a></li>

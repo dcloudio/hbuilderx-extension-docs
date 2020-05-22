@@ -57,6 +57,58 @@ commands扩展点用于声明一个`命令`，`命令`可以通过`menus`扩展�
     }
 ```
 
+### snippets
+snippets扩展点可以扩展指定编程语言的代码块，可扩展的编程语言Id列表见[这里](/ExtensionDocs/Api/README.md#languageId)。扩展示例代码如下：
+
+```json
+    "contributes": {
+        "snippets": [
+          {
+            "language": "css",
+            "path": "./snippets/css.json"
+          },
+          {
+            "project":"uni-app",
+            "language": "css",
+            "path": "./snippets/condition_comment.json"
+          }
+        ]
+    }
+```
+
+#### 属性列表
+|属性名称		|属性类型	|是否必须	|描述																																		|
+|--				|--			|--			|--																																			|
+|project		|String		|否			|是否只在指定的项目类型下生效，目前的可取值为"Web","App","Wap2App","uni-app";如果要支持多项目类型可以通过逗号分隔，例如："Web,uni-app,App"	|
+|language		|String		|是			|编程语言ID，用于限定只在指定的语言下生效，语言Id的列表参见[这里](/ExtensionDocs/Api/README.md#languageId)									|
+|path|String		|是			|要扩展的代码块列表文件路径，文件内容格式见下面|
+
+#### 代码块格式
+每个配置项的说明如下表：
+
+|名称|描述|
+|--	|--	|
+|`key`|代码块显示名称，显示在代码助手列表中的名字，以下例子中"console.log"就是一个key。|
+|prefix|代码块的触发字符，就是敲什么字母匹配这个代码块。|
+|body|代码块的内容。内容中有如下特殊格式：<br />$1 表示代码块输入后光标的所在位置。如需要多光标，就在多个地方配置$1,如该位置有预置数据，则写法是${1:foo1}，多选项即下拉候选列表使用${1:foo1/foo2/foo3}；<br />$2 表示代码块输入后再次按tab后光标的切换位置tabstops（代码块展开后按tab可以跳到下一个tabstop；<br />$0 代表代码块输入后最终光标的所在位置（也可以按回车直接跳过去）。<br />双引号使用\"转义，换行使用多个数组表示，每个行一个数组，用双引号包围，并用逗号分隔，缩进需要用\t表示，不能直接输入缩进！|
+|triggerAssist	|为true表示该代码块输入到文档后立即在第一个tabstop上触发代码提示，拉出代码助手，默认为false。|
+
+#### 代码块示例
+```json
+// ./snippets/javascript.json
+{
+    "console.log": {
+    	"prefix": "logtwo",
+    	"body": [
+    		"console.log('$1');",
+    		"\tconsole.log('${2:foo/bar}');"
+    	],
+    	"triggerAssist": false,
+    	"description": "Log output to console twice"
+	}
+}
+```
+
 ### menus
 menus扩展点会关联一个`命令`到相应的菜单项里面，当菜单触发时将会执行对应的`命令`。menus节点下配置的对象内的key指的是要注册到哪个弹出菜单里面，目前支持的key值列表如下：
 - `editor/context` ：编辑器右键菜单
@@ -80,6 +132,7 @@ menus扩展点会关联一个`命令`到相应的菜单项里面，当菜单触�
 |title			|String		|否			|菜单项的名称，如果没有配置，将采用`命令`的title											|
 |[group](#group)|String		|是			|菜单项要注册的位置,查看目前支持的[group列表](#group)。注意该属性必须写，不写视为无效菜单扩展	|
 |[when](#when)	|String		|否			|控制菜单项是否显示的逻辑表达式,[表达式说明](#when)											|
+|checked	    |String		|否			|`从HBuilderX 2.7.6及以上版本开始支持` <br/>控制菜单项是否处于checked的逻辑表达式,表达式语法和[when](#when)表达式一致										|
 
 > 当属性title和command都为空时，将被识别为分割线。
 

@@ -438,9 +438,33 @@ workspace二级模块对象，用于处理和工作空间以及文档事件有�
 
 #### 示例
 ``` javascript
-    let onDidChangeTextDocumentEventDispose = hx.workspace.onDidSaveTextDocument(function(document){
+    let onDidSaveTextDocumentEventDispose = hx.workspace.onDidSaveTextDocument(function(document){
         //do something with document.
     });
+```
+
+### onDidOpenTextDocument
+`从HBuilderX 2.7.6及以上版本开始支持`
+
+文档打开时的事件
+
+#### 参数说明
+
+|参数名称	|参数类型								|描述		|
+|--			|--										|--			|
+|listener	|Function([TextDocument](#TextDocument))|事件回调	|
+
+#### 返回值
+|返回类型	|描述				|
+|--			|--					|
+|[Disposable](#Disposable)	|该事件回调的销毁器，可将该对象放置到插件的context.subscriptions数组内，插件卸载时，将会自动注销该`事件回调`	|
+
+#### 示例
+``` javascript
+    let onDidOpenTextDocumentEventDispose = hx.workspace.onDidOpenTextDocument(function(document){
+        //do something with document.
+    });
+    context.subscriptions.push(onDidOpenTextDocumentEventDispose);
 ```
 
 ### applyEdit
@@ -494,6 +518,80 @@ workspace二级模块对象，用于处理和工作空间以及文档事件有�
     let fontSize = config.get("fontSize");
 ```
 
+## env
+`从HBuilderX 2.7.6及以上版本开始支持`
+
+env二级模块对象，包含运行环境信息和系统交互相关的方法
+### 属性列表
+|属性名		|属性类型				|描述																	|
+|--			|--						|--																		|
+|appName	|String					|应用程序名称：HBuilder X												|
+|appVersion	|String					|应用程序主版本号，可在菜单【帮助】-【关于】中查看						|
+|appRoot	|String					|应用程序安装路径														|
+|appData	|String					|应用程序数据存放路径													|
+|clipboard	|[Clipboard](#Clipboard)|剪切板对象，可用于读取剪切板内容和写入内容到剪切板，目前仅支持文本格式	|
+
+### openExternal
+打开一个外部链接，比如`https://www.dcloud.io`、`mailto:ide@dcloud.io`
+#### 参数说明
+
+|参数名称	|参数类型	|描述			|
+|--			|--			|--				|
+|uri		|String		|外部链接地址	|
+
+#### 返回值
+|返回类型				|描述				|
+|--						|--					|
+|Promise&lt;Boolean&gt;	|返回是否打开成功	|
+
+#### 示例
+``` javascript
+    var openPromise = hx.env.openExternal("https://www.dcloud.io");
+	openPromise.then(function(success) {
+		console.log("打开链接结果：",success);
+	});
+```
+
+## Clipboard
+`从HBuilderX 2.7.6及以上版本开始支持`
+
+剪切板对象，可用于读取剪切板内容和写入内容到剪切板，目前仅支持文本格式	
+### readText
+读取剪切板内容
+#### 参数说明
+无
+
+#### 返回值
+|返回类型				|描述			|
+|--						|--				|
+|Promise&lt;String&gt;	|返回剪切板内容	|
+
+#### 示例
+``` javascript
+    var readPromise = hx.env.clipboard.readText();
+	readPromise.then(function(text) {
+		console.log("读取剪切板内容：",text);
+	});
+```
+
+### writeText
+写入剪切板内容
+#### 参数说明
+
+|参数名称	|参数类型	|描述			|
+|--			|--			|--				|
+|value		|String		|要写入剪切板的字符串|
+
+#### 返回值
+|返回类型			|描述	|
+|--					|--		|
+|Promise&lt;void&gt;|Promise|
+
+#### 示例
+``` javascript
+    hx.env.clipboard.writeText("Hello Clipboard.");
+```
+
 ## TextDocumentWillSaveEvent
 文档即将保存的事件
 ### 属性列表
@@ -544,6 +642,57 @@ workspace二级模块对象，用于处理和工作空间以及文档事件有�
         });
     });
 ```
+
+### setSelection
+设置主选择区域，该API会首先清除原来的光标选择，如果要使用多光标，请使用[addSelection](#addSelection)方法
+#### 参数说明
+
+|参数名称	|参数类型	|描述		|
+|--			|--			|--			|
+|active		|Number		|选择区域中带光标的一侧，详情见下图|
+|anchor		|Number		|选择区域中不带光标的一侧，详情见下图	|
+
+<img src="/static/snapshots/anchor_active.jpg" style="zoom:50%" />
+
+#### 返回值
+|返回类型	|描述	|
+|--			|--		|
+|Promise&lt;void&gt;	|Promise	|
+
+#### 示例
+``` javascript
+let editor = hx.window.getActiveTextEditor();
+editor.then((editor)=>{
+    editor.setSelection(10,12);
+})
+```
+
+### addSelection
+增加新的选择区域，调用后会在编辑器内追加一个新一个光标。
+#### 参数说明
+
+|参数名称	|参数类型	|描述		|
+|--			|--			|--			|
+|active		|Number		|选择区域中带光标的一侧，详情见下图|
+|anchor		|Number		|选择区域中不带光标的一侧，详情见下图	|
+
+<img src="/static/snapshots/anchor_active.jpg" style="zoom:50%" />
+
+#### 返回值
+|返回类型	|描述	|
+|--			|--		|
+|Promise&lt;void&gt;	|Promise	|
+
+#### 示例
+``` javascript
+let editorPromise = hx.window.getActiveTextEditor();
+editorPromise.then((editor)=>{
+    editor.setSelection(10,12).then(()=>{
+        editor.addSelection(16,18);
+    });
+})
+```
+
 ## TextDocument
 编辑器打开的文档文件
 ### 属性列表
