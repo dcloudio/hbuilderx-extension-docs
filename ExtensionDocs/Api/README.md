@@ -384,6 +384,8 @@ workspace二级模块对象，用于处理和工作空间以及文档事件有�
 ```
 
 ### onDidChangeConfiguration
+`从HBuilderX 2.7.10及以上版本开始支持`
+
 全局配置改变事件，比如"editor.fontSize"改变，或者通过插件扩展的配置项改变。
 
 #### 参数说明
@@ -406,6 +408,8 @@ workspace二级模块对象，用于处理和工作空间以及文档事件有�
 ```
 
 ### onDidChangeWorkspaceFolders
+`从HBuilderX 2.7.10及以上版本开始支持`
+
 项目管理器内的项目新增或者移除时产生的事件
 
 #### 参数说明
