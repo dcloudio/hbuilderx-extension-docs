@@ -382,6 +382,29 @@ workspace二级模块对象，用于处理和工作空间以及文档事件有�
 		console.log("打开了文档:",document.fileName);
 	});
 ```
+
+### onDidChangeConfiguration
+全局配置改变事件，比如"editor.fontSize"改变，或者通过插件扩展的配置项改变。
+
+#### 参数说明
+|参数名称	|参数类型															|描述		|
+|--			|--																	|--			|
+|listener	|Function([ConfigurationChangeEvent](#ConfigurationChangeEvent))	|配置修改事件回调	|
+
+#### 返回值
+|返回类型	|描述				|
+|--			|--					|
+|[Disposable](#Disposable)	|该事件回调的销毁器，可将该对象放置到插件的context.subscriptions数组内，插件卸载时，将会自动注销该`事件回调`	|
+
+#### 示例
+``` javascript
+    let configurationChangeDisplose = hx.workspace.onDidChangeConfiguration(function(event){
+        if(event.affectsConfiguration("editor.fontSize")){
+            console.log("修改了字体大小");
+        }
+    });
+```
+
 ### onWillSaveTextDocument
 文档即将要保存的事件,注意该事件是同步调用,会阻塞用户界面,为了避免长时间阻塞界面，目前设置了超时机制，超时时间为2s。
 > 注意你在该事件回调中执行的逻辑不应该占用太长的时间，如果超时将会出现一些不可预测的问题。
@@ -594,6 +617,33 @@ env二级模块对象，包含运行环境信息和系统交互相关的方法
 ``` javascript
     hx.env.clipboard.writeText("Hello Clipboard.");
 ```
+
+## ConfigurationChangeEvent
+配置改变产生的事件
+
+### affectsConfiguration
+判断该事件该变了哪个配置项值
+
+#### 参数说明
+
+|参数名称	|参数类型	|描述								|
+|--			|--			|--									|
+|section	|String		|配置项的key，比如:"editor.fontSize"|
+
+#### 返回值
+|返回类型	|描述												|
+|--			|--													|
+|Boolean	|`true`表示配置项被修改，`false`表示配置项没有被修改|
+
+#### 示例
+``` javascript
+    let configurationChangeDisplose = hx.workspace.onDidChangeConfiguration(function(event){
+        if(event.affectsConfiguration("editor.fontSize")){
+            console.log("修改了字体大小");
+        }
+    });
+```
+
 
 ## TextDocumentWillSaveEvent
 文档即将保存的事件
