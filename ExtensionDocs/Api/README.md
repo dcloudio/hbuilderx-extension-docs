@@ -48,7 +48,10 @@ commands二级模块对象，用于处理和`命令`相关的逻辑。`命令`�
 ```
 
 ### executeCommand
-执行指定id的`命令`。除了插件扩展的`命令`外，还可以执行HBuilderX内置的`命令`，完整的内置`命令`列表可以通过HBuilderX的顶部菜单`工具`-`自定义快捷键`，然后在打开的配置文件左侧部门找到所有列出的`command`字段。
+执行指定id的`命令`。除了插件扩展的`命令`外，还可以执行HBuilderX内置的`命令`，完整的内置`命令`列表可以通过HBuilderX的顶部菜单`工具`-`自定义快捷键`，然后在打开的配置文件左侧部分找到所有列出的`command`字段，如下图：
+
+<img src="/static/snapshots/commands@2x.png" style="zoom:50%" />
+
 #### 参数说明
 
 |参数名称	    |参数类型	    |描述			|
@@ -379,6 +382,58 @@ workspace二级模块对象，用于处理和工作空间以及文档事件有�
 		console.log("打开了文档:",document.fileName);
 	});
 ```
+
+### onDidChangeConfiguration
+`从HBuilderX 2.7.10及以上版本开始支持`
+
+全局配置改变事件，比如"editor.fontSize"改变，或者通过插件扩展的配置项改变。
+
+#### 参数说明
+|参数名称	|参数类型															|描述		|
+|--			|--																	|--			|
+|listener	|Function([ConfigurationChangeEvent](#ConfigurationChangeEvent))	|配置修改事件回调	|
+
+#### 返回值
+|返回类型	|描述				|
+|--			|--					|
+|[Disposable](#Disposable)	|该事件回调的销毁器，可将该对象放置到插件的context.subscriptions数组内，插件卸载时，将会自动注销该`事件回调`	|
+
+#### 示例
+``` javascript
+    let configurationChangeDisplose = hx.workspace.onDidChangeConfiguration(function(event){
+        if(event.affectsConfiguration("editor.fontSize")){
+            console.log("修改了字体大小");
+        }
+    });
+```
+
+### onDidChangeWorkspaceFolders
+`从HBuilderX 2.7.10及以上版本开始支持`
+
+项目管理器内的项目新增或者移除时产生的事件
+
+#### 参数说明
+|参数名称	|参数类型															|描述		|
+|--			|--																	|--			|
+|listener	|Function([WorkspaceFoldersChangeEvent](#WorkspaceFoldersChangeEvent))	|项目新增或者移除的事件回调	|
+
+#### 返回值
+|返回类型	|描述				|
+|--			|--					|
+|[Disposable](#Disposable)	|该事件回调的销毁器，可将该对象放置到插件的context.subscriptions数组内，插件卸载时，将会自动注销该`事件回调`	|
+
+#### 示例
+``` javascript
+    let wsFoldersChangeDisplose = hx.workspace.onDidChangeWorkspaceFolders(function(event){
+        if(event.added){
+            event.added.forEach(item=>console.log("新增了项目:",item.name));
+        }
+        if(event.removed){
+            event.removed.forEach(item=>console.log("移除了项目:",item.name));
+        }
+    });
+```
+
 ### onWillSaveTextDocument
 文档即将要保存的事件,注意该事件是同步调用,会阻塞用户界面,为了避免长时间阻塞界面，目前设置了超时机制，超时时间为2s。
 > 注意你在该事件回调中执行的逻辑不应该占用太长的时间，如果超时将会出现一些不可预测的问题。
@@ -590,6 +645,53 @@ env二级模块对象，包含运行环境信息和系统交互相关的方法
 #### 示例
 ``` javascript
     hx.env.clipboard.writeText("Hello Clipboard.");
+```
+
+## ConfigurationChangeEvent
+配置改变产生的事件
+
+### affectsConfiguration
+判断该事件该变了哪个配置项值
+
+#### 参数说明
+
+|参数名称	|参数类型	|描述								|
+|--			|--			|--									|
+|section	|String		|配置项的key，比如:"editor.fontSize"|
+
+#### 返回值
+|返回类型	|描述												|
+|--			|--													|
+|Boolean	|`true`表示配置项被修改，`false`表示配置项没有被修改|
+
+#### 示例
+``` javascript
+    let configurationChangeDisplose = hx.workspace.onDidChangeConfiguration(function(event){
+        if(event.affectsConfiguration("editor.fontSize")){
+            console.log("修改了字体大小");
+        }
+    });
+```
+
+## WorkspaceFoldersChangeEvent
+项目管理器中新增或者移除项目时产生的事件类型
+
+### 属性列表
+|属性名	|属性类型											|描述			|
+|--		|--													|--				|
+|added	| Array&lt;[WorkspaceFolder](#WorkspaceFolder)&gt;	|新增的项目列表	|
+|removed| Array&lt;[WorkspaceFolder](#WorkspaceFolder)&gt;	|移除的项目列表	|
+
+#### 示例
+``` javascript
+    let wsFoldersChangeDisplose = hx.workspace.onDidChangeWorkspaceFolders(function(event){
+        if(event.added){
+            event.added.forEach(item=>console.log("新增了项目:",item.name));
+        }
+        if(event.removed){
+            event.removed.forEach(item=>console.log("移除了项目:",item.name));
+        }
+    });
 ```
 
 ## TextDocumentWillSaveEvent
@@ -1002,7 +1104,7 @@ editorPromise.then((editor)=>{
 |--			|--		|
 |[TextEdit](#TextEdit)|	文档编辑对象|
 ## WorkspaceFolder
-工作空间下的项目目录
+工作空间下的项目目录,在左侧项目管理器内的每一个项目表示一个WorkspaceFolder
 ### 属性列表
 |属性名	|属性类型			|描述			|
 |--		|--					|--				|
