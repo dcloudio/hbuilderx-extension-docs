@@ -362,6 +362,49 @@ window二级模块对象，用于处理主窗口相关的逻辑。
 
 ## workspace
 workspace二级模块对象，用于处理和工作空间以及文档事件有关的逻辑
+
+### getWorkspaceFolders
+`从HBuilderX 2.7.12及以上版本开始支持`
+
+获取项目管理器下所有的项目对象（不包含已关闭项目）
+#### 参数说明
+无
+
+#### 返回值
+|返回类型														|描述					|
+|--																|--						|
+|Promise&lt;Array&lt;[WorkspaceFolder](#WorkspaceFolder)&gt;&gt;|项目管理器下所有的项目	|
+
+#### 示例
+``` javascript
+    var wsPromise = hx.workspace.getWorkspaceFolders();
+	wsPromise.then(function(wsFolders) {
+		console.log("项目管理器包含的项目数量：",wsFolders.length);
+	});
+```
+
+### getWorkspaceFolder
+`从HBuilderX 2.7.12及以上版本开始支持`
+
+获取某个文件所在的项目
+#### 参数说明
+|参数名称	|参数类型	|描述		|
+|--			|--			|--			|
+|uri		|String		|文件路径	|
+
+#### 返回值
+|返回类型														|描述					|
+|--																|--						|
+|Promise&lt;[WorkspaceFolder](#WorkspaceFolder)&gt;|文件所在的项目	|
+
+#### 示例
+``` javascript
+    var wsPromise = hx.workspace.getWorkspaceFolder("%fsPath%");
+	wsPromise.then(function(wsFolder) {
+		console.log("文件所在项目：",wsFolder.name);
+	});
+```
+
 ### openTextDocument
 通过指定的uri打开一个文档文件
 #### 参数说明
