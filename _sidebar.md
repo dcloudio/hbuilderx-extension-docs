@@ -7,6 +7,7 @@
     * [插件说明](/extension.md)
     * [如何注册`命令`](/commands.md)
     * [如何注册`菜单`](/menus.md)
+    * [如何注册一个`视图`](/views.md)
     * [如何编辑文档](/texteditor.md)
     * [如何写一个`校验器`](/validations.md)
 * 插件发布
