@@ -1,5 +1,5 @@
 扩展一个新的`视图`（view）通过以下2个步骤：
-1. 通过`viewContainers`和`views`扩展点声明要扩展的`视图`
+#### 1. 通过`viewContainers`和`views`扩展点声明要扩展的`视图`
 
 ``` json
 //package.json
@@ -20,7 +20,7 @@
     }
 ```
 
-2. 在插件激活时实现该扩展的`视图`
+#### 2. 在插件激活时实现该扩展的`视图`
 
 ``` javascript
 // extension.js
