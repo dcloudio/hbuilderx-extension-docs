@@ -1,12 +1,12 @@
-#### 如果扩展一个新的视图？
+#### 如何扩展一个新的视图？
 `从HBuilderX 2.7.12及以上版本开始支持`
 
 扩展一个新的`视图`（view）通过以下2个步骤：
-##### 1. 通过`viewContainers`和`views`扩展点声明要扩展的`视图`
+- 通过 [viewContainers](/ExtensionDocs/ContributionPoints/README.md#viewContainers) 和 [views](/ExtensionDocs/ContributionPoints/README.md#views) 配置扩展点声明要扩展的`视图`
 
 ``` json
-//package.json
-//...
+//package.json；
+//...NOTE：package.json不支持注释，以下代码使用时需要将注释删掉
     "contributes": {
         "viewsContainers": {
             "activitybar": [{
@@ -16,6 +16,7 @@
         },
         "views": {
             "demoview": [{
+                //该id需要和window.createTreeView中的viewId参数一致
                 "id": "extensions.treedemo",
                 "name": "DemoView"
             }]
@@ -23,7 +24,7 @@
     }
 ```
 
-##### 2. 在插件激活时实现该扩展的`视图`
+- 在插件激活时通过API：[window.createTreeView](/ExtensionDocs/Api/README.md#createTreeView)实现上面扩展的`视图`
 
 ``` javascript
 // extension.js

@@ -111,7 +111,7 @@ snippets扩展点可以扩展指定编程语言的代码块，可扩展的编程
 
 
 ### viewsContainers
-在窗体左侧区域扩展一个和项目管理器同级的tab项
+在窗体左侧区域扩展一个和项目管理器同级的tab项，完整的扩展视图流程参考[如何注册一个新的视图？](/views.md)
 #### 属性列表
 |属性名称	|属性类型												|是否必须	|描述															|
 |--			|--														|--			|--																|
@@ -140,14 +140,16 @@ snippets扩展点可以扩展指定编程语言的代码块，可扩展的编程
 |title		|String		|是			|显示在tab标签上的标题				|
 
 ### views
-扩展新的视图，扩展的view必须和`viewsContainers/activitybar`内定义的视图容器绑定以后才能生效。目前仅支持TreeView，在该扩展点声明后，需要通过API`hx.window.createTreeView`实现。
-目前一个视图容器仅支持绑定一个视图（view）
+扩展新的视图，扩展的view必须和`viewsContainers/activitybar`内定义的视图容器绑定以后才能生效。目前仅支持TreeView，并且一个视图容器（viewsContainers）仅支持绑定一个视图（view）。在该扩展点声明后，需要通过API：[window.createTreeView](/ExtensionDocs/Api/README.md#createTreeView)实现。完整的扩展视图流程参考[如何注册一个新的视图？](/views.md)
+
 #### 示例
 ```json
+    //NOTE：package.json不支持注释，以下代码使用时需要将注释删掉
    "contributes": {
        "views": {
            //绑定的视图容器（viewContainers）的Id，目前一个视图容器仅支持绑定一个视图（view）
            "demoview": [{
+               //该id需要和window.createTreeView中的viewId参数一致
                "id": "extensions.treedemo",
                "name": "DemoView"
            }]

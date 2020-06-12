@@ -363,7 +363,7 @@ window二级模块对象，用于处理主窗口相关的逻辑。
 ### createTreeView
 `从HBuilderX 2.7.12及以上版本开始支持`
 
-创建指定viewId的视图，将会以tab的形式在左侧显示。viewId是在配置扩展点`views`中声明的id,详见[如何注册一个新的视图？](/views.md)。
+创建指定viewId的视图，在窗体左侧区域创建一个和`项目管理器`同级的tab项。viewId需要在package.json文件内的配置扩展点[views](/ExtensionDocs/ContributionPoints/README.md#views)中声明，完整的扩展视图流程参考[如何注册一个新的视图？](/views.md)
 
 #### 参数说明
 |参数名称	|参数类型							|描述										|
