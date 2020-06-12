@@ -3,6 +3,7 @@
 
 以下列出目前可用的激活事件：
 - **onCommand**
+- **onView**
 - **workspaceContains**
 - ** \* **
 
@@ -12,6 +13,15 @@
 ``` json
 "activationEvents": [
     "onCommand:extension.firstExtension"
+]
+```
+
+### onView
+该激活事件将在某个扩展视图(view)即将打开显示的时候触发，通常是通过菜单【视图】-【显示扩展视图】选择某个扩展视图时触发。
+
+``` json
+"activationEvents": [
+    "onView:extension.demoview"
 ]
 ```
 

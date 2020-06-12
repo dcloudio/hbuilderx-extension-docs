@@ -361,7 +361,9 @@ window二级模块对象，用于处理主窗口相关的逻辑。
 ```
 
 ### createTreeView
-创建指定viewId的视图，将会以tab的形式在左侧显示。viewId是在配置扩展点`views`中声明的id
+`从HBuilderX 2.7.12及以上版本开始支持`
+
+创建指定viewId的视图，将会以tab的形式在左侧显示。viewId是在配置扩展点`views`中声明的id,详见[如何注册一个新的视图？](/views.md)。
 
 #### 参数说明
 |参数名称	|参数类型							|描述										|
@@ -374,8 +376,9 @@ window二级模块对象，用于处理主窗口相关的逻辑。
 
 #### 示例
 ``` javascript
-    class DemoTreeDataProvider {
+    class DemoTreeDataProvider extends hx.TreeDataProvider{
         constructor(demoData) {
+            super();
             this._demoData = demoData;
         }
         getChildren(element) {
@@ -464,9 +467,9 @@ workspace二级模块对象，用于处理和工作空间以及文档事件有�
 
 获取某个文件所在的项目
 #### 参数说明
-|参数名称	|参数类型	|描述		|
-|--			|--			|--			|
-|uri		|String		|文件路径	|
+|参数名称	|参数类型	|描述					|
+|--			|--			|--						|
+|uri		|String或Uri|文件绝对路径或者文件Uri|
 
 #### 返回值
 |返回类型														|描述					|
@@ -1262,13 +1265,13 @@ editorPromise.then((editor)=>{
 ## TreeViewOptions
 创建TreeView需要的配置项
 ### 属性列表
-|属性名				|属性类型			|描述				|
-|--					|--					|--					|
-|showCollapseAll	|Boolean			|是否显示折叠所有	|
-|treeDataProvider	|[TreeDataProvider](#TreeDataProvider)	|获取树控件上的数据接口			|
+|属性名				|属性类型								|描述															|
+|--					|--										|--																|
+|showCollapseAll	|Boolean								|是否显示折叠所有												|
+|treeDataProvider	|[TreeDataProvider](#TreeDataProvider)	|TreeView树控件获取数据的接口，需要自己写一个子类实现该接口。	|
 
 ## TreeDataProvider
-获取树控件上的数据接口，每个自定义的treeDataProvider都需要实现该接口下列出的方法
+TreeView树控件获取数据的接口，不可直接实例化该对象，需要自己写一个子类实现该接口，每个自定义的treeDataProvider都需要实现该接口下列出的方法
 ### getChildren
 获取某个节点的下的子节点，如果参数为空，则表示要获取根节点
 #### 参数说明
