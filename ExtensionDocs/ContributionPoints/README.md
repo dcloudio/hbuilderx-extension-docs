@@ -109,10 +109,59 @@ snippets扩展点可以扩展指定编程语言的代码块，可扩展的编程
 }
 ```
 
+
+### viewsContainers
+在窗体左侧区域扩展一个和项目管理器同级的tab项，完整的扩展视图流程参考[如何注册一个新的视图？](/views.md)
+#### 属性列表
+|属性名称	|属性类型												|是否必须	|描述															|
+|--			|--														|--			|--																|
+|activitybar|Array&lt;[ViewsContainerDef](#ViewsContainerDef)&gt;	|是			|定义扩展的视图容器列表，可在菜单`视图`-`显示扩展视图`中查看打开|
+#### 示例
+```json
+   "contributes": {
+       "viewsContainers": {
+           "activitybar": [{
+               "id": "demoview",
+               "title": "DemoView"
+           }]
+       }
+       "views": {
+           "demoview": [{
+               "id": "extensions.treedemo",
+               "name": "DemoView"
+           }]
+       },
+    }
+```
+#### ViewsContainerDef
+|属性名称	|属性类型	|是否必须	|描述								|
+|--			|--			|--			|--									|
+|id			|String		|是			|扩展的视图容器(viewContainers)的id	|
+|title		|String		|是			|显示在tab标签上的标题				|
+
+### views
+扩展新的视图，扩展的view必须和`viewsContainers/activitybar`内定义的视图容器绑定以后才能生效。目前仅支持TreeView，并且一个视图容器（viewsContainers）仅支持绑定一个视图（view）。在该扩展点声明后，需要通过API：[window.createTreeView](/ExtensionDocs/Api/README.md#createTreeView)实现。完整的扩展视图流程参考[如何注册一个新的视图？](/views.md)
+
+#### 示例
+```json
+    //NOTE：package.json不支持注释，以下代码使用时需要将注释删掉
+   "contributes": {
+       "views": {
+           //绑定的视图容器（viewContainers）的Id，目前一个视图容器仅支持绑定一个视图（view）
+           "demoview": [{
+               //该id需要和window.createTreeView中的viewId参数一致
+               "id": "extensions.treedemo",
+               "name": "DemoView"
+           }]
+       }
+    }
+```
+
 ### menus
 menus扩展点会关联一个`命令`到相应的菜单项里面，当菜单触发时将会执行对应的`命令`。menus节点下配置的对象内的key指的是要注册到哪个弹出菜单里面，目前支持的key值列表如下：
 - `editor/context` ：编辑器右键菜单
 - `explorer/context` ：项目管理器右键菜单
+- `view/item/context` ：通过`views`扩展点扩展的`视图`的右键菜单（`从HBuilderX 2.7.12及以上版本开始支持`）
 - `menubar/file` : 顶部菜单的`文件`菜单
 - `menubar/edit` : 顶部菜单的`编辑`菜单
 - `menubar/select` : 顶部菜单的`选择`菜单
@@ -308,17 +357,18 @@ when表达式用来动态的判断某个条件是否满足(即表达式的运算
 
 目前HBuilderX内置变量列表如下：
 
-|变量名								|类型	|描述																|
-|--									|--		|--																	|
-|explorerResourceCount				|Number	|项目管理器选中的资源数量											|
-|explorerResourceIsFolder			|Boolean|项目管理器选中的资源是否全是目录									|
-|explorerResourceIsWorkspaceFolder	|Boolean|项目管理器选中的资源是否全是项目根目录								|
-|isSVN								|Boolean|是否是SVN仓库下的文件												|
-|isGit								|Boolean|是否是Git仓库下的文件												|
-|activeEditor.file.exists			|Boolean|当前激活的编辑器打开的文件是否存在									|
-|activeEditor.file.isProjectFile	|Boolean|当前激活的编辑器打开的文件是否是左侧项目管理器下的文件				|
-|activeEditor.readonly				|Boolean|当前激活的编辑器是否是只读											|
-|editorTextFocus					|Boolean|当前激活的编辑器是否有焦点											|
-|langId								|String	|当前激活的编辑器打开的文档的编程语言id，完整语言Id列表参见[这里](/ExtensionDocs/Api/README.md#languageId)|
-|config.*							|Any	|获取某个配置项的值,例子： `config.editor.fontSize`					|
+|变量名								|类型	|描述																										|
+|--									|--		|--																											|
+|explorerResourceCount				|Number	|项目管理器选中的资源数量																					|
+|explorerResourceIsFolder			|Boolean|项目管理器选中的资源是否全是目录																			|
+|explorerResourceIsWorkspaceFolder	|Boolean|项目管理器选中的资源是否全是项目根目录																		|
+|isSVN								|Boolean|是否是SVN仓库下的文件																						|
+|isGit								|Boolean|是否是Git仓库下的文件																						|
+|activeEditor.file.exists			|Boolean|当前激活的编辑器打开的文件是否存在																			|
+|activeEditor.file.isProjectFile	|Boolean|当前激活的编辑器打开的文件是否是左侧项目管理器下的文件														|
+|activeEditor.readonly				|Boolean|当前激活的编辑器是否是只读																					|
+|editorTextFocus					|Boolean|当前激活的编辑器是否有焦点																					|
+|langId								|String	|当前激活的编辑器打开的文档的编程语言id，完整语言Id列表参见[这里](/ExtensionDocs/Api/README.md#languageId)	|
+|viewItem							|String	|通过`views`扩展的视图中当前选择的item的contextValue														|
+|config.*							|Any	|获取某个配置项的值,例子： `config.editor.fontSize`															|
    
