@@ -1,11 +1,14 @@
-- 插件发布需登录到[插件市场](https://ext.dcloud.net.cn/)，然后点击右上角的【发布插件】按钮，见下图：
+## 在插件市场发布
+HBuilderX插件发布，在DCloud统一的插件市场，[https://ext.dcloud.net.cn/](https://ext.dcloud.net.cn/)。
 
-<img src="/static/snapshots/publish@2x.png" style="zoom:50%" />
+1. 在插件市场页面右上角，点击`发布插件`。（如未注册，需注册登录）
+2. 在发布插件页面，选择插件分类为`HBuilderX`，然后按要求填写表单发布即可
 
-- 在打开的发布页面，将分类选择为HBuilderX，然后根据页面的提示将需要的信息填写完毕后提交即可，见下图：
+插件使用者可以在插件市场web界面进行插件安装。
 
-<img src="/static/snapshots/publish_form@2x.png" style="zoom:50%" />
+## 离线安装插件
 
-- 发布完成后，在插件详情页面，点击【使用HBuilderX导入插件】完成插件的安装，见下图：
+该插件拷贝到`HBuilderX的安装目录/plugins`下，然后重启HBuilderX即可生效。
 
-<img src="/static/snapshots/install@2x.png" style="zoom:50%" />
+开发者如果在内网环境，可以先在外网环境点击插件市场web界面的`下载zip插件`，把zip包放入内网环境，解压到HBuilderX目录使用。
+
