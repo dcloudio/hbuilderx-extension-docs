@@ -294,7 +294,7 @@ window二级模块对象，用于处理主窗口相关的逻辑。
       }
       let backPath = result.backPath;
       //do something with result
-    }
+    })
 ```
 
 ### getActiveTextEditor
