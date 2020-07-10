@@ -5,6 +5,7 @@
 - **onCommand**
 - **onView**
 - **workspaceContains**
+- **onUri**
 - ** \* **
 
 ### onCommand
@@ -35,6 +36,16 @@
     "workspaceContains:.ftp/ftp.json"
 ]
 ```
+### onUri
+声明可以响应scheme协议请求，当某个scheme指定要请求某个插件时，如果插件声明后onUri事件，则会自动激活该插件，否则不会激活。插件处理自定义scheme的API参考[这里](/ExtensionDocs/Api/README.md#registerUriHandler)
+
+``` json
+"activationEvents": [
+    //声明可以响应scheme协议请求
+    "onUri"
+]
+```
+
 ### *
 事件`*`代表该插件将在HBuilderX启动时就立即激活，作用和不配置`activationEvents`一样。
 > 最佳实践是只监听需要监听的事件，尽量让插件`懒加载`
