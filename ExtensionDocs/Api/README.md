@@ -438,6 +438,36 @@ window二级模块对象，用于处理主窗口相关的逻辑。
     });
 ```
 
+### registerUriHandler
+`从HBuilderX 2.8.1及以上版本开始支持`
+
+注册一个schema处理器。schema调用格式为：hbuilderx://requestExtension/%extensionId%/foo/bar?param=foo&param2=bar
+其中前缀`hbuilderx://requestExtension/`为必须内容,%extensionId%为要调用的插件id，后面为要传递给scheme的UriHandler内的其他参数信息。
+> 注意：通过该API注册一个scheme处理器后，需要在插件描述文件(package.json)中声明。声明方式是在激活事件（activateEvents）中加入onUri监听，如未声明onUri则插件未激活时不会自动激活，导致处理器不生效。
+
+#### 参数说明
+|参数名称	|参数类型					|描述											|
+|--			|--							|--												|
+|handler	|[UriHandler](#UriHandler)	|scheme的处理器									|
+|context	|ExtensionContext			|插件激活方法activate中传入的(context)参数对象	|
+
+#### 返回值
+|返回类型	|描述																											|
+|--			|--																												|
+|Disposable	|注册的UriHandler的销毁器，可将该对象放置到插件的context.subscriptions数组内，插件卸载时，将会自动注销该handler	|
+
+#### 示例
+
+```javascript
+    hx.window.registerUriHanlder({
+        handleUri:function(uri){
+            //处理scheme请求
+            let path = uri.path;
+            let params = uri.query;
+            hx.window.showInformationMessage(uri.toString());
+        }
+    }, context);
+```
 
 ## workspace
 workspace二级模块对象，用于处理和工作空间以及文档事件有关的逻辑
@@ -1322,6 +1352,17 @@ TreeView树控件获取数据的接口，不可直接实例化该对象，需要
 ### dispose
 #### 参数说明
 无
+
+#### 返回值
+无
+
+## UriHandler
+uri处理器接口
+### handleUri
+#### 参数说明
+|参数名称	|参数类型	|描述																		|
+|--			|--			|--																			|
+|uri		|Uri		|scheme请求对应的uri，eg：hbuilderx://requestExtension/extensionId?foo=bar	|
 
 #### 返回值
 无
