@@ -115,7 +115,8 @@ snippets扩展点可以扩展指定编程语言的代码块，可扩展的编程
 #### 属性列表
 |属性名称	|属性类型												|是否必须	|描述															|
 |--			|--														|--			|--																|
-|activitybar|Array&lt;[ViewsContainerDef](#ViewsContainerDef)&gt;	|是			|定义扩展的视图容器列表，可在菜单`视图`-`显示扩展视图`中查看打开|
+|activitybar|Array&lt;[ViewsContainerDef](#ViewsContainerDef)&gt;	|不是			|定义扩展的视图容器列表，可在菜单`视图`-`显示扩展视图`中查看打开|
+|rightside|Array&lt;[ViewsContainerDef](#ViewsContainerDef)&gt;	|不是|定义扩展的视图容器列表，可在菜单`视图`-`显示扩展视图`中查看打开|
 #### 示例
 ```json
    "contributes": {
@@ -123,14 +124,19 @@ snippets扩展点可以扩展指定编程语言的代码块，可扩展的编程
            "activitybar": [{
                "id": "demoview",
                "title": "DemoView"
-           }]
-       }
+           }],
+           "rightside":[{
+                   "id":"rightsideContainerId",
+                   "title":"rightside Container Title"
+          }]
+       },
        "views": {
            "demoview": [{
                "id": "extensions.treedemo",
                "name": "DemoView"
            }]
        },
+       ...
     }
 ```
 #### ViewsContainerDef
@@ -140,9 +146,9 @@ snippets扩展点可以扩展指定编程语言的代码块，可扩展的编程
 |title		|String		|是			|显示在tab标签上的标题				|
 
 ### views
-扩展新的视图，扩展的view必须和`viewsContainers/activitybar`内定义的视图容器绑定以后才能生效。目前仅支持TreeView，并且一个视图容器（viewsContainers）仅支持绑定一个视图（view）。在该扩展点声明后，需要通过API：[window.createTreeView](/ExtensionDocs/Api/README.md#createTreeView)实现。完整的扩展视图流程参考[如何注册一个新的视图？](/views.md)
+扩展新的视图，扩展的view必须和`viewsContainers`内定义的视图容器绑定以后才能生效。目前支持TreeView和WebView，并且一个视图容器（viewsContainers）仅支持绑定一个视图（view）。在该扩展点声明后，需要通过API：[window.createTreeView](/ExtensionDocs/Api/README.md#createTreeView)或者[window.createWebView](/ExtensionDocs/Api/README.md#createWebView)实现。完整的扩展视图流程参考[如何注册一个新的视图？](/views.md)
 
-#### 示例
+#### TreeView 示例
 ```json
     //NOTE：package.json不支持注释，以下代码使用时需要将注释删掉
    "contributes": {
@@ -156,7 +162,31 @@ snippets扩展点可以扩展指定编程语言的代码块，可扩展的编程
        }
     }
 ```
+#### WebView 示例
+`从HBuilderX 2.8.1及以上版本开始支持`
 
+```json
+ "contributes": {
+        "viewsContainers": {
+            "rightside":[
+                {
+                    //该id需要和window.createWebView中的viewId参数一致
+                    "id":"containerId",
+                    "title":"Container Title"
+                }
+            ]
+        },
+        "views": {
+            "containerId":[
+                {
+                    "id":"viewId",
+                    "title":"Custom View Title"
+                }
+            ]
+        },
+        ...
+     }
+```
 ### menus
 menus扩展点会关联一个`命令`到相应的菜单项里面，当菜单触发时将会执行对应的`命令`。menus节点下配置的对象内的key指的是要注册到哪个弹出菜单里面，目前支持的key值列表如下：
 - `editor/context` ：编辑器右键菜单
