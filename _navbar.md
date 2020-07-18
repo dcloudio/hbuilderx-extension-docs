@@ -1,4 +1,4 @@
-* [插件开发指南](README.md)
+* [教程](README.md)
 * [API文档](/ExtensionDocs/Api/README.md)
 
 <ul class="nav-href">
