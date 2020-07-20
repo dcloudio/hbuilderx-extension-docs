@@ -488,9 +488,21 @@ window二级模块对象，用于处理主窗口相关的逻辑。
 ### registerUriHandler
 `从HBuilderX 2.8.1及以上版本开始支持`
 
-注册一个schema处理器。schema调用格式为：hbuilderx://requestExtension/%extensionId%/foo/bar?param=foo&param2=bar
-其中前缀`hbuilderx://requestExtension/`为必须内容,%extensionId%为要调用的插件id，后面为要传递给scheme的UriHandler内的其他参数信息。
-> 注意：通过该API注册一个scheme处理器后，需要在插件描述文件(package.json)中声明。声明方式是在激活事件（activateEvents）中加入onUri监听，如未声明onUri则插件未激活时不会自动激活，导致处理器不生效。
+注册一个依赖hbuilderx协议的自定义网络请求处理器(schema)，格式为：
+```
+hbuilderx://requestExtension/exampleid/examplerequest/example?example1=example2&...
+\________/  \_____________/ \________/ \__________________________________________/
+    |              |             |                  ｜
+   协议     自定义插件请求的标记  插件id          任意的自定义信息
+```
+
+当在浏览器地址栏中输入以上格式的url时或者跳转到以上格式的url，已安装了HBuilderX的系统将会把该请求转入HBuilderX, 由HBuilderX识别该请求并检测对应插件(如上例子中名为exampleid的插件)的配置信息(package.json)中是否声明了
+[onUri](#/ExtensionDocs/activation_event.md#onUri), 此时如果当前的插件并没有激活，那么HBuilderX会先激活该插件并把对应请求转发到由registerUriHandler方法注册的处理器中。
+
+如果exampleid对应插件并未安装，则HBuilderX会弹框提示是否安装该插件。
+
+#### 适用的场景
+- 需要通过浏览器等外部应用启动HBuilderX，然后通过指定插件响应请求
 
 #### 参数说明
 |参数名称	|参数类型					|描述											|
@@ -502,6 +514,7 @@ window二级模块对象，用于处理主窗口相关的逻辑。
 |返回类型	|描述																											|
 |--			|--																												|
 |Disposable	|注册的UriHandler的销毁器，可将该对象放置到插件的context.subscriptions数组内，插件卸载时，将会自动注销该handler	|
+
 
 #### 示例
 
@@ -515,6 +528,7 @@ window二级模块对象，用于处理主窗口相关的逻辑。
         }
     }, context);
 ```
+上面的示例中，假设插件id为foo，则在浏览器地址栏中输入hbuilderx://requestExtension/foo?param=abc时，将自动激活该插件，并执行handleUri函数，uri的值即为地址栏中输入的地址，示例中uri.query的值为param=abc。
 
 ## workspace
 workspace二级模块对象，用于处理和工作空间以及文档事件有关的逻辑
@@ -1491,4 +1505,3 @@ uri处理器接口
 |path		|String		|Uri中的path		|
 |query		|String		|Uri中的query		|
 |scheme		|String		|Uri中的scheme		|
-
