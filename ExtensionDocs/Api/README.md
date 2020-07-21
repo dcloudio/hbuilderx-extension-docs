@@ -157,7 +157,7 @@ languages二级模块对象，用于处理和编程语言相关的逻辑，目�
 ## window
 window二级模块对象，用于处理主窗口相关的逻辑。
 ### setStatusBarMessage
-设置状态栏消息
+设置HBuilderX底部状态栏消息
 #### 参数说明
 
 |参数名称			|参数类型	|描述															|
@@ -317,7 +317,7 @@ window二级模块对象，用于处理主窗口相关的逻辑。
 ```
 
 ### showInputBox
-在窗口中间居中弹出一个输入框，获取用户输入
+在窗口中间居中弹出一个输入框，获取用户输入。类似于浏览器的prompt方法。
 #### 参数说明
 
 |参数名称	|参数类型							|描述			|
@@ -361,9 +361,11 @@ window二级模块对象，用于处理主窗口相关的逻辑。
 ```
 
 ### createTreeView
-`从HBuilderX 2.7.12及以上版本开始支持`
+> `从HBuilderX 2.7.12及以上版本开始支持`
 
-创建指定viewId的视图，在窗体左侧区域创建一个和`项目管理器`同级的tab项。viewId需要在package.json文件内的配置扩展点[views](/ExtensionDocs/ContributionPoints/README.md#views)中声明，完整的扩展视图流程参考[如何注册一个新的视图？](/views.md)
+创建指定viewId的视图，在窗体左侧区域创建一个和`项目管理器`同级的tab项。tab的内容区为一个树控件，可自行装载节点。
+
+viewId需要在package.json文件内的配置扩展点[views](/ExtensionDocs/ContributionPoints/README.md#views)中声明，完整的扩展视图流程参考[如何注册一个新的视图？](/views.md)
 
 #### 参数说明
 |参数名称	|参数类型							|描述										|
@@ -439,9 +441,11 @@ window二级模块对象，用于处理主窗口相关的逻辑。
 ```
 
 ### createWebView
-`从HBuilderX 2.8.1及以上版本开始支持`
+> `从HBuilderX 2.8.1及以上版本开始支持`
 
-创建指定viewId的WebView控件视图，在窗体右侧区域创建一个tab项。viewId需要在package.json文件内的配置扩展点[views](/ExtensionDocs/ContributionPoints/README.md#views)中声明，完整的扩展视图流程参考[如何注册一个新的视图？](/views.md)
+创建指定viewId的WebView控件视图，在窗体左侧或右侧区域创建一个tab项。tab内容为webview，webview里可装载html页面，可以较灵活的渲染自定义的内容。
+
+viewId需要在package.json文件内的配置扩展点[views](/ExtensionDocs/ContributionPoints/README.md#views)中声明，完整的扩展视图流程参考[如何注册一个新的视图？](/views.md)
 
 #### 参数说明
 

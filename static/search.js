@@ -455,46 +455,46 @@
 		!isMobile && $main.classList.add('hide');
 
 		// search ext
-		$docsify.get('//ext.dcloud.net.cn/search/json?query=' + encodeURIComponent(value)).then(function(res) {
-			// console.log('ext:', res)
-			var ret = JSON.parse(res);
-			if (ret.ret === 0) {
-				var data = ret.data;
-				var extHtml = '';
-				for (var i = 0, len = data.length; i < len; i++) {
-					extHtml += _renderExt(data[i], value);
-				}
-				$panel.innerHTML += extHtml;
-			}
+		// $docsify.get('//ext.dcloud.net.cn/search/json?query=' + encodeURIComponent(value)).then(function(res) {
+		// 	// console.log('ext:', res)
+		// 	var ret = JSON.parse(res);
+		// 	if (ret.ret === 0) {
+		// 		var data = ret.data;
+		// 		var extHtml = '';
+		// 		for (var i = 0, len = data.length; i < len; i++) {
+		// 			extHtml += _renderExt(data[i], value);
+		// 		}
+		// 		$panel.innerHTML += extHtml;
+		// 	}
 
-			$docsify.get('//ask.dcloud.net.cn/search/ajax/search_result/search_type-doc__q-' + value + '__page-1').then(
-				function(res) {
-					// console.log('ask:', res)
-					if (!res) {
-						return;
-					}
-					var ret = JSON.parse(res);
-					if (ret.code !== 0) {
-						// 如果联网查询都没有结果，那么依旧要展示无信息。
-						if (!html) {
-							$panel.innerHTML = "<p class=\"empty\">" + NO_DATA_TEXT + "</p>";
-						}
-						return;
-					}
+		// 	$docsify.get('//ask.dcloud.net.cn/search/ajax/search_result/search_type-doc__q-' + value + '__page-1').then(
+		// 		function(res) {
+		// 			// console.log('ask:', res)
+		// 			if (!res) {
+		// 				return;
+		// 			}
+		// 			var ret = JSON.parse(res);
+		// 			if (ret.code !== 0) {
+		// 				// 如果联网查询都没有结果，那么依旧要展示无信息。
+		// 				if (!html) {
+		// 					$panel.innerHTML = "<p class=\"empty\">" + NO_DATA_TEXT + "</p>";
+		// 				}
+		// 				return;
+		// 			}
 
-					var data = ret.data;
-					var askHtml = '';
-					data.forEach(function(item) {
-						askHtml += _renderPost(item, value);
-					});
-					if (!!askHtml) {
-						askHtml += '<div class="more"><a href="//ask.dcloud.net.cn/search/q-' + ret.searchKeyword +
-							'#all" target="_blank">前往社区搜索更多内容</a></div>';
-						$panel.innerHTML += askHtml;
-					}
-				});
+		// 			var data = ret.data;
+		// 			var askHtml = '';
+		// 			data.forEach(function(item) {
+		// 				askHtml += _renderPost(item, value);
+		// 			});
+		// 			if (!!askHtml) {
+		// 				askHtml += '<div class="more"><a href="//ask.dcloud.net.cn/search/q-' + ret.searchKeyword +
+		// 					'#all" target="_blank">前往社区搜索更多内容</a></div>';
+		// 				$panel.innerHTML += askHtml;
+		// 			}
+		// 		});
 
-		});
+		// });
 
 		// 异步向ask发起请求
 		// 		$docsify.get('//ask.dcloud.net.cn/search/ajax/search_result/search_type-posts__q-' + value + '__page-1').then(

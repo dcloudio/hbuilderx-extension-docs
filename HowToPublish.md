@@ -11,4 +11,3 @@ HBuilderX插件发布，在DCloud统一的插件市场，[https://ext.dcloud.net
 该插件拷贝到`HBuilderX的安装目录/plugins`下，然后重启HBuilderX即可生效。
 
 开发者如果在内网环境，可以先在外网环境点击插件市场web界面的`下载zip插件`，把zip包放入内网环境，解压到HBuilderX目录使用。
-
