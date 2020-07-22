@@ -1409,16 +1409,7 @@ editorPromise.then((editor)=>{
 ``` javascript
     webview.onDidReceiveMessage((message)=>{ console.log(message) });
 ```
-### asWebviewUri
-将本地资源转换成可在WebView中加载的uri。
-#### 参数说明
-|参数名称	|参数类型	|描述		|
-|--			|--																	|--			|
-|localResource	|[Uri](#Uri)	|统一资源访问符|
-#### 返回值
-|返回类型	|描述	|
-|--			|--		|
-|[Uri](#Uri)|可在[WebView](#WebView)中加载的uri|
+
 ### postMessage(message: any): Thenable
 在WebView中发送消息
 #### 参数说明
