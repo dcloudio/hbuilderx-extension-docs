@@ -461,15 +461,13 @@ viewId需要在package.json文件内的配置扩展点[views](/ExtensionDocs/Con
 #### 示例
 ```Javascript
     let webviewPanel = hx.window.createWebView("viewId",{
-        enableScritps:true
+        enableScripts:true
     });
     let webview = webviewPanel.WebView;
     webview.html = `
         <script>
-            //    以下两种写法等同
             hbuilderx.onDidReceiveMessage((msg)=>{
-            });
-            window.addEventListener("message",(msg)=>{
+                
             });
             hbuiderx.postMessage({
                 command: 'alert',

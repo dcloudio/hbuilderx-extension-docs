@@ -170,7 +170,6 @@ snippets扩展点可以扩展指定编程语言的代码块，可扩展的编程
         "viewsContainers": {
             "rightside":[
                 {
-                    //该id需要和window.createWebView中的viewId参数一致
                     "id":"containerId",
                     "title":"Container Title"
                 }
@@ -179,6 +178,7 @@ snippets扩展点可以扩展指定编程语言的代码块，可扩展的编程
         "views": {
             "containerId":[
                 {
+                    //该id需要和window.createWebView中的viewId参数一致
                     "id":"viewId",
                     "title":"Custom View Title"
                 }
