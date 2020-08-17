@@ -155,7 +155,7 @@ const hx = require('hbuilderx');
  * @description 显示webview
  */
 function showWebView(webviewPanel) {
-    let webview = webviewPanel.WebView;
+    let webview = webviewPanel.webView;
     
     var background = '';
     
