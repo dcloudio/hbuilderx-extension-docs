@@ -1,13 +1,13 @@
-HBuilderX API根对象可以通过require('hbuilderx')引入。
+HBuilderX API 根对象可以通过 require('hbuilderx') 引入。
 ```javascript
 const hx = require('hbuilderx')
 ```
-以下列出目前可用的API列表
+以下列出目前可用的 API 列表。
 
 ## commands
-commands二级模块对象，用于处理和`命令`相关的逻辑。`命令`包含2部分：唯一ID和自定义的function，可以通过registerCommand或registerTextEditorCommand注册。`命令`可以通过以下方式触发：
-- 菜单：将命令通过`menus`扩展点关联到某个菜单。
-    1. 通过commands扩展点声明一个command，然后关联到`menus`上
+commands 二级模块对象，用于处理和`命令`相关的逻辑。`命令`包含2部分：唯一 ID 和自定义的 function ，可以通过registerCommand 或 registerTextEditorCommand 注册。`命令`可以通过以下方式触发：
+- 菜单：将命令通过 `menus` 扩展点关联到某个菜单。
+    1. 通过 commands 扩展点声明一个 command ，然后关联到 `menus` 上。
 ``` json
 {
     "contributes":{
@@ -29,7 +29,8 @@ commands二级模块对象，用于处理和`命令`相关的逻辑。`命令`�
     }
 }
 ```
-    2. 在插件的激活回调(`activate`)中注册该command
+2. 在插件的激活回调 (`activate`) 中注册该 command。
+
 ``` javascript
     hx.commands.registerCommand('extension.firstExtension',()=>{
         hx.window.showInformationMessage("Hello My First Extension.");
@@ -48,7 +49,7 @@ commands二级模块对象，用于处理和`命令`相关的逻辑。`命令`�
 ```
 
 ### executeCommand
-执行指定id的`命令`。除了插件扩展的`命令`外，还可以执行HBuilderX内置的`命令`，完整的内置`命令`列表可以通过HBuilderX的顶部菜单`工具`-`自定义快捷键`，然后在打开的配置文件左侧部分找到所有列出的`command`字段，如下图：
+执行指定 id 的`命令`。除了插件扩展的`命令`外，还可以执行 HBuilderX 内置的`命令`，完整的内置`命令`列表可以通过 HBuilderX 的顶部菜单`工具`-`自定义快捷键`，然后在打开的配置文件左侧部分找到所有列出的 `command` 字段，如下图：
 
 <img src="/static/snapshots/commands@2x.png" style="zoom:50%" />
 
@@ -56,12 +57,12 @@ commands二级模块对象，用于处理和`命令`相关的逻辑。`命令`�
 
 |参数名称	    |参数类型	    |描述			|
 |--			|--			|--				|
-|command	|String		|要执行的`命令`id	|
+|command	|String		|要执行的`命令`id。	|
 
 #### 返回值
 |返回类型	|描述		|
 |--			|--			|
-|Promise	|Promise对象|
+|Promise	|Promise对象。|
 
 
 #### 示例
@@ -73,18 +74,18 @@ hx.commands.executeCommand('workbench.action.closeAllEditors')
 ```
 
 ### registerCommand
-注册一个指定id的`命令`，并关联一个自定义的函数
+注册一个指定 id 的`命令`，并关联一个自定义的函数
 #### 参数说明
 
 |参数名称	|参数类型	|描述					|
 |--			|--			|--						|
-|commandId	|String		|`命令`id				|
-|handler	|Function	|`命令`触发时执行的函数	|
+|commandId	|String		|`命令` id。				|
+|handler	|Function	|`命令`触发时执行的函数。	|
 
 #### 返回值
 |返回类型					|描述																									|
 |--							|--																										|
-|[Disposable](#Disposable)	|该`命令`的销毁器,可将该对象放置到插件的context.subscriptions数组内，插件卸载时，将会自动注销该`命令`	|
+|[Disposable](#Disposable)	|该`命令`的销毁器,可将该对象放置到插件的context.subscriptions数组内，插件卸载时，将会自动注销该`命令`。	|
 
 
 #### 示例
@@ -101,13 +102,13 @@ hx.commands.executeCommand('workbench.action.closeAllEditors')
 
 |参数名称	|参数类型				|描述					|
 |--			|--						|--						|
-|commandId	|String					|`命令`id				|
-|handler	|Function([TextEditor](#TextEditor))	|`命令`触发时执行的函数	|
+|commandId	|String					|`命令`id。				|
+|handler	|Function([TextEditor](#TextEditor))	|`命令`触发时执行的函数。	|
 
 #### 返回值
 |返回类型	|描述				|
 |--			|--				|
-|[Disposable](#Disposable)	|该`命令`的销毁器,可将该对象放置到插件的context.subscriptions数组内，插件卸载时，将会自动注销该`命令`|
+|[Disposable](#Disposable)	|该`命令`的销毁器,可将该对象放置到插件的context.subscriptions 数组内，插件卸载时，将会自动注销该`命令`|
 
 
 #### 示例
@@ -118,7 +119,7 @@ hx.commands.executeCommand('workbench.action.closeAllEditors')
     context.subscriptions.push(disposable);
 ```
 ## languages
-languages二级模块对象，用于处理和编程语言相关的逻辑，目前仅支持校验文档时创建问题列表。
+languages 二级模块对象，用于处理和编程语言相关的逻辑，目前仅支持校验文档时创建问题列表。
 
 ### createDiagnosticCollection
 创建一个问题列表，可用于文档校验时在文档出错区域显示波浪线标识问题。
@@ -126,12 +127,12 @@ languages二级模块对象，用于处理和编程语言相关的逻辑，目�
 
 |参数名称	|参数类型	|描述			|
 |--			|--			|--				|
-|name		|String		|问题列表名称，当鼠标移至波浪线上时会显示在tooltips中|
+|name		|String		|问题列表名称，当鼠标移至波浪线上时会显示在tooltips中。|
 
 #### 返回值
 |返回类型										|描述			|
 |--												|--				|
-|[DiagnosticCollection](#DiagnosticCollection)	|创建的问题列表	|
+|[DiagnosticCollection](#DiagnosticCollection)	|创建的问题列表。	|
 
 
 #### 示例
@@ -155,21 +156,21 @@ languages二级模块对象，用于处理和编程语言相关的逻辑，目�
 ```
 
 ## window
-window二级模块对象，用于处理主窗口相关的逻辑。
+window 二级模块对象，用于处理主窗口相关的逻辑。
 ### setStatusBarMessage
-设置HBuilderX底部状态栏消息
+设置 HBuilderX 底部状态栏消息
 #### 参数说明
 
 |参数名称			|参数类型	|描述															|
 |--					|--			|--																|
 |text				|String		|消息内容														|
-|hideAfterTimeout	|Number		|[可选] 多长时间后自动隐藏,单位ms，默认值是0：不自动隐藏		|
+|hideAfterTimeout	|Number		|[可选] 多长时间后自动隐藏,单位ms，默认值是0：不自动隐藏。		|
 |level				|String		|[可选] 消息级别,取值有['warn'，'info'，'error'],默认值：'info'	|
 
 #### 返回值
 |返回类型					|描述									|
 |--							|--										|
-|[Disposable](#Disposable)	|销毁器,可调用dispose方法清理状态栏消息	|
+|[Disposable](#Disposable)	|销毁器,可调用dispose方法清理状态栏消息。	|
 
 
 #### 示例
@@ -196,13 +197,13 @@ window二级模块对象，用于处理主窗口相关的逻辑。
 
 |参数名称	|参数类型			|描述					|
 |--			|--					|--						|
-|message	|String				|消息内容,支持html标签	|
-|buttons	|Array&lt;String&gt;|通知框中的按钮组		|
+|message	|String				|消息内容,支持 HTML 标签。	|
+|buttons	|Array&lt;String&gt;|通知框中的按钮组。		|
 
 #### 返回值
 |返回类型				|描述									|
 |--						|--										|
-|Promise&lt;String&gt;	|如果设置了按钮，返回用户点击了哪个按钮	|
+|Promise&lt;String&gt;	|如果设置了按钮，返回用户点击了哪个按钮。	|
 
 #### 示例
 ``` javascript
@@ -222,13 +223,13 @@ window二级模块对象，用于处理主窗口相关的逻辑。
 
 |参数名称	|参数类型			|描述					|
 |--			|--					|--						|
-|message	|String				|消息内容,支持html标签	|
-|buttons	|Array&lt;String&gt;|通知框中的按钮组		|
+|message	|String				|消息内容,支持 HTML 标签。	|
+|buttons	|Array&lt;String&gt;|通知框中的按钮组。		|
 
 #### 返回值
 |返回类型				|描述									|
 |--						|--										|
-|Promise&lt;String&gt;	|如果设置了按钮，返回用户点击了哪个按钮	|
+|Promise&lt;String&gt;	|如果设置了按钮，返回用户点击了哪个按钮。	|
 
 #### 示例
 ``` javascript
@@ -244,8 +245,8 @@ window二级模块对象，用于处理主窗口相关的逻辑。
 
 |参数名称	|参数类型			|描述					|
 |--			|--					|--						|
-|message	|String				|消息内容,支持html标签	|
-|buttons	|Array&lt;String&gt;|通知框中的按钮组		|
+|message	|String				|消息内容,支持 HTML 标签。	|
+|buttons	|Array&lt;String&gt;|通知框中的按钮组。		|
 
 #### 返回值
 |返回类型				|描述									|
@@ -270,13 +271,13 @@ window二级模块对象，用于处理主窗口相关的逻辑。
 
 |参数名称	|参数类型										|描述			|
 |--			|--												|--				|
-|items		|Array&lt;[QuickPickItem](#QuickPickItem)&gt;	|建议选择项列表	|
-|options	|[QuickPickOptions](#QuickPickOptions)			|设置			|
+|items		|Array&lt;[QuickPickItem](#QuickPickItem)&gt;	|建议选择项列表。	|
+|options	|[QuickPickOptions](#QuickPickOptions)			|设置。			|
 
 #### 返回值
 |返回类型				|描述									|
 |--						|--										|
-|Promise&lt;[QuickPickItem](#QuickPickItem)&gt;	|返回用户选择得某个列表项|
+|Promise&lt;[QuickPickItem](#QuickPickItem)&gt;	|返回用户选择得某个列表项。|
 
 #### 示例
 ``` javascript
@@ -298,7 +299,7 @@ window二级模块对象，用于处理主窗口相关的逻辑。
 ```
 
 ### getActiveTextEditor
-获取当前激活的编辑器,如果没有打开的编辑器返回undefined
+获取当前激活的编辑器,如果没有打开的编辑器返回 undefined 。
 #### 参数说明
 无
 
@@ -306,7 +307,7 @@ window二级模块对象，用于处理主窗口相关的逻辑。
 
 |返回类型				|描述									|
 |--						|--										|
-|Promise&lt;[TextEditor](#TextEditor)&gt;	|返回当前激活的编辑器|
+|Promise&lt;[TextEditor](#TextEditor)&gt;	|返回当前激活的编辑器。|
 
 #### 示例
 ``` javascript
@@ -317,17 +318,17 @@ window二级模块对象，用于处理主窗口相关的逻辑。
 ```
 
 ### showInputBox
-在窗口中间居中弹出一个输入框，获取用户输入。类似于浏览器的prompt方法。
+在窗口中间居中弹出一个输入框，获取用户输入。类似于浏览器的 prompt 方法。
 #### 参数说明
 
 |参数名称	|参数类型							|描述			|
 |--			|--									|--				|
-|options	|[InputBoxOptions](#InputBoxOptions)|输入框设置	|
+|options	|[InputBoxOptions](#InputBoxOptions)|输入框设置。	|
 
 #### 返回值
 |返回类型				|描述			|
 |--						|--				|
-|Promise&lt;String&gt;	|用户输入的结果	|
+|Promise&lt;String&gt;	|用户输入的结果。	|
 
 #### 示例
 ```javascript
@@ -351,7 +352,7 @@ window二级模块对象，用于处理主窗口相关的逻辑。
 #### 返回值
 |返回类型						|描述		|
 |--								|--			|
-|[OutputChannel](#OutputChannel)|控制台通道	|
+|[OutputChannel](#OutputChannel)|控制台通道。	|
 
 #### 示例
 ``` javascript
@@ -365,7 +366,7 @@ window二级模块对象，用于处理主窗口相关的逻辑。
 
 创建指定viewId的视图，在窗体左侧区域创建一个和`项目管理器`同级的tab项。tab的内容区为一个树控件，可自行装载节点。
 
-viewId需要在package.json文件内的配置扩展点[views](/ExtensionDocs/ContributionPoints/README.md#views)中声明，完整的扩展视图流程参考[如何注册一个新的视图？](/views.md)
+viewId需要在package.json文件内的配置扩展点 [views](/ExtensionDocs/ContributionPoints/README.md#views) 中声明，完整的扩展视图流程参考[如何注册一个新的视图？](/views.md)
 
 #### 参数说明
 |参数名称	|参数类型							|描述										|
@@ -1401,7 +1402,7 @@ editorPromise.then((editor)=>{
 #### 返回值
 |返回类型	|
 |--	|
-|无 | 
+|无 |
 
 #### 示例
 ``` javascript

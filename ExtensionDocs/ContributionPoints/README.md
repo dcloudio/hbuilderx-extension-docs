@@ -9,7 +9,7 @@ configuration扩展点，会将扩展的配置项注册到HBuilderX的全局可�
 每个插件扩展的配置是分配到同一组下的，title指的是该组的名称，一般写的是插件名称。
 
 ##### properties
-properties内配置的是一个jsonobject对象，该对象的key代表着要扩展的配置项id，value是一个符合[JSON Schema](https://json-schema.org/understanding-json-schema/reference/index.html)规范的jsonobject，目前支持的字段包括：
+properties 内配置的是一个 jsonobject 对象，该对象的 key 代表着要扩展的配置项 id，value 是一个符合 [JSON Schema](https://json-schema.org/understanding-json-schema/reference/index.html) 规范的 jsonobject，目前支持的字段包括：
 
 - type 类型。支持的类型包括：string、boolean、number。
 - description 描述
@@ -401,4 +401,4 @@ when表达式用来动态的判断某个条件是否满足(即表达式的运算
 |langId								|String	|当前激活的编辑器打开的文档的编程语言id，完整语言Id列表参见[这里](/ExtensionDocs/Api/README.md#languageId)	|
 |viewItem							|String	|通过`views`扩展的视图中当前选择的item的contextValue														|
 |config.*							|Any	|获取某个配置项的值,例子： `config.editor.fontSize`															|
-   
+

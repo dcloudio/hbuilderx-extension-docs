@@ -1,10 +1,10 @@
 #### 如何扩展一个新的视图？
 
 
- 
-[扩展一个新的 TreeView](#TreeView)
 
-[扩展一个新的 WebView](#WebView)
+- [扩展一个新的 TreeView](#TreeView)
+
+- [扩展一个新的 WebView](#WebView)
 
 ##### TreeView
 `从HBuilderX 2.7.12及以上版本开始支持`
@@ -34,7 +34,7 @@
     }
 ```
 
-- 在插件激活时通过API：[window.createTreeView](/ExtensionDocs/Api/README.md#createTreeView)实现上面扩展的`视图`
+- 在插件激活时通过 API ：[window.createTreeView](/ExtensionDocs/Api/README.md#createTreeView) 实现上面扩展的 `视图` 
 
 ``` javascript
 // extension.js
@@ -112,7 +112,7 @@ module.exports = {
 }
 ```
 
-> 扩展后的`视图`可通过菜单`视图`-`显示扩展视图`打开
+> 扩展后的 `视图` 可通过菜单 `视图` - `显示扩展视图` 打开。
 
 #### 效果图
 
@@ -146,7 +146,7 @@ module.exports = {
     }
 ```
 
-- 在插件激活时通过API：[window.createWebView](/ExtensionDocs/Api/README.md#createWebView)实现上面扩展的`视图`
+- 在插件激活时通过 API ：[window.createWebView](/ExtensionDocs/Api/README.md#createWebView) 实现上面扩展的 `视图` 。
 
 ``` javascript
 const hx = require('hbuilderx');
@@ -202,7 +202,7 @@ module.exports = {
 }
 ```
 
-> 扩展后的`视图`可通过菜单`视图`-`显示扩展视图`打开
+> 扩展后的`视图`可通过菜单 `视图` - `显示扩展视图` 打开。
 
 #### 效果图
 

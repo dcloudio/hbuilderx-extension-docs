@@ -16,4 +16,4 @@
 	}
 ```
 
-> `菜单`扩展点详细的说明请参考这里[menus](/ExtensionDocs/ContributionPoints/README.md#menus)
+> `菜单` 扩展点详细的说明请参考[这里](/ExtensionDocs/ContributionPoints/README.md#menus)。

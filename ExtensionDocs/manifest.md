@@ -6,15 +6,15 @@
 
 |字段名称				|类型	|是否必须	|描述																																					|
 |--						|--		|--			|--																																						|
-|name					|String	|是			|插件名称																																				|
-|displayName			|String	|是			|用于展示在插件列表中的名称																																|
-|version				|String	|是			|插件版本号，检查升级时会用到																															|
+|name					|String	|是			|插件名称。																																				|
+|displayName			|String	|是			|用于展示在插件列表中的名称。																																|
+|version				|String	|是			|插件版本号，检查升级时会用到。																															|
 |engines				|Object	|是			|该Object的属性至少要包含`HBuilderX`，属性值为兼容的主版本号，如果HBuilderX的版本低于该版本，将会提示用户升级HBuilderX。例如:{"HBuilderX":"^2.7.0"}。	|
-|description			|String	|是			|简短的插件描述，不要超过30个字																															|
-|main					|String	|否			|插件代码入口文件，配置型插件可不填																														|
-|activationEvents		|Array	|否			|激活事件的列表，如为空，则表示该插件不会懒加载																											|
-|contributes			|Object	|否			|插件的[配置扩展点](/ExtensionDocs/ContributionPoints/README.md)																						|
-|extensionDependencies	|Array	|否			|该插件依赖的其他插件id																																	|
+|description			|String	|是			|简短的插件描述，不要超过30个字。																															|
+|main					|String	|否			|插件代码入口文件，配置型插件可不填。																														|
+|activationEvents		|Array	|否			|激活事件的列表，如为空，则表示该插件不会懒加载。																											|
+|contributes			|Object	|否			|插件的[配置扩展点](/ExtensionDocs/ContributionPoints/README.md)。																						|
+|extensionDependencies	|Array	|否			|该插件依赖的其他插件id。																																	|
 
 
 ### 示例
