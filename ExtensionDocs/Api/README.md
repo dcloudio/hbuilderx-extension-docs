@@ -521,7 +521,7 @@ hbuilderx://requestExtension/exampleid/examplerequest/example?example1=example2&
 #### 示例
 
 ```javascript
-    hx.window.registerUriHanlder({
+    hx.window.registerUriHandler({
         handleUri:function(uri){
             //处理scheme请求
             let path = uri.path;
