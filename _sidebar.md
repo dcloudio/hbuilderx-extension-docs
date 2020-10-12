@@ -10,6 +10,7 @@
     * [如何注册一个`视图`](/views.md)
     * [如何编辑文档](/texteditor.md)
     * [如何写一个`校验器`](/validations.md)
+	* [如何扩展一个`自定义编辑器`](/customeditor.md)
 * 插件发布
 	* [如何发布插件](/HowToPublish.md)
 <div class="contact-box">
