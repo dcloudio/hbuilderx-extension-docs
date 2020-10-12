@@ -46,6 +46,16 @@
 ]
 ```
 
+### onCustomEditor
+声明可以激活插件的自定义编辑器类型，当用户打开文件并匹配成功某一类型时，插件会自动激活。自定义编辑器扩展点参考[这里](/ExtensionDocs\ContributionPoints\README.md#customEditors)
+
+``` json
+"activationEvents": [
+    //打开catEdit.catScratch类型的自定义编辑器时发送该激活事件
+    "onCustomEditor:catEdit.catScratch"
+]
+```
+
 ### *
 事件`*`代表该插件将在HBuilderX启动时就立即激活，作用和不配置`activationEvents`一样。
 > 最佳实践是只监听需要监听的事件，尽量让插件`懒加载`

@@ -401,4 +401,36 @@ when表达式用来动态的判断某个条件是否满足(即表达式的运算
 |langId								|String	|当前激活的编辑器打开的文档的编程语言id，完整语言Id列表参见[这里](/ExtensionDocs/Api/README.md#languageId)	|
 |viewItem							|String	|通过`views`扩展的视图中当前选择的item的contextValue														|
 |config.*							|Any	|获取某个配置项的值,例子： `config.editor.fontSize`															|
-   
+
+
+### customEditors
+插件可以通过该扩展点扩展多个不同类型的自定义编辑器，自定义编辑器可以设置文件匹配模式，用户通过项目管理器打开的文件匹配到某一类型时，在编辑器区域创建webview视图，关联打开的文件。完整的扩展自定义编辑器流程参考[如何扩展一个自定义编辑器？](/customeditor.md)
+
+#### 扩展点示例如下：
+```json
+ "contributes": {
+		"customEditors": [{
+			"viewType": "catEdit.catScratch",
+			"displayName": "Cat Scratch",
+			"selector": [{
+				"fileNamePattern": "*.cscratch"
+			}],
+			"priority": "default"
+        },
+        ...]
+	}
+```
+
+#### 属性列表
+|属性名称		|属性类型	|是否必须	|描述	|
+|--	            |--			|--		|--		 |
+|viewType		|String		|是		|自定义编辑器类型，`全局唯一` |
+|displayName	|String		|否		|显示名称（暂时未用）	|
+|selector		|Array&lt;[EditorSelctor](#EditorSelctor)&gt;	|是		|匹配模板，指定一个或多个匹配模板，匹配成功的文件会与该类型自定义编辑器关联|
+|priority       |String		|否		|优先级（暂时未用）|
+
+
+#### EditorSelctor
+|属性名称	|属性类型	|是否必须	|描述   |
+|--			|--			|--			|--     |
+|fileNamePattern    |String	    |是 |文件名匹配，支持通配符|
