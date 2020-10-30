@@ -36,6 +36,8 @@ package.json在每个插件中都必须存在，包含插件的信息和`配置�
     //注意，不能直接拷贝本段代码到编辑器中，package.json目前不支持注释。本段代码加的注释只是用于解释代码。
     //插件名称，必填字段
 	"name": "your extension name",
+	//插件显示名称，用于展示在插件列表中的名称, 必填字段
+	"displayName": "your display name",
 	"description": "your extension description",
     //插件版本号，用于版本升级判断，必填字段
 	"version": "0.0.0",
