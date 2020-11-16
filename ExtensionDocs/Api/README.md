@@ -1620,11 +1620,13 @@ authorize二级模块对象，用于处理插件授权登录，获取HBuilderX�
 |scopes |Array&lt;String&gt;		| 授权范围列表, 取值范围：basic, email, phone。basic必填|
 
 #### 返回值
+
 |返回类型										|描述			|
 |--												|--				|
 |Promise&lt;Object&gt;	| Promise对象	|
 
 返回值属性说明
+
 |属性名		|属性类型	|描述									|
 |--			|--			|--										|
 |code |String		| CODE码，有效期5分钟。用于插件作者服务器端换取accessToken，通过accessToken换取授权的基本信息 |
