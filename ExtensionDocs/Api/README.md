@@ -1600,3 +1600,81 @@ HBuilderX使用WebViewPanel来作为自定义编辑器的视图，创建WebViewP
 
 ### CustomDocumentEditEvent
 用[CustomDocument](#CustomDocument)构造CustomDocumentEditEvent对象。[CustomEditorProvider](#CustomEditorProvider)可以向HBuilderX发送该事件，编辑器标签卡会置为未保存状态。
+
+## authorize
+authorize二级模块对象，用于处理插件授权登录，获取HBuilderX当前登录用户的信息授权。
+
+### login
+
+#### 参数说明
+
+|参数名称	|参数类型	|描述			|
+|--			|--			|--				|
+|params		| Object	|授权登录必要的信息|
+
+参数属性说明
+
+|属性名		|属性类型	|描述									|
+|--			|--			|--										|
+|appid |String		|  在[DCloud开发者开放开台](#)添加授权插件后创建的appid |
+|scopes |Array&lt;String&gt;		| 授权范围列表, 取值范围：basic, email, phone。basic必填|
+
+#### 返回值
+|返回类型										|描述			|
+|--												|--				|
+|Promise&lt;Object&gt;	| Promise对象	|
+
+返回值属性说明
+|属性名		|属性类型	|描述									|
+|--			|--			|--										|
+|code |String		| CODE码，有效期5分钟。用于插件作者服务器端换取accessToken，通过accessToken换取授权的基本信息 |
+|error |Number		| code获取失败时的错误码 |
+
+#### 示例
+``` javascript
+    let prom = hx.authorize.login({ appId: "yourappid", scopes: ['basic', 'email','phone'] });
+    prom.then(function (param) {
+		// param['code']
+		// param['error']
+	});
+```
+
+#### 主要错误码信息
+|错误码		| 描述									|
+|--			|--										|
+|0	| 无错误 |
+|1	| 当前没有登录用户 |
+|2	| 用户取消了授权 |
+|3	| 上一次授权的CODE码还未过期（有效期5分钟） |
+|4	| 插件状态异常 |
+|1004	| 服务器错误 |
+|2004	| 超时 |
+|2203	| 404 |
+
+### onUserLogin
+用户登录事件
+
+#### 参数说明
+
+|参数名称	|参数类型	|描述			|
+|--			|--			|--				|
+|callback		|Function		|用户登录时的回调函数，无参数|
+
+#### 返回值
+|返回类型		|描述			|
+|--				|--				|
+|[Disposable](#Disposable)	| Disposable	|
+
+### onUserLogout
+当前登录用户退出事件
+
+#### 参数说明
+
+|参数名称	|参数类型	|描述			|
+|--			|--			|--				|
+|callback		|Function		|当前登录用户退出时的回调函数，无参数|
+
+#### 返回值
+|返回类型	|描述			|
+|--			|--				|
+|[Disposable](#Disposable)	| Disposable对象	|
