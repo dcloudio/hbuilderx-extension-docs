@@ -1616,7 +1616,7 @@ authorize二级模块对象，用于处理插件授权登录，获取HBuilderX�
 
 |属性名		|属性类型	|描述									|
 |--			|--			|--										|
-|appid |String		|  在[DCloud开发者开放开台](#)添加授权插件后创建的appid |
+|appid |String		|  在[DCloud开发者开放开台](https://open.dcloud.net.cn/)添加授权插件后创建的appid |
 |scopes |Array&lt;String&gt;		| 授权范围列表, 取值范围：basic, email, phone。basic必填|
 
 #### 返回值
@@ -1650,12 +1650,12 @@ authorize二级模块对象，用于处理插件授权登录，获取HBuilderX�
 |3	| 上一次授权的CODE码还未过期（有效期5分钟） |
 |4	| 插件状态异常 |
 |1002	| 服务器参数错误 |
-|2001	| 应用信息不存在，在[DCloud开发者开放开台](#)检查appid与插件id是否错误或匹配，插件规范参考[这里](/ExtensionDocs/manifest)。|
+|2001	| 应用信息不存在，在[DCloud开发者开放开台](https://open.dcloud.net.cn/)检查appid与插件id是否错误或匹配，插件规范参考[这里](/ExtensionDocs/manifest)。|
 |3004	| 超时 |
 |3203	| 404 |
 |		|     |
 
-*关于错误码2001，开发者在创建HBuilderX插件项目，会以填写的项目名称作为插件目录和插件id。插件开发过程中，在[DCloud开发者开放开台](#)新增授权申请时需要填写此插件id，与生成的appid绑定。最终在提交至插件市场时，如果更换了新的插件id，为保证本地正常开发，需要修改插件目录为新的id，并在[DCloud开发者开放开台](#)重新提交申请。*
+*关于错误码2001，开发者在创建HBuilderX插件项目，会以填写的项目名称作为插件目录和插件id。插件开发过程中，在[DCloud开发者开放开台](https://open.dcloud.net.cn/)新增授权申请时需要填写此插件id，与生成的appid绑定。最终在提交至插件市场时，如果更换了新的插件id，为保证本地正常开发，需要修改插件目录为新的id，并在[DCloud开发者开放开台](https://open.dcloud.net.cn/)重新提交申请。*
 
 
 ### onUserLogin
