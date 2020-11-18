@@ -1616,7 +1616,7 @@ authorize二级模块对象，用于处理插件授权登录，获取HBuilderX�
 
 |属性名		|属性类型	|描述									|
 |--			|--			|--										|
-|appid |String		|  在[DCloud开发者开放开台](https://open.dcloud.net.cn/)添加授权插件后创建的appid |
+|appId |String		|  在[DCloud开发者开放开台](https://open.dcloud.net.cn/)添加授权插件后创建的appid |
 |scopes |Array&lt;String&gt;		| 授权范围列表, 取值范围：basic, email, phone。basic必填|
 
 #### 返回值
