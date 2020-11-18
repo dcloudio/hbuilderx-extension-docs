@@ -1663,6 +1663,14 @@ authorize二级模块对象，用于处理插件授权登录，获取HBuilderX�
 |--				|--				|
 |[Disposable](#Disposable)	| Disposable	|
 
+
+#### 示例
+``` javascript
+    hx.authorize.onUserLogin(function(){
+        // do something
+    });
+```
+
 ### onUserLogout
 当前登录用户退出事件
 
@@ -1676,3 +1684,10 @@ authorize二级模块对象，用于处理插件授权登录，获取HBuilderX�
 |返回类型	|描述			|
 |--			|--				|
 |[Disposable](#Disposable)	| Disposable对象	|
+
+#### 示例
+``` javascript
+    hx.authorize.onUserLogout(function(){
+        // do something
+    });
+```
