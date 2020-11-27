@@ -286,12 +286,10 @@ window二级模块对象，用于处理主窗口相关的逻辑。
 		title:'测试对话框',
 		text:'这里是测试对话框内容',
 		buttons:['确定','取消']
-		});
+	});
 	 result.then((button)=>{
 	 if(button == '确定'){
-		 
 	 }else if(button == '取消'){
-		 
 	 }
 	  });
 ```
@@ -851,7 +849,24 @@ workspace二级模块对象，用于处理和工作空间以及文档事件有�
 #### 返回值
 |返回类型				|描述									|
 |--						|--										|
-|Promise&lt;String&gt;	|	|
+|Promise&lt;String&gt;	|操作结果|
+
+操作结果说明
+|code|说明	|
+|--	|--	|
+|0	|操作成功	|
+|8|操作被取消	|
+|101|无效的路径/没有找到该文件对应的文件系统	|
+|102|没有找到该文件	|
+|103|打开文件失败	|
+|104|读取文件内容失败	|
+|105|写入文件内容失败	|
+|106|删除文件失败	|
+|107|创建文件夹失败	|
+|108| 获取文件列表失败	|
+|109|创建临时文件夹失败	|
+|201| 解析Json数据失败，可能是无效的Json数据	|
+
 
 #### 示例
 ``` javascript
@@ -1306,12 +1321,12 @@ editorPromise.then((editor)=>{
 ### 属性列表
 |属性名		|属性类型	|描述						|
 |--			|--			|--							|
-|src		|[Uri](#Uri)		|拷贝文件源地址|
-|dest		|[Uri](#Uri)]	|拷贝文件目标地址				|
+|src		|[Uri](#Uri)		|拷贝文件源地址，地址是绝对路径|
+|dest		|[Uri](#Uri)	|拷贝文件目标地址，地址是绝对路径并且是目录|
 |rootPromptTips	|String		|目标文件一级目录存在时提示语|
 |filePromptTips	|String |目标文件一级目录下文件存在时提示语 |
-|filter	|Function(#Uri)	当前正在操作的文件回调 |
-|errorHandler	|Function(Uri)	|操作错误的文件回调, 返回0 取消操作  返回 1  重试  返回 2 跳过 |
+|filter	|Function([Uri](#Uri)) | 当前正在操作的文件回调 |
+|errorHandler	|Function([Uri](#Uri))	|操作错误的文件回调, 返回0 取消操作  返回 1  重试  返回 2 跳过 |
 
 ### update
 #### 参数说明
