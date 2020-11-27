@@ -272,8 +272,7 @@ window二级模块对象，用于处理主窗口相关的逻辑。
 
 |参数名称	|参数类型			|描述					|
 |--			|--					|--						|
-|options	|[MessageBoxOptions](#MessageBoxOptions)&gt; |对话框内容|
-|buttons	|Array&lt;String&gt;|通知框中的按钮组		|
+|options	|[MessageBoxOptions](#MessageBoxOptions)|对话框内容|
 
 #### 返回值
 |返回类型				|描述									|
@@ -282,17 +281,19 @@ window二级模块对象，用于处理主窗口相关的逻辑。
 
 #### 示例
 ``` javascript
-    llet result = hx.window.showMessageBox({
-    type:'error',
-    title:'测试对话框',
-    text:'这里是测试对话框内容',
-    buttons:['确定','取消']
-});
-result.then((button)=>{
-    if(button == '确定'){
-    }else if(button == '取消'){
-    }
-});
+    let result = hx.window.showMessageBox({
+		type:'error',
+		title:'测试对话框',
+		text:'这里是测试对话框内容',
+		buttons:['确定','取消']
+		});
+	 result.then((button)=>{
+	 if(button == '确定'){
+		 
+	 }else if(button == '取消'){
+		 
+	 }
+	  });
 ```
 
 ### showQuickPick
@@ -837,6 +838,42 @@ workspace二级模块对象，用于处理和工作空间以及文档事件有�
     let fontSize = config.get("fontSize");
 ```
 
+### copyFileWithPrompt
+> `从HBuilderX 2.9.12及以上版本开始支持`
+
+将指定文件或文件夹将文件拷贝到目标文件夹下
+#### 参数说明
+
+|参数名称	|参数类型			|描述					|
+|--			|--					|--						|
+|options	|[CopyFileWithPromptOptions](#CopyFileWithPromptOptions)&gt; |文件拷贝参数|
+
+#### 返回值
+|返回类型				|描述									|
+|--						|--										|
+|Promise&lt;String&gt;	|	|
+
+#### 示例
+``` javascript
+ let result = hx.workspace.copyFileWithPrompt({
+     src:hx.Uri.file('D:/test01'),
+     dest:hx.Uri.file('E:/test01'),
+     rootPromptTips:'目标文件已存在',
+     filePromptTips:'目标文件已存在',
+     filter:function(params){
+ 	    console.log(params)
+ 		return 0;
+     },
+     errorHandler:function(err){
+ 		console.log(err)
+ 		return 0;
+     }
+ });
+ result.then((data)=>{
+ });
+```
+
+
 ## env
 `从HBuilderX 2.7.6及以上版本开始支持`
 
@@ -1263,6 +1300,19 @@ editorPromise.then((editor)=>{
     let eslintConfig = hx.workspace.getConfiguration("eslint-js")
     let validateOnDocumentChanged = eslintConfig.get("validateOnDocumentChanged",false);
 ```
+
+## CopyFileWithPromptOptions
+文件拷贝配置
+### 属性列表
+|属性名		|属性类型	|描述						|
+|--			|--			|--							|
+|src		|[Uri](#Uri)		|拷贝文件源地址|
+|dest		|[Uri](#Uri)]	|拷贝文件目标地址				|
+|rootPromptTips	|String		|目标文件一级目录存在时提示语|
+|filePromptTips	|String |目标文件一级目录下文件存在时提示语 |
+|filter	|Function(#Uri)	当前正在操作的文件回调 |
+|errorHandler	|Function(Uri)	|操作错误的文件回调, 返回0 取消操作  返回 1  重试  返回 2 跳过 |
+
 ### update
 #### 参数说明
 
@@ -1392,10 +1442,10 @@ editorPromise.then((editor)=>{
 ### 属性列表
 |属性名		|属性类型	|描述						|
 |--			|--			|--							|
-|type		|String		|消息类型,取值有['warning'|'info'|'error'|'question'] |
+|type		|String		|消息类型,取值有['warning'，'info'，'error'，'question'] |
 |title		|String		|对话框标题				|
 |text		|String		|对话框内容				|
-|buttons |Array&lt;String&gt |按钮列表	|
+|buttons	|Array&lt;String&gt;|对话框中的按钮组 |
 |defaultButton	|String	|默认按钮索引，可不填默认0 |
 |escapeButton	|String	|默认Esc后执行的操作按钮索引，可不填默认1 |
 
