@@ -537,7 +537,7 @@ viewId需要在package.json文件内的配置扩展点[views](/ExtensionDocs/Con
 
 #### 示例
 ```Javascript
-    hx.window.showInformationMessage({viewId:'your viewid', containerId: 'containerId'});
+    hx.window.showView({viewId:'your viewid', containerId: 'containerId'});
 ```
 
 ### registerUriHandler
