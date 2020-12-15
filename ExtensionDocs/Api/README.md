@@ -1594,6 +1594,8 @@ HBuilderX使用WebViewPanel来作为自定义编辑器的视图，创建WebViewP
 
 ## authorize
 
+> HBuilderX 3.0.0+起支持
+
 authorize二级模块对象，用于处理插件授权登录，获取HBuilderX当前登录用户的信息授权。
 
 它是[DCloud用户开放平台](https://open.dcloud.net.cn/)在HBuilderX插件API中的具体体现。
@@ -1609,6 +1611,10 @@ authorize二级模块对象，用于处理插件授权登录，获取HBuilderX�
 1. 三方开发商需要在[DCloud用户开放平台](https://open.dcloud.net.cn/)注册插件应用
 2. 开发HBuilderX插件，调用 `hx.authorize.login` API，拿到code码。（见下面文档）
 3. 插件将code码传到三方开发商服务器，从服务器端向 DCloud用户开放平台 的服务器请求，获取用户信息。文档详见：[https://ask.dcloud.net.cn/article/38005](https://ask.dcloud.net.cn/article/38005)
+
+对应的效果如下图所示：
+
+<img src = "/static/snapshots/authorize.png" />
 
 ### login
 
