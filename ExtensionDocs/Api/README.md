@@ -8,7 +8,8 @@ const hx = require('hbuilderx')
 commands二级模块对象，用于处理和`命令`相关的逻辑。`命令`包含2部分：唯一ID和自定义的function，可以通过registerCommand或registerTextEditorCommand注册。`命令`可以通过以下方式触发：
 - 菜单：将命令通过`menus`扩展点关联到某个菜单。
     1. 通过commands扩展点声明一个command，然后关联到`menus`上
-``` json
+
+```json
 {
     "contributes":{
         "commands":[
@@ -264,6 +265,38 @@ window二级模块对象，用于处理主窗口相关的逻辑。
     });
 ```
 
+### showMessageBox
+> `从HBuilderX 2.9.12及以上版本开始支持`
+
+在窗口显示可供选择的对话框
+#### 参数说明
+
+|参数名称	|参数类型			|描述					|
+|--			|--					|--						|
+|options	|[MessageBoxOptions](#MessageBoxOptions)|对话框内容|
+
+#### 返回值
+|返回类型				|描述									|
+|--						|--										|
+|Promise&lt;String&gt;	|如果设置了按钮，返回用户点击了哪个按钮	|
+
+#### 示例
+``` javascript
+let result = hx.window.showMessageBox({
+    type: 'error',
+    title: '测试对话框',
+    text: '这里是测试对话框内容',
+    buttons: ['确定', '取消']
+});
+result.then((button) => {
+    if (button == '确定') {
+        
+    } else if (button == '取消') {
+        
+    }
+});
+```
+
 ### showQuickPick
 在窗口中间弹出一个可搜索的建议选择列表
 #### 参数说明
@@ -342,6 +375,7 @@ window二级模块对象，用于处理主窗口相关的逻辑。
 
 ### createOutputChannel
 创建一个输出控制台通道，可用于在控制台输出文本内容。
+
 #### 参数说明
 
 |参数名称	|参数类型	|描述																								|
@@ -349,11 +383,13 @@ window二级模块对象，用于处理主窗口相关的逻辑。
 |channel	|String		|控制台通道名称，在添加内容到控制台时，会将该名称作为前缀输出，eg:[${channel}] 这是要输出的内容。	|
 
 #### 返回值
+
 |返回类型						|描述		|
 |--								|--			|
 |[OutputChannel](#OutputChannel)|控制台通道	|
 
 #### 示例
+
 ``` javascript
     let outputChannel = hx.window.createOutputChannel("foo");
     outputChannel.show();
@@ -455,9 +491,11 @@ viewId需要在package.json文件内的配置扩展点[views](/ExtensionDocs/Con
 |options|[WebViewOptions](#WebViewOptions)			|WebView属性	|
 
 #### 返回值
-|返回类型	|描述	|																										|
-|--			|--		| --																										|
-|WebViewPanel|[WebViewPanel](#WebViewPanel)|WebViewPanel属性|
+
+|返回类型		|描述							|					|
+|--				|--								| --				|
+|WebViewPanel	|[WebViewPanel](#WebViewPanel)	|WebViewPanel属性	|
+
 #### 示例
 ```Javascript
     let webviewPanel = hx.window.createWebView("viewId",{
@@ -486,6 +524,21 @@ viewId需要在package.json文件内的配置扩展点[views](/ExtensionDocs/Con
     });
 ```
 
+### showView
+> `从HBuilderX 2.9.9及以上版本开始支持`
+
+切换指定viewId的WebView控件视图。插件创建多个WebView视图并打开后，可以通过该接口切换窗口左侧/右侧视图区域中指定的tab页。该接口不适用于创建
+
+#### 参数说明
+
+|参数名称	|参数类型					|描述											|
+|--		|--							|--												|
+|viewInfo	|Object	| 包含viewId, conTainerId的视图信息  |
+
+#### 示例
+```Javascript
+    hx.window.showView({viewId:'your viewid', containerId: 'containerId'});
+```
 
 ### registerUriHandler
 `从HBuilderX 2.8.1及以上版本开始支持`
@@ -806,11 +859,61 @@ workspace二级模块对象，用于处理和工作空间以及文档事件有�
     let fontSize = config.get("fontSize");
 ```
 
+### copyFileWithPrompt
+
+> `从HBuilderX 2.9.12及以上版本开始支持`
+
+将指定文件或文件夹将文件拷贝到目标文件夹下
+
+#### 参数说明
+
+|参数名称	|参数类型													|描述			|
+|--			|--															|--				|
+|options	|[CopyFileWithPromptOptions](#CopyFileWithPromptOptions)    |文件拷贝参数	|
+
+#### 返回值
+
+|返回类型				|描述		|
+|--						|--			|
+|Promise&lt;String&gt;	|操作结果	|
+
+文件拷贝返回值说明:
+
+|code	|描述									|
+|--		|--										|
+|-1		|操作失败								|
+|0		|操作成功								|
+|1		|操作取消								|
+
+
+#### 示例
+``` javascript
+ let result = hx.workspace.copyFileWithPrompt({
+     src:hx.Uri.file('D:/test01'),
+     dest:hx.Uri.file('E:/test01'),
+     rootPromptTips:'目标文件已存在',
+     filePromptTips:'目标文件已存在',
+     filter:function(params){
+ 	    console.log(params)
+ 		return 0;
+     },
+     errorHandler:function(err){
+ 		console.log(err)
+ 		return 0;
+     }
+ });
+ result.then((data)=>{
+ });
+```
+
+
 ## env
 `从HBuilderX 2.7.6及以上版本开始支持`
 
 env二级模块对象，包含运行环境信息和系统交互相关的方法
+
 ### 属性列表
+
 |属性名		|属性类型				|描述																	|
 |--			|--						|--																		|
 |appName	|String					|应用程序名称：HBuilder X												|
@@ -820,7 +923,9 @@ env二级模块对象，包含运行环境信息和系统交互相关的方法
 |clipboard	|[Clipboard](#Clipboard)|剪切板对象，可用于读取剪切板内容和写入内容到剪切板，目前仅支持文本格式	|
 
 ### openExternal
+
 打开一个外部链接，比如`https://www.dcloud.io`、`mailto:ide@dcloud.io`
+
 #### 参数说明
 
 |参数名称	|参数类型	|描述			|
@@ -828,6 +933,7 @@ env二级模块对象，包含运行环境信息和系统交互相关的方法
 |uri		|String		|外部链接地址	|
 
 #### 返回值
+
 |返回类型				|描述				|
 |--						|--					|
 |Promise&lt;Boolean&gt;	|返回是否打开成功	|
@@ -844,8 +950,10 @@ env二级模块对象，包含运行环境信息和系统交互相关的方法
 `从HBuilderX 2.7.6及以上版本开始支持`
 
 剪切板对象，可用于读取剪切板内容和写入内容到剪切板，目前仅支持文本格式	
+
 ### readText
 读取剪切板内容
+
 #### 参数说明
 无
 
@@ -855,6 +963,7 @@ env二级模块对象，包含运行环境信息和系统交互相关的方法
 |Promise&lt;String&gt;	|返回剪切板内容	|
 
 #### 示例
+
 ``` javascript
     var readPromise = hx.env.clipboard.readText();
 	readPromise.then(function(text) {
@@ -864,6 +973,7 @@ env二级模块对象，包含运行环境信息和系统交互相关的方法
 
 ### writeText
 写入剪切板内容
+
 #### 参数说明
 
 |参数名称	|参数类型	|描述			|
@@ -871,6 +981,7 @@ env二级模块对象，包含运行环境信息和系统交互相关的方法
 |value		|String		|要写入剪切板的字符串|
 
 #### 返回值
+
 |返回类型			|描述	|
 |--					|--		|
 |Promise&lt;void&gt;|Promise|
@@ -893,11 +1004,13 @@ env二级模块对象，包含运行环境信息和系统交互相关的方法
 |section	|String		|配置项的key，比如:"editor.fontSize"|
 
 #### 返回值
+
 |返回类型	|描述												|
 |--			|--													|
 |Boolean	|`true`表示配置项被修改，`false`表示配置项没有被修改|
 
 #### 示例
+
 ``` javascript
     let configurationChangeDisplose = hx.workspace.onDidChangeConfiguration(function(event){
         if(event.affectsConfiguration("editor.fontSize")){
@@ -910,12 +1023,14 @@ env二级模块对象，包含运行环境信息和系统交互相关的方法
 项目管理器中新增或者移除项目时产生的事件类型
 
 ### 属性列表
+
 |属性名	|属性类型											|描述			|
 |--		|--													|--				|
 |added	| Array&lt;[WorkspaceFolder](#WorkspaceFolder)&gt;	|新增的项目列表	|
 |removed| Array&lt;[WorkspaceFolder](#WorkspaceFolder)&gt;	|移除的项目列表	|
 
 #### 示例
+
 ``` javascript
     let wsFoldersChangeDisplose = hx.workspace.onDidChangeWorkspaceFolders(function(event){
         if(event.added){
@@ -929,21 +1044,27 @@ env二级模块对象，包含运行环境信息和系统交互相关的方法
 
 ## TextDocumentWillSaveEvent
 文档即将保存的事件
+
 ### 属性列表
+
 |属性名		|属性类型										|描述						|
 |--			|--												|--							|
 |document	|[TextDocument](#TextDocument)					|该事件关联的文档			|
 
 ## TextDocumentChangeEvent
 文档被修改时的事件
+
 ### 属性列表
+
 |属性名		|属性类型						|描述				|
 |--			|--								|--					|
 |document	|[TextDocument](#TextDocument)	|该事件关联的文档	|
 
 ## TextEditor
 文本编辑器对象
+
 ### 属性列表
+
 |属性名		|属性类型										|描述						|
 |--			|--												|--							|
 |document	|[TextDocument](#TextDocument)					|该编辑器关联的文档			|
@@ -953,6 +1074,7 @@ env二级模块对象，包含运行环境信息和系统交互相关的方法
 
 ### edit
 修改当前编辑器打开的文档
+
 #### 参数说明
 
 |参数名称	|参数类型									|描述			|
@@ -960,11 +1082,13 @@ env二级模块对象，包含运行环境信息和系统交互相关的方法
 |callback		|Function([TextEditorEdit](#TextEditorEdit))	|文档编辑操作回调	|
 
 #### 返回值
+
 |返回类型	|描述	|
 |--			|--		|
 |Promise&lt;void&gt;	|Promise	|
 
 #### 示例
+
 ``` javascript
     let editorPromise = hx.window.getActiveTextEditor();
     editorPromise.then(function(editor) {
@@ -980,6 +1104,7 @@ env二级模块对象，包含运行环境信息和系统交互相关的方法
 
 ### setSelection
 设置主选择区域，该API会首先清除原来的光标选择，如果要使用多光标，请使用[addSelection](#addSelection)方法
+
 #### 参数说明
 
 |参数名称	|参数类型	|描述		|
@@ -990,11 +1115,13 @@ env二级模块对象，包含运行环境信息和系统交互相关的方法
 <img src="/static/snapshots/anchor_active.jpg" style="zoom:50%" />
 
 #### 返回值
+
 |返回类型	|描述	|
 |--			|--		|
 |Promise&lt;void&gt;	|Promise	|
 
 #### 示例
+
 ``` javascript
 let editor = hx.window.getActiveTextEditor();
 editor.then((editor)=>{
@@ -1004,6 +1131,7 @@ editor.then((editor)=>{
 
 ### addSelection
 增加新的选择区域，调用后会在编辑器内追加一个新一个光标。
+
 #### 参数说明
 
 |参数名称	|参数类型	|描述		|
@@ -1014,11 +1142,13 @@ editor.then((editor)=>{
 <img src="/static/snapshots/anchor_active.jpg" style="zoom:50%" />
 
 #### 返回值
+
 |返回类型	|描述	|
 |--			|--		|
 |Promise&lt;void&gt;	|Promise	|
 
 #### 示例
+
 ``` javascript
 let editorPromise = hx.window.getActiveTextEditor();
 editorPromise.then((editor)=>{
@@ -1030,7 +1160,9 @@ editorPromise.then((editor)=>{
 
 ## TextDocument
 编辑器打开的文档文件
+
 ### 属性列表
+
 |属性名			|属性类型							|描述														|
 |--				|--									|--															|
 |fileName		|String								|文件名称													|
@@ -1049,6 +1181,7 @@ editorPromise.then((editor)=>{
 |range		|[Range](#Range)|[可选]文本区域，如果不传该参数，则获取整个文档的内容	|
 
 #### 返回值
+
 |返回类型	|描述		|
 |--			|--			|
 |String		|文本字符串	|
@@ -1062,6 +1195,7 @@ editorPromise.then((editor)=>{
 |lineno		|Number		|行号，从0开始	|
 
 #### 返回值
+
 |返回类型								|描述		|
 |--										|--			|
 | Promise&lt;[TextLine](#TextLine)&gt;	|文本行对象	|
@@ -1074,6 +1208,7 @@ editorPromise.then((editor)=>{
 |pos		|Number		|光标位置	|
 
 #### 返回值
+
 |返回类型								|描述		|
 |--										|--			|
 |Promise&lt;[TextLine](#TextLine)&gt;	|文本行对象	|
@@ -1156,7 +1291,9 @@ editorPromise.then((editor)=>{
 
 ## TextLine
 文档中的某一行
+
 ### 属性列表
+
 |属性名	|属性类型	|描述						|
 |--		|--			|--							|
 |start	|Number		|行起始位置					|
@@ -1165,7 +1302,9 @@ editorPromise.then((editor)=>{
 
 ## Range
 文本区域
+
 ### 属性列表
+
 |属性名	|属性类型	|描述		|
 |--		|--			|--			|
 |start	|Number		|起始位置	|
@@ -1196,6 +1335,7 @@ editorPromise.then((editor)=>{
     outputChannel.show();
     outputChannel.appendLine("Hello World");
 ```
+
 ### show
 #### 参数说明
 无
@@ -1214,6 +1354,7 @@ editorPromise.then((editor)=>{
 
 ## Configuration
 全局配置
+
 ### get
 #### 参数说明
 
@@ -1223,6 +1364,7 @@ editorPromise.then((editor)=>{
 |defaultValue	|Any		|默认值，当key不存在时返回该值|
 
 #### 返回值
+
 |返回类型	|描述		|
 |--			|--			|
 |Any		|配置项的值	|
@@ -1232,6 +1374,21 @@ editorPromise.then((editor)=>{
     let eslintConfig = hx.workspace.getConfiguration("eslint-js")
     let validateOnDocumentChanged = eslintConfig.get("validateOnDocumentChanged",false);
 ```
+
+## CopyFileWithPromptOptions
+文件拷贝配置
+
+### 属性列表
+
+|属性名		|属性类型	|描述						|
+|--			|--			|--							|
+|src		|[Uri](#Uri)		|拷贝文件源地址，地址是绝对路径|
+|dest		|[Uri](#Uri)	|拷贝文件目标地址，地址是绝对路径并且是目录|
+|rootPromptTips	|String		|目标文件一级目录存在时提示语|
+|filePromptTips	|String |目标文件一级目录下文件存在时提示语 |
+|filter	|Function([Uri](#Uri)) | 当前正在操作的文件回调 |
+|errorHandler	|Function([Uri](#Uri))	|操作错误的文件回调, 返回0 取消操作  返回 1  重试  返回 2 跳过 |
+
 ### update
 #### 参数说明
 
@@ -1241,6 +1398,7 @@ editorPromise.then((editor)=>{
 |value		|Any		|配置项的值	|
 
 #### 返回值
+
 |返回类型	|描述	|
 |--			|--		|
 |Promise&lt;void&gt;	|Promise	|
@@ -1254,11 +1412,15 @@ editorPromise.then((editor)=>{
 ```
 ## DiagnosticCollection
 问题集合
+
 ### 属性列表
+
 |属性名	|属性类型	|描述		|
 |--		|--			|--			|
 |name	|String		|问题集合名称	|
+
 ### set
+
 #### 参数说明
 
 |参数名称	|参数类型										|描述		|
@@ -1267,6 +1429,7 @@ editorPromise.then((editor)=>{
 |diagnostics|Array&lt;[DiagnosticItem](#DiagnosticItem)&gt;	|问题集合	|
 
 #### 返回值
+
 |返回类型	|描述	|
 |--			|--		|
 |Promise&lt;void&gt;	|Promise	|
@@ -1284,15 +1447,19 @@ editorPromise.then((editor)=>{
 ```
 ## DiagnosticItem
 问题项
+
 ### 属性列表
+
 |属性名		|属性类型	|描述												|
 |--			|--			|--													|
 |line		|String		|在文档第几行										|
 |column		|String		|在文档第几列										|
 |message	|String		|问题详细信息										|
 |severity	|String		|问题级别，取值范围:'error'，'warn'. 默认值是'error'|
+
 ## WorkspaceEdit
 工作空间的一组编辑操作
+
 ### set
 #### 参数说明
 
@@ -1302,6 +1469,7 @@ editorPromise.then((editor)=>{
 |edits		|Array&lt;[TextEdit](#TextEdit)&gt;	|编辑操作数组	|
 
 #### 返回值
+
 |返回类型	|描述	|
 |--			|--		|
 |Promise&lt;void&gt;	|Promise	|
@@ -1317,14 +1485,19 @@ editorPromise.then((editor)=>{
     workspaceEdit.set(doc.uri, edits);
     hx.workspace.applyEdit(workspaceEdit);
 ```
+
 ## TextEdit
 文档编辑
+
 ### 属性列表
+
 |属性名	|属性类型			|描述			|
 |--		|--					|--				|
 |range	|[Range](#Range)	|要修改的区域	|
 |newText|String				|要插入的新内容	|
+
 ### replace **static**
+
 #### 参数说明
 
 |参数名称	|参数类型			|描述			|
@@ -1333,12 +1506,16 @@ editorPromise.then((editor)=>{
 |newText	|String				|要插入的新内容	|
 
 #### 返回值
+
 |返回类型	|描述	|
 |--			|--		|
 |[TextEdit](#TextEdit)|	文档编辑对象|
+
 ## WorkspaceFolder
 工作空间下的项目目录,在左侧项目管理器内的每一个项目表示一个WorkspaceFolder
+
 ### 属性列表
+
 |属性名	|属性类型			|描述			|
 |--		|--					|--				|
 |uri	|String或[Uri](#Uri)|项目目录地址	|
@@ -1348,7 +1525,9 @@ editorPromise.then((editor)=>{
 
 ## InputBoxOptions
 输入框设置
+
 ### 属性列表
+
 |属性名		|属性类型	|描述						|
 |--			|--			|--							|
 |prompt		|String		|输入框的描述				|
@@ -1356,8 +1535,24 @@ editorPromise.then((editor)=>{
 |placeHolder|String		|输入框内容为空时的占位内容	|
 |password	|Boolean	|是否是密码框				|
 
+## MessageBoxOptions
+
+对话框设置
+
+### 属性列表
+
+|属性名		|属性类型	|描述						|
+|--			|--			|--							|
+|type		|String		|消息类型,取值有['warning'，'info'，'error'，'question'] |
+|title		|String		|对话框标题				|
+|text		|String		|对话框内容				|
+|buttons	|Array&lt;String&gt;|对话框中的按钮组 |
+|defaultButton	|String	|默认按钮索引，可不填默认0 |
+|escapeButton	|String	|默认Esc后执行的操作按钮索引，可不填默认1 |
+
 ## QuickPickOptions
 快速选择框设置
+
 ### 属性列表
 |属性名		|属性类型	|描述									|
 |--			|--			|--										|
@@ -1365,7 +1560,9 @@ editorPromise.then((editor)=>{
 
 ## QuickPickItem
 快速选择候选项
+
 ### 属性列表
+
 |属性名		|属性类型	|描述		|
 |--			|--			|--			|
 |label		|String		|候选项名称	|
@@ -1375,7 +1572,9 @@ editorPromise.then((editor)=>{
 
 ## TreeViewOptions
 创建TreeView需要的配置项
+
 ### 属性列表
+
 |属性名				|属性类型								|描述															|
 |--					|--										|--																|
 |showCollapseAll	|Boolean								|是否显示折叠所有												|
@@ -1385,7 +1584,9 @@ editorPromise.then((editor)=>{
 `从HBuilderX 2.8.1及以上版本开始支持`
 
 调用[createWebView](#createWebView)创建[WebView](#WebView)时需要的配置项
+
 ### 属性列表
+
 |属性名				|属性类型								|描述															|
 |--					|--										|--																|
 |enableScripts 	|Boolean								|是否启用JavaScript脚本支持												|
@@ -1395,6 +1596,7 @@ editorPromise.then((editor)=>{
 
 调用[createWebView](#createWebView)返回的WebViewPanel对象
 ### 属性列表
+
 |参数名称	|参数类型	|描述				|
 |--			|--			|--			|
 |webView	|[WebView](#WebView)	|WebView 关联的WebView对象|
@@ -1404,7 +1606,9 @@ editorPromise.then((editor)=>{
 `从HBuilderX 2.8.1及以上版本开始支持`
 
 调用[createWebView](#createWebView)创建WebView对象
+
 ### 属性列表
+
 |参数名称	|参数类型	|描述				|
 |--			|--			|--			|
 |options	|[WebViewOptions](#WebViewOptions)	|调用[createWebView](#createWebView)创建WebView时传入的options参数|
@@ -1412,11 +1616,15 @@ editorPromise.then((editor)=>{
 
 ### onDidReceiveMessage
 收到hbuilderx.postMessage发出的消息时调用回调函数。
+
 #### 参数说明
+
 |参数名称	|参数类型	|描述		|
 |--			|--																	|--			|
 |callback	|Function	|响应收到消息的回调|
+
 #### 返回值
+
 |返回类型	|
 |--	|
 |无 | 
@@ -1426,13 +1634,32 @@ editorPromise.then((editor)=>{
     webview.onDidReceiveMessage((message)=>{ console.log(message) });
 ```
 
+### asWebviewUri
+将本地资源转换成可在WebView中加载的uri。
+
+#### 参数说明
+
+|参数名称	|参数类型	|描述		|
+|--			|--																	|--			|
+|localResource	|[Uri](#Uri)	|统一资源访问符|
+
+#### 返回值
+
+|返回类型	|描述	|
+|--			|--		|
+|[Uri](#Uri)|可在[WebView](#WebView)中加载的uri|
+
 ### postMessage(message: any): Thenable
 在WebView中发送消息
+
 #### 参数说明
+
 |参数名称	|参数类型	|描述		|
 |--			|--	|--			|
 |message	|Any	| 消息内容|
+
 #### 返回值
+
 |返回类型	|描述	|
 |--			|--		|
 |Thenable| Javascript异步延迟后执行|
@@ -1440,8 +1667,10 @@ editorPromise.then((editor)=>{
 
 ## TreeDataProvider
 TreeView树控件获取数据的接口，不可直接实例化该对象，需要自己写一个子类实现该接口，每个自定义的treeDataProvider都需要实现该接口下列出的方法
+
 ### getChildren
 获取某个节点的下的子节点，如果参数为空，则表示要获取根节点
+
 #### 参数说明
 
 |参数名称	|参数类型	|描述															|
@@ -1449,12 +1678,14 @@ TreeView树控件获取数据的接口，不可直接实例化该对象，需要
 |element	|Any?		|获取该节点下的子节点列表，如果参数为空，则是要获取根节点列表	|
 
 #### 返回值
+
 |返回类型	|描述	|
 |--			|--		|
 |Promise&lt;Any[]&gt;	|Promise	|
 
 ### getTreeItem
 获取用于显示自定义数据element(通过getChildren获取的对象)的TreeItem对象
+
 #### 参数说明
 
 |参数名称	|参数类型	|描述									|
@@ -1462,13 +1693,37 @@ TreeView树控件获取数据的接口，不可直接实例化该对象，需要
 |element	|Any?		|通过getChildren获取的列表对象中某一项	|
 
 #### 返回值
+
 |返回类型	|描述				|
 |--			|--					|
 |[TreeItem](#TreeItem)	|保存有节点的显示信息	|
 
+### onDidChangeTreeData
+该接口用于通知HBuilderX数据变化，需要刷新视图，目前仅支持刷新整个视图。**该属性需要开发者在构造TreeDataProvider时创建**。
+
+#### 示例
+``` javascript
+    var hx = require("hbuilderx");
+    class MyTreeViewProvider extends hx.TreeDataProvider {
+        constructor() {
+            super();
+            this.dataChangeEmitter = new hx.EventEmitter();
+            this.onDidChangeTreeData = this.dataChangeEmitter.event;
+        }
+        ... // other function
+    }
+
+    // 数据变化主动通知
+    provider.dataChangeEmitter.fire();
+    
+```
+
+
 ## TreeItem
 保存有节点的显示信息
+
 ### 属性列表
+
 |属性名				|属性类型	|描述																																					|
 |--					|--			|--																																						|
 |collapsibleState	|Number		|是否可展开，目前取值有：0：不可展开；1：可展开																											|
@@ -1479,7 +1734,9 @@ TreeView树控件获取数据的接口，不可直接实例化该对象，需要
 
 ## CommandInfo
 配置一个`命令`需要的信息对象
+
 ### 属性列表
+
 |属性名		|属性类型	|描述						|
 |--			|--			|--							|
 |command	|String		|要执行的`命令`id			|
@@ -1487,7 +1744,9 @@ TreeView树控件获取数据的接口，不可直接实例化该对象，需要
 
 ## Disposable
 资源释放接口，HBuilderX开放的部分API返回了该对象，将该对象添加到插件激活时的参数`context.subscriptions`数组内，插件卸载时将自动释放对应的资源。
+
 ### dispose
+
 #### 参数说明
 无
 
@@ -1496,8 +1755,10 @@ TreeView树控件获取数据的接口，不可直接实例化该对象，需要
 
 ## UriHandler
 uri处理器接口
+
 ### handleUri
 #### 参数说明
+
 |参数名称	|参数类型	|描述																		|
 |--			|--			|--																			|
 |uri		|Uri		|scheme请求对应的uri，eg：hbuilderx://requestExtension/extensionId?foo=bar	|
@@ -1507,7 +1768,9 @@ uri处理器接口
 
 ## Uri
 统一资源访问符
+
 ### 属性列表
+
 |属性名		|属性类型	|描述				|
 |--			|--			|--					|
 |fsPath		|String		|本地文件地址		|
@@ -1520,7 +1783,9 @@ uri处理器接口
 
 ## CustomDocument
 自定义文档，用户可以继承。
+
 ### 属性列表
+
 |属性名		|属性类型	|描述				|
 |--			|--			|--					|
 |uri		|String		|本地文件地址（file:///C:/abc/test.txt），通过构造函数初始化 |
@@ -1664,20 +1929,18 @@ email和phone请谨慎使用，非必要申请授权会招致HBuilderX的用户�
 |--			|--										|
 |0	| 无错误 |
 |1	| 当前没有登录用户 |
-|2	| 用户取消了授权 |
+|2	| 用户取消了授权（直接关闭窗口操作） |
 |3	| 上一次授权的CODE码还未过期（有效期5分钟） |
 |4	| 插件状态异常 |
+|5	| 用户拒绝授权（用户点击拒绝），或当申请的scopes包含拒绝的授权时会返回该错误码，不影响已通过的授权 |
 |1002	| 服务器参数错误 |
 |2001	| 应用信息不存在，在[DCloud开发者开放开台](https://open.dcloud.net.cn/)检查appid与插件id是否错误或匹配，插件规范参考[这里](/ExtensionDocs/manifest)。|
 |3004	| 超时 |
 |3203	| 404 |
-|		|     |
 
 - *关于错误码 2001，开发者在创建HBuilderX插件项目，会以填写的项目名称作为插件目录和插件id。插件开发过程中，在[DCloud开发者开放开台](https://open.dcloud.net.cn/)新增授权申请时需要填写此插件id，与生成的appid绑定。最终在提交至插件市场时，如果更换了新的插件id，为保证本地正常开发，需要修改插件目录为新的id，并在[DCloud开发者开放开台](https://open.dcloud.net.cn/)重新提交申请。*
 
 - *关于错误码 3，开发者在测试过程中，如果需要重新弹出授权窗口，可以手动删除HBuilderX缓存的加密授权信息记录。Windows平台位置：C:\Users\[UserName]\AppData\Roaming\HBuilder X\prefs, MacOS平台位置：~/Library/Application Support/HBuilder X/prefs，删除该文件[authorization]组下所有内容。*
-
-
 
 
 ### onUserLogin

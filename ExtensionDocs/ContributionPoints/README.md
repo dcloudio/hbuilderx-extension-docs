@@ -384,11 +384,15 @@ when表达式用来动态的判断某个条件是否满足(即表达式的运算
 |`&&`	|并且	|`explorerResourceCount == 1 && explorerResourceIsFolder`	|
 |<code>&#124;&#124;</code>|或者	|<code>explorerResourceIsFolder &#124;&#124; explorerResourceIsWorkspaceFolder</code>|
 |`!`	|非	    |`!explorerResourceIsFolder`|
+|`=~`	|正则运算	    |`workspaceFolderRelativePath  =~ /^package.json/`|
 
 目前HBuilderX内置变量列表如下：
 
 |变量名								|类型	|描述																										|
 |--									|--		|--																											|
+|workspaceFolderRelativePath		|String	|相对于项目的相对路径，举例： pages/user/user.vue																|
+|workspaceRelativePath				|String	|相对于项目的相对路径（加上项目名称），举例： HelloUniapp/pages/user/user.vue									|
+|workspaceFolder.type				|String	|项目类型，可取值：UniApp_Vue,Web,App,Wap2App,Extension,Unkown								|
 |explorerResourceCount				|Number	|项目管理器选中的资源数量																					|
 |explorerResourceIsFolder			|Boolean|项目管理器选中的资源是否全是目录																			|
 |explorerResourceIsWorkspaceFolder	|Boolean|项目管理器选中的资源是否全是项目根目录																		|

@@ -12,7 +12,7 @@
     * [如何写一个`校验器`](/validations.md)
 	* [如何扩展一个`自定义编辑器`](/customeditor.md)
 * 插件发布
-	* [发布与安装](/HowToPublish.md)
+	* [如何发布插件](/HowToPublish.md)
 <div class="contact-box">
 	<div class="contact-item">
 	  <img src="//img-cdn-qiniu.dcloud.net.cn/uniapp/doc/qq@2x.png" width="20" height="20"/>
