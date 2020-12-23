@@ -604,6 +604,9 @@ hbuilderx://requestExtension/exampleid/examplerequest/example?example1=example2&
 ```
 
 ### createWebViewDialog
+
+> HBuilderX 3.0.0起支持
+
 创建基于WebView页面的对话框，通过html渲染对话框的主要内容，可通过参数定制对话框标题、按钮等内容。按钮被添加到对话框下方的按钮组里，点击按钮会向WebView发送消息，开发者可在html通过js监听。
 
 #### 参数说明
@@ -2060,6 +2063,8 @@ HBuilderX使用WebViewPanel来作为自定义编辑器的视图，创建WebViewP
 
 ## DialogOptions
 
+> HBuilderX 3.0.0起支持
+
 调用[createWebViewDialog](#createWebViewDialog)需要的对话框属性参数。
 
 ### 属性列表
@@ -2075,6 +2080,9 @@ HBuilderX使用WebViewPanel来作为自定义编辑器的视图，创建WebViewP
 - *以上所有属性可选，但不建议*
 
 ## WebViewDialog
+
+> HBuilderX 3.0.0起支持
+
 基于WebView视图的对话框。调用[createWebViewDialog](#createWebViewDialog)创建WebViewDialog对象。WebView相关属性可以参考[WebView](#WebView)。
 
 ### 属性列表
