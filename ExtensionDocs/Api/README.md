@@ -603,6 +603,71 @@ hbuilderx://requestExtension/exampleid/examplerequest/example?example1=example2&
     hx.window.registerCustomEditorProvider("catEdit.catScratch", new CatCustomEditorProvider());
 ```
 
+### createWebViewDialog
+创建基于WebView页面的对话框，通过html渲染对话框的主要内容，可通过参数定制对话框标题、按钮等内容。按钮被添加到对话框下方的按钮组里，点击按钮会向WebView发送消息，开发者可在html通过js监听。
+
+#### 参数说明
+
+|参数名称	|参数类型					|描述											|
+|--		|--							|--												|
+|dialogOptions 	|[DialogOptions](#DialogOptions)	|对话框基本属性，包括标题、按钮等	|
+|webviewOptions |[WebViewOptions](#WebViewOptions)	|WebView属性	|
+
+#### 返回值
+
+|返回类型		|描述							|					|
+|--				|--								| --				|
+|WebViewDialog	|[WebViewDialog](#WebViewDialog)	| WebViewDialog，控制对话框显示和关闭等	|
+
+#### 示例
+```Javascript
+    let webviewDialog = hx.window.createWebViewDialog({
+    modal: false,
+    title: "是否删除文件？",
+    description: "删除后无法恢复，请谨慎操作。也可以到回收站看看。",
+    dialogButtons: [
+        "确定", "取消"
+    ],
+    size: {
+        width: 400,
+        height: 300
+    }
+}, {
+    enableScripts: true
+});
+let webview = webviewDialog.webView;
+webview.html = `
+    <script>
+    function initReceive() {
+        hbuilderx.onDidReceiveMessage((msg)=>{
+            if(msg.type == 'DialogButtonEvent'){
+                let button = msg.button;
+                if(button == '确定'){
+                    //TODO 处理表单提交
+                }else if(button == '取消'){
+                    //TODO 处理取消逻辑
+                        hbuilderx.postMessage({
+                        command: 'cancel'
+                    });
+                }
+            }
+        });
+    }
+    window.addEventListener("hbuilderxReady", initReceive);
+    `;
+
+webview.onDidReceiveMessage((msg) => {
+    console.log(msg)
+    if (msg.command == 'cancel') {
+        webviewDialog.close();
+    }
+});
+let promi = webviewDialog.show();
+promi.then(function (data) {
+    // 处理错误信息
+});
+```
+
 ## workspace
 workspace二级模块对象，用于处理和工作空间以及文档事件有关的逻辑
 
@@ -944,6 +1009,138 @@ env二级模块对象，包含运行环境信息和系统交互相关的方法
 	openPromise.then(function(success) {
 		console.log("打开链接结果：",success);
 	});
+```
+
+## authorize
+
+> HBuilderX 3.0.0+起支持
+
+authorize二级模块对象，用于处理插件授权登录，获取HBuilderX当前登录用户的信息授权。
+
+它是[DCloud用户开放平台](https://open.dcloud.net.cn/)在HBuilderX插件API中的具体体现。
+
+使用场景：
+
+三方的开发者服务商，比如Git服务商，可以制作HBuilderX插件，并且将账户打通。比如插件注册项目的右键菜单，在HBuilderX中对项目点右键，一键上传到某Git服务商，且无需再重复注册三方Git服务账户。
+
+当然不止是Git服务商，所有其他开发者服务商，如测试、加固、多渠道发布、招聘...，均可通过[DCloud用户开放平台](https://open.dcloud.net.cn/)共享DCloud的开发者资源。
+
+使用步骤：
+
+1. 三方开发商需要在[DCloud用户开放平台](https://open.dcloud.net.cn/)注册插件应用
+2. 开发HBuilderX插件，调用 `hx.authorize.login` API，拿到code码。（见下面文档）
+3. 插件将code码传到三方开发商服务器，从服务器端向 DCloud用户开放平台 的服务器请求，获取用户信息。文档详见：[https://ask.dcloud.net.cn/article/38005](https://ask.dcloud.net.cn/article/38005)
+
+对应的效果如下图所示：
+
+<img src = "/static/snapshots/authorize.png" />
+
+### login
+
+#### 参数说明
+
+|参数名称	|参数类型	|描述			|
+|--			|--			|--				|
+|params		| Object	|授权登录必要的信息|
+
+参数属性说明
+
+|属性名		|属性类型	|描述									|
+|--			|--			|--										|
+|appId |String		|  在[DCloud开发者开放开台](https://open.dcloud.net.cn/)添加授权插件后创建的appid |
+|scopes |Array&lt;String&gt;		| 授权范围列表, 取值范围：basic, email, phone。basic必填|
+
+basic包括用户的openid、昵称、头像。
+
+email和phone请谨慎使用，非必要申请授权会招致HBuilderX的用户反感。
+
+同时注意在调用login方法后，HBuilderX会弹出授权确认框，用户可能拒绝授权或拒绝授权email、phone等敏感信息。
+
+#### 返回值
+
+|返回类型										|描述			|
+|--												|--				|
+|Promise&lt;Object&gt;	| Promise对象	|
+
+返回值属性说明
+
+|属性名		|属性类型	|描述									|
+|--			|--			|--										|
+|code |String		| CODE码，有效期5分钟。用于插件作者服务器端换取accessToken，通过accessToken换取授权的基本信息 |
+|error |Number		| code获取失败时的错误码 |
+
+#### 示例
+``` javascript
+    let prom = hx.authorize.login({ appId: "yourappid", scopes: ['basic', 'email','phone'] });
+    prom.then(function (param) {
+		// param['code']
+		// param['error']
+	});
+```
+
+#### 主要错误码信息
+
+|错误码		| 描述									|
+|--			|--										|
+|0	| 无错误 |
+|1	| 当前没有登录用户 |
+|2	| 用户取消了授权（直接关闭窗口操作） |
+|3	| 上一次授权的CODE码还未过期（有效期5分钟） |
+|4	| 插件状态异常 |
+|5	| 用户拒绝授权（用户点击拒绝），或当申请的scopes包含拒绝的授权时会返回该错误码，不影响已通过的授权 |
+|1002	| 服务器参数错误 |
+|2001	| 应用信息不存在，在[DCloud开发者开放开台](https://open.dcloud.net.cn/)检查appid与插件id是否错误或匹配，插件规范参考[这里](/ExtensionDocs/manifest)。|
+|3004	| 超时 |
+|3203	| 404 |
+
+- *关于错误码 2001，开发者在创建HBuilderX插件项目，会以填写的项目名称作为插件目录和插件id。插件开发过程中，在[DCloud开发者开放开台](https://open.dcloud.net.cn/)新增授权申请时需要填写此插件id，与生成的appid绑定。最终在提交至插件市场时，如果更换了新的插件id，为保证本地正常开发，需要修改插件目录为新的id，并在[DCloud开发者开放开台](https://open.dcloud.net.cn/)重新提交申请。*
+
+- *关于错误码 3，开发者在测试过程中，如果需要重新弹出授权窗口，可以手动删除HBuilderX缓存的加密授权信息记录。Windows平台位置：C:\Users\[UserName]\AppData\Roaming\HBuilder X\prefs, MacOS平台位置：~/Library/Application Support/HBuilder X/prefs，删除该文件[authorization]组下所有内容。*
+
+
+### onUserLogin
+用户登录事件
+
+#### 参数说明
+
+|参数名称	|参数类型	|描述			|
+|--			|--			|--				|
+|callback		|Function		|用户登录时的回调函数，无参数|
+
+#### 返回值
+
+|返回类型		|描述			|
+|--				|--				|
+|[Disposable](#Disposable)	| Disposable	|
+
+
+#### 示例
+``` javascript
+    hx.authorize.onUserLogin(function(){
+        // do something
+    });
+```
+
+### onUserLogout
+当前登录用户退出事件
+
+#### 参数说明
+
+|参数名称	|参数类型	|描述			|
+|--			|--			|--				|
+|callback		|Function		|当前登录用户退出时的回调函数，无参数|
+
+#### 返回值
+
+|返回类型	|描述			|
+|--			|--				|
+|[Disposable](#Disposable)	| Disposable对象	|
+
+#### 示例
+``` javascript
+    hx.authorize.onUserLogout(function(){
+        // do something
+    });
 ```
 
 ## Clipboard
@@ -1858,138 +2055,101 @@ HBuilderX使用WebViewPanel来作为自定义编辑器的视图，创建WebViewP
 |--			|--			|
 |Promise&lt;boolean&gt; 或 boolean	|true表示成功，编辑器标签卡会移除dirty状态|
 
-
 ### CustomDocumentEditEvent
 用[CustomDocument](#CustomDocument)构造CustomDocumentEditEvent对象。[CustomEditorProvider](#CustomEditorProvider)可以向HBuilderX发送该事件，编辑器标签卡会置为未保存状态。
 
-## authorize
+## DialogOptions
 
-> HBuilderX 3.0.0+起支持
+调用[createWebViewDialog](#createWebViewDialog)需要的对话框属性参数。
 
-authorize二级模块对象，用于处理插件授权登录，获取HBuilderX当前登录用户的信息授权。
+### 属性列表
 
-它是[DCloud用户开放平台](https://open.dcloud.net.cn/)在HBuilderX插件API中的具体体现。
+|属性名		|属性类型	|描述				|
+|--			|--			|--					|
+|modal      | Boolean	| 是否显示为模态窗口，默认模态窗口 |
+|title      | String	| 对话框主标题 |
+|description       | String	| 对话框副标题 |
+|dialogButtons   | Array&lt;String&gt;	| 需要在对话框下方按钮组区域添加的按钮列表 |
+|size       | 对话框尺寸 | 需要显示的对话框大小，结构：{ width: Number, height: Number } |
 
-使用场景：
+- *以上所有属性可选，但不建议*
 
-三方的开发者服务商，比如Git服务商，可以制作HBuilderX插件，并且将账户打通。比如插件注册项目的右键菜单，在HBuilderX中对项目点右键，一键上传到某Git服务商，且无需再重复注册三方Git服务账户。
+## WebViewDialog
+基于WebView视图的对话框。调用[createWebViewDialog](#createWebViewDialog)创建WebViewDialog对象。WebView相关属性可以参考[WebView](#WebView)。
 
-当然不止是Git服务商，所有其他开发者服务商，如测试、加固、多渠道发布、招聘...，均可通过[DCloud用户开放平台](https://open.dcloud.net.cn/)共享DCloud的开发者资源。
+### 属性列表
 
-使用步骤：
+|属性名		|属性类型	|描述				|
+|--			|--			|--					|
+|webView | [WebView](#WebView)	| 用于渲染对话框主要内容 |
+|id      | String	| 用于内部通信的对话框id |
 
-1. 三方开发商需要在[DCloud用户开放平台](https://open.dcloud.net.cn/)注册插件应用
-2. 开发HBuilderX插件，调用 `hx.authorize.login` API，拿到code码。（见下面文档）
-3. 插件将code码传到三方开发商服务器，从服务器端向 DCloud用户开放平台 的服务器请求，获取用户信息。文档详见：[https://ask.dcloud.net.cn/article/38005](https://ask.dcloud.net.cn/article/38005)
+### show
 
-对应的效果如下图所示：
-
-<img src = "/static/snapshots/authorize.png" />
-
-### login
-
-#### 参数说明
-
-|参数名称	|参数类型	|描述			|
-|--			|--			|--				|
-|params		| Object	|授权登录必要的信息|
-
-参数属性说明
-
-|属性名		|属性类型	|描述									|
-|--			|--			|--										|
-|appId |String		|  在[DCloud开发者开放开台](https://open.dcloud.net.cn/)添加授权插件后创建的appid |
-|scopes |Array&lt;String&gt;		| 授权范围列表, 取值范围：basic, email, phone。basic必填|
-
-basic包括用户的openid、昵称、头像。
-
-email和phone请谨慎使用，非必要申请授权会招致HBuilderX的用户反感。
-
-同时注意在调用login方法后，HBuilderX会弹出授权确认框，用户可能拒绝授权或拒绝授权email、phone等敏感信息。
+显示对话框，返回显示成功或者失败的信息，主要包含内置浏览器相关状态。
 
 #### 返回值
+|返回类型	|描述		|
+|--			|--			|
+|Promise&lt;Object&gt;	|Promise对象，Object结构：{"code":2, "message":"Built-in browser not exist."}|
 
-|返回类型										|描述			|
-|--												|--				|
-|Promise&lt;Object&gt;	| Promise对象	|
-
-返回值属性说明
-
-|属性名		|属性类型	|描述									|
-|--			|--			|--										|
-|code |String		| CODE码，有效期5分钟。用于插件作者服务器端换取accessToken，通过accessToken换取授权的基本信息 |
-|error |Number		| code获取失败时的错误码 |
-
-#### 示例
-``` javascript
-    let prom = hx.authorize.login({ appId: "yourappid", scopes: ['basic', 'email','phone'] });
-    prom.then(function (param) {
-		// param['code']
-		// param['error']
-	});
-```
+#### 主要错误码
 
 #### 主要错误码信息
 
 |错误码		| 描述									|
 |--			|--										|
 |0	| 无错误 |
-|1	| 当前没有登录用户 |
-|2	| 用户取消了授权（直接关闭窗口操作） |
-|3	| 上一次授权的CODE码还未过期（有效期5分钟） |
-|4	| 插件状态异常 |
-|5	| 用户拒绝授权（用户点击拒绝），或当申请的scopes包含拒绝的授权时会返回该错误码，不影响已通过的授权 |
-|1002	| 服务器参数错误 |
-|2001	| 应用信息不存在，在[DCloud开发者开放开台](https://open.dcloud.net.cn/)检查appid与插件id是否错误或匹配，插件规范参考[这里](/ExtensionDocs/manifest)。|
-|3004	| 超时 |
-|3203	| 404 |
+|1	| 内置浏览器插件正在下载 |
+|2	| 内置浏览器插件不存在（弹出下载内置浏览器插件窗口，用户点击了取消）|
 
-- *关于错误码 2001，开发者在创建HBuilderX插件项目，会以填写的项目名称作为插件目录和插件id。插件开发过程中，在[DCloud开发者开放开台](https://open.dcloud.net.cn/)新增授权申请时需要填写此插件id，与生成的appid绑定。最终在提交至插件市场时，如果更换了新的插件id，为保证本地正常开发，需要修改插件目录为新的id，并在[DCloud开发者开放开台](https://open.dcloud.net.cn/)重新提交申请。*
+### close
 
-- *关于错误码 3，开发者在测试过程中，如果需要重新弹出授权窗口，可以手动删除HBuilderX缓存的加密授权信息记录。Windows平台位置：C:\Users\[UserName]\AppData\Roaming\HBuilder X\prefs, MacOS平台位置：~/Library/Application Support/HBuilder X/prefs，删除该文件[authorization]组下所有内容。*
+关闭对话框，插件通过close主动关闭对话框
 
+### displayError
 
-### onUserLogin
-用户登录事件
+在对话框副标题下方显示红色错误信息，错误信息会由动态抖动效果
 
 #### 参数说明
 
 |参数名称	|参数类型	|描述			|
 |--			|--			|--				|
-|callback		|Function		|用户登录时的回调函数，无参数|
+|text		|String		| 错误信息  |
 
-#### 返回值
+### setButtonStatus
 
-|返回类型		|描述			|
-|--				|--				|
-|[Disposable](#Disposable)	| Disposable	|
+设置对话框指定按钮状态，对话框按钮通过[createWebViewDialog](#createWebViewDialog)参数[DialogOptions](#DialogOptions)提供。
 
+#### 参数说明
+
+|参数名称	|参数类型	|描述			|
+|--			|--			|--				|
+|button		|String		| 按钮字符串  |
+|status		|Array&lt;String&gt;	| 按钮状态列表，为空时设置默认状态|
+
+#### 按钮状态说明
+
+|状态		| 描述      |
+|--			|--	        |
+|"loading"	| 按钮文字前方增加loading动态提示 |
+|"disable"	| 禁用按钮，可与loading组合使用 |  
 
 #### 示例
 ``` javascript
-    hx.authorize.onUserLogin(function(){
-        // do something
-    });
+    webviewDialog.setButtonStatus("确定", ["loading", "disable"]);
 ```
 
-### onUserLogout
-当前登录用户退出事件
+### onDialogClosed
 
-#### 参数说明
+注册窗口关闭回调。
 
 |参数名称	|参数类型	|描述			|
 |--			|--			|--				|
-|callback		|Function		|当前登录用户退出时的回调函数，无参数|
+|callback	|Function		|当窗口显示后，用户关闭或调用close后，触发该回调，无参数|
 
 #### 返回值
 
 |返回类型	|描述			|
 |--			|--				|
 |[Disposable](#Disposable)	| Disposable对象	|
-
-#### 示例
-``` javascript
-    hx.authorize.onUserLogout(function(){
-        // do something
-    });
-```
