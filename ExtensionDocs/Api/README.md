@@ -2101,8 +2101,6 @@ HBuilderX使用WebViewPanel来作为自定义编辑器的视图，创建WebViewP
 |--			|--			|
 |Promise&lt;Object&gt;	|Promise对象，Object结构：{"code":2, "message":"Built-in browser not exist."}|
 
-#### 主要错误码
-
 #### 主要错误码信息
 
 |错误码		| 描述									|
