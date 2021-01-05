@@ -640,6 +640,7 @@ hbuilderx://requestExtension/exampleid/examplerequest/example?example1=example2&
 });
 let webview = webviewDialog.webView;
 webview.html = `
+    <html>
     <script>
     function initReceive() {
         hbuilderx.onDidReceiveMessage((msg)=>{
@@ -657,6 +658,8 @@ webview.html = `
         });
     }
     window.addEventListener("hbuilderxReady", initReceive);
+    </script>
+    </html>
     `;
 
 webview.onDidReceiveMessage((msg) => {
@@ -2095,8 +2098,6 @@ HBuilderX使用WebViewPanel来作为自定义编辑器的视图，创建WebViewP
 |返回类型	|描述		|
 |--			|--			|
 |Promise&lt;Object&gt;	|Promise对象，Object结构：{"code":2, "message":"Built-in browser not exist."}|
-
-#### 主要错误码
 
 #### 主要错误码信息
 |错误码		| 描述									|
