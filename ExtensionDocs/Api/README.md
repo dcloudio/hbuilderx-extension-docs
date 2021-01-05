@@ -624,7 +624,7 @@ hbuilderx://requestExtension/exampleid/examplerequest/example?example1=example2&
 
 #### 示例
 ```Javascript
-    let webviewDialog = hx.window.createWebViewDialog({
+let webviewDialog = hx.window.createWebViewDialog({
     modal: false,
     title: "是否删除文件？",
     description: "删除后无法恢复，请谨慎操作。也可以到回收站看看。",
@@ -638,6 +638,7 @@ hbuilderx://requestExtension/exampleid/examplerequest/example?example1=example2&
 }, {
     enableScripts: true
 });
+
 let webview = webviewDialog.webView;
 webview.html = `
     <html>
@@ -660,7 +661,7 @@ webview.html = `
     window.addEventListener("hbuilderxReady", initReceive);
     </script>
     </html>
-    `;
+`;
 
 webview.onDidReceiveMessage((msg) => {
     console.log(msg)
@@ -668,6 +669,7 @@ webview.onDidReceiveMessage((msg) => {
         webviewDialog.close();
     }
 });
+
 let promi = webviewDialog.show();
 promi.then(function (data) {
     // 处理错误信息
@@ -692,9 +694,9 @@ workspace二级模块对象，用于处理和工作空间以及文档事件有�
 #### 示例
 ``` javascript
     var wsPromise = hx.workspace.getWorkspaceFolders();
-	wsPromise.then(function(wsFolders) {
-		console.log("项目管理器包含的项目数量：",wsFolders.length);
-	});
+    wsPromise.then(function(wsFolders) {
+        console.log("项目管理器包含的项目数量：",wsFolders.length);
+    });
 ```
 
 ### getWorkspaceFolder
@@ -714,9 +716,9 @@ workspace二级模块对象，用于处理和工作空间以及文档事件有�
 #### 示例
 ``` javascript
     var wsPromise = hx.workspace.getWorkspaceFolder("%fsPath%");
-	wsPromise.then(function(wsFolder) {
-		console.log("文件所在项目：",wsFolder.name);
-	});
+    wsPromise.then(function(wsFolder) {
+        console.log("文件所在项目：",wsFolder.name);
+    });
 ```
 
 ### openTextDocument
@@ -735,9 +737,9 @@ workspace二级模块对象，用于处理和工作空间以及文档事件有�
 #### 示例
 ``` javascript
     var documentPromise = hx.workspace.openTextDocument("foo/bar.js");
-	documentPromise.then(function(document) {
-		console.log("打开了文档:",document.fileName);
-	});
+    documentPromise.then(function(document) {
+        console.log("打开了文档:",document.fileName);
+    });
 ```
 
 ### onDidChangeConfiguration
@@ -899,8 +901,8 @@ workspace二级模块对象，用于处理和工作空间以及文档事件有�
         let workspaceEdit = new hx.WorkspaceEdit();
         let edits = [];
         edits.push(new hx.TextEdit({
-        	start: 0,
-        	end: 0
+            start: 0,
+            end: 0
         }, "foo"));
         
         workspaceEdit.set(editor.document.uri,edits);
