@@ -640,6 +640,7 @@ hbuilderx://requestExtension/exampleid/examplerequest/example?example1=example2&
 });
 let webview = webviewDialog.webView;
 webview.html = `
+    <html>
     <script>
     function initReceive() {
         hbuilderx.onDidReceiveMessage((msg)=>{
@@ -657,6 +658,8 @@ webview.html = `
         });
     }
     window.addEventListener("hbuilderxReady", initReceive);
+    </script>
+    </html>
     `;
 
 webview.onDidReceiveMessage((msg) => {
