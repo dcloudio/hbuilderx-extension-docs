@@ -507,7 +507,7 @@ viewId需要在package.json文件内的配置扩展点[views](/ExtensionDocs/Con
             hbuilderx.onDidReceiveMessage((msg)=>{
                 
             });
-            hbuiderx.postMessage({
+            hbuilderx.postMessage({
                 command: 'alert',
                 text: 'HelloWorld'
             });
