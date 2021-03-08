@@ -11,6 +11,28 @@
     - 正式版 `/Applications/HBuilderX.app/Contents/MacOS/cli`
     - Alpha版 `/Applications/HBuilderX-Alpha.app/Contents/MacOS/cli`
 
+## cli 启动
+
+cli启动HBuilderX 
+```
+cli.exe open
+```
+
+## cli project
+
+cli打开项目
+
+```
+cli.exe project open --path 项目路径
+```
+
+cli关闭项目
+
+```
+cli.exe project close --path 项目路径
+```
+
+
 ## cli 打包
 
 1. 首先, 需要启动HBuilderX. (进入HBuilderX安装目录根目录, 终端输入`cli.exe open`)
@@ -20,7 +42,23 @@
 cli.exe pack --config 配置文件
 ```
 4. 打包过程中如果有错误会给出相应的错误信息并中断操作，打包成功后传统打包会输出打包成功的下载地址，安心打包会输出打包成功后的路径。
-
+5. cli打包命令行输出
+```
+localhost:MacOS hx$ ./cli pack --config /Users/hx/Documents/HBuilderProjects/测试项目/pca/configure.json
+16:42:37.575 检查云端打包状态...
+16:42:38.016 检查打包资源...
+16:42:38.689 正在编译打包资源...
+16:42:43.570 压缩打包资源...
+16:42:43.678 向云端发送打包请求...
+16:42:45.518 项目 pca [__UNI__EB87FB4]的打包状态：时间: 2021-03-08 16:42:45    类型: iOS Appstore    		队列中    当前应用 IDFA 已经开启，在提交 AppStore 审核时需要在后台开启 IDFA，[详细操作查看](https://ask.dcloud.net.cn/article/36107)时间: 2021-03-08 16:42:45    类型: Android自有证书    	队列中    
+打包成功后会自动返回下载链接。打包过程查询请点菜单发行-查看云打包状态。周五傍晚等高峰期打包排队较长，请耐心等待。如果是为了三方SDK调试，请使用自定义调试基座（菜单运行-手机或模拟器-制作自定义调试基座），不要反复打包。
+16:42:45.529 项目 pca [__UNI__EB87FB4]的打包状态：时间: 2021-03-08 16:42:45    类型: iOS Appstore    队列中    当前应用 IDFA 已经开启，在提交 AppStore 审核时需要在后台开启 IDFA，[详细操作查看](https://ask.dcloud.net.cn/article/36107)
+16:43:42.881 项目 pca [__UNI__EB87FB4]打包成功：
+    类型: Android自有证书 下载地址: https://service.dcloud.net.cn/build/download/40dc5910-7fea-11eb-b149-2bda895b13a3 （注意该地址为临时下载地址，只能下载5次）
+16:43:48.232 项目 pca [__UNI__EB87FB4]的打包状态：时间: 2021-03-08 16:42:45    类型: iOS Appstore    正在云端打包    当前应用 IDFA 已经开启，在提交 AppStore 审核时需要在后台开启 IDFA，[详细操作查看](https://ask.dcloud.net.cn/article/36107)
+16:44:46.579 项目 pca [__UNI__EB87FB4]打包成功：
+    类型: iOS Appstore 下载地址: https://service.dcloud.net.cn/build/download/40c60580-7fea-11eb-af55-b9c5ccd8a1ee （注意该地址为临时下载地址，只能下载5次）当前应用 IDFA 已经开启，在提交 AppStore 审核时需要在后台开启 IDFA，[详细操作查看](https://ask.dcloud.net.cn/article/36107)
+```
 
 ## App打包配置文件
 
