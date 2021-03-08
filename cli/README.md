@@ -36,7 +36,7 @@ cli.exe project close --path 项目路径
 ## cli 打包
 
 1. 首先, 需要启动HBuilderX. (进入HBuilderX安装目录根目录, 终端输入`cli.exe open`)
-2. 编辑App打包配置文件(json文件), [App打包配置文件](/cli/README?id=App打包配置文件)
+2. 编辑App打包配置文件(json文件), [App打包配置文件](/cli/README?id=cli打包配置文件)
 3. cli运行, 终端输入
 ```
 cli.exe pack --config 配置文件
@@ -60,7 +60,7 @@ localhost:MacOS hx$ ./cli pack --config /Users/hx/Documents/HBuilderProjects/测
     类型: iOS Appstore 下载地址: https://service.dcloud.net.cn/build/download/40c60580-7fea-11eb-af55-b9c5ccd8a1ee （注意该地址为临时下载地址，只能下载5次）当前应用 IDFA 已经开启，在提交 AppStore 审核时需要在后台开启 IDFA，[详细操作查看](https://ask.dcloud.net.cn/article/36107)
 ```
 
-## App打包配置文件
+## cli打包配置文件
 
 配置文件格式为json,将下面内容保存在文件json文件，编码为utf-8，根据说明配置所需参数
 
@@ -120,9 +120,12 @@ localhost:MacOS hx$ ./cli pack --config /Users/hx/Documents/HBuilderProjects/测
 
 ## cli打包参数
 
+> 以下参数选项, 均为`cli pack`的选项.
+
 |参数名称	    |描述	    |
 |--			|--			|
-|--config	|配置文件绝对路径，配置文件配置，参考[配置文件](#配置文件)	|
+|--help	|打包命令帮助		|
+|--config	|配置文件绝对路径，配置文件配置，参考[配置文件](/cli/README?id=cli打包配置文件)	|
 |--project	|HBuilder X里导入的项目名或绝对路径		|
 |--platform	|配打包平台,默认值android,取值有"android","ios"如果要打多个逗号隔开		|
 |--iscustom	|是否使用自定义基座 默认值false true自定义基座 false自定义证书		|
@@ -131,8 +134,7 @@ localhost:MacOS hx$ ./cli pack --config /Users/hx/Documents/HBuilderProjects/测
 |--splashads	|开屏广告,true打开 false关闭		|
 |--rpads	|悬浮红包广告,true打开 false关闭		|
 |--pushads	|push广告,true打开 false关闭		|
-|---exchange	|加入换量联盟,true加入 false不加入		|
-|--help	|打包命令帮助		|
+|--exchange	|加入换量联盟,true加入 false不加入		|
 |--android.packagename	|安卓包名，打安卓包填写		|
 |--android.androidpacktype	|安卓打包类型 默认值0,0 使用自有证书 1 使用公共证书 2 使用DCloud老版证书	|
 |--android.certalias	|安卓打包证书别名,自有证书打包填写的参数		|
@@ -140,7 +142,7 @@ localhost:MacOS hx$ ./cli pack --config /Users/hx/Documents/HBuilderProjects/测
 |--android.certpassword	|安卓打包证书密码,自有证书打包填写的参数		|
 |--android.channels	|安卓平台要打的渠道包,取值有"google","yyb","360","huawei","xiaomi","oppo","vivo"，如果要打多个逗号隔开		|
 |--ios.bundle	|iOS appid 打ios包填写		|
-|---ios.supporteddevice	|iOS打包支持的设备类型,默认值iPhone 值有"iPhone","iPad" 如果要打多个逗号隔开打包平台		|
+|--ios.supporteddevice	|iOS打包支持的设备类型,默认值iPhone 值有"iPhone","iPad" 如果要打多个逗号隔开打包平台		|
 |--ios.isprisonbreak	|iOS打包是否打越狱包,true打越狱包,false正式包		|
 |--ios.profile	|iOS使用自定义证书打包的profile文件路径		|
 |--ios.certfile	|iOS使用自定义证书打包的p12文件路径		|
