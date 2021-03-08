@@ -54,11 +54,24 @@ pre:after {
   content: "";
 }
 
-/* [data-page="/README.md"] .sidebar-nav a[href="/README"] {
-	border-right: 2px solid;
-	color: var(--theme-color, #42b983);
-	font-weight: 600;
-} */
+.app-nav.no-badge>ul>li:nth-child(1)>a {
+    border-bottom: 2px solid #42b983;
+    color: #42b983;
+}
+
+[data-page="/README.md"] .app-nav.no-badge>ul>li>a,
+[data-page*="/firstExtension"] .app-nav.no-badge>ul>li>a,
+[data-page*="/extension"] .app-nav.no-badge>ul>li>a,
+[data-page*="/commands"] .app-nav.no-badge>ul>li>a,
+[data-page*="/menus"] .app-nav.no-badge>ul>li>a,
+[data-page*="/texteditor"] .app-nav.no-badge>ul>li>a,
+[data-page*="/validations"] .app-nav.no-badge>ul>li>a,
+[data-page*="/HowToPublish"] .app-nav.no-badge>ul>li>a,
+[data-page*="/ExtensionDocs"] .app-nav.no-badge>ul>li>a,
+[data-page*="/cli/"] .app-nav.no-badge>ul>li>a{
+  border-bottom: none;
+  color: #34495e;
+}
 
 [data-page="/README.md"] .app-nav.no-badge>ul>li:nth-child(1)>a,
 [data-page*="/firstExtension"] .app-nav.no-badge>ul>li:nth-child(1)>a,
@@ -68,7 +81,8 @@ pre:after {
 [data-page*="/texteditor"] .app-nav.no-badge>ul>li:nth-child(1)>a,
 [data-page*="/validations"] .app-nav.no-badge>ul>li:nth-child(1)>a,
 [data-page*="/HowToPublish"] .app-nav.no-badge>ul>li:nth-child(1)>a,
-[data-page*="/ExtensionDocs"] .app-nav.no-badge>ul>li:nth-child(2)>a{
+[data-page*="/ExtensionDocs"] .app-nav.no-badge>ul>li:nth-child(2)>a,
+[data-page*="/cli/"] .app-nav.no-badge>ul>li:nth-child(3)>a{
   border-bottom: 2px solid #42b983;
   color: #42b983;
 }

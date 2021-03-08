@@ -1,6 +1,6 @@
-* [cli](/cli/README.md)
 * [插件教程](README.md)
 * [插件API](/ExtensionDocs/Api/README.md)
+* [cli](/cli/README.md)
 
 <ul class="nav-href">
 	<li><a href="//dev.dcloud.net.cn/wish/?channel=hbuilder" target="__blank">需求墙</a></li>
