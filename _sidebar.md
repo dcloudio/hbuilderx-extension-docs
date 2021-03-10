@@ -1,31 +1,32 @@
-* 概述
-	* [简介](README.md)
-* 快速开始
-	* [第一个插件](/firstExtension.md)
-	* [其他插件示例](/Others.md)
-* 开发指南
-    * [插件说明](/extension.md)
-    * [如何注册`命令`](/commands.md)
-    * [如何注册`菜单`](/menus.md)
-    * [如何注册一个`视图`](/views.md)
-    * [如何编辑文档](/texteditor.md)
-    * [如何写一个`校验器`](/validations.md)
-	* [如何扩展一个`自定义编辑器`](/customeditor.md)
-* 插件发布
-	* [如何发布插件](/HowToPublish.md)
+* [简介](/README.md)
+* 安装
+    * [Windows](/Tutorial/windows_install.md)
+    * [MacOSX](/Tutorial/mac_install.md)
+* 开始使用
+    * [用户界面](/Tutorial/userinterface.md)
+    * [入门教程](/Tutorial/StartedTutorial.md)
+    * [项目类型说明](/Tutorial/ProjectType.md)
+    * [主题](/Tutorial/themes.md)
+    * [快捷键](/Tutorial/keybindings.md)
+* 用户指南
+    * [格式化](/Tutorial/UserGuide/format.md)
+    * [vue doc](/Tutorial/UserGuide/vuedoc.md)
+    * [.editorconfig](/Tutorial/UserGuide/editorconfig.md)
+    * [外部命令](/Tutorial/UserGuide/externalCommands.md)
+* 扩展插件
+    * [validate-html](/Tutorial/extension/validate-html.md)
+    * [validate-stylelint](/Tutorial/extension/validate-stylelint.md)
+    * [eslint-js](/Tutorial/extension/eslint-js.md)
+    * [eslint-vue](/Tutorial/extension/eslint-vue.md)
+    * [Scss/Sass](/Tutorial/extension/sass.md)
+    * [FTP/SFTP](/Tutorial/extension/ftp.md)
+    * [MarkDown一键分享](/Tutorial/extension/markdown_share.md)
 <div class="contact-box">
-	<div class="contact-item">
-	  <img src="//img-cdn-qiniu.dcloud.net.cn/uniapp/doc/qq@2x.png" width="20" height="20"/>
-	  <div class="contact-smg">
-	     <div>官方插件开发QQ交流群</div>
-	  <div>群1：1090431141 &nbsp;<!-- <a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=4b0a7a0f7c73efb5cebb38bb8bf7df262b68a31e0205709467eed8cca8da58d1">点此加入</a> --></div>
-	  </div>
-	</div>
   <div class="contact-item">
-  	<img src="//img-cdn-qiniu.dcloud.net.cn/uniapp/doc/weixin@2x.png" width="20" height="20"/>
-  	<div class="contact-smg">
-  		<div>关注微信公众号</div>
-  		<img src="https://img-cdn-qiniu.dcloud.net.cn/uniapp/doc/weixin.jpg" width="90" height="90"/>
-  	</div>
+    <img src="//img-cdn-qiniu.dcloud.net.cn/uniapp/doc/weixin@2x.png" width="20" height="20"/>
+    <div class="contact-smg">
+        <div>关注微信公众号</div>
+        <img src="https://img-cdn-qiniu.dcloud.net.cn/uniapp/doc/weixin.jpg" width="90" height="90"/>
+    </div>
   </div>
 </div>

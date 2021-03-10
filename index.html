@@ -10,7 +10,7 @@
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 		<link rel="shortcut icon" type="image/x-icon" href="//hx.dcloud.net.cn/static/favicon/favicon.png">
 		<link rel="stylesheet" href="/static/vue.css">
-		<link rel="stylesheet" href="/static/index.css?v=15863166354178">
+		<link rel="stylesheet" href="/static/index.css?v=158631663541783">
 	</head>
 
 	<body>
@@ -35,20 +35,39 @@
 				search: {
 					maxAge: 7200000,
 					paths: [
+                        '/',
+                        '/Tutorial/windows_install',
+                        '/Tutorial/mac_install',
+                        '/Tutorial/userinterface',
+                        '/Tutorial/StartedTutorial',
+                        '/Tutorial/ProjectType',
+                        '/Tutorial/themes',
+                        '/Tutorial/keybindings',
+                        '/Tutorial/UserGuide/format',
+                        '/Tutorial/UserGuide/vuedoc',
+                        '/Tutorial/UserGuide/editorconfig',
+                        '/Tutorial/UserGuide/externalCommands',
+                        '/Tutorial/extension/validate-stylelint',
+                        '/Tutorial/extension/validate-html',
+                        '/Tutorial/extension/eslint-js',
+                        '/Tutorial/extension/eslint-vue',
+                        '/Tutorial/extension/sass',
+                        '/Tutorial/extension/ftp',
+                        '/Tutorial/extension/markdown_share',
                         '/ExtensionDocs/Api/README',
                         '/ExtensionDocs/ContributionPoints/README',
                         '/ExtensionDocs/manifest',
                         '/ExtensionDocs/activation_event',
-                        '/HowToInstall',
-                        '/HowToPublish',
-                        '/menus',
-                        '/commands',
-                        '/extension',
-                        '/firstExtension',
-                        '/',
-                        '/texteditor',
-                        '/validations',
-                        '/views',
+                        '/ExtensionTutorial/README',
+                        '/ExtensionTutorial/HowToInstall',
+                        '/ExtensionTutorial/HowToPublish',
+                        '/ExtensionTutorial/menus',
+                        '/ExtensionTutorial/commands',
+                        '/ExtensionTutorial/extension',
+                        '/ExtensionTutorial/firstExtension',
+                        '/ExtensionTutorial/texteditor',
+                        '/ExtensionTutorial/validations',
+                        '/ExtensionTutorial/views',
                         '/cli/README'
                     ],
 					placeholder: '搜索',
@@ -61,12 +80,12 @@
 				plugins: [
 					function(hook, vm) {
 						 hook.afterEach(function(html) {
-						 	var url = '//github.com/dcloudio/hbuilderx-extension-docs/tree/master' + vm.route.file
-					 	    return html + '<hr align=center color=#987cb9 size=1>发现错误？想参与编辑？<a href=' + url + ' target=_blank>在 GitHub 上编辑此页面！</a>'
-					 })
+						 	var url = '//github.com/dcloudio/hbuilderx-extension-docs/tree/master' + vm.route.file;
+					 	    return html + '<hr align=center color=#987cb9 size=1>发现错误？想参与编辑？<a href=' + url + ' target=_blank>在 GitHub 上编辑此页面！</a>';
+					 });
 					}
 				]
-			}
+			};
 			// docsify config end
 		</script>
 		<script src="/static/docsify.min.js?v=1586316635415"></script>
@@ -80,30 +99,30 @@
 		<script>
 			var _hmt = _hmt || [];
 			(function() {
-				var hm = document.createElement("script");
-                hm.src = "https://hm.baidu.com/hm.js?6f4a415d4c67e59e4d5f5e8546092f14";
-                var s = document.getElementsByTagName("script")[0];
+				var hm = document.createElement('script');
+                hm.src = 'https://hm.baidu.com/hm.js?6f4a415d4c67e59e4d5f5e8546092f14';
+                var s = document.getElementsByTagName('script')[0];
                 s.parentNode.insertBefore(hm, s);
 
-				window.addEventListener("click", function(e) {
+				window.addEventListener('click', function(e) {
 					var target = e.target;
-					if (target.className === "chapter") { //左侧导航的折叠
+					if (target.className === 'chapter') { //左侧导航的折叠
 						var chapterParent = target.parentElement;
-						var summary = localStorage.getItem("summary") ? JSON.parse(localStorage.getItem(
-							"summary")) : {};
+						var summary = localStorage.getItem('summary') ? JSON.parse(localStorage.getItem(
+							'summary')) : {};
 						var level = chapterParent.dataset.level;
-						if (chapterParent.classList.contains("close")) {
+						if (chapterParent.classList.contains('close')) {
 							summary[level] = false;
-							chapterParent.classList.remove("close");
+							chapterParent.classList.remove('close');
 						} else {
 							summary[level] = true;
-							chapterParent.classList.add("close");
+							chapterParent.classList.add('close');
 						}
-						localStorage.setItem("summary", JSON.stringify(summary))
+						localStorage.setItem('summary', JSON.stringify(summary));
 						return;
 					}
 
-					if (target.tagName === "IMG" && target.className !== "preview-img") {
+					if (target.tagName === 'IMG' && target.className !== 'preview-img') {
 						var src = target.src,
 							showImg = true;
 						while (target && target !== document) {
@@ -111,15 +130,15 @@
 								showImg = false;
 								break;
 							}
-							target = target.parentNode
+							target = target.parentNode;
 						}
 						if (showImg && src) {
 							var preview = new $docsify.Preview(src);
 							preview.show();
-							return
+							return;
 						}
 					}
-				}, true)
+				}, true);
 
 			})();
 		</script>
