@@ -3,14 +3,14 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<title>HBuilderX插件开发指南</title>
+		<title>HBuilderX 文档</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta name="description" content="HBuilderX：极客开发工具">
 		<meta name="keywords" content="DCloud,数字天堂,数字天堂网络,数字天堂（北京）网络技术有限公司,HBuilder,HX,HBX,HBuilderX插件开发指南,插件开发,插件,插件市场,插件开发指南,插件API,HBuilderX API,Extension API">
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 		<link rel="shortcut icon" type="image/x-icon" href="//hx.dcloud.net.cn/static/favicon/favicon.png">
 		<link rel="stylesheet" href="/static/vue.css">
-		<link rel="stylesheet" href="/static/index.min.css?v=1586316635415">
+		<link rel="stylesheet" href="/static/index.css?v=15863166354178">
 	</head>
 
 	<body>
@@ -48,7 +48,8 @@
                         '/',
                         '/texteditor',
                         '/validations',
-                        '/views'
+                        '/views',
+                        '/cli/README'
                     ],
 					placeholder: '搜索',
 					noData: '没有结果',
@@ -81,7 +82,7 @@
 			(function() {
 				var hm = document.createElement("script");
                 hm.src = "https://hm.baidu.com/hm.js?6f4a415d4c67e59e4d5f5e8546092f14";
-                var s = document.getElementsByTagName("script")[0]; 
+                var s = document.getElementsByTagName("script")[0];
                 s.parentNode.insertBefore(hm, s);
 
 				window.addEventListener("click", function(e) {

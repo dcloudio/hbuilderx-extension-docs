@@ -1,4 +1,4 @@
-* [API文档](/ExtensionDocs/Api/README.md)
+* [插件API](/ExtensionDocs/Api/README.md)
 * [扩展点](/ExtensionDocs/ContributionPoints/README.md) 
 * [插件激活机制](/ExtensionDocs/activation_event.md) 
 * [插件规范](/ExtensionDocs/manifest.md) 
