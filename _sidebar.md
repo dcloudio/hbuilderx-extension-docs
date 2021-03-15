@@ -9,11 +9,17 @@
     * [快捷键](/Tutorial/keybindings.md)
     * [创建或导入项目](/Tutorial/project.md)
     * [入门教程](/Tutorial/StartedTutorial.md)
+* 语言服务/代码提示
+    * [概述](/Tutorial/Language/Overview.md)
+    * [代码块](/Tutorial/Language/Snippets.md)
+    * [vue doc](/Tutorial/Language/vuedoc.md)
+    * [Emmet](/Tutorial/Language/emmet.md)
 * 进阶
     * [格式化](/Tutorial/UserGuide/format.md)
-    * [vue doc](/Tutorial/UserGuide/vuedoc.md)
     * [.editorconfig](/Tutorial/UserGuide/editorconfig.md)
     * [外部命令](/Tutorial/UserGuide/externalCommands.md)
+* App开发
+    * [真机运行常见问题](/Tutorial/App/PhoneDebugging.md)
 * 扩展插件
     * [validate-html](/Tutorial/extension/validate-html.md)
     * [validate-stylelint](/Tutorial/extension/validate-stylelint.md)
