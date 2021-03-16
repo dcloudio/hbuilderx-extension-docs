@@ -39,6 +39,7 @@
     * [自定义字体](/Tutorial/settings/font.md)
     * [px自动转upx](/Tutorial/settings/px-upx)
     * [HBuilderX被误报木马病毒说明](/Tutorial/Security.md)
+    * [HBuilderX Command列表](Tutorial/command)
 <div class="contact-box">
   <div class="contact-item">
     <img src="https://bjetxgzv.cdn.bspapp.com/VKCEYUGU-uni-app-doc/759713d0-4f2d-11eb-a16f-5b3e54966275.png" width="20" height="20" />
