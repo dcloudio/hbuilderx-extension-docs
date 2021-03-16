@@ -10,12 +10,6 @@
     * [创建或导入项目](/Tutorial/project.md)
     * [插件安装](/Tutorial/PluginsInstall)
     * [入门教程](/Tutorial/StartedTutorial.md)
-* 语言服务/代码提示
-    * [概述](/Tutorial/Language/Overview.md)
-    * [代码助手](/Tutorial/Language/CodeAssistant.md)
-    * [代码块](/Tutorial/Language/Snippets.md)
-    * [vue doc](/Tutorial/Language/vuedoc.md)
-    * [Emmet](/Tutorial/Language/emmet.md)
 * 进阶
     * [格式化](/Tutorial/UserGuide/format.md)
     * [语法校验](/Tutorial/UserGuide/SyntaxCheck.md)
@@ -23,6 +17,13 @@
     * [多窗体](/Tutorial/UserGuide/multi-window.md)
     * [.editorconfig](/Tutorial/UserGuide/editorconfig.md)
     * [外部命令](/Tutorial/UserGuide/externalCommands.md)
+    * [本地历史记录](/Tutorial/UserGuide/LocalHistory.md)
+* 语言服务/代码提示
+    * [概述](/Tutorial/Language/Overview.md)
+    * [代码助手](/Tutorial/Language/CodeAssistant.md)
+    * [代码块](/Tutorial/Language/Snippets.md)
+    * [vue doc](/Tutorial/Language/vuedoc.md)
+    * [Emmet](/Tutorial/Language/emmet.md)
 * App开发
     * [真机运行常见问题](/Tutorial/App/PhoneDebugging.md)
     * [Android自定义渠道包](/Tutorial/App/AndroidChannel.md)
