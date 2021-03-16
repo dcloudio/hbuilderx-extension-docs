@@ -4,10 +4,7 @@
   font-family: uniicons;
   font-weight: normal;
   font-style: normal;
-  src: url('https://img-cdn-qiniu.dcloud.net.cn/fonts/uni.eot');
-  src: url('https://img-cdn-qiniu.dcloud.net.cn/fonts/uni.eot?#iefix') format('embedded-opentype'),
-    url('https://img-cdn-qiniu.dcloud.net.cn/fonts/uni.woff') format('woff'),
-    url('https://img-cdn-qiniu.dcloud.net.cn/fonts/uni.ttf') format('truetype');
+  src: url('https://uniapp.dcloud.io/static/uni.ttf') format('truetype');
 }
 
 main {
@@ -60,29 +57,17 @@ pre:after {
 }
 
 [data-page="/README.md"] .app-nav.no-badge>ul>li>a,
-[data-page*="/firstExtension"] .app-nav.no-badge>ul>li>a,
-[data-page*="/extension"] .app-nav.no-badge>ul>li>a,
-[data-page*="/commands"] .app-nav.no-badge>ul>li>a,
-[data-page*="/menus"] .app-nav.no-badge>ul>li>a,
-[data-page*="/texteditor"] .app-nav.no-badge>ul>li>a,
-[data-page*="/validations"] .app-nav.no-badge>ul>li>a,
-[data-page*="/HowToPublish"] .app-nav.no-badge>ul>li>a,
-[data-page*="/ExtensionDocs"] .app-nav.no-badge>ul>li>a,
+[data-page*="/ExtensionTutorial/"] .app-nav.no-badge>ul>li>a,
+[data-page*="/ExtensionDocs/"] .app-nav.no-badge>ul>li>a,
 [data-page*="/cli/"] .app-nav.no-badge>ul>li>a{
   border-bottom: none;
   color: #34495e;
 }
 
 [data-page="/README.md"] .app-nav.no-badge>ul>li:nth-child(1)>a,
-[data-page*="/firstExtension"] .app-nav.no-badge>ul>li:nth-child(1)>a,
-[data-page*="/extension"] .app-nav.no-badge>ul>li:nth-child(1)>a,
-[data-page*="/commands"] .app-nav.no-badge>ul>li:nth-child(1)>a,
-[data-page*="/menus"] .app-nav.no-badge>ul>li:nth-child(1)>a,
-[data-page*="/texteditor"] .app-nav.no-badge>ul>li:nth-child(1)>a,
-[data-page*="/validations"] .app-nav.no-badge>ul>li:nth-child(1)>a,
-[data-page*="/HowToPublish"] .app-nav.no-badge>ul>li:nth-child(1)>a,
-[data-page*="/ExtensionDocs"] .app-nav.no-badge>ul>li:nth-child(2)>a,
-[data-page*="/cli/"] .app-nav.no-badge>ul>li:nth-child(3)>a{
+[data-page*="/ExtensionTutorial/"] .app-nav.no-badge>ul>li:nth-child(2)>a,
+[data-page*="/ExtensionDocs/"] .app-nav.no-badge>ul>li:nth-child(3)>a,
+[data-page*="/cli/"] .app-nav.no-badge>ul>li:nth-child(4)>a{
   border-bottom: 2px solid #42b983;
   color: #42b983;
 }

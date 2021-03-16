@@ -1,4 +1,5 @@
-* [插件教程](README.md)
+* [文档](/README.md)
+* [插件教程](/ExtensionTutorial/README.md)
 * [插件API](/ExtensionDocs/Api/README.md)
 * [cli](/cli/README.md)
 

@@ -2,7 +2,7 @@
 
 开发者可以通过cli命令行指示HBuilderX进行启动、打包等操作。
 
-## cli程序
+### cli程序
 
 命令行工具所在位置:
 
@@ -11,14 +11,14 @@
     - 正式版 `/Applications/HBuilderX.app/Contents/MacOS/cli`
     - Alpha版 `/Applications/HBuilderX-Alpha.app/Contents/MacOS/cli`
 
-## cli 启动
+### cli 启动
 
 cli启动HBuilderX 
 ```
 cli.exe open
 ```
 
-## cli project
+### cli project
 
 cli打开项目
 
@@ -33,7 +33,7 @@ cli.exe project close --path 项目路径
 ```
 
 
-## cli 打包
+### cli 打包
 
 1. 首先, 需要启动HBuilderX. (进入HBuilderX安装目录根目录, 终端输入`cli.exe open`)
 2. 编辑App打包配置文件(json文件), [App打包配置文件](/cli/README?id=cli打包配置文件)
@@ -60,7 +60,7 @@ localhost:MacOS hx$ ./cli pack --config /Users/hx/Documents/HBuilderProjects/测
     类型: iOS Appstore 下载地址: https://service.dcloud.net.cn/build/download/40c60580-7fea-11eb-af55-b9c5ccd8a1ee （注意该地址为临时下载地址，只能下载5次）当前应用 IDFA 已经开启，在提交 AppStore 审核时需要在后台开启 IDFA，[详细操作查看](https://ask.dcloud.net.cn/article/36107)
 ```
 
-## cli打包配置文件
+### cli打包配置文件
 
 配置文件格式为json,将下面内容保存在文件json文件，编码为utf-8，根据说明配置所需参数
 
@@ -118,7 +118,7 @@ localhost:MacOS hx$ ./cli pack --config /Users/hx/Documents/HBuilderProjects/测
 }
 ```
 
-## cli打包参数
+#### cli打包参数
 
 > 以下参数选项, 均为`cli pack`的选项.
 

@@ -4,21 +4,21 @@
 
 > 注意：插件名称只能用英文字母和数字，不支持中文和空格。
 
-<img src="static/snapshots/1.jpg" style="zoom:50%" />
+<img src="/static/snapshots/1.jpg" style="zoom:50%" />
 
 ### 运行插件
 建好插件项目后，选中该项目或者打开项目下某个文件，然后点击工具栏上`运行`按钮或者快捷键`ctrl+r`打开运行菜单，选择`运行插件xxx`即可新开一个HBuilderX窗体，这个新窗体将自动载入该插件。如下图
 
-<img src="static/snapshots/2.jpg" style="zoom:50%" />
+<img src="/static/snapshots/2.jpg" style="zoom:50%" />
 
 运行起来的效果图如下：
 
-<img src="static/snapshots/5.jpg" style="zoom:50%" />
+<img src="/static/snapshots/5.jpg" style="zoom:50%" />
 
 
 插件扩展开发模板示例中在代码编辑器右键菜单上注册了一个`Hello World`菜单，**此时我们打开一个文档**，然后右键即可看到`Hello World`菜单。点击该菜单运行后会在窗口显示一个提示框。如下图
 
-<img src="static/snapshots/run.gif" style="zoom:50%" />
+<img src="/static/snapshots/run.gif" style="zoom:50%" />
 
 也就是在老窗体写插件代码，保存插件代码后，在新窗体预览效果。
 > 修改插件代码后需要重新运行插件
