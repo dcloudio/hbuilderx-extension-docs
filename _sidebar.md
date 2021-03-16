@@ -8,6 +8,7 @@
     * [主题](/Tutorial/themes.md)
     * [快捷键](/Tutorial/keybindings.md)
     * [创建或导入项目](/Tutorial/project.md)
+    * [插件安装](/Tutorial/PluginsInstall)
     * [入门教程](/Tutorial/StartedTutorial.md)
 * 语言服务/代码提示
     * [概述](/Tutorial/Language/Overview.md)
