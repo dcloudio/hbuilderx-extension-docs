@@ -45,3 +45,5 @@ vue doc是一种类似jsdoc的方式，通过在注释里描述组件的方法�
 #### 代码块
 HBuilderX支持自定义代码块，在菜单工具-代码块设置中可自行扩展。
 代码块数据格式兼容vscode，并扩展了更多丰富设置。对于提高开发效率帮助很大。
+
+<a href="/Tutorial/Language/Snippets">自定义代码块教程</a>

@@ -1,4 +1,6 @@
-#### Windows安装HBuilderX
+# Windows安装HBuilderX
+
+### 解压安装包
 
 HBuilderX，Windows为zip包，解压后才能使用。
 
@@ -8,7 +10,7 @@ HBuilderX，Windows为zip包，解压后才能使用。
 
 <img src="/static/snapshots/tutorial/install_windows.png" />
 
-#### 错误的打开方式
+### 错误的打开方式
 
 1. 直接双击，在压缩包中，打开`HBuilderX.exe`是错误的。
 2. 从压缩包中，把`HBuilderX.exe`拖到桌面也是错误的。
@@ -17,7 +19,7 @@ HBuilderX，Windows为zip包，解压后才能使用。
 
 <img src="/static/snapshots/tutorial/windows_error_open.min.png" style="zoom:80%" />
 
-#### 创建桌面快捷方式
+### 创建桌面快捷方式
 
 <img src="/static/snapshots/tutorial/create_shortcut.png" style="zoom:80%" />
 
