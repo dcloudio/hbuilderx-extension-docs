@@ -8,7 +8,7 @@ eslint-js, 用于校验js和html中的js代码
 
 如下图所示，当检查到错误时，会出现红色波浪线
 
-![](https://img-cdn-qiniu.dcloud.net.cn/uploads/questions/20200623/5292da9dec960b9b486abf565393b94d.png)
+<img src="/static/snapshots/tutorial/eslint-error.png" />
 
 ## 插件配置
 

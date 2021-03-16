@@ -8,8 +8,7 @@
 
 如下图所示，编写完代码，保存文件，当检查到错误时，会出现红色波浪线
 
-![](https://img-cdn-qiniu.dcloud.net.cn/uploads/questions/20200623/17d90ca51b0270332ae5dd7eef9bab82.png)
-
+<img src="/static/snapshots/tutorial/eslint-error.png" />
 
 ## 插件配置
 

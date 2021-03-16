@@ -18,10 +18,13 @@
 * 进阶
     * [格式化](/Tutorial/UserGuide/format.md)
     * [语法校验](/Tutorial/UserGuide/SyntaxCheck.md)
+    * [内置资源管理器](/Tutorial/UserGuide/built-in-explorer.md)
+    * [多窗体](/Tutorial/UserGuide/multi-window.md)
     * [.editorconfig](/Tutorial/UserGuide/editorconfig.md)
     * [外部命令](/Tutorial/UserGuide/externalCommands.md)
 * App开发
     * [真机运行常见问题](/Tutorial/App/PhoneDebugging.md)
+    * [Android自定义渠道包](/Tutorial/App/AndroidChannel.md)
 * 扩展插件
     * [validate-html](/Tutorial/extension/validate-html.md)
     * [validate-stylelint](/Tutorial/extension/validate-stylelint.md)
@@ -30,8 +33,11 @@
     * [Scss/Sass](/Tutorial/extension/sass.md)
     * [FTP/SFTP](/Tutorial/extension/ftp.md)
     * [MarkDown一键分享](/Tutorial/extension/markdown_share.md)
-* 参考
+* 参考/其它
     * [项目类型说明](/Tutorial/ProjectType.md)
+    * [自定义字体](/Tutorial/settings/font.md)
+    * [px自动转upx](/Tutorial/settings/px-upx)
+    * [HBuilderX被误报木马病毒说明](/Tutorial/Security.md)
 <div class="contact-box">
   <div class="contact-item">
     <img src="https://bjetxgzv.cdn.bspapp.com/VKCEYUGU-uni-app-doc/759713d0-4f2d-11eb-a16f-5b3e54966275.png" width="20" height="20" />
