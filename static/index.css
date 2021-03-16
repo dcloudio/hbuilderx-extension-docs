@@ -4,7 +4,7 @@
   font-family: uniicons;
   font-weight: normal;
   font-style: normal;
-  src: url('https://uniapp.dcloud.io/static/uni.ttf') format('truetype');
+  src: url('./font/uni.ttf') format('truetype');
 }
 
 main {
@@ -729,7 +729,7 @@ a.contact-item {
   height: 33px;
   background-repeat: no-repeat;
   background-size: 135px 33px;
-  background-image: url(//img-cdn-qiniu.dcloud.net.cn/uniapp/doc/uniapp4@2x.png);
+  background-image: url(./icon/hx_top-icon@2x.png);
 }
 
 
