@@ -31,5 +31,5 @@
 
 把HBuilderX固定在任务栏，点右键，可以快速打开某个项目的窗体
 
-<img src="/static/snapshots/tutorial/multi-window-2.png" style="zoom:90%" />
+<img src="/static/snapshots/tutorial/multi-window-2.png" style="zoom:50%" />
 

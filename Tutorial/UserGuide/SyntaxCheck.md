@@ -1,6 +1,6 @@
 # 语法校验
 
-如下图所示，在对应的文件上，右键菜单，点击【验证本文档语法】：
+如下图所示，在对应的文件上，右键菜单，点击【验证本文档语法】，如未出现此菜单，请先安装相关插件。
 
 <img src="/static/snapshots/tutorial/syntaxcheck.png" style="zoom:90%;" />
 
@@ -11,7 +11,7 @@
 <img src="/static/snapshots/started_tutorial/plugins-syntax-check-01.png" style="zoom: 90%;border:1px solid #eee;border-radius: 5px;" />
 
 
-#### 语法校验插件
+## 语法校验插件
 
 HBuilderX，代码语法校验，需要安装相应插件。
 
