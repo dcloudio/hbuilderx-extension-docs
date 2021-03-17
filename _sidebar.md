@@ -11,9 +11,10 @@
     * [创建或导入项目](/Tutorial/project.md)
     * [插件安装](/Tutorial/PluginsInstall)
 * 进阶
+    * [跳转/转到定义](/Tutorial/UserGuide/goto.md)
+    * [查找/替换](/Tutorial/UserGuide/find.md)
     * [格式化](/Tutorial/UserGuide/format.md)
     * [语法校验](/Tutorial/UserGuide/SyntaxCheck.md)
-    * [跳转/转到定义](/Tutorial/UserGuide/goto.md)
     * [内置浏览器](/Tutorial/UserGuide/built-in-browser.md)
     * [内置资源管理器](/Tutorial/UserGuide/built-in-explorer.md)
     * [多窗体](/Tutorial/UserGuide/multi-window.md)

@@ -1,5 +1,9 @@
 # MacOSX安装HBuilderX
 
+### 下载
+
+HBuilderX下载地址: [下载地址](https://www.dcloud.io/hbuilderx.html)
+
 ## 安装
 
 如图，将HBuilderX`拖`到Applications，才是正确的安装姿势。
