@@ -1,4 +1,7 @@
-* [cli文档](/cli/README.md)
+* [cli概述](/cli/README.md)
+* cli命令
+    * [关闭/打开项目](/cli/project.md)
+    * [打包](/cli/pack.md)
 <div class="contact-box">
   <div class="contact-item">
     <img src="//img-cdn-qiniu.dcloud.net.cn/uniapp/doc/weixin@2x.png" width="20" height="20"/>
