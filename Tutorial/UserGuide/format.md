@@ -1,4 +1,15 @@
-### 格式化插件说明
+# 格式化
+
+> 很多人编写程序时不注意程序的版式结构，这样做虽然不会影响程序的功能，但是程序的可读性会大大降低。格式化操作，让代码按照特定的风格缩进或分开，使程序更加清晰易懂
+
+在打开的文件上，右键菜单，点击【重排代码格式】，即可对当前文件进行格式化操作。
+
+HBuilderX，格式化快捷键, win：`ctrl + K`； mac: `command + K`
+
+
+### 格式化插件
+
+> HBuilderX ，官方维护的格式化插件如下，当然，您也可以自行开发格式化插件。
 
 | 插件名称         | 对应插件配置中的名称    | 是否内置         | 可格式化的文件                             |  插件市场 |
 | ---------------- | ----------------------- | ---------------- | ------------------------------------------ |-------------|
@@ -24,17 +35,6 @@
 | format-prettier			| prettier.config.js								| [官网](https://prettier.io/docs/en/options.html)					|
 | format-stylus-supremacy	| supremacy.config.js								| [官网](https://thisismanta.github.io/stylus-supremacy/#options)	|
 
-### 格式化快捷键
-
-格式化菜单：【右键菜单】-->【重排代码格式】
-
-格式化快捷键, win：`ctrl + K`； mac: `command + K`
-
-自定义格式化快捷键： 点击菜单【工具】【自定义快捷键】，在【用户设置】中，拷贝如下代码， `key`为您要定义的快捷键
-
-```json
-{"key":"ctrl+k","command":"editor.action.format"}
-```
 
 ### 格式化风格
 
@@ -46,6 +46,15 @@
 `editorconfig`配置会覆盖HBuilderX编辑器配置；当项目下存在`.editorconfig`文件时，格式化时，读取的是此配置文件。
 
 [.editorconfig使用说明文档](/Tutorial/UserGuide/editorconfig)
+
+
+### 自定义格式化快捷键
+
+自定义格式化快捷键： 点击菜单【工具】【自定义快捷键】，在【用户设置】中，拷贝如下代码， `key`为您要定义的快捷键
+
+```json
+{"key":"ctrl+k","command":"editor.action.format"}
+```
 
 ### 保存文件时，自动格式化
 
