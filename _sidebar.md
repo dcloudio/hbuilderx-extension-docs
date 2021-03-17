@@ -3,21 +3,23 @@
     * [Windows](/Tutorial/windows_install.md)
     * [MacOSX](/Tutorial/mac_install.md)
 * 开始使用
+    * [入门教程](/Tutorial/StartedTutorial.md)
     * [用户界面](/Tutorial/userinterface.md)
     * [设置](Tutorial/setting.md)
     * [主题](/Tutorial/themes.md)
     * [快捷键](/Tutorial/keybindings.md)
     * [创建或导入项目](/Tutorial/project.md)
     * [插件安装](/Tutorial/PluginsInstall)
-    * [入门教程](/Tutorial/StartedTutorial.md)
 * 进阶
     * [格式化](/Tutorial/UserGuide/format.md)
     * [语法校验](/Tutorial/UserGuide/SyntaxCheck.md)
+    * [跳转/转到定义](/Tutorial/UserGuide/goto.md)
+    * [内置浏览器](/Tutorial/UserGuide/built-in-browser.md)
     * [内置资源管理器](/Tutorial/UserGuide/built-in-explorer.md)
     * [多窗体](/Tutorial/UserGuide/multi-window.md)
+    * [本地历史记录](/Tutorial/UserGuide/LocalHistory.md)
     * [.editorconfig](/Tutorial/UserGuide/editorconfig.md)
     * [外部命令](/Tutorial/UserGuide/externalCommands.md)
-    * [本地历史记录](/Tutorial/UserGuide/LocalHistory.md)
 * 语言服务/代码提示
     * [概述](/Tutorial/Language/Overview.md)
     * [代码助手](/Tutorial/Language/CodeAssistant.md)
@@ -27,6 +29,7 @@
 * App开发
     * [真机运行常见问题](/Tutorial/App/PhoneDebugging.md)
     * [Android自定义渠道包](/Tutorial/App/AndroidChannel.md)
+    * [iOS安心打包证书安装](/Tutorial/App/iosSafePack.md)
 * 扩展插件
     * [validate-html](/Tutorial/extension/validate-html.md)
     * [validate-stylelint](/Tutorial/extension/validate-stylelint.md)

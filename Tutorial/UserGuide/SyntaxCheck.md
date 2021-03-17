@@ -4,6 +4,13 @@
 
 <img src="/static/snapshots/tutorial/syntaxcheck.png" style="zoom:90%;" />
 
+校验概要结果会显示在`状态栏`
+
+比如有2个错误（如下图），可以按`F4`切换到不同的错误处，画有红波浪线（如下图），鼠标移到红波浪线上会显示具体的错误信息。（如下图示例）
+
+<img src="/static/snapshots/started_tutorial/plugins-syntax-check-01.png" style="zoom: 90%;border:1px solid #eee;border-radius: 5px;" />
+
+
 #### 语法校验插件
 
 HBuilderX，代码语法校验，需要安装相应插件。
