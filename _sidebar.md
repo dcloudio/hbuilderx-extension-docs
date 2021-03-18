@@ -8,7 +8,7 @@
     * [设置](Tutorial/setting.md)
     * [主题](/Tutorial/themes.md)
     * [快捷键](/Tutorial/keybindings.md)
-    * [创建或导入项目](/Tutorial/project.md)
+    * [项目](/Tutorial/project.md)
     * [插件安装](/Tutorial/PluginsInstall)
 * 进阶
     * [跳转/转到定义](/Tutorial/UserGuide/goto.md)
@@ -27,6 +27,7 @@
     * [代码块](/Tutorial/Language/Snippets.md)
     * [vue doc](/Tutorial/Language/vuedoc.md)
     * [Emmet](/Tutorial/Language/emmet.md)
+    * [JSON](/Tutorial/Language/json.md)
 * App开发
     * [真机运行常见问题](/Tutorial/App/PhoneDebugging.md)
     * [Android自定义渠道包](/Tutorial/App/AndroidChannel.md)
@@ -45,6 +46,7 @@
     * [px自动转upx](/Tutorial/settings/px-upx)
     * [HBuilderX被误报木马病毒说明](/Tutorial/Security.md)
     * [HBuilderX Command列表](Tutorial/command)
+    * [主题颜色配置规则](/Tutorial/themes_param.md)
 <div class="contact-box">
   <div class="contact-item">
     <img src="https://bjetxgzv.cdn.bspapp.com/VKCEYUGU-uni-app-doc/759713d0-4f2d-11eb-a16f-5b3e54966275.png" width="20" height="20" />

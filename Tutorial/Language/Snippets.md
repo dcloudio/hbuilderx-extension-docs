@@ -1,14 +1,44 @@
+# 代码块
+
+## 概述
+
 代码块是快速开发的利器。简单的敲几个字母，回车，就能生成大段代码。
 
 比如我们经常会敲if...else结构，在HBuilderX中，只需敲`ife`回车，就能直接生成相应的代码结构。
 
-敲ife
+敲`ife`
 
 <img src="/static/snapshots/tutorial/snippets_3.png" style="zoom: 90%;" />
 
 回车后生成if结构体
 
 <img src="/static/snapshots/tutorial/snippets_4.png" style="zoom: 90%;" />
+
+## 常用代码块列表
+
+**通用js代码块**
+
+- iff ：简单if
+- forr ：for循环结构体
+- fori ：for循环结构体并包含i
+- funn：函数
+- funa：匿名函数
+- clog：打印日志
+- clogvar：打印变量命名和值
+
+**dom代码块**
+
+- dg ：document.getElementById
+- dl ：$("")
+
+**vue代码块**
+
+敲v，即可拉出各种vue代码块
+
+**uni-app代码块**
+
+敲u，即可拉出各种uni-app代码块
+还有ifios、ifandroid，这2个平台判断代码块（HBuilderX 1.9.10+）
 
 ## 代码块设置
 
@@ -22,31 +52,6 @@ HBuilderX已经内置了大量常用的代码块，熟悉这些代码块，对�
 
 <img src="/static/snapshots/tutorial/snippets_2.png" style="zoom: 80%;" />
 
-## 常用代码块列表
-
-#### 通用js代码块
-
-- iff ：简单if
-- forr ：for循环结构体
-- fori ：for循环结构体并包含i
-- funn：函数
-- funa：匿名函数
-- clog：打印日志
-- clogvar：打印变量命名和值
-
-#### dom代码块
-
-- dg ：document.getElementById
-- dl ：$("")
-
-#### vue代码块
-
-敲v，即可拉出各种vue代码块
-
-#### uni-app代码块
-
-敲u，即可拉出各种uni-app代码块
-还有ifios、ifandroid，这2个平台判断代码块（HBuilderX 1.9.10+）
 
 ## 自定义代码块
 
@@ -97,3 +102,31 @@ HBuilderX使用json定义代码块的格式，兼容vscode的代码块格式，�
   
 1. 每个代码块以`key`为主键，多个代码块需要`逗号`分隔。
 2. 如果json语法不合法，编辑器状态栏会弹出错误信息，json中会画出红波浪线，请注意修正。
+
+## 注释模板同步时间
+
+> HBuilderX 2.7.5+版本起，支持主持注释模板同步时间
+
+点击菜单【工具】【代码块设置】【javascript代码块】，输入如下内容：
+
+```
+{  
+    "method-annotation": {  
+        "prefix": "anno",  
+        "body": [  
+            "/**",  
+            " * 方法说明",  
+            " * author: 佚名",  
+            " * description: ",  
+            " * @param $1",  
+            " * @return $2",  
+            " * @createTime: $DATE_TIME",  
+            " */"  
+        ],  
+        "triggerAssist": false,  
+        "description": "method annotation"  
+    }  
+} 
+```
+
+<img src="/static/snapshots/tutorial/Snippets_time.gif" style="zoom: 80%; border: 1px solid #eee;border-radius: 10px;" />
