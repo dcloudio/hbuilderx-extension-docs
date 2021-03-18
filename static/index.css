@@ -701,7 +701,7 @@ a.contact-item {
   top: 13px;
   flex-direction: row;
   align-items: center;
-  width: 270px;
+  width: 290px;
   justify-content: space-between;
 }
 
@@ -725,10 +725,10 @@ a.contact-item {
 
 .uniapp-logo {
   border: 0 !important;
-  width: 135px;
+  width: 155px;
   height: 33px;
   background-repeat: no-repeat;
-  background-size: 135px 33px;
+  background-size: 155px 33px;
   background-image: url(./icon/hx_top-icon@2x.png);
 }
 
