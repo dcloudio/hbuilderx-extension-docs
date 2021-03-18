@@ -1,5 +1,6 @@
 * [cli概述](/cli/README.md)
 * cli命令
+    * [用户操作](/cli/user.md)
     * [关闭/打开项目](/cli/project.md)
     * [打包](/cli/pack.md)
 <div class="contact-box">
