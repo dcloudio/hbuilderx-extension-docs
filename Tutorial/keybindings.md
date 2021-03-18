@@ -12,8 +12,10 @@ HBuilderX，所有键盘快捷键都可以通过`keybindings.json`文件进行�
 
 点击菜单【工具】【自定义快捷键】，可以打开自定义快捷键配置文件, 您可以在其中覆盖默认快捷键。
 
-<img src="/static/snapshots/tutorial/keyboard_set.png"  style="zoom: 90%;"/>
+快捷键，由`command`和`key`组成，如下图所示。
 
-## Command列表
+<img src="/static/snapshots/tutorial/keyboard_set.png"  style="zoom: 80%;"/>
+
+## HBuilderX Command列表
 
 [HBuilderX Command命令列表](Tutorial/command)
