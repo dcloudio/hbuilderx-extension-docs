@@ -1,7 +1,7 @@
 * [简介](/README.md)
 * 安装
-    * [Windows](/Tutorial/windows_install.md)
-    * [MacOSX](/Tutorial/mac_install.md)
+    * [Windows](/Tutorial/install/windows.md)
+    * [MacOSX](/Tutorial/install/macosx.md)
 * 开始使用
     * [入门教程](/Tutorial/StartedTutorial.md)
     * [用户界面](/Tutorial/userinterface.md)
@@ -43,12 +43,14 @@
     * [FTP/SFTP](/Tutorial/extension/ftp.md)
     * [MarkDown一键分享](/Tutorial/extension/markdown_share.md)
 * 参考/其它
-    * [项目类型说明](/Tutorial/ProjectType.md)
     * [自定义字体](/Tutorial/settings/font.md)
     * [px自动转upx](/Tutorial/settings/px-upx)
-    * [HBuilderX被误报木马病毒说明](/Tutorial/Security.md)
+    * [项目类型说明](/Tutorial/ProjectType.md)
     * [HBuilderX Command列表](Tutorial/command)
     * [主题颜色配置规则](/Tutorial/themes_param.md)
+    * [HBuilderX被误报木马病毒说明](/Tutorial/Security.md)
+* 常见问题
+    * [Windows 启动问题排查指南](/Tutorial/Question/WindowsStart.md)
 <div class="contact-box">
   <a href="https://www.dcloud.io/hbuilderx.html" target="_blank" class="contact-item">
     <img src="/static/favicon/favicon.png" width="20" height="21">

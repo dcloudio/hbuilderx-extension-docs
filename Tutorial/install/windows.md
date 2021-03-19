@@ -27,6 +27,10 @@ HBuilderX，Windows为zip包，解压后才能使用。
 
 <img src="/static/snapshots/tutorial/create_shortcut.png" style="zoom:80%" />
 
+### 启动问题排查指南
+
+您可能会碰到在windows上，无法启动HBuilderX的问题，请参考: [HBuilderX启动问题排查指南](/Tutorial/Question/WindowsStart)
+
 ### HBuilderX被误报病毒木马的说明
 
 首先说明，HBuilderX每次发版都会经过`专业安全公司`的单独检测。 通过后才会正式更新。请放心使用。 几年来，安全公司从未检测出一个病毒木马。但不给他们提交检测，他们就会乱报警告。
