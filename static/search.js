@@ -86,12 +86,12 @@
 		var fixf = null;
 		var fixl = 4; // 需要添加前缀的标题级别
 		var fixspan = 3; // 被作为前缀添加的标题级别
-		
+
 		tokens.forEach(function(token) {
 			if (token.type === 'heading' && token.depth <= depth) {
 				if(token.depth < fixspan) fixf = null;
 				if(token.depth === fixspan) fixf = token.text;
-				
+
 				// created by xxxxxx 处理标题别名
 				var matchSlug = token.text.match(/@([A-Za-z0-9\-]+)/);
 				var slugText = '';
@@ -208,7 +208,7 @@
 
 				isTitle = postTitle && postTitle.match(regEx);
 				isContent = postContent && postContent.match(regEx);
-				
+
 				if (!isTitle && !isContent) {
 					isMatch = false;
 				} else {
@@ -237,11 +237,11 @@
 						'...';
 
 					resultStr += matchContent;
-					
+
 					// title 也高亮处理下
 					postTitle = escapeHtml(postTitle).replace(regEx, ("<em class=\"search-keyword\">" + keyword + "</em>"))
 				}
-				
+
 				if (isMatch) {
 					var matchingPost = {
 						title: postTitle,
@@ -358,7 +358,7 @@
 	function _renderPost(post, value) {
 		var html = '';
 		var tagName = '规范';
-		
+
 		if (!!value) {
 			post.title = _handleHTMLString(post.title, value);
 			post.content = _handleHTMLString(post.content, value);
@@ -383,13 +383,13 @@
 		} else {
 			html += '<p class="aw-text"><span class="post-tag">' + tagName + '</span></p>';
 		}
-		
+
 		html += '\n<h2>' + (post.title) + '</h2></div>';
-		
+
 		if(!!value){
 			html += '<p>' + post.comment_count + '个' + commentText + '<span class="aw-text-space">-</span>' + post.view_count + '次浏览</p>';
 		}
-		
+
 		html += '\n<p>' + (post.content) +'</p>\n</a>\n</div>';
 
 		return html;
@@ -406,11 +406,11 @@
 		html += '<a href="' + (ext.url) + '" target="_blank"><div class="post-wrapper">';
 		//  post-tag-plugin
 		html += '<p class="aw-text"><span class="post-tag">插件</span></p>';
-		
+
 		html += '\n<h2>' + (ext.name) + '</h2></div>';
-		
+
 		html += '<p>' + ext.total_download + '次下载</p>';
-		
+
 		html += '\n<p>' + (ext.description) +'</p>\n</a>\n</div>';
 
 		return html;
@@ -510,7 +510,7 @@
 		// 					}
 		// 					return;
 		// 				}
-		// 
+		//
 		// 				var data = ret.data;
 		// 				var askHtml = '';
 		// 				data.forEach(function(item) {
@@ -659,8 +659,8 @@
 		var config = getConfig(vm, CONFIG);
 		var isAuto = config.paths === 'auto';
 
-		hook.mounted(function(_) {
-			init(config, vm);
+		hook.ready(function(_) {
+			// init(config, vm);
 			!isAuto && init$1(config, vm);
 		});
 		hook.doneEach(function(_) {

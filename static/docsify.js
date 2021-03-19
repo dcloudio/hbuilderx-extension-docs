@@ -4917,13 +4917,13 @@
 
 			initLifecycle(vm); // Init hooks
 			initPlugin(vm); // Install plugins
-			// 特殊处理搜索
-			initSearch(vm);
 			callHook(vm, 'init');
 			initRouter(vm); // Add router
 			initRender(vm); // Render base DOM
 			initEvent(vm); // Bind events
 			initFetch(vm); // Fetch data
+			// 特殊处理搜索
+			initSearch(vm);
 			callHook(vm, 'mounted');
 		};
 	}
