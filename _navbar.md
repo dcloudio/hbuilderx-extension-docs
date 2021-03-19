@@ -1,7 +1,7 @@
 * [文档](/README.md)
 * [插件教程](/ExtensionTutorial/README.md)
 * [插件API](/ExtensionDocs/Api/README.md)
-* [cli](/cli/README.md)
+* [CLI命令行工具](/cli/README.md)
 
 <ul class="nav-href">
 	<li><a href="//dev.dcloud.net.cn/wish/?channel=hbuilder" target="__blank">需求墙</a></li>

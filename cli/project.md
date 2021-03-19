@@ -1,5 +1,7 @@
 # cli project
 
+> HBuilderX cli命令行工具, 仅适用于HBuilderX 3.1.5+版本
+
 #### 列举所有项目列表
 
 ```
