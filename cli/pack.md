@@ -1,5 +1,7 @@
 # cli 打包
 
+> HBuilderX cli命令行工具, 仅适用于HBuilderX 3.1.5+版本
+
 ### 打包
 
 1. 首先, 需要启动HBuilderX. (进入HBuilderX安装目录根目录, 终端输入`cli.exe open`)

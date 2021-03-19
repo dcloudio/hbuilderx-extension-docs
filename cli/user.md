@@ -1,5 +1,7 @@
 # 用户操作
 
+> HBuilderX cli命令行工具, 仅适用于HBuilderX 3.1.5+版本
+
 #### 获取HBuilderX当前登录的用户信息
 
 ```

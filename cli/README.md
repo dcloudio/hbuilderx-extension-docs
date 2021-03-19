@@ -1,4 +1,4 @@
-> HBuilderX cli, 仅适用于HBuilderX 3.1.5+版本
+> HBuilderX cli命令行工具, 仅适用于HBuilderX 3.1.5+版本
 
 开发者可以通过cli命令行指示HBuilderX进行启动、打包、登录等操作。
 
