@@ -30,6 +30,7 @@
     * [vue doc](/Tutorial/Language/vuedoc.md)
     * [Emmet](/Tutorial/Language/emmet.md)
     * [JSON](/Tutorial/Language/json.md)
+    * [MarkDown](/Tutorial/Language/markdown.md)
 * App开发
     * [真机运行常见问题](/Tutorial/App/PhoneDebugging.md)
     * [Android自定义渠道包](/Tutorial/App/AndroidChannel.md)
@@ -48,6 +49,7 @@
     * [项目类型说明](/Tutorial/ProjectType.md)
     * [HBuilderX Command列表](Tutorial/command)
     * [主题颜色配置规则](/Tutorial/themes_param.md)
+    * [HBuilderX如何保护程序员的身心健康](/Tutorial/Other/health.md)
     * [HBuilderX被误报木马病毒说明](/Tutorial/Security.md)
 * 常见问题
     * [Windows 启动问题排查指南](/Tutorial/Questions/WindowsStart.md)
