@@ -29,7 +29,7 @@ HBuilderX，Windows为zip包，解压后才能使用。
 
 ### 启动问题排查指南
 
-您可能会碰到在windows上，无法启动HBuilderX的问题，请参考: [HBuilderX启动问题排查指南](/Tutorial/Question/WindowsStart)
+您可能会碰到在windows上，无法启动HBuilderX的问题，请参考: [HBuilderX启动问题排查指南](/Tutorial/Questions/WindowsStart)
 
 ### HBuilderX被误报病毒木马的说明
 
