@@ -24,7 +24,9 @@
 
 <img src="/static/snapshots/tutorial/minimap.png" style="zoom:90%" />
 
-> 提示：您可以在编辑器最右侧，点击右键，关闭或打开迷你地图。
+提示：
+- 您可以在编辑器最右侧，点击右键，关闭或打开迷你地图。
+- 【设置】【编辑器设置】，也可以调整迷你地图像素宽度，默认100
 
 ### 文档结构图
 
@@ -35,6 +37,8 @@
 <img src="/static/snapshots/tutorial/outline.png" style="zoom:90%" />
 
 ### 内置资源管理器
+
+> 此处只是简单介绍下内置资源管理器，请查看[详细用法](Tutorial/UserGuide/built-in-explorer)
 
 传统开发工具，仅仅依靠左侧的项目树来管理资源文件，便利性和效率是远远不够的。
 HBuilderX内置的资源管理器，给你一个更大的资源管理界面，大幅提高文件的管理效率。
