@@ -50,7 +50,7 @@
     * [主题颜色配置规则](/Tutorial/themes_param.md)
     * [HBuilderX被误报木马病毒说明](/Tutorial/Security.md)
 * 常见问题
-    * [Windows 启动问题排查指南](/Tutorial/Question/WindowsStart.md)
+    * [Windows 启动问题排查指南](/Tutorial/Questions/WindowsStart.md)
 <div class="contact-box">
   <a href="https://www.dcloud.io/hbuilderx.html" target="_blank" class="contact-item">
     <img src="/static/favicon/favicon.png" width="20" height="21">
