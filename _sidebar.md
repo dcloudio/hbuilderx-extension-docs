@@ -35,6 +35,9 @@
     * [真机运行常见问题](/Tutorial/App/PhoneDebugging.md)
     * [Android自定义渠道包](/Tutorial/App/AndroidChannel.md)
     * [iOS安心打包证书安装](/Tutorial/App/iosSafePack.md)
+* 版本控制
+    * [Git 介绍](/Tutorial/SourceControl/Git/README.md)
+    * [Git Windows手册](/Tutorial/SourceControl/Git/Windows.md)
 * 扩展插件
     * [validate-html](/Tutorial/extension/validate-html.md)
     * [validate-stylelint](/Tutorial/extension/validate-stylelint.md)
