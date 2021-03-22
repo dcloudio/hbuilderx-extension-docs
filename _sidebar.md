@@ -39,6 +39,7 @@
 * 版本控制
     * [Git 介绍](/Tutorial/SourceControl/Git/README.md)
     * [Git Windows手册](/Tutorial/SourceControl/Git/Windows.md)
+    * [Git MacOSX手册](/Tutorial/SourceControl/Git/MacOSX.md)
 * 扩展插件
     * [validate-html](/Tutorial/extension/validate-html.md)
     * [validate-stylelint](/Tutorial/extension/validate-stylelint.md)
