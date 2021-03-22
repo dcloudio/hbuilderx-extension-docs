@@ -2024,7 +2024,7 @@
 
 	var prism = createCommonjsModule(function(module) {
 		/* **********************************************
-		     Begin prism-core.js
+			 Begin prism-core.js
 		********************************************** */
 
 		var _self = (typeof window !== 'undefined') ?
@@ -2592,7 +2592,7 @@
 
 
 		/* **********************************************
-		     Begin prism-markup.js
+			 Begin prism-markup.js
 		********************************************** */
 
 		Prism.languages.markup = {
@@ -2653,7 +2653,7 @@
 
 
 		/* **********************************************
-		     Begin prism-css.js
+			 Begin prism-css.js
 		********************************************** */
 
 		Prism.languages.css = {
@@ -2710,7 +2710,7 @@
 		}
 
 		/* **********************************************
-		     Begin prism-clike.js
+			 Begin prism-clike.js
 		********************************************** */
 
 		Prism.languages.clike = {
@@ -2744,7 +2744,7 @@
 
 
 		/* **********************************************
-		     Begin prism-javascript.js
+			 Begin prism-javascript.js
 		********************************************** */
 
 		Prism.languages.javascript = Prism.languages.extend('clike', {
@@ -2804,7 +2804,7 @@
 
 
 		/* **********************************************
-		     Begin prism-file-highlight.js
+			 Begin prism-file-highlight.js
 		********************************************** */
 
 		(function() {
@@ -3408,6 +3408,12 @@
 					if (firstChild && firstChild.nodeName && firstChild.nodeName === '#text') {
 						var aa = create("span", firstChild.nodeValue);
 						aa.classList.add("chapter");
+
+						// 2021-03-22 修改默认展开为折叠
+						if (!~mdNames.indexOf(mdName)) {
+							el.classList.add("close");
+						}
+
 						el.insertBefore(aa, firstChild.nextSibling);
 						el.removeChild(firstChild);
 					}
@@ -3457,7 +3463,7 @@
 		// 	this.toc = [];
 		// 	return;
 		// }
-		
+
 		var homepage = $docsify.homepage.split('.').slice(0,-1).join('.')
 
 		if (tocLength === 0) {

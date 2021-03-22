@@ -29,7 +29,7 @@
 
 eslint-vue的配置文件为.eslintrc.js。
 
-点击菜单工具 -> 插件配置 -> eslint-vue -> .eslintrc.js，即可打开.eslintrc.js文件。
+点击菜单工具 -> 设置 -> 插件配置 -> eslint-vue -> .eslintrc.js，即可打开.eslintrc.js文件。
 
 选项对应说明如下：
 
@@ -55,7 +55,7 @@ eslint-vue的配置文件为.eslintrc.js。
 
 修改.eslintrc.js文件，添加规则，比如: 
 
-```json
+```js
 {
   //在computed properties中禁用异步actions
   'vue/no-async-in-computed-properties': 'error',
@@ -127,11 +127,15 @@ eslint-vue的配置文件为.eslintrc.js。
 特别说明：
 - vue文件，校验vue语法，需要安装`eslint-vue`插件，[插件地址](https://ext.dcloud.net.cn/plugin?id=2005)
 - vue文件, 校验规则，需要从`eslint-vue`插件中配置。
-- 菜单【工具】【插件配置】【eslint-vue】【.eslintrc.js】,编辑`.eslintrc.js`文件
+- 菜单【工具】【设置】【插件配置】【eslint-vue】【.eslintrc.js】,编辑`.eslintrc.js`文件
 
 
-![](https://img-cdn-qiniu.dcloud.net.cn/uploads/article/20200325/8201039dcb85e2980ba3fc1a31e212b1.gif)
+【示例】eslint自动修复双引号为单引号，如下：
 
+<img src="/static/snapshots/tutorial/eslint-uniapp-example.gif" style="zoom: 90%; border: 1px solid #eee;" />
+
+
+## 示例：cli项目
 
 vue-cli项目，如果使用项目下的配置规则，需要安装相关库、并在项目根目录创建`.eslintrc.js`文件
 
@@ -140,7 +144,7 @@ vue-cli项目，如果使用项目下的配置规则，需要安装相关库、�
 2. 校验vue语法，需要安装`eslint-vue`插件，[插件地址](https://ext.dcloud.net.cn/plugin?id=2005)
 
 ```shell
-$ npm install --save eslint eslint-plugin-vue eslint-plugin-html eslint-config-standard eslint-plugin-import eslint-plugin-node eslint-plugin-promise eslint-plugin-standard
+npm install --save eslint eslint-plugin-vue eslint-plugin-html eslint-config-standard eslint-plugin-import eslint-plugin-node eslint-plugin-promise eslint-plugin-standard
 ```
 
 
