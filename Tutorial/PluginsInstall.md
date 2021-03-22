@@ -38,12 +38,16 @@ HBuilderX启动后，点击菜单【工具】【插件安装】，即可打开�
 2. 将插件文件夹, 如是zip包，解压即可），放置到`plugins`目录下
 3. 重启HBuilderX编辑器
 
-正式版命令
 ```shell
+# 正式版
 open /Applications/HBuilderX.app/Contents/HBuilderX/plugins/
-```
 
-Alpha版命令
-```shell
+# Alpha版
 open /Applications/HBuilderX-Alpha.app/Contents/HBuilderX/plugins/
 ```
+
+### 问题
+
+某些node插件，比如`sass`、`less`, 安装成功，项目运行时，却提示安装失败。
+
+可能的原因：node_modules安装失败了。进入插件目录，手动执行`npm install --save`
