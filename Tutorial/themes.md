@@ -27,8 +27,8 @@ HBuilderX的窗体所有颜色都在配置文件中，并且可以复写以实�
 
 [自定义主题颜色相关参数](Tutorial/themes_param)
 
-## 图标
+## 文件图标
 
-菜单【工具】【项目管理器图标主题】，可以调整图标。
+菜单【工具】【项目管理器图标主题】，可以调整文件图标。
 
 <img src="/static/snapshots/tutorial/icon.jpg" style="zoom: 50%; border: 1px solid #eee;border-radius: 5px; " />
