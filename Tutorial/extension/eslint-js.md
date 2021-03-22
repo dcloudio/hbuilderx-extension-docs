@@ -12,7 +12,7 @@ eslint-js, 用于校验js和html中的js代码
 
 ## 插件配置
 
-点击菜单【工具】【插件配置】【eslint-js】，即可看到eslint-js相关配置。
+点击菜单【工具】【设置 -> 插件配置】【eslint-js】，即可看到eslint-js相关配置。
 
 <img src="/static/snapshots/tutorial/eslint-js.png" />
 
@@ -33,17 +33,17 @@ eslint-js的配置文件为.eslintrc.js。
 
 选项对应说明如下：
 
-```
-  module.exports = {
-      "plugins": [],          //插件
-      "env": {
-          "browser": true,
-          "node": true
-      },
-      "parser": "esprima",    //指定解析器
-      "parserOptions": {},    
-      "rules": {}             //规则
-  };
+```js
+module.exports = {
+    "plugins": [],          //插件
+    "env": {
+        "browser": true,
+        "node": true
+    },
+    "parser": "esprima",    //指定解析器
+    "parserOptions": {},    
+    "rules": {}             //规则
+}
 ```
   
 更多配置说明可以参考[options](https://cn.eslint.org/docs/user-guide/configuring)
@@ -58,7 +58,7 @@ eslint-js的配置文件为.eslintrc.js。
 - "error" 或 2 - 开启规则，使用错误级别的错误：error (当被触发的时候，程序会退出)
 
 规则示例
-```
+```js
 "rules": {
   "camelcase": 2,           //强制驼峰法命名,
   "indent": [2, 4],         //缩进风格
@@ -71,9 +71,9 @@ eslint-js的配置文件为.eslintrc.js。
 
 ## 示例：普通web项目
 
-示例：使用eslint, 删除多余的空格
+使用eslint, 校验多余的空格，并自动修复
 
-![](https://img-cdn-qiniu.dcloud.net.cn/uploads/article/20200318/ac5887a63cec8d30a57e44e8d924679c.gif)
+<img src="/static/snapshots/tutorial/eslint-html-example.gif" style="zoom: 90%; border: 1px solid #eee;" />
 
 配置文件
 
@@ -104,11 +104,11 @@ module.exports = {
 特别说明：
 - vue文件，校验vue语法，需要安装`eslint-vue`插件，[插件地址](https://ext.dcloud.net.cn/plugin?id=2005)
 - vue文件, 校验规则，需要从`eslint-vue`插件中配置。
-- 菜单【工具】【插件配置】【eslint-vue】【.eslintrc.js】,编辑`.eslintrc.js`文件
+- 菜单【工具】->【设置 -> 插件配置 -> eslint-vue -> .eslintrc.js】,编辑`.eslintrc.js`文件
 
-示例：配置eslint规则，校验vue文件
+【示例】eslint自动修复双引号为单引号，如下：
 
-![](https://img-cdn-qiniu.dcloud.net.cn/uploads/article/20200325/8201039dcb85e2980ba3fc1a31e212b1.gif)
+<img src="/static/snapshots/tutorial/eslint-uniapp-example.gif" style="zoom: 90%; border: 1px solid #eee;" />
 
 
 ## 示例：vue-cli项目

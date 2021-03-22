@@ -29,7 +29,7 @@
 
 eslint-vue的配置文件为.eslintrc.js。
 
-点击菜单工具 -> 插件配置 -> eslint-vue -> .eslintrc.js，即可打开.eslintrc.js文件。
+点击菜单工具 -> 设置 -> 插件配置 -> eslint-vue -> .eslintrc.js，即可打开.eslintrc.js文件。
 
 选项对应说明如下：
 
@@ -127,7 +127,7 @@ eslint-vue的配置文件为.eslintrc.js。
 特别说明：
 - vue文件，校验vue语法，需要安装`eslint-vue`插件，[插件地址](https://ext.dcloud.net.cn/plugin?id=2005)
 - vue文件, 校验规则，需要从`eslint-vue`插件中配置。
-- 菜单【工具】【插件配置】【eslint-vue】【.eslintrc.js】,编辑`.eslintrc.js`文件
+- 菜单【工具】【设置】【插件配置】【eslint-vue】【.eslintrc.js】,编辑`.eslintrc.js`文件
 
 
 【示例】eslint自动修复双引号为单引号，如下：
