@@ -2,6 +2,7 @@
 * 安装
     * [Windows](/Tutorial/install/windows.md)
     * [MacOSX](/Tutorial/install/macosx.md)
+    * [首次启动](/Tutorial/startup.md)
 * 开始使用
     * [入门教程](/Tutorial/StartedTutorial.md)
     * [用户界面](/Tutorial/userinterface.md)
@@ -38,6 +39,7 @@
 * 版本控制
     * [Git 介绍](/Tutorial/SourceControl/Git/README.md)
     * [Git Windows手册](/Tutorial/SourceControl/Git/Windows.md)
+    * [Git MacOSX手册](/Tutorial/SourceControl/Git/MacOSX.md)
 * 扩展插件
     * [validate-html](/Tutorial/extension/validate-html.md)
     * [validate-stylelint](/Tutorial/extension/validate-stylelint.md)

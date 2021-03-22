@@ -8,7 +8,8 @@ HBuilderX下载地址: [下载地址](https://www.dcloud.io/hbuilderx.html)
 
 HBuilderX，Windows为zip包，解压后才能使用。
 
-首先，选中下载的zip包，点击`右键菜单`，点击`解压到当前文件夹`
+1. 首先，选中下载的zip包，点击`右键菜单`，点击`解压到当前文件夹`
+2. 进入解压后的文件夹，找到HBuilderX.exe，直接点击打开。
 
 > 特别注意：解压过程中，不要中断解压。
 
@@ -29,7 +30,8 @@ HBuilderX，Windows为zip包，解压后才能使用。
 
 ### 启动问题排查指南
 
-您可能会碰到在windows上，无法启动HBuilderX的问题，请参考: [HBuilderX启动问题排查指南](/Tutorial/Questions/WindowsStart)
+1. 您可能会碰到在windows上，无法启动HBuilderX的问题，请参考: [HBuilderX启动问题排查指南](/Tutorial/Questions/WindowsStart)
+2. HBuilderX的配置文件损坏，也会导致软件无法启动，请参考: [配置文件损坏解决方案](/Tutorial/Questions/WindowsStart?id=_4-重点：以前能正常启动，突然启动不了)
 
 ### HBuilderX被误报病毒木马的说明
 
