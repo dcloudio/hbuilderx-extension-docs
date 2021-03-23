@@ -33,7 +33,7 @@ cli app quit
 cli help
 ```
 
-### 查看cli版本号
+#### 查看cli版本号
 
 ```
 cli ver
