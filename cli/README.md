@@ -11,14 +11,17 @@
     - 正式版 `/Applications/HBuilderX.app/Contents/MacOS/cli`
     - Alpha版 `/Applications/HBuilderX-Alpha.app/Contents/MacOS/cli`
 
+特别注意：本文所有命令示例，均以cli代替cli.exe，请根据不同操作系统，实际应用。
+
+
 #### 启动/关闭HBuilderX
 
 ```
 # 启动HBuilderX程序
-cli.exe open
+cli open
 
 # 关闭HBuilderX程序
-cli.exe app quit
+cli app quit
 ```
 
 
@@ -27,5 +30,11 @@ cli.exe app quit
 > 查看帮助文档，需要先启动HBuilderX。
 
 ```
-cli.exe help
+cli help
+```
+
+### 查看cli版本号
+
+```
+cli ver
 ```

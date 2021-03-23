@@ -5,7 +5,7 @@
 #### 获取HBuilderX当前登录的用户信息
 
 ```
-cli.exe user info
+cli user info
 ```
 
 #### 在HBuilderX中，登录某个账号
@@ -13,7 +13,7 @@ cli.exe user info
 如果登录成功，则返回`0:user login:OK`
 
 ```
-cli.exe user login --username <用户名>  --password <密码>
+cli user login --username <用户名>  --password <密码>
 ```
 
 
@@ -22,5 +22,5 @@ cli.exe user login --username <用户名>  --password <密码>
 如果退出成功，则返回`0:user logout:OK`
 
 ```
-cli.exe user logout
+cli user logout
 ```

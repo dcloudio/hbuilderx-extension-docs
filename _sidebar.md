@@ -28,6 +28,7 @@
     * [概述](/Tutorial/Language/Overview.md)
     * [代码助手](/Tutorial/Language/CodeAssistant.md)
     * [代码块](/Tutorial/Language/Snippets.md)
+    * [vue](/Tutorial/Language/vue.md)
     * [vue doc](/Tutorial/Language/vuedoc.md)
     * [Emmet](/Tutorial/Language/emmet.md)
     * [JSON](/Tutorial/Language/json.md)
