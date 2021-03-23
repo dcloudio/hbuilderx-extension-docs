@@ -43,8 +43,9 @@ hx的代码助手，可以按`alt+数字`选择直接选择某个项目，类似
 
 光标放到某api处，按下`F1`，就可跳转到这个api的官方手册。目前支持vue、uni-app、5+等api （如下图示例）
 
-<img src="/static/snapshots/started_tutorial/code-help-doc.gif" style="zoom: 90%;border:1px solid #eee;border-radius: 5px;" />
+> 此功能仅适用于2.5.7以下版本，2.5.7.20200116-alpha+版本，按F1查看帮助文档，改为打开外部浏览器，避免对边改边看造成影响
 
+<img src="/static/snapshots/started_tutorial/code-help-doc.gif" style="zoom: 90%;border:1px solid #eee;border-radius: 5px;" />
 
 
 #### 5. 编辑器与项目管理器的同步
