@@ -22,7 +22,7 @@ cli cloud functions --list 资源类型代号 --prj 项目名称或序号 --prov
 - 项目名称或序号为cli命令 project list中列举的项目名称或序号
 - 云服务商代号为aliyun(指阿里云)或tcb(指腾讯云)
 - uni_module模块名称在无需要时可以不输入--unimod参数
-- --cloud 参数代表列举的是云端的资源，如果没有这个参数则列举的是本地项目相关的内容
+- cloud 参数代表列举的是云端的资源，如果没有这个参数则列举的是本地项目相关的内容
 
 示例：
 
@@ -38,7 +38,7 @@ cli cloud functions --list cloudfunction --prj myproject --provider aliyun --clo
 
 命令语法：
 
-```shellshell
+```shell
 cli cloud functions --upload 资源类型代号 --prj 项目名称或序号 --provider 云服务商代号 --name 资源名称 --unimod uni_module模块名称 
 ```
 
@@ -61,7 +61,7 @@ cli cloud functions --upload 资源类型代号 --prj 项目名称或序号 --pr
 命令语法：
 
 ```shell
-cli cloud functions --upload 资源类型代号 --prj 项目名称或序号 --provider 云服务商代号 --name 资源名称 --unimod uni_module模块名称 
+cli cloud functions --download 资源类型代号 --prj 项目名称或序号 --provider 云服务商代号 --name 资源名称 --unimod uni_module模块名称 
 ```
 
 说明：
