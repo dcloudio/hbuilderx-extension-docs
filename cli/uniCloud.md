@@ -151,3 +151,18 @@ cli cloud functions --prj 项目名称或序号 --provider 云服务商代号 --
 ```shell
 cli cloud functions --prj hello-uniapp --provider aliyun --initdatabase
 ```
+
+## 指定云空间
+
+#### 命令语法
+
+```shell
+cli cloud functions --prj 项目名称或序号 --provider 云服务商代号 --assignspace 空间名称id或序号
+```
+#### 示例
+
+> 示例项目名称：hello-uniapp 云服务商：aliyun 空间序号：1 （该序号来自cloud functions --list space 命令）
+
+```shell
+cli cloud functions --prj hello-uniapp --provider aliyun --assignspace 1
+```
