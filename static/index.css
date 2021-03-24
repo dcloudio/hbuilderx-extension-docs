@@ -729,8 +729,17 @@ a.contact-item {
   height: 33px;
   background-repeat: no-repeat;
   background-size: 155px 33px;
-  background-image: url(./icon/hx_top-icon@2x.png);
+  background-image: url(./icon/hx.png);
 }
+
+@media only screen and (min-resolution: 192dpi),only screen and (min-resolution: 2dppx) {  .uniapp-logo {
+    border: 0 !important;
+    width: 155px;
+    height: 33px;
+    background-repeat: no-repeat;
+    background-size: 155px 33px;
+    background-image: url(./icon/hx@2x.png);
+  }}
 
 
 [data-page="/casecode.md"] .markdown-section li>a,
