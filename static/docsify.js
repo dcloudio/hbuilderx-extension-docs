@@ -500,6 +500,7 @@
      * @return { then(resolve, reject), abort }
      */
     function get(url, hasBar, headers) {
+        const extName = url.split('.').pop()
 
         if (hasBar === void 0) hasBar = false;
         if (headers === void 0) headers = {};
@@ -571,7 +572,9 @@
                 on('load', function(ref) {
                     var target = ref.target;
 
-                    if (target.status >= 400) {
+                    if(extName === 'md' && xhr.getResponseHeader('content-type').indexOf('text/html') === 0) {
+                        error(target);
+                    } else if (target.status >= 400) {
                         error(target);
                     } else {
                         var result = (cache[url] = {
