@@ -3,6 +3,18 @@
 * [插件激活机制](/ExtensionDocs/activation_event.md) 
 * [插件规范](/ExtensionDocs/manifest.md) 
 <div class="contact-box">
+  <a href="https://www.dcloud.io/hbuilderx.html" target="_blank" class="contact-item">
+    <img src="/static/favicon/favicon.png" width="20" height="21">
+    <div class="contact-smg">
+      <div>HBuilderX官网</div>
+    </div>
+  </a>
+  <a href="https://ask.dcloud.net.cn/explore/" target="_blank" class="contact-item">
+    <img src="/static/icon/ask.png" width="20" height="21">
+    <div class="contact-smg">
+      <div>DCloud论坛</div>
+    </div>
+  </a>
   <div class="contact-item">
     <img src="https://bjetxgzv.cdn.bspapp.com/VKCEYUGU-uni-app-doc/759713d0-4f2d-11eb-a16f-5b3e54966275.png" width="20" height="20" />
     <div class="contact-smg">
