@@ -16,7 +16,7 @@
 
 #### 启动/关闭HBuilderX
 
-```
+```shell
 # 启动HBuilderX程序
 cli open
 
@@ -29,12 +29,12 @@ cli app quit
 
 > 查看帮助文档，需要先启动HBuilderX。
 
-```
+```shell
 cli help
 ```
 
 #### 查看cli版本号
 
-```
+```shell
 cli ver
 ```

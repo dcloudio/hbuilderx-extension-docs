@@ -7,7 +7,7 @@
 1. 首先, 需要启动HBuilderX. (进入HBuilderX安装目录根目录, 终端输入`cli.exe open`)
 2. 编辑App打包配置文件(json文件), [App打包配置文件](/cli/README?id=cli打包配置文件)
 3. cli运行, 终端输入
-```
+```shell
 cli pack --config 配置文件
 ```
 4. 打包过程中如果有错误会给出相应的错误信息并中断操作，打包成功后传统打包会输出打包成功的下载地址，安心打包会输出打包成功后的路径。
