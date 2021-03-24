@@ -12,12 +12,12 @@ cli cloud functions --list 资源类型代号 --prj 项目名称或序号 --prov
 
 说明：
 
-- 资源类型代号为 `cloudfunction`、`common`、`database`、`validationFunction`、`clientDBAction` 或 `space` 其中之一
+- 资源类型代号为 `cloudfunction`、`common`、`db`、`vf`、`action` 或 `space` 其中之一
 	- `cloudfunction` 指云函数
 	- `common` 指云函数的公共模块
-	- `database` 指数据集合Schema
-	- `validationFunction` 指数据库校验函数
-	- `clientDBAction` 指数据库触发条件
+	- `db` 指数据集合Schema
+	- `vf` 指数据库校验函数
+	- `action` 指数据库触发条件
 	- `space` 指云空间
 - 项目名称或序号为cli命令 project list中列举的项目名称或序号
 - 云服务商代号为aliyun(指阿里云)或tcb(指腾讯云)
@@ -46,13 +46,13 @@ cli cloud functions --upload 资源类型代号 --prj 项目名称或序号 --pr
 
 说明：
 
-- 资源类型代号为 `cloudfunction`、`common`、`database`、`validationFunction`、`clientDBAction` 或 `all` 其中之一
+- 资源类型代号为 `cloudfunction`、`common`、`db`、`vf`、`action` 或 `all` 其中之一
 	- `cloudfunction`: 指云函数
 	- `common`: 指云函数的公共模块
-	- `database`: 指数据集合Schema
-	- `validationFunction`: 指数据库校验函数
-	- `clientDBAction`:  指数据库触发条件
-	- `all`: 指上传所有云函数、公共模块及clientDBAction,此时无需输入--unimod参数
+	- `db`: 指数据集合Schema
+	- `vf`: 指数据库校验函数
+	- `action`:  指数据库触发条件
+	- `all`: 指上传所有云函数、公共模块及actions,此时无需输入--unimod参数
 - 项目名称或序号为cli命令 project list中列举的项目名称或序号
 - 云服务商代号为aliyun(指阿里云)或tcb(指腾讯云)
 - 资源名称，当上传资源为云函数时资源名称为云函数的目录名，当上传资源为数据集合Schema时资源名称为文件名(如:xxxx.schema.json),如此类推 
@@ -76,13 +76,13 @@ cli cloud functions --upload cloudfunction --prj hello-uniapp --provider aliyun 
 cli cloud functions --upload common --prj hello-uniapp --provider aliyun --name hello-common
 
 # 上传uni-clientDB-actions目录下的action文件，比如test.js
-cli cloud functions --upload clientDBAction --prj hello-uniapp --provider aliyun --name test.js
+cli cloud functions --upload action --prj hello-uniapp --provider aliyun --name test.js
 
 # 上传database目录下的book.schema.json文件
-cli cloud functions --upload database --prj hello-uniapp --provider aliyun --name book.schema.json
+cli cloud functions --upload db --prj hello-uniapp --provider aliyun --name book.schema.json
 
 # 上传database/validateFunction目录下的扩展校验函数v.js文件
-cli cloud functions --upload validationFunction --prj hello-uniapp --provider aliyun --name v.js
+cli cloud functions --upload vf --prj hello-uniapp --provider aliyun --name v.js
 ```
 
 ## 下载资源
@@ -97,16 +97,16 @@ cli cloud functions --download 资源类型代号 --prj 项目名称或序号 --
 
 说明：
 
-- 资源类型代号为 `cloudfunction`、`common`、`database`、`validationFunction`、`clientDBAction` 或 `all` 其中之一
+- 资源类型代号为 `cloudfunction`、`common`、`db`、`vf`、`action` 或 `all` 其中之一
 	- `cloudfunction`: 云函数
 	- `common`: 云函数的公共模块
-	- `database`: 数据集合Schema
-	- `validationFunction`: 数据库校验函数
-	- `clientDBAction`: 数据库触发条件
-	- `all`: 下载所有云函数、公共模块及clientDBAction,此时无需输入--unimod参数
+	- `db`: 数据集合Schema
+	- `vf`: 数据库校验函数
+	- `action`: 数据库触发条件
+	- `all`: 下载所有云函数、公共模块及actions,此时无需输入--unimod参数
 - 项目名称或序号为cli命令 project list中列举的项目名称或序号
 - 云服务商代号为`aliyun`(指阿里云)或`tcb`(指腾讯云)
-- 资源名称，当下载资源为云函数时资源名称为云函数的目录名，为数据集合Schema时资源名称为文件名(如:xxxx.schema.json),如此类推，clientDBAction不支持按名称下载 
+- 资源名称，当下载资源为云函数时资源名称为云函数的目录名，为数据集合Schema时资源名称为文件名(如:xxxx.schema.json),如此类推，action不支持按名称下载，不支持--name参数
 - uni_module模块名称在无需要时可以不输入--unimod参数
 
 #### 示例 
@@ -127,13 +127,13 @@ cli cloud functions --download cloudfunction --prj hello-uniapp --provider aliyu
 cli cloud functions --download common --prj hello-uniapp --provider aliyun --name hello-common
 
 # 下载uni-clientDB-actions目录下的action文件，比如test.js
-cli cloud functions --download clientDBAction --prj hello-uniapp --provider aliyun --name test.js
+cli cloud functions --download action --prj hello-uniapp --provider aliyun --name test.js
 
 # 下载database目录下的book.schema.json文件
-cli cloud functions --download database --prj hello-uniapp --provider aliyun --name book.schema.json
+cli cloud functions --download db --prj hello-uniapp --provider aliyun --name book.schema.json
 
 # 下载database/validateFunction目录下的扩展校验函数v.js文件
-cli cloud functions --download validationFunction --prj hello-uniapp --provider aliyun --name v.js
+cli cloud functions --download vf --prj hello-uniapp --provider aliyun --name v.js
 ```
 
 ## 初始化数据库
@@ -150,4 +150,19 @@ cli cloud functions --prj 项目名称或序号 --provider 云服务商代号 --
 
 ```shell
 cli cloud functions --prj hello-uniapp --provider aliyun --initdatabase
+```
+
+## 指定云空间
+
+#### 命令语法
+
+```shell
+cli cloud functions --prj 项目名称或序号 --provider 云服务商代号 --assignspace 空间名称id或序号
+```
+#### 示例
+
+> 示例项目名称：hello-uniapp 云服务商：aliyun 空间序号：1 （该序号来自cloud functions --list space 命令）
+
+```shell
+cli cloud functions --prj hello-uniapp --provider aliyun --assignspace 1
 ```
