@@ -68,6 +68,12 @@
       <div>HBuilderX官网</div>
     </div>
   </a>
+  <a href="https://ext.dcloud.net.cn/?cat1=1&cat2=11&orderBy=TotalDownload" target="_blank" class="contact-item">
+    <img src="http://img-cdn-aliyun.dcloud.net.cn/dev/img/ext/favicon.png" width="18" height="18">
+    <div class="contact-smg">
+      <div>HBuilderX插件市场</div>
+    </div>
+  </a>
   <a href="https://ask.dcloud.net.cn/explore/" target="_blank" class="contact-item">
     <img src="/static/icon/ask.png" width="20" height="21">
     <div class="contact-smg">
