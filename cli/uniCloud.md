@@ -39,10 +39,10 @@ cli cloud functions --list cloudfunction --prj myproject --provider aliyun --clo
 #### 命令语法
 
 ```shell
-cli cloud functions --upload 资源类型代号 --prj 项目名称或序号 --provider 云服务商代号 --name 资源名称 --unimod uni_module模块名称 
+cli cloud functions --upload 资源类型代号 --prj 项目名称或序号 --provider 云服务商代号 --name 资源名称 --unimod uni_module模块名称 [--force]
 ```
 
-**注意**：当使用cli云开发方式操作时，上传下载默认使用`强制覆盖`的方式，即如果目标已经存在同名资源，操作时将`自动覆盖`
+**注意**：当使用cli云开发方式操作时，上传下载默认使用`强制跳过`的方式，即如果目标已经存在同名资源，操作时将`自动跳过`
 
 说明：
 
@@ -57,6 +57,7 @@ cli cloud functions --upload 资源类型代号 --prj 项目名称或序号 --pr
 - 云服务商代号为aliyun(指阿里云)或tcb(指腾讯云)
 - 资源名称，当上传资源为云函数时资源名称为云函数的目录名，当上传资源为数据集合Schema时资源名称为文件名(如:xxxx.schema.json),如此类推 
 - uni_module模块名称在无需要时可以不输入--unimod参数
+- force参数代表强制*覆盖*无提示
 
 #### 示例
 
@@ -90,10 +91,10 @@ cli cloud functions --upload vf --prj hello-uniapp --provider aliyun --name v.js
 #### 命令语法
 
 ```shell
-cli cloud functions --download 资源类型代号 --prj 项目名称或序号 --provider 云服务商代号 --name 资源名称 --unimod uni_module模块名称 
+cli cloud functions --download 资源类型代号 --prj 项目名称或序号 --provider 云服务商代号 --name 资源名称 --unimod uni_module模块名称 [--force]
 ```
 
-**注意**：当使用cli云开发方式操作时，上传下载默认使用`强制覆盖`的方式，即如果目标已经存在同名资源，操作时将`自动覆盖`
+**注意**：当使用cli云开发方式操作时，上传下载默认使用`强制跳过`的方式，即如果目标已经存在同名资源，操作时将`自动跳过`
 
 说明：
 
@@ -108,6 +109,7 @@ cli cloud functions --download 资源类型代号 --prj 项目名称或序号 --
 - 云服务商代号为`aliyun`(指阿里云)或`tcb`(指腾讯云)
 - 资源名称，当下载资源为云函数时资源名称为云函数的目录名，为数据集合Schema时资源名称为文件名(如:xxxx.schema.json),如此类推，action不支持按名称下载，不支持--name参数
 - uni_module模块名称在无需要时可以不输入--unimod参数
+- force参数代表强制*覆盖*无提示
 
 #### 示例 
 
@@ -162,7 +164,11 @@ cli cloud functions --prj 项目名称或序号 --provider 云服务商代号 --
 #### 示例
 
 > 示例项目名称：hello-uniapp 云服务商：aliyun 空间序号：1 （该序号来自cloud functions --list space 命令）
+> 空间id：99999999-9999-9999-9999-999999999999 （该id来自cloud functions --list space 命令）
+> 空间名称：myspace（该名称来自cloud functions --list space 命令）
 
 ```shell
 cli cloud functions --prj hello-uniapp --provider aliyun --assignspace 1
+cli cloud functions --prj hello-uniapp --provider aliyun --assignspace 99999999-9999-9999-9999-999999999999
+cli cloud functions --prj hello-uniapp --provider aliyun --assignspace myspace
 ```

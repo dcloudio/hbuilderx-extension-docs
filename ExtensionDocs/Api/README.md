@@ -1057,6 +1057,7 @@ authorize二级模块对象，用于处理插件授权登录，获取HBuilderX�
 |--			|--			|--										|
 |appId |String		|  在[DCloud开发者开放开台](https://open.dcloud.net.cn/)添加授权插件后创建的appid |
 |scopes |Array&lt;String&gt;		| 授权范围列表, 取值范围：basic, email, phone。basic必填|
+|description | String	| 关于授权信息描述，可以向用户简单解释插件将如何使用申请的信息（HBuilderX 3.1.7新增） |
 
 basic包括用户的openid、昵称、头像。
 
@@ -1079,7 +1080,7 @@ email和phone请谨慎使用，非必要申请授权会招致HBuilderX的用户�
 
 #### 示例
 ``` javascript
-    let prom = hx.authorize.login({ appId: "yourappid", scopes: ['basic', 'email','phone'] });
+    let prom = hx.authorize.login({ appId: "yourappid", scopes: ['basic', 'email','phone'], description: "for test"});
     prom.then(function (param) {
 		// param['code']
 		// param['error']
