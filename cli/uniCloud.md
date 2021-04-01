@@ -1,6 +1,6 @@
 # uniCloud cli 云开发
 
-> uniCloud cli仅支持HBuilderX 3.1.7+
+> uniCloud cli仅支持HBuilderX 3.1.8+
 
 ## 列举资源信息
 
@@ -172,3 +172,14 @@ cli cloud functions --prj hello-uniapp --provider aliyun --assignspace 1
 cli cloud functions --prj hello-uniapp --provider aliyun --assignspace 99999999-9999-9999-9999-999999999999
 cli cloud functions --prj hello-uniapp --provider aliyun --assignspace myspace
 ```
+
+## 前端网页托管
+
+```shell
+cli project publish [--prj 项目名称] --space 云空间名称或id --provider 服务商代号 [--source 指定项目下源目录] [--prefix 指定云空间目录前缀]
+```
+
+说明:
+
+- 当指定了项目名称(--prj), --source参数不填则从项目的根目录上传所有内容
+- 如果没有指定项目名称，则--source必须为文件或目录的全路径
