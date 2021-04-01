@@ -48,6 +48,7 @@
     * [validate-stylelint](/Tutorial/extension/validate-stylelint.md)
     * [eslint-js](/Tutorial/extension/eslint-js.md)
     * [eslint-vue](/Tutorial/extension/eslint-vue.md)
+    * [prettier](/Tutorial/extension/prettier.md)
     * [Scss/Sass](/Tutorial/extension/sass.md)
     * [FTP/SFTP](/Tutorial/extension/ftp.md)
     * [MarkDown一键分享](/Tutorial/extension/markdown_share.md)
