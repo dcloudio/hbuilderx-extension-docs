@@ -1,6 +1,6 @@
 # uniCloud cli 云开发
 
-> uniCloud cli仅支持HBuilderX 3.1.8+
+> uniCloud cli仅支持HBuilderX 3.1.9+
 
 ## 列举资源信息
 
