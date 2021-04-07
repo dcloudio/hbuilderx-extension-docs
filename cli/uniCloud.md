@@ -177,7 +177,7 @@ cli cloud functions --prj hello-uniapp --provider aliyun --assignspace myspace
 
 #### 命令语法
 ```shell
-cli project publish [--prj 项目名称] --space 云空间名称或id --provider 服务商代号 [--source 指定项目下源目录] [--prefix 指定云空间目录前缀]
+cli hosting deploy [--prj 项目名称] --space 云空间名称或id --provider 服务商代号 [--source 指定项目下源目录] [--prefix 指定云空间目录前缀]
 ```
 
 说明:
@@ -190,15 +190,27 @@ cli project publish [--prj 项目名称] --space 云空间名称或id --provider
 ```shell
 
 # 上传特定路径文件到云端, 并重命名
-cli project publish --provider aliyun --space spacename --source /a.txt --prefix /b.txt
+cli hosting deploy --provider aliyun --space spacename --source /a.txt --prefix /b.txt
 
 # 上传特定路径文件到云端特定目录下(比如static目录)
-cli project publish --provider aliyun --space spacename --source /a.txt --prefix /static/
+cli hosting deploy --provider aliyun --space spacename --source /a.txt --prefix /static/
 
 # 上传目录到云端根目录
-cli project publish --provider aliyun --space spacename --source /Users/hx/test/ --prefix /
+cli hosting deploy --provider aliyun --space spacename --source /Users/hx/test/ --prefix /
 
 # 上传项目(比如test-project)到云端根目录
-cli project publish --provider aliyun --space spacename --prj test-project --prefix /
+cli hosting deploy --provider aliyun --space spacename --prj test-project --prefix /
 
+```
+
+#### 列举云空间下的文件及文件夹
+
+```shell
+cli hosting list file --space 云空间名称或id --provider 服务商代号
+```
+
+#### 删除云空间下的文件及文件夹
+
+```shell
+cli hosting delete file --space 云空间名称或id --provider 服务商代号 --path 云空间文件或文件夹路径，文件夹须以/结尾
 ```
