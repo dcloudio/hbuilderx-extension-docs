@@ -14,6 +14,21 @@
 特别注意：本文所有命令示例，均以cli代替cli.exe，请根据不同操作系统，实际应用。
 
 
+#### 查看帮助文档
+
+> 查看帮助文档，需要先启动HBuilderX。
+
+```shell
+cli --help
+cli help
+```
+
+#### 查看cli版本号
+
+```shell
+cli ver
+```
+
 #### 启动/关闭HBuilderX
 
 ```shell
@@ -24,17 +39,12 @@ cli open
 cli app quit
 ```
 
+#### 更多命令
 
-#### 查看帮助文档
-
-> 查看帮助文档，需要先启动HBuilderX。
-
-```shell
-cli help
-```
-
-#### 查看cli版本号
-
-```shell
-cli ver
-```
+|cli命令												|详情													|
+|--															|--														|
+|用户账号操作，登录、退出等			|[详情](/cli/user)						|
+|项目操作，导入、关闭项目				|[详情](/cli/project)					|
+|app打包												|[详情](/cli/pack)						|
+|uniCLoud操作，比如云函数上传等	|[详情](/cli/uniCloud)				|
+|uniCloud 前端网页托管					|[详情](/cli/uniCloud-hosting)|

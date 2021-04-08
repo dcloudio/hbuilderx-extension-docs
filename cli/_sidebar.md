@@ -1,9 +1,10 @@
 * [cli概述](/cli/README.md)
 * cli命令
-    * [用户操作](/cli/user.md)
+    * [用户账号操作](/cli/user.md)
     * [关闭/打开项目](/cli/project.md)
     * [打包](/cli/pack.md)
     * [uniCloud](/cli/uniCloud.md)
+    * [前端网页托管](/cli/uniCloud-hosting.md)
 <div class="contact-box">
   <a href="https://www.dcloud.io/hbuilderx.html" target="_blank" class="contact-item">
     <img src="/static/favicon/favicon.png" width="20" height="21">
