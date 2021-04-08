@@ -175,7 +175,9 @@ cli cloud functions --prj hello-uniapp --provider aliyun --assignspace myspace
 
 ## 前端网页托管
 
-#### 命令语法
+> 仅支持阿里云, 不支持腾讯云。所有操作，均需要HBuilderX处于登录状态
+
+### 上传项目或文件到前端网页托管
 ```shell
 cli hosting deploy [--prj 项目名称] --space 云空间名称或id --provider 服务商代号 [--source 指定项目下源目录] [--prefix 指定云空间目录前缀]
 ```
@@ -185,7 +187,7 @@ cli hosting deploy [--prj 项目名称] --space 云空间名称或id --provider 
 - 当指定了项目名称(--prj), --source参数不填则从项目的根目录上传所有内容
 - 如果没有指定项目名称，则--source必须为文件或目录的全路径
 
-#### 示例
+**示例**
 
 ```shell
 
@@ -203,14 +205,36 @@ cli hosting deploy --provider aliyun --space spacename --prj test-project --pref
 
 ```
 
-#### 列举云空间下的文件及文件夹
+### 列举云空间下的文件及文件夹
 
 ```shell
-cli hosting list file --space 云空间名称或id --provider 服务商代号
+cli hosting list --space 云空间名称或id --provider 服务商代号  [--prefix 指定云空间目录前缀]
 ```
 
-#### 删除云空间下的文件及文件夹
+**示例**
 
 ```shell
-cli hosting delete file --space 云空间名称或id --provider 服务商代号 --path 云空间文件或文件夹路径，文件夹须以/结尾
+
+# 列表根目录下的文件
+cli hosting list  --provider aliyun --space spacename
+
+# 列表指定目录下的文件
+cli hosting list  --provider aliyun --space spacename --prefix /img/
+```
+
+### 删除云空间下的文件及文件夹
+
+```shell
+cli hosting delete --space 云空间名称或id --provider 服务商代号 --path 云空间文件或文件夹路径，文件夹须以/结尾
+```
+
+**示例**
+
+```shell
+
+# 删除文件夹
+cli hosting delete  --provider aliyun --space spacename --path /img/
+
+# 删除指定文件
+cli hosting delete  --provider aliyun --space spacename --path /img/1.png
 ```
