@@ -18,115 +18,116 @@
         <script>
             // docsify config start
             window.$docsify = {
-                alias: {
-                    '/.*/_navbar.md': '/_navbar.md',
-                    '/(.*)/.*/_sidebar.md': '/$1/_sidebar.md',
-                    '/Tutorial/_sidebar.md': '/_sidebar.md',
-                },
-                name: 'extension-docs',
-                // TODO 如需提交,必须改为 history 模式
-                routerMode: 'history',
-                // routerMode: 'hash',
-                repo: false,
-                coverpage: false,
-                loadSidebar: true,
-                loadNavbar: true,
-                auto2top: true,
-                mdCache: 7200000,
-                search: {
-                    maxAge: 7200000,
-                    paths: [
-                        '/',
-                        '/Tutorial/startup',
-                        '/Tutorial/windows_install',
-                        '/Tutorial/mac_install',
-                        '/Tutorial/userinterface',
-                        '/Tutorial/StartedTutorial',
-                        '/Tutorial/ProjectType',
-                        '/Tutorial/setting',
-                        '/Tutorial/themes',
-                        '/Tutorial/keybindings',
-                        '/Tutorial/project',
-                        '/Tutorial/UserGuide/format',
-                        '/Tutorial/UserGuide/editorconfig',
-                        '/Tutorial/UserGuide/externalCommands',
-                        '/Tutorial/extension/validate-stylelint',
-                        '/Tutorial/extension/validate-html',
-                        '/Tutorial/extension/eslint-js',
-                        '/Tutorial/extension/eslint-vue',
-                        '/Tutorial/extension/sass',
-                        '/Tutorial/extension/ftp',
-                        '/Tutorial/extension/markdown_share',
-                        '/ExtensionDocs/Api/README',
-                        '/ExtensionDocs/ContributionPoints/README',
-                        '/ExtensionDocs/manifest',
-                        '/ExtensionDocs/activation_event',
-                        '/ExtensionTutorial/README',
-                        '/ExtensionTutorial/HowToInstall',
-                        '/ExtensionTutorial/HowToPublish',
-                        '/ExtensionTutorial/menus',
-                        '/ExtensionTutorial/commands',
-                        '/ExtensionTutorial/extension',
-                        '/ExtensionTutorial/firstExtension',
-                        '/ExtensionTutorial/texteditor',
-                        '/ExtensionTutorial/validations',
-                        '/ExtensionTutorial/views',
-                        '/Tutorial/App/PhoneDebugging',
-                        '/Tutorial/Language/Overview',
-                        '/Tutorial/Language/vuedoc',
-                        '/Tutorial/Language/Snippets',
-                        '/Tutorial/Language/emmet',
-                        '/Tutorial/Language/vue',
-                        '/Tutorial/UserGuide/SyntaxCheck',
-                        '/Tutorial/Language/CodeAssistant',
-                        '/Tutorial/App/AndroidChannel',
-                        '/Tutorial/settings/font',
-                        '/Tutorial/settings/px-upx',
-                        '/Tutorial/UserGuide/built-in-explorer',
-                        '/Tutorial/UserGuide/multi-window',
-                        '/Tutorial/Security',
-                        '/Tutorial/PluginsInstall',
-                        '/Tutorial/command',
-                        '/Tutorial/UserGuide/LocalHistory',
-                        '/Tutorial/UserGuide/built-in-browser',
-                        '/Tutorial/UserGuide/goto',
-                        '/Tutorial/App/iosSafePack',
-                        '/cli/README',
-                        '/cli/pack',
-                        '/cli/project',
-                        '/cli/user',
-                        '/Tutorial/Language/json',
-                        '/Tutorial/UserGuide/find',
-                        '/Tutorial/themes_param',
-                        '/Tutorial/UserGuide/selection',
-                        '/Tutorial/UserGuide/LocalFileDiff',
-                        '/Tutorial/Questions/WindowsStart',
-                        '/Tutorial/Other/health',
-                        '/Tutorial/Language/markdown',
-                        '/Tutorial/SourceControl/Git/Windows',
-                        '/Tutorial/SourceControl/Git/README',
-                        '/Tutorial/SourceControl/Git/MacOSX',
-                        '/Tutorial/SourceControl/SVN/Windows',
-                        '/Tutorial/SourceControl/SVN/MacOSX',
-                        '/cli/uniCloud',
-                        '/cli/uniCloud-hosting',
-                        '/Tutorial/extension/prettier'
-                    ],
-                    placeholder: '搜索',
-                    noData: '没有结果',
-                    depth: 6
-                },
-                maxLevel: 4,
-                subMaxLevel: 3,
-                banner: ['/case'],
-                plugins: [
-                    function(hook, vm) {
-                        hook.afterEach(function(html) {
-                            var url = '//github.com/dcloudio/hbuilderx-extension-docs/tree/master' + vm.route.file;
-                            return html + '<hr align=center color=#987cb9 size=1>发现错误？想参与编辑？<a href=' + url + ' target=_blank>在 GitHub 上编辑此页面！</a>';
-                        });
-                    }
-                ]
+              alias: {
+                '/.*/_navbar.md': '/_navbar.md',
+                '/(.*)/.*/_sidebar.md': '/$1/_sidebar.md',
+                '/Tutorial/_sidebar.md': '/_sidebar.md',
+              },
+              name: 'extension-docs',
+              // TODO 如需提交,必须改为 history 模式
+              routerMode: 'history',
+              // routerMode: 'hash',
+              repo: false,
+              coverpage: false,
+              loadSidebar: true,
+              loadNavbar: true,
+              auto2top: true,
+              mdCache: 7200000,
+              search: {
+                maxAge: 7200000,
+                paths: [
+                  '/',
+                  '/Tutorial/startup',
+                  '/Tutorial/windows_install',
+                  '/Tutorial/mac_install',
+                  '/Tutorial/userinterface',
+                  '/Tutorial/StartedTutorial',
+                  '/Tutorial/ProjectType',
+                  '/Tutorial/setting',
+                  '/Tutorial/themes',
+                  '/Tutorial/keybindings',
+                  '/Tutorial/project',
+                  '/Tutorial/UserGuide/format',
+                  '/Tutorial/UserGuide/editorconfig',
+                  '/Tutorial/UserGuide/externalCommands',
+                  '/Tutorial/extension/validate-stylelint',
+                  '/Tutorial/extension/validate-html',
+                  '/Tutorial/extension/eslint-js',
+                  '/Tutorial/extension/eslint-vue',
+                  '/Tutorial/extension/sass',
+                  '/Tutorial/extension/ftp',
+                  '/Tutorial/extension/markdown_share',
+                  '/ExtensionDocs/Api/README',
+                  '/ExtensionDocs/ContributionPoints/README',
+                  '/ExtensionDocs/manifest',
+                  '/ExtensionDocs/activation_event',
+                  '/ExtensionTutorial/README',
+                  '/ExtensionTutorial/HowToInstall',
+                  '/ExtensionTutorial/HowToPublish',
+                  '/ExtensionTutorial/menus',
+                  '/ExtensionTutorial/commands',
+                  '/ExtensionTutorial/extension',
+                  '/ExtensionTutorial/firstExtension',
+                  '/ExtensionTutorial/texteditor',
+                  '/ExtensionTutorial/validations',
+                  '/ExtensionTutorial/views',
+                  '/Tutorial/App/PhoneDebugging',
+                  '/Tutorial/Language/Overview',
+                  '/Tutorial/Language/vuedoc',
+                  '/Tutorial/Language/Snippets',
+                  '/Tutorial/Language/emmet',
+                  '/Tutorial/Language/vue',
+                  '/Tutorial/UserGuide/SyntaxCheck',
+                  '/Tutorial/Language/CodeAssistant',
+                  '/Tutorial/App/AndroidChannel',
+                  '/Tutorial/settings/font',
+                  '/Tutorial/settings/px-upx',
+                  '/Tutorial/UserGuide/built-in-explorer',
+                  '/Tutorial/UserGuide/multi-window',
+                  '/Tutorial/Security',
+                  '/Tutorial/PluginsInstall',
+                  '/Tutorial/command',
+                  '/Tutorial/UserGuide/LocalHistory',
+                  '/Tutorial/UserGuide/built-in-browser',
+                  '/Tutorial/UserGuide/goto',
+                  '/Tutorial/App/iosSafePack',
+                  '/cli/README',
+                  '/cli/pack',
+                  '/cli/project',
+                  '/cli/user',
+                  '/Tutorial/Language/json',
+                  '/Tutorial/UserGuide/find',
+                  '/Tutorial/themes_param',
+                  '/Tutorial/UserGuide/selection',
+                  '/Tutorial/UserGuide/LocalFileDiff',
+                  '/Tutorial/Questions/WindowsStart',
+                  '/Tutorial/Other/health',
+                  '/Tutorial/Language/markdown',
+                  '/Tutorial/SourceControl/Git/Windows',
+                  '/Tutorial/SourceControl/Git/README',
+                  '/Tutorial/SourceControl/Git/MacOSX',
+                  '/Tutorial/SourceControl/SVN/Windows',
+                  '/Tutorial/SourceControl/SVN/MacOSX',
+                  '/cli/uniCloud',
+                  '/cli/uniCloud-hosting',
+                  '/cli/env',
+                  '/Tutorial/extension/prettier'
+                ],
+                placeholder: '搜索',
+                noData: '没有结果',
+                depth: 6
+              },
+              maxLevel: 4,
+              subMaxLevel: 3,
+              banner: ['/case'],
+              plugins: [
+                function(hook, vm) {
+                  hook.afterEach(function(html) {
+                    var url = '//github.com/dcloudio/hbuilderx-extension-docs/tree/master' + vm.route.file;
+                    return html + '<hr align=center color=#987cb9 size=1>发现错误？想参与编辑？<a href=' + url + ' target=_blank>在 GitHub 上编辑此页面！</a>';
+                  });
+                }
+              ]
             };
             // docsify config end
         </script>
@@ -139,46 +140,46 @@
         <script>
             var _hmt = _hmt || [];
             (function() {
-                var hm = document.createElement('script');
-                hm.src = 'https://hm.baidu.com/hm.js?6f4a415d4c67e59e4d5f5e8546092f14';
-                var s = document.getElementsByTagName('script')[0];
-                s.parentNode.insertBefore(hm, s);
+              var hm = document.createElement('script');
+              hm.src = 'https://hm.baidu.com/hm.js?6f4a415d4c67e59e4d5f5e8546092f14';
+              var s = document.getElementsByTagName('script')[0];
+              s.parentNode.insertBefore(hm, s);
 
-                window.addEventListener('click', function(e) {
-                    var target = e.target;
-                    if (target.className === 'chapter') { //左侧导航的折叠
-                        var chapterParent = target.parentElement;
-                        var summary = localStorage.getItem('summary') ? JSON.parse(localStorage.getItem(
-                            'summary')) : {};
-                        var level = chapterParent.dataset.level;
-                        if (chapterParent.classList.contains('close')) {
-                            summary[level] = false;
-                            chapterParent.classList.remove('close');
-                        } else {
-                            summary[level] = true;
-                            chapterParent.classList.add('close');
-                        }
-                        localStorage.setItem('summary', JSON.stringify(summary));
-                        return;
-                    }
+              window.addEventListener('click', function(e) {
+                var target = e.target;
+                if (target.className === 'chapter') { //左侧导航的折叠
+                  var chapterParent = target.parentElement;
+                  var summary = localStorage.getItem('summary') ? JSON.parse(localStorage.getItem(
+                    'summary')) : {};
+                  var level = chapterParent.dataset.level;
+                  if (chapterParent.classList.contains('close')) {
+                    summary[level] = false;
+                    chapterParent.classList.remove('close');
+                  } else {
+                    summary[level] = true;
+                    chapterParent.classList.add('close');
+                  }
+                  localStorage.setItem('summary', JSON.stringify(summary));
+                  return;
+                }
 
-                    if (target.tagName === 'IMG' && target.className !== 'preview-img') {
-                        var src = target.src,
-                            showImg = true;
-                        while (target && target !== document) {
-                            if (target.tagName == 'A') {
-                                showImg = false;
-                                break;
-                            }
-                            target = target.parentNode;
-                        }
-                        if (showImg && src) {
-                            var preview = new $docsify.Preview(src);
-                            preview.show();
-                            return;
-                        }
+                if (target.tagName === 'IMG' && target.className !== 'preview-img') {
+                  var src = target.src,
+                    showImg = true;
+                  while (target && target !== document) {
+                    if (target.tagName == 'A') {
+                      showImg = false;
+                      break;
                     }
-                }, true);
+                    target = target.parentNode;
+                  }
+                  if (showImg && src) {
+                    var preview = new $docsify.Preview(src);
+                    preview.show();
+                    return;
+                  }
+                }
+              }, true);
 
             })();
         </script>
