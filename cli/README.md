@@ -47,6 +47,7 @@ cli app quit
 |cli命令												|详情													|
 |--															|--														|
 |用户账号操作，登录、退出等			|[详情](/cli/user)						|
+|文件操作，打开文件并跳转指定行列				|[详情](/cli/file)					|
 |项目操作，导入、关闭项目				|[详情](/cli/project)					|
 |app打包												|[详情](/cli/pack)						|
 |uniCLoud操作，比如云函数上传等	|[详情](/cli/uniCloud)				|
