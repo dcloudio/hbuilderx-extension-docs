@@ -2,6 +2,7 @@
 * cli命令
     * [用户账号操作](/cli/user.md)
     * [关闭/打开项目](/cli/project.md)
+    * [打开文件](/cli/file.md)
     * [打包](/cli/pack.md)
     * [uniCloud](/cli/uniCloud.md)
     * [前端网页托管](/cli/uniCloud-hosting.md)
