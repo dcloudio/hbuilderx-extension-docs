@@ -2,7 +2,7 @@
 
 > HBuilderX cli命令行工具, 仅适用于HBuilderX 3.1.5+版本
 
-### 打包
+### 前言
 
 1. 首先, 需要启动HBuilderX. (进入HBuilderX安装目录根目录, 终端输入`cli.exe open`)
 2. 编辑App打包配置文件(json文件), [App打包配置文件](/cli/README?id=cli打包配置文件)
@@ -87,7 +87,7 @@ localhost:MacOS hx$ ./cli pack --config /Users/hx/Documents/HBuilderProjects/测
 }
 ```
 
-#### cli打包参数
+### cli pack 参数
 
 > 以下参数选项, 均为`cli pack`的选项.
 
@@ -118,3 +118,13 @@ localhost:MacOS hx$ ./cli pack --config /Users/hx/Documents/HBuilderProjects/测
 |--ios.certpassword 	|iOS使用自定义证书打包的证书密码		|
 
 > 注 如果配置文件与配置参数都配置了相同参数，以命令行参数为准
+
+### 命令行传参示例
+
+**示例**
+
+```shell
+
+# android打包： 项目名称（apps）、传统打包、包名（io.test)、打包证书（自有证书、别名：testalias、密码123456）
+cli pack --project apps --platform android --safemode false --android.packagename io.test --android.androidpacktype 0 --android.certalias testalias --android.certfile /Users/hx/Desktop/cert/jdk13/test.key --android.certpassword 123456
+```
