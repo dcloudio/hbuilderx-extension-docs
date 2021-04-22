@@ -31,7 +31,7 @@ HBuilderX，Windows为zip包，解压后才能使用。
 ### 启动问题排查指南
 
 1. 您可能会碰到在windows上，无法启动HBuilderX的问题，请参考: [HBuilderX启动问题排查指南](/Tutorial/Questions/WindowsStart)
-2. HBuilderX的配置文件损坏，也会导致软件无法启动，请参考: [配置文件损坏解决方案](/Tutorial/Questions/WindowsStart?id=_4-重点：以前能正常启动，突然启动不了)
+2. HBuilderX的配置文件损坏，也会导致软件无法启动，请参考: [配置文件损坏解决方案](/Tutorial/Questions/WindowsStart?id=_4-配置文件损坏)
 
 ### HBuilderX被误报病毒木马的说明
 

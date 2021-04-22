@@ -55,7 +55,7 @@ windows, 部分小伙伴，解压zip后，为了创建快捷方式，把`HBuilde
 3. 按照现象1的方案尝试一下
 4. 在`HBuilderX.exe`上，鼠标右键，点击属性。如下图所示操作：
 
-<img src="/static/snapshots/tutorial/windows_install/1.png" style="zoom:80%" />
+<img src="/static/snapshots/tutorial/windows_install/1.png" style="zoom:80%;border: 1px solid #eee;" />
 
 > 备注： 如果此方法，没有解决您的问题，请看下【事件查看器】中的错误。[事件查看器](/Tutorial/Question/WindowsStart?id=_3-通过-事件查看器-排查问题)
 
@@ -74,7 +74,7 @@ windows, 部分小伙伴，解压zip后，为了创建快捷方式，把`HBuilde
 - 解压后，点击HBuilderX.exe,  提示缺少`qt5*.dll`库
 - 解压后，点击HBuilderX.exe,  提示`无法定位输入点xxxxxxx于动态链接库xxx.dll上`
 
-<img src="/static/snapshots/tutorial/windows_install/qt_error_1.png" />
+<img src="/static/snapshots/tutorial/windows_install/qt_error_1.png" style="border: 1px solid #eee;"/>
 
 
 ** 解决方案**
@@ -89,11 +89,11 @@ windows, 部分小伙伴，解压zip后，为了创建快捷方式，把`HBuilde
 
 如下图：
 
-<img src="/static/snapshots/tutorial/windows_install/qt_error_2.png" style="zoom: 80%;"/>
+<img src="/static/snapshots/tutorial/windows_install/qt_error_2.png" style="zoom: 80%;border: 1px solid #eee; padding: 10px;"/>
 
 解决方案：检查一下本机是否安装了`qt`，如以前安装过，进入`环境变量`，将qt相关的环境变量删除
 
-<img src="/static/snapshots/tutorial/windows_install/env.png" style="zoom: 80%;"/>
+<img src="/static/snapshots/tutorial/windows_install/env.png" style="zoom: 80%;border: 1px solid #eee;"/>
 
 
 ## 3. 通过 事件查看器 排查问题
@@ -107,11 +107,11 @@ windows, 部分小伙伴，解压zip后，为了创建快捷方式，把`HBuilde
 
 打开事件查看器的方法： 点击“开始→运行”，输入eventvwr，点击“确定”，就可以打开事件查看器。
 
-<img src="/static/snapshots/tutorial/windows_install/eventvwr_1.png" style="zoom: 90%;"/>
+<img src="/static/snapshots/tutorial/windows_install/eventvwr_1.png" style="zoom: 90%;border: 1px solid #eee;"/>
 
 如下图： 点击【Windows 日志】--【应用程序】，找到级别为`错误`的记录，如是`HBuilderX`的`记录`，根据`记录`，解决问题
 
-<img src="/static/snapshots/tutorial/windows_install/eventvwr_2.png" style="zoom: 80%;"/>
+<img src="/static/snapshots/tutorial/windows_install/eventvwr_2.png" style="zoom: 80%; border: 1px solid #eee;"/>
 
 特别说明：如果事件查看器错误显示`unKnow`, 那就下载此 [opengl32sw.dll文件补丁](https://update.dcloud.net.cn/hbuilderx/patch/opengl32sw.dll)，放到HBuilderX根目录试试
 
@@ -124,33 +124,23 @@ windows, 部分小伙伴，解压zip后，为了创建快捷方式，把`HBuilde
 
 <img src="/static/snapshots/tutorial/windows_install/eventvwr_3.png" style="zoom: 80%;" />
 
-**方法1： **
+方法1：升级显卡驱动
 
-升级显卡驱动
-
-**方法2：**
-
-下载此 [opengl32sw.dll文件补丁](https://update.dcloud.net.cn/hbuilderx/patch/opengl32sw.dll)
-
-下载后，将此`dll`文件，放到HBuilderX`根目录
+方法2：下载此 [opengl32sw.dll文件补丁](https://update.dcloud.net.cn/hbuilderx/patch/opengl32sw.dll), 下载后，将此`dll`文件，放到HBuilderX安装目录的根目录
 
 
 ### 3.3 显卡错误：dbgcore.dll错误
 
 ** 在`事件查看器`中，可能遇到`dbgcore.dll错误`的解决办法**
 
-**`下载下面的dbgcore.dll到HBuilderX所在目录`**
+下载补丁文件 [dbgcore.dll下载地址](https://update.dcloud.net.cn/hbuilderx/patch/dbgcore.dll), 下载后，将此`dll`文件，放到HBuilderX安装目录的根目录
 
-[dbgcore.dll下载地址](https://update.dcloud.net.cn/hbuilderx/patch/dbgcore.dll)
-
-> 注意：也有可能是配置文件损坏了。参考4.1章节。
+> 注意：也有可能是配置文件损坏了。参考4章节。
 
 
 ### 3.4 AMD显卡错误： atioglxx.dll错误
 
-`如果您的电脑配置了AMD显卡，很有可能启动不了。`
-
-atioglxx.dll是ati显卡驱动所需要的一个文件。
+如果您的电脑配置了AMD显卡，如遇到启动问题（事件查看器atioglxx.dll错误），atioglxx.dll是ati显卡驱动所需要的一个文件。
 
 解决办法：
 
@@ -175,7 +165,7 @@ atioglxx.dll是ati显卡驱动所需要的一个文件。
 
 
 
-## 4. 重点：以前能正常启动，突然启动不了
+## 4. 配置文件损坏
 --------------
 
 > 还有小伙伴反应，昨天还用的好好的，今天启动不了，怎么回事呢？
@@ -213,15 +203,7 @@ atioglxx.dll是ati显卡驱动所需要的一个文件。
 2. QQ: 搜群，群关键字：HBuilderX ,加入群后，找群管理员帮您解决。
 3. 去论坛发帖。论坛地址：http://ask.dcloud.net.cn
 
-### 6.2 HBuilderX官方QQ群
-
-
-HBuilderX 11群（2000人群）：1051710376
-HBuilderX 12群 (1000人群）：1051711389
-
-Mac专用交流群：148229211
-
-### 6.3 如何提问？
+### 6.2 如何提问？
 
 如果您遇到启动问题，发邮件、或添加qq寻求帮助时，请您提供下列信息，这样可以得到更快帮助！
 
