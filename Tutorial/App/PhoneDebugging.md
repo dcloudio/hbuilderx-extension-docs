@@ -21,7 +21,7 @@
 下面把各种常见FAQ列出，大家可按图索骥。
 
 ## 1. 没有运行到手机的菜单
-
+---
 > 真机运行只能运行App项目，选中App项目或将焦点放在将要运行的App项目的文件编辑器上
 
 HBuilderX支持web项目和app项目，项目前面是有图标的，W表示web项目，A表示App项目。其中只有`App项目可以运行`。
@@ -29,7 +29,7 @@ HBuilderX支持web项目和app项目，项目前面是有图标的，W表示web�
 HBuilderX支持项目类型较多，只有`uni-app`、`5+app`、`wap2app`可以真机运行。他们都会在项目根目录下有个`manifest.json`文件（uni-cli项目会在src目录下有manifest.json）。
 
 ## 2. 检查手机设置
-
+---
 特别注意：Windows连接Android手机，一定要确保电脑已安装相应的手机驱动。
 
 1. 确保数据线或usb口正常，可替换不同的线或口来验证。
@@ -39,7 +39,7 @@ HBuilderX支持项目类型较多，只有`uni-app`、`5+app`、`wap2app`可以�
 5. 部分手机如小米，有usb安装应用的权限设置，需在手机上允许通过usb安装应用。不同rom的界面不一样，请自行百度你的手机打开usb安装应用的方式。
 
 ## 3. Mac 连接手机/模拟器说明
-
+---
 分Android和iOS手机分别列出排查方式：
 
 ### 3.1 Mac: iOS真机
@@ -68,7 +68,7 @@ HBuilderX支持项目类型较多，只有`uni-app`、`5+app`、`wap2app`可以�
 8. 重启电脑重试。
 
 ## 4. Windows 连接手机/模拟器说明
-
+---
 ### 4.1 Windows: 连接Android手机
 
 #### 4.1.1 驱动：
@@ -147,12 +147,12 @@ iTunes12.1起更改了接口，会造成无法连接：
   ②、安装最新版本的iTools，重启HBuilderX。
 
 ## 5. 其它问题
-
-### Q1: 能检测到手机，但处于置灰状态无法点击
+---
+#### Q1: 能检测到手机，但处于置灰状态无法点击
 
 发生此情况一般为检测到手机后，中间因为其他软件连接断开了，需要重新插拔手机或重启HBuilderX。
 
-### Q2: 能检测到手机，但点HBuilder的真机运行，安装调试基座失败
+#### Q2: 能检测到手机，但点HBuilder的真机运行，安装调试基座失败
 
 1. 部分Android rom如小米有usb安装apk的权限，可能是关闭状态，此时需要在手机管家等设置里寻找usb安装apk的权限，将其打开。
 2. 部分Android手机在usb安装apk时，会在手机界面上弹框，如果不能及时点弹框，会因为超时而安装失败。请注意手机屏幕的显示。
@@ -161,79 +161,79 @@ iTunes12.1起更改了接口，会造成无法连接：
 安装完毕后，会在手机上有一个HBuilder的应用。
 以后再点真机运行，就可以把项目部署到手机上，然后手动点击HBuilder应用，就能看到项目的结果。
 
-### Q3: HBuilder控制台不输出日志问题的解决办法
+#### Q3: HBuilder控制台不输出日志问题的解决办法
 
 参考[http://ask.dcloud.net.cn/article/1336](http://ask.dcloud.net.cn/article/1336)
 
-### Q4: Android手机真机运行提示应用安装成功，但是其实手机上并没有HBuilder应用
+#### Q4: Android手机真机运行提示应用安装成功，但是其实手机上并没有HBuilder应用
 
 1. 确认USB调试模式是否打开。如果未打开，请打开USB调试模式重新运行真机调试。
 2. 如果HBuilder已经检测到手机，可能存在与手机助手冲突的情况，请关闭所有的手机助手重新运行真机调试。 
 3. 利用手机助手手动安装android_base.apk到手机上，然后重新运行真机调试。
 
-### Q5: Android真机联调报文件操作Permission denied
+#### Q5: Android真机联调报文件操作Permission denied
 
 请尝试以下方法解决：
-	1、拔出数据线
-	2、重新`打开USB调试模式`
-	3、重新插上数据线，此时手机上可能需要授权确认，点击确认
-	4、重新运行真机调试看看是否还有问题
-	5、重启手机，再重新运行真机调试，看看问题是否解决
-	6、如果还有问题，重新启动HBuilder，重复1-4步骤，再重新运行真机调试，看看问题是否解决
-	7、如果问题仍然没有解决，则重新安装手机驱动：
-	   1）我的电脑---右键--属性--硬件---设备管理器--删除USB驱动
-	   2）打开手机助手重新安装驱动
-	     此时手机上可能需要授权确认，点击确认，然后再重新运行真机调试
-	8、如果以上方案均无法解决，则有可能是手机root的时候，把sdcard目录的权限搞错了，导致无法真机运行，此时可以恢复出厂设置，或者重新root，或者刷机解决此问题
+1. 拔出数据线
+2. 重新`打开USB调试模式`
+3. 重新插上数据线，此时手机上可能需要授权确认，点击确认
+4. 重新运行真机调试看看是否还有问题
+5. 重启手机，再重新运行真机调试，看看问题是否解决
+6. 如果还有问题，重新启动HBuilder，重复1-4步骤，再重新运行真机调试，看看问题是否解决
+7. 如果问题仍然没有解决，则重新安装手机驱动：
+   1）我的电脑---右键--属性--硬件---设备管理器--删除USB驱动
+   2）打开手机助手重新安装驱动; 此时手机上可能需要授权确认，点击确认，然后再重新运行真机调试
+8. 如果以上方案均无法解决，则有可能是手机root的时候，把sdcard目录的权限搞错了，导致无法真机运行，此时可以恢复出厂设置，或者重新root，或者刷机解决此问题
 
-### Q6: Android真机联调报：open '/dev/hwlog_switch' fail -1, 13. Permission denied
+#### Q6: Android真机联调报：open '/dev/hwlog_switch' fail -1, 13. Permission denied
 
 请尝试以下方法解决：
-    1、参考 [http://ask.dcloud.net.cn/article/1336](http://ask.dcloud.net.cn/article/1336)
-    2、拔插数据线重试
-    3、重新打开USB调试模式重试
-    4、重启手机重试
-    5、重新启动HBuilder重试
-    6、如果以上方案均无法解决，则有可能是手机root的时候，把sdcard目录的权限搞错了，导致无法真机运行，此时可以恢复出厂设置，或者重新root，或者刷机解决此问题
+
+1. 参考 [http://ask.dcloud.net.cn/article/1336](http://ask.dcloud.net.cn/article/1336)
+2. 拔插数据线重试
+3. 重新打开USB调试模式重试
+4. 重启手机重试
+5. 重新启动HBuilder重试
+6. 如果以上方案均无法解决，则有可能是手机root的时候，把sdcard目录的权限搞错了，导致无法真机运行，此时可以恢复出厂设置，或者重新root，或者刷机解决此问题
 
 
-### Q7: 为什么Android手机没有SDCard就不能真机调试？
+#### Q7: 为什么Android手机没有SDCard就不能真机调试？
 
 Android没有root的手机只有SDCard才有权限。不过此SDCard并不是非得外插一张实体sd卡，是手机里一个叫SDCard的根目录。
 如果是使用Android模拟器，在模拟器里可以配置SDCard是否存在及大小。
 此情况已过期，目前正常手机都有SDCard目录。
 
-### Q8: 控制台显示手机应用已启动，但手机屏幕上没有出现？
+#### Q8: 控制台显示手机应用已启动，但手机屏幕上没有出现？
 
 Android手机第一次安装基座应用时，手机端大多有各种杀毒软件要检测一会才会放行，需要等一会。
 
-### Q9: 5+App运行后手机端一直在启动画面停留，不停转圈不能进入
+#### Q9: 5+App运行后手机端一直在启动画面停留，不停转圈不能进入
 
 这是应用的js代码的问题，启动画面的关闭是可配置的。参考 [http://ask.dcloud.net.cn/article/110](http://ask.dcloud.net.cn/article/110)
 
 
-### Q10: 为什么我电脑没有插iphone，但HBuilder检测到iOS设备？
+#### Q10: 为什么我电脑没有插iphone，但HBuilder检测到iOS设备？
 
 iTunes支持wifi同步，如果iOS设备启动了wifi同步，电脑端的iTunes就可以检测到，进而HBuilder也可以检测到。
 
-### Q11: 真机运行成功启动，但手机端软件启动后显示的不是正在运行的项目。
+#### Q11: 真机运行成功启动，但手机端软件启动后显示的不是正在运行的项目。
 
 这种情况是adb连接手机成功，但copy项目文件到手机上失败了。重新运行真机调试。
 或者检查待运行工程的目录名文件名是不是有特殊符号或超长导致Android不识别。
 
-### Q12: 真机运行启动后显示HBuilder真机运行（log）界面 {#synchronous}
+#### Q12: 真机运行启动后显示HBuilder真机运行（log）界面 {#synchronous}
 
-1、重新运行真机调试尝试解决问题
-2、Android设备可能存在与手机助手冲突的情况，请关闭所有的手机助手重新运行真机调试
-3、如果步骤2无法解决，请更换别的手机助手，重新运行真机调试尝试解决问题
-4、确认手机上HBuilder应用安装位置，如果手机上有外置sdcard，不要把HBuilder基座App安装在外置sdcard上，如果是安装在外置sdcard上，卸载外置sdcard上的HBuilder基座App，并在设置中将应用的默认安装位置不要设置为外置的sdcard上，或者将应用转移至手机内存或内置sdcard上，并重新运行真机调试
+1. 重新运行真机调试尝试解决问题
+2. Android设备可能存在与手机助手冲突的情况，请关闭所有的手机助手重新运行真机调试
+3. 如果步骤2无法解决，请更换别的手机助手，重新运行真机调试尝试解决问题
+4. 确认手机上HBuilder应用安装位置，如果手机上有外置sdcard，不要把HBuilder基座App安装在外置sdcard上，如果是安装在外置sdcard上，卸载外置sdcard上的HBuilder基座App，并在设置中将应用的默认安装位置不要设置为外置的sdcard上，或者将应用转移至手机内存或内置sdcard上，并重新运行真机调试
 
-### Q13: 使用genymotion模拟器真机运行，安装apk时报INSTALL_FAILED_CPU_ABI_INCOMPATIBLE
+#### Q13: 使用genymotion模拟器真机运行，安装apk时报INSTALL_FAILED_CPU_ABI_INCOMPATIBLE
 
 参见[genymotion模拟器报INSTALL_FAILED_CPU_ABI_INCOMPATIBLE的解决办法](http://blog.csdn.net/wjr2012/article/details/16359113)
 其他模拟器的适配在论坛中搜索即可。
 
-### Q14: 如何通过wifi真机运行，不插数据线？
+#### Q14: 如何通过wifi真机运行，不插数据线？
 
 参考[http://ask.dcloud.net.cn/article/565](http://ask.dcloud.net.cn/article/565)
 
