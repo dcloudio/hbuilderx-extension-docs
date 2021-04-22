@@ -97,13 +97,14 @@ localhost:MacOS hx$ ./cli pack --config /Users/hx/Documents/HBuilderProjects/测
 |--config	|配置文件绝对路径，配置文件配置，参考[配置文件](/cli/README?id=cli打包配置文件)	|
 |--project	|HBuilder X里导入的项目名或绝对路径		|
 |--platform	|配打包平台,默认值android,取值有"android","ios"如果要打多个逗号隔开		|
-|--iscustom	|是否使用自定义基座 默认值false true自定义基座 false自定义证书		|
+|--iscustom	|是否使用自定义基座 默认值false, true自定义基座 false自定义证书		|
 |--safemode	|打包方式是否为安心打包,默认值false,true安心打包,false传统打包		|
 |--isconfusion	|配置文件绝对路径，配置文件配置，参考configure.json		|
-|--splashads	|开屏广告,true打开 false关闭		|
-|--rpads	|悬浮红包广告,true打开 false关闭		|
-|--pushads	|push广告,true打开 false关闭		|
-|--exchange	|加入换量联盟,true加入 false不加入		|
+|--isconfusion  | 是否对配置的js/nvue文件进行原生混淆，true打开 false关闭|
+|--splashads	|开屏广告,默认值false, true打开 false关闭		|
+|--rpads	|悬浮红包广告,默认值false, true打开 false关闭		|
+|--pushads	|push广告,默认值false, true打开 false关闭		|
+|--exchange	|加入换量联盟,默认值false, true加入 false不加入		|
 |--android.packagename	|安卓包名，打安卓包填写		|
 |--android.androidpacktype	|安卓打包类型 默认值0,0 使用自有证书 1 使用公共证书 2 使用DCloud老版证书	|
 |--android.certalias	|安卓打包证书别名,自有证书打包填写的参数		|
@@ -127,4 +128,7 @@ localhost:MacOS hx$ ./cli pack --config /Users/hx/Documents/HBuilderProjects/测
 
 # android打包： 项目名称（apps）、传统打包、包名（io.test)、打包证书（自有证书、别名：testalias、密码123456）
 cli pack --project apps --platform android --safemode false --android.packagename io.test --android.androidpacktype 0 --android.certalias testalias --android.certfile /Users/hx/Desktop/cert/jdk13/test.key --android.certpassword 123456
+
+# ios打包
+cli pack --project <projectname> --platform iOS --safemode false --iscustom true --ios.bundle <bundle> --ios.supporteddevice iPhone,iPad --ios.isprisonbreak false --ios.profile <profile> --ios.certfile <p12 file> --ios.certpassword <passwd>
 ```
