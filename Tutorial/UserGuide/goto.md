@@ -26,7 +26,10 @@ HBuilderX拥有强大的跳转功能，如下:
 
 > 仅支持HBuilderX 2.8.10+
 
+
 <img src="/static/snapshots/tutorial/goto_lc.jpg" style="zoom: 50%;border:1px solid #eee;border-radius: 25px;" />
+
+注意：HBuilderX 3.1.13+版本，支持输入`0`跳转到首行、输入`$`跳转到最后一行。
 
 同时支持通过命令行打开指定文件，并跳转到指定的行和列。
 
