@@ -36,6 +36,7 @@
 * App开发
     * [真机运行常见问题](/Tutorial/App/PhoneDebugging.md)
     * [Android自定义渠道包](/Tutorial/App/AndroidChannel.md)
+    * [安心打包使用指南](/Tutorial/App/SafePack.md)
     * [iOS安心打包证书安装](/Tutorial/App/iosSafePack.md)
 * 版本控制
     * [Git 介绍](/Tutorial/SourceControl/Git/README.md)
