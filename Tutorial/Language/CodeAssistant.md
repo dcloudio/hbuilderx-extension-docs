@@ -6,9 +6,17 @@ hx的代码助手，可以按`alt+数字`选择直接选择某个项目，类似
 
 ## 代码助手匹配项高亮 
 
-> HBuilderX 3.1.12+版本，增加代码助手匹配项高亮
+> 仅适用于HBuilderX 3.1.13+版本
 
 <img src="/static/snapshots/tutorial/code_highlight.jpg" style="zoom: 50%;" />
+
+## 代码助手窗口切换选择模式
+
+> 仅适用于HBuilderX 3.1.13+版本
+
+默认需要`Alt+数字`选择
+
+<img src="/static/snapshots/tutorial/codehelper_selected.jpg" style="zoom: 50%;" />
 
 ## 代码助手配置
 
