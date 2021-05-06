@@ -25,6 +25,7 @@
     <img src="https://bjetxgzv.cdn.bspapp.com/VKCEYUGU-uni-app-doc/759713d0-4f2d-11eb-a16f-5b3e54966275.png" width="20" height="20" />
     <div class="contact-smg">
       <div>官方QQ交流群</div>
+      <div>群14：750929504 &nbsp;<a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=b-4dxcNc29PQ09NJXf-RKZienjxJqTKg&jump_from=webap">点此加入</a></div>
       <div>群13：1029243934 &nbsp;<a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=07HobNxjaa6slE4ryCEZ7q6rupF2KgM3&jump_from=webapi">点此加入</a></div>
       <div>群12：1051711389（1000人已满）</div>
       <div>群11：1051710376（2000人已满）</div>
