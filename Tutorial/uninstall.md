@@ -2,20 +2,9 @@
 
 ## Windows卸载HBuilderX
 
-1. 删除程序目录。windows, HBuilderX安装包是zip包，直接将解压的文件夹删除即可。
-2. 如桌面有HBuilderX快捷方式，直接删除桌面快捷方式即可
-3. 删除数据目录。操作系统资源管理器地址栏，输入`%Appdata%`，回车，找到`HBuilder X`目录，直接删除目录。
-<img src="/static/snapshots/tutorial/windows_install/appdata.png" style="margin-top: 20px;border:1px solid #eee;border-radius: 5px;"/>
-
-4. 删除注册表。
-
-> 开始菜单输入`regedit.exe`，打开，按下`ctrl+f`，输入搜索内容，比如搜索`HBuilder`，删除搜索结果。
-
-|	名称|key	|
-|--	|--	|
-|文件右键菜单Open with HBuilder X	|HKEY_CURRENT_USER/SOFTWARE/Classes/*/shell/HBuilderX	|
-|文件夹右键菜单Open with HBuilder X	|HKEY_CURRENT_USER/SOFTWARE/Classes/Directory/shell/HBuilderX	|
-
+1. 删除数据目录和及注册表，进入HBuilderX安装目录，找到`reset.bat`，点击运行。此操作可以删除HBuilderX数据目录及注册表。
+2. 删除程序目录。windows, HBuilderX安装包是zip包，直接将解压的文件夹删除即可。
+3. 如桌面有HBuilderX快捷方式，直接删除桌面快捷方式即可
 
 ## MacOSX删除HBuilderX
 
