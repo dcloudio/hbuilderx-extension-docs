@@ -3,6 +3,7 @@
     * [Windows](/Tutorial/install/windows.md)
     * [MacOSX](/Tutorial/install/macosx.md)
     * [首次启动](/Tutorial/startup.md)
+    * [卸载HBuilderX](/Tutorial/uninstall.md)
 * 开始使用
     * [入门教程](/Tutorial/StartedTutorial.md)
     * [用户界面](/Tutorial/userinterface.md)
