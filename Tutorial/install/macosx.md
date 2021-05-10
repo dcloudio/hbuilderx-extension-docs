@@ -12,6 +12,12 @@ HBuilderX下载地址: [下载地址](https://www.dcloud.io/hbuilderx.html)
 
 > MacOSX，软件必须安装到`/Applications`目录，如未安装到此目录，可能会出现插件安装失败、项目创建失败等问题。
 
+如果启动遇到下列问题，请到【系统设置】中解决。
+
+<img src="/static/snapshots/tutorial/mac_download1.min.jpg" style="zoom: 40%; border: 1px solid #eee;border-radius: 10px;"/>
+
+<img src="/static/snapshots/tutorial/mac_download2.min.jpg" style="zoom: 40%; border: 1px solid #eee;border-radius: 10px;"/>
+
 ## 启动问题
 
 某些情况下，MacOSX HBuilderX无法启动，解决方法如下：
