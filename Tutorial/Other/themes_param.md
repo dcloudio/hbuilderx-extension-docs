@@ -2,6 +2,8 @@
 
 颜色配置命名规则与vscode相同，方便从vscode提取外观主题。
 
+推荐使用主题配置插件: [自定义主题插件](https://ext.dcloud.net.cn/plugin?id=2684)
+
 ### 文本编辑区
 
 |名称				|描述			|

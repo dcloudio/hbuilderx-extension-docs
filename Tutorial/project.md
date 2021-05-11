@@ -16,7 +16,7 @@ svn、git导入项目，需要先安装svn、git插件。
 
 ## 创建项目
 
-HBuilderX支持多种项目类型，主要有：web项目、5+App项目、uni-app项目、微信小程序、快应用、wap2app等。[项目类型详细介绍](/Tutorial/ProjectType)    
+HBuilderX支持多种项目类型，主要有：web项目、5+App项目、uni-app项目、微信小程序、快应用、wap2app等。[项目类型详细介绍](/Tutorial/Other/ProjectType)    
 
 - 欢迎页面，点击`新建项目`
 - 【工具栏】第一个图标
