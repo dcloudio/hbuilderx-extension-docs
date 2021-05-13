@@ -1,13 +1,56 @@
+HBuilderX对md提供了强大支持，是有史以来最强大、最简洁、最高效的markdown书写工具。
+
 下载HBuilderX，点菜单帮助-markdown语法说明，会打开一个md文件，里面详细演示了HBuilderX对markdown的强化。
 **推荐在那里实际体验**
 
-总体来说，编写md文件，HBuilderX最快最高效。
+## 强大的Emmet支持、及快捷键支持
 
-以下补充一个笔记技巧：
+- 标题:  敲`h2+Tab`即可生成二级标题
+- 图片: `img`后敲`Tab`
+- 链接: `a`后敲`Tab`
+- 表格: `table3*3`后敲`Tab`，表示生成3行3列的表格，行首生效
+- 分割线: `hr`后敲`Tab`
+- 代码块: `code`后敲`Tab`，行首生效
+- `day`后敲`Tab`，当前日期。注意day需在行首或前面有空格
+- `time`后敲`Tab`，当前时间。注意time需在行首或前面有空格
+- 文字加粗: `b`后敲`Tab`
+- 文字倾斜: `i`后敲`Tab`
+- 注释：快捷键`Ctrl+/`快速插入注释
+
+## 强大的智能粘贴
+
+- 图片: 支持智能粘贴，粘贴剪切板里的图形时会自动保存为本md文档的附件
+- 链接: 支持智能粘贴，粘贴URL会自动变成超链接格式，粘贴本地文件进来也会自动创建引用链接
+- 表格: 支持从excel、wps、word、number的表格中复制粘贴表格进来
+
+## 强大的智能双击
+
+- 标题: 双击`#号`可选中整个标题段落
+- 有序列表: `双击`前面的数字，可重新对数字排序，修正序号错误
+- 代码块: `双击`语法区开头，即`!左侧`，选中包含定义符的整段文字
+- 注释: `双击`注释首尾的定义符，选中整段注释
+- 链接: `双击`语法区开头，即`[`左侧，选中包含定义符的整段文字
+- 图片: `双击`语法区开头，即`!`左侧，选中包含定义符的整段文字
+
+## 强大的整理功能
+
+- 表格：支持`Ctrl+K`可以自动整理表格格式
+
+## markdown一键分享
+
+使用markdown也有一个重要的问题，那就是图片的存储，markdown文件要用到图片时必须是一个链接，在不使用图床的情况下，编辑上传图片太麻烦。
+
+HBuilderX 2.8.8,  推出了 MarkDown一键分享功能。使用uniCloud作为图床 什么是[uniCloud](https://www.oschina.net/action/GoToLink?url=https%3A%2F%2Funiapp.dcloud.io%2FuniCloud%2FREADME)?，可靠、安全、简单易用、免费。
+
+markdown一键分享，顾名思义是在HBuilderX中写好的markdown文档，可以简单通过编辑器右键【一键分享】菜单或者快捷键上传到云端，并生成分享链接，并且完全免费！
+
+文档引用到本地图片会自动解析一并上传到云端。
+
+[markdown一键分享](/Tutorial/extension/markdown_share)
 
 ## 云同步笔记的技巧
 
-### 云同步工具
+#### 云同步工具
 
 首先推荐一个云同步工具，微软的onedrive。[https://skydrive.live.com/](https://skydrive.live.com/)
 
@@ -24,7 +67,7 @@ win10平台自带onedrive客户端，其他平台可在上述网址下载安装�
 onedrive手机端不支持直接查看markdown，可另行安装手机App，iOS上推荐使用mweb，安卓上推荐使用锤子便签。
 
 
-### svn、git同步
+#### svn、git同步
 
 本机装好node后，利用watch监听文件变化，发现文件修改可自动提交到svn或git。
 
