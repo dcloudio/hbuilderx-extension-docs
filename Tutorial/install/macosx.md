@@ -1,6 +1,6 @@
 # MacOSX安装HBuilderX
 
-### 下载
+## 下载
 
 HBuilderX下载地址: [下载地址](https://www.dcloud.io/hbuilderx.html)
 
@@ -23,9 +23,20 @@ HBuilderX下载地址: [下载地址](https://www.dcloud.io/hbuilderx.html)
 某些情况下，MacOSX HBuilderX无法启动，解决方法如下：
 
 - 重启电脑
-- 配置文件损坏，导致HBuilderX无法启动，重置配置文件即可。
+- 配置文件目录下的.lock文件问题 [解决方案](/Tutorial/install/macosx?id=删除lock文件)
+- 配置文件损坏，导致HBuilderX无法启动，重置配置文件即可。[解决方案](/Tutorial/install/macosx?id=重置配置文件)
 
-## 重置配置文件
+### 删除.lock文件
+
+打开操作系统终端，输入如下命令： 
+
+```
+rm -f $HOME/Library/Application\ Support/HBuilder\ X/.lock
+```
+
+如删除.lock文件还无法解决启动问题，请尝试删除配置文件目录。
+
+### 重置配置文件
 
 > 如HBuilderX内，有重要文件，删除前，先备份
 
