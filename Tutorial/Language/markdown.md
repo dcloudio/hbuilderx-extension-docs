@@ -36,11 +36,13 @@ HBuilderX对md提供了强大支持，是有史以来最强大、最简洁、最
 
 - 表格：支持`Ctrl+K`可以自动整理表格格式
 
+<img src="/static/snapshots/tutorial/markdown_table_format.gif" style="border: 1px solid #eee;"/>
+
 ## markdown一键分享
 
 使用markdown也有一个重要的问题，那就是图片的存储，markdown文件要用到图片时必须是一个链接，在不使用图床的情况下，编辑上传图片太麻烦。
 
-HBuilderX 2.8.8,  推出了 MarkDown一键分享功能。使用uniCloud作为图床 什么是[uniCloud](https://www.oschina.net/action/GoToLink?url=https%3A%2F%2Funiapp.dcloud.io%2FuniCloud%2FREADME)?，可靠、安全、简单易用、免费。
+HBuilderX 2.8.8,  推出了 MarkDown一键分享功能。使用uniCloud作为图床 什么是[uniCloud](https://uniapp.dcloud.io/uniCloud/README)，可靠、安全、简单易用、免费。
 
 markdown一键分享，顾名思义是在HBuilderX中写好的markdown文档，可以简单通过编辑器右键【一键分享】菜单或者快捷键上传到云端，并生成分享链接，并且完全免费！
 
