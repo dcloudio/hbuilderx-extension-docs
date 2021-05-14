@@ -25,7 +25,7 @@ HBuilderX的窗体所有颜色都在配置文件中，并且可以复写以实�
 
 <img src="/static/snapshots/tutorial/theme_set.png" style="zoom: 70%;" />
 
-[自定义主题颜色相关参数](Tutorial/themes_param)
+[自定义主题颜色相关参数](Tutorial/Other/themes_param)
 
 ## 文件图标
 

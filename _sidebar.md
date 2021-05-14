@@ -65,6 +65,7 @@
 * 常见问题
     * [Windows 启动问题排查指南](/Tutorial/Questions/WindowsStart.md)
     * [插件安装失败解决方案](/Tutorial/faq/pluginInstall.md)
+    * [内置浏览器开发者控制台空白问题](/Tutorial/faq/devtools.md)
 <div class="contact-box">
   <a href="https://www.dcloud.io/hbuilderx.html" target="_blank" class="contact-item">
     <img src="/static/favicon/favicon.png" width="20" height="21">

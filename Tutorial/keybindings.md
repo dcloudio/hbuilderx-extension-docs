@@ -18,4 +18,4 @@ HBuilderX，所有键盘快捷键都可以通过`keybindings.json`文件进行�
 
 ## HBuilderX Command列表
 
-[HBuilderX Command命令列表](Tutorial/command)
+[HBuilderX Command命令列表](Tutorial/Other/command)

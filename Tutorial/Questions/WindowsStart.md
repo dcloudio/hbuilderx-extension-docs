@@ -164,7 +164,6 @@ windows, 部分小伙伴，解压zip后，为了创建快捷方式，把`HBuilde
 如果您更新过`显卡驱动`， 更新驱动之后，启动不了。那就是显卡驱动的问题。请还原显卡驱动，或升级驱动到最新版、或最新稳定版本。
 
 
-
 ## 4. 配置文件损坏
 --------------
 
@@ -174,10 +173,20 @@ windows, 部分小伙伴，解压zip后，为了创建快捷方式，把`HBuilde
 
 有可能是配置文件损坏了，导致无法启动。
 
-1. 先点击一下安装目录下的`reset.bat`文件
-2. 还不行，再试下如下方案， 如下图所示，在地址栏输入`%appdata%`回车； 在此目录下，找到HBuilder X目录，注意：将此目录随便重命名一下，也可以删除掉
+### 4.1 方案1：删除.lock文件
 
-<img src="/static/snapshots/tutorial/windows_install/appdata.png" />
+在操作系统资源管理器地址栏输入`%appdata%`回车； 在此目录下，找到HBuilder X目录，打开。
+
+进入后，如发现存在`.lock`文件，删除此文件，然后尝试启动HBuilderX。
+
+<img src="/static/snapshots/tutorial/lock.png" />
+
+### 4.2 方案2：重置配置文件目录
+
+1. 先点击一下安装目录下的`reset.bat`文件
+2. 还不行，再尝试如下方案， 如下图所示，在地址栏输入`%appdata%`回车； 在此目录下，找到HBuilder X目录，注意：将此目录随便重命名一下，也可以删除掉
+
+<img src="/static/snapshots/tutorial/windows_install/appdata.png" style="border: 1px solid #eee;"/>
 
 
 ## 5. win:启动后，顶部工具栏显示不全
