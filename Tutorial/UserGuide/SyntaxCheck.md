@@ -18,9 +18,12 @@ HBuilderX，代码语法校验，需要安装相应插件。
 |语言			|插件名称			|插件地址																|插件文档											|
 |--				|--					|--																		|--													|
 |html			|validate-html		|[下载地址](https://ext.dcloud.net.cn/plugin?name=validate-html)		|[文档教程](/Tutorial/extension/validate-html)		|
-|css/less/scss	|validate-stylelint	| [下载地址](https://ext.dcloud.net.cn/plugin?name=validate-stylelint)	|[文档教程](/Tutorial/extension/validate-stylelint)	|
+|css/less/sass/scss	|validate-stylelint	| [下载地址](https://ext.dcloud.net.cn/plugin?name=validate-stylelint)	|[文档教程](/Tutorial/extension/validate-stylelint)	|
 |js				|eslint-js			|[下载地址](https://ext.dcloud.net.cn/plugin?name=eslint-js)			|[文档教程](/Tutorial/extension/eslint-js)			|
 |vue			|eslint-vue			|[下载地址](https://ext.dcloud.net.cn/plugin?name=eslint-vue)			|[文档教程](/Tutorial/extension/eslint-vue)			|
+
+**注意：**
+- scss文件，如果代码使用`@-rules`指令，stylelint校验提示`at-rule-no-unknown`，请配置`@`相关的规则。[stylelint@规则参考](http://stylelint.cn/user-guide/rules/#at-rule)
 
 ## 使用方法
 
