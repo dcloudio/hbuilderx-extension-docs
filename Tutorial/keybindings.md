@@ -16,6 +16,18 @@ HBuilderX，所有键盘快捷键都可以通过`keybindings.json`文件进行�
 
 <img src="/static/snapshots/tutorial/keyboard_set.png"  style="zoom: 80%;"/>
 
+## 鼠标滚轮
+
+> HBuilderX 3.1.17+版本支持
+
+|												|向上					|向下					|
+|--											|--						|--						|
+|Ctrl (MacOSX：command)	|放大					|缩小					|
+|Alt										|向上滚动一屏	|向下滚动一屏	|
+|Shift									|向左滚动3列	|向右滚动3列	|
+|Alt+Shift							|向左滚动一屏	|向右滚动一屏	|
+
+
 ## HBuilderX Command列表
 
 [HBuilderX Command命令列表](Tutorial/Other/command)
