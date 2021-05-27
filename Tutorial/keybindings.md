@@ -22,11 +22,13 @@ HBuilderX，所有键盘快捷键都可以通过`keybindings.json`文件进行�
 
 |												|向上					|向下					|
 |--											|--						|--						|
-|Ctrl (MacOSX：command)	|放大					|缩小					|
+|Ctrl 	|放大					|缩小					|
 |Alt										|向上滚动一屏	|向下滚动一屏	|
 |Shift									|向左滚动3列	|向右滚动3列	|
 |Alt+Shift							|向左滚动一屏	|向右滚动一屏	|
+|Ctrl+Alt               |向左切换选项卡   |向右切换选项卡    |
 
+注意：MacoSX系统，ctrl对应的是command
 
 ## HBuilderX Command列表
 
