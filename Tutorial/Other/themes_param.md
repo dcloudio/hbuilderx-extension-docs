@@ -11,7 +11,33 @@
 |editor.foreground	|编辑区前景颜色	|
 |editor.background	|编辑区背景颜色	|
 
-注意：本主题自定义是外观方面，不同代码的着色自定义未开放。
+#### 编辑区代码默认颜色定义
+> 自定义方式，将默认代码区颜色配置拷贝到`settings.json`源码视图中自定义`"editor.tokenColorCustomizations"`节点下对应主题的`"rules"`节点下。
+
+> 默认代码区颜色定义参考：[代码区颜色定义](/Tutorial/Other/themes_code.md)
+
+举例：
+```json
+//settings.json
+"editor.tokenColorCustomizations": {
+    "[Default]": {//绿柔
+        "rules":[
+            {
+                "scope": ["meta.embedded", "source.groovy.embedded"],
+                "settings": {
+                    "foreground": "#657B83"
+                }
+            },
+            {
+                "scope": "meta.property-name",
+                "settings": {
+                    "foreground": "#3c7a03"
+                }
+            }
+        ]
+    }
+}
+```
 
 ### mac标题栏（只在mac os上生效）
 
