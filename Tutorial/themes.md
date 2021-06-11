@@ -44,18 +44,11 @@
 在文件`setting.json`的源码视图中，通过定义`"editor.tokenColorCustomizations"`字段来自定义您喜欢的主题颜色。[可自定义代码颜色的相关参数](/Tutorial/Other/themes_param#文本编辑区)
 
 ```json
-"editor.tokenColorCustomizations": {//仅对新着色生效
+"editor.tokenColorCustomizations": {
     "[Default]": {//绿柔
         "rules":[
             {
                 "scope": "comment",
-                "settings": {
-                    "fontStyle": "italic",
-                    "foreground": "#248C85"
-                }
-            },
-            {
-                "scope": "punctuation.definition.comment",
                 "settings": {
                     "fontStyle": "italic",
                     "foreground": "#248C85"
@@ -76,10 +69,21 @@
 }
 ```
 
+**目前可以采用以下步骤简便的自定义代码颜色：**
+
+1. 在`settings.json`源码视图中加入`"editor.tokenColorCustomizations"`设置（**必须执行该步骤才能看到后面步骤的菜单项**）
+2. 将光标放到要改颜色的代码位置，选择菜单`工具`-`主题`-`Inspect Tokens And Colors`查看当前代码着色信息
+3. 将上一步控制台输出的`Token Color Rule`内容拷贝到`settings.json`的`"editor.tokenColorCustomizations"`对应位置（**注意：要放到对应的主题下**）
+4. 保存`settings.json`文件后即可看到修改后的效果
+
+**完整的操作动画如下图**：
+
+<img src="/static/snapshots/tutorial/custom_token_color.gif" style="border: 1px solid #eee;border-radius: 5px; "  />
+
 注意:
 
 * 目前只能在现有的3个主题Default柔和、Monokai酷黑、Atom One Dark雅蓝的基础之上复写，不能完全更新新主题。
-* 自定义编辑器代码颜色，目前只对`JavaScript(ES6+)`、`HTML(ES6+)`、`Vue`、`CSS`、`Less`、`SCSS`、`Stylus`、`Typescript`、`Markdown`语言生效。
+* 自定义编辑器代码颜色，目前只对`JavaScript(ES6+)`、`HTML(ES6+)`、`Vue`、`CSS`、`Less`、`SCSS`、`Stylus`、`Typescript`、`Markdown`、`JSON`语言生效。
 
 
 ## 文件图标
