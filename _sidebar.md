@@ -57,9 +57,9 @@
 * 参考/其它
     * [自定义字体](/Tutorial/settings/font.md)
     * [px自动转upx](/Tutorial/settings/px-upx)
-    * [项目类型说明](/Tutorial/ProjectType.md)
-    * [HBuilderX Command列表](Tutorial/command)
-    * [主题颜色配置规则](/Tutorial/themes_param.md)
+    * [项目类型说明](/Tutorial/other/ProjectType.md)
+    * [HBuilderX Command列表](/Tutorial/other/command)
+    * [主题颜色配置规则](/Tutorial/other/themes_param.md)
     * [HBuilderX如何保护程序员的身心健康](/Tutorial/Other/health.md)
     * [HBuilderX被误报木马病毒说明](/Tutorial/Security.md)
 * 常见问题
