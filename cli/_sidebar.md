@@ -22,7 +22,7 @@
     </div>
   </a>
   <div class="contact-item">
-    <img src="https://bjetxgzv.cdn.bspapp.com/VKCEYUGU-uni-app-doc/759713d0-4f2d-11eb-a16f-5b3e54966275.png" width="20" height="20" />
+    <img src="/static/icon/qq.png" width="20" height="20" />
     <div class="contact-smg">
       <div>官方QQ交流群</div>
       <div>群14：750929504 &nbsp;<a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=b-4dxcNc29PQ09NJXf-RKZienjxJqTKg&jump_from=webap">点此加入</a></div>
@@ -40,10 +40,10 @@
     </div>
   </div>
   <div class="contact-item">
-    <img src="//img-cdn-qiniu.dcloud.net.cn/uniapp/doc/weixin@2x.png" width="20" height="20" />
+    <img src="/static/icon/weixin@2x.png" width="20" height="20" />
     <div class="contact-smg">
       <div>关注微信公众号</div>
-      <img src="https://img-cdn-qiniu.dcloud.net.cn/uniapp/doc/weixin.jpg" width="90" height="90" />
+      <img src="/static/icon/weixin.jpeg" width="90" height="90" />
     </div>
   </div>
 </div>

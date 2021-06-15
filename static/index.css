@@ -720,7 +720,7 @@ a.contact-item {
   height: 30px;
   background-repeat: no-repeat;
   background-size: 91px 30px;
-  background-image: url(//img-cdn-qiniu.dcloud.net.cn/uniapp/doc/logo2@2x.png);
+  background-image: url(/static/icon/logo2@2x.png);
 }
 
 .uniapp-logo {
