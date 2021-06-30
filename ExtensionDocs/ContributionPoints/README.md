@@ -57,6 +57,23 @@ commands扩展点用于声明一个`命令`，`命令`可以通过`menus`扩展�
     }
 ```
 
+### keybindings
+
+keybindings扩展点用于声明快捷键绑定.
+
+#### 示例
+
+```json
+"keybindings":[
+    {
+        "command":"extension.firstExtension",    // command为您开发的插件中的command
+        "key":"Ctrl+Shift+C",                    // key为要绑定的快捷键
+        "when":"",                               // when表达式用来动态的判断某个条件是否满足，强烈建议设置此项。
+        "macosx":"command+Shift+C"               // MacOSX系统的快捷键；如不设置此项，MacOSX系统，会将key中的ctrl转为command
+    }
+]
+```
+
 ### snippets
 snippets扩展点可以扩展指定编程语言的代码块，可扩展的编程语言Id列表见[这里](/ExtensionDocs/Api/README.md#languageId)。扩展示例代码如下：
 
@@ -112,11 +129,13 @@ snippets扩展点可以扩展指定编程语言的代码块，可扩展的编程
 
 ### viewsContainers
 在窗体左侧区域扩展一个和项目管理器同级的tab项，完整的扩展视图流程参考[如何注册一个新的视图？](/views.md)
+
 #### 属性列表
 |属性名称	|属性类型												|是否必须	|描述															|
 |--			|--														|--			|--																|
 |activitybar|Array&lt;[ViewsContainerDef](#ViewsContainerDef)&gt;	|不是			|定义扩展的视图容器列表，可在菜单`视图`-`显示扩展视图`中查看打开|
 |rightside|Array&lt;[ViewsContainerDef](#ViewsContainerDef)&gt;	|不是|定义扩展的视图容器列表，可在菜单`视图`-`显示扩展视图`中查看打开|
+
 #### 示例
 ```json
    "contributes": {
@@ -388,24 +407,26 @@ when表达式用来动态的判断某个条件是否满足(即表达式的运算
 
 目前HBuilderX内置变量列表如下：
 
-|变量名								|类型	|描述																										|
-|--									|--		|--																											|
-|workspaceFolderRelativePath		|String	|相对于项目的相对路径，举例： pages/user/user.vue																|
-|workspaceRelativePath				|String	|相对于项目的相对路径（加上项目名称），举例： HelloUniapp/pages/user/user.vue									|
-|workspaceFolder.type				|String	|项目类型，可取值：UniApp_Vue,Web,App,Wap2App,Extension,Unkown								|
-|explorerResourceCount				|Number	|项目管理器选中的资源数量																					|
-|explorerResourceIsFolder			|Boolean|项目管理器选中的资源是否全是目录																			|
-|explorerResourceIsWorkspaceFolder	|Boolean|项目管理器选中的资源是否全是项目根目录																		|
-|isSVN								|Boolean|是否是SVN仓库下的文件																						|
-|isGit								|Boolean|是否是Git仓库下的文件																						|
-|activeEditor.file.exists			|Boolean|当前激活的编辑器打开的文件是否存在																			|
-|activeEditor.file.isProjectFile	|Boolean|当前激活的编辑器打开的文件是否是左侧项目管理器下的文件														|
-|activeEditor.readonly				|Boolean|当前激活的编辑器是否是只读																					|
-|editorTextFocus					|Boolean|当前激活的编辑器是否有焦点																					|
-|langId								|String	|当前激活的编辑器打开的文档的编程语言id，完整语言Id列表参见[这里](/ExtensionDocs/Api/README.md#languageId)	|
-|viewItem							|String	|通过`views`扩展的视图中当前选择的item的contextValue														|
-|config.*							|Any	|获取某个配置项的值,例子： `config.editor.fontSize`															|
-
+|变量名														|类型		|描述																																																			|
+|--																|--			|--																																																				|
+|workspaceFolderRelativePath			|String	|相对于项目的相对路径，举例： pages/user/user.vue																													|
+|workspaceRelativePath						|String	|相对于项目的相对路径（加上项目名称），举例： HelloUniapp/pages/user/user.vue															|
+|workspaceFolder.type							|String	|项目类型，可取值：UniApp_Vue,Web,App,Wap2App,Extension,Unkown																						|
+|explorerResourceCount						|Number	|项目管理器选中的资源数量																																									|
+|explorerResourceIsFolder					|Boolean|项目管理器选中的资源是否全是目录																																					|
+|explorerResourceIsWorkspaceFolder|Boolean|项目管理器选中的资源是否全是项目根目录																																		|
+|isSVN														|Boolean|是否是SVN仓库下的文件																																										|
+|isGit														|Boolean|是否是Git仓库下的文件																																										|
+|activeEditor.file.exists					|Boolean|当前激活的编辑器打开的文件是否存在																																				|
+|activeEditor.file.isProjectFile	|Boolean|当前激活的编辑器打开的文件是否是左侧项目管理器下的文件																										|
+|activeEditor.readonly						|Boolean|当前激活的编辑器是否是只读																																								|
+|editorTextFocus									|Boolean|当前激活的编辑器是否有焦点																																								|
+|langId														|String	|当前激活的编辑器打开的文档的编程语言id，完整语言Id列表参见[这里](/ExtensionDocs/Api/README.md#languageId)|
+|viewItem													|String	|通过`views`扩展的视图中当前选择的item的contextValue																											|
+|config.*													|Any		|获取某个配置项的值,例子： `config.editor.fontSize`																												|
+|isMac														|Boolean|当前电脑操作系统是否是MacOSX（仅对HBuilderX3.2.22+版本生效）																							|
+|isWindows												|Boolean|当前电脑操作系统是否是Windows（仅对HBuilderX3.2.22+版本生效）																						|
+|editorHasSelection								|Boolean|当前激活的编辑器是否有选中的内容 （仅对HBuilderX3.2.22+版本生效）																						|
 
 ### customEditors
 插件可以通过该扩展点扩展多个不同类型的自定义编辑器，自定义编辑器可以设置文件匹配模式，用户通过项目管理器打开的文件匹配到某一类型时，在编辑器区域创建webview视图，关联打开的文件。完整的扩展自定义编辑器流程参考[如何扩展一个自定义编辑器？](/ExtensionTutorial/customeditor)
