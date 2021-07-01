@@ -58,9 +58,9 @@
 * 参考/其它
     * [自定义字体](/Tutorial/settings/font.md)
     * [px自动转upx](/Tutorial/settings/px-upx)
-    * [项目类型说明](/Tutorial/other/ProjectType.md)
-    * [HBuilderX Command列表](/Tutorial/other/command)
-    * [主题颜色配置规则](/Tutorial/other/themes_param.md)
+    * [项目类型说明](/Tutorial/Other/ProjectType.md)
+    * [HBuilderX Command列表](/Tutorial/Other/command)
+    * [主题颜色配置规则](/Tutorial/Other/themes_param.md)
     * [HBuilderX的快捷键理念](/Tutorial/Other/keybindings_idea.md)
     * [HBuilderX如何保护程序员的身心健康](/Tutorial/Other/health.md)
     * [HBuilderX被误报木马病毒说明](/Tutorial/Security.md)
@@ -68,6 +68,7 @@
     * [Windows 启动问题排查指南](/Tutorial/Questions/WindowsStart.md)
     * [插件安装失败解决方案](/Tutorial/faq/pluginInstall.md)
     * [内置浏览器开发者控制台空白问题](/Tutorial/faq/devtools.md)
+* [历史版本](/Tutorial/HistoryVersion.md)
 <div class="contact-box">
   <a href="https://www.dcloud.io/hbuilderx.html" target="_blank" class="contact-item">
     <img src="/static/favicon/favicon.png" width="20" height="21">
