@@ -16,6 +16,8 @@ HBuilderX，所有键盘快捷键都可以通过`keybindings.json`文件进行�
 
 <img src="/static/snapshots/tutorial/keyboard_set.png"  style="zoom: 80%;"/>
 
+知识点：[HBuilderX的快捷键理念](/Tutorial/Other/keybindings_idea)
+
 ## 鼠标滚轮
 
 > HBuilderX 3.1.17+版本支持
