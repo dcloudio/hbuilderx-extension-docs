@@ -22,7 +22,7 @@
 
 - 插件代码继承CustomEditorProvider等
 
-    HBuilderX使用WebViewPanel来作为自定义编辑器的视图，[WebViewPanel](/ExtensionDocs/Api/README.md#WebViewPanel)的用法也可以参考[视图扩展](/views.md#WebView)中部分示例。
+    HBuilderX使用WebViewPanel来作为自定义编辑器的视图，[WebViewPanel](/ExtensionDocs/Api/README.md#WebViewPanel)的用法也可以参考[视图扩展](/ExtensionTutorial/views.md#WebView)中部分示例。
     
 ```javascript
 var hx = require("hbuilderx");
