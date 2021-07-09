@@ -7,10 +7,11 @@
     * [插件说明](/ExtensionTutorial/extension.md)
     * [如何注册`命令`](/ExtensionTutorial/commands.md)
     * [如何注册`菜单`](/ExtensionTutorial/menus.md)
-    * [如何注册一个`视图`](/ExtensionTutorial/views.md)
     * [如何编辑文档](/ExtensionTutorial/texteditor.md)
     * [如何写一个`校验器`](/ExtensionTutorial/validations.md)
+    * [如何注册一个`视图`](/ExtensionTutorial/views.md)
     * [如何扩展一个`自定义编辑器`](/ExtensionTutorial/customeditor.md)
+    * [如何适配主题](/ExtensionTutorial/fitTheme.md)
 * 插件发布
     * [如何发布插件](/ExtensionTutorial/HowToPublish.md)
 <div class="contact-box">
