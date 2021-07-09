@@ -41,8 +41,15 @@
 
 > 自定义编辑器代码颜色功能，仅适用于HBuilderX 3.1.19+版本；
 
-在文件`setting.json`的源码视图中，通过定义`"editor.tokenColorCustomizations"`字段来自定义您喜欢的主题颜色。[可自定义代码颜色的相关参数](/Tutorial/Other/themes_param#文本编辑区)
+##### 支持自定义哪些代码区域？
+自定义代码颜色支持`注释`、`字符串`、`关键字`、`变量`、`标签`等所有代码分区(token)颜色。
 
+目前支持的语言包括：`JavaScript(ES6+)`、`HTML(ES6+)`、`Vue`、`CSS`、`Less`、`SCSS`、`Stylus`、`Typescript`、`Markdown`、`JSON`。
+
+##### 如何自定义？
+在文件`setting.json`的源码视图中，通过定义`"editor.tokenColorCustomizations"`字段来自定义您喜欢的主题颜色。将[可自定义代码颜色的相关参数](/Tutorial/Other/themes_code.md)中配置的规则复制到对应主题（`[Default]`、`[Monokai]`、`[Atom One Dark]`）的`rules`节点下，更改对应颜色即可。
+
+示例如下：
 ```json
 "editor.tokenColorCustomizations": {
     "[Default]": {//绿柔
@@ -69,7 +76,12 @@
 }
 ```
 
-**目前可以采用以下步骤简便的自定义代码颜色：**
+完整的代码颜色列表参考：[可自定义代码颜色的相关参数](/Tutorial/Other/themes_code.md)
+
+> 注意：以上步骤相对比较复杂，适合对代码分区规则比较熟悉的同学，**我们建议您采用下面提供的辅助功能进行自定义**。
+
+
+**为了简化自定义步骤，我们提供了以下步骤可以简便的自定义代码颜色：**
 
 1. 在`settings.json`源码视图中加入`"editor.tokenColorCustomizations"`设置（**必须执行该步骤才能看到后面步骤的菜单项**）
 2. 将光标放到要改颜色的代码位置，选择菜单`工具`-`主题`-`Inspect Tokens And Colors`查看当前代码着色信息
@@ -83,8 +95,6 @@
 注意:
 
 * 目前只能在现有的3个主题Default柔和、Monokai酷黑、Atom One Dark雅蓝的基础之上复写，不能完全更新新主题。
-* 自定义编辑器代码颜色，目前只对`JavaScript(ES6+)`、`HTML(ES6+)`、`Vue`、`CSS`、`Less`、`SCSS`、`Stylus`、`Typescript`、`Markdown`、`JSON`语言生效。
-
 
 ## 文件图标
 
