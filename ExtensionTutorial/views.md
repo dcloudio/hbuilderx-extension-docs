@@ -1,17 +1,117 @@
-#### 如何扩展一个新的视图？
+## 了解视图
 
+HBuilderX支持创建完全自定义的、可以间接和nodejs通信的特殊网页，即视图。
 
- 
-[扩展一个新的 TreeView](#TreeView)
+使用视图可以构建复杂的、支持本地文件操作的用户界面。
+
+设计糟糕的视图也很容易让人感觉不舒适，不能让人家一看就觉得你这是一张网页，`好看`、跟`HBuilderX风格统一`的UI也很重要。
+
 
 [扩展一个新的 WebView](#WebView)
 
-##### TreeView
+[扩展一个新的 TreeView](#TreeView)
+
+## WebView
+
+`从HBuilderX 2.8.1及以上版本开始支持`
+
+扩展一个新的 WebView `视图`（view）通过以下2个步骤：
+
+- 通过 <a href="/ExtensionDocs/ContributionPoints/README?id=viewscontainers" target="_blank">viewContainers</a> 和 <a href="/ExtensionDocs/ContributionPoints/README?id=views" target="_blank">views</a>配置扩展点声明要扩展的`视图`
+
+
+``` json
+//package.json；
+//...NOTE：package.json不支持注释，以下代码使用时需要将注释删掉
+     "contributes": {
+         "viewsContainers": {            
+             "rightside": [{
+                 "id": "WebViewcontainerId",
+                 "title": "webview 展示"
+             }]
+         },
+         "views": {            
+             "WebViewcontainerId": [{
+                 "id": "extension.WebView",
+                 "title": "webview - 展示"
+             }]
+         },
+         ...
+    }
+```
+
+- 在插件激活时通过API：<a href="/ExtensionDocs/Api/README?id=createwebview" target="_blank">window.createWebView</a>实现上面扩展的`视图`
+
+``` javascript
+const hx = require('hbuilderx');
+
+/**
+ * @description 显示webview
+ */
+function showWebView(webviewPanel) {
+    let webview = webviewPanel.webView;
+    
+    var background = '';
+    
+    let config = hx.workspace.getConfiguration();
+    let colorScheme = config.get('editor.colorScheme');
+    if (colorScheme == 'Monokai') {
+        background = 'rgb(39,40,34)'
+    } else if (colorScheme == 'Atom One Dark') {
+        background = 'rgb(40,44,53)'
+    } else {
+        background = 'rgb(255,250,232)'
+    };
+    
+    webview.html =
+        `
+        <body style="background-color:${background};border:1px solid ${background};">
+            <div style="max-width:200px;">
+                <img src="https://download1.dcloud.net.cn/uploads/images/hbuilderx/hx_desc@1x.png" style="position: absolute;bottom: 0;left: 0;right: 0;width: 100%;margin: auto;">
+            </div>
+            <script>
+                //    以下两种写法等同
+                hbuilderx.onDidReceiveMessage((msg) => {});
+                window.addEventListener("message", (msg) => {});
+                hbuiderx.postMessage({
+                    command: 'alert',
+                    text: 'HelloWorld'
+                });
+            </script>
+        </body>
+      `;
+     
+    // 插件发送消息(可以被JSON化的数据)到webview
+    webview.postMessage({
+        command: "test"
+    });
+    
+    // 插件接收webview发送的消息(可以被JSON化的数据)
+    webview.onDidReceiveMessage((msg) => {
+        if (msg.command == 'alert') {
+            hx.window.showInformationMessage(msg.text);
+        }
+    });
+};
+
+
+module.exports = {
+    showWebView
+}
+```
+
+> 扩展后的`视图`可通过菜单`视图`-`显示扩展视图`打开
+
+#### 效果图
+
+<img src="/static/snapshots/webview.png" style="zoom:50%" />
+
+## TreeView
 `从HBuilderX 2.7.12及以上版本开始支持`
 
 扩展一个新的 TreeView `视图`（view）通过以下2个步骤：
 
-- 通过 [viewContainers](/ExtensionDocs/ContributionPoints/README.md#viewContainers) 和 [views](/ExtensionDocs/ContributionPoints/README.md#views) 配置扩展点声明要扩展的`视图`
+- 通过 <a href="/ExtensionDocs/ContributionPoints/README?id=viewscontainers" target="_blank">viewContainers</a> 和 <a href="/ExtensionDocs/ContributionPoints/README?id=views" target="_blank">views</a>配置扩展点声明要扩展的`视图`
 
 
 ``` json
@@ -34,7 +134,7 @@
     }
 ```
 
-- 在插件激活时通过API：[window.createTreeView](/ExtensionDocs/Api/README.md#createTreeView)实现上面扩展的`视图`
+- 在插件激活时通过API：<a href="/ExtensionDocs/Api/README?id=createtreeview" target="_blank">window.createTreeView</a>实现上面扩展的`视图`
 
 ``` javascript
 // extension.js
@@ -118,92 +218,3 @@ module.exports = {
 
 <img src="/static/snapshots/view@2x.png" style="zoom:50%" />
 
-##### WebView
-`从HBuilderX 2.8.1及以上版本开始支持`
-
-扩展一个新的 WebView `视图`（view）通过以下2个步骤：
-
-- 通过 [viewContainers](/ExtensionDocs/ContributionPoints/README.md#viewContainers) 和 [views](/ExtensionDocs/ContributionPoints/README.md#views) 配置扩展点声明要扩展的`视图`
-
-
-``` json
-//package.json；
-//...NOTE：package.json不支持注释，以下代码使用时需要将注释删掉
-     "contributes": {
-         "viewsContainers": {            
-             "rightside": [{
-                 "id": "WebViewcontainerId",
-                 "title": "webview 展示"
-             }]
-         },
-         "views": {            
-             "WebViewcontainerId": [{
-                 "id": "extension.WebView",
-                 "title": "webview - 展示"
-             }]
-         },
-         ...
-    }
-```
-
-- 在插件激活时通过API：[window.createWebView](/ExtensionDocs/Api/README.md#createWebView)实现上面扩展的`视图`
-
-``` javascript
-const hx = require('hbuilderx');
-
-/**
- * @description 显示webview
- */
-function showWebView(webviewPanel) {
-    let webview = webviewPanel.webView;
-    
-    var background = '';
-    
-    let config = hx.workspace.getConfiguration();
-    let colorScheme = config.get('editor.colorScheme');
-    if (colorScheme == 'Monokai') {
-        background = 'rgb(39,40,34)'
-    } else if (colorScheme == 'Atom One Dark') {
-        background = 'rgb(40,44,53)'
-    } else {
-        background = 'rgb(255,250,232)'
-    };
-    
-    webview.html =
-        `
-        <body style="background-color:${background};border:1px solid ${background};">
-            <div style="max-width:200px;">
-                <img src="https://download1.dcloud.net.cn/uploads/images/hbuilderx/hx_desc@1x.png" style="position: absolute;bottom: 0;left: 0;right: 0;width: 100%;margin: auto;">
-            </div>
-            <script>
-                //    以下两种写法等同
-                hbuilderx.onDidReceiveMessage((msg) => {});
-                window.addEventListener("message", (msg) => {});
-                hbuiderx.postMessage({
-                    command: 'alert',
-                    text: 'HelloWorld'
-                });
-            </script>
-        </body>
-      `;
-    webview.postMessage({
-        command: "test"
-    });
-    webview.onDidReceiveMessage((msg) => {
-        if (msg.command == 'alert') {
-            hx.window.showInformationMessage(msg.text);
-        }
-    });
-};
-
-
-module.exports = {
-    showWebView
-}
-```
-
-> 扩展后的`视图`可通过菜单`视图`-`显示扩展视图`打开
-
-#### 效果图
-
-<img src="/static/snapshots/webview.png" style="zoom:50%" />
