@@ -11,7 +11,7 @@
 	`HX`对vue做了大量优化投入，开发体验远超其他开发工具
 	[详见](/Tutorial/Language/vue)
 4. 小程序支持
-	国外开发工具没有对中国的小程序开发优化，`HX`可新建`uni-app`或`小程序`、`快应用`等项目，为国人提供更高效工具
+	国外开发工具没有对中国的小程序开发优化，`HX`可新建`uni-app` `小程序`等项目，为国人提供更高效工具
 5. markdown利器
 	`HX`是唯一一个新建文件默认类型是markdown的编辑器，也是对md支持最强的编辑器
 	`HX`为md强化了众多功能，请**务必点击**【菜单-帮助-markdown语法示例】，快速掌握md及`HX`的强化技巧！
@@ -28,8 +28,12 @@
 
 
 #### 扩展性
-`HX`支持java插件、nodejs插件，并兼容了很多vscode的插件及代码块。
-
-还可以通过[外部命令](/Tutorial/UserGuide/externalCommands)，方便的调用各种命令行功能，并设置快捷键。
-
+`HX`支持java插件、nodejs插件，并兼容了很多vscode的插件及代码块。<br/>
+还可以通过[外部命令](/Tutorial/UserGuide/externalCommands)，方便的调用各种命令行功能，并设置快捷键。<br/>
 如果你习惯了其他工具(如vscode或sublime)的[快捷键](/Tutorial/keybindings)，在菜单工具-快捷键方案中可以切换。
+
+#### 插件市场
+
+HBuilderX插件市场拥有丰富的插件，对于提升工作效率有极大帮助。
+
+插件市场地址: [https://ext.dcloud.net.cn/](https://ext.dcloud.net.cn/?cat1=1&cat2=11&orderBy=FreeHot)
