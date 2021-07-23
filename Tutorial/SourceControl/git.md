@@ -36,8 +36,16 @@ HBuilderX 3.1.23+ 支持在项目管理上对Git项目进行一些快捷操作�
 
 <img src="/static/snapshots/gitextension_pull.png" style="border:1px solid #eee; border-radius: 5px;"/>
 
+```
+# git pull和git pull --rebase的区别
+git pull = git fetch + git merge
+git pull --rebase = git fetch + git rebase
+```
+
 ### 推送（push）
 
 点击“推送”菜单，默认提供了几个推送选项（目前不能自定义），当选择“force”选项是，会进行二次确认是否继续执行：
 
 <img src="/static/snapshots/gitextension_push.png" style="border:1px solid #eee; border-radius: 5px;"/>
+
+特别说明： `git push --force` 强制推送，会覆盖远端内容，请谨慎操作。
