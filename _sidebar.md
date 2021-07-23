@@ -43,6 +43,7 @@
     * [前端网页托管](/Tutorial/App/hosting.md)
 * 版本控制
     * [Git 介绍](/Tutorial/SourceControl/Git/README.md)
+    * [Git重大更新](/Tutorial/SourceControl/git.md)
     * [Git Windows手册](/Tutorial/SourceControl/Git/Windows.md)
     * [Git MacOSX手册](/Tutorial/SourceControl/Git/MacOSX.md)
     * [SVN Windows手册](/Tutorial/SourceControl/SVN/Windows.md)
