@@ -121,7 +121,7 @@ function getHBuilderXThemeData(area) {
             fontColor = customColors[viewFontOptionName];
         };
         if (customColors[viewLiHoverBgOptionName] && viewLiHoverBgOptionName in customColors) {
-            fontColor = customColors[viewLiHoverBgOptionName];
+            liHoverBackground = customColors[viewLiHoverBgOptionName];
         };
     };
 

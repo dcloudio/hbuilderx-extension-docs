@@ -36,12 +36,14 @@
     * [MarkDown](/Tutorial/Language/markdown.md)
 * App开发
     * [真机运行常见问题](/Tutorial/App/PhoneDebugging.md)
+    * [安装模拟器](/Tutorial/App/installSimulator.md)
     * [Android自定义渠道包](/Tutorial/App/AndroidChannel.md)
     * [安心打包使用指南](/Tutorial/App/SafePack.md)
     * [iOS安心打包证书安装](/Tutorial/App/iosSafePack.md)
     * [前端网页托管](/Tutorial/App/hosting.md)
 * 版本控制
     * [Git 介绍](/Tutorial/SourceControl/Git/README.md)
+    * [Git重大更新](/Tutorial/SourceControl/git.md)
     * [Git Windows手册](/Tutorial/SourceControl/Git/Windows.md)
     * [Git MacOSX手册](/Tutorial/SourceControl/Git/MacOSX.md)
     * [SVN Windows手册](/Tutorial/SourceControl/SVN/Windows.md)

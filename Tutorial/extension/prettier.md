@@ -4,6 +4,8 @@
 
 此插件用于格式化less、sass、vue、stylus、ts、yaml代码
 
+此插件需要到[插件市场](https://ext.dcloud.net.cn/plugin?id=2025)下载
+
 ## 配置文件
 
 点击菜单【工具】 -> 【设置】 -> 【插件配置】 -> prettier -> prettier.config.js，即可打开配置文件。

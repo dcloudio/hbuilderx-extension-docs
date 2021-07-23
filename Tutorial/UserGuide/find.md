@@ -6,7 +6,9 @@
 
 ## 快速查找文件
 
-`ctrl+p (MacOSX: ⌘P)`，可以定位到搜索框，输入文件名，快速打开任何文件
+`ctrl+p (MacOSX: ⌘P)`，可以定位到搜索框，输入文件名，快速打开任何文件。 
+
+文件名后，敲击空格，输入项目名称，可以只搜索指定项目下文件。
 
 <img src="/static/snapshots/tutorial/find_file.jpg" style="zoom: 50%;border-radius: 24px;border:1px solid #eee;"/>
 
