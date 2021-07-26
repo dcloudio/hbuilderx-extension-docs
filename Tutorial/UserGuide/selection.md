@@ -72,6 +72,14 @@ HBuilderX提供了更友好方式：`智能双击`和`Ctrl+扩大选区`。
 - 如果想选择配对括号，靠相同词是不行的。选中相同语法词会选中匹配的2个左右括号
 - 批量选中所有相同词是Ctrl+Alt+e(mac是ctrl+alt+d)
 
+### 选择相同语法词或配对符号
+
+菜单【选择】【选择相同语法词或配对符号】
+
+MacOSX快捷键：command+shift+d；Windows快捷键：ctrl+shift+e
+
+<img src="/static/snapshots/tutorial/renameTag.gif" style="zoom: 50%;border: 1px solid #eee; border-radius: 5px;" >
+
 ### 交换选区内容
 
 当需要交互2个选区的内容时，选中a、剪切、点b前面、粘贴、选中b、找到之前a的位置点击、粘贴...这么长的操作太低效。
