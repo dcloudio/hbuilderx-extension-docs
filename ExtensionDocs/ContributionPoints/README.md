@@ -1,14 +1,14 @@
 扩展点是通过在插件`package.json`文件中`contributes`节点下定义的一些JSON格式的配置项。以下是目前HBuilderX支持的扩展点列表：
 
-### configuration
+## configuration
 configuration扩展点，会将扩展的配置项注册到HBuilderX的全局可视化配置里`设置`-`插件配置`。
 
-#### 属性列表
+### configuration属性列表
 
-##### title
+#### title
 每个插件扩展的配置是分配到同一组下的，title指的是该组的名称，一般写的是插件名称。
 
-##### properties
+#### properties
 properties内配置的是一个jsonobject对象，该对象的key代表着要扩展的配置项id，value是一个符合[JSON Schema](https://json-schema.org/understanding-json-schema/reference/index.html)规范的jsonobject，目前支持的字段包括：
 
 - type 类型。支持的类型包括：string、boolean、number。
@@ -16,7 +16,7 @@ properties内配置的是一个jsonobject对象，该对象的key代表着要扩
 - default 默认值
 - enum  可选值，目前只有type为string或number时可用
 
-#### 示例
+### configuration示例
 ```json
     "contributes": {
         "configuration":{
@@ -41,7 +41,7 @@ properties内配置的是一个jsonobject对象，该对象的key代表着要扩
 <img src="/static/snapshots/plugins_setting.jpg" style="zoom:50%" />
 
 
-### commands
+## commands
 commands扩展点用于声明一个`命令`，`命令`可以通过`menus`扩展点和菜单关联到一起
 > 注意：当一个`命令`将要执行时，将会触发一个`onCommand:${commandId}`的[activationEvent](/ExtensionDocs/activation_event.md)用于激活监听该`命令`的插件
 
@@ -57,7 +57,7 @@ commands扩展点用于声明一个`命令`，`命令`可以通过`menus`扩展�
     }
 ```
 
-### keybindings
+## keybindings
 
 > keybindings扩展点, 仅对HBuilderX 3.1.22+版本生效。
 
@@ -76,7 +76,7 @@ keybindings扩展点用于声明快捷键绑定.
 ]
 ```
 
-### snippets
+## snippets
 snippets扩展点可以扩展指定编程语言的代码块，可扩展的编程语言Id列表见[这里](/ExtensionDocs/Api/README.md#languageId)。扩展示例代码如下：
 
 ```json
@@ -95,14 +95,15 @@ snippets扩展点可以扩展指定编程语言的代码块，可扩展的编程
     }
 ```
 
-#### 属性列表
+### 属性列表
+
 |属性名称		|属性类型	|是否必须	|描述																																		|
 |--				|--			|--			|--																																			|
 |project		|String		|否			|是否只在指定的项目类型下生效，目前的可取值为"Web","App","Wap2App","uni-app";如果要支持多项目类型可以通过逗号分隔，例如："Web,uni-app,App"	|
 |language		|String		|是			|编程语言ID，用于限定只在指定的语言下生效，语言Id的列表参见[这里](/ExtensionDocs/Api/README.md#languageId)									|
 |path|String		|是			|要扩展的代码块列表文件路径，文件内容格式见下面|
 
-#### 代码块格式
+### 代码块格式
 每个配置项的说明如下表：
 
 |名称|描述|
@@ -112,7 +113,7 @@ snippets扩展点可以扩展指定编程语言的代码块，可扩展的编程
 |body|代码块的内容。内容中有如下特殊格式：<br />$1 表示代码块输入后光标的所在位置。如需要多光标，就在多个地方配置$1,如该位置有预置数据，则写法是${1:foo1}，多选项即下拉候选列表使用${1:foo1/foo2/foo3}；<br />$2 表示代码块输入后再次按tab后光标的切换位置tabstops（代码块展开后按tab可以跳到下一个tabstop；<br />$0 代表代码块输入后最终光标的所在位置（也可以按回车直接跳过去）。<br />双引号使用\"转义，换行使用多个数组表示，每个行一个数组，用双引号包围，并用逗号分隔，缩进需要用\t表示，不能直接输入缩进！|
 |triggerAssist	|为true表示该代码块输入到文档后立即在第一个tabstop上触发代码提示，拉出代码助手，默认为false。|
 
-#### 代码块示例
+### 代码块示例
 ```json
 // ./snippets/javascript.json
 {
@@ -129,7 +130,7 @@ snippets扩展点可以扩展指定编程语言的代码块，可扩展的编程
 ```
 
 
-### viewsContainers
+## viewsContainers
 在窗体左侧区域扩展一个和项目管理器同级的tab项，完整的扩展视图流程参考[如何注册一个新的视图？](/views.md)
 
 #### 属性列表
@@ -160,16 +161,22 @@ snippets扩展点可以扩展指定编程语言的代码块，可扩展的编程
        ...
     }
 ```
+
 #### ViewsContainerDef
 |属性名称	|属性类型	|是否必须	|描述								|
 |--			|--			|--			|--									|
 |id			|String		|是			|扩展的视图容器(viewContainers)的id	|
 |title		|String		|是			|显示在tab标签上的标题				|
 
-### views
-扩展新的视图，扩展的view必须和`viewsContainers`内定义的视图容器绑定以后才能生效。目前支持TreeView和WebView，并且一个视图容器（viewsContainers）仅支持绑定一个视图（view）。在该扩展点声明后，需要通过API：[window.createTreeView](/ExtensionDocs/Api/README.md#createTreeView)或者[window.createWebView](/ExtensionDocs/Api/README.md#createWebView)实现。完整的扩展视图流程参考[如何注册一个新的视图？](/views.md)
+## views
 
-#### TreeView 示例
+扩展新的视图，扩展的view必须和`viewsContainers`内定义的视图容器绑定以后才能生效。
+
+目前支持TreeView和WebView，并且一个视图容器（viewsContainers）仅支持绑定一个视图（view）。
+
+在该扩展点声明后，需要通过API：[window.createTreeView](/ExtensionDocs/Api/README.md#createTreeView)或者[window.createWebView](/ExtensionDocs/Api/README.md#createWebView)实现。完整的扩展视图流程参考[如何注册一个新的视图？](/views.md)
+
+### TreeView 示例
 ```json
     //NOTE：package.json不支持注释，以下代码使用时需要将注释删掉
    "contributes": {
@@ -183,7 +190,8 @@ snippets扩展点可以扩展指定编程语言的代码块，可扩展的编程
        }
     }
 ```
-#### WebView 示例
+
+### WebView 示例
 `从HBuilderX 2.8.1及以上版本开始支持`
 
 ```json
@@ -208,8 +216,13 @@ snippets扩展点可以扩展指定编程语言的代码块，可扩展的编程
         ...
      }
 ```
-### menus
-menus扩展点会关联一个`命令`到相应的菜单项里面，当菜单触发时将会执行对应的`命令`。menus节点下配置的对象内的key指的是要注册到哪个弹出菜单里面，目前支持的key值列表如下：
+
+## menus
+
+menus扩展点会关联一个`命令`到相应的菜单项里面，当菜单触发时将会执行对应的`命令。
+
+menus节点下配置的对象内的key指的是要注册到哪个弹出菜单里面，目前支持的key值列表如下：
+
 - `editor/context` ：编辑器右键菜单
 - `explorer/context` ：项目管理器右键菜单
 - `view/item/context` ：通过`views`扩展点扩展的`视图`的右键菜单（`从HBuilderX 2.7.12及以上版本开始支持`）
@@ -224,7 +237,8 @@ menus扩展点会关联一个`命令`到相应的菜单项里面，当菜单触�
 - `menubar/tool` : 顶部菜单的`工具`菜单
 - `menubar/help` : 顶部菜单的`帮助`菜单
 
-#### 属性列表
+### menus属性列表
+
 |属性名称		|属性类型	|是否必须	|描述																						|
 |--				|--			|--			|--																							|
 |id				|String		|否			|菜单项的Id，如何要配置二级菜单，则需要该属性												|
@@ -236,7 +250,7 @@ menus扩展点会关联一个`命令`到相应的菜单项里面，当菜单触�
 
 > 当属性title和command都为空时，将被识别为分割线。
 
-#### 示例
+### 示例
 ```json
    "contributes": {
        "menus": {
@@ -254,7 +268,9 @@ menus扩展点会关联一个`命令`到相应的菜单项里面，当菜单触�
        }
     }
 ```
-#### 注册二级菜单
+
+### 注册二级菜单
+
 二级菜单通过将group设置为%menuId%@1、%menuId%@2的方式来实现，其中menuId指的是菜单扩展中的id字段。代码示例如下:
 ```json
    "contributes": {
@@ -275,7 +291,8 @@ menus扩展点会关联一个`命令`到相应的菜单项里面，当菜单触�
     }
 ```
 
-#### group
+### group
+
 每个弹出菜单内的group都不一样，下面列出所有的弹出菜单下可用的group。
 > 注意：想要将扩展菜单放到弹出菜单的最后，可以将group设置成`0_foot`
 
@@ -395,7 +412,7 @@ menus扩展点会关联一个`命令`到相应的菜单项里面，当菜单触�
 <img src = "/static/snapshots/help.jpg" style="zoom:50%" />
 
 
-#### when
+### when
 when表达式用来动态的判断某个条件是否满足(即表达式的运算结果是`true`或者`false`)，目前用于控制一个菜单是否显示。目前支持的表达式运算符如下：
 
 |操作符	|描述	|例子														|
@@ -428,10 +445,13 @@ when表达式用来动态的判断某个条件是否满足(即表达式的运算
 |config.*													|Any		|获取某个配置项的值,例子： `config.editor.fontSize`																												|
 |isMac														|Boolean|当前电脑操作系统是否是MacOSX（仅对HBuilderX3.2.22+版本生效）																							|
 |isWindows												|Boolean|当前电脑操作系统是否是Windows（仅对HBuilderX3.2.22+版本生效）																						|
-|editorHasSelection								|Boolean|当前激活的编辑器是否有选中的内容 （仅对HBuilderX3.2.22+版本生效）																						|
+|editorHasSelection								|Boolean|当前激活的编辑器是否有选中的内容 （仅对HBuilderX3.2.22+版本生效）																				|
 
-### customEditors
-插件可以通过该扩展点扩展多个不同类型的自定义编辑器，自定义编辑器可以设置文件匹配模式，用户通过项目管理器打开的文件匹配到某一类型时，在编辑器区域创建webview视图，关联打开的文件。完整的扩展自定义编辑器流程参考[如何扩展一个自定义编辑器？](/ExtensionTutorial/customeditor)
+## customEditors
+
+插件可以通过该扩展点扩展多个不同类型的自定义编辑器，自定义编辑器可以设置文件匹配模式，用户通过项目管理器打开的文件匹配到某一类型时，在编辑器区域创建webview视图，关联打开的文件。
+
+完整的扩展自定义编辑器流程参考[如何扩展一个自定义编辑器？](/ExtensionTutorial/customeditor)
 
 #### 扩展点示例如下：
 ```json
