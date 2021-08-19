@@ -5,6 +5,7 @@
         <span>Translations</span>
         <div class="dropdown-content">
             <p onclick="setLang('zh')">简体中文</p>
+            <p onclick="setLang('zh-hant')">繁體中文</p>
             <p onclick="setLang('en')">English</p>
         </div>
     </li>

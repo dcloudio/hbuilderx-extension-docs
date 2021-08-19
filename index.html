@@ -35,12 +35,12 @@
             };
 
             let user_set_language = getCookie("user_set_language");
-            if (["en","zh-cn"].includes(user_set_language)) {
+            if (["en","zh-cn", "zh-hant"].includes(user_set_language)) {
                 lan = user_set_language;
             };
 
             // 以防万一，获取的语言没有相应的目录
-            if (!["en","zh-cn"].includes(lan)) {
+            if (!["en","zh-cn", "zh-hant"].includes(lan)) {
                 lan = 'zh-cn';
             };
 
