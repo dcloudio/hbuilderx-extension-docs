@@ -13,19 +13,25 @@ HBuilderX Top menu, 【Tool】-> 【plug-in installation】. Open the plug-in in
 - Top Menu, 【File】-> 【Import】-> 【Import From Git】
 - HBuilderX Project manager, Right click menu【Import】-> 【Import From Git】
 
-<img src="/static/snapshots/tutorial/source_control/git_macosx_clone.jpg" style="zoom:45%" />
+<img src="/static/snapshots/tutorial/source_control/git_macosx_clone_en.jpg" style="zoom:40%;border: 1px solid #eee;" />
 
 ## Operation menu
 
 In the project manager, select the project and right-click the menu to see the git related operation menu.
 
-<img src="/static/snapshots/tutorial/source_control/git_macosx_menu.png" style="zoom:50%; border: 1px solid #eee;" />
+<img src="/static/snapshots/tutorial/source_control/git-new-show.png" style="zoom:50%; border: 1px solid #eee;" />
 
 ## Pull
 
-项目上，右键菜单 【Git拉取】，即可从服务器拉取最新代码。
+Project, right-click menu 【Git pull】
 
-<img src="/static/snapshots/tutorial/source_control/git_macosx_pull.jpg" style="zoom:50%; border: 1px solid #eee;" />
+<img src="/static/snapshots/tutorial/source_control/git-new-pull.png" style="zoom:50%; border: 1px solid #eee;" />
+
+## Push
+
+Project, right-click menu 【Git Push】
+
+<img src="/static/snapshots/tutorial/source_control/git-new-push.png" style="zoom:50%; border: 1px solid #eee;" />
 
 ## Commit
 
@@ -36,16 +42,16 @@ In the project manager, select the project and right-click the menu to see the g
 
 ## Show Log
 
-项目上，右键菜单 【Git】->【查看日志】
+Selected Project，right-click menu 【Git】->【show log】
 
 <img src="/static/snapshots/tutorial/source_control/git_macosx_log.jpg" style="zoom:45%; border: 1px solid #eee;border-radius: 20px;" />
 
 ## Branch
 
-- 新建分支：选中项目，右键菜单【Git】-> 【新建分支】
-- 切换分支：选中项目，右键菜单【Git】-> 【切换分支】
-- 删除分支：选中项目，右键菜单【Git】-> 【删除分支】
-- 合并分支：选中项目，右键菜单【Git】-> 【合并分支】 
+- create branch：Selected Project, right-click menu【Git】-> 【新建分支】
+- switch branch：Selected Project, right-click menu【Git】-> 【切换分支】
+- delete branch：Selected Project, right-click menu【Git】-> 【删除分支】
+- merge branch：Selected Project, right-click menu【Git】-> 【合并分支】 
 
 <img src="/static/snapshots/tutorial/source_control/git_macosx_branch.jpg" style="zoom:60%; border: 1px solid #eee;border-radius: 20px;" />
 

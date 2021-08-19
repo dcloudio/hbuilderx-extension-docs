@@ -29,7 +29,19 @@ Click the related menu to bring up TortoiseGit.
 
 > Note: HBuilderX Git plug-in all calls TortoiseGit, so this article will not describe the TortoiseGit operation tutorial in detail.
 
-<img src="/static/snapshots/tutorial/source_control/git_windows_menu.png" style="zoom:70%" />
+<img src="/static/snapshots/tutorial/source_control/git-new-show.png" style="zoom:50%; border: 1px solid #eee;" />
+
+## Pull
+
+Project, right-click menu 【Git pull】
+
+<img src="/static/snapshots/tutorial/source_control/git-new-pull.png" style="zoom:50%; border: 1px solid #eee;" />
+
+## Push
+
+Project, right-click menu 【Git Push】
+
+<img src="/static/snapshots/tutorial/source_control/git-new-push.png" style="zoom:50%; border: 1px solid #eee;" />
 
 ## Shortcut key configuration
 
