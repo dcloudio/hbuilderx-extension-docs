@@ -25,7 +25,19 @@ HBuilderX顶部菜单，【工具】-> 【插件安装】，即可打开插件�
 
 > 备注：HBuilderX Git插件，都是调用TortoiseGit，因此本文不再详细描述TortoiseGit操作教程。
 
-<img src="/static/snapshots/tutorial/source_control/git_windows_menu.png" style="zoom:70%" />
+<img src="/static/snapshots/tutorial/source_control/git-new-show.png" style="zoom:50%; border: 1px solid #eee;" />
+
+## Pull拉取
+
+项目管理器，选中项目，右键菜单 【Git pull】
+
+<img src="/static/snapshots/tutorial/source_control/git-new-pull.png" style="zoom:50%; border: 1px solid #eee;" />
+
+## Push推送
+
+项目管理器，选中项目，右键菜单 【Git Push】
+
+<img src="/static/snapshots/tutorial/source_control/git-new-push.png" style="zoom:50%; border: 1px solid #eee;" />
 
 ## 快捷键配置
 

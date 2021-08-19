@@ -19,13 +19,19 @@ HBuilderX顶部菜单，【工具】-> 【插件安装】，即可打开插件�
 
 项目管理器，选中项目，右键菜单，即可看到git相关操作菜单。
 
-<img src="/static/snapshots/tutorial/source_control/git_macosx_menu.png" style="zoom:50%; border: 1px solid #eee;" />
+<img src="/static/snapshots/tutorial/source_control/git-new-show.png" style="zoom:50%; border: 1px solid #eee;" />
 
-## 拉取
+## Pull拉取
 
-项目上，右键菜单 【Git拉取】，即可从服务器拉取最新代码。
+项目管理器，选中项目，右键菜单 【Git pull】
 
-<img src="/static/snapshots/tutorial/source_control/git_macosx_pull.jpg" style="zoom:50%; border: 1px solid #eee;" />
+<img src="/static/snapshots/tutorial/source_control/git-new-pull.png" style="zoom:50%; border: 1px solid #eee;" />
+
+## Push推送
+
+项目管理器，选中项目，右键菜单 【Git Push】
+
+<img src="/static/snapshots/tutorial/source_control/git-new-push.png" style="zoom:50%; border: 1px solid #eee;" />
 
 ## 提交
 
