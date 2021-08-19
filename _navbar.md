@@ -5,7 +5,7 @@
 
 <ul class="nav-href">
     <li class="dropdown">
-        <span>Translations</span>
+        <span>多语言</span>
         <div class="dropdown-content">
             <p onclick="setLang('zh')">简体中文</p>
             <p onclick="setLang('en')">English</p>
