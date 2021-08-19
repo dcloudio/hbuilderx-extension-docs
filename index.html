@@ -81,6 +81,9 @@
                 maxLevel: 4,
                 subMaxLevel: 3,
                 banner: ['/case'],
+                notFoundPage: {
+                    '/': '_404.md'
+                },
                 plugins: [
                     function(hook, vm) {
                         hook.afterEach(function(html) {

@@ -6,11 +6,11 @@
 <ul class="nav-href">
     <li class="dropdown">
         <span>多語言</span>
-        <div class="dropdown-content">
-            <p onclick="setLang('zh')">簡體中文</p>
-            <p onclick="setLang('zh-hant')">繁體中文</p>
-            <p onclick="setLang('en')">English</p>
-        </div>
+        <ul class="dropdown-content">
+          <li onclick="setLang('zh')">簡體中文</li>
+          <li onclick="setLang('zh-hant')">繁體中文</li>
+          <li onclick="setLang('en')">English</li>
+        </ul>
     </li>
     <li><a href="//dev.dcloud.net.cn/wish/?channel=hbuilder" target="__blank">需求牆</a></li>
     <li><a href="//dev.dcloud.net.cn/sponsor/?channel=hbuilder" target="__blank" style="color:#FF6600!important;"><img src="/static/icon/heart.png" class="heart">贊助我們</a></li>

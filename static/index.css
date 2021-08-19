@@ -1279,12 +1279,12 @@ li.dropdown {
   border-radius: 5px;
   z-index: 220;
 }
-.dropdown-content p {
+.dropdown-content li {
     font-size: 13px;
     margin-bottom: 0px;
     line-height: 35px;
 }
-.dropdown-content p:hover {
+.dropdown-content li:hover {
     color: #41a863;
     font-weight: 700;
 }
