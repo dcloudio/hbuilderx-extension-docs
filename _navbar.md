@@ -4,12 +4,19 @@
 * [CLI命令行工具](/cli/README.md)
 
 <ul class="nav-href">
-	<li><a href="//dev.dcloud.net.cn/wish/?channel=hbuilder" target="__blank">需求墙</a></li>
-	<li><a href="//dev.dcloud.net.cn/sponsor/?channel=hbuilder" target="__blank" style="color:#FF6600!important;"><img src="/static/icon/heart.png" class="heart">赞助我们</a></li>
+    <li class="dropdown">
+        <span>Translations</span>
+        <div class="dropdown-content">
+            <p onclick="setLang('zh')">简体中文</p>
+            <p onclick="setLang('en')">English</p>
+        </div>
+    </li>
+    <li><a href="//dev.dcloud.net.cn/wish/?channel=hbuilder" target="__blank">需求墙</a></li>
+    <li><a href="//dev.dcloud.net.cn/sponsor/?channel=hbuilder" target="__blank" style="color:#FF6600!important;"><img src="/static/icon/heart.png" class="heart">赞助我们</a></li>
 </ul>
 
 <div class="github">
-	<!-- <a href="//github.com/dcloudio/native-docs" target="_blank">
-		<img src="//img-cdn-qiniu.dcloud.net.cn/uniapp/doc/github.svg">
-	</a> -->
+    <!-- <a href="//github.com/dcloudio/native-docs" target="_blank">
+        <img src="//img-cdn-qiniu.dcloud.net.cn/uniapp/doc/github.svg">
+    </a> -->
 </div>
