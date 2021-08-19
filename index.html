@@ -35,8 +35,13 @@
             };
 
             let user_set_language = getCookie("user_set_language");
-            if (["en","zh-cn", "zh-hant"].includes(user_set_language)) {
+            if (["en","zh-cn"].includes(user_set_language)) {
                 lan = user_set_language;
+            };
+
+            // 以防万一，获取的语言没有相应的目录
+            if (!["en","zh-cn"].includes(lan)) {
+                lan = 'zh-cn';
             };
 
             let basePath = `/${lan}/`;
@@ -47,8 +52,8 @@
                 '/(.*)/.*/_sidebar.md': '/$1/_sidebar.md',
                 '/Tutorial/_sidebar.md': '/_sidebar.md',
             };
-            
-            console.log('---', basePath, lan)
+
+            console.log('------- HBuilderX文档 语言设置 -------', basePath, lan);
             // docsify config start
             window.$docsify = {
                 alias: alias,
