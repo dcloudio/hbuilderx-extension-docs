@@ -35,8 +35,9 @@ main {
 }
 
 .markdown-section td {
-  height: 60px;
+  height: 45px;
   padding: 12px 20px;
+  font-size: 15px;
 }
 
 .markdown-section a {
