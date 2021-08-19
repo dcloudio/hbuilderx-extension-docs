@@ -19,19 +19,27 @@
         <div id="app">Please wait...</div>
         <script>
             // 获取浏览器语言
-            var lan = navigator.systemLanguage || navigator.language;
-            lan = lan.substr(0, 2) == 'zh' ? 'zh' : 'en';
-            
+            var lan = (navigator.systemLanguage || navigator.language).toLowerCase();
+
+            try{
+                if (lan.substr(0, 2) == 'zh') {
+                    lan = "zh-cn";
+                    if (!["zh", "zh_cn", "zh-cn", "zh-hans"].includes(lan)) {
+                        lan = "zh-hant";
+                    };
+                } else {
+                    lan = "en";
+                };
+            }catch(e){
+                lan = "zh-cn";
+            };
+
             let user_set_language = getCookie("user_set_language");
-            if (["en","zh"].includes(user_set_language)) {
+            if (["en","zh-cn", "zh-hant"].includes(user_set_language)) {
                 lan = user_set_language;
             };
-            
-            let basePath = "/";
-            if (lan == 'en') {
-                basePath = "/en/";
-            };
-            
+
+            let basePath = `/${lan}/`;
             let loadSidebar = true;
             let loadNavbar = true;
             let alias = {
@@ -40,6 +48,7 @@
                 '/Tutorial/_sidebar.md': '/_sidebar.md',
             };
             
+            console.log('---', basePath, lan)
             // docsify config start
             window.$docsify = {
                 alias: alias,
@@ -78,14 +87,14 @@
                     }
                 ]
             };
-            
+
             // 切换语言
             function setLang(param) {
                 lan = param;
                 setCookie("user_set_language", param);
                 location.reload();
             };
-            
+
             // 设置cookies
             function setCookie(name, value) {
                 var Days = 365;
@@ -93,7 +102,7 @@
                 exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000);
                 document.cookie = name + "=" + escape(value) + ";expires=" + exp.toGMTString();
             };
-            
+
             //获取指定名称的cookie的值
             function getCookie(name) {
                 let arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
