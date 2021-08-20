@@ -1,51 +1,58 @@
-> HBuilderX的代码提示系统很庞大，支持多种语法提示模型。
+> HBuilderX's code prompt system is very large and supports multiple syntax prompt models.
 
-## 内置语法库
-- web项目有内置的html、js、css语法库
-- App项目有内置的plus扩展语法库
-- uni-app项目有内置的uni-app语法库
-- 微信小程序、快应用等项目也有对应的内置语法库
+## Built-in grammar library
+- The web project has built-in `html`, `js`, `css` syntax library
+- App project has a built-in `plus` extended syntax library
+- The uni-app project has a built-in `uni-app` syntax library
+- Projects such as WeChat applets and fast apps also have corresponding built-in grammar libraries
 
-## js框架语法库（sdocml格式）
+## js Framework grammar library（sdocml Format）
 
-HBuilderX中，在可以输入js的文件，比如js、html等文件里，（不含vue、ts），底部状态栏有“语法提示库”，可以加载内置的框架语法库。
+In HBuilderX, in files that can input js, such as `js`, `html`. (not including `vue`, `ts`), there is a "grammar prompt library" in the bottom status bar, and you can load the built-in framework grammar library.
 
 <img src="/static/snapshots/tutorial/lang_1.png" />
 
-其中node.js也是作为一种框架语法而存在的。
-勾选相应js框架语法后，js区域即可提示相应语法（初次勾选需要延时几秒后才能使用）
+Among them, node.js also exists as a framework grammar.
 
-该选择是项目级的，一旦勾选后，整个项目下可以写js的地方都会加载。
-如果文件是单独打开，没有在HBuilderX左侧的项目管理器中，则无法使用本功能。
+After checking the corresponding js framework grammar, the js area will prompt the corresponding grammar (the initial check will take a few seconds before it can be used)
 
-如果HBuilderX能检测到项目下有jquery或mui等常用框架，也会自动给这个项目挂载语法提示库。但有时可能检测不准，需要开发者手动引入。
+The selection is project-level. Once checked, the places where js can be written under the entire project will be loaded.
+
+If the file is opened separately and not in the project manager on the left side of HBuilderX, this function cannot be used.
+
+If HBuilderX can detect that there are commonly used frameworks such as jquery or mui under the project, it will also automatically mount the syntax prompt library for this project. But sometimes the detection may be inaccurate and the developer needs to introduce it manually.
 
 ## d.ts
 
-很多框架都内置了d.ts语法提示库。HBuilderX完整支持d.ts的语法提示。
-如果项目下有某个框架的d.ts文件，HBuilderX则可以提示这个框架的语法提示。
+Many frameworks have built-in `d.ts` syntax hint library. HBuilderX fully supports `d.ts` syntax hints.
+
+If there is a `d.ts` file of a certain framework under the project, HBuilderX can prompt the syntax hint of this framework.
 
 ## jsdoc+
-jsdoc是以注释方式声明方法、参数、属性，HBuilderX提供了经过扩展的jsdoc+，可实现强大的语法提示，详见：[https://ask.dcloud.net.cn/docs/#//ask.dcloud.net.cn/article/129](https://ask.dcloud.net.cn/docs/#//ask.dcloud.net.cn/article/129)
+
+jsdoc declares methods, parameters, and attributes in the form of comments. HBuilderX provides extended `jsdoc+`, which can realize powerful syntax prompts.
 
 <img src="/static/snapshots/tutorial/lang_2.png" style="zoom:50%;" />
 
 ## vue doc
-vue组件开发者，如果想给组件使用者提供更好的使用方式，应该给组件写vue doc。
-vue doc是一种类似jsdoc的方式，通过在注释里描述组件的方法、参数、属性。
 
-详见：[vue doc](https://hx.dcloud.net.cn/Tutorial/Language/vuedoc)
+Vue component developers, if they want to provide component users with a better way to use them, they should write `vue doc` for the component.
 
-## 兼容vscode vetur插件中的vue规范
+Vue doc is a way similar to jsdoc, by describing component methods, parameters, and attributes in comments.
 
-一些vue的组件库，已经按照vetur规范制作语法提示库，比如Element UI、Onsen UI、Bootstrap Vue等框架。
-这些框架npm安装是在node_module下会自带一个json语法库，或在HBuilderX新建模板中选择element ui模板安装也会包含该库。有了这个语法库，就可以直接代码提示。如下图
+Details [vue doc](https://hx.dcloud.net.cn/Tutorial/Language/vuedoc)
+
+## Compatible with the vue specification in the vscode vetur plugin
+
+Some vue component libraries have been produced according to the vetur specification, such as `Element UI`, `Onsen UI`, `Bootstrap Vue` and other frameworks.
+
+The npm installation of these frameworks will come with a json syntax library under node_module, or the element ui template installation will also include the library in the HBuilderX new template. With this grammar library, you can directly code hints.
 
 <img src="/static/snapshots/tutorial/lang_3.png" style="zoom:50%;"/>
 
-## 代码块
+## Snippets
 
-HBuilderX支持自定义代码块，在菜单工具-代码块设置中可自行扩展。
-代码块数据格式兼容vscode，并扩展了更多丰富设置。对于提高开发效率帮助很大。
+HBuilderX supports custom code blocks, which can be expanded in the menu [Tool - Snippets Setting].
+The code block data format is compatible with vscode, and has expanded more rich settings. Great help to improve development efficiency.
 
-<a href="/Tutorial/Language/Snippets">自定义代码块教程</a>
+<a href="/Tutorial/Language/Snippets">Custom Snippets tutorial</a>
