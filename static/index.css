@@ -1293,3 +1293,7 @@ li.dropdown {
     cursor: default;
     opacity: 0.6;
 }
+
+.bi-chevron-down {
+    padding-top: 5px;
+}
