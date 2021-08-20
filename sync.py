@@ -3,6 +3,7 @@
 
 import os
 import sys
+import shutil
 
 # 当前目录
 current_dir = os.path.dirname(__file__)
@@ -21,5 +22,9 @@ for i in zh_cn_all_files:
     relative_path = i.replace(zh_cn_dir + '/', '')
     en_target_path = os.path.join(en_dir,relative_path)
     if not os.path.exists(en_target_path):
-        cmd = "cp -rf {0} {1}".format(i,en_target_path)
-        os.system(cmd)
+        en_target_dir = os.path.dirname(en_target_path)
+        if not os.path.exists(en_target_dir):
+            mkdir_cmd = "mkdir -p {0}".format(en_target_dir)
+            os.system(mkdir_cmd)
+        cp_cmd = "cp -pf {0} {1}".format(i,en_target_path)
+        os.system(cp_cmd)
