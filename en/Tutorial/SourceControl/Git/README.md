@@ -12,7 +12,7 @@ Git GUI Client: [TortoiseGit（Windows）](https://tortoisegit.org/download/)
 
 ## Git Common commands
 
-### Repository
+#### Repository
 
 ```
 # Create an empty Git repository or reinitialize an existing one
@@ -23,7 +23,7 @@ $ git init [project-name]
 $ git clone [url]
 ```
 
-### Config
+#### Config
 
 ```
 # get git config list
@@ -37,7 +37,7 @@ $ git config [--global] user.name "[name]"
 $ git config [--global] user.email "[email address]"
 ```
 
-### add/rm File
+#### add/rm File
 
 ```
 #  Add file contents to the index
@@ -58,7 +58,7 @@ $ git rm --cached [file]
 $ git mv [file-original] [file-renamed]
 ```
 
-### commit
+#### commit
 
 ```
 # Record changes to the repository
@@ -71,7 +71,7 @@ $ git commit --amend -m [message]
 $ git commit --amend [file1] [file2] ...
 ```
 
-### branch
+#### branch
 
 ```
 # List the local branch
@@ -118,7 +118,7 @@ $ git push origin --delete [branch-name]
 $ git branch -dr [remote/branch]
 ```
 
-### tags
+#### tags
 
 ```
 # List all tag
@@ -149,7 +149,7 @@ $ git push [remote] --tags
 $ git checkout -b [branch] [tag]
 ```
 
-### Status and Log
+#### Status and Log
 
 ```
 # show project changes and project info
@@ -185,7 +185,7 @@ $ git show [commit]:[filename]
 $ git reflog
 ```
 
-### pull-push-fetch
+#### pull-push-fetch
 
 ```
 $ git fetch [remote]
@@ -207,7 +207,7 @@ $ git push [remote] --force
 $ git push [remote] --all
 ```
 
-### reset
+#### reset
 
 ```
 $ git checkout [file]
@@ -228,7 +228,7 @@ $ git stash
 $ git stash pop
 ```
 
-### other
+#### other
 
 ```
 # Generate a compressed package for publishing

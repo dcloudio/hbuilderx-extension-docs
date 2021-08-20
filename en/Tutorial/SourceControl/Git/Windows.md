@@ -33,11 +33,15 @@ Click the related menu to bring up TortoiseGit.
 
 ## Pull
 
+> git-pull - Fetch from and integrate with another repository or a local branch
+
 Project, right-click menu 【Git pull】
 
 <img src="/static/snapshots/tutorial/source_control/git-new-pull.png" style="zoom:50%; border: 1px solid #eee;" />
 
 ## Push
+
+> git-push - Update remote refs along with associated objects
 
 Project, right-click menu 【Git Push】
 

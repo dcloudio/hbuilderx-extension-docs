@@ -7,7 +7,7 @@
 * Languages
     * [Vue](/Tutorial/Language/vue.md)
 * Version Control
-    * [Introduce](/Tutorial/SourceControl/Git/README.md)
+    * [Git Introduce](/Tutorial/SourceControl/Git/README.md)
     * [Git Windows](/Tutorial/SourceControl/Git/Windows.md)
     * [Git MacOSX](/Tutorial/SourceControl/Git/MacOSX.md)
     * [SVN Windows](/Tutorial/SourceControl/SVN/Windows.md)

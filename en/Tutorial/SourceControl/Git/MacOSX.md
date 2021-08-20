@@ -23,11 +23,15 @@ In the project manager, select the project and right-click the menu to see the g
 
 ## Pull
 
+> git-pull - Fetch from and integrate with another repository or a local branch
+
 Project, right-click menu 【Git pull】
 
 <img src="/static/snapshots/tutorial/source_control/git-new-pull.png" style="zoom:50%; border: 1px solid #eee;" />
 
 ## Push
+
+> git-push - Update remote refs along with associated objects
 
 Project, right-click menu 【Git Push】
 
@@ -35,8 +39,10 @@ Project, right-click menu 【Git Push】
 
 ## Commit
 
-1. 在要提交的文件、或目录、或项目上，右键菜单，点击【提交】
-2. 在弹窗中，输入提交内容，点击【提交】按钮。
+> git-commit - Record changes to the repository
+
+1. On the file, directory, or project to be submitted, right-click the menu and click [commit]
+2. In the pop-up window, enter the `commit Message` and click the [Submit] button.
 
 <img src="/static/snapshots/tutorial/source_control/git_macosx_ac.jpg" style="zoom:45%; border: 1px solid #eee;" />
 
