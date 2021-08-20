@@ -1,7 +1,8 @@
-`HBuilderX`，H是HTML的首字母，Builder是构造者，X是HBuilder的下一代版本。我们也简称`HX`。
+`HBuilderX`,H is the first letter of HTML, Builder is the builder, X is the next version of HBuilder. We are also referred to as `HX`.
+
 `HX`是**轻如编辑器、强如IDE**的合体版本。
 
-#### 让我们简单了解下HX的特点
+#### Features of HX
 1. 轻巧
 	仅10余M的绿色发行包(不含插件)
 2. 极速
@@ -27,13 +28,13 @@
 	[详见](/Tutorial/Language/json)
 
 
-#### 扩展性
+#### Expansibility
 `HX`支持java插件、nodejs插件，并兼容了很多vscode的插件及代码块。<br/>
 还可以通过[外部命令](/Tutorial/UserGuide/externalCommands)，方便的调用各种命令行功能，并设置快捷键。<br/>
 如果你习惯了其他工具(如vscode或sublime)的[快捷键](/Tutorial/keybindings)，在菜单工具-快捷键方案中可以切换。
 
-#### 插件市场
+#### Plug-in market
 
 HBuilderX插件市场拥有丰富的插件，对于提升工作效率有极大帮助。
 
-插件市场地址: [https://ext.dcloud.net.cn/](https://ext.dcloud.net.cn/?cat1=1&cat2=11&orderBy=FreeHot)
+market: [https://ext.dcloud.net.cn/](https://ext.dcloud.net.cn/?cat1=1&cat2=11&orderBy=FreeHot)

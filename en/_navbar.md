@@ -8,7 +8,7 @@
             </span>
         </span>
         <ul class="dropdown-content">
-          <li onclick="setLang('zh')">簡體中文</li>
+          <li onclick="setLang('zh')">简体中文</li>
           <li onclick="setLang('zh-hant')">繁體中文</li>
           <li onclick="setLang('en')">English</li>
         </ul>

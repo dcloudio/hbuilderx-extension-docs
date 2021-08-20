@@ -4,6 +4,8 @@
     * [MacOSX](/Tutorial/install/macosx.md)
 * Get Start
     * [StartedTutorial](/Tutorial/StartedTutorial.md)
+* Languages
+    * [Vue](/Tutorial/Language/vue.md)
 * Version Control
     * [Introduce](/Tutorial/SourceControl/Git/README.md)
     * [Git Windows](/Tutorial/SourceControl/Git/Windows.md)
