@@ -1,53 +1,54 @@
-# 插件安装
+# Plug-in installation
 
-### 安装插件
-HBuilderX启动后，点击菜单【工具】【插件安装】，即可打开插件安装窗口。
+### Install plugin
 
-除下图所示插件外，其它插件，需要到[插件市场](https://ext.dcloud.net.cn/?cat1=1&cat2=11&orderBy=TotalDownload)进行下载。
+After HBuilderX is started, click the menu [Tools] [Plugin Installation] to open the plug-in installation window.
+
+In addition to the plug-in shown in the figure below, other plug-ins，go to[market](https://ext.dcloud.net.cn/?cat1=1&cat2=11&orderBy=TotalDownload) download.
 
 <img src="/static/snapshots/tutorial/plugins_install_1.jpg" style="zoom: 45%;border: 1px solid #eee;border-radius: 20px;"/>
 
-### 已安装插件
+### Installed plugin
 
-如下图，HBuilderX已安装的插件，会显示在【已安装插件】中。
+The installed plug-ins of HBuilderX will be displayed in [Installed plug-ins].
 
-当服务器存在高版本插件时，相应插件会显示`升级`字样。
+When the server has a high version plug-in, the corresponding plug-in will display the word `upgrade`.
 
 <img src="/static/snapshots/tutorial/plugins_install_2.jpg" style="zoom: 45%;border: 1px solid #eee;border-radius: 20px;"/>
 
-### 插件市场安装插件
+### Plug-in market installation
 
-如下图所示，在[插件市场](https://ext.dcloud.net.cn/?cat1=1&cat2=11&orderBy=TotalDownload)，进入插件详情页，点击【导入插件】，会自动拉起本地安装的HBuilderX。
+In [Plugin Market](https://ext.dcloud.net.cn/?cat1=1&cat2=11&orderBy=TotalDownload), enter the plug-in details page, click [Import Plug-in], it will automatically pull up the locally installed HBuilderX.
 
 <img src="/static/snapshots/tutorial/plugins_install_3.jpg" style="zoom: 45%;border: 1px solid #eee;border-radius: 20px;"/>
 
-### 离线安装插件
+### Install plugin offline
 
-> `nodejs`插件，如果插件内，没有`node_modules`，需要手动执行`npm install`
+> `nodejs` plugin, if there is no `node_modules` in the plugin, you need to manually execute `npm install`
 
 #### windows
 
-1. 打开资源管理器，进入HBuilderX安装目录
-2. 进入`plugins`目录
-3. 将插件文件夹, 放置到此目录。（如是zip包，解压即可）
-4. 重启HBuilderX编辑器
+1. Open the Explorer and enter the HBuilderX installation directory
+2. Enter the `plugins` directory
+3. Place the plug-in folder in this directory. (If it is a zip package, just unzip it)
+4. Restart the HBuilderX editor
 
 #### Mac
 
-1. 打开系统终端，输入如下命令，打开HBuilderX插件目录 （注意：mac上，正式版和alpha目录不一样）
-2. 将插件文件夹, 如是zip包，解压即可），放置到`plugins`目录下
-3. 重启HBuilderX编辑器
+1. Open the system terminal and enter the following command to open the HBuilderX plug-in directory (note: on mac, the official version is different from the alpha directory)
+2. Put the plugin folder, if it is a zip package, just unzip it) and place it under the `plugins` directory
+3. Restart the HBuilderX editor
 
 ```shell
-# 正式版
+# release
 open /Applications/HBuilderX.app/Contents/HBuilderX/plugins/
 
-# Alpha版
+# Alpha
 open /Applications/HBuilderX-Alpha.app/Contents/HBuilderX/plugins/
 ```
 
-### 问题
+### Question
 
-某些node插件，比如`sass`、`less`, 安装成功，项目运行时，却提示安装失败。
+Some node plugins, such as `sass` and `less`, are installed successfully, but when the project is running, it prompts that the installation failed.
 
-可能的原因：node_modules安装失败了。进入插件目录，手动执行`npm install --save`
+Possible reason: `node_modules` installation failed. Enter the plugin directory and manually execute `npm install --save`

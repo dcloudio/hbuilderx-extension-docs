@@ -1,25 +1,25 @@
-# 如何卸载HBuilderX
+# Uninstall
 
-## Windows卸载HBuilderX
+## Windows uninstall
 
-1. 删除数据目录和及注册表，进入HBuilderX安装目录，找到`reset.bat`，点击运行。此操作可以删除HBuilderX数据目录及注册表。
-2. 删除程序目录。windows, HBuilderX安装包是zip包，直接将解压的文件夹删除即可。
-3. 如桌面有HBuilderX快捷方式，直接删除桌面快捷方式即可
+1. Delete the data directory and registry, enter the HBuilderX installation directory, find `reset.bat`, and click Run. This operation can delete the HBuilderX data directory and registry.
+2. Delete the program directory. Windows and HBuilderX installation package is a zip package, just delete the unzipped folder directly.
+3. If there is a shortcut to HBuilderX on the desktop, just delete the shortcut on the desktop
 
-## MacOSX删除HBuilderX
+## MacOSX uninstall
 
-#### 1. 删除应用程序
+#### 1. Delete application
 
-> 如下图。MacOSX，打开`访达`，左侧点击`应用程序`，进入应用程序窗口，找到HBuilderX，右键菜单，点击`移到废纸篓`
+> As shown below. MacOSX, open `Finder`, click `Applications` on the left, enter the application window, find HBuilderX, right-click the menu, and click `Move to Trash`
 
-<img src="/static/snapshots/mac_uninstall.png" style="zoom: 50%; border:1px solid #eee; border-radius: 20px;" />
+<img src="/static/snapshots/mac_uninstall_en.png" style="zoom: 50%; border:1px solid #eee; border-radius: 20px;" />
 
-#### 2. 删除数据目录
+#### 2. Delete data directory
 
-打开操作系统终端，输入如下命令：
+Open the operating system terminal and enter the following command
 
 ```
 open $HOME/Library/Application\ Support/
 ```
 
-此时会打开`访达`, 在访达窗口，找到`HBuilderX`目录，右键菜单，点击删除。
+The `Finder` will open at this time, in the Finder window, find the `HBuilderX` directory, right-click the menu, and click Delete.

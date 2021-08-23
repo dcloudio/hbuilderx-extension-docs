@@ -34,7 +34,7 @@
                 lan = "zh-cn";
             };
 
-            let user_set_language = getCookie("user_set_language");
+            var user_set_language = getCookie("user_set_language");
             if (["en","zh-cn", "zh-hant"].includes(user_set_language)) {
                 lan = user_set_language;
             };
@@ -43,10 +43,10 @@
             if (!["en","zh-cn", "zh-hant"].includes(lan)) {
                 lan = 'zh-cn';
             };
-
-            let basePath = `/${lan}/`;
-            let loadSidebar = true;
-            let loadNavbar = true;
+            var Search = lan.includes('zh') ? "搜索" : "Search";
+            var basePath = `/${lan}/`;
+            var loadSidebar = true;
+            var loadNavbar = true;
             let alias = {
                 '/.*/_navbar.md': '/_navbar.md',
                 '/(.*)/.*/_sidebar.md': '/$1/_sidebar.md',
@@ -72,8 +72,7 @@
                     maxAge: 7200000,
                     paths: 'auto',
                     placeholder: {
-                        '/en/': 'Search',
-                        '/': 'Search',
+                        '/': Search,
                     },
                     noData: '没有结果',
                     depth: 6

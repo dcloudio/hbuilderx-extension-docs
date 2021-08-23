@@ -1,36 +1,36 @@
-# 关于代码助手
+# Code Assistant
 
-hx的代码助手，可以按`alt+数字`选择直接选择某个项目，类似中文输入法数字选词
+The code assistant of HBuilderX, you can press `alt+number` to select an item directly, similar to the number selection of Chinese input method
 
 <img src="/static/snapshots/tutorial/codehelper.png" style="zoom: 90%;" />
 
-## 代码助手匹配项高亮 
+## Match highlight 
 
-> 仅适用于HBuilderX 3.1.13+版本
+> Only applicable to HBuilderX 3.1.13+ version
 
 <img src="/static/snapshots/tutorial/code_highlight.jpg" style="zoom: 50%;" />
 
-## 代码助手窗口切换选择模式
+## Code assistant window switch selection mode
 
-> 仅适用于HBuilderX 3.1.13+版本
+> Only applicable to HBuilderX 3.1.13+ version
 
-默认需要`Alt+数字`选择
+`Alt+number` option is required by default
 
 <img src="/static/snapshots/tutorial/codehelper_selected.jpg" style="zoom: 50%;" />
 
-## 代码助手配置
+## Code assistant configuration
 
-打开菜单【设置】【编辑器设置】，即可看到代码助手相关配置，如下图：
+Open the menu [Settings] [Editor Settings], you can see the relevant configuration of the code assistant.
 
-- 启用|禁用代码助手
-- 调整代码助手字体大小
-- 调整代码助手触发字符
-- Tab自动插入代码助手选中项
+- Enable|Disable Code Assistant
+- Adjust code assistant font size
+- Adjust the code assistant trigger character
+- Tab automatically inserts the selected item in the code assistant
 
 <img src="/static/snapshots/tutorial/codehelper_config.png" style="zoom: 90%;" />
 
-## 关闭代码助手
+## Turn off code assistant
 
-某些时候，如果您不需要代码提示，或只想把HBuilderX作为纯编辑器，可关闭代码提示。
+Sometimes, if you don't need code hints, or just want to use HBuilderX as a pure editor, you can turn off code hints.
 
-打开菜单【设置】【偏好设置】，不勾选`启用代码助手`。
+Open the menu [Settings] [Preferences] and uncheck `Enable Code Assistant`.

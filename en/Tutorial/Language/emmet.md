@@ -1,9 +1,9 @@
-# Emmet是什么？
+# Emmet
 
-Emmet语法可以用`缩写`来动态生成我们所需要的样式，从而极大改善您的HTML和CSS工作流程。
+Emmet is a plugin for many popular text editors which greatly improves HTML & CSS workflow.
 
-已内置在HBuilderX中，无需任何扩展。
+It has been built into HBuilderX without any extensions.
 
-<img src="/static/snapshots/tutorial/emmet.gif" style="zoom: 100%;" />
+<img src="/static/snapshots/tutorial/emmet.gif" style="zoom: 100%; border: 1px solid #eee;" />
 
-更多Emmet语法: [Emmet官网](https://docs.emmet.io/)
+More Emmet syntax: [Emmet Website](https://docs.emmet.io/)

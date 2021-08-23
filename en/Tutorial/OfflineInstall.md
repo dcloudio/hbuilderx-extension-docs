@@ -1,28 +1,28 @@
-# 离线安装
+# Offline installation
 
 ## windows
 
-1. 打开资源管理器，进入HBuilderX安装目录
-2. 进入`plugins`目录
-3. 将插件文件夹, 放置到此目录。（如是zip包，解压即可）
-4. 重启HBuilderX编辑器
+1. Open Resource Manager and go to the HBuilderX installation directory
+2. Go to the 'plugins' directory
+3. Put the plug-in folder in this directory. (If it is a ZIP package, decompress it)
+4. Restart the HBuilderX editor
 
 ## Mac
 
-1. 打开系统终端，输入如下命令，打开HBuilderX插件目录 （注意：mac上，正式版和alpha目录不一样）
-2. 将插件文件夹, 如是zip包，解压即可），放置到`plugins`目录下
-3. 重启HBuilderX编辑器
+1. Open the system terminal and run the following command to open the HBuilderX plug-in directory (note: on MAC, the official version is different from the alpha directory).
+2. Put the plugins folder, such as the zip package, into the 'plugins' directory
+3. Restart the HBuilderX editor
 
-正式版命令
+Release:
 ```shell
 open /Applications/HBuilderX.app/Contents/HBuilderX/plugins/
 ```
 
-Alpha版命令
+Alpha: 
 ```shell
 open /Applications/HBuilderX-Alpha.app/Contents/HBuilderX/plugins/
 ```
 
-## `备注`
+## `Notes`
 
-`nodejs`插件，如果插件内，没有`node_modules`，需要手动执行`npm install`
+If 'node_modules' is not available in the plug-in, you need to manually run' NPM install '

@@ -2,10 +2,16 @@
 * Install
     * [Windows](/Tutorial/install/windows.md)
     * [MacOSX](/Tutorial/install/macosx.md)
+    * [startup](/Tutorial/startup.md)
+    * [uninstall](/Tutorial/uninstall.md)
+    * [OfflineInstall](/Tutorial/OfflineInstall.md)
 * Get Start
     * [StartedTutorial](/Tutorial/StartedTutorial.md)
+    * [Plugins Install](Tutorial/PluginsInstall.md)
 * Languages
     * [Overview](/Tutorial/Language/Overview.md)
+    * [CodeAssistant](/Tutorial/Language/CodeAssistant.md)
+    * [Emmet](/Tutorial/Language/emmet)
     * [Vue](/Tutorial/Language/vue.md)
 * Version Control
     * [Git Introduce](/Tutorial/SourceControl/Git/README.md)

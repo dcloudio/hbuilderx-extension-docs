@@ -1,9 +1,9 @@
-# 首次启动
+# StartUp
 
-HBuilderX，首次启动后，您会看到一个选择窗口，您可以在此选择您喜欢的`主题`、`快捷键`。
+After starting HBuilderX for the first time, you will see a selection window where you can select your favorite `theme` and `shortcut keys`.
 
-点击【开始体验】按钮后，您会看到一个《HBuilderX自述文件》，简单介绍了HBuilderX的特性，点击标签卡上的`x`可以关闭此文件。
+After clicking the [Start Experience] button, you will see a "Readme", which briefly introduces the features of HBuilderX. Click the `x` on the tab to close this file.
 
-体验HBuilderX, 从新建项目开始吧。
+To experience HBuilderX, start with a new project.
 
 <img src="/static/snapshots/tutorial/startup.gif" style="zoom: 80%; border:1px solid #eee;" />
