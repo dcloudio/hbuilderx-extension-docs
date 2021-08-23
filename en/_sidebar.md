@@ -13,6 +13,7 @@
     * [CodeAssistant](/Tutorial/Language/CodeAssistant.md)
     * [Emmet](/Tutorial/Language/emmet)
     * [Vue](/Tutorial/Language/vue.md)
+    * [Vue Doc](/Tutorial/Language/vuedoc.md)
 * Version Control
     * [Git Introduce](/Tutorial/SourceControl/Git/README.md)
     * [Git Windows](/Tutorial/SourceControl/Git/Windows.md)
