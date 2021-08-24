@@ -65,8 +65,6 @@ localhost:MacOS hx$ ./cli pack --config /Users/hx/Documents/HBuilderProjects/测
        "bundle":"com.test.ios",
        //ios打包支持的设备类型 默认值iPhone 值有"iPhone","iPad" 如果要打多个逗号隔开打包平台
        "supporteddevice":"iPhone,iPad",
-       //iOS打包是否打越狱包,只有值为true时打越狱包,false打正式包
-       "isprisonbreak":true,
        //iOS使用自定义证书打包的profile文件路径
        "profile":"",
        //iOS使用自定义证书打包的p12文件路径
@@ -113,7 +111,7 @@ localhost:MacOS hx$ ./cli pack --config /Users/hx/Documents/HBuilderProjects/测
 |--android.channels	|安卓平台要打的渠道包,取值有"google","yyb","360","huawei","xiaomi","oppo","vivo"，如果要打多个逗号隔开		|
 |--ios.bundle	|iOS appid 打ios包填写		|
 |--ios.supporteddevice	|iOS打包支持的设备类型,默认值iPhone 值有"iPhone","iPad" 如果要打多个逗号隔开打包平台		|
-|--ios.isprisonbreak	|iOS打包是否打越狱包,true打越狱包,false正式包		|
+|--ios.isprisonbreak	|iOS打包是否打越狱包,true打越狱包,false正式包。HBuilderX 3.2.3+版本起，不再支持构建越狱包。		|
 |--ios.profile	|iOS使用自定义证书打包的profile文件路径		|
 |--ios.certfile	|iOS使用自定义证书打包的p12文件路径		|
 |--ios.certpassword 	|iOS使用自定义证书打包的证书密码		|
