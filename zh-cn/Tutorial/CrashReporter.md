@@ -14,3 +14,5 @@ HBuilderX开启或停止自动报告是在'工具->设置->常用设置'里设�
 - 您设备的操作系统、设备信息、HBuilderX版本
 - 您的HBuilderX帐户名
 - HBuilderX崩溃的Dump文件，该文件类似于google生成的Dump文件
+
+<img src="/static/snapshots/report.jpg" style="zoom: 50%;border: 1px solid #eee; border-radius: 20px;" />

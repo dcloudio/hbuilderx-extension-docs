@@ -14,3 +14,5 @@ HBuilderX開啓或停止自動報告是在'工具->設置->常用設置'裏設�
 - 您設備的操作系統、設備信息、HBuilderX版本
 - 您的HBuilderX帳戶名
 - HBuilderX崩潰的Dump文件，該文件類似於google生成的Dump文件
+
+<img src="/static/snapshots/report.jpg" style="zoom: 50%;border: 1px solid #eee; border-radius: 20px;" />
