@@ -12,4 +12,4 @@ If HBuilderX crashes, some personal information might be included in the report.
 - Memory related to the crash
 - Your device's operating system, device information, HBuilderX version
 - Your HBuilderX account name
-- Dump file of HBuilderX crash,this file like google Dump file
+- Dump file of HBuilderX crash,this file like Chrome Dump file
