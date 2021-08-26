@@ -1,32 +1,32 @@
 # Formator-Prettier
 
-## 简介
+## Introduction
 
-此插件用于格式化less、sass、vue、stylus、ts、yaml代码
+This plugin is used to format `less`, `sass`, `vue`, `stylus`, `ts`, `yaml` code.
 
-此插件需要到[插件市场](https://ext.dcloud.net.cn/plugin?id=2025)下载
+This plugin needs to be downloaded from [HBuilderX Plugin Market](https://ext.dcloud.net.cn/plugin?id=2025)
 
-## 配置文件
+## Config File
 
-点击菜单【工具】 -> 【设置】 -> 【插件配置】 -> prettier -> prettier.config.js，即可打开配置文件。
+Click the menu [Tools] -> [Settings] -> [Plugin Configuration] -> prettier -> prettier.config.js to open the configuration file.
 
 
-## 如何配置格式化选项？
+## Format options
 
-格式化选项配置文件是prettier.config.js,里面对应的选项说明如下：
+The formatting options configuration file is `prettier.config.js`, and the corresponding options are described as follows:
 
-- printWidth： 控制单行最大长度
-- semi： 控制每条语句是否加上分号
-- tabWidth： 控制一个tab对应的空格数
-- useTabs： 控制缩进用tab还是space
-- singleQuote：控制字符串是用单引号还是双引号
-- trailingComma： 是否去掉末尾的逗号
-- bracketSpacing： 控制json对象括号前后是否加上空格
+- printWidth： Specify the line length that the printer will wrap on.
+- semi： Print semicolons at the ends of statements. options: true|false.
+- tabWidth： Specify the number of spaces per indentation-level.
+- useTabs： Indent lines with tabs instead of spaces.
+- singleQuote：Use single quotes instead of double quotes.
+- trailingComma： Print trailing commas wherever possible in multi-line comma-separated syntactic structures. (A single-line array, for example, never gets trailing commas.)
+- bracketSpacing： Print spaces between brackets in object literals. options: true|false.
 
-详细的配置说明可以参考[options](https://prettier.io/docs/en/options.html)
+Detailed configuration instructions can refer to [prettier options](https://prettier.io/docs/en/options.html)
 
-## 如何支持新的语言？
-1. 修改package.json配置，添加要支持的新的语言的文件后缀
+## How to support new languages？
+1. Modify the package.json configuration and add the file suffix of the new language to be supported
 ~~~
 "contributes": {
     "formator": {
@@ -39,12 +39,12 @@
             "vue",
             "ux",
             "ts",
-            "foo"//文件后缀名
+            "foo"//File extension name
         ]
     }
 }
 ~~~
-2. 修改prettier.config.js,将新添加的语言配置到对应的格式化处理器上。
+2. Modify prettier.config.js to configure the newly added language to the corresponding formatting processor.
 ~~~
 parsers: {
     ".jsx": "flow",
@@ -58,6 +58,6 @@ parsers: {
 }
 ~~~
 
-## 示例Gif
+## Example
 
 <img src="/static/snapshots/tutorial/prettier.gif" style="zoom:80%; border: 1px solid #eee;" />

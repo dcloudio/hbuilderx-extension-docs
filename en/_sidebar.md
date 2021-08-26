@@ -20,6 +20,8 @@
     * [Git MacOSX](/Tutorial/SourceControl/Git/MacOSX.md)
     * [SVN Windows](/Tutorial/SourceControl/SVN/Windows.md)
     * [SVN MacOSX](/Tutorial/SourceControl/SVN/MacOSX.md)
+* Extension
+    * [Formator Prettier](/Tutorial/extension/prettier.md)
 * Other
     * [Font Setting](/Tutorial/settings/font.md)
 * [Crash Reporter](/Tutorial/CrashReporter.md)
