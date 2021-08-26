@@ -8,19 +8,23 @@ The SVN plug-in calls the `external SVN command line tool`, So need to install`T
 
 [TortoiseSVN Download](https://tortoisesvn.net/downloads.html)
 
+> Note: HBuilderX SVN plug-ins all call TortoiseSVN, so this article will not describe the TortoiseSVN operation tutorial in detail.
+
 ## Plug-in Install
 
 HBuilderX Top menu, 【Tool】-> 【plug-in installation】. Open the plug-in installation window, Find SVN, Click【Install】.
 
-<img src="/static/snapshots/tutorial/source_control/plugin_window.png" style="zoom:70%" />
+<img src="/static/snapshots/tutorial/source_control/plugin_window_en.png" style="zoom:70%" />
+
+## SVN Import
+
+<img src="/static/snapshots/tutorial/source_control/svn_windows_import_en.png" style="zoom:80%;border: 1px solid #eee;" />
 
 ## Operation menu
 
 Project manager, select the project, right-click the menu, you can see the SVN related operation menu.
 
-> 备注：HBuilderX SVN插件，都是调用TortoiseSVN，因此本文不再详细描述TortoiseSVN操作教程。
-
-<img src="/static/snapshots/tutorial/source_control/svn_windows_menu.png" style="border-radius: 5px;border: 1px solid #eee;" />
+<img src="/static/snapshots/tutorial/source_control/svn_windows_menu_en.png" style="border-radius: 5px;border: 1px solid #eee;" />
 
 ## Shortcut key configuration
 

@@ -6,7 +6,7 @@ In HBuilderX, to use Git, you need to install the Git plug-in first.
 
 HBuilderX Top menu, 【Tool】-> 【plug-in installation】. Open the plug-in installation window, Find Git, Click【Install】.
 
-<img src="/static/snapshots/tutorial/plugins_install_1.jpg" style="zoom: 45%;border: 1px solid #eee;border-radius: 20px;"/>
+<img src="/static/snapshots/tutorial/source_control/plugin_macosx_en.jpg" style="zoom: 45%;border: 1px solid #eee;border-radius: 20px;"/>
 
 ## clone and import
 
@@ -27,7 +27,7 @@ In the project manager, select the project and right-click the menu to see the g
 
 Project, right-click menu 【Git pull】
 
-<img src="/static/snapshots/tutorial/source_control/git-new-pull.png" style="zoom:50%; border: 1px solid #eee;" />
+<img src="/static/snapshots/tutorial/source_control/git-new-pull-en.png" style="zoom:50%; border: 1px solid #eee;" />
 
 ## Push
 
@@ -35,7 +35,8 @@ Project, right-click menu 【Git pull】
 
 Project, right-click menu 【Git Push】
 
-<img src="/static/snapshots/tutorial/source_control/git-new-push.png" style="zoom:50%; border: 1px solid #eee;" />
+<img src="/static/snapshots/tutorial/source_control/git-new-push-en.png" style="zoom:50%; border: 1px solid #eee;" />
+
 
 ## Commit
 
@@ -44,22 +45,31 @@ Project, right-click menu 【Git Push】
 1. On the file, directory, or project to be submitted, right-click the menu and click [commit]
 2. In the pop-up window, enter the `commit Message` and click the [Submit] button.
 
-<img src="/static/snapshots/tutorial/source_control/git_macosx_ac.jpg" style="zoom:45%; border: 1px solid #eee;" />
+<img src="/static/snapshots/tutorial/source_control/git_macosx_ac_en.jpg" style="zoom:40%; border: 1px solid #eee;" />
 
 ## Show Log
 
 Selected Project，right-click menu 【Git】->【show log】
 
-<img src="/static/snapshots/tutorial/source_control/git_macosx_log.jpg" style="zoom:45%; border: 1px solid #eee;border-radius: 20px;" />
+<img src="/static/snapshots/tutorial/source_control/git_macosx_log_en.png" style="zoom:45%; border: 1px solid #eee;border-radius: 20px;" />
 
-## Branch
+## Branch: Switch
 
-- create branch：Selected Project, right-click menu【Git】-> 【新建分支】
-- switch branch：Selected Project, right-click menu【Git】-> 【切换分支】
-- delete branch：Selected Project, right-click menu【Git】-> 【删除分支】
-- merge branch：Selected Project, right-click menu【Git】-> 【合并分支】 
+Selected Project, right-click menu【Git】-> 【Switch Branch-Checkout】
+ 
+<img src="/static/snapshots/tutorial/source_control/git-switch-branch-en.png" style="zoom:45%; border: 1px solid #eee;" />
 
-<img src="/static/snapshots/tutorial/source_control/git_macosx_branch.jpg" style="zoom:60%; border: 1px solid #eee;border-radius: 20px;" />
+## Branch: New
+
+- create branch：Selected Project, right-click menu【Git】-> 【Git New Branch】
+
+<img src="/static/snapshots/tutorial/source_control/git_macosx_branch_en.jpg" style="zoom:60%; border: 1px solid #eee;border-radius: 20px;" />
+
+## Branch: Other operating
+
+
+- delete branch：Selected Project, right-click menu【Git】-> 【Git delete branch】
+- merge branch：Selected Project, right-click menu【Git】-> 【Git merge branch】 
 
 ## Shortcut key configuration
 

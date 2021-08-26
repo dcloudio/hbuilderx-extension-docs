@@ -21,20 +21,20 @@ which svn
 
 HBuilderX Top menu, 【Tool】-> 【plug-in installation】. Open the plug-in installation window, Find SVN, Click【Install】.
 
-<img src="/static/snapshots/tutorial/source_control/plugin_macosx.jpg" style="zoom:40%; border-radius: 20px;border: 1px solid #eee;" />
+<img src="/static/snapshots/tutorial/source_control/plugin_macosx_en.jpg" style="zoom:40%; border-radius: 20px;border: 1px solid #eee;" />
 
 ## Operation menu
 
 Project manager, select the project, right-click the menu, you can see the SVN related operation menu.
 
-<img src="/static/snapshots/tutorial/source_control/svn_macosx_menu.png" style="zoom:50%;border-radius: 5px;border: 1px solid #eee;" />
+<img src="/static/snapshots/tutorial/source_control/svn_macosx_menu_en.png" style="zoom:50%;border-radius: 5px;border: 1px solid #eee;" />
 
 ## Commit
 
 1. On the file, directory, or project to be submitted, right-click the menu and click [SVN Submit]
 2. In the SVN window, enter the Message, and click the [SVN Submit] button.
 
-<img src="/static/snapshots/tutorial/source_control/svn_macosx_ci.jpg" style="zoom:45%; border: 1px solid #eee;" />
+<img src="/static/snapshots/tutorial/source_control/svn_macosx_ci_en.jpg" style="zoom:45%; border: 1px solid #eee;" />
 
 ## Show Log
 

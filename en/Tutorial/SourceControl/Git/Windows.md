@@ -19,7 +19,7 @@ HBuilderX Top menu, 【Tool】-> 【plug-in installation】. Open the plug-in in
 - Top Menu, 【File】-> 【Import】-> 【Import From Git】
 - HBuilderX Project manager, Right click menu【Import】-> 【Import From Git】
 
-<img src="/static/snapshots/tutorial/source_control/git_windows_clone.png" style="zoom:70%" />
+<img src="/static/snapshots/tutorial/source_control/git_windows_clone_en.png" style="zoom:70%;border: 1px solid #eee;" />
 
 ## Operation menu
 
@@ -37,7 +37,7 @@ Click the related menu to bring up TortoiseGit.
 
 Project, right-click menu 【Git pull】
 
-<img src="/static/snapshots/tutorial/source_control/git-new-pull.png" style="zoom:50%; border: 1px solid #eee;" />
+<img src="/static/snapshots/tutorial/source_control/git-new-pull-en.png" style="zoom:50%; border: 1px solid #eee;" />
 
 ## Push
 
@@ -45,7 +45,7 @@ Project, right-click menu 【Git pull】
 
 Project, right-click menu 【Git Push】
 
-<img src="/static/snapshots/tutorial/source_control/git-new-push.png" style="zoom:50%; border: 1px solid #eee;" />
+<img src="/static/snapshots/tutorial/source_control/git-new-push-en.png" style="zoom:50%; border: 1px solid #eee;" />
 
 ## Shortcut key configuration
 
