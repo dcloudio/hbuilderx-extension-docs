@@ -22,6 +22,7 @@
     * [SVN MacOSX](/Tutorial/SourceControl/SVN/MacOSX.md)
 * Extension
     * [Formator Prettier](/Tutorial/extension/prettier.md)
+    * [validate-html](/Tutorial/extension/validate-html.md)
 * Other
     * [Font Setting](/Tutorial/settings/font.md)
 * [Crash Reporter](/Tutorial/CrashReporter.md)

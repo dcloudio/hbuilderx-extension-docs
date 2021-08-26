@@ -1,41 +1,42 @@
-### 插件安装
+# validate-html
 
-html语法校验插件，需要到[插件市场](https://ext.dcloud.net.cn/plugin?name=validate-html)安装。
+### Plugin Install
+
+The html syntax verification plug-in needs to be installed in [HBuilderX Plugin Market](https://ext.dcloud.net.cn/plugin?name=validate-html).
 
 
-### 如何配置选项？
+### configure options
 
-安装完成后，进入【设置】【插件配置】【htmlhintrc】，点击`htmlhintrc`, 即可配置相关规则。
+After the installation is complete, enter [Settings] [Plugin Configuration] [htmlhintrc], and click `htmlhintrc` to configure related rules.
 
-选项配置文件是.htmlhintrc，目前已有的选项对应说明如下：
+The option configuration file is `.htmlhintrc`, and the corresponding descriptions of the existing options are as follows:
 
-| 选项                     | 说明                                                     |
-| ------------------------ | -------------------------------------------------------- |
-| tagname-lowercase        | 标签名是否开启小写; true:启用, false:禁用                |
-| attr-lowercase           | 属性名是否开启小写，true:启用, false:禁用                |
-| attr-value-double-quotes | 属性值是否必须放在双引号中，true:启用, false:禁用        |
-| doctype-first            | Doctype是否必须是HTML文档的第一行，true:启用, false:禁用 |
-| tag-pair                 | 标签是否必须成对，true:启用, false:禁用                  |
-| spec-char-escape         | 特殊字符是否必须转义，true:启用, false:禁用              |
-| id-unique                | ID属性是否必须唯一，true:启用, false:禁用                |
-| src-not-empty            | src属性是否为空，true:启用, false:禁用                   |
-| attr-no-duplication:     | 同一标签中，属性值是否不可重复, true:启用, false:禁用    |
+| Option | Description |
+| ------------------------ | ------------------------ -------------------------------- |
+| tagname-lowercase | Whether to enable lowercase for tag names; `true: enable, false: disable` |
+| attr-lowercase | Whether lowercase is enabled for attribute names, `true: enable, false: disable` |
+| attr-value-double-quotes | Whether the attribute value must be enclosed in double quotes, `true: enable, false: disable` |
+| doctype-first | Whether Doctype must be the first line of the HTML document, `true: enable, false: disable` |
+| tag-pair | Whether tags must be paired, `true: enable, false: disable` |
+| spec-char-escape | Whether special characters must be escaped, `true: enable, false: disable` |
+| id-unique | Whether the ID attribute must be unique, `true: enable, false: disable` |
+| src-not-empty | Whether the src attribute is empty, `true: enable, false: disable` |
+| attr-no-duplication: | In the same tag, whether the attribute value cannot be repeated, `true: enable, false: disable` |
   
-详细的配置说明可以参考[options](https://github.com/htmlhint/HTMLHint/wiki/Usage)
+Detailed configuration instructions can refer to [htmlhint options](https://github.com/htmlhint/HTMLHint/wiki/Usage)
 
-## 如何增加其它选项？
+## How to add other options？
 
-修改.htmlhintrc文件，添加选项，比如: 
+Modify the .htmlhintrc file and add options, such as:
 
 ```json
 
   {
-    "attr-value-not-empty": true,     //属性值不可为空
-    "tag-self-close": true,           //标签必须自封闭
-    "title-require": true,            //title标签必须出现在 head 标签中
-    "inline-style-disabled": false,   //可以使用行内样式
-    "id-class-ad-disabled": true,     //ID和 Class一定不可使用ad关键词,使用ad关键词的ID或Class，会被广告拦截软件屏蔽
-    "attr-unsafe-chars": true,        //script标签不该使用在head标签
+    "attr-value-not-empty": true,     //Property value cannot be empty
+    "tag-self-close": true,           //The label must be self-sealing
+    "title-require": true,            //The title tag must appear in the head tag
+    "inline-style-disabled": false,   //Can use inline style
+    "id-class-ad-disabled": true,     //ID and Class must not use ad keywords. ID or Class using ad keywords will be blocked by ad blocking software
   }
 
 ```
