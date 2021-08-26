@@ -20,6 +20,8 @@
     * [Git MacOSX](/Tutorial/SourceControl/Git/MacOSX.md)
     * [SVN Windows](/Tutorial/SourceControl/SVN/Windows.md)
     * [SVN MacOSX](/Tutorial/SourceControl/SVN/MacOSX.md)
+* Other
+    * [Font Setting](/Tutorial/settings/font.md)
 * [Crash Reporter](/Tutorial/CrashReporter.md)
 <div class="contact-box">
   <a href="https://www.dcloud.io/hbuilderx.html" target="_blank" class="contact-item">
