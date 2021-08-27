@@ -1,30 +1,34 @@
-### 简介
+# validate-stylelint
 
-validate-stylelint, 用于校验css、less、scss的exex语法。
+## Introduction
 
-此插件，需要到[插件市场](https://ext.dcloud.net.cn/plugin?name=validate-stylelint)安装。
+validate-stylelint, used to verify the syntax of `css`, `less`, `scss`.
 
-### 配置文件
+This plugin needs to be installed at [HBuilderX Plugin Market](https://ext.dcloud.net.cn/plugin?name=validate-stylelint).
 
-菜单【设置】-> 【插件配置】-> 【stylelint】，点击`.stylelintrc.js`, 即可打开配置文件。
+## Configuration file
+
+Menu [Settings] -> [Plugin Configuration] -> [stylelint], click on `.stylelintrc.js` to open the configuration file.
   
 <img src="/static/snapshots/tutorial/stylelint.png" />
 
-## 规则配置格式
+## Rule configuration
 
-stylelint有上百条规则，可以分为三类：
-- 用于校对风格的规则 （主要针对空格（比如说冒号附近的空格）、换行、缩进等等）
-- 用于判别代码可维护性的规则 （判断在CSS选择器中是否有使用某个ID，或者在某条声明当中是否应用了!important关键词）
-- 用于判断代码错误的规则 （检测错误的HEX颜色写法或者某条简写属性是否会覆盖其他的声明语句）
+There are hundreds of rules in stylelint, which can be divided into three categories:
 
-规则属性是一个对象，键是规则的名称，值是规则配置。每个规则配置符合下列格式之一：
-- 单个值（primary option）
-- 一个有两个值的数组（[primary option,secondary option]）
-- null (关闭规则)
+- `Rules for proofreading style` (mainly for spaces (such as spaces near colons), line breaks, indentation, etc.)
+- `Rules for judging the maintainability of the cod`e (judging whether a certain ID is used in the CSS selector, or whether the !important keyword is applied in a statement)
+- `Rules for judging code errors` (check whether the wrong HEX color writing or whether a certain abbreviated attribute will cover other declaration statements)
 
-## 增加规则
+The rule attribute is an object, the key is the name of the rule, and the value is the rule configuration. Each rule configuration conforms to one of the following formats:
 
-修改.stylelintrc.js文件，添加选项，比如: 
+- `Single value` (primary option)
+- `An array with two values` ([primary option,secondary option])
+- `null` (close rule)
+
+## Add rules
+
+Modify the `.stylelintrc.js` file and add options:
 
 ```javascript
 
@@ -32,8 +36,8 @@ stylelint有上百条规则，可以分为三类：
     "extends": "stylelint-config-recommended",
     "rules":{
         "unit-no-unknown": false,
-        "indentation": "tab",       //缩进
-        "unit-no-unknown": true,    //禁止未知单位
+        "indentation": "tab",       
+        "unit-no-unknown": true,
         "color-hex-case": [
           "lower", {
           "message": "Lowercase letters are easier to distinguish from numbers"
@@ -47,8 +51,6 @@ stylelint有上百条规则，可以分为三类：
 
 ```
 
-## 更多配置规则
+## More configuration rules
 
-详细的配置说明可以参考
-  - [stylelint官网](https://stylelint.io/user-guide/rules/)
-  - [GitHub styleline](https://github.com/stylelint/stylelint/blob/master/docs/user-guide/rules.md)
+Detailed configuration instructions: [https://stylelint.io](https://stylelint.io/user-guide/rules/)

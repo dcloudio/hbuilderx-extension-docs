@@ -21,8 +21,9 @@
     * [SVN Windows](/Tutorial/SourceControl/SVN/Windows.md)
     * [SVN MacOSX](/Tutorial/SourceControl/SVN/MacOSX.md)
 * Extension
-    * [Formator Prettier](/Tutorial/extension/prettier.md)
     * [validate-html](/Tutorial/extension/validate-html.md)
+    * [validate-stylelint](/Tutorial/extension/validate-stylelint.md)
+    * [Formator Prettier](/Tutorial/extension/prettier.md)
 * Other
     * [Font Setting](/Tutorial/settings/font.md)
 * [Crash Reporter](/Tutorial/CrashReporter.md)
