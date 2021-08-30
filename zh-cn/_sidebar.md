@@ -32,6 +32,7 @@
     * [代码助手](/Tutorial/Language/CodeAssistant.md)
     * [代码块](/Tutorial/Language/Snippets.md)
     * [vue](/Tutorial/Language/vue.md)
+    * [vue3](/Tutorial/Language/vue-next.md)
     * [vue doc](/Tutorial/Language/vuedoc.md)
     * [Emmet](/Tutorial/Language/emmet.md)
     * [JSON](/Tutorial/Language/json.md)
