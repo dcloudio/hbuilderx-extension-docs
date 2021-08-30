@@ -29,7 +29,7 @@ vue3推荐使用的setup语法糖支持也完全支持
 <img src="/static/snapshots/vue_next/6.jpg" style="zoom: 30%;border: 1px solid #eee;" />
 
 ## template内的变量、方法
-在data、props和setup中定义的变量以及methods和setup内定义的函数都能在template中提示和转到定义。
+在data、props和setup中定义的变量以及methods和setup内定义的函数都能在template中提示和转到定义(Alt+click)。
 
 <img src="/static/snapshots/vue_next/7.jpg" style="zoom: 30%;border: 1px solid #eee;" />
 
