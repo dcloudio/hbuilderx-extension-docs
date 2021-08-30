@@ -38,7 +38,7 @@
     * [MarkDown](/Tutorial/Language/markdown.md)
 * App開發
     * [真機運行常見問題](/Tutorial/App/PhoneDebugging.md)
-    * [安裝模擬器](/Tutorial/App/installSimulator.md)
+    * [安裝配置模擬器](/Tutorial/App/installSimulator.md)
     * [Android自定義渠道包](/Tutorial/App/AndroidChannel.md)
     * [安心打包使用指南](/Tutorial/App/SafePack.md)
     * [iOS安心打包證書安裝](/Tutorial/App/iosSafePack.md)
