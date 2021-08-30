@@ -14,9 +14,10 @@
     * [項目](/Tutorial/project.md)
     * [插件安裝](/Tutorial/PluginsInstall)
 * 進階
+    * [高效极客技巧](/Tutorial/UserGuide/skill.md)
     * [跳轉/轉到定義](/Tutorial/UserGuide/goto.md)
-    * [選擇](/Tutorial/UserGuide/selection.md)
     * [查找/替換](/Tutorial/UserGuide/find.md)
+    * [折叠](Tutorial/UserGuide/fold.md)
     * [格式化](/Tutorial/UserGuide/format.md)
     * [語法校驗](/Tutorial/UserGuide/SyntaxCheck.md)
     * [內置瀏覽器](/Tutorial/UserGuide/built-in-browser.md)
