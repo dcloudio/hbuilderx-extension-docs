@@ -6,8 +6,10 @@
         <title>HBuilderX 文档</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <meta name="description" content="HBuilderX：极客开发工具, HBuilderX用户文档和插件开发文档">
-        <meta name="keywords" content="DCloud,数字天堂,数字天堂网络,数字天堂（北京）网络技术有限公司,HBuilder,HBuilderX Document,Doc,CLI,HBuilderX教程,使用文档,HX,HBX,HBuilderX插件开发指南,插件开发,插件,插件市场,插件开发指南,插件API,HBuilderX API,Extension API">
-        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="keywords"
+            content="DCloud,数字天堂,数字天堂网络,数字天堂（北京）网络技术有限公司,HBuilder,HBuilderX Document,Doc,CLI,HBuilderX教程,使用文档,HX,HBX,HBuilderX插件开发指南,插件开发,插件,插件市场,插件开发指南,插件API,HBuilderX API,Extension API">
+        <meta name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <link rel="shortcut icon" type="image/x-icon" href="//hx.dcloud.net.cn/static/favicon/favicon.png">
         <link rel="stylesheet" href="/static/vue.css">
         <link rel="stylesheet" href="/static/index.css?v=20210324161500">
@@ -16,128 +18,107 @@
     <body>
         <div id="app">Please wait...</div>
         <script>
-            // docsify config start
-            window.$docsify = {
-              alias: {
+            // 获取浏览器语言
+            var lan = (navigator.systemLanguage || navigator.language).toLowerCase();
+
+            try{
+                if (lan.substr(0, 2) == 'zh') {
+                    lan = "zh-cn";
+                    if (!["zh", "zh_cn", "zh-cn", "zh-hans"].includes(lan)) {
+                        lan = "zh-hant";
+                    };
+                } else {
+                    lan = "en";
+                };
+            }catch(e){
+                lan = "zh-cn";
+            };
+
+            var user_set_language = getCookie("user_set_language");
+            if (["en","zh-cn", "zh-hant"].includes(user_set_language)) {
+                lan = user_set_language;
+            };
+
+            // 以防万一，获取的语言没有相应的目录
+            if (!["en","zh-cn", "zh-hant"].includes(lan)) {
+                lan = 'zh-cn';
+            };
+            var Search = lan.includes('zh') ? "搜索" : "Search";
+            var basePath = `/${lan}/`;
+            var loadSidebar = true;
+            var loadNavbar = true;
+            let alias = {
                 '/.*/_navbar.md': '/_navbar.md',
                 '/(.*)/.*/_sidebar.md': '/$1/_sidebar.md',
                 '/Tutorial/_sidebar.md': '/_sidebar.md',
-              },
-              name: 'extension-docs',
-              // TODO 如需提交,必须改为 history 模式
-              routerMode: 'history',
-              // routerMode: 'hash',
-              repo: false,
-              coverpage: false,
-              loadSidebar: true,
-              loadNavbar: true,
-              auto2top: true,
-              mdCache: 7200000,
-              search: {
-                maxAge: 7200000,
-                paths: [
-                  '/',
-                  '/Tutorial/startup',
-                  '/Tutorial/windows_install',
-                  '/Tutorial/mac_install',
-                  '/Tutorial/uninstall',
-                  '/Tutorial/userinterface',
-                  '/Tutorial/StartedTutorial',
-                  '/Tutorial/Other/ProjectType',
-                  '/Tutorial/setting',
-                  '/Tutorial/themes',
-                  '/Tutorial/keybindings',
-                  '/Tutorial/project',
-                  '/Tutorial/UserGuide/format',
-                  '/Tutorial/UserGuide/editorconfig',
-                  '/Tutorial/UserGuide/externalCommands',
-                  '/Tutorial/extension/validate-stylelint',
-                  '/Tutorial/extension/validate-html',
-                  '/Tutorial/extension/eslint-js',
-                  '/Tutorial/extension/eslint-vue',
-                  '/Tutorial/extension/sass',
-                  '/Tutorial/extension/ftp',
-                  '/Tutorial/extension/markdown_share',
-                  '/ExtensionDocs/Api/README',
-                  '/ExtensionDocs/ContributionPoints/README',
-                  '/ExtensionDocs/manifest',
-                  '/ExtensionDocs/activation_event',
-                  '/ExtensionTutorial/README',
-                  '/ExtensionTutorial/HowToInstall',
-                  '/ExtensionTutorial/HowToPublish',
-                  '/ExtensionTutorial/menus',
-                  '/ExtensionTutorial/commands',
-                  '/ExtensionTutorial/extension',
-                  '/ExtensionTutorial/firstExtension',
-                  '/ExtensionTutorial/texteditor',
-                  '/ExtensionTutorial/validations',
-                  '/ExtensionTutorial/views',
-                  '/Tutorial/App/PhoneDebugging',
-                  '/Tutorial/App/SafePack',
-                  '/Tutorial/App/iosSafePack',
-                  '/Tutorial/Language/Overview',
-                  '/Tutorial/Language/vuedoc',
-                  '/Tutorial/Language/Snippets',
-                  '/Tutorial/Language/emmet',
-                  '/Tutorial/Language/vue',
-                  '/Tutorial/UserGuide/SyntaxCheck',
-                  '/Tutorial/Language/CodeAssistant',
-                  '/Tutorial/App/AndroidChannel',
-                  '/Tutorial/App/hosting',
-                  '/Tutorial/settings/font',
-                  '/Tutorial/settings/px-upx',
-                  '/Tutorial/UserGuide/built-in-explorer',
-                  '/Tutorial/UserGuide/multi-window',
-                  '/Tutorial/Security',
-                  '/Tutorial/PluginsInstall',
-                  '/Tutorial/UserGuide/LocalHistory',
-                  '/Tutorial/UserGuide/built-in-browser',
-                  '/Tutorial/UserGuide/goto',
-                  '/Tutorial/Language/json',
-                  '/Tutorial/UserGuide/find',
-                  '/Tutorial/UserGuide/selection',
-                  '/Tutorial/UserGuide/LocalFileDiff',
-                  '/Tutorial/Questions/WindowsStart',
-                  '/Tutorial/Other/themes_param',
-                  '/Tutorial/Other/command',
-                  '/Tutorial/Other/health',
-                  '/Tutorial/Other/keybindings_idea',
-                  '/Tutorial/Language/markdown',
-                  '/Tutorial/SourceControl/Git/Windows',
-                  '/Tutorial/SourceControl/Git/README',
-                  '/Tutorial/SourceControl/Git/MacOSX',
-                  '/Tutorial/SourceControl/SVN/Windows',
-                  '/Tutorial/SourceControl/SVN/MacOSX',
-                  '/Tutorial/extension/prettier',
-                  '/Tutorial/faq/pluginInstall',
-                  '/Tutorial/faq/devtools',
-                  '/Tutorial/HistoryVersion',
-                  '/cli/README',
-                  '/cli/pack',
-                  '/cli/project',
-                  '/cli/user',
-                  '/cli/uniCloud',
-                  '/cli/uniCloud-hosting',
-                  '/cli/file',
-                  '/cli/env'
-                ],
-                placeholder: '搜索',
-                noData: '没有结果',
-                depth: 6
-              },
-              maxLevel: 4,
-              subMaxLevel: 3,
-              banner: ['/case'],
-              plugins: [
-                function(hook, vm) {
-                  hook.afterEach(function(html) {
-                    var url = '//github.com/dcloudio/hbuilderx-extension-docs/tree/master' + vm.route.file;
-                    return html + '<hr align=center color=#987cb9 size=1>发现错误？想参与编辑？<a href=' + url + ' target=_blank>在 GitHub 上编辑此页面！</a>';
-                  });
-                }
-              ]
             };
-            // docsify config end
+            console.log('欢迎使用HBuilderX');
+            console.log('------- HBuilderX文档 语言设置 -------', basePath, lan);
+            // docsify config start
+            window.$docsify = {
+                alias: alias,
+                basePath: basePath,
+                name: 'extension-docs',
+                // TODO 如需提交,必须改为 history 模式
+                routerMode: 'history',
+                // routerMode: 'hash',
+                repo: false,
+                coverpage: false,
+                loadSidebar: loadSidebar,
+                loadNavbar: loadNavbar,
+                auto2top: true,
+                mdCache: 7200000,
+                search: {
+                    maxAge: 7200000,
+                    paths: 'auto',
+                    placeholder: {
+                        '/': Search,
+                    },
+                    noData: '没有结果',
+                    depth: 6
+                },
+                maxLevel: 4,
+                subMaxLevel: 3,
+                banner: ['/case'],
+                notFoundPage: {
+                    '/': '_404.md'
+                },
+                plugins: [
+                    function(hook, vm) {
+                        hook.afterEach(function(html) {
+                            var url = '//github.com/dcloudio/hbuilderx-extension-docs/tree/master' + vm
+                                .route.file;
+                            return html + '<hr align=center color=#987cb9 size=1>发现错误？想参与编辑？<a href=' +
+                                url + ' target=_blank>在 GitHub 上编辑此页面！</a>';
+                        });
+                    }
+                ]
+            };
+
+            // 切换语言
+            function setLang(param) {
+                lan = param;
+                setCookie("user_set_language", param);
+                location.reload();
+            };
+
+            // 设置cookies
+            function setCookie(name, value) {
+                var Days = 365;
+                var exp = new Date();
+                exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000);
+                document.cookie = name + "=" + escape(value) + ";expires=" + exp.toGMTString();
+            };
+
+            //获取指定名称的cookie的值
+            function getCookie(name) {
+                let arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+                if(arr=document.cookie.match(reg)) {
+                    return unescape(arr[2]);
+                } else {
+                    return null;
+                };
+            };
         </script>
         <script src="/static/docsify.js?v=20210324174000"></script>
         <script src="/static/search.js?v=1586316635415"></script>
@@ -148,46 +129,46 @@
         <script>
             var _hmt = _hmt || [];
             (function() {
-              var hm = document.createElement('script');
-              hm.src = 'https://hm.baidu.com/hm.js?6f4a415d4c67e59e4d5f5e8546092f14';
-              var s = document.getElementsByTagName('script')[0];
-              s.parentNode.insertBefore(hm, s);
+                var hm = document.createElement('script');
+                hm.src = 'https://hm.baidu.com/hm.js?6f4a415d4c67e59e4d5f5e8546092f14';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(hm, s);
 
-              window.addEventListener('click', function(e) {
-                var target = e.target;
-                if (target.className === 'chapter') { //左侧导航的折叠
-                  var chapterParent = target.parentElement;
-                  var summary = localStorage.getItem('summary') ? JSON.parse(localStorage.getItem(
-                    'summary')) : {};
-                  var level = chapterParent.dataset.level;
-                  if (chapterParent.classList.contains('close')) {
-                    summary[level] = false;
-                    chapterParent.classList.remove('close');
-                  } else {
-                    summary[level] = true;
-                    chapterParent.classList.add('close');
-                  }
-                  localStorage.setItem('summary', JSON.stringify(summary));
-                  return;
-                }
-
-                if (target.tagName === 'IMG' && target.className !== 'preview-img') {
-                  var src = target.src,
-                    showImg = true;
-                  while (target && target !== document) {
-                    if (target.tagName == 'A') {
-                      showImg = false;
-                      break;
+                window.addEventListener('click', function(e) {
+                    var target = e.target;
+                    if (target.className === 'chapter') { //左侧导航的折叠
+                        var chapterParent = target.parentElement;
+                        var summary = localStorage.getItem('summary') ? JSON.parse(localStorage.getItem(
+                            'summary')) : {};
+                        var level = chapterParent.dataset.level;
+                        if (chapterParent.classList.contains('close')) {
+                            summary[level] = false;
+                            chapterParent.classList.remove('close');
+                        } else {
+                            summary[level] = true;
+                            chapterParent.classList.add('close');
+                        }
+                        localStorage.setItem('summary', JSON.stringify(summary));
+                        return;
                     }
-                    target = target.parentNode;
-                  }
-                  if (showImg && src) {
-                    var preview = new $docsify.Preview(src);
-                    preview.show();
-                    return;
-                  }
-                }
-              }, true);
+
+                    if (target.tagName === 'IMG' && target.className !== 'preview-img') {
+                        var src = target.src,
+                            showImg = true;
+                        while (target && target !== document) {
+                            if (target.tagName == 'A') {
+                                showImg = false;
+                                break;
+                            }
+                            target = target.parentNode;
+                        }
+                        if (showImg && src) {
+                            var preview = new $docsify.Preview(src);
+                            preview.show();
+                            return;
+                        }
+                    }
+                }, true);
 
             })();
         </script>

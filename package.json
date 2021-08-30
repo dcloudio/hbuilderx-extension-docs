@@ -1,31 +1,31 @@
 {
-  "name": "native-docs",
-  "version": "1.0.0",
-  "description": "uni 小程序 sdk 文档",
-  "main": "index.js",
-  "dependencies": {},
-  "devDependencies": {
-    "docsify-server-renderer": "4.7.1",
-    "marked": "^0.5.0",
-    "prismjs": "^1.15.0",
-    "uglify-js": "^3.8.1",
-    "uglifycss": "0.0.29"
-  },
-  "scripts": {
-    "serve": "node ./scripts/preview.js",
-    "dev": "node service",
-    "start": "pm2 start service.js --name native-docs",
-    "mini": "node ./scripts/compress.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dcloudio/native-docs.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/dcloudio/native-docs/issues"
-  },
-  "homepage": "https://github.com/dcloudio/native-docs#readme"
+    "name": "hbuilderx-extension-docs",
+    "version": "1.0.0",
+    "description": "HBuilderX-Docs",
+    "main": "index.js",
+    "dependencies": {},
+    "devDependencies": {
+        "docsify-server-renderer": "4.7.1",
+        "marked": "^0.5.0",
+        "prismjs": "^1.15.0",
+        "uglify-js": "^3.8.1",
+        "uglifycss": "0.0.29"
+    },
+    "scripts": {
+        "serve": "node ./scripts/preview.js",
+        "dev": "node service",
+        "start": "pm2 start service.js --name hbuilderx-extension-docs",
+        "mini": "node ./scripts/compress.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/dcloudio/nhbuilderx-extension-docs.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/dcloudio/hbuilderx-extension-docs/issues"
+    },
+    "homepage": "https://github.com/dcloudio/hbuilderx-extension-docs#readme"
 }
