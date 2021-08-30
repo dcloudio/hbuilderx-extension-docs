@@ -43,6 +43,7 @@
     * [安心打包使用指南](/Tutorial/App/SafePack.md)
     * [iOS安心打包证书安装](/Tutorial/App/iosSafePack.md)
     * [前端网页托管](/Tutorial/App/hosting.md)
+    * [Chrome调试 5+ Android应用](Tutorial/App/use-chrome-to-debug-android-apps.md)
 * 版本控制
     * [Git 介绍](/Tutorial/SourceControl/Git/README.md)
     * [Git重大更新](/Tutorial/SourceControl/git.md)
