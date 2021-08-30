@@ -1,4 +1,7 @@
 * [Docs](/README.md)
+* [Extension-Tutorial](/ExtensionTutorial/README.md)
+* [API](/ExtensionDocs/Api/README.md)
+* [CLi](/cli/README.md)
 
 <ul class="nav-href">
     <li class="dropdown">
