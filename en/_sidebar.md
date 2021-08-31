@@ -9,6 +9,8 @@
     * [StartedTutorial](/Tutorial/StartedTutorial.md)
     * [Keybindings](/Tutorial/keybindings.md)
     * [Plugins Install](Tutorial/PluginsInstall.md)
+* User Guide
+    * [Skill](/Tutorial/UserGuide/skill.md)
 * Languages
     * [Overview](/Tutorial/Language/Overview.md)
     * [CodeAssistant](/Tutorial/Language/CodeAssistant.md)

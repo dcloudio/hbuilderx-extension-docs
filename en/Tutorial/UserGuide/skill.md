@@ -1,148 +1,153 @@
-# 高效极客技巧
+# Effective geek skills
 
-惯常来讲，ide和编辑器是2个产品类别。
-ide侧重于某种语言的语法分析、提示、转到定义、调试。一般比较厚重。
-而编辑器则是对通用文本处理，提供更高效的通用文本处理能力，比较轻量，但语法分析能力不足。
-上一代HBuilder是一个典型的IDE，语言处理非常强大，但在字处理、轻量方面客观讲不如优秀的编辑器。
-而新的HBuilderX，定位是ide和编辑器的完美结合，那么HBuilderX就会提供轻量且世界顶级的高效字处理能力。
-看完这些，你一定会惊叹，原来极客是这么玩的。
+Generally, ide and editor are two product categories.
 
-### 免拖动选择
+IDE focuses on the grammatical analysis, prompting, transition to definition, and debugging of a certain language. Generally heavier.
 
-用鼠标拖着选中一片文本，是一个很容易让食指抽筋的操作。尤其是触摸板更痛苦。但是背诵很多相关的快捷键也一样痛苦。
+The editor is for general text processing, providing more efficient general text processing capabilities, relatively lightweight, but insufficient grammatical analysis capabilities.
 
-HBuilderX提供了更友好方式：`智能双击`和`Ctrl+扩大选区`。
+HBuilderX, positioning is the perfect combination of ide and editor, then HBuilderX will provide lightweight and world-class efficient word processing capabilities.
 
-### 智能双击
+After reading these, you will be amazed, it turns out that geeks play like this.
 
-在HBuilderX中，但凡特殊点的字符，都能智能双击。
+### Drag-free selection
 
-- 双击引号/括号内侧，是选中引号/括号内的内容
-- 双击逗号两侧，是选择逗号前一段或后一段
-- 双击行尾，是选中该行(不含回车符)
-- 双击连词符（-_）选中整个词
-- 双击折叠行首内容开头，选择折叠段落
-- 双击行首缩进，选择相同缩进的段落
-- 双击列表符号，选择列表段落
-- 双击Tag开头或结尾，选择整段Tag
-- 双击属性赋值等号=，选择Html属性
-- 双击if、function等关键字，选择整段包围区域
-- 双击分号，选择js等语言的;分号前段落
-- 双击css类名左侧，选择Css类
-- 双击注释符选择注释区域
-- 双击#选择markdown标题段落
-- 双击语法定义符开头选择markdown图片、超链接、加粗、倾斜、代码等语法区
-- [了解JSON智能双击](/Tutorial/Language/json?id=智能双击，快速选中数组或键值对)
+Dragging and selecting a piece of text with the mouse is an easy operation to make the index finger cramp. Especially the touchpad is more painful. But reciting many related shortcuts is just as painful.
 
-下面是一个gif图例，双击选中tag和包围父tag
+HBuilderX provides a more friendly way: `smart double-click` and `Ctrl+ Enlarge selection`.
 
-1. 双击div tag的首或尾可以选中这个tag，即开头的<左侧或结尾的>右侧。当然双击if、双击缩进符、双击括号引号内侧...很多位置都可以通过智能双击选中。具体见HBuilder的选择菜单。
-2. 按Ctrl+]包围，就可以在这个选区首尾加父标签，同时闪烁光标。如果在js里，按下Ctrl+]不是包围tag，而是包围if、for等函数库，方便快速把一段代码放入if块中。
-3. 输入div即可在首尾添加包围标签
+### Smart double-click
+
+In HBuilderX, any characters with special points can be double-clicked intelligently.
+
+- Double-click the inside of `quotation marks/brackets` to select the content in `quotation marks/brackets`
+- Double-click on both sides of the `comma` to select a paragraph before or after the comma
+- Double-click the `end of line` to select the line (without carriage return)
+- Double-click the `conjunction symbol` (-_) to select the entire word
+- Double-click the beginning of the content at the beginning of the collapsed line and select the collapsed paragraph
+- Double-click `line beginning indentation` to select the same indented paragraph
+- Double click `list symbol` to select the list paragraph
+- Double-click the beginning or end of `Tag` to select the entire tag
+- Double-click the attribute assignment equal sign `=`, select the Html attribute
+- Double-click on keywords such as `if`, `function`, etc. to select the entire enclosing area
+- Double click `semicolon`, select js and other languages; paragraph before semicolon
+- Double-click on the left side of the `css` class name and select the Css class
+- Double click `Comment symbol` to select the comment area
+- Double click `#` to select markdown title paragraph
+- Double-click the beginning of the grammar delimiter to select markdown images, hyperlinks, bold, italic, code and other grammatical areas
+- [JSON smart double-click](/Tutorial/Language/json?id=Smart double-click, quickly select an array or key-value pair)
+
+The following is a gif legend, double-click to select the tag and surround the parent tag
+
+1. Double-click the beginning or end of `div tag` to select this `tag`, which is the left side of the beginning `<` or the right side of the end `>`. Of course, double-click `if`, double-click `indentation`, double-click `inside bracket quotation mark`...many positions can be selected by smart double-clicking. See the selection menu of HBuilder for details.
+2. Press `Ctrl+]` to surround, you can add parent tags at the beginning and end of this selection, and the cursor blinks at the same time. If you are in js, pressing `Ctrl+]` does not enclose the tag, but encloses libraries such as `if`, `for`, etc., so that you can quickly put a piece of code into the `if` block.
+3. Enter `div` to add surrounding tags at the beginning and end
 
 <img src="/static/snapshots/tutorial/dbclick.gif" />
 
-### 多光标
+### Multi-cursor
 
 <img src="/static/snapshots/tutorial/more_cursor.gif" />
 
 
-### 扩大选区
+### Expand the constituency
 
-`=`是`+`的默认键位置，所以`Ctrl+=`其实就是`Ctrl`键和`+`号一起按下。
+`=` is the default key position of `+`, so `Ctrl+=` is actually pressing the `Ctrl` key and the `+` sign together.
 
-在HBuilderX里可以智能的判断选区范围，持续扩大选区，无鼠标快速选中你需要的选区。
+In HBuilderX, you can intelligently judge the selection area, continue to expand the selection area, and quickly select the selection area you need without the mouse.
 
 <img src="/static/snapshots/tutorial/selection_expand.gif" />
 
 
-### 反包围
+### Anti-encirclement
 
-1. 双击tag p开头，选中该tag。
-2. 按反包围`Ctrl+Shift+]`，可去掉tag p并自动处理子节点的缩进。
+1. Double-click the beginning of tag p to select the tag.
+2. Press "Ctrl+Shift+]" to remove the tag p and automatically process the indentation of the child nodes.
 
 <img src="/static/snapshots/tutorial/selection_1.gif" />
 
-这里多提一句HBuilderX的快捷键理念，就是符号化，而不是字母化。很多工具的快捷键都是控制键+功能英文单词中的一个字母，这个是极难记忆的。
+One more thing to mention here is HBuilderX's concept of shortcut keys, which is symbolization, not alphabetization. The shortcut keys of many tools are control keys + function a letter in English words, which is extremely difficult to remember.
 
-符号化让快捷键的记忆变简单，比如`Ctrl+]`是包围。
+Symbolization makes it easier to memorize shortcut keys, such as `Ctrl+]` for enclosing.
 
-而反操作或增强操作一般是加Shift，比如Ctrl+Shift+]是反包围。
+The reverse operation or enhancement operation is generally to add `Shift`, for example, `Ctrl+Shift+]` is anti-enclosure.
 
-### 选中相同语法词及跳过某词
+### Select the same grammatical word and skip a word
 
-1. 下图中，使用普通的选择相同词Ctrl+e(mac是Cmd+d)，会把所有div都选中。但使用Ctrl+Shift+e（mac是Cmd+Shift+d），会智能识别语法，剔除不相干的词。
-2. 下图按下选择相同语法词，同时选中tag首尾的div，而不会选中子节点的div。
-3. 然后就可以方便的将原div改名为p
+1. In the figure below, using the normal selection of the same word `Ctrl+e` (MacOSX: `Cmd+d`), all divs will be selected. But using `Ctrl+Shift+e` (MacOSX: `Cmd+Shift+d`), it will intelligently recognize the grammar and eliminate irrelevant words.
+2. In the following figure, press to select the same grammatical word, and at the same time select the `div` at the beginning and end of the `tag`, but not the div of the child node.
+3. Then you can easily rename the original `div` to `p`
 
 <img src="/static/snapshots/tutorial/selection_2.gif" />
 
-备注：
-- 如果想选择配对括号，靠相同词是不行的。选中相同语法词会选中匹配的2个左右括号
-- 批量选中所有相同词是Ctrl+Alt+e(mac是ctrl+alt+d)
+Remark:
+-If you want to choose matching parentheses, you cannot rely on the same words. Selecting the same grammatical word will select the matching 2 left and right brackets
+-Batch selection of all the same words is `Ctrl+Alt+e` (MacOSX: `ctrl+alt+d`)
 
-### 选择相同语法词或配对符号
+### Select All Reference Symbols
 
-菜单【选择】【选择相同语法词或配对符号】
+Menu【Select】【Select All Reference Symbols】
 
-MacOSX快捷键：command+shift+d；Windows快捷键：ctrl+shift+e
+MacOSX shortcut keys：`command+shift+d`
+
+Windows shortcut keys：`ctrl+shift+e`
 
 <img src="/static/snapshots/tutorial/renameTag.gif" style="zoom: 50%;border: 1px solid #eee; border-radius: 5px;" >
 
-### 交换选区内容
+### swap selection content
 
-当需要交互2个选区的内容时，选中a、剪切、点b前面、粘贴、选中b、找到之前a的位置点击、粘贴...这么长的操作太低效。
+When you need to interact with the contents of two selection areas, select a, cut, click in front of b, paste, select b, find the position of a before, click, paste... Such a long operation is too inefficient.
 
-来看HBuilderX的`Ctrl+Shift+x`交互选区，也就是Ctrl+x的增强版。
+Let’s take a look at HBuilderX’s `Ctrl+Shift+x` interactive selection, which is an enhanced version of Ctrl+x.
 
-1. 双击第1个style属性后的引号内侧，可选中引号内容。
-2. 按下Ctrl后继续双击第2个style属性后的引号内侧，可选中2个引号内的选区。
-3. 按下Ctrl+Shift+x，交换style属性的内容。
+1. Double-click the inside of the quotation mark after the first style attribute to select the content of the quotation mark.
+2. After pressing Ctrl, continue to double-click the inside of the quotation mark after the second style attribute to select the selection within the 2 quotation marks.
+3. Press `Ctrl+Shift+x` to exchange the contents of the style attribute.
 
 <img src="/static/snapshots/tutorial/selection_swap_1.gif" />
 
-如果不选择内容，光标放置到2行，可直接交换这2行的内容，如下图
+If you don’t select the content, place the cursor on two lines, and you can directly exchange the content of these two lines
 
 <img src="/static/snapshots/tutorial/selection_swap_2.gif" />
 
 
-### 撤销最后一个多选区或多光标
+### Undo the last multi-selection area or multi-cursor
 
-选区选多了或选错了，不用担心要重头选，Ctrl+Shift+z不是撤销编辑内容，而是撤销最后一个选区。
+If you have selected too many or wrong selections, don’t worry about re-selecting. `Ctrl+Shift+z` is not to undo the editing content, but to undo the last selection.
 
-1. 双击选中class
-2. 按`Ctrl+e`选中相同词
-3. 按`Ctrl+Shift+z`，不再选中最后一个词。
+1. Double click to select class
+2. Press `Ctrl+e` to select the same word
+3. Press `Ctrl+Shift+z`, no longer select the last word.
 
 <img src="/static/snapshots/tutorial/selection_cancel.gif" />
 
-如果多选了一个词，还可以点`Ctrl+鼠标右键`取消一个选区。
+If you select one more word, you can click `Ctrl+right mouse button` to cancel a selection.
 
-跳过当前词选下一个词,`Alt+Shift+e`(mac是`ctrl+shift+d`)
+Skip the current word and select the next word, `Alt+Shift+e` (mac is `ctrl+shift+d`)
 
 
-### 批量合并行
+### Join Lines
 
-下图示例，是把css合并为一行时的快捷操作
+The example is a shortcut operation when combining css into one line
 
 <img src="/static/snapshots/tutorial/selection_merge.gif" />
 
-1. 双击`{`内侧选中class
-2. 按`Ctrl+双击`选中另一个class
-3. 按反格式化`Ctrl+Shift+k`，可以把每个css的区块代码都合并为一行
-4. `Ctrl+k`是格式化代码，那么`Ctrl+Shift+k`就是合并为一行。
+1. Double-click inside `{` to select class
+2. Press `Ctrl+double-click` to select another class
+3. Press the reverse format `Ctrl+Shift+k` to merge each css block code into one line
+4. `Ctrl+k` is the formatting code, then `Ctrl+Shift+k` is merged into one line.
 
-### 同时注释if段首尾
+### At the same time annotate the beginning and end of the if paragraph
 
-if块的调整很常见，除了包围、反包围外，常用操作还有同时注释掉if段首尾。
+The adjustment of if block is very common. In addition to enclosing and deenclosing, common operations include commenting out the beginning and end of if paragraphs at the same time.
 
-1. 双击if选中if代码块
-2. 按`Ctrl+\`在选区首尾加光标，变成多光标模式
-3. 按`Ctrl+/`注释掉选区首尾行
+1. Double-click `if` to select the `if` code block
+2. Press `Ctrl+\` to add the cursor at the beginning and end of the selection to change to multi-cursor mode
+3. Press `Ctrl+/` to comment out the first and last lines of the selection
 
 <img src="/static/snapshots/tutorial/selection_if.gif" />
 
-### 其它技巧
-- [转到定义](/Tutorial/UserGuide/goto?id=转到定义)
-- [折叠](Tutorial/UserGuide/fold)
-- [大纲](/Tutorial/userinterface?id=文档结构图)
+### Other
+- [Go to Definition](/Tutorial/UserGuide/goto?id=转到定义)
+- [Fold](Tutorial/UserGuide/fold)
+- [Outline](/Tutorial/userinterface?id=文档结构图)
