@@ -38,11 +38,12 @@
     * [MarkDown](/Tutorial/Language/markdown.md)
 * App開發
     * [真機運行常見問題](/Tutorial/App/PhoneDebugging.md)
-    * [安裝模擬器](/Tutorial/App/installSimulator.md)
+    * [安裝配置模擬器](/Tutorial/App/installSimulator.md)
     * [Android自定義渠道包](/Tutorial/App/AndroidChannel.md)
     * [安心打包使用指南](/Tutorial/App/SafePack.md)
     * [iOS安心打包證書安裝](/Tutorial/App/iosSafePack.md)
     * [前端網頁託管](/Tutorial/App/hosting.md)
+    * [Chrome調試 5+ Android應用](Tutorial/App/use-chrome-to-debug-android-apps.md)
 * 版本控制
     * [Git 介紹](/Tutorial/SourceControl/Git/README.md)
     * [Git重大更新](/Tutorial/SourceControl/git.md)

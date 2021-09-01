@@ -8,6 +8,9 @@ We recommend that developers use the vue single file specification to open vue f
 
 > Notes: If the file is not under the project, but a separate file, and the grammar library cannot be mounted, please create a project in the project manager on the left and open the file in the project to experience it.
 
+## Vue3 Support
+HBuilderX has optimized support for vue3 since v3.2.5 (included). See [vue3 support](/Tutorial/Language/vue-next.md) for details.
+
 ## Syntax highlighting
 
 In addition to vue's common syntax highlighting support, HBuilderX also supports various expression syntax, as well as other languages supported by script and style such as less, scss, stylus, typescript and other highlighting, without the need to install plug-ins.
@@ -23,7 +26,7 @@ Write fast and write well.
 
 In addition to the perfect tips, you can also see a clear help description on the right side of the code assistant, explaining the api, and the api link of the vue official website. Click to go directly to the specified page of the vue official website.
  
-Very suitable for learning reference.
+Very suitable for getting start.
 
 <img src="/static/snapshots/vue/1.png" style="zoom: 80%;border: 1px solid #eee;" />
 

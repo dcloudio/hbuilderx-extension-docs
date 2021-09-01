@@ -9,11 +9,14 @@
     * [StartedTutorial](/Tutorial/StartedTutorial.md)
     * [Keybindings](/Tutorial/keybindings.md)
     * [Plugins Install](Tutorial/PluginsInstall.md)
+* User Guide
+    * [Skill](/Tutorial/UserGuide/skill.md)
 * Languages
     * [Overview](/Tutorial/Language/Overview.md)
     * [CodeAssistant](/Tutorial/Language/CodeAssistant.md)
     * [Emmet](/Tutorial/Language/emmet)
     * [Vue](/Tutorial/Language/vue.md)
+    * [Vue3](/Tutorial/Language/vue-next.md)
     * [Vue Doc](/Tutorial/Language/vuedoc.md)
 * Version Control
     * [Git Introduce](/Tutorial/SourceControl/Git/README.md)

@@ -6,6 +6,9 @@ HBuilderX中使用vue，如果是打开vue文件，会自动挂载vue语法库�
 
 > 注意：如果文件不在项目下，而是单独的文件，无法挂载语法库，请在左侧项目管理器建个项目，打开项目里的文件进行体验。
 
+## Vue3 支持
+HBuilderX从v3.2.5(包含)开始优化了对vue3的支持，详见[Vue3支持](/Tutorial/Language/vue-next.md)
+
 ## 语法高亮
 
 除了vue的普通语法高亮支持，HBuilderX还支持各种表达式语法，以及script和style支持的其他语言如less、scss、stylus、typescript等高亮，无需安装插件。

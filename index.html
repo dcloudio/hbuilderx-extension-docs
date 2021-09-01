@@ -86,10 +86,11 @@
                 plugins: [
                     function(hook, vm) {
                         hook.afterEach(function(html) {
-                            var url = '//github.com/dcloudio/hbuilderx-extension-docs/tree/master' + vm
-                                .route.file;
-                            return html + '<hr align=center color=#987cb9 size=1>发现错误？想参与编辑？<a href=' +
-                                url + ' target=_blank>在 GitHub 上编辑此页面！</a>';
+                            var url = '//github.com/dcloudio/hbuilderx-extension-docs/tree/master' + vm.route.file;
+                            if (lan.substr(0, 2) != 'zh') {
+                                return html + '<hr align=center color=#987cb9 size=1>Found mistake? Want to participate in editing?<a href=' +url + ' target=_blank> Edit this page on GitHub</a>' + '<br/><br/><span>HBuilderX plug-in development document, not translated into English, welcome to contribute. <span>' + `<a href="https://github.com/dcloudio/hbuilderx-extension-docs/tree/master/en" target="_blank">Translate this document on github</a>`;
+                            };
+                            return html + '<hr align=center color=#987cb9 size=1>发现错误？想参与编辑？<a href=' +url + ' target=_blank> 在 GitHub 上编辑此页面！</a>' + '<br/><br/><span>HBuilderX插件开发文档尚未翻译，欢迎参与贡献。<span>' + `<a href="https://github.com/dcloudio/hbuilderx-extension-docs/tree/master/en" target="_blank">在 Github 上翻译页面！</a>`;
                         });
                     }
                 ]
