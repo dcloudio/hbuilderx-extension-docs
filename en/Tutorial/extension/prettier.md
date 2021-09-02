@@ -10,6 +10,7 @@ This plugin needs to be downloaded from [HBuilderX Plugin Market](https://ext.dc
 
 Click the menu [Tools] -> [Settings] -> [Plugin Configuration] -> prettier -> prettier.config.js to open the configuration file.
 
+<img src="/static/snapshots/plugins/plugin_prettier.png" style="zoom: 45%; border: 1px solid #eee;border-radius: 20px;"/>
 
 ## Format options
 

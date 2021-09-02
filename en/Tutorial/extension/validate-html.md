@@ -9,6 +9,8 @@ The html syntax verification plug-in needs to be installed in [HBuilderX Plugin 
 
 After the installation is complete, enter [Settings] [Plugin Configuration] [htmlhintrc], and click `htmlhintrc` to configure related rules.
 
+<img src="/static/snapshots/plugins/plugin_setting_en.png" style="zoom: 45%; border: 1px solid #eee;border-radius: 20px;"/>
+
 The option configuration file is `.htmlhintrc`, and the corresponding descriptions of the existing options are as follows:
 
 | Option | Description |

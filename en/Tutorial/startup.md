@@ -6,4 +6,4 @@ After clicking the [Start Experience] button, you will see a "Readme", which bri
 
 To experience HBuilderX, start with a new project.
 
-<img src="/static/snapshots/tutorial/startup.gif" style="zoom: 80%; border:1px solid #eee;" />
+<img src="/static/snapshots/tutorial/startup_en.gif" style="zoom: 80%; border:1px solid #eee;" />

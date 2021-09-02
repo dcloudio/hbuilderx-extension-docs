@@ -6,7 +6,7 @@ After HBuilderX is started, click the menu [Tools] [Plugin Installation] to open
 
 In addition to the plug-in shown in the figure below, other plug-ins，go to[market](https://ext.dcloud.net.cn/?cat1=1&cat2=11&orderBy=TotalDownload) download.
 
-<img src="/static/snapshots/tutorial/plugins_install_1.jpg" style="zoom: 45%;border: 1px solid #eee;border-radius: 20px;"/>
+<img src="/static/snapshots/tutorial/plugins_install_en_1.png" style="zoom: 45%;border: 1px solid #eee;border-radius: 20px;"/>
 
 ### Installed plugin
 
@@ -14,7 +14,7 @@ The installed plug-ins of HBuilderX will be displayed in [Installed plug-ins].
 
 When the server has a high version plug-in, the corresponding plug-in will display the word `upgrade`.
 
-<img src="/static/snapshots/tutorial/plugins_install_2.jpg" style="zoom: 45%;border: 1px solid #eee;border-radius: 20px;"/>
+<img src="/static/snapshots/tutorial/plugins_install_en_2.png" style="zoom: 45%;border: 1px solid #eee;border-radius: 20px;"/>
 
 ### Plug-in market installation
 
