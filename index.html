@@ -24,9 +24,9 @@
             try{
                 if (lan.substr(0, 2) == 'zh') {
                     lan = "zh-cn";
-                    if (!["zh", "zh_cn", "zh-cn", "zh-hans"].includes(lan)) {
-                        lan = "zh-hant";
-                    };
+                    // if (!["zh", "zh_cn", "zh-cn", "zh-hans"].includes(lan)) {
+                    //     lan = "zh-hant";
+                    // };
                 } else {
                     lan = "en";
                 };
@@ -43,7 +43,14 @@
             if (!["en","zh-cn", "zh-hant"].includes(lan)) {
                 lan = 'zh-cn';
             };
-            var Search = lan.includes('zh') ? "搜索" : "Search";
+            // 设置title
+            if (lan.substr(0, 2) != 'zh') {
+                document.getElementsByTagName("title")[0].innerText = 'HBuilderX Doc';
+            };
+
+            // var Search = lan.includes('zh') ? "搜索" : "Search";
+            var Search = "Search";
+            
             var basePath = `/${lan}/`;
             var loadSidebar = true;
             var loadNavbar = true;

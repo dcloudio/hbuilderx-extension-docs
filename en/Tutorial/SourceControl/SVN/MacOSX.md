@@ -21,7 +21,7 @@ which svn
 
 HBuilderX Top menu, 【Tool】-> 【plug-in installation】. Open the plug-in installation window, Find SVN, Click【Install】.
 
-<img src="/static/snapshots/tutorial/source_control/plugin_macosx_en.jpg" style="zoom:40%; border-radius: 20px;border: 1px solid #eee;" />
+<img src="/static/snapshots/tutorial/source_control/plugin_macosx_en.png" style="zoom:40%; border-radius: 20px;border: 1px solid #eee;" />
 
 ## Operation menu
 

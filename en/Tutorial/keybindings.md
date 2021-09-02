@@ -4,7 +4,7 @@ HBuilderX, allows you to perform most tasks directly from the keyboard.
 
 HBuilderX has preset 5 shortcut key schemes, namely: `HBuilderX`、`VS Code`、`Sublime Text`、`IntelliJ Idea / Webstorm`、`Eclipse`
 
-<img src="/static/snapshots/tutorial/keyboard.png" />
+<img src="/static/snapshots/tutorial/keyboard_en.png" style="border: 1px solid #eee;"/>
 
 ## Custom shortcuts
 
