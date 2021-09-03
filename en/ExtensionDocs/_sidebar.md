@@ -1,7 +1,7 @@
 * [Overview](/ExtensionDocs/Api/README.md)
 * [commands](/ExtensionDocs/Api/commands.md)
 * Language
-    * [创建问题列表](/ExtensionDocs/Api/languages/createDiagnosticCollection.md)
+    * [createDiagnosticCollection](/ExtensionDocs/Api/languages/createDiagnosticCollection.md)
 * Window
     * [窗口右下角通知框](/ExtensionDocs/Api/windows/Message.md)
     * [状态栏消息](/ExtensionDocs/Api/windows/StatusBar.md)

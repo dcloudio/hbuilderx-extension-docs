@@ -12,7 +12,7 @@ This page lists all HBuilderX APIs available to extension authors.
 |hx.languages.createDiagnosticCollection()	|Create a diagnostics collection. [Details](/ExtensionDocs/Api/languages/createDiagnosticCollection)		|
 
 #### api:windows
-|API									|Details																											|
+|API									|Description																											|
 |--											|--																												|
 |hx.window.showErrorMessage()				|Show an error message. [Details](/ExtensionDocs/Api/windows/Message?id=showerrormessage)					|
 |hx.window.showInformationMessage()			|Show an information message. [Details](/ExtensionDocs/Api/windows/Message?id=showinformationmessage)					|
@@ -32,7 +32,7 @@ This page lists all HBuilderX APIs available to extension authors.
 |hx.window.registerCustomEditorProvider()	|Register a provider for custom editors for the viewType contributed by the customEditors extension point. [Details](/ExtensionDocs/Api/windows/registerCustomEditorProvider)								|
 
 #### api:workspace
-|API									|Details																										|
+|API									|Description																										|
 |--											|--																											|
 |hx.workspace.applyEdit()					|create, delete, and rename resources as defined by the given workspace edit. [Details](/ExtensionDocs/Api/workspace/applyEdit)							|
 |hx.workspace.copyFileWithPrompt()			|Copy the specified file or folder to the target folder. [Details](/ExtensionDocs/Api/workspace/copyFileWithPrompt)				|
@@ -48,7 +48,7 @@ This page lists all HBuilderX APIs available to extension authors.
 |hx.workspace.onWillSaveTextDocument()		| An event that is emitted when a text document will be saved to disk. [Details](/ExtensionDocs/Api/workspace/onWillSaveTextDocument)							|
 
 #### api:env
-|API				|Details																			|
+|API				|Description																			|
 |--						|--																				|
 | env				| [Details](/ExtensionDocs/Api/env/readme)											|
 | hx.authorize.login()	|[Details](/ExtensionDocs/Api/env/authorize)										|
