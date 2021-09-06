@@ -1,12 +1,12 @@
 # Uri
 
-统一资源访问符
+A universal resource identifier representing either a file on disk or another resource, like untitled resources.
 
 **属性列表**
 
-|属性名		|属性类型	|描述				|
+|Parameter		|Type	|Description				|
 |--			|--			|--					|
-|fsPath		|String		|本地文件地址		|
+|fsPath		|String		|The string representing the corresponding file system path of this Uri.		|
 |authority	|String		|Uri中的authority	|
 |fragment	|String		|Uri中的fragment	|
 |path		|String		|Uri中的path		|
