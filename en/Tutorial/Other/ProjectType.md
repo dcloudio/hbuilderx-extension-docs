@@ -1,25 +1,27 @@
-#### HBuilderX支持的项目运行说明
+#### HBuilderX Project Type
 
-HBuilderX支持多种项目类型，不同类型的项目的运行也是不一样的。如下是各种项目类型可以运行的一览表。
+HBuilderX supports multiple project types, and different types of projects run differently.
 
-|                       | 普通web | uniapp | 5+ App| wap2app | 快应用 | 微信小程序 |
+The following is a list of various project types that can be run.
+
+|                       | web | uniapp | 5+ App| wap2app | QuickApp | WeChat |
 | --------------------- | ------- | ------ | ---------- | ------- | ------ | ---------- |
-| 运行到手机或模拟器 | ×       | √      | √          | √       | √      | ×          |
-| 运行到浏览器           | √       | √      | √          | √       | ×      | ×          |
-| 运行到小程序           | ×       | √      | ×          | ×       | ×      | √          |
-| 运行到终端          | √      | √      | ×          | ×       | ×      | ×          |
+| Run to phone or emulator | ×       | √      | √          | √       | √      | ×          |
+| Run to browser           | √       | √      | √          | √       | ×      | ×          |
+| Run to mini program           | ×       | √      | ×          | ×       | ×      | √          |
+| Run to the terminal          | √      | √      | ×          | ×       | ×      | ×          |
 
-- 如果你的项目类型不对，就无法运行到指定平台
-- 项目类型的判断是根据项目根目录下的文件特征，比如manifest.json。如果导入HBuilderX的项目多了一层父目录，就无法识别正确的项目类型
-- 对项目点右键，可以识别项目类型
-- 可以在菜单工具-项目管理器图标主题中选“HBuilderX图标”，以直观的根据图标显示项目类型
+- If your project type is wrong, you cannot run to the specified platform.
+- The judgment of the project type is based on the file characteristics in the project root directory, such as manifest.json. If the project imported into HBuilderX has one more parent directory, the correct project type cannot be recognized
+- Select the item, click the right button, you can identify the type of Project.
+- Menu tool-"HBuilderX icon" is selected in the icon theme of the project manager, and the project type can be displayed intuitively according to the icon.
 
-如下为不同项目类型的图例：
+As follows, legends of different project types:
 
-<img src="/static/snapshots/tutorial/ProjectType.png" style="zoom: 70%;" />
+<img src="/static/snapshots/tutorial/ProjectType.png" style="zoom: 70%;border: 1px solid #eee;" />
 
-#### 注意事项
+#### Notes
 
-1. markdown文件，可以在HBuilderX的内部浏览器中进行预览
-2. `非项目`文件，即左侧项目管理器中没有项目，单独打开了一个文件，不能运行到手机、小程序、模拟器、浏览器等。（除html外,html可以在内置浏览器打开)
-3.  普通项目和uni-app项目，如果项目下有package.json，比如`vue cli项目`，可以在终端运行
+1. Markdown files can be previewed in the built-in browser of HBuilderX
+2. If a file is opened separately (that is, there is no project in the project manager on the left), it cannot be run on mobile phones, applets, simulators, browsers, etc. (Except html, html can be opened in the built-in browser).
+3.  For web projects and uni-app projects, if there is package.json under the project, such as `vue cli project`, you can run it in the terminal
