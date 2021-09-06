@@ -131,7 +131,7 @@ snippets擴展點可以擴展指定編程語言的代碼塊，可擴展的編程
 
 
 ## viewsContainers
-在窗體左側區域擴展一個和項目管理器同級的tab項，完整的擴展視圖流程參考[如何註冊一個新的視圖？](/views.md)
+在窗體左側區域擴展一個和項目管理器同級的tab項，完整的擴展視圖流程參考[如何註冊一個新的視圖？](/ExtensionTutorial/views)
 
 #### 屬性列表
 |屬性名稱	|屬性類型												|是否必須	|描述															|
@@ -174,7 +174,7 @@ snippets擴展點可以擴展指定編程語言的代碼塊，可擴展的編程
 
 目前支持TreeView和WebView，並且一個視圖容器（viewsContainers）僅支持綁定一個視圖（view）。
 
-在該擴展點聲明後，需要通過API：[window.createTreeView](/ExtensionDocs/Api/README.md#createTreeView)或者[window.createWebView](/ExtensionDocs/Api/README.md#createWebView)實現。完整的擴展視圖流程參考[如何註冊一個新的視圖？](/views.md)
+在該擴展點聲明後，需要通過API：[window.createTreeView](/ExtensionDocs/Api/windows/createTreeView)或者[window.createWebView](/ExtensionDocs/Api/windows/createWebView)實現。完整的擴展視圖流程參考[如何註冊一個新的視圖？](/ExtensionTutorial/views)
 
 ### TreeView 示例
 ```json
@@ -440,7 +440,7 @@ when表達式用來動態的判斷某個條件是否滿足(即表達式的運算
 |activeEditor.file.isProjectFile	|Boolean|當前激活的編輯器打開的文件是否是左側項目管理器下的文件																										|
 |activeEditor.readonly						|Boolean|當前激活的編輯器是否是隻讀																																								|
 |editorTextFocus									|Boolean|當前激活的編輯器是否有焦點																																								|
-|langId														|String	|當前激活的編輯器打開的文檔的編程語言id，完整語言Id列表參見[這裏](/ExtensionDocs/Api/README.md#languageId)|
+|langId														|String	|當前激活的編輯器打開的文檔的編程語言id，完整語言Id列表參見[這裏](/ExtensionDocs/Api/other/languageId)|
 |viewItem													|String	|通過`views`擴展的視圖中當前選擇的item的contextValue																											|
 |config.*													|Any		|獲取某個配置項的值,例子： `config.editor.fontSize`																												|
 |isMac														|Boolean|當前電腦操作系統是否是MacOSX（僅對HBuilderX3.2.22+版本生效）																							|
