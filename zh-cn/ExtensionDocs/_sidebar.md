@@ -39,6 +39,7 @@
     * [Disposable](/ExtensionDocs/Api/other/Disposable.md)
     * [Uri](/ExtensionDocs/Api/other/Uri.md)
     * [WorkspaceFolder](/ExtensionDocs/Api/other/WorkspaceFolder.md)
+    * [languageId](/ExtensionDocs/Api/other/languageId.md)
 * [扩展点](/ExtensionDocs/ContributionPoints/README.md) 
 * [插件激活机制](/ExtensionDocs/activation_event.md) 
 * [插件规范](/ExtensionDocs/manifest.md) 

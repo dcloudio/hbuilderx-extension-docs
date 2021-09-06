@@ -1,6 +1,8 @@
 # registerCustomEditorProvider
 `从HBuilderX 2.9.2及以上版本开始支持`
 
+完整的自定义编辑器示例：<a href="/ExtensionTutorial/customeditor" target="_blank">如何扩展一个自定义编辑器？</a>
+
 ## 简介
 
 注册指定类型的CustomEditorProvider，当用户打开匹配的文件时，在编辑器区域创建自定义编辑器标签卡。自定义编辑器使用webview提供视图显示。

@@ -10,7 +10,7 @@
 |isUntitled		|Boolean							| 是否是無標題文件											|
 |lineCount		|Number								|文檔總行數													|
 |uri			|[Uri](/ExtensionDocs/Api/other/Uri)						|文檔的uri，如果是本地文件，可通過uri.fsPath獲取本地文件路徑|
-|languageId|String|編程語言Id，如'javascript','html'等，完整id列表參見[這裏](#languageId)									|
+|languageId|String|編程語言Id，如'javascript','html'等，完整id列表參見[這裏](/ExtensionDocs/Api/other/languageId)	|
 |workspaceFolder|[WorkspaceFolder](/ExtensionDocs/Api/other/WorkspaceFolder)|該文檔文件所屬的項目對象									|
 
 ## getText

@@ -77,7 +77,7 @@ keybindings扩展点用于声明快捷键绑定.
 ```
 
 ## snippets
-snippets扩展点可以扩展指定编程语言的代码块，可扩展的编程语言Id列表见[这里](/ExtensionDocs/Api/README.md#languageId)。扩展示例代码如下：
+snippets扩展点可以扩展指定编程语言的代码块，可扩展的编程语言Id列表见[这里](/ExtensionDocs/Api/other/languageId)。扩展示例代码如下：
 
 ```json
     "contributes": {
@@ -100,7 +100,7 @@ snippets扩展点可以扩展指定编程语言的代码块，可扩展的编程
 |属性名称		|属性类型	|是否必须	|描述																																		|
 |--				|--			|--			|--																																			|
 |project		|String		|否			|是否只在指定的项目类型下生效，目前的可取值为"Web","App","Wap2App","uni-app";如果要支持多项目类型可以通过逗号分隔，例如："Web,uni-app,App"	|
-|language		|String		|是			|编程语言ID，用于限定只在指定的语言下生效，语言Id的列表参见[这里](/ExtensionDocs/Api/README.md#languageId)									|
+|language		|String		|是			|编程语言ID，用于限定只在指定的语言下生效，语言Id的列表参见[这里](/ExtensionDocs/Api/other/languageId)									|
 |path|String		|是			|要扩展的代码块列表文件路径，文件内容格式见下面|
 
 ### 代码块格式
