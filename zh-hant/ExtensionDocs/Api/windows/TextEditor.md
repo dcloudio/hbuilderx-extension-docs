@@ -113,8 +113,8 @@ editorPromise.then((editor)=>{
 |isUntitled		|Boolean							| 是否是無標題文件											|
 |lineCount		|Number								|文檔總行數													|
 |uri			|[Uri](/ExtensionDocs/Api/other/Uri)						|文檔的uri，如果是本地文件，可通過uri.fsPath獲取本地文件路徑|
-|languageId|String|編程語言Id，如'javascript','html'等，完整id列表參見[這裏](#languageId)									|
-|workspaceFolder|[WorkspaceFolder](/ExtensionDocs/Api/other/WorkspaceFolder)|該文檔文件所屬的項目對象									|
+|languageId|String|編程語言Id，如'javascript','html'等，完整id列表參見[這裏](/ExtensionDocs/Api/other/languageId)	|
+|workspaceFolder|[WorkspaceFolder](/ExtensionDocs/Api/other/WorkspaceFolder)|該文檔文件所屬的項目對象	|
 
 ### getText
 
@@ -158,82 +158,6 @@ editorPromise.then((editor)=>{
 |返回類型								|描述		|
 |--										|--			|
 |Promise&lt;[TextLine](#TextLine)&gt;	|文本行對象	|
-
-### languageId
-以下是目前支持的編程語言Id列表：
-
-- txt
-- actionscript
-- ada
-- asm
-- asp
-- autoit
-- baanc
-- bash
-- batch
-- c
-- cs
-- cmake
-- cpp
-- css
-- caml
-- cobol
-- coffeescript
-- d
-- dart
-- ejs
-- fortran
-- fortran77
-- html
-- html_es6
-- handlebars
-- haskell
-- inno
-- json
-- json_tm
-- java
-- javascript
-- javascriptreact
-- javascript_es6
-- kix
-- less
-- lisp
-- lua
-- markdown
-- matlab
-- njs
-- nml
-- nsis
-- nss
-- objc
-- php
-- pascal
-- perl
-- postscript
-- powershell
-- python
-- r
-- rc
-- ruby
-- sql
-- sass
-- scheme
-- scss
-- smalltalk
-- stylus
-- swift
-- tcl
-- typescript
-- typescriptreact
-- ux
-- vb
-- vhdl
-- verilog
-- vue
-- wxml
-- xml
-- yaml
-- pug
 
 
 ## TextEdit

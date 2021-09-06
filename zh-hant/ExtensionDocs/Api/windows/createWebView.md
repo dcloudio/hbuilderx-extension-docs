@@ -4,7 +4,9 @@
 
 創建指定viewId的WebView控件視圖，在窗體左側或右側區域創建一個tab項。tab內容爲webview，webview裏可裝載html頁面，可以較靈活的渲染自定義的內容。
 
-viewId需要在package.json文件內的配置擴展點[views](/ExtensionDocs/ContributionPoints/README.md#views)中聲明，完整的擴展視圖流程參考[如何註冊一個新的視圖？](/ExtensionTutorial/views?id=webview)
+viewId需要在package.json文件內的配置擴展點[views](/ExtensionDocs/ContributionPoints/README.md#views)中聲明。
+
+完整的擴展視圖流程參考 <a href="/ExtensionTutorial/views?id=webview" target="_blank">如何註冊一個新的視圖？</a>
 
 ## 簡介
 

@@ -77,6 +77,7 @@
     * [内置浏览器开发者控制台空白问题](/Tutorial/faq/devtools.md)
 * [崩溃报告](/Tutorial/CrashReporter.md)
 * [历史版本](/Tutorial/HistoryVersion.md)
+* [LICENSE](/license.md)
 <div class="contact-box">
   <a href="https://www.dcloud.io/hbuilderx.html" target="_blank" class="contact-item">
     <img src="/static/favicon/favicon.png" width="20" height="21">

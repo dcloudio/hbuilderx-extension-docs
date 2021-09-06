@@ -113,7 +113,7 @@ editorPromise.then((editor)=>{
 |isUntitled		|Boolean							| 是否是无标题文件											|
 |lineCount		|Number								|文档总行数													|
 |uri			|[Uri](/ExtensionDocs/Api/other/Uri)						|文档的uri，如果是本地文件，可通过uri.fsPath获取本地文件路径|
-|languageId|String|编程语言Id，如'javascript','html'等，完整id列表参见[这里](#languageId)									|
+|languageId|String|编程语言Id，如'javascript','html'等，完整id列表参见[这里](/ExtensionDocs/Api/other/languageId)									|
 |workspaceFolder|[WorkspaceFolder](/ExtensionDocs/Api/other/WorkspaceFolder)|该文档文件所属的项目对象									|
 
 ### getText
@@ -159,81 +159,6 @@ editorPromise.then((editor)=>{
 |--										|--			|
 |Promise&lt;[TextLine](#TextLine)&gt;	|文本行对象	|
 
-### languageId
-以下是目前支持的编程语言Id列表：
-
-- txt
-- actionscript
-- ada
-- asm
-- asp
-- autoit
-- baanc
-- bash
-- batch
-- c
-- cs
-- cmake
-- cpp
-- css
-- caml
-- cobol
-- coffeescript
-- d
-- dart
-- ejs
-- fortran
-- fortran77
-- html
-- html_es6
-- handlebars
-- haskell
-- inno
-- json
-- json_tm
-- java
-- javascript
-- javascriptreact
-- javascript_es6
-- kix
-- less
-- lisp
-- lua
-- markdown
-- matlab
-- njs
-- nml
-- nsis
-- nss
-- objc
-- php
-- pascal
-- perl
-- postscript
-- powershell
-- python
-- r
-- rc
-- ruby
-- sql
-- sass
-- scheme
-- scss
-- smalltalk
-- stylus
-- swift
-- tcl
-- typescript
-- typescriptreact
-- ux
-- vb
-- vhdl
-- verilog
-- vue
-- wxml
-- xml
-- yaml
-- pug
 
 
 ## TextEdit

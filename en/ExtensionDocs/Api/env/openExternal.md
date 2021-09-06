@@ -1,23 +1,23 @@
 # openExternal
 
-打开一个外部链接，比如`https://www.dcloud.io`、`mailto:ide@dcloud.io`
+Open an external link, such as `https://www.dcloud.io`、`mailto:ide@dcloud.io`
 
-#### 参数说明
+#### Parameters
 
-|参数名称	|参数类型	|描述			|
+|parameter name	|Type	|Description			|
 |--			|--			|--				|
-|uri		|String		|外部链接地址	|
+|uri		|String		|External link address	|
 
-#### 返回值
+#### Returns
 
-|返回类型				|描述				|
+|Type				|Description				|
 |--						|--					|
-|Promise&lt;Boolean&gt;	|返回是否打开成功	|
+|Promise&lt;Boolean&gt;	|Returns whether the opening is successful	|
 
-#### 示例
+#### Example
 ``` javascript
-    var openPromise = hx.env.openExternal("https://www.dcloud.io");
-	openPromise.then(function(success) {
-		console.log("打开链接结果：",success);
-	});
+var openPromise = hx.env.openExternal("https://www.dcloud.io");
+openPromise.then(function(success) {
+	console.log("Open link result：",success);
+});
 ```

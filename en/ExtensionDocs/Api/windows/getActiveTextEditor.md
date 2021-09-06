@@ -1,20 +1,22 @@
 # getActiveTextEditor
 
-> 获取当前激活的编辑器,如果没有打开的编辑器返回undefined
+> Get the currently active editor, if there is no open editor, return undefined
 
-#### 参数说明
-无
+#### Parameter
 
-#### 返回值
+No parameters
 
-|返回类型				|描述									|
+#### Returns
+
+|Type				|Description									|
 |--						|--										|
-|Promise&lt;[TextEditor](/ExtensionDocs/Api/windows/TextEditor)&gt;	|返回当前激活的编辑器|
+|Promise&lt;[TextEditor](/ExtensionDocs/Api/windows/TextEditor)&gt;	|Return to the currently active editor|
 
-#### 示例
+#### Example
+
 ``` javascript
-    let activeEditor = hx.window.getActiveTextEditor();
-    activeEditor.then(function(editor){
-    	console.log(editor.document.fileName);
-    });
+let activeEditor = hx.window.getActiveTextEditor();
+activeEditor.then(function(editor){
+  console.log(editor.document.fileName);
+});
 ```

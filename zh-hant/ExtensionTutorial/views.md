@@ -40,7 +40,7 @@ HBuilderX支持創建完全自定義的、可以間接和nodejs通信的特殊�
     }
 ```
 
-- 在插件激活時通過API：<a href="/ExtensionDocs/Api/README?id=createwebview" target="_blank">window.createWebView</a>實現上面擴展的`視圖`
+- 在插件激活時通過API：<a href="/ExtensionDocs/Api/windows/createWebView" target="_blank">window.createWebView</a>實現上面擴展的`視圖`
 
 ``` javascript
 const hx = require('hbuilderx');
@@ -134,7 +134,7 @@ module.exports = {
     }
 ```
 
-- 在插件激活時通過API：<a href="/ExtensionDocs/Api/README?id=createtreeview" target="_blank">window.createTreeView</a>實現上面擴展的`視圖`
+- 在插件激活時通過API：<a href="/ExtensionDocs/Api/windows/createTreeView" target="_blank">window.createTreeView</a>實現上面擴展的`視圖`
 
 ``` javascript
 // extension.js
@@ -216,5 +216,5 @@ module.exports = {
 
 #### 效果圖
 
-<img src="/static/snapshots/view@2x.png" style="zoom:50%" />
+<img src="/static/snapshots/view@2x.png" style="zoom:50%;border: 1px solid #eee; border-radius: 10px;" />
 

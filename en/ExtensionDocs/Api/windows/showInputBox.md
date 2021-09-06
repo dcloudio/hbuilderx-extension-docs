@@ -1,38 +1,38 @@
 # showInputBox
 
-在窗口中间居中弹出一个输入框，获取用户输入。类似于浏览器的prompt方法。
+An input box pops up in the middle of the window to get user input. Similar to the prompt method of the browser.
 
-#### 参数说明
+#### Parameter
 
-|参数名称	|参数类型							|描述			|
+|Name	|Type							|Description			|
 |--			|--									|--				|
-|options	|[InputBoxOptions](#InputBoxOptions属性列表)|输入框设置	|
+|options	|[InputBoxOptions](#InputBoxOptions Attribute list)|Input box settings	|
 
-#### 返回值
+#### Returns
 
-|返回类型				|描述			|
+|Type				|Description			|
 |--						|--				|
-|Promise&lt;String&gt;	|用户输入的结果	|
+|Promise&lt;String&gt;	|User input result	|
 
-#### 示例
+#### Example
 
 ```javascript
-    let inputPromise = hx.window.showInputBox({
-        prompt:"请输入密码",
-        password:true
-    });
-    inputPromise.then((result)=>{
-        console.log("输入的密码为：",result);
-    });
+let inputPromise = hx.window.showInputBox({
+    prompt: "Password",
+    password: true
+});
+inputPromise.then((result)=>{
+    console.log("Password: ",result);
+});
 ```
 
-#### InputBoxOptions属性列表
+#### InputBoxOptions Attribute list
 
-> 输入框设置
+> Input box settings
 
-|属性名		|属性类型	|描述						|
+|Name		|Type	|Description						|
 |--			|--			|--							|
-|prompt		|String		|输入框的描述				|
-|value		|String		|输入框的默认值				|
-|placeHolder|String		|输入框内容为空时的占位内容	|
-|password	|Boolean	|是否是密码框				|
+|prompt		|String		|Description of the input box				|
+|value		|String		|The default value of the input box				|
+|placeHolder|String		|Placeholder content when the content of the input box is empty	|
+|password	|Boolean	|Is it a password box				|

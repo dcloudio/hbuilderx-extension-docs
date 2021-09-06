@@ -1,75 +1,83 @@
-# 窗口右下角通知框
+# Message
+
+> Notification box in the lower right corner of the window.
 
 ## showErrorMessage
-在窗口右下角显示错误通知框
-#### 参数说明
 
-|参数名称	|参数类型			|描述					|
+> Show an error message.
+
+#### Parameter
+
+|Name	|Type			|Description					|
 |--			|--					|--						|
-|message	|String				|消息内容,支持html标签	|
-|buttons	|Array&lt;String&gt;|通知框中的按钮组		|
+|message	|String				|Message content, support html tags	|
+|buttons	|Array&lt;String&gt;|Button group in notification box		|
 
-#### 返回值
-|返回类型				|描述									|
+#### Returns
+
+|Type				|Description									|
 |--						|--										|
-|Promise&lt;String&gt;	|如果设置了按钮，返回用户点击了哪个按钮	|
+|Promise&lt;String&gt;	|If a button is set, return which button the user clicked	|
 
-#### 示例
+#### Example
 ``` javascript
-    let resultPromise = hx.window.showErrorMessage('是否删除该文件?',['是','否']);
-    resultPromise.then((result)=>{
-        if(result == '是'){
-            console.log("选择了是");
-        }else if(result === '否'){
-            console.log("选择了否");
-        }
-    });
+let resultPromise = hx.window.showErrorMessage('Do you want to delete the file?',['Yes','No']);
+resultPromise.then((result)=>{
+    if(result == 'Yes'){
+        console.log("Your choice: Yes");
+    }else if(result === 'No'){
+        console.log("Your choice: No");
+    }
+});
 ```
 
 ## showInformationMessage
-在窗口右下角显示消息通知框
-#### 参数说明
 
-|参数名称	|参数类型			|描述					|
+> Show an information message to users.
+
+#### Parameter
+
+|Name	|Type			|Description					|
 |--			|--					|--						|
-|message	|String				|消息内容,支持html标签	|
-|buttons	|Array&lt;String&gt;|通知框中的按钮组		|
+|message	|String				|Message content, support html tags	|
+|buttons	|Array&lt;String&gt;|Button group in notification box		|
 
-#### 返回值
-|返回类型				|描述									|
+#### Returns
+|Type				|Description									|
 |--						|--										|
-|Promise&lt;String&gt;	|如果设置了按钮，返回用户点击了哪个按钮	|
+|Promise&lt;String&gt;	|If a button is set, return which button the user clicked	|
 
-#### 示例
+#### Example
 ``` javascript
-    hx.window.showInformationMessage('详情可访问<a href="http://www.dcloud.io">参考文档</a>');
+hx.window.showInformationMessage('详情可访问<a href="http://www.dcloud.io">参考文档</a>');
 ```
-效果如下：
 
 <img src="/static/snapshots/info.jpg" style="zoom:50%" />
 
 ## showWarningMessage
-在窗口右下角显示警告消息通知框
-#### 参数说明
 
-|参数名称	|参数类型			|描述					|
+> Show a warning message.
+
+#### Parameter
+
+|Name	|Type			|Description					|
 |--			|--					|--						|
-|message	|String				|消息内容,支持html标签	|
-|buttons	|Array&lt;String&gt;|通知框中的按钮组		|
+|message	|String				|Message content, support html tags	|
+|buttons	|Array&lt;String&gt;|Button group in notification box		|
 
-#### 返回值
-|返回类型				|描述									|
+#### Returns
+|Type				|Description									|
 |--						|--										|
-|Promise&lt;String&gt;	|如果设置了按钮，返回用户点击了哪个按钮	|
+|Promise&lt;String&gt;	|If a button is set, return which button the user clicked	|
 
-#### 示例
+#### Example
 ``` javascript
-    let resultPromise = hx.window.showWarningMessage('是否删除该文件?',['是','否']);
-    resultPromise.then((result)=>{
-        if(result == '是'){
-            console.log("选择了是");
-        }else if(result === '否'){
-            console.log("选择了否");
-        }
-    });
+let resultPromise = hx.window.showWarningMessage('Do you want to delete the file?',['Yes','No']);
+resultPromise.then((result)=>{
+    if(result == 'Yes'){
+        console.log("Your choice: Yes");
+    }else if(result === 'No'){
+        console.log("Your choice: No");
+    }
+});
 ```

@@ -22,7 +22,7 @@
 
 - 插件代码继承CustomEditorProvider等
 
-    HBuilderX使用WebViewPanel来作为自定义编辑器的视图，[WebViewPanel](/ExtensionDocs/Api/README.md#WebViewPanel)的用法也可以参考[视图扩展](/ExtensionTutorial/views.md#WebView)中部分示例。
+    HBuilderX使用WebViewPanel来作为自定义编辑器的视图，[WebViewPanel](/ExtensionDocs/Api/windows/createWebView?id=webviewpanel)的用法也可以参考[视图扩展](/ExtensionTutorial/views.md#WebView)中部分示例。
     
 ```javascript
 var hx = require("hbuilderx");
@@ -65,7 +65,7 @@ class CatCustomEditorProvider extends CustomEditorProvider{
 }
 ```
 
-- 在插件激活时通过API：[window.registerCustomEditorProvider](/ExtensionDocs/Api/README.md#registerCustomEditorProvider)注册上面扩展的自定义编辑器
+- 在插件激活时通过API：[window.registerCustomEditorProvider](/ExtensionDocs/Api/windows/registerCustomEditorProvider)注册上面扩展的自定义编辑器
 
 自定义编辑器提供了新的插件激活事件[onCustomEditor](/ExtensionDocs/activation_event.md#onCustomEditor)
 

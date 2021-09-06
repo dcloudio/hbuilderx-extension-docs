@@ -1,36 +1,37 @@
-# 状态栏消息
+# StatusBar Message
 
 ## setStatusBarMessage
 
-设置HBuilderX底部状态栏消息
+Set the status bar message at the bottom of HBuilderX
 
-##### 参数说明
+#### Parameter
 
-|参数名称			|参数类型	|描述															|
+|Name			|Type	|Description															|
 |--					|--			|--																|
-|text				|String		|消息内容														|
-|hideAfterTimeout	|Number		|[可选] 多长时间后自动隐藏,单位ms，默认值是0：不自动隐藏		|
-|level				|String		|[可选] 消息级别,取值有['warn'，'info'，'error'],默认值：'info'	|
+|text				|String		|Message content														|
+|hideAfterTimeout	|Number		|[Optional] Timeout in milliseconds after which the message will be disposed. <br/><br/>The default value is 0: do not automatically hide		|
+|level				|String		|[Optional] Message level, the values are ['warn','info','error'], default value:'info'	|
 
-##### 返回值
+#### Returns
 
-|返回类型					|描述									|
+|Type					|Description									|
 |--							|--										|
-|[Disposable](/ExtensionDocs/Api/other/Disposable)	|销毁器,可调用dispose方法清理状态栏消息	|
+|[Disposable](/ExtensionDocs/Api/other/Disposable)	|A disposable which hides the status bar message.	|
 
 
-##### 示例
+#### Example
 
 ``` javascript
-    hx.window.setStatusBarMessage('正在校验xxx文档...',600,'info');
+hx.window.setStatusBarMessage('Verifying xxx document...', 600, 'info');
 ```
 
 
 ## clearStatusBarMessage
 
-清空状态栏消息，此api没有参数也没有返回值。
+Clear the status bar message, this api has no parameters and no return value.
 
-#### 示例
+#### Example
+
 ``` javascript
-    hx.window.clearStatusBarMessage();
+hx.window.clearStatusBarMessage();
 ```

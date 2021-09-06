@@ -39,6 +39,7 @@
     * [Disposable](/ExtensionDocs/Api/other/Disposable.md)
     * [Uri](/ExtensionDocs/Api/other/Uri.md)
     * [WorkspaceFolder](/ExtensionDocs/Api/other/WorkspaceFolder.md)
+    * [languageId](/ExtensionDocs/Api/other/languageId.md)
 * [ContributionPoints](/ExtensionDocs/ContributionPoints/README.md) 
 * [ActivationEvent](/ExtensionDocs/activation_event.md) 
 * [Manifest](/ExtensionDocs/manifest.md) 

@@ -31,6 +31,7 @@
 * Other
     * [Font Setting](/Tutorial/settings/font.md)
 * [Crash Reporter](/Tutorial/CrashReporter.md)
+* [LICENSE](/license.md)
 <div class="contact-box">
   <a href="https://www.dcloud.io/hbuilderx.html" target="_blank" class="contact-item">
     <img src="/static/favicon/favicon.png" width="20" height="21">
