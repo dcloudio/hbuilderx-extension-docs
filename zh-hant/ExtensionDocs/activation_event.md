@@ -37,7 +37,7 @@
 ]
 ```
 ### onUri
-聲明可以響應scheme協議請求，當某個scheme指定要請求某個插件時，如果插件聲明後onUri事件，則會自動激活該插件，否則不會激活。插件處理自定義scheme的API參考[這裏](/ExtensionDocs/Api/README.md#registerUriHandler)
+聲明可以響應scheme協議請求，當某個scheme指定要請求某個插件時，如果插件聲明後onUri事件，則會自動激活該插件，否則不會激活。插件處理自定義scheme的API參考[這裏](/ExtensionDocs/Api/windows/registerUriHandler)
 
 ``` json
 "activationEvents": [
