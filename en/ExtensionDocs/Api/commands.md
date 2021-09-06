@@ -1,11 +1,11 @@
 # commands
 
-commands二级模块对象，用于处理和`命令`相关的逻辑。`命令`包含2部分：唯一ID和自定义的function，可以通过registerCommand或registerTextEditorCommand注册。
+commands, the second-level module object, used to process the logic related to `command`.
 
-`命令`可以通过以下方式触发：
+`命令`包含2部分：唯一ID和自定义的function，可以通过registerCommand或registerTextEditorCommand注册。
 
 
-## 声明command
+## Declare command
 
 #### 菜单：将命令通过`menus`扩展点关联到某个菜单。
 
@@ -41,7 +41,7 @@ commands二级模块对象，用于处理和`命令`相关的逻辑。`命令`�
     });
 ```
 
-#### 用户自定义快捷键
+#### Custom shortcuts
 
 用户自定义快捷键：使用插件的用户可以通过得知`命令`的ID（一般在package.json中有声明），然后通过`自定义快捷键`配置一个快捷键。
 
@@ -61,14 +61,14 @@ commands二级模块对象，用于处理和`命令`相关的逻辑。`命令`�
 
 <img src="/static/snapshots/commands@2x.png" style="zoom:50%" />
 
-##### 参数说明
+##### Parameter
 
-|参数名称	    |参数类型	    |描述			|
+|Parameter	    |Type	    |Description			|
 |--			|--			|--				|
 |command	|String		|要执行的`命令`id	|
 
-##### 返回值
-|返回类型	|描述		|
+##### Returns
+|Type	|Description		|
 |--			|--			|
 |Promise	|Promise对象|
 
@@ -85,15 +85,15 @@ hx.commands.executeCommand('workbench.action.closeAllEditors')
 
 注册一个指定id的`命令`，并关联一个自定义的函数
 
-##### 参数说明
+##### Parameter
 
-|参数名称	|参数类型	|描述					|
+|Parameter	|Type	|Description					|
 |--			|--			|--						|
 |commandId	|String		|`命令`id				|
 |handler	|Function	|`命令`触发时执行的函数	|
 
-##### 返回值
-|返回类型					|描述																									|
+##### Returns
+|Type					|Description																									|
 |--							|--																										|
 |[Disposable](/ExtensionDocs/Api/other/Disposable)	|该`命令`的销毁器,可将该对象放置到插件的context.subscriptions数组内，插件卸载时，将会自动注销该`命令`	|
 

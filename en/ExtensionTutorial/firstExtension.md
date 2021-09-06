@@ -1,85 +1,80 @@
-本文档将带你一步一步建立第一个插件扩展。
-### 新建第一个插件扩展
-在HBuilderX里通过工具栏上`新建`按钮或者快捷键`ctrl+n`打开新建菜单选择`项目`，如下图所示，选择`普通项目`-`插件扩展开发`
+## Create Extension
 
-> 注意：插件名称只能用英文字母和数字，不支持中文和空格。
+In HBuilderX, Click the `New` button on the toolbar or the shortcut key `ctrl+n` to open the new menu and select `Project`.
 
-<img src="/static/snapshots/1.jpg" style="zoom:50%" />
+> Note: The plug-in name can only use English letters and numbers, and spaces are not supported
 
-### 运行插件
-建好插件项目后，选中该项目或者打开项目下某个文件，然后点击工具栏上`运行`按钮或者快捷键`ctrl+r`打开运行菜单，选择`运行插件xxx`即可新开一个HBuilderX窗体，这个新窗体将自动载入该插件。如下图
+<img src="/static/snapshots/Plug-in-development/create_extension_en.png" style="zoom:45%;border: 1px solid #eee;border-radius: 5px;" />
 
-<img src="/static/snapshots/2.jpg" style="zoom:50%" />
+## Run Extension
 
-运行起来的效果图如下：
+1. After creating the plug-in project, select the project or open a file under the project
+2. Click the `Run` button on the toolbar or the shortcut key `ctrl+r` to open the run menu
+3. Select `Run This Extension: xxx` to open a new HBuilderX form, and this new form will automatically load the plugin.
 
-<img src="/static/snapshots/5.jpg" style="zoom:50%" />
+<img src="/static/snapshots/Plug-in-development/start_run_extension_en.png" style="zoom:45%;border: 1px solid #eee;border-radius: 5px;" />
+
+The effect diagram of the plug-in operation is as follows:
+
+<img src="/static/snapshots/Plug-in-development/show_run_extension_en.jpg" style="zoom:45%;border: 1px solid #eee;border-radius: 20px;" />
 
 
-插件扩展开发模板示例中在代码编辑器右键菜单上注册了一个`Hello World`菜单，**此时我们打开一个文档**，然后右键即可看到`Hello World`菜单。点击该菜单运行后会在窗口显示一个提示框。如下图
+Plug-in extension development template example, register a `Hello World` menu on the right-click menu of the code editor.
 
-<img src="/static/snapshots/run.gif" style="zoom:50%" />
+<img src="/static/snapshots/Plug-in-development/extension_en_1.png" style="zoom:45%;border: 1px solid #eee;border-radius: 20px;" />
 
-也就是在老窗体写插件代码，保存插件代码后，在新窗体预览效果。
-> 修改插件代码后需要重新运行插件
+**At this time, we open a document**, and then right-click to see the `Hello World` menu. After clicking the menu to run, a prompt box will be displayed in the window.
 
-### 打印日志
-运行起来的插件，在老窗体的控制台，会打印日志。
+<img src="/static/snapshots/Plug-in-development/extension_en_2.jpg" style="zoom:45%;border: 1px solid #eee;border-radius: 20px;" />
 
-开发者可以使用`console.log`、`console.error`等API，把信息打印到老窗体的调试控制台。
+> Note: After modifying the plug-in code, you need to re-run the extension.
 
-### 插件代码说明
+## Log
+
+The running extension will print the log in the console of the old Window.
+
+You can use APIs such as `console.log` and `console.error` to print information to the debugging console of the old Window.
+
+## extension description
+
 #### package.json
-package.json在每个插件中都必须存在，包含插件的信息和`配置扩展点`。以下是示例插件的package.json代码说明
+
+`package.json` must exist in every extension, contains extension information and `configuration extension points`.
+
+The following is the package.json code description of the sample extension.
+
+> Note: that you cannot directly copy this code into the editor, and package.json currently does not support comments. The comments in this code are only used to explain the code.
+
 ```javascript
 {
-    //注意，不能直接拷贝本段代码到编辑器中，package.json目前不支持注释。本段代码加的注释只是用于解释代码。
-    //插件名称，必填字段
 	"name": "your extension name",
-	//插件显示名称，用于展示在插件列表中的名称, 必填字段
 	"displayName": "your display name",
 	"description": "your extension description",
-    //插件版本号，用于版本升级判断，必填字段
 	"version": "0.0.0",
 	"publisher": "your name",
-    //需要的最低HBuilder版本号，必填字段
 	"engines": {
 		"HBuilderX": "^2.6.8"
 	},
-    //插件分类
 	"categories": [
 		"Other"
 	],
-    //插件的程序入口js文件，在插件激活的时候调用
 	"main": "./extension",
-    //插件激活事件注册，当以下事件发生时，才会激活插件。
 	"activationEvents": [
-        //onCommand表示将要执行某个command的时触发该事件，本示例表示只有要执行`extension.helloWorld`的`命令`时本插件才会激活
 		"onCommand:extension.helloWorld"
 	],
-    //配置扩展点
 	"contributes": {
-        //`命令`扩展点，用于声明一个`命令`,所有扩展的`命令`必须通过该扩展点声明
 		"commands": [{
-            //`命令`唯一标识
 			"command": "extension.helloWorld",
-            //`命令`的名称，当关联到菜单时，如果未配置菜单名称，会用该名称。
 			"title": "Hello World"
 		}],
-        //`菜单`扩展点，用于注册一个`菜单`
 		"menus": {
-            //编辑器右键菜单
 			"editor/context": [
 				{
-                    //关联的`命令`唯一标识
 					"command": "extension.helloWorld",
-                    //注册到菜单的位置
 					"group": "z_commands",
-                    //在什么条件下显示
 					"when": "editorTextFocus"
 				},
 				{
-                    //不关联`命令`的菜单扩展代表一个分割线
 					"group": "z_commands"
 				}
 			]
@@ -90,23 +85,25 @@ package.json在每个插件中都必须存在，包含插件的信息和`配置�
 
 ```
 
-#### 插件入口文件
-本示例的插件入口文件是extension.js,插件入口文件必须要exports`activate`方法,该方法在插件激活的时候调用。代码说明如下：
+#### extension entry file
+
+The plug-in entry file in this example is `extension.js`, and the plug-in entry file must have the exports`activate` method, which is called when the plug-in is activated.
+
 ```javascript
 var hx = require("hbuilderx");
-//该方法将在插件激活的时候调用
+
 function activate(context) {
 	let disposable = hx.commands.registerCommand('extension.helloWorld', () => {
 		hx.window.showInformationMessage('你好，这是我的第一个插件扩展。');
 		console.log("Hello My First HBuilderX Extension.");
 	});
-	//订阅销毁钩子，插件禁用的时候，自动注销该command。
 	context.subscriptions.push(disposable)
-}
-//该方法将在插件禁用的时候调用（目前是在插件卸载的时候触发）
+};
+
 function deactivate() {
 
-}
+};
+
 module.exports = {
 	activate,
 	deactivate

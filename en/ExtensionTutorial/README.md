@@ -1,23 +1,29 @@
-HBuilderX 2.7+版本起，开放了插件扩展机制。开发者可以通过`JavaScript`语言编写HBuilderX的插件，自定义和增强HBuilderX，打造更趁手的利器。
+Since HBuilderX 2.7+, the plug-in extension mechanism has been opened. 
 
-### 插件扩展能做什么？
-HBuilderX的插件是基于nodejs的，所有nodejs api都可以使用，如文件操作、调用其他node命令。
+Developers can write HBuilderX plug-ins through JavaScript language, customize and enhance HBuilderX, and create a more handy tool.
 
-除此之外，HBuilderX提供了大量的js API（与vscode兼容），可以定制很多HBuilderX的功能和界面，比如
+### What can extensions do?
 
-- 添加新的`菜单`
-- 添加新的`命令`及快捷键
-- 扩展新的`代码块`
-- 添加新的view`视图`，比如在界面左侧项目管理器旁边新增加一个“TODO”视图
-- 对文档进行各种编辑，增删改文字内容、操作光标和选区
-- 对文档进行校验
-- 在控制台打印日志、操作状态栏消息、弹出各种提示框和选择框
+HBuilderX plug-ins are based on nodejs, and all nodejs apis can be used, such as file operations and calling other node commands.
 
-> 注意：插件是运行在单独的`插件进程`内的，`插件进程`是一个node.js进程，通过进程间rpc通信和HBuilderX进行接口调用。因此插件可以使用node本身所有的api。目前集成的node版本为：v8.10.0。
+HBuilderX provides a large number of js APIs (compatible with vscode), which can customize many functions and interfaces of HBuilderX.
 
-### 如何开发一个插件？
-- [快速开始](/ExtensionTutorial/firstExtension.md) 章节将告诉你怎么新建和运行一个插件。
-- [开发指南](/ExtensionTutorial/extension.md) 章节包括详细的插件能力教程
-- [插件发布](/ExtensionTutorial/HowToPublish.md) 告诉你如何将开发好的插件发布到插件市场
-- [参考文档](/ExtensionDocs/Api/README.md) 包含最新的插件API和配置扩展点列表
+Here are some examples of what you can achieve with the Extension API:
+
+- Add a new `menu`
+- Add new `command` and shortcut keys
+- Expand the new `code block`
+- Add a new view `view`
+- Make various edits to the document, add, delete and modify text content, manipulate cursors and selections
+- Check the document
+- Print logs on the console, operate status bar messages, pop up various prompt boxes and selection boxes
+
+> Note: The plug-in runs in a separate `plug-in process`. The `plug-in process` is a node.js process that uses inter-process rpc communication and HBuilderX for interface calls. Therefore, the plug-in can use all the apis of node itself. The currently integrated node version is: v12.22.1.
+
+### How to build extensions?
+
+- [Get Started](/ExtensionTutorial/firstExtension.md) How to create and run a plug-in.
+- [Extension Guides](/ExtensionTutorial/extension.md) Includes detailed plug-in capabilities tutorials.
+- [Extension Publish](/ExtensionTutorial/HowToPublish.md) How to publish the developed plug-in to the plug-in market.
+- [Extension API](/ExtensionDocs/Api/README.md) Contains the latest plug-in API and configuration extension point list.
 

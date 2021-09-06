@@ -1,28 +1,30 @@
 # createDiagnosticCollection
 
-创建一个问题列表，可用于文档校验时在文档出错区域显示波浪线标识问题。
+Create a diagnostics collection. 
 
-## 参数和返回值
+For document verification, wavy lines are displayed in the error area of the document to identify problems.
 
-##### 参数说明
+## Parameter and Returns
 
-|参数名称	|参数类型	|描述			|
+##### Parameter
+
+|Name	|Type	|Description			|
 |--			|--			|--				|
-|name		|String		|问题列表名称，当鼠标移至波浪线上时会显示在tooltips中|
+|name		|String		|The name of the problem list, which will be displayed in tooltips when the mouse is moved over the wavy line|
 
-##### 返回值
+##### Returns
 
-|返回类型										|描述			|
+|Type										|Description			|
 |--												|--				|
-|[DiagnosticCollection](#DiagnosticCollection)	|创建的问题列表	|
+|[DiagnosticCollection](#DiagnosticCollection)	|List of questions created	|
 
 
-##### 示例
+##### Example
 
 ``` javascript
     let activeEditor = hx.window.getActiveTextEditor();
     activeEditor.then(function(editor) {
-        // 获取文件路径
+        // Get file path
         let file_url = editor.document.uri.fsPath;
         // 通过editor.document可以获取文档对象进行校验
         // 创建一个测试问题集合
@@ -40,30 +42,30 @@
 
 ## DiagnosticCollection
 
-问题集合
+> Diagnostic Collection
 
-#### 属性列表
+#### Attributes List
 
-|属性名	|属性类型	|描述		|
+|Name	|Type	|Description		|
 |--		|--			|--			|
-|name	|String		|问题集合名称	|
+|name	|String		|The name of the collection.	|
 
 #### set
 
-##### 参数说明
+##### Parameter
 
-|参数名称	|参数类型										|描述		|
+|Name	|Type										|Description		|
 |--			|--												|--			|
-|uri		|String或Uri									|文档地址	|
-|diagnostics|Array&lt;[DiagnosticItem](#DiagnosticItem)&gt;	|问题集合	|
+|uri		|String or Uri									|Document path	|
+|diagnostics|Array&lt;[DiagnosticItem](#DiagnosticItem)&gt;	|Diagnostic Item	|
 
-##### 返回值
+##### Returns
 
-|返回类型	|描述	|
+|Type	|Description	|
 |--			|--		|
 |Promise&lt;void&gt;	|Promise	|
 
-##### 示例
+##### Example
 
 ``` javascript
     let diagnositics = hx.languages.createDiagnosticCollection('eslint');
@@ -78,13 +80,13 @@
 
 ## DiagnosticItem
 
-问题项
+> Diagnostic Item
 
-##### 属性列表
+##### Attributes List
 
-|属性名		|属性类型	|描述												|
+|Name		|Type	|Description												|
 |--			|--			|--													|
-|line		|String		|在文档第几行										|
-|column		|String		|在文档第几列										|
-|message	|String		|问题详细信息										|
-|severity	|String		|问题级别，取值范围:'error'，'warn'. 默认值是'error'|
+|line		|String		|lines of the document										|
+|column		|String		|column of the document										|
+|message	|String		|The human-readable message.									|
+|severity	|String		|The severity, default is error. Scope:'error'，'warn'. |
