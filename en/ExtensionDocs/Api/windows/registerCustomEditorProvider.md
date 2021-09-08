@@ -3,7 +3,7 @@
 
 完整的自定义编辑器示例：<a href="/ExtensionTutorial/customeditor" target="_blank">如何扩展一个自定义编辑器？</a>
 
-## 简介
+## Introduction
 
 注册指定类型的CustomEditorProvider，当用户打开匹配的文件时，在编辑器区域创建自定义编辑器标签卡。自定义编辑器使用webview提供视图显示。
 
@@ -40,7 +40,7 @@ hx.window.registerCustomEditorProvider("catEdit.catScratch", new CatCustomEditor
 |--			|--			|--					|
 |onDidChangeCustomDocument | HBuilderX内置的EventEmitter	| 用于触发文件变化事件，编辑器置为未保存状态 |
 
-#### 代码示例
+#### Example
 ``` javascript
 provider.onDidChangeCustomDocument.fire(new CustomDocumentEditEvent(document));
 ```

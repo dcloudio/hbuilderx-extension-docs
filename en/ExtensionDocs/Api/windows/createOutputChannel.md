@@ -2,7 +2,7 @@
 
 创建一个输出控制台通道，可用于在控制台输出文本内容。
 
-## 介绍
+## Introduce
 
 **Parameter**
 
@@ -48,7 +48,7 @@
 |--			|--		|
 |Promise&lt;void&gt;	|Promise	|
 
-示例
+**Example**
 
 ``` javascript
     let outputChannel = hx.window.createOutputChannel("foo");
@@ -67,7 +67,7 @@
 |--			|--		|
 |Promise&lt;void&gt;	|Promise	|
 
-示例
+**Example**
 ``` javascript
     let outputChannel = hx.window.createOutputChannel("foo");
     outputChannel.show();

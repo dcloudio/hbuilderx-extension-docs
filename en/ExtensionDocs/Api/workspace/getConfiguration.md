@@ -2,7 +2,7 @@
 
 根据指定的section获取对应的配置
 
-## 简介
+## Introduction
 
 **Parameter**
 

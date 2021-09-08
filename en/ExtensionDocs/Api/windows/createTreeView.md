@@ -2,7 +2,7 @@
 
 > `从HBuilderX 2.7.12及以上版本开始支持`
 
-## 介绍
+## Introduce
 
 创建指定viewId的视图，在窗体左侧区域创建一个和`项目管理器`同级的tab项。tab的内容区为一个树控件，可自行装载节点。
 
@@ -17,7 +17,7 @@ Parameter:
 
 Returns：无
 
-示例：
+**Example**：
 
 ``` javascript
     class DemoTreeDataProvider extends hx.TreeDataProvider{
@@ -133,7 +133,7 @@ TreeView树控件获取数据的接口，不可直接实例化该对象，需要
 ### onDidChangeTreeData
 该接口用于通知HBuilderX数据变化，需要刷新视图，目前仅支持刷新整个视图。**该属性需要开发者在构造TreeDataProvider时创建**。
 
-示例:
+**Example**:
 ``` javascript
     var hx = require("hbuilderx");
     class MyTreeViewProvider extends hx.TreeDataProvider {

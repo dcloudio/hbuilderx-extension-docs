@@ -2,7 +2,7 @@
 
 > 从HBuilderX 2.7.10及以上版本开始支持`
 
-## 介绍
+## Introduce
 
 全局配置改变事件，比如"editor.fontSize"改变，或者通过插件扩展的配置项改变。
 
