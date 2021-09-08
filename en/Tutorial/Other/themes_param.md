@@ -6,7 +6,7 @@
 
 ### 文本编辑区
 
-|名称				|描述			|
+|Name				|Description		|
 |-					|-				|
 |editor.foreground	|编辑区前景颜色	|
 |editor.background	|编辑区背景颜色	|
@@ -41,7 +41,7 @@
 
 ### mac标题栏（只在mac os上生效）
 
-|名称						|描述		|
+|Name						|Description	|
 |-							|-			|
 |titleBar.activeBackground	|背景颜色	|
 |titleBar.activeForeground	|前景颜色	|
@@ -49,7 +49,7 @@
 ### 工具栏
 
 
-|名称					|描述							|
+|Name					|Description						|
 |-						|-								|
 |toolBar.background		|工具栏背景颜色					|
 |toolBar.border			|工具栏边框颜色					|
@@ -57,14 +57,14 @@
 
 ### 文件资源管理器
 
-|名称				|描述		|
+|Name				|Description	|
 |-					|-			|
 |sideBar.background	|背景颜色	|
 |sideBar.border		|边框颜色	|
 
 ### 标签卡
 
-|名称								|描述									|
+|Name								|Description								|
 |-									|-										|
 |editorGroupHeader.tabsBackground	|tabs背景颜色							|
 |tab.activeBackground				|选中时的背景颜色							|
@@ -81,14 +81,14 @@
 ### 分栏
 
 
-|名称							|描述						|
+|Name							|Description					|
 |-								|-							|
 |editorGroup.border				|分割线颜色					|
 |tab.unfocusedActiveForeground	|未激活分组里选中标签前景色	|
 
 ### 按钮
 
-|名称					|描述					|
+|Name					|Description				|
 |-						|-						|
 |button.background		|按钮背景颜色			|
 |button.foreground		|按钮前景颜色			|
@@ -97,7 +97,7 @@
 ### 代码助手
 
 
-|名称									|描述						|
+|Name									|Description					|
 |-										|-							|
 |editorSuggestWidget.background			|助手弹窗背景颜色			|
 |editorSuggestWidget.border				|助手弹窗边框颜色			|
@@ -107,7 +107,7 @@
 ### 文本框
 
 
-|名称				|描述					|
+|Name				|Description				|
 |-					|-						|
 |input.background	|文本框背景颜色			|
 |input.foreground	|文本框前景颜色			|
@@ -117,7 +117,7 @@
 ### 列表控件/树控件区
 
 
-|名称								|描述							|
+|Name								|Description						|
 |-									|-								|
 |list.foreground					|前景颜色						|
 |list.activeSelectionBackground		|选中条目背景颜色				|
@@ -136,20 +136,20 @@
 ### 文档结构图
 
 
-|名称				|描述			|
+|Name				|Description		|
 |-					|-				|
 |outlineBackground	|文档结构背景颜色	|
 
 ### 滚动条
 
-|名称							|描述					|
+|Name							|Description				|
 |-								|-						|
 |scrollbarSlider.background		|滚动条背景颜色			|
 |scrollbarSlider.hoverBackground|鼠标滑过滚动条背景颜色	|
 
 ### 预览按钮
 
-|名称										|描述					|
+|Name										|Description				|
 |-											|-						|
 |extensionButton.prominentBackground		|背景颜色				|
 |extensionButton.prominentForeground		|前景颜色				|
@@ -160,7 +160,7 @@
 ### 搜索下拉框
 
 
-|名称							|描述					|
+|Name							|Description				|
 |-								|-						|
 |inputValidation.infoBackground	|下拉框背景颜色			|
 |inputList.hoverBackground		|鼠标滑过item背景颜色	|
@@ -171,7 +171,7 @@
 ### 设置
 
 
-|名称								|描述						|
+|Name								|Description					|
 |-									|-							|
 |editor.background					|设置页面背景颜色			|
 |inputOption.activeBorder			|文本框有焦点时边框颜色		|
@@ -186,14 +186,14 @@
 ### 图片预览
 
 
-|名称					|描述			|
+|Name					|Description		|
 |-						|-				|
 |imageview.background	|浅色方格颜色	|
 |imageview.foreground	|深色方格颜色	|
 
 ### 弹窗提示框
 
-|名称									|描述					|
+|Name									|Description				|
 |-										|-						|
 |notifications.border					|弹窗边框颜色			|
 |notifications.background				|弹窗背景颜色			|
@@ -207,7 +207,7 @@
 
 ### 文件对比
 
-|名称					|描述											|
+|Name					|Description										|
 |-						|-												|
 |filediff.line.add		|添加行背景颜色									|
 |filediff.line.delete	|删除行背景颜色									|
@@ -217,7 +217,7 @@
 ### 控制台
 
 
-|名称						|描述				|
+|Name						|Description			|
 |-							|-					|
 |terminal.background		|终端背景颜色		|
 |console.background | 控制台背景颜色|
@@ -228,7 +228,7 @@
 
 在svn/git项目上点击右键。只在mac上生效
 
-|名称							|描述					|
+|Name							|Description				|
 |-								|-						|
 |logviewButton.background		|按钮背景颜色			|
 |logviewButton.border			|按钮边框颜色			|
@@ -243,7 +243,7 @@
 
 ### 状态栏
 
-|名称					|描述			|
+|Name					|Description		|
 |-						|-				|
 |statusBar.background	|状态栏背景颜色	|
 |statusBar.foreground	|状态栏前景颜色	|
@@ -251,6 +251,6 @@
 
 ### 右侧迷你地图
 
-|名称					|描述			|
+|Name					|Description		|
 |-						|-				|
 |minimap.handle.background	|迷你地图滑块背景	|

@@ -4,19 +4,19 @@
 
 ## 介绍
 
-**参数说明**
+**Parameter**
 
-|参数名称	|参数类型	|描述																								|
+|Name	|Type	|Description																								|
 |--			|--			|--																									|
 |channel	|String		|控制台通道名称，在添加内容到控制台时，会将该名称作为前缀输出，eg:[${channel}] 这是要输出的内容。	|
 
-**返回值**
+**Returns**
 
-|返回类型						|描述		|
+|Type				|Description		|
 |--								|--			|
 |[OutputChannel](#OutputChannel)|控制台通道	|
 
-**示例**
+**Example**
 
 ``` javascript
     let outputChannel = hx.window.createOutputChannel("foo");
@@ -28,23 +28,23 @@
 
 > 输出通道，在添加内容到控制台时，会将通道名称作为前缀输出，eg:[${channel}] 这是要输出的内容。	
 
-### 属性列表
+### Attribute list
 
-|属性名	|属性类型	|描述		|
+|Attribute name	|Type	|Description		|
 |--		|--			|--			|
 |name	|String		|通道名称	|
 
 ### appendLine
 
-参数说明
+**Parameter**
 
-|参数名称	|参数类型	|描述				|
+|Name	|Type	|Description				|
 |--			|--			|--					|
 |line		|String		|输出到控制台的内容	|
 
-返回值
+**Returns**
 
-|返回类型	|描述	|
+|Type	|Description	|
 |--			|--		|
 |Promise&lt;void&gt;	|Promise	|
 
@@ -58,12 +58,12 @@
 
 ### show
 
-参数说明
+**Parameter**
 无
 
-返回值
+**Returns**
 
-|返回类型	|描述	|
+|Type	|Description	|
 |--			|--		|
 |Promise&lt;void&gt;	|Promise	|
 

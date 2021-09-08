@@ -2,7 +2,7 @@
 
 A universal resource identifier representing either a file on disk or another resource, like untitled resources.
 
-**属性列表**
+**Attribute list**
 
 |Parameter		|Type	|Description				|
 |--			|--			|--					|

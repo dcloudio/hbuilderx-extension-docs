@@ -4,17 +4,17 @@
 
 获取某个文件所在的项目
 
-#### 参数说明
-|参数名称	|参数类型	|描述					|
+#### Parameter
+|Name	|Type	|Description					|
 |--			|--			|--						|
 |uri		|String或Uri|文件绝对路径或者文件Uri|
 
-#### 返回值
-|返回类型														|描述					|
+#### Returns
+|Type												|Description					|
 |--																|--						|
 |Promise&lt;[WorkspaceFolder](/ExtensionDocs/Api/other/WorkspaceFolder)&gt;|文件所在的项目	|
 
-#### 示例
+#### Example
 ``` javascript
     var wsPromise = hx.workspace.getWorkspaceFolder("%fsPath%");
     wsPromise.then(function(wsFolder) {
@@ -25,9 +25,9 @@
 #### WorkspaceFolder
 工作空间下的项目目录,在左侧项目管理器内的每一个项目表示一个WorkspaceFolder
 
-**属性列表**
+**Attribute list**
 
-|属性名	|属性类型			|描述			|
+|Attribute name	|Type			|Description			|
 |--		|--					|--				|
 |uri	|String或[Uri](/ExtensionDocs/Api/other/Uri.md)|项目目录地址	|
 |name	|String				|项目目录名称	|

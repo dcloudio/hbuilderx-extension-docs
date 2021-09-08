@@ -3,8 +3,8 @@
 
 ## TextEditor
 
-### TextEditor属性列表
-|属性名		|属性类型										|描述						|
+### TextEditor Attribute list
+|Attribute name		|Type										|Description						|
 |--			|--												|--							|
 |document	|[TextDocument](#TextDocument)					|该编辑器关联的文档			|
 |selection	|[TextSelection](#TextSelection)				|当前光标选中的位置			|
@@ -15,19 +15,19 @@
 
 > 修改当前编辑器打开的文档
 
-**参数说明**
+**Parameter**
 
-|参数名称	|参数类型									|描述			|
+|Name	|Type									|Description			|
 |--			|--											|--				|
 |callback		|Function([TextEditorEdit](#TextEditorEdit))	|文档编辑操作回调	|
 
-**返回值**
+**Returns**
 
-|返回类型	|描述	|
+|Type	|Description	|
 |--			|--		|
 |Promise&lt;void&gt;	|Promise	|
 
-**示例**
+**Example**
 
 ``` javascript
     let editorPromise = hx.window.getActiveTextEditor();
@@ -46,22 +46,22 @@
 
 > 设置主选择区域，该API会首先清除原来的光标选择，如果要使用多光标，请使用[addSelection](#addSelection)方法
 
-**参数说明**
+**Parameter**
 
-|参数名称	|参数类型	|描述		|
+|Name	|Type	|Description		|
 |--			|--			|--			|
 |active		|Number		|选择区域中带光标的一侧，详情见下图|
 |anchor		|Number		|选择区域中不带光标的一侧，详情见下图	|
 
 <img src="/static/snapshots/anchor_active.jpg" style="zoom:50%" />
 
-**返回值**
+**Returns**
 
-|返回类型	|描述	|
+|Type	|Description	|
 |--			|--		|
 |Promise&lt;void&gt;	|Promise	|
 
-**示例**
+**Example**
 
 ``` javascript
 let editor = hx.window.getActiveTextEditor();
@@ -74,22 +74,22 @@ editor.then((editor)=>{
 
 > 增加新的选择区域，调用后会在编辑器内追加一个新一个光标。
 
-**参数说明**
+**Parameter**
 
-|参数名称	|参数类型	|描述		|
+|Name	|Type	|Description		|
 |--			|--			|--			|
 |active		|Number		|选择区域中带光标的一侧，详情见下图|
 |anchor		|Number		|选择区域中不带光标的一侧，详情见下图	|
 
 <img src="/static/snapshots/anchor_active.jpg" style="zoom:50%" />
 
-**返回值**
+**Returns**
 
-|返回类型	|描述	|
+|Type	|Description	|
 |--			|--		|
 |Promise&lt;void&gt;	|Promise	|
 
-**示例**
+**Example**
 
 ``` javascript
 let editorPromise = hx.window.getActiveTextEditor();
@@ -104,9 +104,9 @@ editorPromise.then((editor)=>{
 
 > 编辑器打开的文档文件
 
-### 属性列表
+### Attribute list
 
-|属性名			|属性类型							|描述														|
+|Attribute name			|Type							|Description														|
 |--				|--									|--															|
 |fileName		|String								|文件名称													|
 |isDirty		|Boolean							|是否是修改状态												|
@@ -120,13 +120,13 @@ editorPromise.then((editor)=>{
 
 > 获取指定区域内的文本
 
-|参数名称	|参数类型		|描述													|
+|Name	|Type		|Description													|
 |--			|--				|--														|
 |range		|[Range](#Range)|[可选]文本区域，如果不传该参数，则获取整个文档的内容	|
 
-**返回值**
+**Returns**
 
-|返回类型	|描述		|
+|Type	|Description		|
 |--			|--			|
 |String		|文本字符串	|
 
@@ -135,13 +135,13 @@ editorPromise.then((editor)=>{
 
 > 获取指定行号的行信息
 
-|参数名称	|参数类型	|描述			|
+|Name	|Type	|Description			|
 |--			|--			|--				|
 |lineno		|Number		|行号，从0开始	|
 
-**返回值**
+**Returns**
 
-|返回类型								|描述		|
+|Type						|Description		|
 |--										|--			|
 | Promise&lt;[TextLine](#TextLine)&gt;	|文本行对象	|
 
@@ -149,13 +149,13 @@ editorPromise.then((editor)=>{
 
 > 根据光标位置获取光标所在行。
 
-|参数名称	|参数类型	|描述		|
+|Name	|Type	|Description		|
 |--			|--			|--			|
 |pos		|Number		|光标位置	|
 
-**返回值**
+**Returns**
 
-|返回类型								|描述		|
+|Type						|Description		|
 |--										|--			|
 |Promise&lt;[TextLine](#TextLine)&gt;	|文本行对象	|
 
@@ -164,25 +164,25 @@ editorPromise.then((editor)=>{
 
 TextEdit: 文档编辑
 
-### TextEdit 属性列表
+### TextEdit Attribute list
 
-|属性名	|属性类型			|描述			|
+|Attribute name	|Type			|Description			|
 |--		|--					|--				|
 |range	|[Range](#Range)	|要修改的区域	|
 |newText|String				|要插入的新内容	|
 
 ### replace **static**
 
-**参数说明**
+**Parameter**
 
-|参数名称	|参数类型			|描述			|
+|Name	|Type			|Description			|
 |--			|--					|--				|
 |range		|[Range](#Range)	|要修改的区域	|
 |newText	|String				|要插入的新内容	|
 
-**返回值**
+**Returns**
 
-|返回类型	|描述	|
+|Type	|Description	|
 |--			|--		|
 |[TextEdit](#TextEdit)|	文档编辑对象|
 
@@ -190,9 +190,9 @@ TextEdit: 文档编辑
 
 Range: 文本区域
 
-**属性列表**
+**Attribute list**
 
-|属性名	|属性类型	|描述		|
+|Attribute name	|Type	|Description		|
 |--		|--			|--			|
 |start	|Number		|起始位置	|
 |end	|Number		|结束位置	|
@@ -201,9 +201,9 @@ Range: 文本区域
 
 TextLine: 文档中的某一行
 
-**属性列表**
+**Attribute list**
 
-|属性名	|属性类型	|描述						|
+|Attribute name	|Type	|Description						|
 |--		|--			|--							|
 |start	|Number		|行起始位置					|
 |end	|Number		|行结束位置，不计算换行符	|

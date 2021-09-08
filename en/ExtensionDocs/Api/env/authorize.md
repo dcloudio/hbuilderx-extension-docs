@@ -25,15 +25,15 @@ authorize二级模块对象，用于处理插件授权登录，获取HBuilderX�
 
 ## login
 
-#### 参数说明
+#### Parameter
 
-|参数名称	|参数类型	|描述			|
+|Name	|Type	|Description			|
 |--			|--			|--				|
 |params		| Object	|授权登录必要的信息|
 
 参数属性说明
 
-|属性名		|属性类型	|描述									|
+|Attribute name		|Type	|Description									|
 |--			|--			|--										|
 |client_id |String		|  在[DCloud开发者开放开台](https://open.dcloud.net.cn/)添加授权插件后创建的client_id |
 |scopes |Array&lt;String&gt;		| 授权范围列表, 取值范围：basic, email, phone。basic必填|
@@ -45,20 +45,20 @@ email和phone请谨慎使用，非必要申请授权会招致HBuilderX的用户�
 
 同时注意在调用login方法后，HBuilderX会弹出授权确认框，用户可能拒绝授权或拒绝授权email、phone等敏感信息。
 
-#### 返回值
+#### Returns
 
-|返回类型										|描述			|
+|Type								|Description			|
 |--												|--				|
 |Promise&lt;Object&gt;	| Promise对象	|
 
 返回值属性说明
 
-|属性名		|属性类型	|描述									|
+|Attribute name		|Type	|Description									|
 |--			|--			|--										|
 |code |String		| CODE码，有效期5分钟。用于插件作者服务器端换取accessToken，通过accessToken换取授权的基本信息 |
 |error |Number		| code获取失败时的错误码 |
 
-#### 示例
+#### Example
 ``` javascript
     let prom = hx.authorize.login({ client_id: "your client id", scopes: ['basic', 'email','phone'], description: "for test"});
     prom.then(function (param) {
@@ -69,7 +69,7 @@ email和phone请谨慎使用，非必要申请授权会招致HBuilderX的用户�
 
 #### 主要错误码信息
 
-|错误码		| 描述									|
+|错误码		| Description									|
 |--			|--										|
 |0	| 无错误 |
 |1	| 当前没有登录用户 |
@@ -90,20 +90,20 @@ email和phone请谨慎使用，非必要申请授权会招致HBuilderX的用户�
 ## onUserLogin
 用户登录事件
 
-#### 参数说明
+#### Parameter
 
-|参数名称	|参数类型	|描述			|
+|Name	|Type	|Description			|
 |--			|--			|--				|
 |callback		|Function		|用户登录时的回调函数，无参数|
 
-#### 返回值
+#### Returns
 
-|返回类型		|描述			|
+|Type|Description			|
 |--				|--				|
 |[Disposable](#Disposable)	| Disposable	|
 
 
-#### 示例
+#### Example
 ``` javascript
     hx.authorize.onUserLogin(function(){
         // do something
@@ -113,19 +113,19 @@ email和phone请谨慎使用，非必要申请授权会招致HBuilderX的用户�
 ## onUserLogout
 当前登录用户退出事件
 
-#### 参数说明
+#### Parameter
 
-|参数名称	|参数类型	|描述			|
+|Name	|Type	|Description			|
 |--			|--			|--				|
 |callback		|Function		|当前登录用户退出时的回调函数，无参数|
 
-#### 返回值
+#### Returns
 
-|返回类型	|描述			|
+|Type	|Description			|
 |--			|--				|
 |[Disposable](#Disposable)	| Disposable对象	|
 
-#### 示例
+#### Example
 ``` javascript
     hx.authorize.onUserLogout(function(){
         // do something

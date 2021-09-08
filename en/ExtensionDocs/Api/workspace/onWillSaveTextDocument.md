@@ -6,19 +6,19 @@
 
 ## 介绍
 
-**参数说明**
+**Parameter**
 
-|参数名称	|参数类型															|描述		|
+|Name	|Type															|Description		|
 |--			|--																	|--			|
 |listener	|Function([TextDocumentWillSaveEvent](#TextDocumentWillSaveEvent))	|事件回调	|
 
-**返回值**
+**Returns**
 
-|返回类型	|描述				|
+|Type	|Description				|
 |--			|--					|
 |[Disposable](/ExtensionDocs/Api/other/Disposable)	|该事件回调的销毁器，可将该对象放置到插件的context.subscriptions数组内，插件卸载时，将会自动注销该`事件回调`	|
 
-**示例**
+**Example**
 
 ``` javascript
     let willSaveTextDocumentEventDispose = hx.workspace.onWillSaveTextDocument(function(event){
@@ -29,8 +29,8 @@
 
 ## TextDocumentWillSaveEvent
 
-**属性列表**
+**Attribute list**
 
-|属性名		|属性类型										|描述						|
+|Attribute name		|Type										|Description						|
 |--			|--												|--							|
 |document	|[TextDocument](#TextDocument)					|该事件关联的文档			|

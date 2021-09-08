@@ -3,8 +3,8 @@
 
 #### dispose
 
-#### 参数说明
+#### Parameter
 无
 
-#### 返回值
+#### Returns
 无

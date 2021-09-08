@@ -18,19 +18,19 @@ hbuilderx://requestExtension/exampleid/examplerequest/example?example1=example2&
 #### 适用的场景
 - 需要通过浏览器等外部应用启动HBuilderX，然后通过指定插件响应请求
 
-#### 参数说明
-|参数名称	|参数类型					|描述											|
+#### Parameter
+|Name	|Type					|Description											|
 |--			|--							|--												|
 |handler	|[UriHandler](#UriHandler)	|scheme的处理器									|
 |context	|ExtensionContext			|插件激活方法activate中传入的(context)参数对象	|
 
-#### 返回值
-|返回类型	|描述																											|
+#### Returns
+|Type	|Description																											|
 |--			|--																												|
 |Disposable	|注册的UriHandler的销毁器，可将该对象放置到插件的context.subscriptions数组内，插件卸载时，将会自动注销该handler	|
 
 
-#### 示例
+#### Example
 
 ```javascript
     hx.window.registerUriHandler({
@@ -50,12 +50,12 @@ uri处理器接口
 
 #### handleUri
 
-**参数说明**
+**Parameter**
 
-|参数名称	|参数类型	|描述																		|
+|Name	|Type	|Description																		|
 |--			|--			|--																			|
 |uri		|Uri		|scheme请求对应的uri，eg：hbuilderx://requestExtension/extensionId?foo=bar	|
 
-**返回值**
+**Returns**
 无
 
