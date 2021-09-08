@@ -95,7 +95,7 @@ snippets扩展点可以扩展指定编程语言的代码块，可扩展的编程
     }
 ```
 
-### 属性列表
+### Attribute list
 
 |Attribute name		|Type	|是否必须	|Description																																		|
 |--				|--			|--			|--																																			|
@@ -133,7 +133,7 @@ snippets扩展点可以扩展指定编程语言的代码块，可扩展的编程
 ## viewsContainers
 在窗体左侧区域扩展一个和项目管理器同级的tab项，完整的扩展视图流程参考[如何注册一个新的视图？](/ExtensionTutorial/views)
 
-#### 属性列表
+#### Attribute list
 |Attribute name	|Type												|是否必须	|Description															|
 |--			|--														|--			|--																|
 |activitybar|Array&lt;[ViewsContainerDef](#ViewsContainerDef)&gt;	|不是			|定义扩展的视图容器列表，可在菜单`视图`-`显示扩展视图`中查看打开|
@@ -223,21 +223,21 @@ menus扩展点会关联一个`命令`到相应的菜单项里面，当菜单触�
 
 menus节点下配置的对象内的key指的是要注册到哪个弹出菜单里面，目前支持的key值列表如下：
 
-- `editor/context` ：编辑器右键菜单
-- `explorer/context` ：项目管理器右键菜单
+- `editor/context` ：Editor right-click menu
+- `explorer/context` ：Project Explorer right-click menu
 - `view/item/context` ：通过`views`扩展点扩展的`视图`的右键菜单（`从HBuilderX 2.7.12及以上版本开始支持`）
-- `menubar/file` : 顶部菜单的`文件`菜单
-- `menubar/edit` : 顶部菜单的`编辑`菜单
-- `menubar/select` : 顶部菜单的`选择`菜单
-- `menubar/find` : 顶部菜单的`查找`菜单
-- `menubar/goto` : 顶部菜单的`跳转`菜单
-- `menubar/run` : 顶部菜单的`运行`菜单
-- `menubar/publish` : 顶部菜单的`发行`菜单
-- `menubar/view` : 顶部菜单的`视图`菜单
-- `menubar/tool` : 顶部菜单的`工具`菜单
-- `menubar/help` : 顶部菜单的`帮助`菜单
+- `menubar/file` : The `File` menu of the top menu
+- `menubar/edit` : The `Edit` menu of the top menu
+- `menubar/select` : The `Select` menu of the top menu
+- `menubar/find` : The `Find` menu of the top menu
+- `menubar/goto` : The `Goto` menu of the top menu
+- `menubar/run` : The `Run` menu of the top menu
+- `menubar/publish` : The `Build` menu of the top menu
+- `menubar/view` : The `View` menu of the top menu
+- `menubar/tool` : The `Tool` menu of the top menu
+- `menubar/help` : The `Help` menu of the top menu
 
-### menus属性列表
+### Menus Attribute list
 
 |Attribute name		|Type	|是否必须	|Description																						|
 |--				|--			|--			|--																							|

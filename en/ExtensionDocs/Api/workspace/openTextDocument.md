@@ -1,6 +1,6 @@
 # openTextDocument
 
-通过指定的uri打开一个文档文件
+Open a document file through the specified uri.
 
 #### Parameter
 

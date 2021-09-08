@@ -1,8 +1,8 @@
 # onDidChangeWorkspaceFolders
 
-> 从HBuilderX 2.7.10及以上版本开始支持
+> Supported from HBuilderX 2.7.10+ version
 
-项目管理器内的项目新增或者移除时产生的事件
+An event that is emitted when a workspace folder is added or removed.
 
 ## Introduce
 

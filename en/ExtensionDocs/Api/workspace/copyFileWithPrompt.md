@@ -1,8 +1,8 @@
 # copyFileWithPrompt
 
-> 从HBuilderX 2.9.12及以上版本开始支持
+> Supported from HBuilderX 2.9.12+ version
 
-将指定文件或文件夹拷贝到目标文件夹下
+Copy the specified file or folder to the target folder
 
 #### Parameter
 
@@ -20,9 +20,9 @@
 
 |code	|Description									|
 |--		|--										|
-|-1		|操作失败								|
-|0		|操作成功								|
-|1		|操作取消								|
+|-1		|failed								|
+|0		|Successful								|
+|1		|Operation canceled								|
 
 
 #### Example

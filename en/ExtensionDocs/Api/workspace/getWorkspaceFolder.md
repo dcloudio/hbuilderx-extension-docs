@@ -1,8 +1,8 @@
 # getWorkspaceFolder
 
->从HBuilderX 2.7.12及以上版本开始支持
+>Supported from HBuilderX 2.7.12+ version
 
-获取某个文件所在的项目
+Get the project where a file is located.
 
 #### Parameter
 |Name	|Type	|Description					|

@@ -1,6 +1,6 @@
 # onDidChangeConfiguration
 
-> 从HBuilderX 2.7.10及以上版本开始支持`
+> Supported from HBuilderX 2.7.10+ version
 
 ## Introduce
 

@@ -1,6 +1,6 @@
 # onDidChangeTextDocument
 
-文档被修改时的事件
+An event that is emitted when a text document is changed.
 
 ## Introduce
 

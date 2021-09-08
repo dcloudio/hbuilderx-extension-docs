@@ -1,6 +1,6 @@
 # getConfiguration
 
-根据指定的section获取对应的配置
+Get a workspace configuration object.
 
 ## Introduction
 

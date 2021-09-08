@@ -1,8 +1,8 @@
 # onDidOpenTextDocument
 
-> 从HBuilderX 2.7.6及以上版本开始支持
+> Supported from HBuilderX 2.7.6+ version
 
-文档打开时的事件
+An event that is emitted when a text document is opened or when the language id of a text document has been changed.
 
 #### Parameter
 

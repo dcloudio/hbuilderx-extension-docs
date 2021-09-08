@@ -1,6 +1,6 @@
 ### onDidSaveTextDocument
 
-文档被保存时的事件
+An event that is emitted when a text document is saved to disk.
 
 #### Parameter
 
