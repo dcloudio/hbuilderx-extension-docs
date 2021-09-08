@@ -1,6 +1,6 @@
 # createOutputChannel
 
-创建一个输出控制台通道，可用于在控制台输出文本内容。
+Creates a new output channel with the given name.
 
 ## Introduce
 
@@ -8,13 +8,13 @@
 
 |Name	|Type	|Description																								|
 |--			|--			|--																									|
-|channel	|String		|控制台通道名称，在添加内容到控制台时，会将该名称作为前缀输出，eg:[${channel}] 这是要输出的内容。	|
+|channel	|String		|Human-readable string which will be used to represent the channel in the UI.	|
 
 **Returns**
 
 |Type				|Description		|
 |--								|--			|
-|[OutputChannel](#OutputChannel)|控制台通道	|
+|[OutputChannel](#OutputChannel)| OutputChannel	|
 
 **Example**
 
@@ -26,21 +26,21 @@
 
 ## OutputChannel
 
-> 输出通道，在添加内容到控制台时，会将通道名称作为前缀输出，eg:[${channel}] 这是要输出的内容。	
-
 ### Attribute list
 
 |Attribute name	|Type	|Description		|
 |--		|--			|--			|
-|name	|String		|通道名称	|
+|name	|String		|Human-readable string which will be used to represent the channel in the UI.	|
 
 ### appendLine
+
+> Append the given value and a line feed character to the channel.
 
 **Parameter**
 
 |Name	|Type	|Description				|
 |--			|--			|--					|
-|line		|String		|输出到控制台的内容	|
+|line		|String		|	A string, falsy values will be printed.	|
 
 **Returns**
 
@@ -59,7 +59,8 @@
 ### show
 
 **Parameter**
-无
+
+No.
 
 **Returns**
 
