@@ -73,7 +73,7 @@ commands, the second-level module object, used to process the logic related to `
 |Promise	|Promise对象|
 
 
-##### 示例
+##### Example
 ``` javascript
 //执行插件扩展的命令
 hx.commands.executeCommand('extension.firstExtension')
@@ -98,7 +98,7 @@ hx.commands.executeCommand('workbench.action.closeAllEditors')
 |[Disposable](/ExtensionDocs/Api/other/Disposable)	|该`命令`的销毁器,可将该对象放置到插件的context.subscriptions数组内，插件卸载时，将会自动注销该`命令`	|
 
 
-##### 示例
+##### Example
 ``` javascript
     let disposable = hx.commands.registerCommand('extension.firstExtension',()=>{
         hx.window.showInformationMessage("Hello My First Extension.");

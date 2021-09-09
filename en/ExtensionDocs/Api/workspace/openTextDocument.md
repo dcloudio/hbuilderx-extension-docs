@@ -1,19 +1,19 @@
 # openTextDocument
 
-通过指定的uri打开一个文档文件
+Open a document file through the specified uri.
 
-#### 参数说明
+#### Parameter
 
-|参数名称	|参数类型			|描述		|
+|Name	|Type			|Description		|
 |--			|--					|--			|
 |uri		|String或[Uri](/ExtensionDocs/Api/other/Uri)|文档地址	|
 
-#### 返回值
-|返回类型										|描述			|
+#### Returns
+|Type								|Description			|
 |--												|--				|
 |Promise&lt;[TextDocument](/ExtensionDocs/Api/windows/TextEditor.md#TextDocument)&gt;	|返回打开的文档	|
 
-#### 示例
+#### Example
 ``` javascript
     var documentPromise = hx.workspace.openTextDocument("foo/bar.js");
     documentPromise.then(function(document) {

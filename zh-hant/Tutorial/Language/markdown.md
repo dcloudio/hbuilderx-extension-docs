@@ -38,6 +38,21 @@ HBuilderX對md提供了強大支持，是有史以來最強大、最簡潔、最
 
 <img src="/static/snapshots/tutorial/markdown_table_format.gif" style="border: 1px solid #eee;"/>
 
+## 直观的文档结构图
+
+HBuilderX Markdown文件，也支持显示文档结构图（大纲视图）。
+
+windows快捷键: `Alt+w`; MacOSX快捷键：`Ctrl+w`
+
+<img src="/static/snapshots/tutorial/markdown_outline.jpg" style="zoom: 45%;border-radius: 20px;border: 1px solid #eee;"/>
+
+## 实用的任务列表
+
+任务列表非常实用，管理待办、已办非常便利。
+
+- [ ] 任务列表-未完成任务 `快捷键：Ctrl+Alt+[`
+- [x] 任务列表-已完成任务 `快捷键：Ctrl+Alt+]`
+
 ## markdown一鍵分享
 
 使用markdown也有一個重要的問題，那就是圖片的存儲，markdown文件要用到圖片時必須是一個鏈接，在不使用圖牀的情況下，編輯上傳圖片太麻煩。

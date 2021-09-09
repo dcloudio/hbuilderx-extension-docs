@@ -1,22 +1,22 @@
 # createOutputChannel
 
-创建一个输出控制台通道，可用于在控制台输出文本内容。
+Creates a new output channel with the given name.
 
-## 介绍
+## Introduce
 
-**参数说明**
+**Parameter**
 
-|参数名称	|参数类型	|描述																								|
+|Name	|Type	|Description																								|
 |--			|--			|--																									|
-|channel	|String		|控制台通道名称，在添加内容到控制台时，会将该名称作为前缀输出，eg:[${channel}] 这是要输出的内容。	|
+|channel	|String		|Human-readable string which will be used to represent the channel in the UI.	|
 
-**返回值**
+**Returns**
 
-|返回类型						|描述		|
+|Type				|Description		|
 |--								|--			|
-|[OutputChannel](#OutputChannel)|控制台通道	|
+|[OutputChannel](#OutputChannel)| OutputChannel	|
 
-**示例**
+**Example**
 
 ``` javascript
     let outputChannel = hx.window.createOutputChannel("foo");
@@ -26,29 +26,29 @@
 
 ## OutputChannel
 
-> 输出通道，在添加内容到控制台时，会将通道名称作为前缀输出，eg:[${channel}] 这是要输出的内容。	
+### Attribute list
 
-### 属性列表
-
-|属性名	|属性类型	|描述		|
+|Attribute name	|Type	|Description		|
 |--		|--			|--			|
-|name	|String		|通道名称	|
+|name	|String		|Human-readable string which will be used to represent the channel in the UI.	|
 
 ### appendLine
 
-参数说明
+> Append the given value and a line feed character to the channel.
 
-|参数名称	|参数类型	|描述				|
+**Parameter**
+
+|Name	|Type	|Description				|
 |--			|--			|--					|
-|line		|String		|输出到控制台的内容	|
+|line		|String		|	A string, falsy values will be printed.	|
 
-返回值
+**Returns**
 
-|返回类型	|描述	|
+|Type	|Description	|
 |--			|--		|
 |Promise&lt;void&gt;	|Promise	|
 
-示例
+**Example**
 
 ``` javascript
     let outputChannel = hx.window.createOutputChannel("foo");
@@ -58,16 +58,17 @@
 
 ### show
 
-参数说明
-无
+**Parameter**
 
-返回值
+No.
 
-|返回类型	|描述	|
+**Returns**
+
+|Type	|Description	|
 |--			|--		|
 |Promise&lt;void&gt;	|Promise	|
 
-示例
+**Example**
 ``` javascript
     let outputChannel = hx.window.createOutputChannel("foo");
     outputChannel.show();

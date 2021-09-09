@@ -1,21 +1,21 @@
 # getConfiguration
 
-根据指定的section获取对应的配置
+Get a workspace configuration object.
 
-## 简介
+## Introduction
 
-**参数说明**
+**Parameter**
 
-|参数名称	|参数类型	|描述			|
+|Name	|Type	|Description			|
 |--			|--			|--				|
 |section	|String		|配置项分类名称	|
 
-**返回值**
-|返回类型						|描述		|
+**Returns**
+|Type				|Description		|
 |--								|--			|
 |[Configuration](#Configuration)|返回配置	|
 
-**示例**
+**Example**
 
 ``` javascript
     let config = hx.workspace.getConfiguration()
@@ -30,20 +30,20 @@
 
 > get: 获取配置项
 
-**参数说明**
+**Parameter**
 
-|参数名称		|参数类型	|描述		|
+|Name		|Type	|Description		|
 |--				|--			|--			|
 |section		|String		|配置项的key|
 |defaultValue	|Any		|默认值，当key不存在时返回该值|
 
-**返回值**
+**Returns**
 
-|返回类型	|描述		|
+|Type	|Description		|
 |--			|--			|
 |Any		|配置项的值	|
 
-**示例**
+**Example**
 ``` javascript
     let eslintConfig = hx.workspace.getConfiguration("eslint-js")
     let validateOnDocumentChanged = eslintConfig.get("validateOnDocumentChanged",false);
@@ -53,20 +53,20 @@
 
 > update: 更新配置项
 
-**参数说明**
+**Parameter**
 
-|参数名称	|参数类型	|描述		|
+|Name	|Type	|Description		|
 |--			|--			|--			|
 |section	|String		|配置项的key|
 |value		|Any		|配置项的值	|
 
-**返回值**
+**Returns**
 
-|返回类型	|描述	|
+|Type	|Description	|
 |--			|--		|
 |Promise&lt;void&gt;	|Promise	|
 
-**示例**
+**Example**
 ``` javascript
     let eslintConfig = hx.workspace.getConfiguration("eslint-js")
     eslintConfig.update("validateOnDocumentChanged",true).then(()=>{

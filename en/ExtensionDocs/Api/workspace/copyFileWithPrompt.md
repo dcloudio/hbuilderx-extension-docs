@@ -1,31 +1,31 @@
 # copyFileWithPrompt
 
-> 从HBuilderX 2.9.12及以上版本开始支持
+> Supported from HBuilderX 2.9.12+ version
 
-将指定文件或文件夹拷贝到目标文件夹下
+Copy the specified file or folder to the target folder
 
-#### 参数说明
+#### Parameter
 
-|参数名称	|参数类型													|描述			|
+|Name	|Type													|Description			|
 |--			|--															|--				|
 |options	|[CopyFileWithPromptOptions](#CopyFileWithPromptOptions)    |文件拷贝参数	|
 
-#### 返回值
+#### Returns
 
-|返回类型				|描述		|
+|Type		|Description		|
 |--						|--			|
 |Promise&lt;String&gt;	|操作结果	|
 
 文件拷贝返回值说明:
 
-|code	|描述									|
+|code	|Description									|
 |--		|--										|
-|-1		|操作失败								|
-|0		|操作成功								|
-|1		|操作取消								|
+|-1		|failed								|
+|0		|Successful								|
+|1		|Operation canceled								|
 
 
-#### 示例
+#### Example
 ``` javascript
  let result = hx.workspace.copyFileWithPrompt({
      src:hx.Uri.file('D:/test01'),
@@ -49,9 +49,9 @@
 
 > 文件拷贝配置
 
-**属性列表**
+**Attribute list**
 
-|属性名		|属性类型	|描述						|
+|Attribute name		|Type	|Description						|
 |--			|--			|--							|
 |src		|[Uri](/ExtensionDocs/Api/other/Uri)		|拷贝文件源地址，地址是绝对路径|
 |dest		|[Uri](/ExtensionDocs/Api/other/Uri)	|拷贝文件目标地址，地址是绝对路径并且是目录|

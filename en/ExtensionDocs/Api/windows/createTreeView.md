@@ -2,22 +2,22 @@
 
 > `从HBuilderX 2.7.12及以上版本开始支持`
 
-## 介绍
+## Introduce
 
 创建指定viewId的视图，在窗体左侧区域创建一个和`项目管理器`同级的tab项。tab的内容区为一个树控件，可自行装载节点。
 
 viewId需要在package.json文件内的配置扩展点[views](/ExtensionDocs/ContributionPoints/README.md#views)中声明，完整的扩展视图流程参考[如何注册一个新的视图？](/ExtensionTutorial/views?id=treeview)
 
-参数说明: 
+Parameter: 
 
-|参数名称	|参数类型							|描述										|
+|Name	|Type							|Description										|
 |--			|--									|--											|
 |viewId		|String								|视图Id，需要首先在配置扩展点`views`中声明。|
 |options	|[TreeViewOptions](#TreeViewOptions)|创建TreeView时需要的设置项。				|
 
-返回值：无
+Returns：无
 
-示例：
+**Example**：
 
 ``` javascript
     class DemoTreeDataProvider extends hx.TreeDataProvider{
@@ -86,9 +86,9 @@ viewId需要在package.json文件内的配置扩展点[views](/ExtensionDocs/Con
 
 > 创建TreeView需要的配置项
 
-**属性列表**
+**Attribute list**
 
-|属性名				|属性类型								|描述															|
+|Attribute name				|Type								|Description															|
 |--					|--										|--																|
 |showCollapseAll	|Boolean								|是否显示折叠所有												|
 |treeDataProvider	|[TreeDataProvider](#TreeDataProvider)	|TreeView树控件获取数据的接口，需要自己写一个子类实现该接口。	|
@@ -102,15 +102,15 @@ TreeView树控件获取数据的接口，不可直接实例化该对象，需要
 
 > 获取某个节点的下的子节点，如果参数为空，则表示要获取根节点
 
-**参数说明**
+**Parameter**
 
-|参数名称	|参数类型	|描述															|
+|Name	|Type	|Description															|
 |--			|--			|--																|
 |element	|Any?		|获取该节点下的子节点列表，如果参数为空，则是要获取根节点列表	|
 
-**返回值**
+**Returns**
 
-|返回类型	|描述	|
+|Type	|Description	|
 |--			|--		|
 |Promise&lt;Any[]&gt;	|Promise	|
 
@@ -118,22 +118,22 @@ TreeView树控件获取数据的接口，不可直接实例化该对象，需要
 
 > 获取用于显示自定义数据element(通过getChildren获取的对象)的TreeItem对象
 
-**参数说明**
+**Parameter**
 
-|参数名称	|参数类型	|描述									|
+|Name	|Type	|Description									|
 |--			|--			|--										|
 |element	|Any?		|通过getChildren获取的列表对象中某一项	|
 
-**返回值**
+**Returns**
 
-|返回类型	|描述				|
+|Type	|Description				|
 |--			|--					|
 |[TreeItem](#TreeItem)	|保存有节点的显示信息	|
 
 ### onDidChangeTreeData
 该接口用于通知HBuilderX数据变化，需要刷新视图，目前仅支持刷新整个视图。**该属性需要开发者在构造TreeDataProvider时创建**。
 
-示例:
+**Example**:
 ``` javascript
     var hx = require("hbuilderx");
     class MyTreeViewProvider extends hx.TreeDataProvider {
@@ -154,9 +154,9 @@ TreeView树控件获取数据的接口，不可直接实例化该对象，需要
 ## TreeItem
 保存有节点的显示信息
 
-**属性列表**
+**Attribute list**
 
-|属性名				|属性类型					|描述																																					|
+|Attribute name				|Type					|Description																																					|
 |--					|--							|--																																						|
 |collapsibleState	|Number						|是否可展开，目前取值有：0：不可展开；1：可展开																											|
 |label				|String						|该item的显示名称																																		|
@@ -167,9 +167,9 @@ TreeView树控件获取数据的接口，不可直接实例化该对象，需要
 ## CommandInfo
 配置一个`命令`需要的信息对象
 
-**属性列表**
+**Attribute list**
 
-|属性名		|属性类型	|描述						|
+|Attribute name		|Type	|Description						|
 |--			|--			|--							|
 |command	|String		|要执行的`命令`id			|
 |arguments	|any[]		|执行该`命令`时传递的参数	|

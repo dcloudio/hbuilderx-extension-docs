@@ -1,18 +1,19 @@
 # getWorkspaceFolders
 
-> 从HBuilderX 2.7.12及以上版本开始支持
+> Supported from HBuilderX 2.7.12+ version
 
-获取项目管理器下所有的项目对象（不包含已关闭项目）
+Get all project objects under the project explorer (not including closed projects)
 
-#### 参数说明
-无
+#### Parameter
 
-#### 返回值
-|返回类型														|描述					|
+No
+
+#### Returns
+|Type												|Description					|
 |--																|--						|
 |Promise&lt;Array&lt;[WorkspaceFolder](/ExtensionDocs/Api/other/WorkspaceFolder)&gt;&gt;|项目管理器下所有的项目	|
 
-#### 示例
+#### Example
 ``` javascript
     var wsPromise = hx.workspace.getWorkspaceFolders();
     wsPromise.then(function(wsFolders) {
@@ -22,13 +23,14 @@
 
 
 #### WorkspaceFolder
-工作空间下的项目目录,在左侧项目管理器内的每一个项目表示一个WorkspaceFolder
 
-**属性列表**
+The project directory under the workspace, each project in the project manager on the left represents a WorkspaceFolder
 
-|属性名	|属性类型			|描述			|
+**Attribute list**
+
+|Attribute name	|Type			|Description			|
 |--		|--					|--				|
-|uri	|String或[Uri](/ExtensionDocs/Api/other/Uri)|项目目录地址	|
-|name	|String				|项目目录名称	|
-|nature	|String				|项目类型		|
-|id		|String				|项目唯一id		|
+|uri	|String或[Uri](/ExtensionDocs/Api/other/Uri)|Project Path	|
+|name	|String				|Project directory name	|
+|nature	|String				|Project Type		|
+|id		|String				|Project ID	|

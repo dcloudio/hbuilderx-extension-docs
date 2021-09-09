@@ -45,7 +45,7 @@ properties内配置的是一个jsonobject对象，该对象的key代表着要扩
 commands扩展点用于声明一个`命令`，`命令`可以通过`menus`扩展点和菜单关联到一起
 > 注意：当一个`命令`将要执行时，将会触发一个`onCommand:${commandId}`的[activationEvent](/ExtensionDocs/activation_event.md)用于激活监听该`命令`的插件
 
-#### 示例
+#### Example
 ```json
     "contributes": {
         "commands": [
@@ -63,7 +63,7 @@ commands扩展点用于声明一个`命令`，`命令`可以通过`menus`扩展�
 
 keybindings扩展点用于声明快捷键绑定.
 
-#### 示例
+#### Example
 
 ```json
 "keybindings":[
@@ -95,9 +95,9 @@ snippets扩展点可以扩展指定编程语言的代码块，可扩展的编程
     }
 ```
 
-### 属性列表
+### Attribute list
 
-|属性名称		|属性类型	|是否必须	|描述																																		|
+|Attribute name		|Type	|是否必须	|Description																																		|
 |--				|--			|--			|--																																			|
 |project		|String		|否			|是否只在指定的项目类型下生效，目前的可取值为"Web","App","Wap2App","uni-app";如果要支持多项目类型可以通过逗号分隔，例如："Web,uni-app,App"	|
 |language		|String		|是			|编程语言ID，用于限定只在指定的语言下生效，语言Id的列表参见[这里](/ExtensionDocs/Api/other/languageId)									|
@@ -106,7 +106,7 @@ snippets扩展点可以扩展指定编程语言的代码块，可扩展的编程
 ### 代码块格式
 每个配置项的说明如下表：
 
-|名称|描述|
+|Name|Description|
 |--	|--	|
 |`key`|代码块显示名称，显示在代码助手列表中的名字，以下例子中"console.log"就是一个key。|
 |prefix|代码块的触发字符，就是敲什么字母匹配这个代码块。|
@@ -133,13 +133,13 @@ snippets扩展点可以扩展指定编程语言的代码块，可扩展的编程
 ## viewsContainers
 在窗体左侧区域扩展一个和项目管理器同级的tab项，完整的扩展视图流程参考[如何注册一个新的视图？](/ExtensionTutorial/views)
 
-#### 属性列表
-|属性名称	|属性类型												|是否必须	|描述															|
+#### Attribute list
+|Attribute name	|Type												|是否必须	|Description															|
 |--			|--														|--			|--																|
 |activitybar|Array&lt;[ViewsContainerDef](#ViewsContainerDef)&gt;	|不是			|定义扩展的视图容器列表，可在菜单`视图`-`显示扩展视图`中查看打开|
 |rightside|Array&lt;[ViewsContainerDef](#ViewsContainerDef)&gt;	|不是|定义扩展的视图容器列表，可在菜单`视图`-`显示扩展视图`中查看打开|
 
-#### 示例
+#### Example
 ```json
    "contributes": {
        "viewsContainers": {
@@ -163,7 +163,7 @@ snippets扩展点可以扩展指定编程语言的代码块，可扩展的编程
 ```
 
 #### ViewsContainerDef
-|属性名称	|属性类型	|是否必须	|描述								|
+|Attribute name	|Type	|是否必须	|Description								|
 |--			|--			|--			|--									|
 |id			|String		|是			|扩展的视图容器(viewContainers)的id	|
 |title		|String		|是			|显示在tab标签上的标题				|
@@ -223,23 +223,23 @@ menus扩展点会关联一个`命令`到相应的菜单项里面，当菜单触�
 
 menus节点下配置的对象内的key指的是要注册到哪个弹出菜单里面，目前支持的key值列表如下：
 
-- `editor/context` ：编辑器右键菜单
-- `explorer/context` ：项目管理器右键菜单
+- `editor/context` ：Editor right-click menu
+- `explorer/context` ：Project Explorer right-click menu
 - `view/item/context` ：通过`views`扩展点扩展的`视图`的右键菜单（`从HBuilderX 2.7.12及以上版本开始支持`）
-- `menubar/file` : 顶部菜单的`文件`菜单
-- `menubar/edit` : 顶部菜单的`编辑`菜单
-- `menubar/select` : 顶部菜单的`选择`菜单
-- `menubar/find` : 顶部菜单的`查找`菜单
-- `menubar/goto` : 顶部菜单的`跳转`菜单
-- `menubar/run` : 顶部菜单的`运行`菜单
-- `menubar/publish` : 顶部菜单的`发行`菜单
-- `menubar/view` : 顶部菜单的`视图`菜单
-- `menubar/tool` : 顶部菜单的`工具`菜单
-- `menubar/help` : 顶部菜单的`帮助`菜单
+- `menubar/file` : The `File` menu of the top menu
+- `menubar/edit` : The `Edit` menu of the top menu
+- `menubar/select` : The `Select` menu of the top menu
+- `menubar/find` : The `Find` menu of the top menu
+- `menubar/goto` : The `Goto` menu of the top menu
+- `menubar/run` : The `Run` menu of the top menu
+- `menubar/publish` : The `Build` menu of the top menu
+- `menubar/view` : The `View` menu of the top menu
+- `menubar/tool` : The `Tool` menu of the top menu
+- `menubar/help` : The `Help` menu of the top menu
 
-### menus属性列表
+### Menus Attribute list
 
-|属性名称		|属性类型	|是否必须	|描述																						|
+|Attribute name		|Type	|是否必须	|Description																						|
 |--				|--			|--			|--																							|
 |id				|String		|否			|菜单项的Id，如何要配置二级菜单，则需要该属性												|
 |command		|String		|否			|菜单项关联的`命令`Id																		|
@@ -250,7 +250,7 @@ menus节点下配置的对象内的key指的是要注册到哪个弹出菜单里
 
 > 当属性title和command都为空时，将被识别为分割线。
 
-### 示例
+### Example
 ```json
    "contributes": {
        "menus": {
@@ -415,7 +415,7 @@ menus节点下配置的对象内的key指的是要注册到哪个弹出菜单里
 ### when
 when表达式用来动态的判断某个条件是否满足(即表达式的运算结果是`true`或者`false`)，目前用于控制一个菜单是否显示。目前支持的表达式运算符如下：
 
-|操作符	|描述	|例子														|
+|操作符	|Description	|例子														|
 |--		|--		|--															|
 |`==`	|相等	|`langId == 'javascript'`									|
 |`!=`	|不相等	|`langId != 'html'`								|
@@ -426,7 +426,7 @@ when表达式用来动态的判断某个条件是否满足(即表达式的运算
 
 目前HBuilderX内置变量列表如下：
 
-|变量名														|类型		|描述																																																			|
+|变量名														|类型		|Description																																																			|
 |--																|--			|--																																																				|
 |workspaceFolderRelativePath			|String	|相对于项目的相对路径，举例： pages/user/user.vue																													|
 |workspaceRelativePath						|String	|相对于项目的相对路径（加上项目名称），举例： HelloUniapp/pages/user/user.vue															|
@@ -469,7 +469,7 @@ when表达式用来动态的判断某个条件是否满足(即表达式的运算
 ```
 
 #### 属性列表
-|属性名称		|属性类型	|是否必须	|描述	|
+|Attribute name		|Type	|是否必须	|Description	|
 |--	            |--			|--		|--		 |
 |viewType		|String		|是		|自定义编辑器类型，`全局唯一` |
 |displayName	|String		|否		|显示名称（暂时未用）	|
@@ -478,6 +478,6 @@ when表达式用来动态的判断某个条件是否满足(即表达式的运算
 
 
 #### EditorSelctor
-|属性名称	|属性类型	|是否必须	|描述   |
+|Attribute name	|Type	|是否必须	|Description   |
 |--			|--			|--			|--     |
 |fileNamePattern    |String	    |是 |文件名匹配，支持通配符|

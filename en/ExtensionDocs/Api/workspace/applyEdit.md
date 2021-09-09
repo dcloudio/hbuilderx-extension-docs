@@ -4,18 +4,18 @@
 
 ## applyEdit介绍
 
-**参数说明**
+**Parameter**
 
-|参数名称	|参数类型									|描述			|
+|Name	|Type									|Description			|
 |--			|--											|--				|
 |edit		|[WorkspaceEdit](#WorkspaceEdit)	|文档编辑操作	|
 
-**返回值**
-|返回类型	|描述	|
+**Returns**
+|Type	|Description	|
 |--			|--		|
 |Promise&lt;void&gt;	|Promise	|
 
-**示例**
+**Example**
 ``` javascript
     let editorPromise = hx.window.getActiveTextEditor();
     editorPromise.then((editor)=>{
@@ -38,20 +38,20 @@ WorkspaceEdit: 工作空间的一组编辑操作
 
 #### set
 
-**参数说明**
+**Parameter**
 
-|参数名称	|参数类型							|描述			|
+|Name	|Type							|Description			|
 |--			|--									|--				|
 |uri		|String或Uri						|文档地址		|
 |edits		|Array&lt;[TextEdit](#TextEdit)&gt;	|编辑操作数组	|
 
-**返回值**
+**Returns**
 
-|返回类型	|描述	|
+|Type	|Description	|
 |--			|--		|
 |Promise&lt;void&gt;	|Promise	|
 
-**示例**
+**Example**
 ``` javascript
     let workspaceEdit = new hx.WorkspaceEdit();
     let edits = [];
@@ -67,25 +67,25 @@ WorkspaceEdit: 工作空间的一组编辑操作
 
 TextEdit: 文档编辑
 
-#### 属性列表
+#### Attribute list
 
-|属性名	|属性类型			|描述			|
+|Attribute name	|Type			|Description			|
 |--		|--					|--				|
 |range	|[Range](#Range)	|要修改的区域	|
 |newText|String				|要插入的新内容	|
 
 #### replace **static**
 
-**参数说明**
+**Parameter**
 
-|参数名称	|参数类型			|描述			|
+|Name	|Type			|Description			|
 |--			|--					|--				|
 |range		|[Range](#Range)	|要修改的区域	|
 |newText	|String				|要插入的新内容	|
 
-**返回值**
+**Returns**
 
-|返回类型	|描述	|
+|Type	|Description	|
 |--			|--		|
 |[TextEdit](#TextEdit)|	文档编辑对象|
 
@@ -93,9 +93,9 @@ TextEdit: 文档编辑
 
 Range: 文本区域
 
-**属性列表**
+**Attribute list**
 
-|属性名	|属性类型	|描述		|
+|Attribute name	|Type	|Description		|
 |--		|--			|--			|
 |start	|Number		|起始位置	|
 |end	|Number		|结束位置	|

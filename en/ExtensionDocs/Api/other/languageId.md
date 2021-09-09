@@ -1,6 +1,6 @@
 # languageId
 
-以下是目前支持的编程语言Id列表：
+The following is a list of currently supported programming language IDs:
 
 - txt
 - actionscript

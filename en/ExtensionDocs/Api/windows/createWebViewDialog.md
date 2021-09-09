@@ -4,20 +4,20 @@
 
 创建基于WebView页面的对话框，通过html渲染对话框的主要内容，可通过参数定制对话框标题、按钮等内容。按钮被添加到对话框下方的按钮组里，点击按钮会向WebView发送消息，开发者可在html通过js监听。
 
-## 参数说明
+## Parameter
 
-|参数名称	|参数类型					|描述											|
+|Name	|Type					|Description											|
 |--		|--							|--												|
 |dialogOptions 	|[DialogOptions](#DialogOptions)	|对话框基本属性，包括标题、按钮等	|
 |webviewOptions |[WebViewOptions](#WebViewOptions)	|WebView属性	|
 
-## 返回值
+## Returns
 
-|返回类型		|描述							|					|
+|Type|Description							|					|
 |--				|--								| --				|
 |WebViewDialog	|[WebViewDialog](#WebViewDialog)	| WebViewDialog，控制对话框显示和关闭等	|
 
-## 示例
+## Example
 ```Javascript
 let webviewDialog = hx.window.createWebViewDialog({
     modal: false,
@@ -76,9 +76,9 @@ promi.then(function (data) {
 
 调用createWebView创建[WebView](#WebView)时需要的配置项
 
-**属性列表**
+**Attribute list**
 
-|属性名			|属性类型	|描述						|
+|Attribute name			|Type	|Description						|
 |--				|--			|--							|
 |enableScripts	|Boolean	|是否启用JavaScript脚本支持	|
 
@@ -87,9 +87,9 @@ promi.then(function (data) {
 
 调用createWebViewDialog需要的对话框属性参数。
 
-**属性列表**
+**Attribute list**
 
-|属性名		|属性类型	|描述				|
+|Attribute name		|Type	|Description				|
 |--			|--			|--					|
 |modal      | Boolean	| 是否显示为模态窗口，默认模态窗口 |
 |title      | String	| 对话框主标题 |
@@ -105,7 +105,7 @@ WebView相关属性可以参考[WebView](#WebView)。
 
 #### 属性列表
 
-|属性名		|属性类型	|描述				|
+|Attribute name		|Type	|Description				|
 |--			|--			|--					|
 |webView | [WebView](#WebView)	| 用于渲染对话框主要内容 |
 |id      | String	| 用于内部通信的对话框id |
@@ -114,15 +114,15 @@ WebView相关属性可以参考[WebView](#WebView)。
 
 显示对话框，返回显示成功或者失败的信息，主要包含内置浏览器相关状态。
 
-**返回值**
+**Returns**
 
-|返回类型	|描述		|
+|Type	|Description		|
 |--			|--			|
 |Promise&lt;Object&gt;	|Promise对象，Object结构：{"code":2, "message":"Built-in browser not exist."}|
 
 **主要错误码信息**
 
-|错误码		| 描述									|
+|错误码		| Description									|
 |--			|--										|
 |0	| 无错误 |
 |1	| 内置浏览器插件正在下载 |
@@ -136,9 +136,9 @@ WebView相关属性可以参考[WebView](#WebView)。
 
 在对话框副标题下方显示红色错误信息，错误信息会由动态抖动效果
 
-**参数说明**
+**Parameter**
 
-|参数名称	|参数类型	|描述			|
+|Name	|Type	|Description			|
 |--			|--			|--				|
 |text		|String		| 错误信息  |
 
@@ -146,21 +146,21 @@ WebView相关属性可以参考[WebView](#WebView)。
 
 设置对话框指定按钮状态，对话框按钮通过[createWebViewDialog](#createWebViewDialog)参数[DialogOptions](#DialogOptions)提供。
 
-**参数说明**
+**Parameter**
 
-|参数名称	|参数类型	|描述			|
+|Name	|Type	|Description			|
 |--			|--			|--				|
 |button		|String		| 按钮字符串  |
 |status		|Array&lt;String&gt;	| 按钮状态列表，为空时设置默认状态|
 
 ### 按钮状态说明
 
-|状态		| 描述      |
+|状态		| Description      |
 |--			|--	        |
 |"loading"	| 按钮文字前方增加loading动态提示 |
 |"disable"	| 禁用按钮，可与loading组合使用 |  
 
-**示例**
+**Example**
 ``` javascript
     webviewDialog.setButtonStatus("确定", ["loading", "disable"]);
 ```
@@ -169,12 +169,12 @@ WebView相关属性可以参考[WebView](#WebView)。
 
 注册窗口关闭回调。
 
-|参数名称	|参数类型	|描述			|
+|Name	|Type	|Description			|
 |--			|--			|--				|
 |callback	|Function		|当窗口显示后，用户关闭或调用close后，触发该回调，无参数|
 
-### 返回值
+### Returns
 
-|返回类型	|描述			|
+|Type	|Description			|
 |--			|--				|
 |[Disposable](/ExtensionDocs/Api/other/Disposable)	| Disposable对象	|

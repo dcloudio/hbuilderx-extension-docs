@@ -1,24 +1,24 @@
 # onDidChangeWorkspaceFolders
 
-> 从HBuilderX 2.7.10及以上版本开始支持
+> Supported from HBuilderX 2.7.10+ version
 
-项目管理器内的项目新增或者移除时产生的事件
+An event that is emitted when a workspace folder is added or removed.
 
-## 介绍
+## Introduce
 
-**参数说明**
+**Parameter**
 
-|参数名称	|参数类型															|描述		|
+|Name	|Type															|Description		|
 |--			|--																	|--			|
 |listener	|Function([WorkspaceFoldersChangeEvent](#WorkspaceFoldersChangeEvent))	|项目新增或者移除的事件回调	|
 
-**返回值**
+**Returns**
 
-|返回类型	|描述				|
+|Type	|Description				|
 |--			|--					|
 |[Disposable](/ExtensionDocs/Api/other/Disposable)	|该事件回调的销毁器，可将该对象放置到插件的context.subscriptions数组内，插件卸载时，将会自动注销该`事件回调`	|
 
-**示例**
+**Example**
 
 ``` javascript
     let wsFoldersChangeDisplose = hx.workspace.onDidChangeWorkspaceFolders(function(event){
@@ -35,14 +35,14 @@
 
 > 项目管理器中新增或者移除项目时产生的事件类型
 
-**属性列表**
+**Attribute list**
 
-|属性名	|属性类型											|描述			|
+|Attribute name	|Type											|Description			|
 |--		|--													|--				|
 |added	| Array&lt;[WorkspaceFolder](/ExtensionDocs/Api/other/WorkspaceFolder)&gt;	|新增的项目列表	|
 |removed| Array&lt;[WorkspaceFolder](/ExtensionDocs/Api/other/WorkspaceFolder)&gt;	|移除的项目列表	|
 
-**示例**
+**Example**
 
 ``` javascript
     let wsFoldersChangeDisplose = hx.workspace.onDidChangeWorkspaceFolders(function(event){

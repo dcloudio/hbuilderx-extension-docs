@@ -8,22 +8,22 @@ viewId需要在package.json文件内的配置扩展点[views](/ExtensionDocs/Con
 
 完整的扩展视图流程参考 <a href="/ExtensionTutorial/views?id=webview" target="_blank">如何注册一个新的视图？</a>
 
-## 简介
+## Introduction
 
-**参数说明**
+**Parameter**
 
-|参数名称	|参数类型					|描述											|
-|--		|--							|--												|
-|viewId	|String	|视图Id，需要首先在配置扩展点`views`中声明。									|
-|options|[WebViewOptions](#WebViewOptions)			|WebView属性	|
+|Name		|Type															|Description																|
+|--			|--																|--																					|
+|viewId	|String														|视图Id，需要首先在配置扩展点`views`中声明。|
+|options|[WebViewOptions](#WebViewOptions)|WebView属性																|
 
-**返回值**
+**Returns**
 
-|返回类型		|描述							|					|
+|Type|Description							|					|
 |--				|--								| --				|
 |WebViewPanel	|[WebViewPanel](#WebViewPanel)	|WebViewPanel属性	|
 
-**示例**
+**Example**
 ```Javascript
     let webviewPanel = hx.window.createWebView("viewId",{
         enableScripts:true
@@ -55,9 +55,9 @@ viewId需要在package.json文件内的配置扩展点[views](/ExtensionDocs/Con
 
 webview的配置项
 
-**属性列表**
+**Attribute list**
 
-|属性名				|属性类型								|描述															|
+|Attribute name				|Type								|Description															|
 |--					|--										|--																|
 |enableScripts 	|Boolean								|是否启用JavaScript脚本支持	|
 
@@ -66,9 +66,9 @@ webview的配置项
 
 调用createWebView返回的WebViewPanel对象
 
-**属性列表**
+**Attribute list**
 
-|参数名称	|参数类型	|描述				|
+|Name	|Type	|Description				|
 |--			|--			|--			|
 |webView	|[WebView](#WebView)	|WebView 关联的WebView对象|
 |dispose()  |dispose方法  |调用关闭该扩展视图    |
@@ -80,7 +80,7 @@ webview的配置项
 
 ### WebView属性列表
 
-|参数名称	|参数类型	|描述				|
+|Name	|Type	|Description				|
 |--			|--			|--			|
 |options	|[WebViewOptions](#WebViewOptions)	|调用[createWebView](#createWebView)创建WebView时传入的options参数|
 |html |     String | WebView中要显示的html内容 |
@@ -89,19 +89,19 @@ webview的配置项
 
 > 收到hbuilderx.postMessage发出的消息时调用回调函数。
 
-**参数说明**
+**Parameter**
 
-|参数名称	|参数类型	|描述		|
+|Name	|Type	|Description		|
 |--			|--																	|--			|
 |callback	|Function	|响应收到消息的回调|
 
-**返回值**
+**Returns**
 
-|返回类型	|
+|Type	|
 |--	|
 |无 | 
 
-**示例**
+**Example**
 ``` javascript
     webview.onDidReceiveMessage((message)=>{ console.log(message) });
 ```
@@ -111,15 +111,15 @@ webview的配置项
 
 > 在WebView中发送消息
 
-**参数说明**
+**Parameter**
 
-|参数名称	|参数类型	|描述		|
+|Name	|Type	|Description		|
 |--			|--	|--			|
 |message	|Any	| 消息内容|
 
-**返回值**
+**Returns**
 
-|返回类型	|描述	|
+|Type	|Description	|
 |--			|--		|
 |Thenable| Javascript异步延迟后执行|
 
@@ -128,14 +128,14 @@ webview的配置项
 
 > 将本地资源转换成可在WebView中加载的uri。
 
-**参数说明**
+**Parameter**
 
-|参数名称	|参数类型	|描述		|
+|Name	|Type	|Description		|
 |--			|--																	|--			|
 |localResource	|[Uri](/ExtensionDocs/Api/other/Uri)	|统一资源访问符|
 
-**返回值**
+**Returns**
 
-|返回类型	|描述	|
+|Type	|Description	|
 |--			|--		|
 |[Uri](/ExtensionDocs/Api/other/Uri)|可在[WebView](#WebView)中加载的uri|
