@@ -1,21 +1,24 @@
-> HBuilderX 2.0.3+起支持
+# EditorConfig
 
-## editorconfig是什么？
+> Supported from HBuilderX 2.0.3+
 
-很多公司都要求各开发成员使用相同的编码风格，比如缩进是空格还是tab。
+## What is EditorConfig?
 
-`editorconfig`是一套解决这个问题的业内通用规范，通过在项目下存放配置文件`.editorconfig`，并在这个配置文件中描述规则，然后把这个配置文件和其他代码一起提交git/svn，所有项目成员，都会遵循相同的编码规范。
+EditorConfig helps maintain consistent coding styles for multiple developers working on the same project across various editors and IDEs. 
 
-`HBuilderX`直接支持该规范，无需下载插件，开箱即用。sublime、vscode支持该规范的话需要先下载插件。
+The EditorConfig project consists of a file format for defining coding styles and a collection of text editor plugins that enable editors to read the file format and adhere to defined styles. 
 
-`editorconfig`的官网是[https://editorconfig.org/](https://editorconfig.org/)
-`editorconfig`可以帮助开发者在不同的编辑器和IDE之间定义和维护一致的代码风格。
-`editorconfig`包含一个用于定义代码格式的文件和一批编辑器插件，这些插件可以让编辑器读取配置文件并依此格式化代码。
-`editorconfig`的配置文件十分易读，并且可以在各个操作系统、编辑器下工作。
+EditorConfig files are easily readable and they work nicely with version control systems.
 
-## editorconfig的配置文件是怎样的？
+The official website of `editorconfig` is [https://editorconfig.org/](https://editorconfig.org/)
 
-以下是一个用于设置Python和JavaScript行尾和缩进风格的配置文件。
+## HBuilderX EditorConfig
+
+`HBuilderX` directly supports this specification, no need to download plug-ins, it can be used out of the box. If sublime and vscode support this specification, you need to download the plug-in first.
+
+## What's an EditorConfig file look like?
+
+Below is an example .editorconfig file setting end-of-line and indentation styles for Python and JavaScript files.
 
 ```
 # EditorConfig is awesome: http://EditorConfig.org
@@ -48,11 +51,11 @@ indent_style = space
 indent_size = 2
 ```
 
-## 案例
+## Case
 
-很多开源项目都用到了`editorconfig`
+Many open source projects use `editorconfig`
 
-比如[jQuery](https://github.com/jquery/jquery/blob/master/.editorconfig), `jQuery`在`Github`上的`.editorconfig`配置文件如下：
+For example[jQuery](https://github.com/jquery/jquery/blob/master/.editorconfig), `jQuery` `.editorconfig` configuration file on `Github`
 
 ```ini
 root = true
@@ -69,55 +72,63 @@ indent_style = space
 indent_size = 2
 ```
 
-如上，可以看到，JQuery配置了：编码格式、缩进风格等
+As in the above example, JQuery is configured: encoding format, indentation style, etc.
 
 
-## 在哪里存放配置文件
-当打开一个文件时，`editorconfig`插件会在打开文件的目录和其每一级父目录查找.`editorconfig`文件，直到有一个配置文件`root=true`。
+## Where are these files stored?
 
-如果一个工程中出现多个配置文件，EditorConfig配置文件的读取层级是自上而下的，最深层的配置文件，最后读取。配置规则也是 按照读取的顺序来生效，所以路径上离代码最近的配置规则，优先级最高。
+When opening a file, EditorConfig plugins look for a file named `.editorconfig` in the directory of the opened file and in every parent directory. A search for .editorconfig files will stop if the root filepath is reached or an EditorConfig file with `root=true` is found.
+
+EditorConfig files are read top to bottom and the most recent rules found take precedence. Properties from matching EditorConfig sections are applied in the order they were read, so properties in closer files take precedence.
 
 相对于其他开发工具（如vscode），HBuilderX对editorconfig更完善。在其他工具中，项目外层如果有editorconfig文件，也会影响这个项目，经常让人莫名其妙。HBuilderX没有这个bug。
 
 
-## 文件格式详情
-`editorconfig`文件使用INI格式（译注：请参考维基百科），目的是可以与Python ConfigParser Library兼容，但是允许在分段名（译注：原文是section names）中使用“and”。
-分段名是全局的文件路径，格式类似于`gitignore`。斜杠`/`作为路径分隔符，`#`或者`;`作为注释。注释应该单独占一行。`editorconfig`文件使用`UTF-8`格式、`CRLF`或`LF`作为换行符。
+## File Format Details
 
-### 通配符
-| 通配符     | 说明                                 |
-| ---------- | ------------------------------------ |
-| *          | 匹配除/之外的任意字符串              |
-| **         | 匹配任意字符串                       |
-| ？         | 匹配任意单个字符                     |
-| [name]     | 匹配name字符                         |
-| [!name]    | 匹配非name字符                       |
-| {s1,s3,s3} | 匹配任意给定的字符串（0.11.0起支持） |
+EditorConfig files use an `INI` format that is compatible with the format used by Python ConfigParser Library, but [ and ] are allowed in the section names. 
 
-特殊字符可以用`\`转义，以使其不被认为是通配符。
+The section names are filepath globs (case sensitive), similar to the format accepted by gitignore. Only forward slashes (`/`, not backslashes) are used as path separators and octothorpes (`#`) or semicolons (`;`) are used for comments.
+ 
+Comments should go on their own lines. EditorConfig files should be `UTF-8` encoded, with either `CRLF` or `LF` line separators.
 
-### 支持的属性
+### Wildcard Patterns
 
-| 属性说明                   | 说明                                                         |
-| ------------------------ | ------------------------------------------------------------ |
-| indent_style             | tab为hard-tabs，space为soft-tabs                             |
-| indent_size              | 设置整数表示规定每级缩进的列数和soft-tabs的宽度（译注：空格数）。如果设定为tab，则会使用tab_width的值（如果已指定） |
-| tab_width                | 设置整数用于指定替代tab的列数。默认值就是indent_size的值，一般无需指定。 |
-| end_of_line              | 定义换行符，支持lf、cr和crlf。                               |
-| trim_trailing_whitespace | 设为true表示会除去换行行首的任意空白字符，false反之          |
-| insert_final_newline     | 设为true表明使文件以一个空白行结尾，false反之                |
-| root                     | 表明是最顶层的配置文件，发现设为true时，才会停止查找.`editorconfig`文件。 |
+| Wildcard Patterns	| Description																																															|
+| ----------				| ------------------------------------																																		|
+| *									| Matches any string of characters, except path separators (/)																						|
+| **								| Matches any string of characters																																				|
+| ？								| Matches any single character																																						|
+| [name]						| Matches any single character in name																																		|
+| [!name]						| Matches any single character not in name																																|
+| {s1,s3,s3}				| Matches any of the strings given (separated by commas) (Available since EditorConfig Core 0.11.0)				|
+|{num1..num2}				|Matches any integer numbers between num1 and num2, where num1 and num2 can be either positive or negative|
 
-### 注意
+**Notes:** Special characters can be escaped with a backslash so they won't be interpreted as wildcard patterns.
 
-1. 在HBuilderX内， 所有的属性名和属性值对`大小写敏感`。通常，如果没有明确指定某个属性，则会使用编辑器的配置，而`editorconfig`不会处理。
-2. 推荐不要指定某些`editorconfig`属性。比如，tab_width不需要特别指定，除非它与`indent_size`不同。同样的，当`indent_style`设为`tab`时，不需要配置`indent_size`，这样才方便阅读者使用他们习惯的缩进格式。另外，如果某些属性并没有规范化（比如`end_of_line`），就最好不要设置它。
-3. 如果你不需要editorconfig的功能，可以在工具-设置中关闭这个功能。
+### Supported Properties
 
-## 启用或关闭editorconfig配置
+| Properties							| Description																																																																																											|
+| ------------------------| ------------------------------------------------------------																																																																		|
+| indent_style						| set to tab or space to use hard tabs or soft tabs respectively.																																																																	|
+| indent_size							| a whole number defining the number of columns used for each indentation level and the width of soft tabs (when supported). When set to tab, the value of tab_width (if specified) will be used.	|
+| tab_width								| a whole number defining the number of columns used to represent a tab character. This defaults to the value of indent_size and doesn't usually need to be specified.														|
+| end_of_line							|  set to lf, cr, or crlf to control how line breaks are represented.																																																															|
+|charset									|set to latin1, utf-8, utf-8-bom, utf-16be or utf-16le to control the character set.																																																							|
+| trim_trailing_whitespace| set to true to remove any whitespace characters preceding newline characters and false to ensure it doesn't.																																										|
+| insert_final_newline		| set to true to ensure file ends with a newline when saving and false to ensure it doesn't.																																																			|
+| root										| special property that should be specified at the top of the file outside of any sections. Set to true to stop .editorconfig files search on current file.																				|
 
-在【设置】中，有个editorconfig开关，您可以自由选择开启与关闭`.editorconfig`
+### Notes
 
-<img src="/static/snapshots/tutorial/editorconfig.png" />
+1. Currently all properties and values are case-insensitive. They are lowercased when parsed. Generally, if a property is not specified, the editor settings will be used, i.e. EditorConfig takes no effect on that part. 
+2. It is acceptable and often preferred to leave certain EditorConfig properties unspecified. For example, tab_width need not be specified unless it differs from the value of `indent_size`. Also, when indent_style is set to tab, it may be desirable to leave `indent_size` unspecified so readers may view the file using their preferred indentation width. Additionally, if a property is not standardized in your project (`end_of_line` for example), it may be best to leave it blank.
+3. If you don't need the function of editorconfig, you can turn off this function in [Settings].
+
+## HBuilderX editorconfig configuration
+
+In HBuilderX [Settings], there is an editorconfig switch, you can freely choose to turn on or off `.editorconfig`
+
+<img src="/static/snapshots/tutorial/settings/editorconfig_en.png" style="zoom: 45%;border: 1px solid #eee; border-radius: 10px;" />
 
 

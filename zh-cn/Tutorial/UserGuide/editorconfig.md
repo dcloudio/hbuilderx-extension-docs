@@ -110,7 +110,7 @@ indent_size = 2
 
 ### 注意
 
-1. 在HBuilderX内， 所有的属性名和属性值对`大小写敏感`。通常，如果没有明确指定某个属性，则会使用编辑器的配置，而`editorconfig`不会处理。
+1. 所有的属性名和属性值对`大小写不敏感`。通常，如果没有明确指定某个属性，则会使用编辑器的配置，而`editorconfig`不会处理。
 2. 推荐不要指定某些`editorconfig`属性。比如，tab_width不需要特别指定，除非它与`indent_size`不同。同样的，当`indent_style`设为`tab`时，不需要配置`indent_size`，这样才方便阅读者使用他们习惯的缩进格式。另外，如果某些属性并没有规范化（比如`end_of_line`），就最好不要设置它。
 3. 如果你不需要editorconfig的功能，可以在工具-设置中关闭这个功能。
 
@@ -118,6 +118,6 @@ indent_size = 2
 
 在【设置】中，有个editorconfig开关，您可以自由选择开启与关闭`.editorconfig`
 
-<img src="/static/snapshots/tutorial/editorconfig.png" />
+<img src="/static/snapshots/tutorial/settings/editorconfig.png" />
 
 
