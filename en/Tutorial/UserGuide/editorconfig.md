@@ -81,8 +81,6 @@ When opening a file, EditorConfig plugins look for a file named `.editorconfig` 
 
 EditorConfig files are read top to bottom and the most recent rules found take precedence. Properties from matching EditorConfig sections are applied in the order they were read, so properties in closer files take precedence.
 
-相对于其他开发工具（如vscode），HBuilderX对editorconfig更完善。在其他工具中，项目外层如果有editorconfig文件，也会影响这个项目，经常让人莫名其妙。HBuilderX没有这个bug。
-
 
 ## File Format Details
 
