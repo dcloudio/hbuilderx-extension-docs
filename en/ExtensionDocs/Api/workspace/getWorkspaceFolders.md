@@ -30,7 +30,7 @@ The project directory under the workspace, each project in the project manager o
 
 |Attribute name	|Type			|Description			|
 |--		|--					|--				|
-|uri	|String或[Uri](/ExtensionDocs/Api/other/Uri)|Project Path	|
+|uri	|String or [Uri](/ExtensionDocs/Api/other/Uri)|Project Path	|
 |name	|String				|Project directory name	|
 |nature	|String				|Project Type		|
 |id		|String				|Project ID	|
