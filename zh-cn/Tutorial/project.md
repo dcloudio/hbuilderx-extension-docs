@@ -12,7 +12,7 @@ HBuilderX， 支持从`svn`、`Git`、`本地`导入项目。
 
 svn、git导入项目，需要先安装svn、git插件。
 
-<img src="/static/snapshots/tutorial/project_import.png" style="zoom: 85%;" />
+<img src="/static/snapshots/tutorial/project/project_import.png" style="zoom: 85%;" />
 
 ## 创建项目
 
@@ -22,7 +22,7 @@ HBuilderX支持多种项目类型，主要有：web项目、5+App项目、uni-ap
 - 【工具栏】第一个图标
 - 顶部菜单【文件 -> 新建 -> 项目】
 
-<img src="/static/snapshots/tutorial/project_new.png" style="zoom: 85%;" />
+<img src="/static/snapshots/tutorial/project/project_new.png" style="zoom: 85%;" />
 
 ## 关闭项目
 
@@ -32,7 +32,7 @@ HBuilderX支持多种项目类型，主要有：web项目、5+App项目、uni-ap
 
 当然，后期也可以从【已关闭项目】中，将需要的项目打开，移动到项目管理器。
 
-<img src="/static/snapshots/tutorial/project_close.png" style="zoom: 85%;" />
+<img src="/static/snapshots/tutorial/project/project_close.png" style="zoom: 85%;" />
 
 ## 项目别名
 
@@ -40,7 +40,7 @@ HBuilderX，支持对项目创建或修改`别名`。
 
 项目管理器，选中项目，右键菜单，点击【修改项目别名】，即创建别名。
 
-<img src="/static/snapshots/tutorial/project_alias.png" style="zoom: 85%;" />
+<img src="/static/snapshots/tutorial/project/project_alias.png" style="zoom: 85%;" />
 
 ## 其它操作
 

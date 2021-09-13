@@ -12,7 +12,7 @@ HBuilderX， 支持從`svn`、`Git`、`本地`導入項目。
 
 svn、git導入項目，需要先安裝svn、git插件。
 
-<img src="/static/snapshots/tutorial/project_import.png" style="zoom: 85%;" />
+<img src="/static/snapshots/tutorial/project/project_import.png" style="zoom: 85%;" />
 
 ## 創建項目
 
@@ -22,7 +22,7 @@ HBuilderX支持多種項目類型，主要有：web項目、5+App項目、uni-ap
 - 【工具欄】第一個圖標
 - 頂部菜單【文件 -> 新建 -> 項目】
 
-<img src="/static/snapshots/tutorial/project_new.png" style="zoom: 85%;" />
+<img src="/static/snapshots/tutorial/project/project_new.png" style="zoom: 85%;" />
 
 ## 關閉項目
 
@@ -32,7 +32,7 @@ HBuilderX支持多種項目類型，主要有：web項目、5+App項目、uni-ap
 
 當然，後期也可以從【已關閉項目】中，將需要的項目打開，移動到項目管理器。
 
-<img src="/static/snapshots/tutorial/project_close.png" style="zoom: 85%;" />
+<img src="/static/snapshots/tutorial/project/project_close.png" style="zoom: 85%;" />
 
 ## 項目別名
 
@@ -40,7 +40,7 @@ HBuilderX，支持對項目創建或修改`別名`。
 
 項目管理器，選中項目，右鍵菜單，點擊【修改項目別名】，即創建別名。
 
-<img src="/static/snapshots/tutorial/project_alias.png" style="zoom: 85%;" />
+<img src="/static/snapshots/tutorial/project/project_alias.png" style="zoom: 85%;" />
 
 ## 其它操作
 
