@@ -33,6 +33,8 @@ HBuilderX頂部菜單，【工具】-> 【插件安裝】，即可打開插件�
 
 <img src="/static/snapshots/tutorial/source_control/git-new-push.png" style="zoom:50%; border: 1px solid #eee;" />
 
+**备注**：git push --force: 表示将目前自己本机的代码库推送到远端，并覆盖。请谨慎使用。
+
 ## 提交
 
 1. 在要提交的文件、或目錄、或項目上，右鍵菜單，點擊【提交】

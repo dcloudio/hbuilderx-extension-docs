@@ -47,6 +47,8 @@ Project, right-click menu 【Git Push】
 
 <img src="/static/snapshots/tutorial/source_control/git-new-push-en.png" style="zoom:50%; border: 1px solid #eee;" />
 
+**备注**：git push --force: 表示将目前自己本机的代码库推送到远端，并覆盖。请谨慎使用。
+
 ## Shortcut key configuration
 
 1. toop menu, 【tool】-->【custom keybindings】
