@@ -12,7 +12,7 @@ An event that is emitted when a text document will be saved to disk.
 
 |Name	|Type															|Description		|
 |--			|--																	|--			|
-|listener	|Function([TextDocumentWillSaveEvent](#TextDocumentWillSaveEvent))	|事件回调	|
+|listener	|Function([TextDocumentWillSaveEvent](#TextDocumentWillSaveEvent))	|Event callback	|
 
 **Returns**
 
@@ -35,4 +35,4 @@ An event that is emitted when a text document will be saved to disk.
 
 |Attribute name		|Type										|Description						|
 |--			|--												|--							|
-|document	|[TextDocument](#TextDocument)					|该事件关联的文档			|
+|document	|[TextDocument](#TextDocument)					|The affected document.			|

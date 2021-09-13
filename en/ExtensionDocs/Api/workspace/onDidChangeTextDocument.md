@@ -8,7 +8,7 @@ An event that is emitted when a text document is changed.
 
 |Name	|Type															|Description		|
 |--			|--																	|--			|
-|listener	|Function([TextDocumentChangeEvent](#TextDocumentChangeEvent))	|事件回调	|
+|listener	|Function([TextDocumentChangeEvent](#TextDocumentChangeEvent))	|Event callback	|
 
 **Returns**
 
@@ -25,10 +25,11 @@ An event that is emitted when a text document is changed.
 ```
 
 ## TextDocumentChangeEvent
-文档被修改时的事件
+
+An event that is emitted when a text document is changed.
 
 **Attribute list**
 
 |Attribute name		|Type						|Description				|
 |--			|--								|--					|
-|document	|[TextDocument](/ExtensionDocs/Api/windows/TextEditor.md#TextDocument)	|该事件关联的文档	|
+|document	|[TextDocument](/ExtensionDocs/Api/windows/TextEditor.md#TextDocument)	|The affected document.	|
