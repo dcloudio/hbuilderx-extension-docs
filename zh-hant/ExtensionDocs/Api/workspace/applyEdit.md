@@ -11,6 +11,7 @@
 |edit		|[WorkspaceEdit](#WorkspaceEdit)	|文檔編輯操作	|
 
 **返回值**
+
 |返回類型	|描述	|
 |--			|--		|
 |Promise&lt;void&gt;	|Promise	|

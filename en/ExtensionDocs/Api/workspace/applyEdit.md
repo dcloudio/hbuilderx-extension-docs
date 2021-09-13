@@ -1,6 +1,8 @@
 # applyEdit
 
-根据指定的WorkspaceEdit对象编辑文档。WorkspaceEdit对象内要设定被修改文档的uri和要执行修改的TextEdit操作对象。
+create, delete, and rename resources as defined by the given workspace edit. 
+
+The uri of the modified document and the TextEdit operation object to be modified should be set in the WorkspaceEdit object.
 
 ## applyEdit介绍
 
@@ -8,9 +10,10 @@
 
 |Name	|Type									|Description			|
 |--			|--											|--				|
-|edit		|[WorkspaceEdit](#WorkspaceEdit)	|文档编辑操作	|
+|edit		|[WorkspaceEdit](#WorkspaceEdit)	|A workspace edit.	|
 
 **Returns**
+
 |Type	|Description	|
 |--			|--		|
 |Promise&lt;void&gt;	|Promise	|
@@ -34,7 +37,9 @@
 
 ## WorkspaceEdit
 
-WorkspaceEdit: 工作空间的一组编辑操作
+A workspace edit is a collection of textual and files changes for multiple resources and documents.
+
+Use the applyEdit-function to apply a workspace edit.
 
 #### set
 
@@ -42,8 +47,8 @@ WorkspaceEdit: 工作空间的一组编辑操作
 
 |Name	|Type							|Description			|
 |--			|--									|--				|
-|uri		|String或Uri						|文档地址		|
-|edits		|Array&lt;[TextEdit](#TextEdit)&gt;	|编辑操作数组	|
+|uri		|String或Uri						|A resource identifier.		|
+|edits		|Array&lt;[TextEdit](#TextEdit)&gt;	|An array of text edits.	|
 
 **Returns**
 
@@ -65,14 +70,12 @@ WorkspaceEdit: 工作空间的一组编辑操作
 
 ## TextEdit
 
-TextEdit: 文档编辑
-
 #### Attribute list
 
 |Attribute name	|Type			|Description			|
 |--		|--					|--				|
-|range	|[Range](#Range)	|要修改的区域	|
-|newText|String				|要插入的新内容	|
+|range	|[Range](#Range)	|A range.	|
+|newText|String				|A string.	|
 
 #### replace **static**
 
@@ -80,22 +83,22 @@ TextEdit: 文档编辑
 
 |Name	|Type			|Description			|
 |--			|--					|--				|
-|range		|[Range](#Range)	|要修改的区域	|
-|newText	|String				|要插入的新内容	|
+|range		|[Range](#Range)	|A range.	|
+|newText	|String				|A string.	|
 
 **Returns**
 
 |Type	|Description	|
 |--			|--		|
-|[TextEdit](#TextEdit)|	文档编辑对象|
+|[TextEdit](#TextEdit)|	A new text edit object.|
 
 ## Range
 
-Range: 文本区域
+Create a new range from two positions. If start is not before or equal to end, the values will be swapped.
 
 **Attribute list**
 
 |Attribute name	|Type	|Description		|
 |--		|--			|--			|
-|start	|Number		|起始位置	|
-|end	|Number		|结束位置	|
+|start	|Number		|A position.	|
+|end	|Number		|A position.	|
