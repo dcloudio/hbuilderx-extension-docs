@@ -10,7 +10,7 @@ An event that is emitted when a workspace folder is added or removed.
 
 |Name	|Type															|Description		|
 |--			|--																	|--			|
-|listener	|Function([WorkspaceFoldersChangeEvent](#WorkspaceFoldersChangeEvent))	|项目新增或者移除的事件回调	|
+|listener	|Function([WorkspaceFoldersChangeEvent](#WorkspaceFoldersChangeEvent))	|Event callback for adding or removing items.	|
 
 **Returns**
 
@@ -23,34 +23,34 @@ An event that is emitted when a workspace folder is added or removed.
 ``` javascript
     let wsFoldersChangeDisplose = hx.workspace.onDidChangeWorkspaceFolders(function(event){
         if(event.added){
-            event.added.forEach(item=>console.log("新增了项目:",item.name));
+            event.added.forEach(item=>console.log("Added item:",item.name));
         }
         if(event.removed){
-            event.removed.forEach(item=>console.log("移除了项目:",item.name));
+            event.removed.forEach(item=>console.log("Items removed:",item.name));
         }
     });
 ```
 
 ## WorkspaceFoldersChangeEvent
 
-> 项目管理器中新增或者移除项目时产生的事件类型
+> An event that is emitted when a workspace folder is added or removed.
 
 **Attribute list**
 
 |Attribute name	|Type											|Description			|
 |--		|--													|--				|
-|added	| Array&lt;[WorkspaceFolder](/ExtensionDocs/Api/other/WorkspaceFolder)&gt;	|新增的项目列表	|
-|removed| Array&lt;[WorkspaceFolder](/ExtensionDocs/Api/other/WorkspaceFolder)&gt;	|移除的项目列表	|
+|added	| Array&lt;[WorkspaceFolder](/ExtensionDocs/Api/other/WorkspaceFolder)&gt;	|Added workspace folders.|
+|removed| Array&lt;[WorkspaceFolder](/ExtensionDocs/Api/other/WorkspaceFolder)&gt;	|Removed workspace folders.	|
 
 **Example**
 
 ``` javascript
-    let wsFoldersChangeDisplose = hx.workspace.onDidChangeWorkspaceFolders(function(event){
-        if(event.added){
-            event.added.forEach(item=>console.log("新增了项目:",item.name));
-        }
-        if(event.removed){
-            event.removed.forEach(item=>console.log("移除了项目:",item.name));
-        }
-    });
+let wsFoldersChangeDisplose = hx.workspace.onDidChangeWorkspaceFolders(function(event){
+    if(event.added){
+        event.added.forEach(item=>console.log("Added item:",item.name));
+    }
+    if(event.removed){
+        event.removed.forEach(item=>console.log("Items removed:",item.name));
+    }
+});
 ```
