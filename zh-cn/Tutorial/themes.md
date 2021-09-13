@@ -3,7 +3,7 @@
 1. 在HBuilderX中，您可以点击顶部菜单【工具】【主题】，选择切换您喜欢的主题颜色。
 2. HBuilderX内置了3个主题, 分别为`绿柔` `雅蓝` `酷黑`
 
-<img src="/static/snapshots/tutorial/themes.png" />
+<img src="/static/snapshots/tutorial/menu_tool/themes.png" />
 
 当前颜色主题，存储在用户设置（【设置】【源码视图】,即settings.json文件）中
 ```

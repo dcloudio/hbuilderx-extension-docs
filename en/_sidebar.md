@@ -8,6 +8,7 @@
 * Get Start
     * [StartedTutorial](/Tutorial/StartedTutorial.md)
     * [Keybindings](/Tutorial/keybindings.md)
+    * [Theme](/Tutorial/themes.md)
     * [Project](/Tutorial/project.md)
     * [Plugins Install](Tutorial/PluginsInstall.md)
 * User Guide
