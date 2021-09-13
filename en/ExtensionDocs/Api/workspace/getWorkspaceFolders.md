@@ -11,13 +11,13 @@ No
 #### Returns
 |Type												|Description					|
 |--																|--						|
-|Promise&lt;Array&lt;[WorkspaceFolder](/ExtensionDocs/Api/other/WorkspaceFolder)&gt;&gt;|项目管理器下所有的项目	|
+|Promise&lt;Array&lt;[WorkspaceFolder](/ExtensionDocs/Api/other/WorkspaceFolder)&gt;&gt;|All projects under the project manager	|
 
 #### Example
 ``` javascript
     var wsPromise = hx.workspace.getWorkspaceFolders();
     wsPromise.then(function(wsFolders) {
-        console.log("项目管理器包含的项目数量：",wsFolders.length);
+        console.log("Number of projects included in the project manager:",wsFolders.length);
     });
 ```
 
