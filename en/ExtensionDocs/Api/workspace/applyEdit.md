@@ -4,7 +4,7 @@ create, delete, and rename resources as defined by the given workspace edit.
 
 The uri of the modified document and the TextEdit operation object to be modified should be set in the WorkspaceEdit object.
 
-## applyEdit介绍
+## Introduce
 
 **Parameter**
 

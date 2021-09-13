@@ -8,40 +8,43 @@ Get a workspace configuration object.
 
 |Name	|Type	|Description			|
 |--			|--			|--				|
-|section	|String		|配置项分类名称	|
+|section	|String		|Configuration  name	|
 
 **Returns**
+
 |Type				|Description		|
 |--								|--			|
-|[Configuration](#Configuration)|返回配置	|
+|[Configuration](/ExtensionDocs/Api/workspace/onDidChangeConfiguration?id=configurationchangeevent)|The full configuration or a subset.	|
 
 **Example**
 
 ``` javascript
-    let config = hx.workspace.getConfiguration()
-    let fontSize = config.get("editor.fontSize");
-    //或者也可以这样
-    let config = hx.workspace.getConfiguration("editor")
-    let fontSize = config.get("fontSize");
+let config = hx.workspace.getConfiguration()
+let fontSize = config.get("editor.fontSize");
+
+or
+
+let config = hx.workspace.getConfiguration("editor")
+let fontSize = config.get("fontSize");
 ```
 
 
 ## get
 
-> get: 获取配置项
+> get: Get configuration items
 
 **Parameter**
 
 |Name		|Type	|Description		|
 |--				|--			|--			|
-|section		|String		|配置项的key|
-|defaultValue	|Any		|默认值，当key不存在时返回该值|
+|section		|String		|Configuration name。|
+|defaultValue	|Any		|A value should be returned when no value could be found, is undefined.|
 
 **Returns**
 
 |Type	|Description		|
 |--			|--			|
-|Any		|配置项的值	|
+|Any		|Return a value from this configuration.	|
 
 **Example**
 ``` javascript
@@ -51,14 +54,14 @@ Get a workspace configuration object.
 
 ## update
 
-> update: 更新配置项
+> update: Update configuration items
 
 **Parameter**
 
 |Name	|Type	|Description		|
 |--			|--			|--			|
-|section	|String		|配置项的key|
-|value		|Any		|配置项的值	|
+|section	|String		|Configuration name|
+|value		|Any		|Configuration item value	|
 
 **Returns**
 
@@ -70,6 +73,6 @@ Get a workspace configuration object.
 ``` javascript
     let eslintConfig = hx.workspace.getConfiguration("eslint-js")
     eslintConfig.update("validateOnDocumentChanged",true).then(()=>{
-        console.log("更新配置成功。");
+        console.log("Successfully updated the configuration.");
     });
 ```

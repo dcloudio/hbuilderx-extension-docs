@@ -13,7 +13,7 @@
 **返回值**
 |返回类型						|描述		|
 |--								|--			|
-|[Configuration](#Configuration)|返回配置	|
+|[Configuration](/ExtensionDocs/Api/workspace/onDidChangeConfiguration?id=configurationchangeevent)|返回配置	|
 
 **示例**
 
