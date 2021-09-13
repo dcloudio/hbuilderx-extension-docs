@@ -21,38 +21,39 @@
 **Example**
 
 ``` javascript
-    let configurationChangeDisplose = hx.workspace.onDidChangeConfiguration(function(event){
-        if(event.affectsConfiguration("editor.fontSize")){
-            console.log("修改了字体大小");
-        }
-    });
+let configurationChangeDisplose = hx.workspace.onDidChangeConfiguration(function(event){
+    if(event.affectsConfiguration("editor.fontSize")){
+        console.log("Modified font size");
+    }
+});
 ```
 
 ## ConfigurationChangeEvent
 
-> 配置改变产生的事件
+> An event that is emitted when the configuration changed.
 
 ### affectsConfiguration
-判断该事件该变了哪个配置项值
+
+Checks if the given section has changed.
 
 **Parameter**
 
 |Name	|Type	|Description								|
 |--			|--			|--									|
-|section	|String		|配置项的key，比如:"editor.fontSize"|
+|section	|String		|Configuration name, Example:"editor.fontSize"|
 
 **Parameter**
 
 |Type	|Description												|
 |--			|--													|
-|Boolean	|`true`表示配置项被修改，`false`表示配置项没有被修改|
+|Boolean	|`true` if the given section has changed.|
 
 **Example**
 
 ``` javascript
-    let configurationChangeDisplose = hx.workspace.onDidChangeConfiguration(function(event){
-        if(event.affectsConfiguration("editor.fontSize")){
-            console.log("修改了字体大小");
-        }
-    });
+let configurationChangeDisplose = hx.workspace.onDidChangeConfiguration(function(event){
+    if(event.affectsConfiguration("editor.fontSize")){
+        console.log("Modified font size");
+    }
+});
 ```
