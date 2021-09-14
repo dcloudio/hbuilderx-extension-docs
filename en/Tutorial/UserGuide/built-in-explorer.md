@@ -1,77 +1,77 @@
-# 内置资源管理器
+# Built-in Explorer
 
-> windows：仅支持HBuilderX2.5.5+; mac：仅支持HBuilderX 2.6.3+
+The built-in resource manager of HBuilderX gives you a larger resource management interface and greatly improves the efficiency of file management.
 
-传统开发工具，仅仅依靠左侧的项目树来管理资源文件，便利性和效率是远远不够的。
-HBuilderX内置的资源管理器，给你一个更大的资源管理界面，大幅提高文件的管理效率。
+Compared with the resource manager that comes with OS, HBuilderX resource manager provides special optimization for programming files.
 
-相比OS自带的资源管理器，HBuilderX资源管理器为编程文件提供专门的优化。
-- 在大图预览界面下直接显示html标题、vue页面、组件的名字
-- 直接预览markdown的内容
-- 在列表详情界面扩充单独的列来显示svn/git状态
+- Large icon view, Directly display the html title, vue page, component name
+- Preview the content of markdown directly
+- Expand a separate column in the list details interface to display svn/git status
 
-先看一段动画，来感受下。
+**Use animation**
 
-<img src="/static/snapshots/tutorial/explorer_1.gif" style="zoom:90%" />
+<img src="/static/snapshots/tutorial/explorer/explorer_1.gif" style="zoom:90%;" class="border-1px" />
 
-### 有哪些亮点？
+## What are the advantages?
 
-1. 进入图片目录，所有图片以缩略图模式展示。查看图片更方便
-2. vue、markdown、txt等文件，缩略图直接预览内容
-3. 列表模式，可以直观看到文件类型、大小、修改时间
-4. 缩略图模式，提供了更漂亮的文件图标
-5. 选中文件、文件夹，右键菜单，可以直接看到属性
-6. uni-app项目，创建组件、页面，更加便捷
-7. 更多功能.........
+1. Enter the picture catalog, all pictures are displayed in thumbnail mode. More convenient to view pictures
+2. vue, markdown, txt and other files, thumbnails directly preview the content
+3. List mode, you can visually see the file type, size, and modification time
+4. Thumbnail mode provides more beautiful file icons
+5. Select the file, folder, right-click menu, you can see the properties directly
+6. uni-app projects, creating components and pages, more convenient
+7. More.........
 
-### 使用地址栏，返回上级目录，顶级目录
+## Address Bar
 
-<img src="/static/snapshots/tutorial/explorer_2.png" />
+Use the address bar to return to the upper level directory, top level directory.
 
-
-### 更便捷查看文件属性
-
-选中文件，右键菜单，查看属性，无需再打开系统资源管理器
-
-<img src="/static/snapshots/tutorial/explorer_3.png" />
-
-### 强大的文件搜索
-
-<img src="/static/snapshots/tutorial/explorer_4.png" />
+<img src="/static/snapshots/tutorial/explorer/explorer_2.png" />
 
 
-### svn/git 
+## View file properties more easily
 
-资源管理器内，svn项目、git项目，都可以直观看到状态。
+Select the file, right-click the menu, view the properties, no need to open the system resource manager.
 
-<img src="/static/snapshots/tutorial/explorer_5.png" />
+<img src="/static/snapshots/tutorial/explorer/explorer_3_en.png" class="hd-img" />
 
+## Powerful file search
 
-### 优美直观的文件图标
-
-<img src="/static/snapshots/tutorial/explorer_6.png" />
-
-###  uni-app，资源管理器，新建页面
-
-<img src="/static/snapshots/tutorial/explorer_7.png" />
+<img src="/static/snapshots/tutorial/explorer/explorer_4_en.png" class="hd-img" />
 
 
-### 设置项
+## svn/git 
 
-资源管理器的打开方式，默认为双击展开目录，可以自定义开启与关闭
+In the built-in Explorer, the status of svn project and git project can be seen directly.
 
-1. 菜单【工具】【设置】【常用配置】，可以设置资源管理器的打开方式
+<img src="/static/snapshots/tutorial/explorer/explorer_5_en.png" class="hd-img"/>
 
-<img src="/static/snapshots/tutorial/explorer_8.png" />
 
-2. 项目管理器右上角的设置
+## Beautiful and intuitive file icons
 
-<img src="/static/snapshots/tutorial/explorer_9.png" />
+<img src="/static/snapshots/tutorial/explorer/explorer_6.png" class="border-1px"/>
 
-### 如何在资源管理器内使用外部命令？
+##  uni-app create page
 
-有的小伙伴，希望在资源管理器内，直接压缩或解压文件；可通过外部命令实现。
+<img src="/static/snapshots/tutorial/explorer/explorer_7_en.png" class="hd-img"/>
 
-配置压缩、解压的外部命令，见[HBuilderX的外部命令](/Tutorial/UserGuide/externalCommands)
 
-<img src="/static/snapshots/tutorial/explorer_10.png" />
+## Settings
+
+Built-in Explorer, the default is to double-click to expand the directory, and you can customize it to open and close.
+
+- Menu [Tools - Settings - Commonly Used], you can set the way to open the resource manager
+
+<img src="/static/snapshots/tutorial/explorer/explorer_8_en.png" class="hd-img"/>
+
+- Project Explorer, settings in the upper right corner
+
+<img src="/static/snapshots/tutorial/explorer/explorer_9_en.png" class="hd-img"/>
+
+## How to use external commands in Explorer?
+
+Some developers hope to compress or decompress files directly in the resource manager; this can be achieved through external commands。
+
+Configure external commands for compression and decompression, see [HBuilderX External Commands](/Tutorial/UserGuide/externalCommands)
+
+<img src="/static/snapshots/tutorial/explorer/explorer_10.png" class="border-1px"/>

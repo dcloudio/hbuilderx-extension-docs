@@ -7,29 +7,30 @@ Get the project where a file is located.
 #### Parameter
 |Name	|Type	|Description					|
 |--			|--			|--						|
-|uri		|String或Uri|文件绝对路径或者文件Uri|
+|uri		|String or Uri|File absolute path or file Uri|
 
 #### Returns
 |Type												|Description					|
 |--																|--						|
-|Promise&lt;[WorkspaceFolder](/ExtensionDocs/Api/other/WorkspaceFolder)&gt;|文件所在的项目	|
+|Promise&lt;[WorkspaceFolder](/ExtensionDocs/Api/other/WorkspaceFolder)&gt;|The project where the file is located.	|
 
 #### Example
 ``` javascript
     var wsPromise = hx.workspace.getWorkspaceFolder("%fsPath%");
     wsPromise.then(function(wsFolder) {
-        console.log("文件所在项目：",wsFolder.name);
+        console.log("The project where the file is located:",wsFolder.name);
     });
 ```
 
 #### WorkspaceFolder
-工作空间下的项目目录,在左侧项目管理器内的每一个项目表示一个WorkspaceFolder
+
+The project directory under the workspace, each project in the project manager on the left represents a WorkspaceFolder
 
 **Attribute list**
 
 |Attribute name	|Type			|Description			|
 |--		|--					|--				|
-|uri	|String或[Uri](/ExtensionDocs/Api/other/Uri.md)|项目目录地址	|
-|name	|String				|项目目录名称	|
-|nature	|String				|项目类型		|
-|id		|String				|项目唯一id		|
+|uri	|String or [Uri](/ExtensionDocs/Api/other/Uri.md)|Project directory path	|
+|name	|String				|Project Name	|
+|nature	|String				|project type		|
+|id		|String				|Project unique id	|

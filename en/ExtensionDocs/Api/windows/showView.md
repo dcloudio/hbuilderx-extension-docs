@@ -1,14 +1,18 @@
 # showView
 
-> `从HBuilderX 2.9.9及以上版本开始支持`
+> Supported from HBuilderX 2.9.9+ version
 
-切换指定viewId的WebView控件视图。插件创建多个WebView视图并打开后，可以通过该接口切换窗口左侧/右侧视图区域中指定的tab页。该接口不适用于创建
+Switch the WebView control view of the specified viewId. 
+
+After the plug-in creates multiple WebView views and opens them, you can switch the specified tab page in the left/right view area of the window through this interface. 
+
+This interface is not suitable for creating
 
 #### Parameter
 
 |Name	|Type					|Description											|
 |--		|--							|--												|
-|viewInfo	|Object	| 包含viewId, conTainerId的视图信息  |
+|viewInfo	|Object	| View information including viewId, conTainerId  |
 
 #### Example
 ```Javascript

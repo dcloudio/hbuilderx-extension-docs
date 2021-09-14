@@ -6,7 +6,7 @@ An event that is emitted when a text document is saved to disk.
 
 |Name	|Type								|Description		|
 |--			|--										|--			|
-|listener	|Function([TextDocument](/ExtensionDocs/Api/windows/TextEditor.md#TextDocument))|事件回调	|
+|listener	|Function([TextDocument](/ExtensionDocs/Api/windows/TextEditor.md#TextDocument))|Event callback	|
 
 #### Returns
 |Type	|Description				|

@@ -7,10 +7,22 @@
     * [OfflineInstall](/Tutorial/OfflineInstall.md)
 * Get Start
     * [StartedTutorial](/Tutorial/StartedTutorial.md)
+    * [userinterface](/Tutorial/userinterface.md)
+    * [Settings](/Tutorial/setting.md)
     * [Keybindings](/Tutorial/keybindings.md)
+    * [Theme](/Tutorial/themes.md)
+    * [Project](/Tutorial/project.md)
     * [Plugins Install](Tutorial/PluginsInstall.md)
 * User Guide
     * [Skill](/Tutorial/UserGuide/skill.md)
+    * [Goto](/Tutorial/UserGuide/goto.md)
+    * [Find / Repleace](/Tutorial/UserGuide/find.md)
+    * [Fold](/Tutorial/UserGuide/fold.md)
+    * [Format](/Tutorial/UserGuide/format.md)
+    * [Validate](/Tutorial/UserGuide/SyntaxCheck.md)
+    * [Built-in Explorer](/Tutorial/UserGuide/built-in-explorer.md)
+    * [Compase Selected Files](/Tutorial/UserGuide/LocalFileDiff.md)
+    * [Local History](/Tutorial/UserGuide/LocalHistory.md)
     * [editorconfig](/Tutorial/UserGuide/editorconfig.md)
 * Languages
     * [Overview](/Tutorial/Language/Overview.md)

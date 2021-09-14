@@ -1297,3 +1297,16 @@ li.dropdown {
 .bi-chevron-down {
     padding-top: 5px;
 }
+
+/**
+ * 处理高清图
+ */
+.hd-img {
+    zoom: 50%;
+    border: 1px solid #eee;
+    border-radius: 20px;;
+}
+
+.border-1px {
+    border: 1px solid #eee;
+}

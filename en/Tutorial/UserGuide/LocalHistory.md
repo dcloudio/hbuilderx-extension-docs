@@ -1,18 +1,18 @@
-# 本地历史记录
+# Local History
 
-HBuilderX，文件修改、保存时在本地进行备份，防止意外丢失，可通过 “本地历史记录”查看备份文件。
+In HBuilderX, the file is backed up locally when it is modified and saved to prevent accidental loss. The backup file can be viewed through the "local history".
 
-在编辑器打开的文件上，点击右键菜单，点击【本地历史记录】
+On the file opened in the editor, click the right-click menu and click [Local History]
 
 <img src="/static/snapshots/tutorial/localhistory.gif" style="zoom: 89%;border: 1px solid #eee;border-radius: 5px;"/>
 
 
-#### 配置
+#### Settings
 
-菜单【设置】【常用设置】，可以配置`本地历史记录`， 如下图所示：
+Menu [Settings - Commonly Used], you can configure local history records.
 
-- 单个文件最大备份数量
-- 单个文件大小限制
-- 最长保存时间
+- Maximum Number Of Backups For A Single File
+- Single File Size Limit
+- Maximum Storage Day
 
-<img src="/static/snapshots/tutorial/localhistory_config.jpg" style="zoom: 40%;border-radius: 25px;border: 1px solid #eee;"/>
+<img src="/static/snapshots/tutorial/settings/localhistory_config_en.png" class="hd-img"/>

@@ -1,72 +1,75 @@
-### 用户界面
+## User Interface
 
-像许多其他代码编辑器一样，HBuilderX采用通用的用户界面和左侧的资源管理器布局，而右侧的编辑器则显示已打开文件的内容。 
+Like many other code editors, HBuilderX adopts a common user interface and layout of an explorer on the left.
 
-<img src="/static/snapshots/tutorial/HBuilderX.png" style="zoom:90%" />
+showing all of the files and folders you have access to, and an editor on the right, showing the content of the files you have opened.
 
-### 基本布局
+<img src="/static/snapshots/tutorial/userinterface/HBuilderX_en.png" style="zoom:40%;border-radius: 25px;border: 1px solid #eee;" />
 
-用户界面主要分为：
+## Basic Layout
 
-* 编辑器 - 编辑文件的主要区域。您可以在垂直和水平方向上并排打开任意数量的编辑器。
-* 项目管理器 - 包含诸如资源管理器之类的不同视图，可在您处理项目时为您提供帮助。
-* 工具栏
-* 状态栏 - 有关打开的项目和您编辑的文件的信息。
-* 控制台 - 您可以在编辑器区域下方显示不同的面板，以获取输出或调试信息，错误和警告或集成终端。面板也可以向右移动以获得更多垂直空间。
+The UI is divided into areas:
 
-每次启动HBuilderX时，它的打开状态与上次关闭时的状态相同。
+* Editor - The main area to edit your files. You can open as many editors as you like side by side vertically and horizontally.
+* Project Explorer on the left
+* toolbar
+* Status Bar - Information about the opened project and the files you edit.
+* Console - You can display different panels below the editor region for output or debug information, errors and warnings, or an integrated terminal. Panel can also be moved to the right for more vertical space.
 
-### 迷你地图
+Each time you start HBuilderX, it opens up in the same state it was in when you last closed it.
 
-`迷你地图`，为您提供了源代码的高级概述，这对于快速导航和理解代码很有用。
+## Minimap
 
-迷你地图, 显示在编辑器的右侧。您可以单击或拖动阴影区域以快速跳至文件的不同部分。
+A Minimap (code outline) gives you a high-level overview of your source code, which is useful for quick navigation and code understanding
 
-<img src="/static/snapshots/tutorial/minimap.png" style="zoom:90%" />
+A file's minimap is shown on the right side of the editor. You can click or drag the shaded area to quickly jump to different sections of your file.
 
-提示：
-- 您可以在编辑器最右侧，点击右键，关闭或打开迷你地图。
-- 【设置】【编辑器设置】，也可以调整迷你地图像素宽度，默认100
+<img src="/static/snapshots/tutorial/userinterface/minimap_en.png" style="zoom:45%;border: 1px solid #eee; border-radius: 20px;" />
 
-### 文档结构图
+Notes：
+- You can right-click on the far right side of the editor to close or open the mini map.
+- [Settings - Editor], supports adjusting the pixel width of the mini map, the default is 100
 
-左边的大纲是长文档导航的利器。HBuilderX提供了优雅简洁的文档导览界面。
+## Outline View
 
-可以点底栏左侧红框内的大纲按钮，对应的快捷键是【win：alt+w、mac：ctrl+w】
+The outline on the left is a powerful tool for navigating long documents.
 
-<img src="/static/snapshots/tutorial/outline.png" style="zoom:90%" />
+HBuilderX provides an elegant and concise document navigation interface.
 
-### 内置资源管理器
+Click the outline icon in the bottom status bar to open the outline view. The corresponding shortcut key is [win: alt+w, mac: ctrl+w]
 
-> 此处只是简单介绍下内置资源管理器，请查看[详细用法](Tutorial/UserGuide/built-in-explorer)
+<img src="/static/snapshots/tutorial/userinterface/outline_en.png" style="zoom:45%;border: 1px solid #eee; border-radius: 20px;" />
 
-传统开发工具，仅仅依靠左侧的项目树来管理资源文件，便利性和效率是远远不够的。
-HBuilderX内置的资源管理器，给你一个更大的资源管理界面，大幅提高文件的管理效率。
+## Built-in Explorer
 
-相比OS自带的资源管理器，HBuilderX资源管理器为编程文件提供专门的优化。
+> Here is just a brief introduction to the built-in resource manager, [Details](Tutorial/UserGuide/built-in-explorer)
 
-- 在大图预览界面下直接显示html标题、vue页面、组件的名字
-- 直接预览markdown的内容
-- 在列表详情界面扩充单独的列来显示svn/git状态
+The built-in resource manager of HBuilderX gives you a larger resource management interface and greatly improves the efficiency of file management.
 
-<img src="/static/snapshots/tutorial/explorer.gif" style="zoom:98%" />
+Compared with the resource manager that comes with OS, HBuilderX resource manager provides special optimization for programming files.
 
-### 编辑器布局
+- Large icon view, Directly display the html title, vue page, component name
+- Preview the content of markdown directly
+- Expand a separate column in the list details interface to display svn/git status
 
-HBuilderX，默认情况下，编辑器组以垂直列布局。
+<img src="/static/snapshots/tutorial/explorer.gif" style="zoom:98%; border: 1px solid #eee;" />
 
-当然，您也可以轻松按自己喜欢的任何布局在垂直和水平方向上排列编辑器。
+## editor layout
 
-菜单 “视图 -> 分栏”，有一组预定义的编辑器布局。
+By default, editor groups are laid out in vertical columns.
 
-<img src="/static/snapshots/tutorial/subfield.png" style="zoom:98%" />
+You can easily arrange editor groups in any layout you like, both vertically and horizontally.
 
-### 单窗体
+Top Menu "view -> layout", There is a set of predefined editor layouts。
 
-单窗体： 就是项目管理器，只显示一个项目。
+<img src="/static/snapshots/tutorial/userinterface/layout_en.png" style="zoom:45%;border: 1px solid #eee; border-radius: 20px;" />
 
-在主窗体上，点击菜单【视图】【新建HBuilder窗体】，就可以新建一个单项目窗体。
+## Single Window
 
-在主窗体上，选中某个项目，右键菜单，点击【在新窗体中打开】，即可将项目在单项目窗体中打开
+Single Project window: It is the project manager, only one project is displayed。
 
-[关于单窗体的详细说明与介绍](/Tutorial/UserGuide/multi-window)
+On the main window, Click the menu [View] [New Window] to create a single project window.
+
+On the main window, select an project, right-click on the menu, and click [Open in New Window] to open the project in the single project Window.
+
+[Detailed description of the single form](/Tutorial/UserGuide/multi-window)

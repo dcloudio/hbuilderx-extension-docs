@@ -1,33 +1,33 @@
 # showMessageBox
-> `从HBuilderX 2.9.12及以上版本开始支持`
+> Supported from HBuilderX 2.9.12+ version
 
-在窗口显示可供选择的对话框
+Show a dialog box for selection in the window
 
 #### Parameter
 
 |Name	|Type			|Description					|
 |--			|--					|--						|
-|options	|[MessageBoxOptions](#对话框属性)|对话框内容|
+|options	|[MessageBoxOptions](#Dialog properties)|Dialog content|
 
 #### Returns
 
 |Type		|Description									|
 |--						|--										|
-|Promise&lt;String&gt;	|如果设置了按钮，返回用户点击了哪个按钮	|
+|Promise&lt;String&gt;	|If a button is set, return the button clicked by the user。	|
 
 
-#### 对话框属性
+#### Dialog properties
 
-对话框设置，相关属性
+Dialog settings, related attributes
 
 |Attribute name		|Type	|Description						|
 |--			|--			|--							|
-|type		|String		|消息类型,取值有['warning'，'info'，'error'，'question'] |
-|title		|String		|对话框标题				|
-|text		|String		|对话框内容				|
-|buttons	|Array&lt;String&gt;|对话框中的按钮组 |
-|defaultButton	|String	|默认按钮索引，可不填默认0 |
-|escapeButton	|String	|默认Esc后执行的操作按钮索引，可不填默认1 |
+|type		|String		|Message type,Values are['warning'，'info'，'error'，'question'] |
+|title		|String		|Dialog title				|
+|text		|String		|Dialog content				|
+|buttons	|Array&lt;String&gt;|Button group in dialog box |
+|defaultButton	|String	|Default button index, can be left blank, default 0 |
+|escapeButton	|String	|The index of the operation button to be executed after the default Esc, can be left blank, the default is 1 |
 
 
 #### Example
@@ -35,14 +35,14 @@
 ``` javascript
 let result = hx.window.showMessageBox({
     type: 'error',
-    title: '测试对话框',
-    text: '这里是测试对话框内容',
-    buttons: ['确定', '取消']
+    title: 'Dialog title',
+    text: 'Dialog content',
+    buttons: ['Ok', 'Cancel']
 });
 result.then((button) => {
-    if (button == '确定') {
+    if (button == 'Ok') {
         
-    } else if (button == '取消') {
+    } else if (button == 'Cancel') {
         
     }
 });

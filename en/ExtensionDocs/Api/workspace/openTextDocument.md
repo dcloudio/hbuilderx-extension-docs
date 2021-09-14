@@ -6,17 +6,17 @@ Open a document file through the specified uri.
 
 |Name	|Type			|Description		|
 |--			|--					|--			|
-|uri		|String或[Uri](/ExtensionDocs/Api/other/Uri)|文档地址	|
+|uri		|String or [Uri](/ExtensionDocs/Api/other/Uri)| File Path	|
 
 #### Returns
 |Type								|Description			|
 |--												|--				|
-|Promise&lt;[TextDocument](/ExtensionDocs/Api/windows/TextEditor.md#TextDocument)&gt;	|返回打开的文档	|
+|Promise&lt;[TextDocument](/ExtensionDocs/Api/windows/TextEditor.md#TextDocument)&gt;	|	A promise that resolves to a document.	|
 
 #### Example
 ``` javascript
     var documentPromise = hx.workspace.openTextDocument("foo/bar.js");
     documentPromise.then(function(document) {
-        console.log("打开了文档:",document.fileName);
+        console.log("Document opened:",document.fileName);
     });
 ```

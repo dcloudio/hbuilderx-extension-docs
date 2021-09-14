@@ -1,25 +1,25 @@
-# 折叠
+# Fold
 
-折叠的快捷键是`alt+-`和`=`。
+The shortcut keys for Fold are `alt+-` and `=`.
 
-或点击`行号`右边的`-`或`+`，即可完成折叠展开。
+Click the `-` or `+` to the right of the `line number` to complete the folding and unfolding.
 
-## 顶部折叠菜单
+## Top Fold menu
 
-在菜单跳转-折叠里，还有更多折叠的玩法。
+In the menu [Goto Fold], there are more ways to play with folding.
 
-<img src="/static/snapshots/tutorial/fold/fold_menu.png" style="border: 1px solid #eee; border-radius: 15px; zoom: 48%;"/>
+<img src="/static/snapshots/tutorial/fold/fold_menu_en.png" style="border: 1px solid #eee; border-radius: 15px; zoom: 48%;"/>
 
-## 编辑器折叠菜单
+## Editor Fold Menu
 
-如下图所示，在`行号`区域右击，即可看到折叠相关的菜单。
+As shown in the figure below, right-click in the `line number` area to see the collapse-related menu.
 
-<img src="/static/snapshots/tutorial/fold/fold_menu_for_editor.png" style="border: 1px solid #eee; border-radius: 15px; zoom: 48%;"/>
+<img src="/static/snapshots/tutorial/fold/fold_menu_for_editor_en.png" class="hd-img" />
 
-## 折叠其他选区
+## Fold Other Region
 
-其中有一个功能非常有用，就是“折叠其他选区”，快捷键是`Alt+Shift+o`。
+“Fold Other Region”, The shortcut key is `Alt+Shift+o`.
 
-比如在本markdown文档源码编辑时，按下`Alt+Shift+o`就可以把其他段落都折叠起来，专注于当前段落的编写。
+For example, when editing the source code of this markdown document, you can press `Alt+Shift+o` to fold all other paragraphs and focus on the writing of the current paragraph.
 
-<img src="/static/snapshots/tutorial/fold/fold.png" style="border: 1px solid #eee; zoom: 48%;"/>
+<img src="/static/snapshots/tutorial/fold/markdown_fold_en.png" class="hd-img" />

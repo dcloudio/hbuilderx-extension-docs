@@ -1,51 +1,51 @@
-# 项目
+# Project
 
-使用HBuilderX，从创建项目开始吧。
+With HBuilderX, let's start by creating a project.
 
-下面将介绍项目创建、导入、关闭、创建别名、移除、重命名项目、重新识别项目类型、重新构建项目索引等操作。
+The following will introduce project create, import, close, create alias, remove, rename project, redetect project type, rebuild project index, etc.
 
-## 导入项目/目录
+## Import project/directory
 
-点击顶部菜单【文件】【导入】，或点击菜单【打开目录】，即可导入项目到HBuilderX。
+Click the top menu [File - Import], or click the menu [Open Directory] to import the project to HBuilderX.
 
-HBuilderX， 支持从`svn`、`Git`、`本地`导入项目。
+HBuilderX, supports importing projects from `svn`, `Git`, and `local`.
 
-svn、git导入项目，需要先安装svn、git插件。
+To import projects into svn and git, you need to install the svn and git plugins first.
 
-<img src="/static/snapshots/tutorial/project_import.png" style="zoom: 85%;" />
+<img src="/static/snapshots/tutorial/project/project_import_en.png" style="zoom: 45%; border-radius: 20px;" />
 
-## 创建项目
+## Project Create
 
-HBuilderX支持多种项目类型，主要有：web项目、5+App项目、uni-app项目、微信小程序、快应用、wap2app等。[项目类型详细介绍](/Tutorial/Other/ProjectType)    
+HBuilderX supports a variety of project types, mainly: web projects, 5+App projects, uni-app projects, WeChat mini program, QuickApp, wap2app, etc.[Details](/Tutorial/Other/ProjectType)    
 
-- 欢迎页面，点击`新建项目`
-- 【工具栏】第一个图标
-- 顶部菜单【文件 -> 新建 -> 项目】
+- Welcome page, click on `New Project`
+- Toolbar, The first icon
+- Top menu [File -> New -> Project]
 
-<img src="/static/snapshots/tutorial/project_new.png" style="zoom: 85%;" />
+<img src="/static/snapshots/tutorial/project/project_new_en.png" style="zoom: 40%; border: 1px solid #eee;" />
 
-## 关闭项目
+## Project Closed
 
-当项目管理器，项目数量过多时，您可以`关闭项目`；
+When there are too many projects in the project manager, you can `close project`;
 
-在项目管理器，选中项目，右键菜单，点击【关闭项目】，即可将目移动到【已关闭项目】列表中。
+In the project manager, select the project, right-click the menu, and click [Close Project] to move the project to the list of [Closed Projects].
 
-当然，后期也可以从【已关闭项目】中，将需要的项目打开，移动到项目管理器。
+Of course, you can also open the required project from the [Closed Project] and move it to the project manager.
 
-<img src="/static/snapshots/tutorial/project_close.png" style="zoom: 85%;" />
+<img src="/static/snapshots/tutorial/project/project_close.png" style="zoom: 85%;" />
 
-## 项目别名
+## Porject Alias
 
-HBuilderX，支持对项目创建或修改`别名`。
+HBuilderX，Support setting alias name for projects 
 
-项目管理器，选中项目，右键菜单，点击【修改项目别名】，即创建别名。
+In the project manager, select the project, right-click the menu, and click [Setting Alias Name] to create an alias.
 
-<img src="/static/snapshots/tutorial/project_alias.png" style="zoom: 85%;" />
+<img src="/static/snapshots/tutorial/project/project_alias_en.png" style="zoom: 45%;border: 1px solid #eee;border-radius: 25px;" />
 
-## 其它操作
+## Other
 
-**移除项目**：您可以将项目，从项目管理器移除，或移动到回收站。
+**Remove Project**：You can remove the project from the project manager, or move it to the recycle bin.
 
-**重新识别项目类型**：某些情况下，HBuilderX没有正确识别项目类型（比如uniapp项目，无法显示运行菜单），导致相关菜单无法正确显示，通过重新识别项目类型即可解决。[了解项目类型](/Tutorial/ProjectType)
+**Redetect Project Type**：In some cases, HBuilderX does not correctly identify the project type (for example, uniapp project, the run menu cannot be displayed), causing the relevant menu to fail to be displayed correctly, which can be solved by re-identifying the project type.[Details](/Tutorial/ProjectType)
 
-**重新构建项目索引**：某些情况下，代码提示异常（比如图片路径无法提示），通过`重新构建项目索引`即可解决。
+**Rebuild Project Index**：In some cases, the code prompt is abnormal (for example, the image path cannot be prompt), It can be solved by `Rebuild Project Index`.

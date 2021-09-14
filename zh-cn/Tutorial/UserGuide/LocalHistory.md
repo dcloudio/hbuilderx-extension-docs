@@ -15,4 +15,4 @@ HBuilderX，文件修改、保存时在本地进行备份，防止意外丢失�
 - 单个文件大小限制
 - 最长保存时间
 
-<img src="/static/snapshots/tutorial/localhistory_config.jpg" style="zoom: 40%;border-radius: 25px;border: 1px solid #eee;"/>
+<img src="/static/snapshots/tutorial/settings/localhistory_config.jpg" style="zoom: 40%;border-radius: 25px;border: 1px solid #eee;"/>

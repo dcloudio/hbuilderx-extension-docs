@@ -25,8 +25,8 @@ In the current file, press `Ctrl + Shift + O` to find symbol.
 
 ## Find string
 
-- 范围：字符串查找，支持`按当前文件`、`按目录`、`按左侧选中`、`按当前项目`、`按所有项目`进行搜索查找。
-- 功能：字符串查找，支持`整词匹配`、`正则匹配`、`大小写匹配`，且支持`排除`特定目录
+- Scope：String search, support `by current file`, `by directory`, `by left side selection`, `by current project`, `by all project` to search and find.
+- Function：String search, support `whole word matching`, `regular matching`, `case matching`, and support `exclude` specific directories
 
 <img src="/static/snapshots/tutorial/find_str.jpg" style="zoom: 45%;border-radius: 24px;border:1px solid #eee;"/>
 
@@ -34,8 +34,10 @@ In the current file, press `Ctrl + Shift + O` to find symbol.
 
 > Only supports HBuilderX 3.1.15+ version
 
-HBuilderX，支持选中一段文字，在顶部搜索栏选中区域搜索【Ctrl+Shift+f】，可以在特殊背景区内`搜索`、`替换`、`全选相同词`
+HBuilderX supports selecting a paragraph of text and searching in the selection in the search bar at the top (shortcut key: [Ctrl+Shift+f]), and you can `search`, `replace`, and `select all the same words` in the special background area.
 
-如下动画，区域搜索，选中区域背景会变成黄色。按`esc`键，退出区域搜索。
+**The following animation: **
+
+Find in selection, The background of the selected area will turn yellow. Press the `esc` key to exit the area search.
 
 <img src="/static/snapshots/tutorial/find_region.gif" style="zoom: 90%; border-radius: 5px;border:1px solid #eee;"/>
