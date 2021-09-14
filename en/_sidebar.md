@@ -16,6 +16,7 @@
 * User Guide
     * [Skill](/Tutorial/UserGuide/skill.md)
     * [Goto](/Tutorial/UserGuide/goto.md)
+    * [Find / Repleace](/Tutorial/UserGuide/find.md)
     * [editorconfig](/Tutorial/UserGuide/editorconfig.md)
 * Languages
     * [Overview](/Tutorial/Language/Overview.md)
