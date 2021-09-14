@@ -1,44 +1,44 @@
-# 设置
+# Settings
 
-您可以通过各种设置轻松配置HBuilderX。
+You can easily configure HBuilderX through various settings.
 
-要想打开设置，请使用以下菜单命令:
+To open the settings, please do the following:
 
-- Windows: 顶部菜单【工具】-> 【设置】(快捷键: `ctrl` + `alt` + `,`)
-- MacOSX: 顶部菜单【HBuilderX】-> 【偏好设置】(快捷键: `command` + `,`)
+- Windows: Top menu [Tools -> Settings] (shortcut key: `ctrl` + `alt` + `,`)
+- MacOSX: Top menu [HBuilderX -> Preferences] (shortcut key: `command` + `,`)
 
-<img src="/static/snapshots/tutorial/settings.png" style="zoom:90%" />
+<img src="/static/snapshots/tutorial/settings/ui_settings_en.png" class="hd-img" />
 
-设置视图，主要分为5部分：
+settings view，Divided into 5 parts：
 
-- 常用配置：[详情](/Tutorial/setting?id=常用配置)
-- 编辑器配置: [详情](/Tutorial/setting?id=编辑器配置)
-- 运行配置：手机/模拟器运行和浏览器运行相关配置
-- 插件配置：已安装的插件扩展配置
-- 源码视图：json文件，包含以上自定义的配置
+- Commonly Used：[Details](/Tutorial/setting?id=常用配置)
+- Editor: [Details](/Tutorial/setting?id=编辑器配置)
+- Run：Mobile phone/emulator operation and browser operation related configuration
+- Plugins：Installed plug-in extension configuration
+- Source View：json file, Include the above customized configuration
 
-## 常用配置
+## Commonly Used
 
-- 编辑器字体大小
-- 编辑字体，[详情](/Tutorial/settings/font)
-- 制表符长度
-- 空格代替制表符
-- 失去焦点自动保存：默认未开启，如需要，请手动开启
-- 语言关联配置
+- The Editor Font Size
+- 编辑字体，[Details](/Tutorial/settings/font)
+- Tab Size
+- Insert Spaces when Pressing Tab
+- Auto Save when Focus Losed
+- Language Association
 - 项目管理器过滤器配置
 - 搜索默认不包含的目录：搜索时默认不包含`.git`、`.cvs`、`.svn`、`node_modules`、`unpackage`
 - 打开终端数量：最多允许打开的终端数量，默认8
-- 本地历史记录，[详情](/Tutorial/UserGuide/LocalHistory)
+- Local History[Details](/Tutorial/UserGuide/LocalHistory)
 - 项目管理器打击展开/折叠目录，关闭此项则是双击展开/折叠目录
 - 项目管理器点击目录时打开内部资源管理器
 
-## 编辑器配置
+## Editor
 
-- 自动换行: 默认不换行，如需要，请启用。
-- 高亮时显示空白字符：默认启用。
+- Word Wrap
+- Display Blank Characters when Highlighted
 - 显示换行符
 - 选择默认换行符
-- 迷你地图最大像素宽度：默认100
+- Macimum Pixel Width Of MiniMap: default 100
 - 鼠标悬停预览
 - 关闭时记忆文档折叠状态
 - 启动.editorconfig支持：默认启用
@@ -52,7 +52,7 @@
 - 代码助手字体大小：默认12
 - 代码助手触发字符
 - 启用px转rem提示
-- 启用px转rpx/upx提示 [详情](/Tutorial/settings/px-upx)
+- 启用px转rpx/upx提示 [Details](/Tutorial/settings/px-upx)
 - 自动匹配匹配字符
 - 中文标点免干扰输入
 - 文字分隔符
@@ -68,8 +68,8 @@
 <img src="/static/snapshots/tutorial/settings/sync.png" style="zoom: 50%;border: 1px solid #eee;" />
 
 
-## 源码视图常见问题
+## Question
 
-HBuilderX启动时，会加载`设置配置文件`, 文件损坏（文件格式错误，非json格式），会导致HBuilderX无法启动。
+When HBuilderX starts, it will load the `settings configuration file`, and the file is damaged (file format error, not in json format), which will cause HBuilderX to fail to start.
 
-修改源码视图时，请谨慎修改。
+When modifying the source code view, please modify it carefully.
