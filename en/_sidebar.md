@@ -18,6 +18,7 @@
     * [Goto](/Tutorial/UserGuide/goto.md)
     * [Find / Repleace](/Tutorial/UserGuide/find.md)
     * [Fold](/Tutorial/UserGuide/fold.md)
+    * [Format](/Tutorial/UserGuide/format.md)
     * [editorconfig](/Tutorial/UserGuide/editorconfig.md)
 * Languages
     * [Overview](/Tutorial/Language/Overview.md)

@@ -27,7 +27,7 @@ HBuilderX，格式化快捷鍵, win：`ctrl + K`； mac: `command + K`
 
 點擊菜單【工具】【設置 -> 插件配置】，選擇相應插件, 點擊`配置文件`進行配置。
 
-<img src="/static/snapshots/tutorial/format.png" />
+<img src="/static/snapshots/tutorial/format/format.png" />
 
 | 插件配置中格式化插件		| 配置文件											| 插件官網															|
 | -----------------------	| ------------------------------------------------	| ---------------													|
@@ -40,7 +40,7 @@ HBuilderX，格式化快捷鍵, win：`ctrl + K`； mac: `command + K`
 
 格式化時， 使用的縮進方式，是讀取的菜單【工具 --> 設置】中的配置
 
-<img src="/static/snapshots/tutorial/indent.png" />
+<img src="/static/snapshots/tutorial/format/indent.png" />
 
 **特別說明：**
 `editorconfig`配置會覆蓋HBuilderX編輯器配置；當項目下存在`.editorconfig`文件時，格式化時，讀取的是此配置文件。

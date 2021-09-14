@@ -1,66 +1,68 @@
-# 格式化
+# Format Document
 
-> 很多人编写程序时不注意程序的版式结构，这样做虽然不会影响程序的功能，但是程序的可读性会大大降低。格式化操作，让代码按照特定的风格缩进或分开，使程序更加清晰易懂
+> Many people do not pay attention to the layout structure of the program when writing a program. Although this will not affect the function of the program, the readability of the program will be greatly reduced.
 
-在打开的文件上，右键菜单，点击【重排代码格式】，即可对当前文件进行格式化操作。
+> Formatting operation allows the code to be indented or separated according to a specific style to make the program clearer.
 
-HBuilderX，格式化快捷键, win：`ctrl + K`； mac: `command + K`
+On the opened file, right-click menu, and click [Format Document] to format the current file.
+
+HBuilderX, formatting shortcut key, win: `ctrl + K`; mac: `command + K`
 
 
-### 格式化插件
+### Plugins
 
-> HBuilderX ，官方维护的格式化插件如下，当然，您也可以自行开发格式化插件。
+HBuilderX, officially maintained formatting plugins are as follows:
 
-| 插件名称         | 对应插件配置中的名称    | 是否内置         | 可格式化的文件                             |  插件市场 | 插件教程 |
+| Name         | DisplayName    | Whether built-in         | Supported file types                             |  marketplace | Plugin tutorial |
 | ---------------- | ----------------------- | ---------------- | ------------------------------------------ |-------------|-------------|
-| js-beautify      | format                  | 内置插件        | vue、html、js、css、json                   |   | |
-| prettier         | format-prettier         | 非内置，需要下载 | less、sass、vue、stylus(vue内嵌)、ts、yaml | [下载地址](https://ext.dcloud.net.cn/plugin?id=2025)| [文档](/Tutorial/extension/prettier) |
-| stylus-supremacy | format-stylus-supremacy | 非内置，需要下载 | 格式化单独stylus文件                       | [下载地址](https://ext.dcloud.net.cn/plugin?id=2039) |  [文档](https://ext.dcloud.net.cn/plugin?id=2039) |
+| js-beautify      | format                  | Built-in        | vue、html、js、css、json                   |   | |
+| prettier         | format-prettier         | Not built-in, need to download | less、sass、vue、stylus(vue embedded)、ts、yaml | [Download](https://ext.dcloud.net.cn/plugin?id=2025)| [Docs](/Tutorial/extension/prettier) |
+| stylus-supremacy | format-stylus-supremacy | Not built-in, need to download | stylus                     | [Download](https://ext.dcloud.net.cn/plugin?id=2039) |  [Docs](https://ext.dcloud.net.cn/plugin?id=2039) |
 
-**特别说明：**
+**Remarks:**
 
-1. 当同时存在`js-beautify`和`format-prettier`插件是，格式化`vue`文件，调用的是`format-prettier`插件
-2. `stylus-supremacy`只支持格式化独立的stylus文件，如需格式化vue文件内的stylus代码，需要同时安装prettier插件
-3. 本地插件目录：HBuilderX所有的插件，都存放于本地`plugins`目录下
+1. When there are both `js-beautify` and `format-prettier` plugins, the `vue` file is formatted and the `format-prettier` plugin is called。
+2. `stylus-supremacy` only supports formatting independent stylus files. If you need to format the stylus code in the vue file, you need to install the prettier plugin at the same time.
+3. Local plug-in directory: all plug-ins of HBuilderX are stored in the local `plugins` directory
 
-### 格式化插件配置
+### Format plugin configuration
 
-点击菜单【工具】【设置 -> 插件配置】，选择相应插件, 点击`配置文件`进行配置。
+Click the menu [Tools] [Settings -> Plugins], select the corresponding plug-in, and click `Configuration File` to configure.
 
-<img src="/static/snapshots/tutorial/format.png" />
+<img src="/static/snapshots/tutorial/format/plugin_set_en.png" class="hd-img" />
 
-| 插件配置中格式化插件		| 配置文件											| 插件官网															|
+| Name		| Config File											| Official website															|
 | -----------------------	| ------------------------------------------------	| ---------------													|
-| format(即js-beautify)		| jsbeautifyrc.js									| [官网](https://github.com/beautify-web/js-beautify)				|
-| format-prettier			| prettier.config.js								| [官网](https://prettier.io/docs/en/options.html)					|
-| format-stylus-supremacy	| supremacy.config.js								| [官网](https://thisismanta.github.io/stylus-supremacy/#options)	|
+| format(即js-beautify)		| jsbeautifyrc.js									| [site](https://github.com/beautify-web/js-beautify)				|
+| format-prettier			| prettier.config.js								| [site](https://prettier.io/docs/en/options.html)					|
+| format-stylus-supremacy	| supremacy.config.js								| [site](https://thisismanta.github.io/stylus-supremacy/#options)	|
 
 
-### 格式化风格
+### Format style
 
-格式化时， 使用的缩进方式，是读取的菜单【工具 --> 设置】中的配置
+Format, indent, read the configuration in the menu [Tools --> Settings].
 
-<img src="/static/snapshots/tutorial/indent.png" />
+<img src="/static/snapshots/tutorial/format/indent_en.png" class="hd-img"/>
 
-**特别说明：**
-`editorconfig`配置会覆盖HBuilderX编辑器配置；当项目下存在`.editorconfig`文件时，格式化时，读取的是此配置文件。
+**Remarks:**
+The `editorconfig` configuration will override the HBuilderX editor configuration; when there is a `.editorconfig` file under the project, this configuration file is read when formatting.
 
-[.editorconfig使用说明文档](/Tutorial/UserGuide/editorconfig)
+[.editorconfig](/Tutorial/UserGuide/editorconfig)
 
 
-### 自定义格式化快捷键
+### Custom format shortcuts
 
-自定义格式化快捷键： 点击菜单【工具】【自定义快捷键】，在【用户设置】中，拷贝如下代码， `key`为您要定义的快捷键
+Click the menu [Tools] [Custom Keybingdings], in [User Settings], copy the following code, `key` is the shortcut key you want to define.
 
 ```json
 {"key":"ctrl+k","command":"editor.action.format"}
 ```
 
-### 保存文件时，自动格式化
+### Automatically format when saving files
 
-部分小伙伴反馈， 如何实现保存文件时，自动格式化？  答： 不支持。
+How to realize automatic formatting when saving files?
+ 
+Answer: Not supported.
 
-1. 普通web项目`不支持`保存文件的同时，自动格式化。
-2. vue-cli项目，可通过配置`eslint`，通过`eslint自动校验修复`的功能，来实现相同的效果。
-
-例如：保存时，去除分号等。
+1. Normal web projects `do not support` automatic formatting while saving files.
+2. For the vue-cli project, the same effect can be achieved by configuring `eslint` and using the function of `eslint automatic verification and repair`.
