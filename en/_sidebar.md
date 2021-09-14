@@ -15,6 +15,7 @@
     * [Plugins Install](Tutorial/PluginsInstall.md)
 * User Guide
     * [Skill](/Tutorial/UserGuide/skill.md)
+    * [Goto](/Tutorial/UserGuide/goto.md)
     * [editorconfig](/Tutorial/UserGuide/editorconfig.md)
 * Languages
     * [Overview](/Tutorial/Language/Overview.md)

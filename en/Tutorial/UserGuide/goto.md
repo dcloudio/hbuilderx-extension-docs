@@ -1,60 +1,64 @@
-# 跳转/转到定义
+# Goto
 
-HBuilderX拥有强大的跳转功能，如下:
+HBuilderX has a powerful jump function, as follows:
 
-- 光标跳转
-- 转到行
-- 转到指定行列
-- 转到匹配的括号
-- 跳转到书签
-- 跳转到滚动条信息点
-- 转到定义
-- 转到定义到分栏
+- Cursor jump
+- Goto Line
+- Goto the specified rank
+- Goto Matching Bracket
+- Goto BookMarkets
+- Goto Scroll Bar
+- Goto Definition
+- Goto Definition to New Column
+- Goto Previous Location
 - .....
 
-### 上一个光标位置
+## Goto Previous Location
 
-在HBuilderX中，`Alt+Left` (MacOSX: `ctrl + -`)、点击工具栏上的`<`, 即可回到上一个光标位置。
+In HBuilderX, `Alt+Left` (MacOSX: `ctrl + -`), click `<` on the toolbar, to return to the previous cursor position.
 
-### 转到行
+<img src="/static/snapshots/tutorial/goto/Previous_Location_en.png" class="hd-img" />
 
-转到行快捷键：`ctrl + G`
+## Goto Line
+
+Go to line shortcut：`ctrl + G`
 
 <img src="/static/snapshots/tutorial/goto_line.jpg" style="zoom: 50%;border:1px solid #eee;border-radius: 25px;" />
 
-### 跳转到指定行列
+## Goto the specified rank
 
-> 仅支持HBuilderX 2.8.10+
-
+> Only supports HBuilderX 2.8.10+
 
 <img src="/static/snapshots/tutorial/goto_lc.jpg" style="zoom: 50%;border:1px solid #eee;border-radius: 25px;" />
 
-注意：HBuilderX 3.1.13+版本，支持输入`0`跳转到首行、输入`$`跳转到最后一行。
+- Support input `0` to jump to the first line
+- input `$` to jump to the last line.
 
-同时支持通过命令行打开指定文件，并跳转到指定的行和列。
+At the same time, it supports opening the specified file through the command line and jumping to the specified row and column.
 
 ```
-# 示例：
+# Example：
+# File path, must be an absolute path
 /Applications/HBuilderX-Alpha.app/Contents/MacOS/HBuilderX /Users/hx/filename.md:2:10
 ```
 
-注意：文件，需要是绝对路径
+## Goto Definition
 
-### 转到定义
+Go to definition is a very commonly used function, ordinary editors are not longer than this, only guess the word jump.
 
-转到定义是非常常用的功能，普通编辑器不长于此，只能猜单词跳转。
+HBuilderX has a powerful syntax analysis engine that can accurately jump to the defined position.
 
-HBuilderX有强大的语法分析引擎，可以准确的跳转定义位置。
-
-转到定义的快捷键是`Alt+d`，鼠标操作是alt+左键单击（注意不是ctrl，因为ctrl留给了多光标）
+The shortcut key to go to the definition is `Alt+D`, and the mouse operation is `alt+left click`.
 
 <img src="/static/snapshots/started_tutorial/3b6a921a9021ffa5ed54e7633afb7fd0.gif" style="zoom: 90%;border:1px solid #eee;border-radius: 5px;" />
 
-> 备注：支持切换【Ctrl+鼠标左键】或【Alt+鼠标左键】进行转到定义 （菜单【选择】，最后一个菜单）
+> Remarks: Support switching [Ctrl+left mouse button] or [Alt+left mouse button] to go to definition (menu [select], the last menu)
 
-### 转到定义到分栏
+## Goto Definition to New Column
 
-而HBuilderX还有一个特色是`转到定义到分栏`，`ctrl+alt+左键`，可以把一个定义处的代码打开在另一侧，方便共同查看
+Another feature of HBuilderX is `Go to definition to column`.
+
+`ctrl+alt+left click`, you can open the code of a definition on the other side, which is convenient for common viewing.
 
 <img src="/static/snapshots/started_tutorial/c75ed6bdd5b6c5a9b8c827b2ee1262a9.gif" style="zoom: 90%;border:1px solid #eee;border-radius: 5px;" />
 
