@@ -12,7 +12,7 @@ HBuilderX内置的资源管理器，给你一个更大的资源管理界面，�
 
 先看一段动画，来感受下。
 
-<img src="/static/snapshots/tutorial/explorer_1.gif" style="zoom:90%" />
+<img src="/static/snapshots/tutorial/explorer/explorer_1.gif" style="zoom:90%" />
 
 ### 有哪些亮点？
 
@@ -26,34 +26,34 @@ HBuilderX内置的资源管理器，给你一个更大的资源管理界面，�
 
 ### 使用地址栏，返回上级目录，顶级目录
 
-<img src="/static/snapshots/tutorial/explorer_2.png" />
+<img src="/static/snapshots/tutorial/explorer/explorer_2.png" />
 
 
 ### 更便捷查看文件属性
 
 选中文件，右键菜单，查看属性，无需再打开系统资源管理器
 
-<img src="/static/snapshots/tutorial/explorer_3.png" />
+<img src="/static/snapshots/tutorial/explorer/explorer_3.png" />
 
 ### 强大的文件搜索
 
-<img src="/static/snapshots/tutorial/explorer_4.png" />
+<img src="/static/snapshots/tutorial/explorer/explorer_4.png" />
 
 
 ### svn/git 
 
 资源管理器内，svn项目、git项目，都可以直观看到状态。
 
-<img src="/static/snapshots/tutorial/explorer_5.png" />
+<img src="/static/snapshots/tutorial/explorer/explorer_5.png" />
 
 
 ### 优美直观的文件图标
 
-<img src="/static/snapshots/tutorial/explorer_6.png" />
+<img src="/static/snapshots/tutorial/explorer/explorer_6.png" />
 
 ###  uni-app，资源管理器，新建页面
 
-<img src="/static/snapshots/tutorial/explorer_7.png" />
+<img src="/static/snapshots/tutorial/explorer/explorer_7.png" />
 
 
 ### 设置项
@@ -62,11 +62,11 @@ HBuilderX内置的资源管理器，给你一个更大的资源管理界面，�
 
 1. 菜单【工具】【设置】【常用配置】，可以设置资源管理器的打开方式
 
-<img src="/static/snapshots/tutorial/explorer_8.png" />
+<img src="/static/snapshots/tutorial/explorer/explorer_8.png" />
 
 2. 项目管理器右上角的设置
 
-<img src="/static/snapshots/tutorial/explorer_9.png" />
+<img src="/static/snapshots/tutorial/explorer/explorer_9.png" />
 
 ### 如何在资源管理器内使用外部命令？
 
@@ -74,4 +74,4 @@ HBuilderX内置的资源管理器，给你一个更大的资源管理界面，�
 
 配置压缩、解压的外部命令，见[HBuilderX的外部命令](/Tutorial/UserGuide/externalCommands)
 
-<img src="/static/snapshots/tutorial/explorer_10.png" />
+<img src="/static/snapshots/tutorial/explorer/explorer_10.png" />
