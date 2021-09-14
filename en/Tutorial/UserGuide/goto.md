@@ -2,15 +2,15 @@
 
 HBuilderX has a powerful jump function, as follows:
 
+- [Goto Previous Location](#Goto-Previous-Location)
 - Cursor jump
-- Goto Line
+- [Goto Line](#Goto-Line)
 - Goto the specified rank
 - Goto Matching Bracket
 - Goto BookMarkets
 - Goto Scroll Bar
-- Goto Definition
-- Goto Definition to New Column
-- Goto Previous Location
+- [Goto Definition](#Goto-Definition)
+- [Goto Definition to New Column](#Goto-Definition-to-New-Column)
 - .....
 
 ## Goto Previous Location
@@ -23,13 +23,13 @@ In HBuilderX, `Alt+Left` (MacOSX: `ctrl + -`), click `<` on the toolbar, to retu
 
 Go to line shortcut：`ctrl + G`
 
-<img src="/static/snapshots/tutorial/goto_line.jpg" style="zoom: 50%;border:1px solid #eee;border-radius: 25px;" />
+<img src="/static/snapshots/tutorial/goto/goto_line_en.png" class="hd-img" />
 
 ## Goto the specified rank
 
 > Only supports HBuilderX 2.8.10+
 
-<img src="/static/snapshots/tutorial/goto_lc.jpg" style="zoom: 50%;border:1px solid #eee;border-radius: 25px;" />
+<img src="/static/snapshots/tutorial/goto/goto_lc_en.png" class="hd-img" />
 
 - Support input `0` to jump to the first line
 - input `$` to jump to the last line.
