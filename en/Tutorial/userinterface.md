@@ -32,26 +32,27 @@ Notes：
 
 ## Outline View
 
-左边的大纲是长文档导航的利器。HBuilderX提供了优雅简洁的文档导览界面。
+The outline on the left is a powerful tool for navigating long documents.
 
-可以点底栏左侧红框内的大纲按钮，对应的快捷键是【win：alt+w、mac：ctrl+w】
+HBuilderX provides an elegant and concise document navigation interface.
+
+Click the outline icon in the bottom status bar to open the outline view. The corresponding shortcut key is [win: alt+w, mac: ctrl+w]
 
 <img src="/static/snapshots/tutorial/userinterface/outline_en.png" style="zoom:45%;border: 1px solid #eee; border-radius: 20px;" />
 
 ## Built-in Explorer
 
-> 此处只是简单介绍下内置资源管理器，请查看[详细用法](Tutorial/UserGuide/built-in-explorer)
+> Here is just a brief introduction to the built-in resource manager, [Details](Tutorial/UserGuide/built-in-explorer)
 
-传统开发工具，仅仅依靠左侧的项目树来管理资源文件，便利性和效率是远远不够的。
-HBuilderX内置的资源管理器，给你一个更大的资源管理界面，大幅提高文件的管理效率。
+The built-in resource manager of HBuilderX gives you a larger resource management interface and greatly improves the efficiency of file management.
 
-相比OS自带的资源管理器，HBuilderX资源管理器为编程文件提供专门的优化。
+Compared with the resource manager that comes with OS, HBuilderX resource manager provides special optimization for programming files.
 
-- 在大图预览界面下直接显示html标题、vue页面、组件的名字
-- 直接预览markdown的内容
-- 在列表详情界面扩充单独的列来显示svn/git状态
+- Large icon view, Directly display the html title, vue page, component name
+- Preview the content of markdown directly
+- Expand a separate column in the list details interface to display svn/git status
 
-<img src="/static/snapshots/tutorial/explorer.gif" style="zoom:98%" />
+<img src="/static/snapshots/tutorial/explorer.gif" style="zoom:98%; border: 1px solid #eee;" />
 
 ## editor layout
 
@@ -65,10 +66,10 @@ Top Menu "view -> layout", There is a set of predefined editor layouts。
 
 ## Single Window
 
-单窗体： 就是项目管理器，只显示一个项目。
+Single Project window: It is the project manager, only one project is displayed。
 
-在主窗体上，点击菜单【视图】【新建HBuilder窗体】，就可以新建一个单项目窗体。
+On the main window, Click the menu [View] [New Window] to create a single project window.
 
-在主窗体上，选中某个项目，右键菜单，点击【在新窗体中打开】，即可将项目在单项目窗体中打开
+On the main window, select an project, right-click on the menu, and click [Open in New Window] to open the project in the single project Window.
 
-[关于单窗体的详细说明与介绍](/Tutorial/UserGuide/multi-window)
+[Detailed description of the single form](/Tutorial/UserGuide/multi-window)

@@ -7,6 +7,7 @@
     * [OfflineInstall](/Tutorial/OfflineInstall.md)
 * Get Start
     * [StartedTutorial](/Tutorial/StartedTutorial.md)
+    * [userinterface](/Tutorial/userinterface.md)
     * [Keybindings](/Tutorial/keybindings.md)
     * [Theme](/Tutorial/themes.md)
     * [Project](/Tutorial/project.md)
