@@ -21,6 +21,7 @@
     * [Format](/Tutorial/UserGuide/format.md)
     * [Validate](/Tutorial/UserGuide/SyntaxCheck.md)
     * [Built-in Explorer](/Tutorial/UserGuide/built-in-explorer.md)
+    * [Compase Selected Files](/Tutorial/UserGuide/LocalFileDiff.md)
     * [Local History](/Tutorial/UserGuide/LocalHistory.md)
     * [editorconfig](/Tutorial/UserGuide/editorconfig.md)
 * Languages
