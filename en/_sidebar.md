@@ -19,6 +19,7 @@
     * [Find / Repleace](/Tutorial/UserGuide/find.md)
     * [Fold](/Tutorial/UserGuide/fold.md)
     * [Format](/Tutorial/UserGuide/format.md)
+    * [Validate](/Tutorial/UserGuide/SyntaxCheck.md)
     * [editorconfig](/Tutorial/UserGuide/editorconfig.md)
 * Languages
     * [Overview](/Tutorial/Language/Overview.md)
