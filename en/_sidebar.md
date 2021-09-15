@@ -22,6 +22,7 @@
     * [Validate](/Tutorial/UserGuide/SyntaxCheck.md)
     * [Built-in Browser](/Tutorial/UserGuide/built-in-browser.md)
     * [Built-in Explorer](/Tutorial/UserGuide/built-in-explorer.md)
+    * [multi-window](/Tutorial/UserGuide/multi-window.md)
     * [Compase Selected Files](/Tutorial/UserGuide/LocalFileDiff.md)
     * [Local History](/Tutorial/UserGuide/LocalHistory.md)
     * [editorconfig](/Tutorial/UserGuide/editorconfig.md)
