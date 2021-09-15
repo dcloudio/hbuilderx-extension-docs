@@ -45,7 +45,7 @@
 * Extension
     * [validate-html](/Tutorial/extension/validate-html.md)
     * [validate-stylelint](/Tutorial/extension/validate-stylelint.md)
-    * [eslint-js](/Tutorial/extension/eslint-js.md)
+    * [sass](/Tutorial/extension/sass.md)
     * [Formator Prettier](/Tutorial/extension/prettier.md)
 * Other
     * [Font Setting](/Tutorial/settings/font.md)
