@@ -1,4 +1,4 @@
-### Sass
+# Sass
 
 Sass is a CSS extension that allows you to use variables , nested rules , mixins , inline imports and other functions based on CSS syntax to make CSS more powerful and elegant.. 
 
@@ -6,20 +6,20 @@ Using Sass and the Compass style library can help better organize and manage sty
 
 [sass docs](http://en.sass.hk/docs/)
 
-### Install
+## Install
 
 In HBuilderX, the use of `scss/sass` requires the installation of the `compile-node-sass compilation plugin`.
 
 [compile-node-sass Download](https://ext.dcloud.net.cn/plugin?id=2046)
 
-### usage
+## usage
 
 - The uni-app project will automatically compile files that use sass。
 - Compile the sass file separately. Select the sass file, click the right-click menu -> external command -> sass -> compile scss/sass.
 
 <img src="/static/snapshots/tutorial/menu_tool/project-explorer_menu_en.png"  class="hd-img"/>
 
-### Configuration file
+## Configuration file
 
 The configuration file of compile-node-sass is package.json.
 
@@ -67,7 +67,8 @@ Click the menu [Tools -> External Command Setting -> compile-node-sass -> packag
 }
 
 ```
-### shortcut keys
+
+## shortcut keys
 
 Click the menu [Tools -> External Command Setting -> compile-node-sass -> package.json] to open the package.json file.
 
@@ -75,7 +76,7 @@ Open package.json and modify the key value to configure the shortcut key; this e
 
 For example: `"key": "ctrl + alt + C"`
   
-### Save and compile now
+## Save and compile now
   
 Click the menu [Tools -> External Command Setting -> compile-node-sass -> package.json] to open the package.json file.
 
