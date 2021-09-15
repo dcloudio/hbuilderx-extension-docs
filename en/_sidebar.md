@@ -30,6 +30,7 @@
 * Languages
     * [Overview](/Tutorial/Language/Overview.md)
     * [CodeAssistant](/Tutorial/Language/CodeAssistant.md)
+    * [Snippets](/Tutorial/Language/Snippets.md)
     * [Emmet](/Tutorial/Language/emmet)
     * [Vue](/Tutorial/Language/vue.md)
     * [Vue3](/Tutorial/Language/vue-next.md)
