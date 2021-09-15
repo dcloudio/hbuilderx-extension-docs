@@ -26,6 +26,7 @@
     * [Compase Selected Files](/Tutorial/UserGuide/LocalFileDiff.md)
     * [Local History](/Tutorial/UserGuide/LocalHistory.md)
     * [editorconfig](/Tutorial/UserGuide/editorconfig.md)
+    * [External Commands](/Tutorial/UserGuide/externalCommands.md)
 * Languages
     * [Overview](/Tutorial/Language/Overview.md)
     * [CodeAssistant](/Tutorial/Language/CodeAssistant.md)
