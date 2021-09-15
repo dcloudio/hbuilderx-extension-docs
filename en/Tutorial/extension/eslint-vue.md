@@ -1,20 +1,20 @@
-## eslint-vue简介
+# eslint-vue
 
-此插件用于vue语法校验。[eslint-vue插件安装地址](https://ext.dcloud.net.cn/plugin?id=2005)
+This plugin is used for Vue syntax verification. [eslint-vue install](https://ext.dcloud.net.cn/plugin?id=2005)
 
-和eslint-js搭配使用，[eslint-js插件安装地址](https://ext.dcloud.net.cn/plugin?id=2037)
+It needs to be used with eslint-js, [eslint-js plug-in installation address](https://ext.dcloud.net.cn/plugin?id=2037)
 
-## 错误提示
+## Error message
 
-如下图所示，编写完代码，保存文件，当检查到错误时，会出现红色波浪线
+As shown in the figure below, when an error is detected, a red wavy line will appear.
 
-<img src="/static/snapshots/tutorial/eslint-error.png" />
+<img src="/static/snapshots/tutorial/plugins/eslint-vue-error.png" class="hd-img" />
 
-## 插件配置
+## Plugin configuration
 
-点击菜单【工具】【插件配置】【eslint-vue】，即可看到eslint-vue相关配置。
+Click the menu [Tools] [Settings -> Plugin] [eslint-vue], you can see the eslint-vue related configuration.
 
-<img src="/static/snapshots/tutorial/eslint-js.png" />
+<img src="/static/snapshots/tutorial/plugins/settings_eslint_en.png" class="hd-img"/>
 
 **实时校验、自动修复**
 
@@ -25,35 +25,35 @@
 3. 若满足上述条件，当编写完代码，保存时，若代码中存在错误，自动修复; 
 4. 实时校验功能，默认未开启，需要手动开启此功能
 
-## 配置文件
+## eslint-vue config file
 
-eslint-vue的配置文件为.eslintrc.js。
+The configuration file of eslint-vue is `.eslintrc.js`.
 
-点击菜单工具 -> 设置 -> 插件配置 -> eslint-vue -> .eslintrc.js，即可打开.eslintrc.js文件。
+Click on the menu Tools -> Settings -> Plugins -> eslint-vue -> .eslintrc.js to open the `.eslintrc.js` file.
 
-选项对应说明如下：
+The configuration file is as follows：
 
 ```
   module.exports = {
       "extends": "plugin:vue/essential",
       "parserOptions": {},    
-      "rules": {}             //规则
+      "rules": {}
   };
 ```
   
-更多配置说明可以参考[options](http://eslint.org/docs/user-guide/configuring)
+More configuration instructions can refer to [options](http://eslint.org/docs/user-guide/configuring)
 
 
-## 如何增加规则？
+## how to add rules？
 
-[官方规则列表](https://github.com/vuejs/eslint-plugin-vue#gear-configs)
+[rules list](https://github.com/vuejs/eslint-plugin-vue#gear-configs)
 
-规则设置：
-- "off" 或 0 - 关闭规则
-- "warn" 或 1 - 开启规则，使用警告级别的错误：warn (不会导致程序退出)
-- "error" 或 2 - 开启规则，使用错误级别的错误：error (当被触发的时候，程序会退出)
+Rule setting：
+- "off" or 0 - close rules
+- "warn" or 1 - open rules，使用警告级别的错误：warn (不会导致程序退出)
+- "error" or 2 - open rules，使用错误级别的错误：error (当被触发的时候，程序会退出)
 
-修改.eslintrc.js文件，添加规则，比如: 
+Modify the .eslintrc.js file and add rules, such as:
 
 ```js
 {
@@ -122,7 +122,7 @@ eslint-vue的配置文件为.eslintrc.js。
 ```
 
 
-## 示例：uni-app项目
+## Example：uni-app project
 
 特别说明：
 - vue文件，校验vue语法，需要安装`eslint-vue`插件，[插件地址](https://ext.dcloud.net.cn/plugin?id=2005)
@@ -135,7 +135,7 @@ eslint-vue的配置文件为.eslintrc.js。
 <img src="/static/snapshots/tutorial/eslint-uniapp-example.gif" style="zoom: 90%; border: 1px solid #eee;" />
 
 
-## 示例：cli项目
+## Example：vue-cli project
 
 vue-cli项目，如果使用项目下的配置规则，需要安装相关库、并在项目根目录创建`.eslintrc.js`文件
 

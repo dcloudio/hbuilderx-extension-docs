@@ -8,7 +8,7 @@ eslint-js, 用於校驗js和html中的js代碼
 
 如下圖所示，當檢查到錯誤時，會出現紅色波浪線
 
-<img src="/static/snapshots/tutorial/eslint-error.png" />
+<img src="/static/snapshots/tutorial/plugins/eslint-js-error.png" class="hd-img" />
 
 ## 插件配置
 

@@ -8,7 +8,7 @@
 
 如下圖所示，編寫完代碼，保存文件，當檢查到錯誤時，會出現紅色波浪線
 
-<img src="/static/snapshots/tutorial/eslint-error.png" />
+<img src="/static/snapshots/tutorial/plugins/eslint-vue-error.png" class="hd-img" />
 
 ## 插件配置
 

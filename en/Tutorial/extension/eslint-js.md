@@ -8,13 +8,13 @@ ESLint is an open source JavaScript linting utility.
 
 As shown in the figure below, when an error is detected, a red wavy line will appear.
 
-<img src="/static/snapshots/tutorial/eslint-error.png" />
+<img src="/static/snapshots/tutorial/plugins/eslint-js-error.png" class="hd-img" />
 
 ## ESLint Plugin configuration
 
 Click the menu [Tools] [Settings -> Plugin] [eslint-js], you can see the eslint-js related configuration.
 
-<img src="/static/snapshots/tutorial/eslint-js.png" />
+<img src="/static/snapshots/tutorial/plugins/settings_eslint_en.png" class="hd-img"/>
 
 **实时校验、自动修复**
 
