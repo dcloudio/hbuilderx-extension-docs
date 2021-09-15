@@ -20,6 +20,7 @@
     * [Fold](/Tutorial/UserGuide/fold.md)
     * [Format](/Tutorial/UserGuide/format.md)
     * [Validate](/Tutorial/UserGuide/SyntaxCheck.md)
+    * [Built-in Browser](/Tutorial/UserGuide/built-in-browser.md)
     * [Built-in Explorer](/Tutorial/UserGuide/built-in-explorer.md)
     * [Compase Selected Files](/Tutorial/UserGuide/LocalFileDiff.md)
     * [Local History](/Tutorial/UserGuide/LocalHistory.md)
