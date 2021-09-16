@@ -1,35 +1,40 @@
-关于多窗口，需要理解两个概念： **主窗体**、**单项目窗体**
+Regarding multi-windows, two concepts need to be understood: `main Window`, `Single Project Window`
 
-### 单项目窗体
+## Single Project Window
 
-**主窗体**:  项目管理器可以显示多个项目列表。
+**main Window**:  The project manager can display multiple project lists.
 
-**单项目窗体**： 就是项目管理器，只显示一个项目。
+**Single Project Window**: It is the project manager, which only displays one project.
 
-- 单项目窗体上，窗体标题会显示：单项目窗体
-- 打开的单项目窗体列表， 会显示在菜单【视图】中
-- 菜单【文件】【打开多窗体项目】，可以打开历史的单项目窗体
-
-
-### 单项目窗体新建与使用
-
-在主窗体上，点击菜单【视图】【新建HBuilder窗体】，就可以新建一个单项目窗体。
-
-在主窗体上，选中某个项目，右键菜单，点击【在新窗体中打开】，即可将项目在单项目窗体中打开
-
-<img src="/static/snapshots/tutorial/multi-window-1.gif" style="zoom:90%" />
+- Single Project Window: the title of the form will display: Single Project Window
+- The opened single-project window list will be displayed in the menu [View]
+- Menu [File] [Open Multi-Window Project], you can open the historical single-project window.
 
 
-备注： 单项目窗体，也可以直接将文件夹拖入。
+## Create Single Project Window 
+
+On the main form, click the menu [View] [New Window] to create a new Single Project Window .
+
+On the main form, select an item, right-click on the menu, and click [Open in New Window] to open the item in the Single Project Window.
+
+<img src="/static/snapshots/tutorial/multi-window-1_en.png" class="border-1px" />
+
+Remarks: In the Single Project Window, you can also directly drag the folder into it.
 
 
-### 主窗体、单项目窗体互相切换
+## Window switch
 
-在主窗体、单项目窗体互相切换的快捷键，mac下按【ctrl+F6】、 windows下按【Alt+`】
+HBuilderX supports switching between main Window and single-project Window.
 
-### 在任务栏直接启动某个项目的窗体
+|	OS Name|shortcut keys	|
+|--	|--	|
+|	MacOSX|ctrl+F6	|
+| Windows  |Alt+`    |
 
-把HBuilderX固定在任务栏，点右键，可以快速打开某个项目的窗体
+
+## Open the project in the taskbar
+
+Fix HBuilderX in the taskbar, right click, you can quickly open the form of a certain project.
 
 <img src="/static/snapshots/tutorial/multi-window-2.png" style="zoom:50%" />
 

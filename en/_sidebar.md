@@ -20,17 +20,22 @@
     * [Fold](/Tutorial/UserGuide/fold.md)
     * [Format](/Tutorial/UserGuide/format.md)
     * [Validate](/Tutorial/UserGuide/SyntaxCheck.md)
+    * [Built-in Browser](/Tutorial/UserGuide/built-in-browser.md)
     * [Built-in Explorer](/Tutorial/UserGuide/built-in-explorer.md)
+    * [multi-window](/Tutorial/UserGuide/multi-window.md)
     * [Compase Selected Files](/Tutorial/UserGuide/LocalFileDiff.md)
     * [Local History](/Tutorial/UserGuide/LocalHistory.md)
     * [editorconfig](/Tutorial/UserGuide/editorconfig.md)
+    * [External Commands](/Tutorial/UserGuide/externalCommands.md)
 * Languages
     * [Overview](/Tutorial/Language/Overview.md)
     * [CodeAssistant](/Tutorial/Language/CodeAssistant.md)
+    * [Snippets](/Tutorial/Language/Snippets.md)
     * [Emmet](/Tutorial/Language/emmet)
     * [Vue](/Tutorial/Language/vue.md)
     * [Vue3](/Tutorial/Language/vue-next.md)
     * [Vue Doc](/Tutorial/Language/vuedoc.md)
+    * [MarkDown](/Tutorial/Language/markdown.md)
 * Version Control
     * [Git Introduce](/Tutorial/SourceControl/Git/README.md)
     * [Git Windows](/Tutorial/SourceControl/Git/Windows.md)
@@ -40,6 +45,9 @@
 * Extension
     * [validate-html](/Tutorial/extension/validate-html.md)
     * [validate-stylelint](/Tutorial/extension/validate-stylelint.md)
+    * [eslint-js](/Tutorial/extension/eslint-js.md)
+    * [eslint-vue](/Tutorial/extension/eslint-vue.md)
+    * [sass](/Tutorial/extension/sass.md)
     * [Formator Prettier](/Tutorial/extension/prettier.md)
 * Other
     * [Font Setting](/Tutorial/settings/font.md)

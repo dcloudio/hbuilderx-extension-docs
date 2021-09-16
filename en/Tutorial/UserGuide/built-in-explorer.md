@@ -10,7 +10,7 @@ Compared with the resource manager that comes with OS, HBuilderX resource manage
 
 **Use animation**
 
-<img src="/static/snapshots/tutorial/explorer/explorer_1.gif" style="zoom:90%;" class="border-1px" />
+<img src="/static/snapshots/tutorial/explorer/explorer_1_en.gif" style="zoom:80%;" class="border-1px" />
 
 ## What are the advantages?
 

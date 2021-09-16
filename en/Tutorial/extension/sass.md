@@ -1,44 +1,85 @@
-### Scss/sass简介
+# Sass
 
-Scss/Sass 是一款强化 CSS 的辅助工具，它在 CSS 语法的基础上增加了变量 (variables)、嵌套 (nested rules)、混合 (mixins)、导入 (inline imports) 等高级功能，这些拓展令 CSS 更加强大与优雅。
+Sass is a CSS extension that allows you to use variables , nested rules , mixins , inline imports and other functions based on CSS syntax to make CSS more powerful and elegant.. 
 
-使用 Scss/Sass 以及 Scss/Sass 的样式库（如 Compass）有助于更好地组织管理样式文件，以及更高效地开发项目。
+Using Sass and the Compass style library can help better organize and manage style files and develop projects more efficiently.
 
-[scss/sass中文文档](https://www.sass.hk/docs/)
+[sass docs](http://en.sass.hk/docs/)
 
-### 插件安装
+## Install
 
-compile-node-sass插件，编译sass/scss为css。
+In HBuilderX, the use of `scss/sass` requires the installation of the `compile-node-sass compilation plugin`.
 
-在HBuilderX中，使用`scss/sass`是需要安装`compile-node-sass编译插件`的。
+[compile-node-sass Download](https://ext.dcloud.net.cn/plugin?id=2046)
 
-安装sass插件，需要到[插件市场](https://ext.dcloud.net.cn/plugin?id=2046)安装。
+## usage
 
-### 插件使用
-- uni-app项目，会自动编译使用sass的文件。
-- 单独编译sass文件。选中sass文件，点击右键菜单 -> 外部命令 -> sass -> 编译scss/sass。
+- The uni-app project will automatically compile files that use sass。
+- Compile the sass file separately. Select the sass file, click the right-click menu -> external command -> sass -> compile scss/sass.
 
-<img src="/static/snapshots/tutorial/sass_1.jpeg" />
+<img src="/static/snapshots/tutorial/menu_tool/project-explorer_menu_en.png"  class="hd-img"/>
 
-### 配置文件
+## Configuration file
 
-compile-node-sass的配置文件为package.json。
+The configuration file of compile-node-sass is package.json.
 
-点击菜单【工具 -> 插件配置 -> compile-node-sass -> package.json】，即可打开package.json文件。
+Click the menu [Tools -> External Command Setting -> compile-node-sass -> package.json] to open the package.json file.
 
-<img src="/static/snapshots/tutorial/sass_2.png" />
+<img src="/static/snapshots/tutorial/menu_tool/menu_sass_en.png"  class="hd-img"/>
 
-### 快捷键
+```json
+{
+	"name": "sass",
+	"id": "compile-node-sass",
+	"version": "0.0.7",
+	"displayName": "%displayName%",
+	"description": "%description%",
+	"engines": {
+		"HBuilderX": "^3.2.6"
+	},
+	"external": {
+		"type": "node",
+		"programPath": "${pluginPath}",
+		"executable": "/node_modules/.bin/node-sass",
+		"programName": "node-sass-china",
+		"commands": [
+			{
+				"id": "SASS_COMPILE",
+				"name": "%SASS_COMPILE.name%",
+				"command": [
+					"${programPath}",
+					"${file}",
+					"${fileBasename}.css"
+				],
+				"extensions": "scss,sass",
+				"key": "",
+				"showInParentMenu": false,
+				"onDidSaveExecution": false
+			}
+		]
+	},
+	"dependencies": {
+		"node-sass-china": "^4.7.2"
+	},
+	"extensionDependencies": [
+		"npm"
+	]
+}
 
-点击菜单【工具 -> 插件配置 -> compile-node-sass -> package.json】，即可打开配置文件文件。
+```
 
-打开package.json, 修改key值，即可配置快捷键；可通过此快捷键直接运行此外部命令。
-比如：`"key": "ctrl + alt + C"`
+## shortcut keys
+
+Click the menu [Tools -> External Command Setting -> compile-node-sass -> package.json] to open the package.json file.
+
+Open package.json and modify the key value to configure the shortcut key; this external command can be run directly through this shortcut key.
+
+For example: `"key": "ctrl + alt + C"`
   
-### 保存立即编译
+## Save and compile now
   
-点击菜单【工具 -> 插件配置 -> compile-node-sass -> package.json】，即可打开配置文件文件。
+Click the menu [Tools -> External Command Setting -> compile-node-sass -> package.json] to open the package.json file.
 
-配置文件中`onDidSaveExecution`，表示保存的时候是否触发编译，默认为false。
+The `onDidSaveExecution` in the configuration file indicates whether to trigger compilation when saving, and the default is false.
 
-修改`onDidSaveExecution`为`true`即可。
+Modify `onDidSaveExecution` to `true`.

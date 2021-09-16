@@ -1,18 +1,18 @@
-# 内置浏览器
+# Built-in Browser
 
-HBuilderX，内置浏览器，支持边改边预览。
+HBuilderX Built-in Browser, Support preview while changing。
 
-- 支持预览markdown文件
-- 支持web项目、vue项目、uniapp项目、5+项目在内置浏览器预览
+- Support previewing markdown files
+- Support web project, vue project, uniapp project, 5+ project preview in built-in browser
 - ......
 
-### 查找代码中对应的DOM节点、高亮浏览器内对应元素
+### Highlight the Elements in the Browser、Find DOM Node in File
 
-> 仅支持HBuilderX 2.6.10+版本
+> Only supports HBuilderX 2.6.10+ version
 
-- 在内置浏览器，右键菜单，点击`查找代码中对应的DOM节点`,即可跳转到编辑器相应位置
-- 在编辑器内，右键菜单，点击`高亮浏览器内对应元素`, 即可在内置浏览器显示相应元素
+- In the built-in browser, Selected element, right-click the menu,  click`Highlight the Elements in the Browser`,You can jump to the corresponding position of the editor
+- In the editor, Selected code， right-click the menu, click on `Find DOM Node in File` to display the corresponding elements in the built-in browser
 
-**示例**
+**Example**
 
-<img src="/static/snapshots/tutorial/browser_1.gif" style="zoom: 90%;border:1px solid #eee;" />
+<img src="/static/snapshots/tutorial/browser_1_en.gif" style="zoom: 90%;border:1px solid #eee;" />

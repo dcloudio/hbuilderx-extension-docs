@@ -8,7 +8,7 @@ eslint-js, 用于校验js和html中的js代码
 
 如下图所示，当检查到错误时，会出现红色波浪线
 
-<img src="/static/snapshots/tutorial/eslint-error.png" />
+<img src="/static/snapshots/tutorial/plugins/eslint-js-error.png" class="hd-img" />
 
 ## 插件配置
 
@@ -73,7 +73,7 @@ module.exports = {
 
 使用eslint, 校验多余的空格，并自动修复
 
-<img src="/static/snapshots/tutorial/eslint-html-example.gif" style="zoom: 90%; border: 1px solid #eee;" />
+<img src="/static/snapshots/tutorial/plugins/eslint-html-example.gif" style="zoom: 90%; border: 1px solid #eee;" />
 
 配置文件
 

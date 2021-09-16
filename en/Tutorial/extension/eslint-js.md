@@ -1,81 +1,83 @@
-## eslint-js简介
+## eslint-js
 
-eslint-js, 用于校验js和html中的js代码
+ESLint is an open source JavaScript linting utility.
 
-[eslint-js插件安装地址](https://ext.dcloud.net.cn/plugin?id=2037)
+[eslint-js Download](https://ext.dcloud.net.cn/plugin?id=2037)
 
-## 错误提示
+## Error message
 
-如下图所示，当检查到错误时，会出现红色波浪线
+As shown in the figure below, when an error is detected, a red wavy line will appear.
 
-<img src="/static/snapshots/tutorial/eslint-error.png" />
+<img src="/static/snapshots/tutorial/plugins/eslint-js-error.png" class="hd-img" />
 
-## 插件配置
+## ESLint Plugin configuration
 
-点击菜单【工具】【设置 -> 插件配置】【eslint-js】，即可看到eslint-js相关配置。
+Click the menu [Tools] [Settings -> Plugin] [eslint-js], you can see the eslint-js related configuration.
 
-<img src="/static/snapshots/tutorial/eslint-js.png" />
+<img src="/static/snapshots/tutorial/plugins/settings_eslint_en.png" class="hd-img"/>
 
-**实时校验、自动修复**
+**Real-time verification and automatically fixable**
 
-> HBuilderX 2.6.8+版本起，新增eslint 实时校验、自动修复错误的功能。注意：此功能不适用于2.6.8之前的版本
+> Only supports HBuilderX 2.6.8+ version
 
-1. 使用此功能，必须安装[eslint-js](https://ext.dcloud.net.cn/plugin?id=2037)插件
-2. `vue-cli`项目，需要安装eslint库，并配置eslint规则.
-3. 若满足上述条件，当编写完代码，保存时，若代码中存在错误，自动修复; 
-4. 实时校验功能，默认未开启，需要手动开启此功能
+1. To use this function, you must install the [eslint-js](https://ext.dcloud.net.cn/plugin?id=2037) plugin
+2. The `vue-cli` project needs to install the eslint library and configure the eslint rules.
+3. If the above conditions are met, when the code is written and saved, if there is an error in the code, it will be automatically repaired;
+4. Real-time verification function, not enabled by default, you need to manually enable this function
 
 
-## eslint-js插件配置文件
+## HBuilderX eslint-js configuration files
 
-eslint-js的配置文件为.eslintrc.js。
-点击菜单工具 -> 插件配置 -> eslint-js -> .eslintrc.js，即可打开.eslintrc.js文件。
+The configuration file of eslint-js is `.eslintrc.js`.
 
-选项对应说明如下：
+Click on the menu Tools -> Plugins -> eslint-js -> .eslintrc.js to open the `.eslintrc.js` file.
+
+The configuration file is as follows：
 
 ```js
 module.exports = {
-    "plugins": [],          //插件
+    "plugins": [],         
     "env": {
         "browser": true,
         "node": true
     },
-    "parser": "esprima",    //指定解析器
+    "parser": "esprima",   
     "parserOptions": {},    
-    "rules": {}             //规则
+    "rules": {}
 }
 ```
   
-更多配置说明可以参考[options](https://cn.eslint.org/docs/user-guide/configuring)
+More configuration instructions can refer to [options](https://eslint.org/docs/rules/)
 
-## 如何增加规则?
+## How to add rules?
 
-[官方规则列表https://cn.eslint.org/docs/rules/](https://cn.eslint.org/docs/rules/)
+[rules list: https://cn.eslint.org/docs/rules/](https://cn.eslint.org/docs/rules/)
 
-规则设置：
-- "off" 或 0 - 关闭规则
-- "warn" 或 1 - 开启规则，使用警告级别的错误：warn (不会导致程序退出)
-- "error" 或 2 - 开启规则，使用错误级别的错误：error (当被触发的时候，程序会退出)
+ESLint comes with a large number of built-in rules and you can add more rules through plugins. You can modify which rules your project uses either using configuration comments or configuration files. To change a rule setting, you must set the rule ID equal to one of these values:
 
-规则示例
+- "off" or 0 - turn the rule off
+- "warn" or 1 - turn the rule on as a warning (doesn't affect exit code)
+- "error" or 2 - turn the rule on as an error (exit code is 1 when triggered)
+
+Example:
+
 ```js
 "rules": {
-  "camelcase": 2,           //强制驼峰法命名,
-  "indent": [2, 4],         //缩进风格
-  "id-match": 0,            //命名检测
-  "init-declarations": 1,   //声明时必须赋初值
-  "no-undef": 1,            //不能有未定义的变量
+  "camelcase": 2,           //enforce camelcase naming convention,
+  "indent": [2, 4],         //enforce consistent indentation
+  "id-match": 0,            //require identifiers to match a specified regular expression
+  "init-declarations": 1,   //require or disallow initialization in variable declarations
+  "no-undef": 1,            //disallow the use of undeclared variables unless mentioned in /*global */ comments
 }
 ```
 
 
-## 示例：普通web项目
+## Exampl：Html Project
 
-使用eslint, 校验多余的空格，并自动修复
+Use eslint to check extra spaces and fix them automatically.
 
-<img src="/static/snapshots/tutorial/eslint-html-example.gif" style="zoom: 90%; border: 1px solid #eee;" />
+<img src="/static/snapshots/tutorial/plugins/eslint-html-example-en.gif" style="zoom: 90%; border: 1px solid #eee;" />
 
-配置文件
 
 ```js
 module.exports = {
@@ -99,32 +101,30 @@ module.exports = {
 }
 ```
 
-## 示例：uni-app项目
+## Example：uni-app project
 
-特别说明：
-- vue文件，校验vue语法，需要安装`eslint-vue`插件，[插件地址](https://ext.dcloud.net.cn/plugin?id=2005)
-- vue文件, 校验规则，需要从`eslint-vue`插件中配置。
-- 菜单【工具】->【设置 -> 插件配置 -> eslint-vue -> .eslintrc.js】,编辑`.eslintrc.js`文件
+- vue file, verify vue syntax, need to install `eslint-vue` plugin, [plugin address](https://ext.dcloud.net.cn/plugin?id=2005)
+- The vue file, the verification rules, need to be configured from the `eslint-vue` plugin.
+- Menu [Tools] [Settings] [Plugins] [eslint-vue] [.eslintrc.js], edit the `.eslintrc.js` file
 
-【示例】eslint自动修复双引号为单引号，如下：
+
+Example: eslint automatically fixes double quotes to single quotes
 
 <img src="/static/snapshots/tutorial/eslint-uniapp-example.gif" style="zoom: 90%; border: 1px solid #eee;" />
 
 
-## 示例：vue-cli项目
+## Example：vue-cli project
 
-vue-cli项目，如果使用项目下的配置规则，需要安装相关库、并在项目根目录创建`.eslintrc.js`文件
-
-备注：
-1. 注意：项目下`eslint规则`会覆盖HBuilderX编辑器`eslint插件中的规则`
-2. 校验vue语法，需要安装`eslint-vue`插件，[插件地址](https://ext.dcloud.net.cn/plugin?id=2005)
+1. For the vue-cli project, if you use the configuration rules under the project, you need to install the relevant libraries and create the `.eslintrc.js` file in the project root directory
+2. The `eslint rules` under the project will override the rules in the HBuilderX editor `eslint plugin`
+3. vue file, verify vue syntax, need to install `eslint-vue` plugin, [plugin address](https://ext.dcloud.net.cn/plugin?id=2005)
 
 ```shell
 npm install --save eslint eslint-plugin-vue eslint-plugin-html eslint-config-standard eslint-plugin-import eslint-plugin-node eslint-plugin-promise eslint-plugin-standard
 ```
 
 
-.eslintrc.js配置文件示例
+**.eslintrc.js configuration files**
 
 ```js
 module.exports = {
@@ -133,13 +133,13 @@ module.exports = {
     ],
     rules: {
         "no-alert": 0,
-        "no-multi-spaces": "error", // 禁止多个空格 
-        "semi": [2, "always"] ,// 自动补充分号
-       "quotes": ["error", "single"] // 使用单引号
+        "no-multi-spaces": "error",         // disallow multiple spaces 
+        "semi": [2, "always"] ,             // equire or disallow semicolons instead of ASI
+        "quotes": ["error", "single"]        // enforce the consistent use of either backticks, double, or single quotes
     }
 }
 ```
 
-示例：使用eslint, 自动补充分号
+**Example: Use eslint to automatically add semicolons**
 
 ![](https://img-cdn-qiniu.dcloud.net.cn/uploads/article/20200317/911ea4cac9f2c4d80ec502b1384e7a58.gif)
