@@ -76,7 +76,7 @@ Example:
 
 Use eslint to check extra spaces and fix them automatically.
 
-<img src="/static/snapshots/tutorial/eslint-html-example.gif" style="zoom: 90%; border: 1px solid #eee;" />
+<img src="/static/snapshots/tutorial/plugins/eslint-html-example-en.gif" style="zoom: 90%; border: 1px solid #eee;" />
 
 
 ```js

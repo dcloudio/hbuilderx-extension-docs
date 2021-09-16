@@ -73,7 +73,7 @@ module.exports = {
 
 使用eslint, 校验多余的空格，并自动修复
 
-<img src="/static/snapshots/tutorial/eslint-html-example.gif" style="zoom: 90%; border: 1px solid #eee;" />
+<img src="/static/snapshots/tutorial/plugins/eslint-html-example.gif" style="zoom: 90%; border: 1px solid #eee;" />
 
 配置文件
 
