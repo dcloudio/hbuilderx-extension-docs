@@ -11,19 +11,17 @@
 3. vue Development to strengthen
 <br/>`HX` has made a lot of optimization investment in vue, and the development experience far exceeds other development tools
 	[Details](/Tutorial/Language/vue)
-4. **Mini Program support**
-<br/>Foreign development tools have not optimized the development of small programs in China. `HX` can develop projects such as `uni-app` and `small programs` to provide more efficient tools for Chinese people.
-5. **Markdown Tool**
+4. **Markdown Tool**
 <br/>`HX` is the only editor whose default type of new files is markdown, and it is also the editor with the strongest support for md.
 <br/>`HX` has enhanced many functions for md, please **be sure to click** [Menu-Help-Markdown Syntax Example] to quickly master the enhancement skills of md and `HX`!
-6. **Eye protection**
+5. **Eye protection**
 <br/>The interface of HX is more refreshing and concise than other tools. The green soft theme has been scientifically tested for brain fatigue and is the most suitable theme interface for the human eye for long-term viewing.
 	[Details](/Tutorial/Other/health)
-7. **Smartest Intellisense**
+6. **Smartest Intellisense**
 <br/>`HX` is the only company in China with its own IDE syntax analysis engine, providing accurate code hints for front-end languages and [Go to definition](/Tutorial/UserGuide/goto?id=转到定义)(Alt+Left mouse)
-8. **Faster Coding**
+7. **Faster Coding**
 <br/>More powerful multi-cursor, smart double-click...Greatly improve the efficiency of word processing [Details](/Tutorial/UserGuide/selection)
-9. **Stronger json support**
+8. **Stronger json support**
 <br/>A lot of json structure writing in js development, `HX` provides more efficient operation than other tools
 	[Details](/Tutorial/Language/json)
 
