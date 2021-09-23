@@ -10,6 +10,23 @@
 |-					|-				|
 |editor.foreground	|编辑区前景颜色	|
 |editor.background	|编辑区背景颜色	|
+|editor.caret|光标颜色|
+|editor.caretLine|光标所在行的行颜色|
+|editor.hyperlink|超链接激活时的文字颜色|
+|editor.indentguide|缩进导轨的颜色|
+|editor.indicator.matchtag|配对括号的突出显示颜色|
+|editor.indicator.sameword|相同词汇的突出显示颜色|
+|editor.linenumber|行号颜色|
+|editor.selection|激活的选区颜色|
+|editor.selectRegion|区域内搜索选区颜色|
+|editor.whitespace|空白的颜色(包括TAB和SPACE)|
+|editor.unactive_selection.background|未激活的选区颜色(分栏后在右侧获取选区,然后点击左侧编辑器)|
+|editor.foldMarker.expanded.background|编辑器代码折叠图标展开状态背景色|
+|editor.foldMarker.expanded.foreground|编辑器代码折叠图标展开状态前景色|
+|editor.foldMarker.collapsed.background|编辑器代码折叠图标折叠状态背景色|
+|editor.foldMarker.collapsed.foreground|编辑器代码折叠图标折叠状态前景色|
+
+备注：editor.background之后的颜色，仅对3.2.7+版本生效。
 
 #### 编辑区代码默认颜色定义
 > 自定义方式，将默认代码区颜色配置拷贝到`settings.json`源码视图中自定义`"editor.tokenColorCustomizations"`节点下对应主题的`"rules"`节点下。
@@ -46,6 +63,15 @@
 |titleBar.activeBackground	|背景颜色	|
 |titleBar.activeForeground	|前景颜色	|
 
+### windows菜单栏
+
+> 以下两项，仅对windows 3.2.7+版本生效。
+
+|名称						|描述		|
+|-							|-			|
+|menubar.background	|顶部菜单栏背景颜色	|
+|menubar.foreground	|顶部菜单栏前景颜色	|
+
 ### 工具栏
 
 
@@ -54,6 +80,57 @@
 |toolBar.background		|工具栏背景颜色					|
 |toolBar.border			|工具栏边框颜色					|
 |toolBar.hoverBackground|工具栏上图标被选中时的背景颜色	|
+
+### 搜索框 
+
+> 以下6项，仅对3.2.7+版本生效
+
+|名称						|描述		|
+|-							|-			|
+|searchbar.foreground|当input.searchbar.foreground为空时,字符搜索框没有内容时,字符搜索框内的文字颜色(颜色模式为反色的bgr);当input.searchbar.foreground为空时,字符搜索框有内容,且内容被搜索到时,搜索文件的颜色(因是rgb模式,设置的颜色不生效);字符搜索框光标的颜色|
+|searchbar.notfinded.foreground|当input.searchbar.foreground.notfinded为空时,字符搜索框有内容,且内容没有搜索到时,搜索文字的颜色(因是rgb模式,设置的颜色不生效);字符搜索框光标的颜色|
+|searchbar.quick_search_item.icon_selected|搜索栏下拉列表,当前选中项的颜色(颜色模式为反色的bgr)|
+|searchbar.quick_search_item.icon|搜索栏下拉列表,未选中项的颜色(颜色模式为反色的bgr)|
+|input.searchbar.foreground.notfinded|字符搜索框有内容,且内容没有搜索到时,搜索文字的颜色;字符搜索框光标的颜色|
+|input.searchbar.foreground|字符搜索框没有内容时,字符搜索框内的文字颜色;字符搜索框有内容,且内容被搜索到时,搜索文字的颜色;字符搜索框光标的颜色|
+
+### 搜索下拉框
+
+|名称							|描述					|
+|-								|-						|
+|inputValidation.infoBackground	|下拉框背景颜色			|
+|inputList.hoverBackground		|鼠标滑过item背景颜色	|
+|inputList.border				|下拉框边框颜色			|
+|inputList.titleColor			|下拉框左边文字颜色		|
+|inputList.foreground			|下拉框右边文字颜色		|
+
+### 文本框
+
+
+|名称				|描述					|
+|-					|-						|
+|input.background	|文本框背景颜色			|
+|input.foreground	|文本框前景颜色			|
+|input.border		|文本框边框颜色			|
+|focusBorder		|文本框有焦点时边框颜色	|
+
+### 列表控件/树控件区
+
+|名称								|描述							|
+|-									|-								|
+|list.foreground					|前景颜色						|
+|list.activeSelectionBackground		|选中条目背景颜色				|
+|list.activeSelectionForeground		|选中条目前景颜色				|
+|list.hoverBackground				|鼠标滑过背景颜色				|
+|list.highlightForeground			|高亮时前景颜色					|
+|list.inactiveSelectionBackground	|未选中条目背景颜色				|
+|list.inactiveSelectionForeground	|未选中条目前景颜色				|
+|explorer.file.status.modified		|svn/git项目修改状态前景色		|
+|explorer.file.status.untracked		|svn/git项目未跟踪状态前景色	|
+|explorer.file.status.added			|svn/git项目添加状态前景色		|
+|explorer.file.status.conflicted	|svn/git项目冲突状态前景色		|
+|explorer.file.status.rename		|svn/git项目重命名状态前景色	|
+|explorer.file.status.marktext		|svn/git项目标记前景色			|
 
 ### 文件资源管理器
 
@@ -104,34 +181,6 @@
 |editorSuggestWidget.selectedBackground	|助手弹窗选中条目时背景颜色	|
 |editorSuggestWidget.link				|助手链接颜色				|
 
-### 文本框
-
-
-|名称				|描述					|
-|-					|-						|
-|input.background	|文本框背景颜色			|
-|input.foreground	|文本框前景颜色			|
-|input.border		|文本框边框颜色			|
-|focusBorder		|文本框有焦点时边框颜色	|
-
-### 列表控件/树控件区
-
-
-|名称								|描述							|
-|-									|-								|
-|list.foreground					|前景颜色						|
-|list.activeSelectionBackground		|选中条目背景颜色				|
-|list.activeSelectionForeground		|选中条目前景颜色				|
-|list.hoverBackground				|鼠标滑过背景颜色				|
-|list.highlightForeground			|高亮时前景颜色					|
-|list.inactiveSelectionBackground	|未选中条目背景颜色				|
-|list.inactiveSelectionForeground	|未选中条目前景颜色				|
-|explorer.file.status.modified		|svn/git项目修改状态前景色		|
-|explorer.file.status.untracked		|svn/git项目未跟踪状态前景色	|
-|explorer.file.status.added			|svn/git项目添加状态前景色		|
-|explorer.file.status.conflicted	|svn/git项目冲突状态前景色		|
-|explorer.file.status.rename		|svn/git项目重命名状态前景色	|
-|explorer.file.status.marktext		|svn/git项目标记前景色			|
 
 ### 文档结构图
 
@@ -157,16 +206,6 @@
 |extensionButton.prominentHoverBackground	|鼠标滑过时的背景颜色	|
 |extensionButton.checkColor					|选中时的前景颜色		|
 
-### 搜索下拉框
-
-
-|名称							|描述					|
-|-								|-						|
-|inputValidation.infoBackground	|下拉框背景颜色			|
-|inputList.hoverBackground		|鼠标滑过item背景颜色	|
-|inputList.border				|下拉框边框颜色			|
-|inputList.titleColor			|下拉框左边文字颜色		|
-|inputList.foreground			|下拉框右边文字颜色		|
 
 ### 设置
 
@@ -223,6 +262,14 @@
 |console.background | 控制台背景颜色|
 |panelTitle.activeForeground|tab选中时的前景颜色|
 |debug.foreground			|前景颜色			|
+|console.ad|控制台广告信息文字颜色|
+|console.error|控制台错误信息文字颜色|
+|console.foreground|控制台窗口前景颜色颜色(控制台窗口文字颜色)|
+|console.success|控制台成功信息文字颜色|
+|console.time|控制台时间信息文字颜色|
+|console.warn|控制台警告信息文字颜色|
+
+备注：debug.foreground之后的颜色，仅对3.2.7+版本生效。
 
 ### 查看svn/git日志
 
