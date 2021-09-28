@@ -23,16 +23,16 @@
 8. **Efficient Text Editing**
 <br/>Multi-cursor / multi-line selection. Smart auto selection on double click.Smart hotkeys that work even without selection.[Details](/Tutorial/UserGuide/selection)
 9. **Powerful json support**
-<br/>HX provides more efficient way for modern json structures.[Details](/Tutorial/Language/json)
+<br/>`HX` provides more efficient way for modern json structures.[Details](/Tutorial/Language/json)
 
 
 #### Scalability
-HX supports java and nodejs plugins, compatible with vscode plugins and code blocks.<br/>
-Hx can easily use [externalCommands](/Tutorial/UserGuide/externalCommands) to call commands and set hotkeys.<br/>
+`HX` supports java and nodejs plugins, compatible with vscode plugins and code blocks.<br/>
+`HX` can easily use [externalCommands](/Tutorial/UserGuide/externalCommands) to call commands and set hotkeys.<br/>
 Switch the hotkeys in Tool->Keymaps[shortcut keys](/Tutorial/keybindings) according to your preferences.(for example: Vscode, sublime)
 
 #### Plugins Market
 
-Reduce your development time and cost through HBuildx Plugins Market.
+Reduce your development time and cost through HBuilderX Plugins Market.
 
 market: [https://ext.dcloud.net.cn/](https://ext.dcloud.net.cn/?cat1=1&cat2=11&orderBy=FreeHot)
