@@ -16,7 +16,7 @@
 <br/>`HX` is the only IDE which open a new file with the default file type as markdown. Also it provides the super powerful support for md. 
 <br/>`HX` provides variety of functions for md. please **be sure to click** [Menu-Help-Markdown Syntax Example] refer to [manual] -> [help] -> [markdown help] to learn md and HX quickly.
 6. **Easy on the eyes**
-<br/>The UI of HX is simple and clear. A soft-green default theme optimized for long work. [Details](/Tutorial/Other/health)
+<br/>The UI of HX is simple and clear. A default soft-green theme optimized for long work. [Details](/Tutorial/Other/health)
 7. **Powerfull Intellisense**
 <br/>`HX` is the unique software company in China with its own Independent IDE syntax analysis engine. It provides accurate code hints and [Go to definition](/Tutorial/UserGuide/goto)(Alt+Left mouse)
 8. **Efficient Text Editing**
