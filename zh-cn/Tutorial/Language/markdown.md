@@ -36,7 +36,7 @@ HBuilderX对md提供了强大支持，是有史以来最强大、最简洁、最
 
 - 表格：支持`Ctrl+K`可以自动整理表格格式
 
-<img src="/static/snapshots/tutorial/markdown_table_format.gif" style="border: 1px solid #eee;"/>
+<img src="/static/snapshots/tutorial/markdown/markdown_table_format.gif" style="border: 1px solid #eee;"/>
 
 ## 直观的文档结构图
 
@@ -44,7 +44,7 @@ HBuilderX Markdown文件，也支持显示文档结构图（大纲视图）。
 
 windows快捷键: `Alt+w`; MacOSX快捷键：`Ctrl+w`
 
-<img src="/static/snapshots/tutorial/markdown_outline.jpg" style="zoom: 45%;border-radius: 20px;border: 1px solid #eee;"/>
+<img src="/static/snapshots/tutorial/markdown/markdown_outline.jpg" style="zoom: 45%;border-radius: 20px;border: 1px solid #eee;"/>
 
 ## 实用的任务列表
 
