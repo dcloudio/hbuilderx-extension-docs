@@ -29,7 +29,7 @@
 #### Scalability
 `HX` supports java and nodejs plugins, compatible with vscode plugins and code blocks.<br/>
 `HX` can easily use [externalCommands](/Tutorial/UserGuide/externalCommands) to call commands and set hotkeys.<br/>
-Switch the hotkeys in Tool->Keymaps[shortcut keys](/Tutorial/keybindings) according to your preferences.(for example: Vscode, sublime)
+Switch the hotkeys in Tool->Keymaps [shortcut keys](/Tutorial/keybindings) according to your preferences.(for example: Vscode, sublime)
 
 #### Plugins Market
 
