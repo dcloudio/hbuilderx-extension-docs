@@ -38,7 +38,7 @@ Download HBuilderX, click the menu help-markdown syntax description, it will ope
 
 Table: Support `Ctrl+K` to automatically organize the table format
 
-<img src="/static/snapshots/tutorial/markdown_table_format.gif" style="border: 1px solid #eee;"/>
+<img src="/static/snapshots/tutorial/markdown/markdown_table_format.gif" style="border: 1px solid #eee;"/>
 
 ## Intuitive document outline
 
@@ -46,7 +46,7 @@ HBuilderX Markdown file also supports displaying document outline view.
 
 Windows shortcut key: `Alt+w`; MacOSX shortcut key: `Ctrl+w`
 
-<img src="/static/snapshots/tutorial/markdown_outline.jpg" style="zoom: 45%;border-radius: 20px;border: 1px solid #eee;"/>
+<img src="/static/snapshots/tutorial/markdown/markdown_outline_en.png" style="zoom: 45%;border-radius: 20px;border: 1px solid #eee;"/>
 
 ## Useful task list
 
