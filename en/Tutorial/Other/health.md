@@ -1,67 +1,65 @@
-# How HBuilderX look after programmer’s health mentally and physically
+# How HBuilderX protect the programmer's physical and mental health
 
-Everybody knows ergonomics. However, do you know there is a strong relationship between and IDE and programmer?
+Keyboards and chair have ergonomics solution. But why should the IDE have this concept?
 
-The answer is yes for sure. There is a strong relationship between health of your body parts, for example, eyes and hands, and so on, and IDE.
+The answer is Yes. A good development tool is important to your eyes and hands.
 
-DCloud is an ingenious and sentimental company. A company contributes a lot of energy and effort and money on researching the relationship between IDE and human health mentally and physically.
-
-
-### Easy on the eyes: user friendly theme
-
-A lot of people think “black” is a colour which easy on your eyes. Even we were using the “black” theme for a while. However, the consequences are not great. Thus, we start put a lot of effort on research which theme is easy on user’s eyes.
-
-By referencing the E-book industry, the background colour shall NOT be a “black”, particularly if you stare at the monitor or mobile screen for a long period of time. It shall be a yellowish colour. Eventually the reader is giving up the E-book provider, if it uses “black” as the background colour for E-books.
-
-Why is the yellowish background colour E-book widely implemented in the industry? Is it because it provides reader a wrong impression with reading a real book? Or it is a scientific truth. We need to study carefully.
-
-There is a say that the black background emits less light in LCD, so it is easy on the eyes. In fact, the background colour of lot of IDEs is not pure black due to the pure black as background colour is ugly. The particles on the LCD panel are still glowing. Although the amount of light in the dark area of the LCD panel is low, in terms of the tension of the human eye muscles, the damage of high contrast is greater than the amount of light emitted. On the sunny grassland, although the amount of light is very large, the human eye is very comfortable. But in a black room, the brightness of the mobile phone screen is adjusted to the lowest, and the amount of light is much lower than the former, but it is still dazzling. This is caused by the effect of contrast.
+Dcloud spent a lot of time and cost to design an excellent IDE about the physical and mental health of developers.
 
 
-In HBuilderX, the default theme is light green. It is characterized by softness, low contrast, clearness under strong light, and a strong sense of green. A programmer writes a code for a day or two using light green theme is much more comfortable than using a background that is too bright or too dark.
+### Easy on the eyes: soft-green theme
 
-The light green is a decision based on a rigorous design process. It involves a lot of knowledge of colour psychology and colour physiology. We have undergone rigorous medical tests in Beijing Guo’ao psychology hospital. Human trial on programmers who write the code using different colour themes. Then their brain fatigue level is recorded in the hospital. Finally, an adjusted light green colour scheme is determined. The experimental process is as follows:
+Many people mistakenly think that black themes are the most eye-protective. But we did an in-depth research after realizing this was a mistake.
 
-> After a full rest, the two programmers participating in the experiment used programming tools with green and black themes to code for half an hour. And their brain wave data changes are monitored. 
+No reader likes to watch the black screen for a long time. You will find that the background color of a good e-book product is not "black", usually it's yellowish colour. 
+
+Why yellowish color is popular in the e-book industry? Does it give the reader the wrong impression of reading a real book? There must be scientific truth here。
+
+There is a misunderstanding: the black background, less light under the LCD, can protect the eyes. Because the pure black background is feeling bad, in fact, the background color of each development tool is not pure black, and the particles on the LCD panel are still glowing. Although the amount of light in the dark area of the LCD panel is low, in terms of the tension of the human eye muscles, the damage of high contrast is greater than the amount of light. On the sunny grassland, although the amount of light is great, human eyes are very comfortable. But in the dark room, the brightness of the mobile phone screen is adjusted to the lowest, the amount of light is much lower than the former, but it is still dazzling. This is caused by the effect of contrast.
+
+In HBuilderX, the default theme is soft green. It is characterized by softness, low contrast, clearness under strong light, and a strong sense of green. Under this theme, developers will not be very tired even if they write code for a day.
+
+Through many rigorous medical tests in Beijing Guo'ao Psychological Hospital, plus a lot of research of color psychology and color physiology. We got the best color “soft-green”. We arranged for engineers to write codes under different color themes and tested their brain fatigue in the hospital, and finally adjusted the green and soft color contrast. The experiment process is as follows:
+
+
+> After a full rest, the two programmers participating in the experiment used programming tools with green and black themes to code for half an hour. And monitored brain wave data changes. 
 > Through the analysis of 170,000 pieces of data generated by the experimenter’s brain waves, using the fatigue value, tension and concentration of attention values printed by the hospital equipment, the conclusion of the experiment is as follows:
-> The fatigue level of the two programmers is both increase after half an hour of coding. However, the fatigue level of programmers working using the light green theme increases relatively slowly. The degree of tension is lower, and the two programmers are more focused during the same period of time.
-> The increase in fatigue value after using the black theme coding is as high as 700% of the increase in using the light green theme! 
+> The fatigue level of the two programmers is both increase after half an hour of coding. However, programmer working under the soft-green theme have a relatively slow rise in fatigue value, lower tension, and more concentration.
+> The increase in fatigue value of programmer who use the black theme after coding is up to 700% of the increase in the use of soft-green theme. 
 > This kind of experiment has been carried out many times with changing the scenarios, and the conclusion is always the same.
 
 ![](http://dcloud.io/images/pic-2.jpg)
 
 The images above: programmers in hospital experiment
 
-Firstly, let’s look at the issue for black theme from the perspective of colour and chromatology:
+In terms of color, there are color physiology and color psychology. Let’s look at the issue for black theme from the perspective of color physiology:
 
 1. `Vertigo`
 When a person's eyes look at dark things for a long time, the brain will secrete hormones to force the eyes to enhance vision. 
 For example, we can see clearly when we stay in a dark room for a while, but we get dizzy when we return to a sunny area. This is called scotopia. 
-Similarly, if you look at the black background code area for a long time, you will be dizzy when you switch to other software interfaces or look out of the window.
+Similarly, if you look at the black background code area for a long time, you will be dizzy when you switch to other screen interfaces or look out of the window.
 
-2. `Congenital night blindness`
-The eyeball secretes rhodopsin, which consumes vitamin A. And it can cause night blindness. Although it is not myopia, a person’s night vision is lower than that of ordinary people.
+2. `Night blindness`
+The eyeball secretes rhodopsin in a long-term dark environment and consumes vitamin A, which can cause night blindness. Although it is not myopia, the night vision is lower than that of ordinary people.
 Refer to[Baidu rhodopsin](https://baike.baidu.com/item/%E8%A7%86%E7%B4%AB%E7%BA%A2%E8%B4%A8)
 
 3. `High contrast`
 Black backgrounds often correspond to high-contrast foreground content. However, the high-contrast environment is not suitable for long-term viewing. 
-In fact, it's like you can't eat a lot of sugar or spicy food, but you can drink a lot of water. 
-A mild image may not be able to maintain sufficient clarity under strong light or poor eyesight. We repeatedly adjust the parameters to get the current results – light green.
+Just like you can’t eat more sugar or spicy food, but you can drink more water
+A mild image may not be able to maintain sufficient clarity under strong light or poor eyesight. We repeatedly adjust the parameters to get the current results – soft-green.
 
-After many researches, the Yellow and green is the favorited colours for human eyes.
-The wavelengths of yellow and green are most comfortable feel which human eyes like the most.
-Light green background is warm yellow. User interfaces add a bit green. The code is colourful.  Remember that all colour RGB in which G is the value for green.
+After many researches, the yellow and green is the favorited colours for human eyes.
+The wavelengths of yellow and green are most comfortable which human eyes like.
+The base color of soft green is warm yellow, and some green is added for the best color balance.
 
 In addition, from the perspective of color psychology, warm colors are more comfortable than dark colors. 
-The human eye sees the scenery, the brain will produce associations, and then affect the mood.
-When you see green, you are thinking of grassland and forest. Then you feel much better naturally.
-But looking at dark or irritating colors for a long time, your mood will be depressed.
-For a programmer, if you stare at the screen eight hours a day, it is important to feel comfortable.
+Color affects mood. The green of grasslands and forests is more comfortable than looking at dark or irritating colors for a long time.
+Programmers should pay more attention to this problem. Looking at the screen for 8 hours a day is not a trivial matter.
 
-For millions of developers, we must work hard to study how to protect their health. 
-After many theories and experiments, we finally figure out the light green theme.
+We put the health of developers first. After a long period of research, we finally figured out the soft-green theme.
 
-The design principle of some products is shining first. HX is not. It is health the first. Maybe the HX is not the most beautiful IDE, however, indeed it must be the healthiest IDE.
+Some IDEs give high priority to UI, but HX put health first.
+The design principle of some products is shining first. HX is not. It is health the first. Maybe HX is not the most beautiful IDE, but it must be the healthiest IDE.
 
 ### Healthy hands：Drag-free selection to protect finger joints and nerves
 
