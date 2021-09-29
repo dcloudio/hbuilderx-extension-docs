@@ -17,9 +17,9 @@ Why yellowish color is popular in the e-book industry? Does it give the reader t
 
 There is a misunderstanding: the black background, less light under the LCD, can protect the eyes. Because the pure black background is feeling bad, in fact, the background color of each development tool is not pure black, and the particles on the LCD panel are still glowing. Although the amount of light in the dark area of the LCD panel is low, in terms of the tension of the human eye muscles, the damage of high contrast is greater than the amount of light. On the sunny grassland, although the amount of light is great, human eyes are very comfortable. But in the dark room, the brightness of the mobile phone screen is adjusted to the lowest, the amount of light is much lower than the former, but it is still dazzling. This is caused by the effect of contrast.
 
-In HBuilderX, the default theme is soft green. It is characterized by softness, low contrast, clearness under strong light, and a strong sense of green. Under this theme, developers will not be very tired even if they write code for a day.
+In HBuilderX, the default theme is soft-green. It is characterized by softness, low contrast, clearness under strong light, and a strong sense of green. Under this theme, developers will not be very tired even if they write code for a day.
 
-Through many rigorous medical tests in Beijing Guo'ao Psychological Hospital, plus a lot of research of color psychology and color physiology. We got the best color “soft-green”. We arranged for engineers to write codes under different color themes and tested their brain fatigue in the hospital, and finally adjusted the green and soft color contrast. The experiment process is as follows:
+Through many rigorous medical tests in Beijing Guo'ao Psychological Hospital, plus a lot of research of color psychology and color physiology. We got the best color “soft-green”. We arranged for engineers to write codes under different color themes and tested their brain fatigue, and then adjusted the green and soft color contrast. The experiment process is as follows:
 
 
 > After a full rest, the two programmers participating in the experiment used programming tools with green and black themes to code for half an hour. And monitored brain wave data changes. 
@@ -45,8 +45,8 @@ Refer to[Baidu rhodopsin](https://baike.baidu.com/item/%E8%A7%86%E7%B4%AB%E7%BA%
 
 3. `High contrast`
 Black backgrounds often correspond to high-contrast foreground content. However, the high-contrast environment is not suitable for long-term viewing. 
-Just like you can’t eat more sugar or spicy food, but you can drink more water
-A mild image may not be able to maintain sufficient clarity under strong light or poor eyesight. We repeatedly adjust the parameters to get the current results – soft-green.
+Just like you can’t eat more sugar or spicy food, but you can drink more water.
+A mild image may not be able to maintain sufficient clarity under strong light or poor eyesight. We repeatedly adjust the parameters to get the current result – soft-green.
 
 After many researches, the yellow and green is the favorited colours for human eyes.
 The wavelengths of yellow and green are most comfortable which human eyes like.
@@ -58,8 +58,7 @@ Programmers should pay more attention to this problem. Looking at the screen for
 
 We put the health of developers first. After a long period of research, we finally figured out the soft-green theme.
 
-Some IDEs give high priority to UI, but HX put health first.
-The design principle of some products is shining first. HX is not. It is health the first. Maybe HX is not the most beautiful IDE, but it must be the healthiest IDE.
+Some IDEs give high priority to UI design, but HX put health first. Maybe HX is not the most beautiful IDE, but it must be the healthiest IDE.
 
 ### Drag-free selection
 
@@ -69,7 +68,7 @@ The drag selection is like this: the index finger presses the left mouse button.
 
 It’s more painful if you use the touchpad.
 
-Occasionally drag is not a big deal. However, after eight hours programming day in day out, the Repetitive Strain Injuries is caused by the drag selection.
+Occasionally drag is not a big deal. However, after eight hours of programming day after day, the Repetitive Strain Injuries is caused by the drag selection.
 
 In order to avoid drag selection, HX provides shortcuts setup, smart double-click, hotkeys without selection etc.
 
@@ -77,8 +76,8 @@ In order to avoid drag selection, HX provides shortcuts setup, smart double-clic
 `Ctrl+=`is from the cursor point to expand the selection. `Ctrl+E`is select the current word or select the same words. Please refer to manual – [Select] for more shortcuts.
 
 - Smart auto selection on double-click
-Double-click is used in several scenarios. For example: at the beginning of the line, end of line, function block, equal sign, comma, hyphen, brackets, quotation mark, first character at the beginning of the line, <!-- -->, and other special syntax symbols to quickly select the corresponding content. 
-Mastering this set of intelligent double-click technics can greatly improve operation efficiency and reduce hand strain. 
+Use double-click to quickly select the corresponding content in a variety of scenarios. For example: at the beginning of the line, end of line, function block, equal sign, comma, hyphen, brackets, quotation mark, first character at the beginning of the line and so on. 
+Understanding this set of intelligent double-click technology can greatly improve operation efficiency and reduce hand fatigue.
 See menu -> [select].
 
 - hotkeys without selection
@@ -86,12 +85,12 @@ See menu -> [select].
 `Ctrl+X`: Cut whole line.
 `Ctrl+Insert`: paste the selection. 
 `Ctrl+Shift+X`: Switchover selections.
-`Ctrl+D`: Delete the entire line.
+`Ctrl+D`: Delete the whole line.
 `Ctrl+up/down`: Move the line. 
 `Shift+Del`: Delete string from the cursor to the end of the line. 
 Note: No any code is selected for all the above operations.
 
-Please refer to manual - Edit for more functionalities.  
+Please refer to manual - Edit for more details.  
 
 As a company that provides services to developers, especially when we are also developers, what we value most is efficiency and health.
 
