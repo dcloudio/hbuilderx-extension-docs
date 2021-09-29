@@ -1,6 +1,6 @@
 `HBuilderX`,H is the first letter of HTML, Builder is the builder, X is the next version of HBuilder. We are also referred to as `HX`.
 
-`HBuilderX` is lightweight and powerful IDE.
+`HBuilderX` is lightweight but powerful IDE.
 
 #### Features of HX
 1. **lightweight**
