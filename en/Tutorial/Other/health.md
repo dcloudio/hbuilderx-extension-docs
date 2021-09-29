@@ -61,34 +61,38 @@ We put the health of developers first. After a long period of research, we final
 Some IDEs give high priority to UI, but HX put health first.
 The design principle of some products is shining first. HX is not. It is health the first. Maybe HX is not the most beautiful IDE, but it must be the healthiest IDE.
 
-### Healthy hands：Drag-free selection to protect finger joints and nerves
+### Drag-free selection
 
 Repetitive Strain Injuries (RSI) is very common for a programmer. Do you know what is the most severe strain during mouse operation? The answer is drag.
 
-The drag selection process is like this: the index finger presses the left mouse button. The nerves remain tense. Then you move the wrist to drive the mouse to move. After select the content you want, and you can release the index finger. During this process, the index finger keeps pressing down. The muscles and nerves in your hands are always in a tight state.
+The drag selection is like this: the index finger presses the left mouse button. The nerves remain tense. Then you move the wrist to drive the mouse to move. After select the content you want, and you can release the index finger. During this process, the index finger keeps pressing down. The muscles and nerves in your hands are always in a tight state.
 
 It’s more painful if you use the touchpad.
 
 Occasionally drag is not a big deal. However, after eight hours programming day in day out, the Repetitive Strain Injuries is caused by the drag selection.
 
-In order to avoid drag selection, HX give you smart hotkeys, smart auto selection on double click, smart hotkeys that work even without selection, and a sort of capabilities.
+In order to avoid drag selection, HX provides shortcuts setup, smart double-click, hotkeys without selection etc.
 
-- smart hotkeys
-`Ctrl+=`is from the cursor point to expend the selection. `Ctrl+E`is select the current word or select the same words. There are lot more smart hotkeys selection. Please refer to manual – Selection
+- shortcuts
+`Ctrl+=`is from the cursor point to expand the selection. `Ctrl+E`is select the current word or select the same words. Please refer to manual – [Select] for more shortcuts.
 
-- smart auto selection on double click
-give you the different results on double-click in several scenarios. User can double-click at the beginning of the line, end of line, function block, equal sign, comma, hyphen, brackets, quotation mark, first character at the beginning of the line, <!-- -->, and other special syntax symbols to quickly select the corresponding content. 
+- Smart auto selection on double-click
+Double-click is used in several scenarios. For example: at the beginning of the line, end of line, function block, equal sign, comma, hyphen, brackets, quotation mark, first character at the beginning of the line, <!-- -->, and other special syntax symbols to quickly select the corresponding content. 
 Mastering this set of intelligent double-click technics can greatly improve operation efficiency and reduce hand strain. 
-Especially smart double-click the list, see menu selection. It is strongly recommended to study and master the smart double-click carefully.
+See menu -> [select].
 
-- smart hotkeys that work even without selection
-If you select nothing, Ctrl+C is copy,Ctrl+X is cut. You also can do the same operation on the entire line cursor located.
-`Ctrl+Insert`is paste the selection. `Ctrl+Shift+X`is Switchover selections.There are more capabilities HX can provided to user. User can operate on the cursor line as well.
-`Ctrl+D` is delete the entire line.`Ctrl+up/down`is move the line. `Shift+Del`delete the line. All the operations above is without selection.
+- hotkeys without selection
+`Ctrl+C`: Copy whole line
+`Ctrl+X`: Cut whole line.
+`Ctrl+Insert`: paste the selection. 
+`Ctrl+Shift+X`: Switchover selections.
+`Ctrl+D`: Delete the entire line.
+`Ctrl+up/down`: Move the line. 
+`Shift+Del`: Delete string from the cursor to the end of the line. 
+Note: No any code is selected for all the above operations.
 
 Please refer to manual - Edit for more functionalities.  
 
+As a company that provides services to developers, especially when we are also developers, what we value most is efficiency and health.
 
-As a company providing the service to programmer, especially we are the developer as well, efficiency and healthy is a key to us.
-
-It is our wish that all developers are working more efficiently and healthier by using HX.
+We hope that through our efforts, the development efficiency of millions of developers will be more efficient and healthy.
