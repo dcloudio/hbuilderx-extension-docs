@@ -7,7 +7,7 @@ In HBuilderX, the vue syntax library will be automatically mounted when you open
 HBuilderX 3.2.5 or later (including 3.2.5) provides vue3 support. Refer to [vue3 support](/Tutorial/Language/vue-next.md) for details.
 
 ## Syntax highlight
-In addition to the common syntax highlighting support of vue, HBuilderX also supports various expressions and syntax, as well as the highlighting of other languages supported by scripts and styles such as less, scss, stylus, and typescript, without installing any plug-ins.
+In addition to the common syntax highlighting support of vue, HBuilderX also supports various expressions and syntax, as well as the highlighting of other languages supported by scripts and styles such as less, scss, stylus, and typescript, without installing any plugins.
 
 
 ## Code hint
@@ -15,11 +15,11 @@ In addition to the common syntax highlighting support of vue, HBuilderX also sup
 ### API hint and help
 HbuilderX provides intelligent code completion based on language semantics and source code analysis. HbuilderX knows possible completions, and IntelliSense suggestions will pop up when you type codes.
 
-In addition to the perfect prompt, there are clear instructions on the right side of the code assistant. The api is explained very clearly, and the link to the official website is attached. Click the link to jump directly to the specified page of the vue official website.
+In addition to the perfect prompt, there are clear instructions on the right side of the code assistant. The api is explained clearly, and the link to the official website is attached. Click the link to jump to the specified page of the vue official website.
  
 <img src="/static/snapshots/vue/1.png" style="zoom: 80%;border: 1px solid #eee;" />
 
-### Identify 'this' object accurately
+### Identify 'this' object
 
 <img src="/static/snapshots/vue/this.png" style="zoom: 70%;border: 1px solid #eee;" />
 
@@ -33,9 +33,9 @@ In addition to the perfect prompt, there are clear instructions on the right sid
 
 <img src="/static/snapshots/vue/hint_3.png" style="zoom: 80%;border: 1px solid #eee;" />
 
-### Custom components hint
+### Customized components hint
 
-Based on powerful component syntax prompts, HBuilderX can directly prompt component tags and attributes.
+Based on powerful component syntax analysis, HBuilderX can directly prompt component tags and attributes.
 
 <img src="/static/snapshots/vue/hint_4.png" style="zoom: 50%;border: 1px solid #eee;" />
 
@@ -49,11 +49,11 @@ Vue doc is a powerful tool for vue component developers. By writing the jsdoc cl
 
 Some vue component libraries have been produced according to the `vetur` specification, such as `Element UI`, `Onsen UI`, `Bootstrap Vue` and other frameworks.
 
-These frameworks are installed in npm or installed in the new HBuilderX template, which can directly implement code prompts.
+These frameworks are installed in npm or installed in the new HBuilderX template, which can implement code prompts.
 
 <img src="/static/snapshots/vue/hint_6.png" style="zoom: 50%;border: 1px solid #eee;" />
 
-### Built-in snippets / setup owned snippets
+### Built-in snippets / Setup owned snippets
 
 Type `v`, you can see a large number of vue snippets in hints.
 
@@ -96,7 +96,7 @@ Press `alt+mouse click` to trace the source of various `variables`, `style`, and
 
 ## Refactoring or select same syntax word
 
-If you want to know where a variable is referenced, or select all variables to rename, Right click on the word [Select all occurrences (ctrl+shift+e)]
+If you want to know where a variable is referenced, or select all variables to rename. Right click on the word [Select all occurrences (ctrl+shift+e)]
 
 Example below: There are many "list" in the script, but only exact variables are selected:
 
@@ -105,9 +105,9 @@ Example below: There are many "list" in the script, but only exact variables are
 
 ## Eslint check
 
-Firstly, please install the plug-in `eslint-plugin-vue`. Then you have 2 ways to check syntax, Click [tools - Valicate documents], or save the vue document as it will be verified automatically when saving.
+Firstly, please install the plugin `eslint-plugin-vue`. Then there are 2 ways to check syntax, click [tools - Valicate documents], or save the vue document as it will be verified automatically when saving.
 
-HbuilderX provides shortcut settings and whether to automatically trigger when saving. Location is【Perferences - plugins - eslint-plugin-vue】.
+HbuilderX provides shortcuts settings and whether to automatically trigger when saving. Location is【Perferences - plugins - eslint-plugin-vue】.
 
 <img src="/static/snapshots/vue/check.gif" style="zoom: 60%;border: 1px solid #eee;" />
 
