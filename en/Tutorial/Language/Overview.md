@@ -1,26 +1,26 @@
-> HBuilderX's code prompt system is very large and supports multiple syntax prompt models.
+> HBuilderX's code provide command prompt for deverse languages and intellisense.
 
-## Built-in grammar library
-- The web project has built-in `html`, `js`, `css` syntax library
-- App project has a built-in `plus` extended syntax library
-- The uni-app project has a built-in `uni-app` syntax library
-- Projects such as WeChat applets and fast apps also have corresponding built-in grammar libraries
+## Built-in grammar engine
+- Web： `html`, `js`, `css` grammar library
+- App： `plus` extended grammar library
+- Uni-app: `uni-app` grammar library
+- WeChat applets and fast apps: corresponding built-in grammer libraries
 
-## js Framework grammar library（sdocml Format）
+## js grammar engine（sdocml Format）
 
-In HBuilderX, in files that can input js, such as `js`, `html`. (not including `vue`, `ts`), there is a "grammar prompt library" in the bottom status bar, and you can load the built-in framework grammar library.
+In HBuilderX, in JS file，for example js, HTML, select vue or ts in the "customer language association" in the lower right corner.
 
 <img src="/static/snapshots/tutorial/lang_1.png" />
 
-Among them, node.js also exists as a framework grammar.
+node.js is also one of the selections.
 
-After checking the corresponding js framework grammar, the js area will prompt the corresponding grammar (the initial check will take a few seconds before it can be used)
+After select js language, the js syntax hints can be seen for js code. (Initially, wait for few seconds before it can be used after selection.)
 
-The selection is project-level. Once checked, the places where js can be written under the entire project will be loaded.
+The selection is implemented for entire file once selected
 
-If the file is opened separately and not in the project manager on the left side of HBuilderX, this function cannot be used.
+If user open a file which is not in in the Project explorer section, this function is disabled.
 
-If HBuilderX can detect that there are commonly used frameworks such as jquery or mui under the project, it will also automatically mount the syntax prompt library for this project. But sometimes the detection may be inaccurate and the developer needs to introduce it manually.
+If HBuilderX can detect jquery or mui in the project, it will also automatically load the syntax prompt library for this project. But sometimes the detection may be inaccurate and it may need to be loaded manually.
 
 ## d.ts
 
@@ -30,23 +30,23 @@ If there is a `d.ts` file of a certain framework under the project, HBuilderX ca
 
 ## jsdoc+
 
-jsdoc declares methods, parameters, and attributes in the form of comments. HBuilderX provides extended `jsdoc+`, which can realize powerful syntax prompts.
+HBuilderX provides extended `jsdoc+` annotations, which can provide powerful syntax prompts.
 
 <img src="/static/snapshots/tutorial/lang_2.png" style="zoom:50%;" />
 
 ## vue doc
 
-Vue component developers, if they want to provide component users with a better way to use them, they should write `vue doc` for the component.
+For vue developers, vue doc provide assistant how to use it. `vue doc` is needed.
 
-Vue doc is a way similar to jsdoc, by describing component methods, parameters, and attributes in comments.
+Vue doc is similar to jsdoc, by describing component methods, parameters, and attributes in annotations.
 
 Details [vue doc](https://hx.dcloud.net.cn/Tutorial/Language/vuedoc)
 
-## Compatible with the vue specification in the vscode vetur plugin
+## Compatible with the vscode vetur plugin
 
-Some vue component libraries have been produced according to the vetur specification, such as `Element UI`, `Onsen UI`, `Bootstrap Vue` and other frameworks.
+Some vue component libraries have been produced according to the vetur specification, such as Element UI, Onsen UI, Bootstrap Vue and other frameworks.
 
-The npm installation of these frameworks will come with a json syntax library under node_module, or the element ui template installation will also include the library in the HBuilderX new template. With this grammar library, you can directly code hints.
+These frameworks are installed in npm or installed in the new HBuilderX template, which can directly implement code prompts.
 
 <img src="/static/snapshots/tutorial/lang_3.png" style="zoom:50%;"/>
 
