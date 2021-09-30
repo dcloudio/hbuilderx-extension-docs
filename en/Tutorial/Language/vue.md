@@ -1,36 +1,25 @@
 # Vue
+In HBuilderX, the vue syntax library will be automatically mounted when you open a vue file. When adding vue code to the html file, you can click on the "Javascript Libraries" in the bottom right corner and select the vue syntax library. We recommend that developers use the vue single-file method to open vue files directly.
 
-In HBuilderX, when you open a vue file, the vue syntax library will be automatically loaded.
-
-If the vue framework is part of HTML file, you need to select vue in the "customer language association" in the lower right corner.
-
-We recommend that developers use the vue single file components. It will automatically load the vue syntex.
-
-> Notes: If a vue file is not in the opened project in the Project explorer section. Please create a new project, then open the vue file, the vue syntax library will be automatically loaded. 
+> Notes: If a vue file does not belong to any project. Please create a new project from the project explorer on the left, then open the vue file, the vue syntax library will be loaded automatically.
 
 ## Vue3 Support
-The HBuilderX Version 3.2.5 or older (included 3.2.5) provide the optimized support for vue3. Refer to [vue3 support](/Tutorial/Language/vue-next.md) for details.
+HBuilderX 3.2.5 or later (including 3.2.5) provides vue3 support. Refer to [vue3 support](/Tutorial/Language/vue-next.md) for details.
 
-## Syntax highlighting
-
-In addition to vue's common syntax highlighting support, HBuilderX also supports various syntax highlightings: less、scss、stylus、typescript and so on. No need plugins.
+## Syntax highlight
+In addition to the common syntax highlighting support of vue, HBuilderX also supports various expressions and syntax, as well as the highlighting of other languages supported by scripts and styles such as less, scss, stylus, and typescript, without installing any plug-ins.
 
 
 ## Code hint
 
 ### API hint and help
+HbuilderX provides intelligent code completion based on language semantics and source code analysis. HbuilderX knows possible completions, and IntelliSense suggestions will pop up when you type codes.
 
-Hint is more complete and accurate. IDE can't list all guessed words in hint. Hint shall give you the related and accurate words. 
-
-Better hint means code faster and more accurate.
-
-In addition to the perfect hints, a clear help description is on the right side of the code assistant. It clearly explaining the api, and also give a link of the vue official website. Direct you to the specified page of the vue official website.
+In addition to the perfect prompt, there are clear instructions on the right side of the code assistant. The api is explained very clearly, and the link to the official website is attached. Click the link to jump directly to the specified page of the vue official website.
  
-Great reference.
-
 <img src="/static/snapshots/vue/1.png" style="zoom: 80%;border: 1px solid #eee;" />
 
-### this Accurate recognition
+### Identify 'this' object accurately
 
 <img src="/static/snapshots/vue/this.png" style="zoom: 70%;border: 1px solid #eee;" />
 
@@ -40,19 +29,19 @@ Great reference.
 
 <img src="/static/snapshots/vue/hint_2.png" style="zoom: 80%;border: 1px solid #eee;" />
 
-### Function/properties hint
+### VUE methods hint
 
 <img src="/static/snapshots/vue/hint_3.png" style="zoom: 80%;border: 1px solid #eee;" />
 
-### Customer defined function hint
+### Custom components hint
 
-HBuilderX customer defined function hints is more powerful. The components of the label, attributes can be directly prompted out.
+Based on powerful component syntax prompts, HBuilderX can directly prompt component tags and attributes.
 
 <img src="/static/snapshots/vue/hint_4.png" style="zoom: 50%;border: 1px solid #eee;" />
 
 ### doc
 
-HBuilderX supports powerful vue doc, which is a powerful tool for vue component developers. Through the writing of jsdoc-like, your components can realize comprehensive code hints and help.
+Vue doc is a powerful tool for vue component developers. By writing the jsdoc class, your component can implement comprehensive code hints and help.
 
 <img src="/static/snapshots/vue/hint_5.png" style="zoom: 50%;border: 1px solid #eee;" />
 
@@ -64,17 +53,17 @@ These frameworks are installed in npm or installed in the new HBuilderX template
 
 <img src="/static/snapshots/vue/hint_6.png" style="zoom: 50%;border: 1px solid #eee;" />
 
-### Common code blocks / customized code block
+### Built-in snippets / setup owned snippets
 
-Type `v`, you can see a large number of vue code blocks in hints.
+Type `v`, you can see a large number of vue snippets in hints.
 
-You can also add more customized code blocks in menu [`Tools` - `Code Block Settings` -`Vue Code Block`].
+You can also add more customized snippets in menu [`Tools` - `Snippets Settings` -`Vue Snippet`].
 
 <img src="/static/snapshots/vue/hint_7.gif" style="zoom: 50%;border: 1px solid #eee;" />
 
 ### vue router
 
-All associated type and belong to in hints
+Support $router and $route objects.
 
 <img src="/static/snapshots/vue/vue_router_1.png" style="zoom: 80%;border: 1px solid #eee;" />
 
@@ -82,7 +71,7 @@ All associated type and belong to in hints
 
 ### vuex
 
-hints on `State`, `Mutation`, `action`, etc. Support turn to a function.
+Support Objects:`State`, `Mutation`, `action` and go to definition.
 
 <img src="/static/snapshots/vue/vuex_1.png" style="zoom: 80%;border: 1px solid #eee;" />
 
@@ -91,57 +80,57 @@ hints on `State`, `Mutation`, `action`, etc. Support turn to a function.
 
 ### Other
 
-Also support `emmet`, `d.ts` as other development tools.
+Also support `emmet`, `d.ts`.
 
 ## Help Docs
 
-Place the cursor on the `api` and press `F1` to open the corresponding help file directly in Web Explorer. Side-by-side you can changing the code while looking at the document.
+Place the cursor on the `api` and press `F1` to open the corresponding help file directly in Web Explorer.You can change the code side by side while viewing the documentation.
 
 <img src="/static/snapshots/vue/help_doc.gif" style="zoom: 60%;border: 1px solid #eee;" />
 
 ## Go to definition
 
-Press `alt+mouse click` to trace the source of references to `variables`, `style`, and `methods`, and jump back and forth among `template`, `script`, and `style`.
-
-Press `ctrl+alt+click`, you can also open the definition in a column next to it, which is convenient for side-by-side viewing.
+Press `alt+mouse click` to trace the source of various `variables`, `style`, and `methods`, and switch to related files between `templates`, `scripts` and `styles`. Very powerful and flexible.
 
 <img src="/static/snapshots/vue/goto.gif" style="zoom: 50%;border: 1px solid #eee;" />
 
-## Reconstruct or search the same word
+## Refactoring or select same syntax word
 
-If you want to see where a variable is referenced, or select all variables to rename, Right click on the word [Select all occurrences (ctrl+shift+e)]
+If you want to know where a variable is referenced, or select all variables to rename, Right click on the word [Select all occurrences (ctrl+shift+e)]
 
-Example below: There are many "list" in the script, but only those exact variables are selected:
+Example below: There are many "list" in the script, but only exact variables are selected:
 
 <img src="/static/snapshots/vue/select.png" style="zoom: 40%;border: 1px solid #eee;" />
 
 
-## Syntax check
+## Eslint check
 
-Firstly install the plug-in `eslint-plugin-vue`. Click [tools - Valicate documents], then vue document is automatically verify when saved.
+Firstly, please install the plug-in `eslint-plugin-vue`. Then you have 2 ways to check syntax, Click [tools - Valicate documents], or save the vue document as it will be verified automatically when saving.
 
-Plug-in management settings, such as configuring shortcut keys, whether to automatically trigger when saving, are in the plug-in configuration in 【settings - plugin configuration - eslint-plugin-vue】
+HbuilderX provides shortcut settings and whether to automatically trigger when saving. Location is【Perferences - plugins - eslint-plugin-vue】.
 
 <img src="/static/snapshots/vue/check.gif" style="zoom: 60%;border: 1px solid #eee;" />
 
 ## Outline
 
-Select View -show outline. Or right-click anywhere in script, select tiggle outline.
+Select View -show outline. Or right-click anywhere in script, select toggle outline.
  
-Select in outline can bring cursor to the corresponding section of the script.
+Select any tag in outline will bring cursor to the corresponding section of the script.
 
 <img src="/static/snapshots/vue/outline_en.jpg" style="zoom: 40%;border: 1px solid #eee;border-radius: 20px;" />
 
 ## Use vue without command line
 
-If you don't like command line environment, this will not affect you drive into the vue programming.
+If you don't like node development environment, this will not affect you drive into the vue programming.
 
-HBuilderX has built-in plug-ins and node environment.
+HBuilderX has built-in plugins and node environment.
 
-You can create a new vue project without cli.
+You can create a new vue project through the new project wizard without cli.
 
 <img src="/static/snapshots/vue/project_create_en.png" style="zoom: 40%;border: 1px solid #eee;" />
 
 Run - Terminal - npm run build/npm run serve/etc.
 
 <img src="/static/snapshots/vue/project_create_ne.jpg" style="zoom: 45%;border: 1px solid #eee;border-radius: 20px;" />
+
+You don’t need to install node modules, you can import plugins through uni-app market (only for uni-app), more details [uni-app markets](https://ext.dcloud.net.cn/)
