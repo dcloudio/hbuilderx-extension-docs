@@ -2,37 +2,37 @@
 
 HBuilderX provides powerful support for md and is the most powerful, concise and efficient markdown writing tool ever.
 
-Download HBuilderX, click the menu help-markdown syntax description, it will open an md file, which demonstrates the enhancement of markdown by HBuilderX in detail.
+Download HBuilderX. click Help-Markdown Help. it open a md file, which illustrates the enhancement of markdown by HBuilderX in details.
 **Recommended for actual experience there**
 
-## Powerful Emmet support and shortcut key support
+## Powerful Emmet quick input and support shortcut key 
 
-- **title**:  hit `h2+Tab` to generate a secondary title
-- **image**: Hit `Tab` after `img`
-- **link**: Hit `Tab` after `a`
-- **table**: Knock on `Tab` after `table3*3`, it means that a table with 3 rows and 3 columns is generated, and the first row takes effect
-- **split line**: Hit `Tab` after `hr`
-- **code block**: Hit `Tab` after `code`, the beginning of the line will take effect
-- Press `Tab` after `day`, the current date. Note that day must have a space at the beginning or in front of the line
-- Press `Tab` after `time`, the current time. Note that time must have a space at the beginning or in front of the line
-- **Bold text**: press `Tab` after `b`
-- **The text is slanted**: press `Tab` after `i`
-- **Comment**: Shortcut key `Ctrl+/` to quickly insert a comment
+- **title**: `h2+Tab` to generate a secondary title
+- **image**: `img+Tab`
+- **link**: `a+Tab`
+- **table**: `table3*3+Tab`. A table with 3 rows and 3 columns is generated. Cursor locate in the first row.
+- **split line**: `hr+Tab`
+- **code block**: `code+Tab`. Cursor start inside code tag.
+- `day+Tab` the current date. Note that day must have a space at the beginning or in front of the line
+- `time+Tab` the current time. Note that time must have a space at the beginning or in front of the line
+- **Bold text**: `b+Tab`
+- **The text is slanted**: `i+Tab`
+- **Comment out**: `Ctrl+/` to quickly insert a comment
 
 ## Powerful smart paste
 
-- **Image**: Support smart paste, when you paste the graphics in the clipboard, it will be automatically saved as an attachment to the md document
-- **Link**: Supports smart pasting, the pasted URL will automatically become a hyperlink format, and the local file will automatically create a reference link when you paste it in
-- **Table**: Support copy and paste tables from excel, wps, word, number tables
+- **Image**: When you paste the graphics in the clipboard, it will be automatically saved as an attachment to this md document; delete the picture syntax in the document, and the corresponding picture attachment will be automatically deleted when the md document is saved; automatically become a link when pasting the picture file Citation format
+- **Link**: Pasting URL will automatically become a hyperlink format; pasting a local file will also automatically create a reference link
+- **Table**: Support copying and pasting tables from excel, wps, word, number tables (not supporting merged cells and cell wrapping)
 
-## Powerful smart double click
+## Powerful smart double-click
 
-- **Title**: Double-click the `# sign` to select the entire title paragraph
-- **Ordered list**: `Double click` the number in front of it, you can re-sort the numbers and fix the serial number error
-- **Code block**: `Double-click the beginning of the `grammar area, that is, the left side of `!`, select the entire text containing the delimiter
-- **Comment**: `Double click` the delimiter at the beginning and end of the comment to select the whole comment
-- **Link**: `Double-click` the beginning of the grammar area, which is to the left of `[`, select the entire text containing the delimiter
-- **image**: `Double-click` the beginning of the grammar area, which is to the left of `!`, select the entire text containing the delimiter
+- **Title**: double-click the # sign to select the entire heading paragraph
+- **Ordered list**: double-click the number in front to re-order the numbers, correct the serial number error, and select the sequenced list paragraph (the 4 on the left is deliberately wrong for you to experience)
+- **Code block**: double-click the beginning of the grammar area, that is, on the left side of !, select the entire text containing the delimiter
+- **Comment**: double-click the delimiter at the beginning and end of the comment to select the entire comment
+- **Link text**: double-click the beginning of the grammar area, that is on the left of `[`, select the entire text containing the delimiter
+- **Picture description text**: double-click the beginning of the grammar area, that is, on the left side of !, select the entire text containing the delimiter
 
 ## Powerful Format function
 
@@ -40,7 +40,7 @@ Table: Support `Ctrl+K` to automatically organize the table format
 
 <img src="/static/snapshots/tutorial/markdown/markdown_table_format.gif" style="border: 1px solid #eee;"/>
 
-## Intuitive document outline
+## Document outline
 
 HBuilderX Markdown file also supports displaying document outline view.
 
@@ -48,21 +48,56 @@ Windows shortcut key: `Alt+w`; MacOSX shortcut key: `Ctrl+w`
 
 <img src="/static/snapshots/tutorial/markdown/markdown_outline_en.png" style="zoom: 45%;border-radius: 20px;border: 1px solid #eee;"/>
 
-## Useful task list
+## Task list
 
 The task list is very practical, and it is very convenient to manage to-do and already done.
 
 - [ ] Task List-Unfinished Tasks `Shortcut Key: Ctrl+Alt+[`
 - [x] Task list-completed tasks `Shortcut key: Ctrl+Alt+]`
 
-## markdown share to weblink
+## One-click sharing
 
-> HBuilderX 2.8.8, launched MarkDown one-key sharing function. Use uniCloud as a picture bed What is [uniCloud](https://uniapp.dcloud.io/uniCloud/README), reliable, safe, easy to use, and free.
+Markdown has a fascinating input experience, but it is not convenient to share, especially the lack of free, stable, and high-speed image beds.
+[uniCloud](https://unicloud.dcloud.net.cn/) provides a free, stable, high-speed server and CDN.
+HBuilderX, based on uniCloud, provides one-click sharing of markdown.
 
-There is also an important problem with using markdown, that is, the storage of pictures. When a markdown file uses a picture, it must be a link. It is too troublesome to edit and upload pictures without using the picture bed.
+Use uniCloud's front-end web hosting to stably convert markdown into HTML web pages and publish them as online URLs. You can send the URL to anyone who wants to share.
+At the same time, the pictures involved in markdown will also be automatically uploaded to the free CDN in the front-end web hosting.
 
-Markdown sharing, as the name suggests, is a markdown document written in HBuilderX, you can simply upload it to the cloud through the editor's right-click [share to weblink] menu or shortcut key, and generate a sharing link, and it's completely free!
-
-Document references to local images will be automatically parsed and uploaded to the cloud.
+For more information: [MarkDown One-Key Sharing Instructions](https://ask.dcloud.net.cn/article/37573)
 
 [markdown sharing](/Tutorial/extension/markdown_share)
+
+## Onedrive Synchronisation
+
+# Onedrive
+
+Firstly, recommend a cloud synchronisaion tool - microsoft onedrive https://skydrive.live.com/
+
+After the dropbox is blocked, onedrive becomes the best, free, secure tool supporting all platforms.
+
+Onedrive is buildin in windows 10 OS. It can be downloaded from above link for other platforms. (It is important to install the client software, the web version still need jarbreak.
+
+Register an onedrive account. onedrive folder is created in your PC. Create a folder. Folder name can be any, eg. "note". md files writen by HBuilderX can be saved in it. 
+
+Evertime when file is saved in HBuilderX, it also sychronized in onedrive.
+
+If you login another devides, eg PC or mobile, the file is there.
+
+onedrive app in mobile do not support open markdown directly. mweb is recommended. If android, hummer notes is recommended.
+
+# svn and git
+
+After install node, once the file is changed, watch will commit in svn and git.
+
+A to do list for a team can be synchronised in this way.
+
+In DCloud, we use the first method. Co-working Files is using the second method. 
+
+svn and git more suitable for PC user modify and view in mobile. HBuilderX+markdown provide a better solution as evernote and Onenote. Fast startup. Efficient editing. User-friendly user interface for reading.
+
+However, if editing is always required in mobile app, Onedrive is a better solution.
+
+The more drama and short video, the more stupid you will be.
+
+Open HBuilderX, the more markdown writing, the smarter you will be.
