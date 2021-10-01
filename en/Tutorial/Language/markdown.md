@@ -1,23 +1,23 @@
 # MarkDown
 
-HBuilderX provides powerful support for md and is the most powerful, concise and efficient markdown writing tool ever.
+HBuilderX provides powerful support for md and is an excellent markdown writing tool.
 
-Download HBuilderX. click Help-Markdown Help. it open a md file, which illustrates the enhancement of markdown by HBuilderX in details.
+Download HBuilderX. click Help-Markdown Help. Then a md file will be opened to explain HBuilderX's enhancements to markdown.
 **Recommended for actual experience there**
 
-## Powerful Emmet quick input and support shortcut key 
+## Support Emmet and Shortcut 
 
 - **title**: `h2+Tab` to generate a secondary title
-- **image**: `img+Tab`
-- **link**: `a+Tab`
-- **table**: `table3*3+Tab`. A table with 3 rows and 3 columns is generated. Cursor locate in the first row.
-- **split line**: `hr+Tab`
-- **code block**: `code+Tab`. Cursor start inside code tag.
-- `day+Tab` the current date. Note that day must have a space at the beginning or in front of the line
-- `time+Tab` the current time. Note that time must have a space at the beginning or in front of the line
-- **Bold text**: `b+Tab`
-- **The text is slanted**: `i+Tab`
-- **Comment out**: `Ctrl+/` to quickly insert a comment
+- **image**: Tap `tab` after `img`
+- **link**: Tap `tab` after `a`
+- **table**: Tap `tab` after `table3*3+Tab`. A table with 3 rows and 3 columns is generated. Cursor locate in the first row.
+- **split line**: Tap `tab` after `hr`
+- **code block**: Tap `tab` after `code`. The first line will take effect.
+- **Tap `Tab` after `day`**, the current date. Note that day must have a space at the beginning or in front of the line.
+- **Tap `Tab` after `time`**, the current time. Note that day must have a space at the beginning or in front of the line.
+- **Bold text**: Tap `tab` after `b`
+- **The text is slanted**: Tap `tab` after `i`
+- **Comment out**: `Ctrl+/` to insert annotation
 
 ## Powerful smart paste
 
