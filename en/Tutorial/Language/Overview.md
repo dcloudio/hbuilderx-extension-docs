@@ -1,44 +1,38 @@
-> HBuilderX's code provide command prompt for deverse languages and intellisense.
+> HBuilderX has built-in richness language libraries and supports different syntax models.
 
-## Built-in grammar engine
-- Web： `html`, `js`, `css` grammar library
-- App： `plus` extended grammar library
-- Uni-app: `uni-app` grammar library
-- WeChat applets and fast apps: corresponding built-in grammer libraries
+## Built-in syntax library
+- Web： `html`, `js`, `css` syntax library
+- App： `plus` extended syntax library
+- Uni-app: `uni-app` syntax library
+- WeChat Apps and quickapps: corresponding built-in syntax libraries
 
-## js grammar engine（sdocml Format）
+## js syntax library（sdocml Format）
 
-In HBuilderX, in JS file，for example js, HTML, select vue or ts in the "customer language association" in the lower right corner.
+In HBuilderX, you can click on the "Javascript Libraries" in the bottom status bar and select the build-in syntax type for js and html files.
 
 <img src="/static/snapshots/tutorial/lang_1.png" />
 
-node.js is also one of the selections.
+node.js is also one of the syntax list. After selecting a js syntax type, it will be loaded immediately. (Note: You need to wait a while for the first use.)
 
-After select js language, the js syntax hints can be seen for js code. (Initially, wait for few seconds before it can be used after selection.)
+The selected syntax type can be used for the entire project. On the contrary, it does not apply to any individual file.
 
-The selection is implemented for entire file once selected
-
-If user open a file which is not in in the Project explorer section, this function is disabled.
-
-If HBuilderX can detect jquery or mui in the project, it will also automatically load the syntax prompt library for this project. But sometimes the detection may be inaccurate and it may need to be loaded manually.
+If HBuilderX can detect that there are common frameworks such as jquery or mui under the project, it will usually automatically mount the syntax library. Otherwise, you have to manually load these syntax libraries.
 
 ## d.ts
 
-Many frameworks have built-in `d.ts` syntax hint library. HBuilderX fully supports `d.ts` syntax hints.
-
-If there is a `d.ts` file of a certain framework under the project, HBuilderX can prompt the syntax hint of this framework.
+Many frameworks have built-in `d.ts` file. HBuilderX also fully supports the `d.ts` file. If there is a d.ts file in this framework, HBuilderX can display the syntax hints of this framework.
 
 ## jsdoc+
 
-HBuilderX provides extended `jsdoc+` annotations, which can provide powerful syntax prompts.
+jsdoc declares methods, parameters and attributes via annotations. HBuilderX provides extended jsdoc+ which can realize powerful syntax prompts.
 
 <img src="/static/snapshots/tutorial/lang_2.png" style="zoom:50%;" />
 
 ## vue doc
 
-For vue developers, vue doc provide assistant how to use it. `vue doc` is needed.
+Vue component developers should write 'vue doc' if they want to provide a better way for component users to use.
 
-Vue doc is similar to jsdoc, by describing component methods, parameters, and attributes in annotations.
+Vue doc is similar to jsdoc, which describing component methods, parameters and attributes in annotations.
 
 Details [vue doc](https://hx.dcloud.net.cn/Tutorial/Language/vuedoc)
 
@@ -52,7 +46,7 @@ These frameworks are installed in npm or installed in the new HBuilderX template
 
 ## Snippets
 
-HBuilderX supports custom code blocks, which can be expanded in the menu [Tool - Snippets Setting].
-The code block data format is compatible with vscode, and has expanded more rich settings. Great help to improve development efficiency.
+HBuilderX supports customized snippets, which can be expanded in the menu [Tool - Snippets Setting].
+These snippets are compatible with vscode and expanded with more settings. Great help to improve development efficiency.
 
 <a href="/Tutorial/Language/Snippets">Custom Snippets tutorial</a>
