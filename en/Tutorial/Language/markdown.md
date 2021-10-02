@@ -3,7 +3,7 @@
 HBuilderX provides powerful support for md and is an excellent markdown writing tool.
 
 Download HBuilderX. click Help-Markdown Help. Then a md file will be opened to explain HBuilderX's enhancements to markdown.
-**Recommended for actual experience there**
+**Try it yourself**
 
 ## Support Emmet and Shortcut 
 
@@ -17,7 +17,7 @@ Download HBuilderX. click Help-Markdown Help. Then a md file will be opened to e
 - **Tap `Tab` after `time`**, the current time. Note that day must have a space at the beginning or in front of the line.
 - **Bold text**: Tap `tab` after `b`
 - **The text is slanted**: Tap `tab` after `i`
-- **Comment out**: `Ctrl+/` to insert annotation
+- **Comment out**: `Ctrl+/` to insert comment
 
 ## Powerful smart paste
 
@@ -81,7 +81,7 @@ Setup an onedrive account. A onedrive folder will be created in your PC. Create 
 
 When the md file is saved in HBuilderX, it will also be synchronized to onedrive. This file will also be synced when you log in to other devices.
 
-onedrive app in mobile do not support open markdown directly. For iOS, mweb is recommended. For Android, Hammer notes is recommended.
+onedrive app in mobile do not support open markdown. For iOS, mweb is recommended. For Android, Hammer notes is recommended.
 
 # Sync to svn and git
 
