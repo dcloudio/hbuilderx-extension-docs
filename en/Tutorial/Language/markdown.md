@@ -10,7 +10,7 @@ Download HBuilderX. click Help-Markdown Help. Then a md file will be opened to e
 - **title**: `h2+Tab` to generate a secondary title
 - **image**: Tap `tab` after `img`
 - **link**: Tap `tab` after `a`
-- **table**: Tap `tab` after `table3*3+Tab`. A table with 3 rows and 3 columns is generated. Cursor locate in the first row.
+- **table**: Tap `tab` after `table3*3`. A table with 3 rows and 3 columns is generated. Cursor locate in the first row.
 - **split line**: Tap `tab` after `hr`
 - **code block**: Tap `tab` after `code`. The first line will take effect.
 - **Tap `Tab` after `day`**, the current date. Note that day must have a space at the beginning or in front of the line.
@@ -21,28 +21,28 @@ Download HBuilderX. click Help-Markdown Help. Then a md file will be opened to e
 
 ## Powerful smart paste
 
-- **Image**: When you paste the graphics in the clipboard, it will be automatically saved as an attachment to this md document; delete the picture syntax in the document, and the corresponding picture attachment will be automatically deleted when the md document is saved; automatically become a link when pasting the picture file Citation format
-- **Link**: Pasting URL will automatically become a hyperlink format; pasting a local file will also automatically create a reference link
-- **Table**: Support copying and pasting tables from excel, wps, word, number tables (not supporting merged cells and cell wrapping)
+- **Image**: Supports smart paste, when you paste a graphic from the clipboard to an md file, it will be automatically saved as an attachment.
+- **Link**: Supports smart paste, pasting URL will automatically become a hyperlink format; pasting a local file will also automatically create a reference link.
+- **Table**: Support copy and paste tables from excel, wps, word, number tables
 
-## Powerful smart double-click
+## Powerful double-click
 
-- **Title**: double-click the # sign to select the entire heading paragraph
-- **Ordered list**: double-click the number in front to re-order the numbers, correct the serial number error, and select the sequenced list paragraph (the 4 on the left is deliberately wrong for you to experience)
-- **Code block**: double-click the beginning of the grammar area, that is, on the left side of !, select the entire text containing the delimiter
-- **Comment**: double-click the delimiter at the beginning and end of the comment to select the entire comment
-- **Link text**: double-click the beginning of the grammar area, that is on the left of `[`, select the entire text containing the delimiter
-- **Picture description text**: double-click the beginning of the grammar area, that is, on the left side of !, select the entire text containing the delimiter
+- **Title**: Double-click the # sign will select the paragraph between two # signs
+- **Ordered list**: Double-click the number in front of the numbered list to rearrange the numbers and correct the ordering error of the list
+- **Code block**: double-click the beginning of the delimiter, and then entire text between delimiters will be selected
+- **Comment**: double-click the beginning or the end of the comment to select the entire comment
+- **Link**: double-click the beginning of the `[` sign, and then the link text and url will be selected
+- **Picture**: double-click the beginning of the `!` sign, and then the picture text and url will be selected
 
 ## Powerful Format function
 
-Table: Support `Ctrl+K` to automatically organize the table format
+Table: Press `Ctrl+K` to automatically format the table
 
 <img src="/static/snapshots/tutorial/markdown/markdown_table_format.gif" style="border: 1px solid #eee;"/>
 
 ## Document outline
 
-HBuilderX Markdown file also supports displaying document outline view.
+HBuilderX Markdown file also supports document outline view.
 
 Windows shortcut key: `Alt+w`; MacOSX shortcut key: `Ctrl+w`
 
@@ -57,47 +57,42 @@ The task list is very practical, and it is very convenient to manage to-do and a
 
 ## One-click sharing
 
-Markdown has a fascinating input experience, but it is not convenient to share, especially the lack of free, stable, and high-speed image beds.
-[uniCloud](https://unicloud.dcloud.net.cn/) provides a free, stable, high-speed server and CDN.
-HBuilderX, based on uniCloud, provides one-click sharing of markdown.
+When you add images to an md file, it is difficult to manage these images without online server because the md file only accepts image links.
 
-Use uniCloud's front-end web hosting to stably convert markdown into HTML web pages and publish them as online URLs. You can send the URL to anyone who wants to share.
-At the same time, the pictures involved in markdown will also be automatically uploaded to the free CDN in the front-end web hosting.
+HBuilderX provides markdown one-click sharing feature with [uniCloud](https://unicloud.dcloud.net.cn/). It is a simple, secure, stable and free cloud platform.
+
+With the one-click sharing feature, you can upload markdown documents to uCloud in HBuilderX and return a url that can be shared. At the same time, the images involved in markdown will also be automatically uploaded to uCloud. This feature is completely free.
 
 For more information: [MarkDown One-Key Sharing Instructions](https://ask.dcloud.net.cn/article/37573)
 
 [markdown sharing](/Tutorial/extension/markdown_share)
 
-## Onedrive Synchronisation
+## Onedrive Sync
 
 # Onedrive
 
 Firstly, recommend a cloud synchronisaion tool - microsoft onedrive https://skydrive.live.com/
 
-After the dropbox is blocked, onedrive becomes the best, free, secure tool supporting all platforms.
+After dropbox is blocked, onedrive becomes the best choice because it is free, stable, safe and cross-platform.
 
-Onedrive is buildin in windows 10 OS. It can be downloaded from above link for other platforms. (It is important to install the client software, the web version still need jarbreak.
+Onedrive is build-in in windows 10. It also can be downloaded from above link for other platforms. (It is important to install the onedriver client software, or use VPN for web version) .
 
-Register an onedrive account. onedrive folder is created in your PC. Create a folder. Folder name can be any, eg. "note". md files writen by HBuilderX can be saved in it. 
+Setup an onedrive account. A onedrive folder will be created in your PC. Create a folder. The folder name can be anything, for example. "notes". The md file written by HBuilderX can be saved in it.
 
-Evertime when file is saved in HBuilderX, it also sychronized in onedrive.
+When the md file is saved in HBuilderX, it will also be synchronized to onedrive. This file will also be synced when you log in to other devices.
 
-If you login another devides, eg PC or mobile, the file is there.
+onedrive app in mobile do not support open markdown directly. For iOS, mweb is recommended. For Android, Hammer notes is recommended.
 
-onedrive app in mobile do not support open markdown directly. mweb is recommended. If android, hummer notes is recommended.
+# Sync to svn and git
 
-# svn and git
+After install node, once the file is changed, watch will commit to svn and git.
 
-After install node, once the file is changed, watch will commit in svn and git.
-
-A to do list for a team can be synchronised in this way.
+To do list for a team can be synchronised in this way.
 
 In DCloud, we use the first method. Co-working Files is using the second method. 
 
-svn and git more suitable for PC user modify and view in mobile. HBuilderX+markdown provide a better solution as evernote and Onenote. Fast startup. Efficient editing. User-friendly user interface for reading.
+svn and git are more suitable for PC users to modify and view on the mobile. HBuilderX+markdown provides a better experience than Evernote and OneNote. Start quickly. Efficient editing and User-friendly for reading.
 
-However, if editing is always required in mobile app, Onedrive is a better solution.
+However, Onedrive is a better solution for frequent editing.
 
-The more drama and short video, the more stupid you will be.
-
-Open HBuilderX, the more markdown writing, the smarter you will be.
+HBuilderX will provide an excellent Markdown editing experience.
