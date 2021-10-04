@@ -52,8 +52,8 @@ Windows shortcut key: `Alt+w`; MacOSX shortcut key: `Ctrl+w`
 
 The task list is very practical, and it is very convenient to manage to-do and already done.
 
-- [ ] Task List-Unfinished Tasks `Shortcut Key: Ctrl+Alt+[`
-- [x] Task list-completed tasks `Shortcut key: Ctrl+Alt+]`
+- [ ] Task List-Unfinished Tasks `Windows Shortcut Key: Ctrl+Alt+[`, `Mac Shortcut Key: Ctrl+Option+[`
+- [x] Task list-completed tasks `Windows Shortcut key: Ctrl+Alt+]`, `Mac Shortcut key: Ctrl+Option+]`
 
 ## One-click sharing
 
