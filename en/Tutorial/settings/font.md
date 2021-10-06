@@ -12,9 +12,9 @@ MacOSX: Menu [HBuilderX - Preferences -Commonly used]
 
 The font list contains all installed fonts in the operating system.
 
-You can choose any font you like from the installed fonts.
+You can choose any font you like from the font list.
 
-To use custom fonts, you must first install the fonts.
+To use custom font, you must first install the font.
 
 ### Example
 
