@@ -21,7 +21,7 @@ In some cases, MacOSX HBuilderX Unable to start up, Please try the following sol
 
 - Restart the computer
 - Delete the .lock file in the $HOME/Library/Application\ Support/HBuilder\ X/ [Details](/Tutorial/install/macosx?id=del-.lock-file)
-- Reset HBuilderX configuration file。[Details](/Tutorial/install/macosx?id=reset-config-file)
+- Reset HBuilderX configuration file [Details](/Tutorial/install/macosx?id=reset-config-file)
 
 ### del .lock file
 
