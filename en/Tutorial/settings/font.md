@@ -4,7 +4,7 @@
 
 Windows: Menu [Tools - Settings - Common]
 
-MacOSX: Menu [HBuilderX - Preferences -Common]
+MacOSX: Menu [HBuilderX - Preferences -Commonly used]
 
 <img src="/static/snapshots/tutorial/font_1.png" />
 
@@ -12,15 +12,15 @@ MacOSX: Menu [HBuilderX - Preferences -Common]
 
 The font list contains all installed fonts in the operating system.
 
-Custom, only fill in the existing fonts in the operating system;
+You can choose any font you like from the installed fonts.
 
-If you need to customize, you need to install the corresponding font first.
+To use custom fonts, you must first install the fonts.
 
 ### Example
 
 Take [source-code-pro](https://github.com/adobe-fonts/source-code-pro) as an example.
 
-After downloading the font, click Install, and the font list will appear after the installation is successful.
+Downloading the font and click to install. After the installation is successful, the new font will appear in the font list.
 
 <img src="/static/snapshots/tutorial/font_2.png" />
 
