@@ -16,7 +16,7 @@ Download a Zip archive, extract it and run exe file from there.
 ### Wrong approach
 
 1. Double-click HBuilderX.exe directly from the zip archive.
-2. Drag HBuilderX.ere from the zip archive to the desktop.
+2. Drag HBuilderX.exe from the zip archive to the desktop.
 
 ### Create desktop shortcut
 
@@ -25,7 +25,7 @@ Download a Zip archive, extract it and run exe file from there.
 ### Startup Troubleshooting
 
 1. HBuilderX startup issue，ref to: [HBuilderX Startup Troubleshooting Guide](/Tutorial/Questions/WindowsStart)
-2. HBuilderX startup problem with damaged configuration file，ref to: [Configuration file troubleshooting guide](/Tutorial/Questions/WindowsStart?id=_4-配置文件损坏)
+2. HBuilderX startup problem with damaged configuration file，ref to: [HBuilderX configuration file troubleshooting guide](/Tutorial/Questions/WindowsStart?id=_4-配置文件损坏)
 
 ### Falsely reported as a malicious file
 
