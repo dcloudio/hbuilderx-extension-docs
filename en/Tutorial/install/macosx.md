@@ -6,41 +6,45 @@ HBuilderX Download URL:  [Download](https://www.dcloud.io/hbuilderx.html)
 
 ## Install
 
-Drag and drop the HBuilderX application to the Application folder.
+Drag and drop the HBuilderX app to the Applications folder.
 
 <img src="/static/snapshots/tutorial/install_mac.jpeg" />
 
-> MacOSX, Must be installed in the /Applications directory. 
+> The HBuilder application should be installed in the /Applications directory on MacOSX to avoid problems such as extension installation failure and project creation failure.
 > 
-> If the installation directory is wrong, May cause the extension installation to fail, or Failed to create project.
+Please jump to `System Perference -> Security & Privacy`, allow to use HBuilderX.app.
 
 
 ## Question
 
-In some cases, MacOSX HBuilderX Unable to start, Solution:
+In some cases, MacOSX HBuilderX Unable to start up, Please try the following solutions:
 
 - Restart the computer
 - Delete the .lock file in the $HOME/Library/Application\ Support/HBuilder\ X/ [Details](/Tutorial/install/macosx?id=del-.lock-file)
-- reset HBuilderX config file。[Details](/Tutorial/install/macosx?id=reset-config-file)
+- Reset HBuilderX configuration file。[Details](/Tutorial/install/macosx?id=reset-config-file)
 
 ### del .lock file
 
-Open the operating system terminal，input the command： 
+Open `Terminal`，input the command： 
 
 ```
 rm -f $HOME/Library/Application\ Support/HBuilder\ X/.lock
 ```
+If HBuilderX still fails to startup after deleting the .lock file, please remove the configuration folder.
 
-If deleting the .lock file does not solve the startup problem, try deleting the configuration file directory.
+### reset configuration file
 
-### reset config file
+> Please backup before remove any files.
+> 
 
 Configuration file directory：`$HOME/Library/Application\ Support/HBuilder\ X`
+
+Note: On Mac, please add \ to escape if the path contains spaces.
 
 ```shell
 # Backup configuration file
 cp -rf $HOME/Library/Application\ Support/HBuilder\ X   $HOME/Desktop/HX
 
-# delete Configuration file directory
+# Remove configuration file directory
 rm -rf $HOME/Library/Application\ Support/HBuilder\ X
 ```
