@@ -12,7 +12,7 @@ Drag and drop the HBuilderX app to the Applications folder.
 
 > The HBuilder application should be installed in the /Applications directory on MacOSX to avoid problems such as extension installation failure and project creation failure.
 > 
-Please jump to `System Perference -> Security & Privacy`, allow to use HBuilderX.app.
+Please jump to `System Perference -> Security & Privacy -> General`, allow to use HBuilderX.app.
 
 
 ## Question
