@@ -29,7 +29,7 @@ In addition to the perfect prompt, there are clear instructions on the right sid
 
 <img src="/static/snapshots/vue/hint_2.png" style="zoom: 80%;border: 1px solid #eee;" />
 
-### VUE methods hint
+### Vue methods hint
 
 <img src="/static/snapshots/vue/hint_3.png" style="zoom: 80%;border: 1px solid #eee;" />
 
@@ -39,7 +39,7 @@ Based on powerful component syntax analysis, HBuilderX can directly prompt compo
 
 <img src="/static/snapshots/vue/hint_4.png" style="zoom: 50%;border: 1px solid #eee;" />
 
-### doc
+### Doc
 
 Vue doc is a powerful tool for vue component developers. By writing the jsdoc class, your component can implement comprehensive code hints and help.
 
@@ -61,7 +61,7 @@ You can also add more customized snippets in menu [`Tools` - `Snippets Settings`
 
 <img src="/static/snapshots/vue/hint_7.gif" style="zoom: 50%;border: 1px solid #eee;" />
 
-### vue router
+### Vue router
 
 Support $router and $route objects.
 
@@ -69,7 +69,7 @@ Support $router and $route objects.
 
 <img src="/static/snapshots/vue/vue_router_2.png" style="zoom: 80%;border: 1px solid #eee;" />
 
-### vuex
+### Vuex
 
 Support Objects:`State`, `Mutation`, `action` and go to definition.
 
@@ -105,7 +105,7 @@ Example below: There are many "list" in the script, but only exact variables are
 
 ## Eslint check
 
-Firstly, please install the plugin `eslint-plugin-vue`. Then there are 2 ways to check syntax, click [tools - Valicate documents], or save the vue document as it will be verified automatically when saving.
+Firstly, please install the plugin `eslint-plugin-vue`. Then there are 2 ways to check syntax, click [Tool - Validate Document], or save the vue document as it will be verified automatically when saving.
 
 HbuilderX provides shortcuts settings and whether to automatically trigger when saving. Location is【Perferences - plugins - eslint-plugin-vue】.
 
@@ -129,7 +129,7 @@ You can create a new vue project through the new project wizard without cli.
 
 <img src="/static/snapshots/vue/project_create_en.png" style="zoom: 40%;border: 1px solid #eee;" />
 
-Run - Terminal - npm run build/npm run serve/etc.
+In the run menu, you can visually run and build the project.
 
 <img src="/static/snapshots/vue/project_create_ne.jpg" style="zoom: 45%;border: 1px solid #eee;border-radius: 20px;" />
 
