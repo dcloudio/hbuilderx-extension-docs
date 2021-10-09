@@ -4,7 +4,22 @@
 
 在HBuilderX内，使用Git，需要先安装Git插件，Git插件调用的是`外部Git工具`，因此也需要安装`TortoiseGit`。
 
+
+## 安装TortoiseGit
+
 [TortoiseGit下载地址](https://tortoisegit.org/download/), 下载后，双击打开exe，按照提示完成安装。
+
+注意：TortoiseGit 有32和64之分，请根据自己的电脑来决定下载。
+
+下载TortoiseGit后，双击打开进行安装。
+
+<img src="/static/snapshots/tutorial/source_control/TortoiseGit1.png" style="zoom:90%; border: 1px solid #eee;" />
+
+<img src="/static/snapshots/tutorial/source_control/TortoiseGit2.png" style="zoom:90%; border: 1px solid #eee;"/>
+
+安装完成后，操作系统资源管理器，右键菜单会出现TortoiseGit相关菜单，如下图：
+
+<img src="/static/snapshots/tutorial/source_control/TortoiseGit3.png" style="zoom:50%;border: 1px solid #eee;" />
 
 ## 安装 HBuilderX Git插件
 
