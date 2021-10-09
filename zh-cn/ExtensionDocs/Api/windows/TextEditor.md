@@ -53,7 +53,7 @@
 |active		|Number		|选择区域中带光标的一侧，详情见下图|
 |anchor		|Number		|选择区域中不带光标的一侧，详情见下图	|
 
-<img src="/static/snapshots/anchor_active.jpg" style="zoom:50%" />
+<img src="/static/snapshots/Plug-in-development/anchor_active.jpg" style="zoom:50%" />
 
 **返回值**
 
@@ -81,7 +81,7 @@ editor.then((editor)=>{
 |active		|Number		|选择区域中带光标的一侧，详情见下图|
 |anchor		|Number		|选择区域中不带光标的一侧，详情见下图	|
 
-<img src="/static/snapshots/anchor_active.jpg" style="zoom:50%" />
+<img src="/static/snapshots/Plug-in-development/anchor_active.jpg" style="zoom:50%" />
 
 **返回值**
 

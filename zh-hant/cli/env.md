@@ -48,4 +48,4 @@ ln -s /Applications/HBuilderX.app/Contents/MacOS/cli /usr/local/bin/cli
 2. 右鍵 This PC(此電腦) -> Properties（屬性） -> Advanced system settings（高級系統設置） -> Environment Variables（環境變量）
 3. 【用戶變量】，點擊【編輯】，找到path，輸入HBuilderX路徑。
 
-<img src="/static/snapshots/cli_env.png"/>
+<img src="/static/snapshots/cli/cli_env.png"/>

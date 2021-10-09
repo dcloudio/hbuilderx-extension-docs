@@ -21,7 +21,7 @@ authorize二級模塊對象，用於處理插件授權登錄，獲取HBuilderX�
 
 對應的效果如下圖所示：
 
-<img src = "/static/snapshots/authorize.png" />
+<img src = "/static/snapshots/Plug-in-development/authorize.png" />
 
 ## login
 
