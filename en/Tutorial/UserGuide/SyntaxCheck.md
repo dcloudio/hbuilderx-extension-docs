@@ -29,7 +29,7 @@ In HBuilderX, you should install the following plugins to implement code inspect
 
 Right-click on the current file, and click [Validation]. Please install above plugins if you do not find this menu.
 
-<img src="/static/snapshots/tutorial/validate/right_menu_en.png" class="hd-img" />
+<img src="/static/snapshots/tutorial/syntaxcheck.png" style="zoom:90%;" />
 
 The summary of syntax validation will be displayed on the `Status Bar`.
 
