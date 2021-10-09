@@ -1,4 +1,4 @@
-# Compase Selected Files
+# Files Compare
 
 In the project explorer, select two files to be compared, right-click the menu, and click [Compare selected files]
 
