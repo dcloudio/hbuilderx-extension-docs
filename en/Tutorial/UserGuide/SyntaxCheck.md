@@ -2,7 +2,7 @@
 
 A good validator can prevent syntax errors when we write codes.
 
-A good validator can save us time to find bugs.
+A good validator can save your time to find bugs.
 
 A good validator can ensure that the coding follows the standard.
 
@@ -23,8 +23,6 @@ In HBuilderX, you should install the following plugins to implement code inspect
 |vue			|eslint-vue			|[Download](https://ext.dcloud.net.cn/plugin?name=eslint-vue)			|[Docs](/Tutorial/extension/eslint-vue)			|
 
 **Notice：**
-- For scss files, if the code uses the `@-rules` command, and the stylelint check prompts `at-rule-no-unknown`, please configure the rules related to `@`.[stylelint rules](http://stylelint.cn/user-guide/rules/#at-rule)
-
 - For scss files, if you receive the stylelint validation tip `at-rule-no-unknown` when the code calls the `@-rules` command, you should set `@` rules. [stylelint rules](http://stylelint.cn/user-guide/rules/#at-rule)
 
 ## How to use?
