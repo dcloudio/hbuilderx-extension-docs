@@ -27,6 +27,7 @@
     * [本地歷史記錄](/Tutorial/UserGuide/LocalHistory.md)
     * [.editorconfig](/Tutorial/UserGuide/editorconfig.md)
     * [外部命令](/Tutorial/UserGuide/externalCommands.md)
+    * [終端](/Tutorial/UserGuide/terminal.md)
 * 語言服務/代碼提示
     * [概述](/Tutorial/Language/Overview.md)
     * [代碼助手](/Tutorial/Language/CodeAssistant.md)
