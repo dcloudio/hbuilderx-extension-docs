@@ -51,6 +51,7 @@
     * [Formator Prettier](/Tutorial/extension/prettier.md)
 * Other
     * [Font Setting](/Tutorial/settings/font.md)
+    * [Health](/Tutorial/Other/health.md)
 * [Crash Reporter](/Tutorial/CrashReporter.md)
 * [LICENSE](/license.md)
 <div class="contact-box">

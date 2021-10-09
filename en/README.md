@@ -10,18 +10,16 @@
 3. **Optimized for VUE**
 <br/>`HX` has made a lot of optimizations to VUE , which has a better user experience than other tools.
 	[Details](/Tutorial/Language/vue)
-4. **Mini Program support**
-<br/>None of foreign development tools support mini programs.  HX can give you the most efficient tool to setup uni-app, mini programs.
-5. **Markdown Tool**
+4. **Markdown Tool**
 <br/>`HX` is the only IDE which open a new file with the default file type as markdown. Also it provides the super powerful support for md. 
 <br/>`HX` provides variety of functions for md. please **be sure to click** [Menu-Help-Markdown Syntax Example] refer to [manual] -> [help] -> [markdown help] to learn md and HX quickly.
-6. **Easy on the eyes**
+5. **Easy on the eyes**
 <br/>The UI of HX is simple and clear. A default soft-green theme optimized for long work. [Details](/Tutorial/Other/health)
-7. **Powerfull Intellisense**
+6. **Powerfull Intellisense**
 <br/>`HX` is the unique software company in China with its own Independent IDE syntax analysis engine. It provides accurate code hints and [Go to definition](/Tutorial/UserGuide/goto)(Alt+Left mouse)
-8. **Efficient Text Editing**
+7. **Efficient Text Editing**
 <br/>Multi-cursor / multi-line selection. Smart auto selection on double click.Smart hotkeys that work even without selection. [Details](/Tutorial/UserGuide/selection)
-9. **Powerful json support**
+8. **Powerful json support**
 <br/>`HX` provides more efficient way for modern json structures. [Details](/Tutorial/Language/json)
 
 
