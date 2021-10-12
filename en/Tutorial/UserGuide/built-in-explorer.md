@@ -33,7 +33,7 @@ Use the address bar to return to the parent directory and top directory.
 
 ## Quickly check file attributes
 
-Select the file, right-click the menu, click "properties" option. You don't need to open the file through Explorer.
+Select the file, right-click the menu, click "properties" option. You don't need to open the file through explorer.
 
 <img src="/static/snapshots/tutorial/explorer/explorer_3_en.png" class="hd-img" />
 
@@ -66,13 +66,13 @@ The way to open the resource manager, the default is to double-click to expand t
 
 <img src="/static/snapshots/tutorial/explorer/explorer_8_en.png" class="hd-img"/>
 
-- Settings in the upper right corner of the Explorer
+- Settings in the upper right corner of the explorer
 
 <img src="/static/snapshots/tutorial/explorer/explorer_9_en.png" class="hd-img"/>
 
-## How to use external commands in Explorer?
+## How to use external commands in explorer?
 
-You can compress or decompress files through external commands in the Explorer.
+You can compress or decompress files through external commands in the explorer.
 
 Configure external commands for compression and decompression, see [HBuilderX External Commands](/Tutorial/UserGuide/externalCommands)
 
