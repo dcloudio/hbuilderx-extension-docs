@@ -10,7 +10,7 @@ Many companies require developers to follow the same programming style. For exam
 
 HBuilderX has built-in support for .editorconfig. You have to download extra plugins to use this feature in Sublime and VSCode.
 
-The official website of `editorconfig` is [https://editorconfig.org/](https://editorconfig.org/) EditorConfig helps maintain consistent coding styles for multiple developers working on the same project across various editors and IDEs. The EditorConfig project consists of a file format for defining coding styles and a collection of text editor plugins that enable editors to read the file format and adhere to defined styles. EditorConfig files are easily readable and they work nicely with various OS and IDEs.
+The official website of `editorconfig` is [https://editorconfig.org/](https://editorconfig.org/). EditorConfig helps maintain consistent coding styles for multiple developers working on the same project across various editors and IDEs. The EditorConfig project consists of a file format for defining coding styles and a collection of text editor plugins that enable editors to read the file format and adhere to defined styles. EditorConfig files are easily readable and they work nicely with various OS and IDEs.
 
 ## How to write .editorconfig file?
 
