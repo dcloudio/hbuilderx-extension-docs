@@ -1,9 +1,9 @@
-`HBuilderX`,H is the first letter of HTML, Builder is the builder, X is the next version of HBuilder. We are also referred to as `HX`.
+`HBuilderX` H is the first letter of HTML, Builder is the builder, X is the next version of HBuilder. We are also referred to as `HX`.
 
 `HBuilderX` is lightweight but powerful IDE.
 
-#### Features of HX
-1. **lightweight**
+#### Features
+1. **Lightweight**
 <br/>Only 10M install package (excluding plugins)
 2. **Super Fast**
 <br/>Startup speed, large file opening speed and coding prompt speed are extremely fast. Implemented with C++，excellent architecture than Java or Electron.
@@ -32,4 +32,4 @@ Switch the hotkeys in Tool->[Keymaps](/Tutorial/keybindings) according to your p
 
 Reduce your development time and cost through HBuilderX Plugins Market.
 
-market: [https://ext.dcloud.net.cn/](https://ext.dcloud.net.cn/?cat1=1&cat2=11&orderBy=FreeHot)
+Market: [https://ext.dcloud.net.cn/](https://ext.dcloud.net.cn/?cat1=1&cat2=11&orderBy=FreeHot)
