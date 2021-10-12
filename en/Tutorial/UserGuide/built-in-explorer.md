@@ -1,6 +1,6 @@
 # Built-in Explorer
 
-> windows: Available on HBuilderX 2.5.5+; mac：Available on HBuilderX 2.6.3+
+> windows: Support HBuilderX 2.5.5+; mac：Support HBuilderX 2.6.3+
 
 Most IDEs display files and folders in the project explorer on the left, which cannot provide the best convenience and efficiency experience. The built-in resource manager of HBuilderX displays a larger resource management interface for easy files management.
 
