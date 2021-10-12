@@ -15,7 +15,7 @@ HBuilderX支持通過多種方式打開終端：
 - 底部狀態欄，點擊終端圖標
 - 快捷鍵方式：Windows (Alt+C); MacOSX (Ctrl+Shift+C)
 
-## 終端URL點擊跳轉到瀏覽器
+## 終端URL點擊跳轉到瀏覽器@open-links 
 
 > HBuilderX 3.2.10+, 支持點擊終端終端的url，在瀏覽器打開
 

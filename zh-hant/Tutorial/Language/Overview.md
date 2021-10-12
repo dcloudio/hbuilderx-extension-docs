@@ -49,3 +49,13 @@ HBuilderX支持自定義代碼塊，在菜單工具-代碼塊設置中可自行�
 代碼塊數據格式兼容vscode，並擴展了更多豐富設置。對於提高開發效率幫助很大。
 
 <a href="/Tutorial/Language/Snippets">自定義代碼塊教程</a>
+
+## 代码帮助悬浮窗口@hover-help
+
+> HBuilderX 3.2.10+，支持：鼠标悬停查看代码帮助
+
+如下图，将鼠标置于要查看的代码上，自动打开代码帮助悬浮窗口。
+
+按下`F1`会在浏览器打开帮助文档。
+
+<img src="/static/snapshots/tutorial/language/hover_helper.png" style="zoom:50%;border: 1px solid #eee;"/>

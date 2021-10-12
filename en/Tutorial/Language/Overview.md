@@ -50,3 +50,13 @@ HBuilderX supports customized snippets, which can be expanded in the menu [Tool 
 These snippets are compatible with vscode and expanded with more settings. Great help to improve development efficiency.
 
 <a href="/Tutorial/Language/Snippets">Custom Snippets tutorial</a>
+
+## 代码帮助悬浮窗口@hover-help
+
+> HBuilderX 3.2.10+，支持：鼠标悬停查看代码帮助
+
+如下图，将鼠标置于要查看的代码上，自动打开代码帮助悬浮窗口。
+
+按下`F1`会在浏览器打开帮助文档。
+
+<img src="/static/snapshots/tutorial/language/hover_helper.png" style="zoom:50%;border: 1px solid #eee;"/>
