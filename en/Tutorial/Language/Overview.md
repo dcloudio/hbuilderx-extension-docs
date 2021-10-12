@@ -51,12 +51,15 @@ These snippets are compatible with vscode and expanded with more settings. Great
 
 <a href="/Tutorial/Language/Snippets">Custom Snippets tutorial</a>
 
-## Hover
+## Hover Code Assist@hover-code-assist
 
-> HBuilderX 3.2.10+，支持：鼠标悬停查看代码帮助
+> Only supports HBuilderX 3.2.10+
 
-如下图，将鼠标置于要查看的代码上，自动打开代码帮助悬浮窗口。
+1. As shown in the figure below, place the mouse on the code to be viewed, and the code help floating window will automatically open.
+2. Press `F1` to open the help dcos in the browser
 
-按下`F1`会在浏览器打开帮助文档。
+<img src="/static/snapshots/tutorial/language/hover_help_en.png" style="zoom:45%;border: 1px solid #eee;"/>
 
-<img src="/static/snapshots/tutorial/language/hover_helper.png" style="zoom:50%;border: 1px solid #eee;"/>
+If you don't need it, you can turn off this function manually in [Settings - Editor].
+
+<img src="/static/snapshots/tutorial/language/settings_hover_help_en.png" style="zoom:50%;border: 1px solid #eee;"/>
