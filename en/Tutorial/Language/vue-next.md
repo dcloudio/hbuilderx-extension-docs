@@ -15,7 +15,7 @@ Accurate type derivation of composition functions such as `ref` and `reactive`, 
 
 <img src="/static/snapshots/vue_next/3.jpg" style="zoom: 30%;border: 1px solid #eee;" />
 
-## CSS Variable binding
+## CSS Variable Binding
 Support v-bind function hint in CSS, variable hint in parameters and `go to definition` (Alt + click).
 
 <img src="/static/snapshots/vue_next/4.jpg" style="zoom: 30%;border: 1px solid #eee;" />

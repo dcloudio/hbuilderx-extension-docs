@@ -1,6 +1,6 @@
-# Custom font
+# Custom Font
 
-### font Setting
+### Font Setting
 
 Windows: Menu [Tools - Settings - Common]
 
@@ -8,7 +8,7 @@ MacOSX: Menu [HBuilderX - Preferences -Commonly used]
 
 <img src="/static/snapshots/tutorial/font_1.png" />
 
-### How to customize the font?
+### How to Customize the Font?
 
 The font list contains all installed fonts in the operating system.
 

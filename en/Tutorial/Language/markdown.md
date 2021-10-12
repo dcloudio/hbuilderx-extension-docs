@@ -19,13 +19,13 @@ Download HBuilderX. click Help-Markdown Help. Then a md file will be opened to e
 - **The text is slanted**: Tap `tab` after `i`
 - **Comment out**: `Ctrl+/` to insert comment
 
-## Powerful smart paste
+## Powerful Smart Paste
 
 - **Image**: Supports smart paste, when you paste a graphic from the clipboard to an md file, it will be automatically saved as an attachment.
 - **Link**: Supports smart paste, pasting URL will automatically become a hyperlink format; pasting a local file will also automatically create a reference link.
 - **Table**: Support copy and paste tables from excel, wps, word, number tables
 
-## Powerful double-click
+## Powerful Double-click
 
 - **Title**: Double-click the # sign will select the paragraph between two # signs
 - **Ordered list**: Double-click the number in front of the numbered list to rearrange the numbers and correct the ordering error of the list
@@ -34,13 +34,13 @@ Download HBuilderX. click Help-Markdown Help. Then a md file will be opened to e
 - **Link**: double-click the beginning of the `[` sign, and then the link text and url will be selected
 - **Picture**: double-click the beginning of the `!` sign, and then the picture text and url will be selected
 
-## Powerful Format function
+## Powerful Format Function
 
 Table: Press `Ctrl+K` to automatically format the table
 
 <img src="/static/snapshots/tutorial/markdown/markdown_table_format.gif" style="border: 1px solid #eee;"/>
 
-## Document outline
+## Document Outline
 
 HBuilderX Markdown file also supports document outline view.
 
@@ -48,14 +48,14 @@ Windows shortcut key: `Alt+w`; MacOSX shortcut key: `Ctrl+w`
 
 <img src="/static/snapshots/tutorial/markdown/markdown_outline_en.png" style="zoom: 45%;border-radius: 20px;border: 1px solid #eee;"/>
 
-## Task list
+## Task List
 
 The task list is very practical, and it is very convenient to manage to-do and already done.
 
 - [ ] Task List-Unfinished Tasks `Windows Shortcut Key: Ctrl+Alt+[`, `Mac Shortcut Key: Ctrl+Option+[`
 - [x] Task list-completed tasks `Windows Shortcut key: Ctrl+Alt+]`, `Mac Shortcut key: Ctrl+Option+]`
 
-## One-click sharing
+## Sharing to Web Link
 
 When you add images to an md file, it is difficult to manage these images without online server because the md file only accepts image links.
 
@@ -83,7 +83,7 @@ When the md file is saved in HBuilderX, it will also be synchronized to onedrive
 
 onedrive app in mobile do not support open markdown. For iOS, mweb is recommended. For Android, Hammer notes is recommended.
 
-# Sync to svn and git
+# Sync to SVN and Git
 
 After install node, once the file is changed, watch will commit to svn and git.
 
