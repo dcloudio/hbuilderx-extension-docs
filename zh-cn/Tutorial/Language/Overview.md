@@ -49,3 +49,17 @@ HBuilderX支持自定义代码块，在菜单工具-代码块设置中可自行�
 代码块数据格式兼容vscode，并扩展了更多丰富设置。对于提高开发效率帮助很大。
 
 <a href="/Tutorial/Language/Snippets">自定义代码块教程</a>
+
+## 代码帮助悬浮窗口@hover-code-assist
+
+> HBuilderX 3.2.10+，支持：鼠标悬停查看代码帮助
+
+如下图，将鼠标置于要查看的代码上，自动打开代码帮助悬浮窗口。
+
+按下`F1`会在浏览器打开帮助文档。
+
+<img src="/static/snapshots/tutorial/language/hover_helper.png" style="zoom:45%;border: 1px solid #eee;"/>
+
+如果您不需要代码悬浮帮助，可以在【设置 - 编辑器设置】中，手动关闭此功能。
+
+<img src="/static/snapshots/tutorial/language/settings_hover_help.png" style="zoom:50%;border: 1px solid #eee;"/>
