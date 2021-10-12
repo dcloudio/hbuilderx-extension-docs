@@ -50,3 +50,17 @@ HBuilderX supports customized snippets, which can be expanded in the menu [Tool 
 These snippets are compatible with vscode and expanded with more settings. Great help to improve development efficiency.
 
 <a href="/Tutorial/Language/Snippets">Custom Snippets tutorial</a>
+
+## Hover Code Assist @hover-code-assist
+
+> supported from HBuilderX 3.2.10+
+
+As shown in the figure below, move the mouse to the code to be viewed, and a floating window will appear to provide code assistance.
+
+Press F1 to open the help documents in the browser.
+
+<img src="/static/snapshots/tutorial/language/hover_helper.png" style="zoom:45%;border: 1px solid #eee;"/>
+
+If you don't need it, you can turn off this feature manually in [Settings - Editor].
+
+<img src="/static/snapshots/tutorial/language/settings_hover_help.png" style="zoom:50%;border: 1px solid #eee;"/>
