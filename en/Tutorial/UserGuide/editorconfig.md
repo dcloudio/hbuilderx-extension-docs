@@ -14,7 +14,7 @@ The official website of `editorconfig` is [https://editorconfig.org/](https://ed
 
 ## How to write .editorconfig file?
 
-The following is a sample .editorconfig file for setting end-of-line and indentation styles for Python and JavaScript.
+The following is a sample .editorconfig file for setting end_of_line and indentation styles for Python and JavaScript.
 
 ```
 # EditorConfig is awesome: http://EditorConfig.org
@@ -51,7 +51,7 @@ indent_size = 2
 
 Many open source projects use `editorconfig`.
 
-For example[jQuery](https://github.com/jquery/jquery/blob/master/.editorconfig), `jQuery` `.editorconfig` configuration file on `Github`
+For example [jQuery](https://github.com/jquery/jquery/blob/master/.editorconfig), `jQuery` `.editorconfig` configuration file on `Github`.
 
 ```ini
 root = true
@@ -121,7 +121,7 @@ Comments should go on their own lines. EditorConfig files should be `UTF-8` enco
 
 ## HBuilderX editorconfig configuration
 
-In HBuilderX [Settings], there is an editorconfig switch, you can turn on or off `.editorconfig` as needed.
+In HBuilderX [Settings], there is an editorconfig switch, you can turn on/off `.editorconfig` as needed.
 
 <img src="/static/snapshots/tutorial/settings/editorconfig_en.png" style="zoom: 45%;border: 1px solid #eee; border-radius: 10px;" />
 
