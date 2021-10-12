@@ -15,8 +15,8 @@ HBuilderX支持通过多种方式打开终端：
 - 底部状态栏，点击终端图标
 - 快捷键方式：Windows (Alt+C); MacOSX (Ctrl+Shift+C)
 
-## 终端URL点击跳转到浏览器@open-links
+## Open Links@open-links
 
-> HBuilderX 3.2.10+, 支持点击终端终端的url，在浏览器打开
+> HBuilderX 3.2.10+, supports clicking on the url of the terminal and opening it in the browser
 
-<img src="/static/snapshots/tutorial/terminal/terminal_url.png" style="zoom: 50%; border: 1px solid #eee; border-radius: 10px;"/>
+<img src="/static/snapshots/tutorial/terminal/terminal_url_en.png" style="zoom: 50%; border: 1px solid #eee; border-radius: 10px;"/>
