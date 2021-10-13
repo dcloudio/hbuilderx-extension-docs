@@ -56,7 +56,7 @@ The shortcut key to go to the definition is `Alt+D`, and the mouse operation is 
 
 ## Goto Definition to New Column
 
-Another feature of HBuilderX is `Go to definition to column`.
+Another feature of HBuilderX is `Goto definition to column`.
 
 `ctrl+alt+left click`, you can open the defined code on the other side for easy viewing.
 
