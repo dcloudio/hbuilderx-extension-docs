@@ -136,7 +136,7 @@ Note: `$(userInput:Box description)` will pop up on the current screen, you can 
   }]
 ```
 
-### Example 6:  linux nginx start
+### Example 6:  Remote linux server, reload/start nginx service
 
 ```
 [{
@@ -146,7 +146,7 @@ Note: `$(userInput:Box description)` will pop up on the current screen, you can 
       "key":""
   },
 {
-      "name":"linux: reboot nginx",
+      "name":"linux: start nginx",
       "command":"ssh user@ip '/opt/nginx/sbin/nginx'",
       "type" : "terminal",
       "key":""
@@ -155,7 +155,7 @@ Note: `$(userInput:Box description)` will pop up on the current screen, you can 
 
 ### Example 7:  Convert markdown to pdf, doc, html with pandoc
 
-What is pandoc? Pandoc is a software, that can convert all kinds of document to another one. Pandoc is a swiss-army knife on files conversion. 
+What is pandoc? Pandoc is a software that can convert various file formats to each other. Pandoc is a swiss-army knife on files conversion. 
 
 After installation, it can be invoked through commands. [pandoc official website](http://www.pandoc.org)
 
@@ -200,19 +200,19 @@ After installation, it can be invoked through commands. [pandoc official website
 
 ```
 [{  
-    "name": "Beta application testing in https://www.pgyer.com/",  
+    "name": "Beta application testing on pgyer [https://www.pgyer.com/]",  
     "command": "curl -F 'file=@${file}' -F 'uKey=xxxxxxx' -F '_api_key=xxxxxx'    https://upload.pgyer.com/apiv1/app/upload",
       "type": "terminal",
       "key": "alt+shift+m"  
 }]  
 ```
-Note：You need to apply `uKey`、`_api_key`。 Website：https://www.pgyer.com/doc/api
+Note：You need to apply `uKey`、`_api_key`. Website：https://www.pgyer.com/doc/api
 
 ### Example 10：ftp
 see document [http://ask.dcloud.net.cn/article/35459](http://ask.dcloud.net.cn/article/35459)
 
 ###  Example 11：Color Picker
-The plug-in currently does not require external command configuration, see its documentation for details：[http://ext.dcloud.net.cn/plugin?id=146](http://ext.dcloud.net.cn/plugin?id=146)
+The plugin currently does not require external command configuration, see its documentation for details：[http://ext.dcloud.net.cn/plugin?id=146](http://ext.dcloud.net.cn/plugin?id=146)
 
 ### Example 12： Batch compress js files
 
@@ -241,7 +241,7 @@ Shortcut keys for external commands, for example:
 ```
 
 
-## External command variable description
+## Variable description of external commands
 
 Due to variables and shortcut keys, external commands are powerful.
 
