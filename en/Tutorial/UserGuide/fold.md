@@ -12,7 +12,7 @@ In the menu [Goto Fold], there are more ways to play with folding.
 
 ## Editor Fold Menu
 
-As shown in the figure below, right-click in the `line number` area to see the collapse-related menu.
+As shown in the figure below, right-click in the `line number` area to see the other folds menu.
 
 <img src="/static/snapshots/tutorial/fold/fold_menu_for_editor_en.png" class="hd-img" />
 
