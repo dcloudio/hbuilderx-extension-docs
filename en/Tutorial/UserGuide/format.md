@@ -40,7 +40,7 @@ Click the menu [Tools] [Settings -> Plugins], select the corresponding plugin, a
 
 ### Format style
 
-The indent rule of "Format Document" is set in the configuration in the menu [Tools --> Settings].
+The indentation rule of "Format Document" is set in the configuration of the menu [Tools --> Settings].
 
 <img src="/static/snapshots/tutorial/format/indent_en.png" class="hd-img"/>
 
@@ -58,11 +58,11 @@ Click the menu [Tools] [Custom Keybingdings], in [User Settings], copy the follo
 {"key":"ctrl+k","command":"editor.action.format"}
 ```
 
-### Automatically formatting when saving files?
+### Whether to support automatic formatting when saving a file?
 
-How to realize automatic formatting when saving files?
+How to realize automatic formatting when saving a file?
  
 Answer: Not supported.
 
-1. Normal web projects `do not support` automatic formatting while saving files.
+1. Normal web projects `do not support` automatic formatting while saving a file.
 2. For the vue-cli project, the same effect can be achieved by configuring `eslint` and using the function of `eslint automatic verification and repair`. For example, remove semicolon when saving the file.
