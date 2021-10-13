@@ -2,7 +2,7 @@
 
 External commands allow you to call external programs or command lines through menus, shortcut keys, etc. in HBuilderX.
 
-## Application scenarios
+## Use of Scenario
 
 - Compress and decompress file
 - Compress images 
@@ -12,15 +12,15 @@ External commands allow you to call external programs or command lines through m
 - Transfer files to the server
 - Execute certain services of the server (such as start, stop, restart nginx)
 - Download files
-- Install apk to the phone
-- Upload apps to the distribution platform (such as https://www.pgyer.com/)
+- Install apk
+- Upload apps to the distribution website (such as https://www.pgyer.com/)
 - Batch compression
 - Other automated operations
 - Upload files to Qiniu Cloud, Alibaba Cloud, etc.
 
 ## Where is external commands
 
-From the figure below, you can find several examples through the menu [Tools] --> [External Commands
+From the figure below, you can find several examples through the menu [Tools] --> [External Commands]
 
 <img src="/static/snapshots/tutorial/menu_tool/externalCommands_en.png" class="hd-img" />
 
@@ -32,7 +32,7 @@ Click the menu [Tools] --> [External Commands] --> [Custom External Commands], y
 
 **windows:**
 
-> Note： Most applications are installed in the "Program Files" directory, pay attention to spaces and slashes. Look at the following example,
+> Most applications are installed in the "Program Files" directory, pay attention to spaces and slashes. Look at the following example,
 
 ```shell
 [{
