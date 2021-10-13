@@ -35,7 +35,7 @@ In the current file, press `Ctrl + Shift + O` to find symbol.
 
 HBuilderX supports "find in selection". You can select some codes and entering the search text in the top search bar (shortcut key: [Ctrl+Shift+f]). HBuilderX will search string in selected code blocks and then you can `search`, `replace`, and `select all the same words` in the selected area.
 
-**Demo **
+**Example**
 
 Find in selection, The background of the selected area will be highlighted. Press the `esc` key to exit the search.
 
