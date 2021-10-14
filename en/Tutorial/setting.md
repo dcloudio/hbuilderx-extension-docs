@@ -61,7 +61,7 @@ settings view，Divided into 5 parts：
 - 智能计算制表符长度
 - 编辑器向下滚动一屏
 
-## uniapp运行设置@uniapp-run-setting
+## uni-app Running Configuration@uniapp-run-setting
 
 如果uniapp编译遇到`JavaScript heap out of memory`问题，请调整uniapp node启动内存参数。
 
