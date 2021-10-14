@@ -61,12 +61,24 @@ settings view，Divided into 5 parts：
 - 智能计算制表符长度
 - 编辑器向下滚动一屏
 
-## Sync with editor
+## uniapp运行设置@uniapp-run-setting
 
-<p>Project Explorer, in the upper right corner, click the icon <svg t="1631502274114" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="24803" width="14" height="14"><path d="M873.8304 552.96h-737.28c-22.528 0-40.96-18.432-40.96-40.96s18.432-40.96 40.96-40.96h737.28c22.528 0 40.96 18.432 40.96 40.96s-18.432 40.96-40.96 40.96zM873.8304 307.2h-737.28c-22.528 0-40.96-18.432-40.96-40.96s18.432-40.96 40.96-40.96h737.28c22.528 0 40.96 18.432 40.96 40.96s-18.432 40.96-40.96 40.96zM873.8304 798.72h-737.28c-22.528 0-40.96-18.432-40.96-40.96s18.432-40.96 40.96-40.96h737.28c22.528 0 40.96 18.432 40.96 40.96s-18.432 40.96-40.96 40.96z" p-id="24804" fill="#707070"></path></svg>, set the editor sync.</p>
+如果uniapp编译遇到`JavaScript heap out of memory`问题，请调整uniapp node启动内存参数。
 
-<img src="/static/snapshots/tutorial/settings/sync_en.png" style="zoom: 50%;border: 1px solid #eee;" />
+点击菜单【设置 - 运行设置 - uniapp运行设置】，如下图：
 
+<img src="/static/snapshots/tutorial/settings/uniapp_run_setting.png" style="zoom: 45%;border: 1px solid #eee;"/>
+
+- HBuilderX 内置node版本是`32`位。
+- 如果调整node启动内存参数后，仍遇到`JavaScript heap out of memory`问题，可下载64位的Node进行替换HBuilderX内置的Node版本。
+- 建议替换的Node版本为12.X，不建议使用高版本的Node。Node下载地址：[https://nodejs.org/dist/latest-v12.x/](https://nodejs.org/dist/latest-v12.x/)
+
+#### HBuilderX 内置Node路径
+Windows HBuilderX 内置Node路径：`HBuilderX安装目录/plugins/node`
+
+MacOSX HBuilderX 内置Node路径:
+- Alpha版本：`/Applications/HBuilderX-Alpha.app/Contents/HBuilderX/plugins/node`
+- 正式版: `/Applications/HBuilderX.app/Contents/HBuilderX/plugins/node`
 
 ## Question
 

@@ -49,3 +49,9 @@ In the project manager, select the project, right-click the menu, and click [Set
 **Redetect Project Type**：In some cases, HBuilderX does not correctly identify the project type (for example, uniapp project, the run menu cannot be displayed), causing the relevant menu to fail to be displayed correctly, which can be solved by re-identifying the project type.[Details](/Tutorial/ProjectType)
 
 **Rebuild Project Index**：In some cases, the code prompt is abnormal (for example, the image path cannot be prompt), It can be solved by `Rebuild Project Index`.
+
+## Sync with editor
+
+<p>Project Explorer, in the upper right corner, click the icon <svg t="1631502274114" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="24803" width="14" height="14"><path d="M873.8304 552.96h-737.28c-22.528 0-40.96-18.432-40.96-40.96s18.432-40.96 40.96-40.96h737.28c22.528 0 40.96 18.432 40.96 40.96s-18.432 40.96-40.96 40.96zM873.8304 307.2h-737.28c-22.528 0-40.96-18.432-40.96-40.96s18.432-40.96 40.96-40.96h737.28c22.528 0 40.96 18.432 40.96 40.96s-18.432 40.96-40.96 40.96zM873.8304 798.72h-737.28c-22.528 0-40.96-18.432-40.96-40.96s18.432-40.96 40.96-40.96h737.28c22.528 0 40.96 18.432 40.96 40.96s-18.432 40.96-40.96 40.96z" p-id="24804" fill="#707070"></path></svg>, set the editor sync.</p>
+
+<img src="/static/snapshots/tutorial/settings/sync_en.png" style="zoom: 50%;border: 1px solid #eee;" />

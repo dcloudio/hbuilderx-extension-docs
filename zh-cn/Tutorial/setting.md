@@ -71,6 +71,25 @@ HBuilderX，可自定义编辑器升级策略。
 - 智能计算制表符长度
 - 编辑器向下滚动一屏
 
+## uniapp运行设置@uniapp-run-setting
+
+如果uniapp编译遇到`JavaScript heap out of memory`问题，请调整uniapp node启动内存参数。
+
+点击菜单【设置 - 运行设置 - uniapp运行设置】，如下图：
+
+<img src="/static/snapshots/tutorial/settings/uniapp_run_setting.png" style="zoom: 45%;border: 1px solid #eee;"/>
+
+- HBuilderX 内置node版本是`32`位。
+- 如果调整node启动内存参数后，仍遇到`JavaScript heap out of memory`问题，可下载64位的Node进行替换HBuilderX内置的Node版本。
+- 建议替换的Node版本为12.X，不建议使用高版本的Node。Node下载地址：[https://nodejs.org/dist/latest-v12.x/](https://nodejs.org/dist/latest-v12.x/)
+
+#### HBuilderX 内置Node路径
+Windows HBuilderX 内置Node路径：`HBuilderX安装目录/plugins/node`
+
+MacOSX HBuilderX 内置Node路径:
+- Alpha版本：`/Applications/HBuilderX-Alpha.app/Contents/HBuilderX/plugins/node`
+- 正式版: `/Applications/HBuilderX.app/Contents/HBuilderX/plugins/node`
+
 ## 源码视图常见问题
 
 HBuilderX启动时，会加载`设置配置文件`, 文件损坏（文件格式错误，非json格式），会导致HBuilderX无法启动。
