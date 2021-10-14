@@ -13,6 +13,7 @@
     * [快捷键](/Tutorial/keybindings.md)
     * [项目](/Tutorial/project.md)
     * [插件安装](/Tutorial/PluginsInstall)
+    * [本地化](/Tutorial/localizedLanguage.md)
 * 进阶
     * [高效极客技巧](/Tutorial/UserGuide/skill.md)
     * [跳转/转到定义](/Tutorial/UserGuide/goto.md)
