@@ -31,7 +31,7 @@ In addition to the perfect prompt, there are clear instructions on the right sid
 
 ### Vue Methods Hint
 
-<img src="/static/snapshots/vue/hint_3.png" style="zoom: 80%;border: 1px solid #eee;" />
+<img src="/static/snapshots/vue/hint_3_en.png" class="hd-img" />
 
 ### Customized Components Hint
 

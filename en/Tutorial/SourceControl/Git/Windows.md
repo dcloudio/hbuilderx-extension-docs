@@ -12,7 +12,7 @@ The Git plug-in calls the `external Git command line tool`, So need to install`T
 
 HBuilderX Top menu, 【Tool】-> 【plug-in installation】. Open the plug-in installation window, Find Git, Click【Install】.
 
-<img src="/static/snapshots/tutorial/source_control/plugin_window.png" style="zoom:70%" />
+<img src="/static/snapshots/tutorial/source_control/plugin_window_en.png" style="zoom:70%" />
 
 ## clone and import
 

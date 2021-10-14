@@ -2,13 +2,13 @@
 
 The code assistant of HBuilderX, you can press `alt+number` to select an item directly, similar to the number selection of Chinese input method
 
-<img src="/static/snapshots/tutorial/codehelper.png" style="zoom: 90%;" />
+<img src="/static/snapshots/tutorial/language/codehelper_en.png" class="hd-img" />
 
 ## Match highlight 
 
 > Only applicable to HBuilderX 3.1.13+ version
 
-<img src="/static/snapshots/tutorial/code_highlight.jpg" style="zoom: 50%;" />
+<img src="/static/snapshots/tutorial/language/code_highlight_en.png" class="hd-img" />
 
 ## Code assistant window switch selection mode
 
@@ -16,7 +16,7 @@ The code assistant of HBuilderX, you can press `alt+number` to select an item di
 
 `Alt+number` option is required by default
 
-<img src="/static/snapshots/tutorial/codehelper_selected.jpg" style="zoom: 50%;" />
+<img src="/static/snapshots/tutorial/language/codehelper_selected_setting_en.png" class="hd-img" />
 
 ## Code assistant configuration
 
@@ -27,7 +27,7 @@ Open the menu [Settings] [Editor Settings], you can see the relevant configurati
 - Adjust the code assistant trigger character
 - Tab automatically inserts the selected item in the code assistant
 
-<img src="/static/snapshots/tutorial/codehelper_config.png" style="zoom: 90%;" />
+<img src="/static/snapshots/tutorial/language/codehelper_config_setting_en.png" class="hd-img" />
 
 ## Turn off code assistant
 

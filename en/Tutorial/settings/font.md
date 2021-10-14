@@ -6,7 +6,7 @@ Windows: Menu [Tools - Settings - Common]
 
 MacOSX: Menu [HBuilderX - Preferences -Commonly used]
 
-<img src="/static/snapshots/tutorial/font_1.png" />
+<img src="/static/snapshots/tutorial/settings/font_en.png" class="hd-img" />
 
 ### How to Customize the Font?
 

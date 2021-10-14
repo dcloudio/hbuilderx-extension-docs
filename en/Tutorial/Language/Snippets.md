@@ -8,7 +8,7 @@ For example, we often type the `if...else` structure. In HBuilderX, you can dire
 
 input `ife`
 
-<img src="/static/snapshots/tutorial/snippets_3.png" style="zoom: 90%;" />
+<img src="/static/snapshots/tutorial/language/snippets_3_en.png" class="hd-img" />
 
 Generate if structure after carriage return.
 
