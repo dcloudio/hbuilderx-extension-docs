@@ -69,16 +69,7 @@
 
 <img src="/static/snapshots/tutorial/settings/uniapp_run_setting.png" style="zoom: 45%;border: 1px solid #eee;"/>
 
-- HBuilderX 內置node版本是`32`位。
-- 如果調整node啓動內存參數後，仍遇到`JavaScript heap out of memory`問題，可下載64位的Node進行替換HBuilderX內置的Node版本。
-- 建議替換的Node版本爲12.X，不建議使用高版本的Node。Node下載地址：[https://nodejs.org/dist/latest-v12.x/](https://nodejs.org/dist/latest-v12.x/)
-
-#### HBuilderX 內置Node路徑
-Windows HBuilderX 內置Node路徑：`HBuilderX安裝目錄/plugins/node`
-
-MacOSX HBuilderX 內置Node路徑:
-- Alpha版本：`/Applications/HBuilderX-Alpha.app/Contents/HBuilderX/plugins/node`
-- 正式版: `/Applications/HBuilderX.app/Contents/HBuilderX/plugins/node`
+如果调整node启动内存参数，仍无法解决此问题，建议优化项目或代码。
 
 ## 源碼視圖常見問題
 
