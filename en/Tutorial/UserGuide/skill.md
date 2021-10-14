@@ -1,24 +1,16 @@
-# Effective geek skills
+# Efficient Geek skills
 
-Generally, ide and editor are two product categories.
-
-IDE focuses on the grammatical analysis, prompting, transition to definition, and debugging of a certain language. Generally heavier.
-
-The editor is for general text processing, providing more efficient general text processing capabilities, relatively lightweight, but insufficient grammatical analysis capabilities.
-
-HBuilderX, positioning is the perfect combination of ide and editor, then HBuilderX will provide lightweight and world-class efficient word processing capabilities.
-
-After reading these, you will be amazed, it turns out that geeks play like this.
+Generally, ide and editor are two product categories. IDE focuses on the syntax analysis, prompting, goto definition and debugging of a program language. The editor focus on text processing, providing more efficient text processing capabilities. The latest HBuilderX provide lightweight and world-class efficient text processing. After reading the following content, you will be amazed by the powerful functions of HBuilderX.
 
 ### Drag-free selection
 
-Dragging and selecting a piece of text with the mouse is an easy operation to make the index finger cramp. Especially the touchpad is more painful. But reciting many related shortcuts is just as painful.
+Dragging and selecting a piece of text with the mouse is not an easy task. It is also painful to use the touchpad and remember many shortcuts.
 
-HBuilderX provides a more friendly way: `smart double-click` and `Ctrl+ Enlarge selection`.
+HBuilderX provides a more friendly way: `intelligent double-clicking` and `Ctrl+ Enlarge selection`.
 
-### Smart double-click
+### Intelligent double-clicking
 
-In HBuilderX, any characters with special points can be double-clicked intelligently.
+In HBuilderX, some special characters support intelligent double-clicking.
 
 - Double-click the inside of `quotation marks/brackets` to select the content in `quotation marks/brackets`
 - Double-click on both sides of the `comma` to select a paragraph before or after the comma
@@ -37,10 +29,10 @@ In HBuilderX, any characters with special points can be double-clicked intellige
 - Double-click the beginning of the grammar delimiter to select markdown images, hyperlinks, bold, italic, code and other grammatical areas
 - [JSON smart double-click](/Tutorial/Language/json?id=Smart double-click, quickly select an array or key-value pair)
 
-The following is a gif legend, double-click to select the tag and surround the parent tag
+The following is a gif example, double-click to select the tag and surround the parent tag
 
-1. Double-click the beginning or end of `div tag` to select this `tag`, which is the left side of the beginning `<` or the right side of the end `>`. Of course, double-click `if`, double-click `indentation`, double-click `inside bracket quotation mark`...many positions can be selected by smart double-clicking. See the selection menu of HBuilder for details.
-2. Press `Ctrl+]` to surround, you can add parent tags at the beginning and end of this selection, and the cursor blinks at the same time. If you are in js, pressing `Ctrl+]` does not enclose the tag, but encloses libraries such as `if`, `for`, etc., so that you can quickly put a piece of code into the `if` block.
+1. Double-click the beginning or end of `div tag` to select this `tag`, which is the left side of the beginning `<` or the right side of the end `>`. Of course, double-click `if`, double-click `indentation`, double-click `inside bracket quotation mark`...many positions can be selected by intelligent double-clicking. See the `select` menu of HBuilderX for details.
+2. Press `Ctrl+]` to surround, you can add parent tags at the beginning and end of this selection, and the cursor blinks at the same time. If you are in js file, pressing `Ctrl+]` does not enclose the tag, but encloses libraries such as `if`, `for`, etc., so that you can quickly put a piece of code into the `if` block.
 3. Enter `div` to add surrounding tags at the beginning and end
 
 <img src="/static/snapshots/tutorial/dbclick.gif" />
@@ -50,11 +42,11 @@ The following is a gif legend, double-click to select the tag and surround the p
 <img src="/static/snapshots/tutorial/more_cursor.gif" />
 
 
-### Expand the constituency
+### Expand the selection
 
 `=` is the default key position of `+`, so `Ctrl+=` is actually pressing the `Ctrl` key and the `+` sign together.
 
-In HBuilderX, you can intelligently judge the selection area, continue to expand the selection area, and quickly select the selection area you need without the mouse.
+HBuilderX can decide selection area, continue to expand the area without the mouse.
 
 <img src="/static/snapshots/tutorial/selection_expand.gif" />
 
