@@ -12,7 +12,7 @@ HBuilderX 3.2.9+，支持本地语言扩展。
 
 您也可以手动切换语言，点击HBuilderX顶部菜单【工具 - Appearance Language】。
 
-<img src="/static/snapshots/tutorial/settings/switch_language.png" style="zoom: 50%;border-radius: 10px;" />
+<img src="/static/snapshots/tutorial/settings/switch_language-en.png" style="zoom: 50%;border-radius: 10px;" />
 
 ## 安装其它语言包
 
