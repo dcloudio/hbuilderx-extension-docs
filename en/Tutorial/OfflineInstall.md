@@ -1,16 +1,16 @@
-# Offline installation
+# Install plugins offline
 
 ## windows
 
-1. Open Resource Manager and go to the HBuilderX installation directory
-2. Go to the 'plugins' directory
-3. Put the plug-in folder in this directory. (If it is a ZIP package, decompress it)
+1. Open Resource Manager and find the HBuilderX installation directory
+2. Open the 'plugins' directory of HBuilderX
+3. Copy/paste the downloaded HBuilderX plugins to the current directory. (Decompress the archive file if it is a ZIP package)
 4. Restart the HBuilderX editor
 
 ## Mac
 
-1. Open the system terminal and run the following command to open the HBuilderX plug-in directory (note: on MAC, the official version is different from the alpha directory).
-2. Put the plugins folder, such as the zip package, into the 'plugins' directory
+1. Open the system terminal and run the following command to open the HBuilderX plugins directory (note: On MAC, The official version and the alpha version have different directories).
+2. Copy/paste the downloaded HBuilderX plugins to the current directory. (Decompress the archive file if it is a ZIP package)
 3. Restart the HBuilderX editor
 
 Release:
@@ -25,4 +25,4 @@ open /Applications/HBuilderX-Alpha.app/Contents/HBuilderX/plugins/
 
 ## `Notes`
 
-If 'node_modules' is not available in the plug-in, you need to manually run' NPM install '
+If "node_modules" does not exist in the plugin, you have to manually run "NPM install".
