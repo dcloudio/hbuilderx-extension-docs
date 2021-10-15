@@ -31,6 +31,7 @@ HBuilderX supports switching between main Window and single-project Window.
 |	MacOSX|ctrl+F6	|
 | Windows  |Alt+`    |
 
+Notes：For some MacBooks (with Touch Bar function), the shortcut key is: command+`
 
 ## Open the project in the taskbar
 
