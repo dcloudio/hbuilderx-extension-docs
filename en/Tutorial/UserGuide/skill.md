@@ -43,11 +43,11 @@ The following is a gif legend, double-click to select the tag and surround the p
 2. Press `Ctrl+]` to surround, you can add parent tags at the beginning and end of this selection, and the cursor blinks at the same time. If you are in js, pressing `Ctrl+]` does not enclose the tag, but encloses libraries such as `if`, `for`, etc., so that you can quickly put a piece of code into the `if` block.
 3. Enter `div` to add surrounding tags at the beginning and end
 
-<img src="/static/snapshots/tutorial/dbclick.gif" />
+<img src="/static/snapshots/tutorial/skill/dbclick.gif" />
 
 ### Multi-cursor
 
-<img src="/static/snapshots/tutorial/more_cursor.gif" />
+<img src="/static/snapshots/tutorial/skill/more_cursor_en.gif" />
 
 
 ### Expand the constituency
@@ -56,7 +56,7 @@ The following is a gif legend, double-click to select the tag and surround the p
 
 In HBuilderX, you can intelligently judge the selection area, continue to expand the selection area, and quickly select the selection area you need without the mouse.
 
-<img src="/static/snapshots/tutorial/selection_expand.gif" />
+<img src="/static/snapshots/tutorial/skill/selection_expand.gif" />
 
 
 ### Anti-encirclement
@@ -64,7 +64,7 @@ In HBuilderX, you can intelligently judge the selection area, continue to expand
 1. Double-click the beginning of tag p to select the tag.
 2. Press "Ctrl+Shift+]" to remove the tag p and automatically process the indentation of the child nodes.
 
-<img src="/static/snapshots/tutorial/selection_1.gif" />
+<img src="/static/snapshots/tutorial/skill/selection_1.gif" />
 
 One more thing to mention here is HBuilderX's concept of shortcut keys, which is symbolization, not alphabetization. The shortcut keys of many tools are control keys + function a letter in English words, which is extremely difficult to remember.
 
@@ -78,7 +78,7 @@ The reverse operation or enhancement operation is generally to add `Shift`, for 
 2. In the following figure, press to select the same grammatical word, and at the same time select the `div` at the beginning and end of the `tag`, but not the div of the child node.
 3. Then you can easily rename the original `div` to `p`
 
-<img src="/static/snapshots/tutorial/selection_2.gif" />
+<img src="/static/snapshots/tutorial/skill/selection_2.gif" />
 
 Remark:
 -If you want to choose matching parentheses, you cannot rely on the same words. Selecting the same grammatical word will select the matching 2 left and right brackets
@@ -92,7 +92,7 @@ MacOSX shortcut keys：`command+shift+d`
 
 Windows shortcut keys：`ctrl+shift+e`
 
-<img src="/static/snapshots/tutorial/renameTag.gif" style="zoom: 50%;border: 1px solid #eee; border-radius: 5px;" >
+<img src="/static/snapshots/tutorial/skill/renameTag.gif" style="zoom: 50%;border: 1px solid #eee; border-radius: 5px;" >
 
 ### swap selection content
 
@@ -104,11 +104,11 @@ Let’s take a look at HBuilderX’s `Ctrl+Shift+x` interactive selection, which
 2. After pressing Ctrl, continue to double-click the inside of the quotation mark after the second style attribute to select the selection within the 2 quotation marks.
 3. Press `Ctrl+Shift+x` to exchange the contents of the style attribute.
 
-<img src="/static/snapshots/tutorial/selection_swap_1.gif" />
+<img src="/static/snapshots/tutorial/skill/selection_swap_1.gif" />
 
 If you don’t select the content, place the cursor on two lines, and you can directly exchange the content of these two lines
 
-<img src="/static/snapshots/tutorial/selection_swap_2.gif" />
+<img src="/static/snapshots/tutorial/skill/selection_swap_2.gif" />
 
 
 ### Undo the last multi-selection area or multi-cursor
@@ -119,7 +119,7 @@ If you have selected too many or wrong selections, don’t worry about re-select
 2. Press `Ctrl+e` to select the same word
 3. Press `Ctrl+Shift+z`, no longer select the last word.
 
-<img src="/static/snapshots/tutorial/selection_cancel.gif" />
+<img src="/static/snapshots/tutorial/skill/selection_cancel.gif" />
 
 If you select one more word, you can click `Ctrl+right mouse button` to cancel a selection.
 
@@ -130,7 +130,7 @@ Skip the current word and select the next word, `Alt+Shift+e` (mac is `ctrl+shif
 
 The example is a shortcut operation when combining css into one line
 
-<img src="/static/snapshots/tutorial/selection_merge.gif" />
+<img src="/static/snapshots/tutorial/skill/selection_merge.gif" />
 
 1. Double-click inside `{` to select class
 2. Press `Ctrl+double-click` to select another class
@@ -145,7 +145,7 @@ The adjustment of if block is very common. In addition to enclosing and deenclos
 2. Press `Ctrl+\` to add the cursor at the beginning and end of the selection to change to multi-cursor mode
 3. Press `Ctrl+/` to comment out the first and last lines of the selection
 
-<img src="/static/snapshots/tutorial/selection_if.gif" />
+<img src="/static/snapshots/tutorial/skill/selection_if.gif" />
 
 ### Other
 - [Go to Definition](/Tutorial/UserGuide/goto?id=转到定义)
