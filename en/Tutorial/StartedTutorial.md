@@ -147,7 +147,7 @@ If you don't like to use tabs and prefer to use spaces, you can also adjust them
 
 To adjust the formatting settings, refer to the menu tool-plug-in configuration. hx supports several formatting plug-ins, and they all have their own configuration definition files. Please modify the settings according to the instructions in the plug-in configuration.
 
-<img src="/static/snapshots/started_tutorial/plugins-code-format.jpg" style="zoom: 80%;border:1px solid #eee;border-radius: 5px;" />
+<img src="/static/snapshots/started_tutorial/plugins-code-format-en.png" class="hd-img" />
 
 
 In the menu edit-indent, the indentation of the file can be changed from `tab` to `space` or from `space` to `tab`.
