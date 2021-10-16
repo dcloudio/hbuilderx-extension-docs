@@ -30,7 +30,7 @@ FAQ：[HBuilderX Shortcut key concept.](/Tutorial/Other/keybindings_idea)
 |Alt+Shift |Scroll left one screen |Scroll right one screen |
 |Ctrl+Alt | Toggle tabs to the left | Toggle tabs to the right |
 
-Note: MacoSX system, `ctrl` corresponds to `command`
+Note: MacOSX system, `ctrl` corresponds to `command`
 
 ## HBuilderX Command List
 
