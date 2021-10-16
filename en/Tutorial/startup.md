@@ -1,8 +1,8 @@
 # StartUp
 
-After starting HBuilderX for the first time, you will see a selection window where you can select your favorite `theme` and `shortcut keys`.
+After the first launch HBuilderX, you will see a selection window where you can select your favorite themes and shortcut keys.
 
-After clicking the [Start Experience] button, you will see a "Readme", which briefly introduces the features of HBuilderX. Click the `x` on the tab to close this file.
+Click the [Start Experience] button, and you will see a "Readme" page that briefly introduces the features of HBuilderX. Click the "x" on the tab to close this file.
 
 To experience HBuilderX, start with a new project.
 
