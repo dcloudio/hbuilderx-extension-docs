@@ -1,39 +1,39 @@
 # Efficient Geek skills
 
-Generally, ide and editor are two product categories. IDE focuses on the syntax analysis, prompting, goto definition and debugging of a program language. The editor focus on text processing, providing more efficient text processing capabilities. The latest HBuilderX provide lightweight and world-class efficient text processing. After reading the following content, you will be amazed by the powerful functions of HBuilderX.
+Generally, IDE and editor are different product categories. IDE focuses on the syntax analysis, prompting, goto definition and debugging of a programming language. The editor focus on text processing and provides more powerful text processing than IDE. The latest HBuilderX provides lightweight and world-class text processing. After reading the following content, you will be amazed by the powerful functions of HBuilderX.
 
 ### Drag-free selection
 
-Dragging and selecting a piece of text with the mouse is not an easy task. It is also painful to use the touchpad and remember many shortcuts.
+When frequently dragging and selecting a block of code with the mouse is not an easy task. It is also painful to use the touchpad and remember many shortcuts.
 
 HBuilderX provides a more friendly way: `intelligent double-clicking` and `Ctrl+ Enlarge selection`.
 
 ### Intelligent double-clicking
 
-In HBuilderX, some special characters support intelligent double-clicking.
+In HBuilderX, many special symbols support intelligent double-clicking.
 
 - Double-click the inside of `quotation marks/brackets` to select the content in `quotation marks/brackets`
-- Double-click on both sides of the `comma` to select a paragraph before or after the comma
-- Double-click the `end of line` to select the line (without carriage return)
+- Double-click on both sides of the `comma` to select a block of code before or after the comma
+- Double-click the `end of line` to select the entire line (without carriage return)
 - Double-click the `conjunction symbol` (-_) to select the entire word
-- Double-click the beginning of the content at the beginning of the collapsed line and select the collapsed paragraph
-- Double-click `line beginning indentation` to select the same indented paragraph
-- Double click `list symbol` to select the list paragraph
-- Double-click the beginning or end of `Tag` to select the entire tag
-- Double-click the attribute assignment equal sign `=`, select the Html attribute
+- Double-click the beginning of the content at the beginning of the collapsed line and select the collapsed section
+- Double-click the beginning of the indent to select the entire section with the same indent
+- Double click `list symbol` to select the entire list block
+- Double-click the beginning or end of any `tag` to select the entire tag block
+- Double-click equal sign `=` in the html attribute, select the entire html attribute
 - Double-click on keywords such as `if`, `function`, etc. to select the entire enclosing area
-- Double click `semicolon`, select js and other languages; paragraph before semicolon
-- Double-click on the left side of the `css` class name and select the Css class
-- Double click `Comment symbol` to select the comment area
-- Double click `#` to select markdown title paragraph
+- Double-click `semicolon`, select entire block before semicolon
+- Double-click on the left side of the `css` class name and select the entire css class
+- Double-click `comment symbol` to select comment block
+- Double-click `#` to select entire markdown section
 - Double-click the beginning of the grammar delimiter to select markdown images, hyperlinks, bold, italic, code and other grammatical areas
-- [JSON smart double-click](/Tutorial/Language/json?id=Smart double-click, quickly select an array or key-value pair)
+- [JSON intelligent double-click](/Tutorial/Language/json?id=Smart double-click, quickly select an array or key-value pair)
 
-The following is a gif example, double-click to select the tag and surround the parent tag
+The following is an example. Double-click to select the tag and surround the parent tag
 
-1. Double-click the beginning or end of `div tag` to select this `tag`, which is the left side of the beginning `<` or the right side of the end `>`. Of course, double-click `if`, double-click `indentation`, double-click `inside bracket quotation mark`...many positions can be selected by intelligent double-clicking. See the `select` menu of HBuilderX for details.
-2. Press `Ctrl+]` to surround, you can add parent tags at the beginning and end of this selection, and the cursor blinks at the same time. If you are in js file, pressing `Ctrl+]` does not enclose the tag, but encloses libraries such as `if`, `for`, etc., so that you can quickly put a piece of code into the `if` block.
-3. Enter `div` to add surrounding tags at the beginning and end
+1. Double-click the beginning or end of `div tag` to select entire `tag` and click position is the left side of the beginning `<` or the right side of the end `>`. In addition to, many positions can be selected by intelligent double-clicking, such as double-click `if`, double-click `indentation`, double-click `inside bracket quotation mark`, etc. See the `select` menu of HBuilderX for more details.
+2. Press `Ctrl+]` to surround, you can add parent tags at the beginning and end of this selection, the cursor blinks at the same time. If you are in js file, pressing `Ctrl+]` does not enclose the tag, but encloses code block such as `if`, `for`, etc., then you can quickly add a block of code into the `if` bracket.
+3. Enter `div` to add surrounding tags at the beginning and end of block.
 
 <img src="/static/snapshots/tutorial/dbclick.gif" />
 
@@ -44,36 +44,36 @@ The following is a gif example, double-click to select the tag and surround the 
 
 ### Expand the selection
 
-`=` is the default key position of `+`, so `Ctrl+=` is actually pressing the `Ctrl` key and the `+` sign together.
+`Ctrl+=` is pressing the `Ctrl` key and the `+` key together.
 
-HBuilderX can decide selection area, continue to expand the area without the mouse.
+HBuilderX can intelligently judge the selected area, and use the shortcut key `Ctrl+=` to continue to expand the area without using the mouse.
 
 <img src="/static/snapshots/tutorial/selection_expand.gif" />
 
 
-### Anti-encirclement
+### Remove tag
 
-1. Double-click the beginning of tag p to select the tag.
+1. Double-click the beginning of tag p and select the block of tag p.
 2. Press "Ctrl+Shift+]" to remove the tag p and automatically process the indentation of the child nodes.
 
 <img src="/static/snapshots/tutorial/selection_1.gif" />
 
-One more thing to mention here is HBuilderX's concept of shortcut keys, which is symbolization, not alphabetization. The shortcut keys of many tools are control keys + function a letter in English words, which is extremely difficult to remember.
+HBuilderX uses symbolization to improve the memory of shortcut keys. Because of the alphabetization, it is more difficult to remember.
 
-Symbolization makes it easier to memorize shortcut keys, such as `Ctrl+]` for enclosing.
+Symbolization makes it easier to memorize shortcut keys, for example `Ctrl+]` is to add tag.
 
-The reverse operation or enhancement operation is generally to add `Shift`, for example, `Ctrl+Shift+]` is anti-enclosure.
+The reverse operation or enhancement operation is generally to add `Shift`, for example, `Ctrl+Shift+]` is to remove tag.
 
-### Select the same grammatical word and skip a word
+### Select words and skip a word
 
-1. In the figure below, using the normal selection of the same word `Ctrl+e` (MacOSX: `Cmd+d`), all divs will be selected. But using `Ctrl+Shift+e` (MacOSX: `Cmd+Shift+d`), it will intelligently recognize the grammar and eliminate irrelevant words.
-2. In the following figure, press to select the same grammatical word, and at the same time select the `div` at the beginning and end of the `tag`, but not the div of the child node.
+1. In the figure below, all 'div' words will be selected with shortcut key `Ctrl+e` (MacOSX: `Cmd+d`). But using `Ctrl+Shift+e` (MacOSX: `Cmd+Shift+d`), HBuilderX will skip irrelevant word through intellisense syntax analysis.
+2. In the following figure, press `Ctrl+Shift+e` (MacOSX: `Cmd+Shift+d`), then only select pairs of `div` tags, and exclude tags of the same type in child nodes.
 3. Then you can easily rename the original `div` to `p`
 
 <img src="/static/snapshots/tutorial/selection_2.gif" />
 
 Remark:
--If you want to choose matching parentheses, you cannot rely on the same words. Selecting the same grammatical word will select the matching 2 left and right brackets
+-If you want to choose a paried tag only, you cannot rely on the same words. Selecting the same grammatical word will select the matching 2 left and right brackets
 -Batch selection of all the same words is `Ctrl+Alt+e` (MacOSX: `ctrl+alt+d`)
 
 ### Select All Reference Symbols
