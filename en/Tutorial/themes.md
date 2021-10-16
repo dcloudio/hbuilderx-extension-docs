@@ -45,7 +45,7 @@ In settings.json file of source view, you can customize the theme color you like
 
 ### Which code areas can be customized?
 
-Custom code color supports all code partition (token) colors such as `comment`, `string`, `keyword`, `variable`, and `tag` etc.
+Custom code color supports setting different colors for code snippets, such as `comment`, `string`, `keyword`, `variable`, and `tag`, etc.
 
 Currently supported languages include: `JavaScript(ES6+)`、`HTML(ES6+)`、`Vue`、`CSS`、`Less`、`SCSS`、`Stylus`、`Typescript`、`Markdown`、`JSON`。
 
@@ -53,7 +53,7 @@ Currently supported languages include: `JavaScript(ES6+)`、`HTML(ES6+)`、`Vue`
 
 In settings.json file of source view, you can customize the theme color you like by overriding the "editor.tokenColorCustomizations" field.
 
-You can copy the settings of [Custom theme parameters](/Tutorial/Other/themes_code.md) to override `rules` field of themes （`[Default]`、`[Monokai]`、`[Atom One Dark]`）, and then just change the color value.
+You can copy the settings of [Custom theme parameters](/Tutorial/Other/themes_code.md) to override `rules` block of themes （`[Default]`、`[Monokai]`、`[Atom One Dark]`）, and then just change the color value.
 
 > Note：This method is only suitable for people who are familiar with the rules of the "settings.json" file. We recommend that you use the "color assist function" to update the "settings.json" file.
 
