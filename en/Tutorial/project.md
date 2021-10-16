@@ -1,22 +1,22 @@
 # Project
 
-With HBuilderX, let's start by creating a project.
+Study HBuilderX, start with creating a project.
 
-The following will introduce project create, import, close, create alias, remove, rename project, redetect project type, rebuild project index, etc.
+From the following contents, you will learn to create projects, import projects, close projects, create alias for projects, remove projects, rename projects, re-identify projects type, rebuild projects indexes, etc.
 
 ## Import project/directory
 
 Click the top menu [File - Import], or click the menu [Open Directory] to import the project to HBuilderX.
 
-HBuilderX, supports importing projects from `svn`, `Git`, and `local`.
+HBuilderX supports to import projects from `SVN`, `Git`, and `Local Directory`.
 
-To import projects into svn and git, you need to install the svn and git plugins first.
+Please install the svn and git plugins if you want to import projects from SVN or GIT.
 
 <img src="/static/snapshots/tutorial/project/project_import_en.png" style="zoom: 45%; border-radius: 20px;" />
 
-## Project Create
+## Create Project
 
-HBuilderX supports a variety of project types, mainly: web projects, 5+App projects, uni-app projects, WeChat mini program, QuickApp, wap2app, etc.[Details](/Tutorial/Other/ProjectType)    
+HBuilderX supports a variety of project types, mainly: web projects, 5+App projects, uni-app projects, WeChat mini program, QuickApp, wap2app, etc. [More Details](/Tutorial/Other/ProjectType)    
 
 - Welcome page, click on `New Project`
 - Toolbar, The first icon
@@ -24,28 +24,34 @@ HBuilderX supports a variety of project types, mainly: web projects, 5+App proje
 
 <img src="/static/snapshots/tutorial/project/project_new_en.png" style="zoom: 40%; border: 1px solid #eee;" />
 
-## Project Closed
+## Close Project
 
-When there are too many projects in the project manager, you can `close project`;
+You can `close project` to avoid listing too many projects in the project explorer.
 
-In the project manager, select the project, right-click the menu, and click [Close Project] to move the project to the list of [Closed Projects].
+In the project explorer, select the project, right-click the menu, and click [Close Project] to move the project to the list of [Closed Projects].
 
-Of course, you can also open the required project from the [Closed Project] and move it to the project manager.
+Of course, you can also open the required project from the [Closed Project] and move it to the project explorer.
 
 <img src="/static/snapshots/tutorial/project/project_close.png" style="zoom: 85%;" />
 
 ## Porject Alias
 
-HBuilderX，Support setting alias name for projects 
+HBuilderX supports to set/update alias name for projects. 
 
-In the project manager, select the project, right-click the menu, and click [Setting Alias Name] to create an alias.
+In the project explorer, select the project, right-click the menu, and click [Setting Alias Name] to create an alias.
 
 <img src="/static/snapshots/tutorial/project/project_alias_en.png" style="zoom: 45%;border: 1px solid #eee;border-radius: 25px;" />
 
-## Other
+## Others
 
-**Remove Project**：You can remove the project from the project manager, or move it to the recycle bin.
+**Remove Project**：You can remove the project from the project explorer, or move it to the recycle bin.
 
-**Redetect Project Type**：In some cases, HBuilderX does not correctly identify the project type (for example, uniapp project, the run menu cannot be displayed), causing the relevant menu to fail to be displayed correctly, which can be solved by re-identifying the project type.[Details](/Tutorial/ProjectType)
+**Re-identify Project Type**：In some cases, HBuilderX does not correctly identify the project type (for example, uniapp project, the run menu cannot be displayed), causing the relevant menu to fail to be displayed correctly, which can be solved by re-identifying the project type.[Details](/Tutorial/ProjectType)
 
 **Rebuild Project Index**：In some cases, the code prompt is abnormal (for example, the image path cannot be prompt), It can be solved by `Rebuild Project Index`.
+
+## Sync with editor
+
+<p>In project explorer，right-top corner，click <svg t="1631502274114" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="24803" width="14" height="14"><path d="M873.8304 552.96h-737.28c-22.528 0-40.96-18.432-40.96-40.96s18.432-40.96 40.96-40.96h737.28c22.528 0 40.96 18.432 40.96 40.96s-18.432 40.96-40.96 40.96zM873.8304 307.2h-737.28c-22.528 0-40.96-18.432-40.96-40.96s18.432-40.96 40.96-40.96h737.28c22.528 0 40.96 18.432 40.96 40.96s-18.432 40.96-40.96 40.96zM873.8304 798.72h-737.28c-22.528 0-40.96-18.432-40.96-40.96s18.432-40.96 40.96-40.96h737.28c22.528 0 40.96 18.432 40.96 40.96s-18.432 40.96-40.96 40.96z" p-id="24804" fill="#707070"></path></svg> icon</svg>，set `Sync with Editor`</p>
+
+<img src="/static/snapshots/tutorial/settings/sync.png" style="zoom: 50%;border: 1px solid #eee;" />
