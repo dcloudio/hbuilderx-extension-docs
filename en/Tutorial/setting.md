@@ -27,8 +27,8 @@ Settings page include 5 tabs：
 - Insert Spaces when Pressing Tab
 - Auto Save when Focus Losed (default is off)
 - Language Association
-- Filter configuration of project manager
-- Search for directories not included by default：`.git`、`.cvs`、`.svn`、`node_modules`、`unpackage`
+- Exclude Directories Pattern For Find
+- Search For Directories That Are Not Included By Default：`.git`、`.cvs`、`.svn`、`node_modules`、`unpackage`
 - Maximum Number of Terminals Allowed to be open：default value is 8
 - Local History[Details](/Tutorial/UserGuide/LocalHistory)
 - Expand/Collapse of Directory when Single Click (turn on is single click, turn off is double click)
@@ -38,7 +38,7 @@ Settings page include 5 tabs：
 
 In HBuilderX, you can choose the update method.
 
-"Check for updates at startup" means that HBuilderX will check for any updates when HBuilderX startup. If there are any new updates, a prompt will pop up.
+"Check for updates at startup" means that HBuilderX will check for any updates when HBuilderX startup. If there are any new updates, a prompt will popup.
 
 <img src="/static/snapshots/tutorial/settings/upgrade_en.png" class="hd-img" />
 
@@ -66,16 +66,14 @@ In HBuilderX, you can choose the update method.
 - Enable Automatic Character Matching
 - Chinese Punctuation Interference-free Input
 - Text Separator
-- Insert Modifier Keys Used By Mulitple Cursors
+- Insert Modifier Keys Used By Multiple Cursors
 - Use Ctrl + Mouse Wheel to Zoom Editor
 - Auto Guess of Tab Size
 - Allows Scrolling One Page Below the Last Line
 
 
-## Questions For Source View
+## Problem of Source View
 
-The `settings.json` file will be loaded when HBuilderX startup. But if this file is damaged (file format error, wrong json format), HBuilderX will not startup.
+The `settings.json` file will be loaded when HBuilderX startup. But if this file is damaged (wrong json format), HBuilderX will not startup.
 
 So please be careful to modify "source view".
-
-When modifying the source code view, please modify it carefully.
