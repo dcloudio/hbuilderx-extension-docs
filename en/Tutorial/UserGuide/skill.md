@@ -73,7 +73,7 @@ The reverse operation or enhancement operation is generally to add `Shift`, for 
 <img src="/static/snapshots/tutorial/selection_2.gif" />
 
 Remark:
--If you want to choose a paried tag only, you cannot rely on the same words. Selecting the same grammatical word will select the matching 2 left and right brackets
+-If you want to choose a pairing tag only, you cannot with shortcut key `Ctrl+e` (MacOSX: `Cmd+d`). You should use shortcut key `Ctrl+Shift+e` (MacOSX: `Cmd+Shift+d`)
 -Batch selection of all the same words is `Ctrl+Alt+e` (MacOSX: `ctrl+alt+d`)
 
 ### Select All Reference Symbols
@@ -88,50 +88,50 @@ Windows shortcut keys：`ctrl+shift+e`
 
 ### swap selection content
 
-When you need to interact with the contents of two selection areas, select a, cut, click in front of b, paste, select b, find the position of a before, click, paste... Such a long operation is too inefficient.
+Usually, we interact with the content of the two selection blocks through the following operations, select a, cut, click in front of b, paste, select b, find the position of a before, click, paste... That is a inefficient operations.
 
-Let’s take a look at HBuilderX’s `Ctrl+Shift+x` interactive selection, which is an enhanced version of Ctrl+x.
+The `Ctrl+Shift+x` interactive selection of HBuilderX is an enhanced operation of Ctrl+x.
 
-1. Double-click the inside of the quotation mark after the first style attribute to select the content of the quotation mark.
-2. After pressing Ctrl, continue to double-click the inside of the quotation mark after the second style attribute to select the selection within the 2 quotation marks.
+1. Double-click the inside of the quotation mark of first style attribute and select the entire content of the quotation mark.
+2. Press Ctrl and double-click the inside of the quotation mark of the second style attribute to select the entire content of quotation marks.
 3. Press `Ctrl+Shift+x` to exchange the contents of the style attribute.
 
 <img src="/static/snapshots/tutorial/selection_swap_1.gif" />
 
-If you don’t select the content, place the cursor on two lines, and you can directly exchange the content of these two lines
+If you don’t select the content, just place the cursor before the beginning of two blocks, and you can directly exchange the content of these two blocks.
 
 <img src="/static/snapshots/tutorial/selection_swap_2.gif" />
 
 
 ### Undo the last multi-selection area or multi-cursor
 
-If you have selected too many or wrong selections, don’t worry about re-selecting. `Ctrl+Shift+z` is not to undo the editing content, but to undo the last selection.
+If you select the wrong blocks, it is easy to select again. `Ctrl+Shift+z` is not to undo the edited content, but to undo the last selection.
 
 1. Double click to select class
-2. Press `Ctrl+e` to select the same word
+2. Press `Ctrl+e` to select the same words
 3. Press `Ctrl+Shift+z`, no longer select the last word.
 
 <img src="/static/snapshots/tutorial/selection_cancel.gif" />
 
-If you select one more word, you can click `Ctrl+right mouse button` to cancel a selection.
+If you select one more word, you can click `Ctrl+right mouse click` to cancel a selection.
 
-Skip the current word and select the next word, `Alt+Shift+e` (mac is `ctrl+shift+d`)
+Skip the current word and select the other same words, `Alt+Shift+e` (mac is `ctrl+shift+d`)
 
 
 ### Join Lines
 
-The example is a shortcut operation when combining css into one line
+This example is a shortcut to merge multiple lines of css code into one line.
 
 <img src="/static/snapshots/tutorial/selection_merge.gif" />
 
 1. Double-click inside `{` to select class
 2. Press `Ctrl+double-click` to select another class
-3. Press the reverse format `Ctrl+Shift+k` to merge each css block code into one line
-4. `Ctrl+k` is the formatting code, then `Ctrl+Shift+k` is merged into one line.
+3. Press shortcut key `Ctrl+Shift+k` to merge each css block code into one line
+4. `Ctrl+k` is to format code according to indentation, `Ctrl+Shift+k` is to merge multiple lines of code into one line.
 
-### At the same time annotate the beginning and end of the if paragraph
+### How to comment `if` tag and bracket
 
-The adjustment of if block is very common. In addition to enclosing and deenclosing, common operations include commenting out the beginning and end of if paragraphs at the same time.
+We often modify `if` tag, in additions to `add tag` or `remove tag`, we also ofen comment  `if` tag and bracket.
 
 1. Double-click `if` to select the `if` code block
 2. Press `Ctrl+\` to add the cursor at the beginning and end of the selection to change to multi-cursor mode
@@ -140,6 +140,6 @@ The adjustment of if block is very common. In addition to enclosing and deenclos
 <img src="/static/snapshots/tutorial/selection_if.gif" />
 
 ### Other
-- [Go to Definition](/Tutorial/UserGuide/goto?id=转到定义)
+- [Goto Definition](/Tutorial/UserGuide/goto?id=转到定义)
 - [Fold](Tutorial/UserGuide/fold)
 - [Outline](/Tutorial/userinterface?id=文档结构图)
