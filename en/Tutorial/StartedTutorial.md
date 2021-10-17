@@ -1,10 +1,12 @@
-**This document is for beginners, it is recommended that beginners study it carefully**
+>  HX is the perfect combination of a lightweight editor and a powerful IDE. Agile performance, outstanding UI, and powerful functions are all in one.
 
-#### 1. introduce
+**This document is recommended for beginners**
 
-1. HBuilderX, `Left Project Manager` is `click on `Response instead of `double click`
-2. Mouse click, Expand the directory. Mouse click, Preview file. Double click, open file.
-3. When previewing a file, the top tab is in italics. At this time, continuing to preview other files will replace the preview tab. Double-click the file, The tab shows the body and will not be replaced. If you edit the previewed file, it will automatically become officially opened.
+#### 1. Summary
+
+1. In `Project Explorer`, you can quickly open files/projects with single-clicking which is more efficient than double-clicking.
+2. Expand the directory or preview file with single-clicking. Open a file with double-clicking.
+3. When previewing a file, the top tab is in italics. At this time, continuing to preview other files will replace the preview tab. Double-click the file, The tab shows the body and will not be replaced. If you edit the previewed file, it will automatically become officially opened. The text of top tab is italics when a file in preview mode. Double click a file or edit a file, this file will be in edit mode and the text of top tab will be change to normal.
 4. The project manager does not display icons by default, You can move the mouse to the project manager area, There will be a floating menu in the upper right corner, Inside can choose to display icons.
 5. File saving is to avoid loss, and there is a hot exit function. Hot exit, that is, do not save the file when closing the software. When it is opened again, it is still in the previous state. Unsaved files will continue to be displayed as they are.
 6. HBuilderX has a policy of saving temporary files every `30 seconds` by default（You can adjust the time interval in the settings）
