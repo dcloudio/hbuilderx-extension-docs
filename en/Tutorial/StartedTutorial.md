@@ -1,4 +1,4 @@
->  HX is the perfect combination of a lightweight editor and a powerful IDE. Agile performance, outstanding UI, and powerful functions are all in one.
+>  HBuilderX is the perfect combination of a lightweight editor and a powerful IDE. Agile performance, outstanding UI and powerful functions are all in one.
 
 **This document is recommended for beginners**
 
@@ -6,39 +6,38 @@
 
 1. In `Project Explorer`, you can quickly open files/projects with single-clicking which is more efficient than double-clicking.
 2. Expand the directory or preview file with single-clicking. Open a file with double-clicking.
-3. When previewing a file, the top tab is in italics. At this time, continuing to preview other files will replace the preview tab. Double-click the file, The tab shows the body and will not be replaced. If you edit the previewed file, it will automatically become officially opened. The text of top tab is italics when a file in preview mode. Double click a file or edit a file, this file will be in edit mode and the text of top tab will be change to normal.
-4. The project manager does not display icons by default, You can move the mouse to the project manager area, There will be a floating menu in the upper right corner, Inside can choose to display icons.
-5. File saving is to avoid loss, and there is a hot exit function. Hot exit, that is, do not save the file when closing the software. When it is opened again, it is still in the previous state. Unsaved files will continue to be displayed as they are.
-6. HBuilderX has a policy of saving temporary files every `30 seconds` by default（You can adjust the time interval in the settings）
-7. No matter it is closing HBuilderX, power failure or crash, temporary files will always be saved automatically.
-8. There are more and more pre-compiled languages on the front end. Compilation is triggered every time it is saved, which consumes resources. With hx, you can focus on writing code without pressing` ctrl+s` after a while. You need to save when you compile, or edit multiple After the file, press `ctrl+alt+s` to save all.
+3. When the file is in preview mode, the text on the top tab is italicized. Double-click a file or edit a file, the file will be in edit mode, and the text on the top tab will become normal.
+<img src="/static/snapshots/started_tutorial/overview.png" style="zoom: 90%;"/>
+4. By default, the project explorer does not display icons, but you can choose `Icon Theme` by clicking the floating menu in the upper right corner. HBuilderX supports a variety of icon theme and you can install more icon themes through "[Tool] [Plug-in Installation]".
+5. HBuilderX supports hot exit feature. Hot Exit enables HBuilderX to exit immediately without prompting, preserving your changes and unsaved files for the next time you run. 
+6. HBuilderX has a default behavior of saving temporary files every `30 seconds`（You can adjust the time interval in the settings）
+7. Automatically save temporary files to ensure data security, whether it is shutdown, power failure, or crash.
+8. The automatic saving of HBuilderX can save system resources, because ctrl+s (save file) or ctrl+alt+s (save all files) may trigger the compilation of pre-compiled programming languages.
 
-#### 2. syntax tips
+#### 2. Syntax tips
 
-Owning a self-developed world-class grammatical analysis engine has always been the capital of the HBuilder series of products that scorns the industry.
-
-However, there are many front-end frameworks, and the syntax prompts of the frameworks need to load a separate syntax prompt library.
-
-Framework syntax hint library, Select at the bottom right corner of the page.
+HBuilderX stands out because it has its own world-class syntax analysis engine. You can easily load different javascript syntax libraries by clicking "Javascript library" in the bottom right corner of HBuilderX.
 
 <img src="/static/snapshots/started_tutorial/select-syntax-hints.gif" style="zoom: 90%;border:1px solid #eee;border-radius: 5px;" />
 
 **note**：
 
-1. The framework grammar library is hung under the project. After a project loads a framework grammar library, all js files or HTML files under this project will prompt the grammar of this framework in the code assistant.
-2. However, if a file is opened separately from the hard disk and the entire project is not dragged into hx, then the framework syntax library cannot be loaded at this time.
+1. The syntax library is associated with the project. If a javascript library is loaded in a project, then all js and html files in this project can call this javascript library.
+2. The syntax library cannot be loaded for a separately opened file.
 
 #### 3. Code assistant
 
 
-HBuilderX Code assistant，Press ` alt+number`Select an item directly
+Code assistant of HBuilderX supports to select an item by `alt+number`.
 
 <img src="/static/snapshots/started_tutorial/code-help.gif" style="zoom: 90%;border:1px solid #eee;border-radius: 5px;" />
 
-#### 4. syntax help
+#### 4. Syntax help
 
 
-Place the cursor on an api and press `F1` to jump to the official manual of this api. Currently supports vue, uni-app, 5+ and other apis
+Place the cursor on an API and press `F1` to open the official manual of this API. Currently supports Vue, uni-app, 5+ apps, etc.
+
+> In prior to 2.5.7, press F1 and Open the help in build-in browser. Starting from 2.5.7.20200116-alpha+, press F1 to open the help through an external browser. 
 
 <img src="/static/snapshots/started_tutorial/code-help-doc.gif" style="zoom: 90%;border:1px solid #eee;border-radius: 5px;" />
 
