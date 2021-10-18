@@ -1,6 +1,6 @@
 >  HBuilderX is the perfect combination of a lightweight editor and a powerful IDE. Agile performance, outstanding UI and powerful functions are all in one.
 
-**This document is recommended for beginners**
+**This document is recommended for the beginners**
 
 #### 1. Summary
 
@@ -10,20 +10,20 @@
 <img src="/static/snapshots/started_tutorial/overview.png" style="zoom: 90%;"/>
 4. By default, the project explorer does not display icons, but you can choose `Icon Theme` by clicking the floating menu in the upper right corner. HBuilderX supports a variety of icon theme and you can install more icon themes through "[Tool] [Plug-in Installation]".
 5. HBuilderX supports hot exit feature. Hot Exit enables HBuilderX to exit immediately without prompting, preserving your changes and unsaved files for the next time you run. 
-6. HBuilderX has a default behavior of saving temporary files every `30 seconds`（You can adjust the time interval in the settings）
+6. HBuilderX has a default behavior of saving temporary files every `30 seconds`（You can adjust the time interval in the settings）.
 7. Automatically save temporary files to ensure data security, whether it is shutdown, power failure, or crash.
 8. The automatic saving of HBuilderX can save system resources, because ctrl+s (save file) or ctrl+alt+s (save all files) may trigger the compilation of pre-compiled programming languages.
 
 #### 2. Syntax tips
 
-HBuilderX stands out because it has its own world-class syntax analysis engine. You can easily load different javascript syntax libraries by clicking "Javascript library" in the bottom right corner of HBuilderX.
+HBuilderX stands out because it has its own world-class syntax analysis engine. You can easily load different javascript libraries by clicking "Javascript library" in the lower right corner of HBuilderX.
 
 <img src="/static/snapshots/started_tutorial/select-syntax-hints.gif" style="zoom: 90%;border:1px solid #eee;border-radius: 5px;" />
 
 **note**：
 
-1. The syntax library is associated with the project. If a javascript library is loaded in a project, then all js and html files in this project can call this javascript library.
-2. The syntax library cannot be loaded for a separately opened file.
+1. The library is associated with the project. If a library is loaded in a project, then all js and html files in this project can call this library.
+2. The library cannot be loaded for a separately opened file.
 
 #### 3. Code assistant
 
@@ -45,7 +45,7 @@ Place the cursor on an API and press `F1` to open the official manual of this AP
 #### 5. Sync of editor and project explorer
 
 
-By default, HBuilderX automatically associates the opened tab with the project explorer. When you switch tabs, the project explorer will also change. If you don't need this feature, you can cancel "Sync with Editor" via the floating menu in the upper right corner.
+By default, HBuilderX automatically associates the opened tab and the project explorer. When you switch tabs, the project explorer will also change. If you don't need this feature, you can cancel "Sync with Editor" via the floating menu in the upper right corner.
 
 <img src="/static/snapshots/started_tutorial/sync.jpg" style="zoom: 90%;border:1px solid #eee;border-radius: 5px;" />
 
@@ -142,7 +142,7 @@ If you need to chnage the tab size, Adjust in [Tools-Settings].
 
 If you don't like to use tabs and prefer to use spaces, you can also adjust them in the settings. Note that this adjustment is only converted to a space when the tab button is pressed in the editor, and it is still tab when formatted.
 
-To adjust the formatting settings, refer to the menu tool -> plug-in configuration. hx supports several formatting plug-ins, and they all have their own configuration files. Please modify the settings according to the instructions in the plug-in configuration.
+To adjust the formatting settings, refer to the menu tool -> plug-in installation. hx supports several formatting plug-ins, and they all have their own configuration files. Please modify the settings according to the instructions in the plug-in installation.
 
 <img src="/static/snapshots/started_tutorial/plugins-code-format.jpg" style="zoom: 80%;border:1px solid #eee;border-radius: 5px;" />
 
@@ -152,19 +152,18 @@ In the menu edit-indent, the indentation of the file can be changed from `tab` t
 
 #### 13. Syntax check
 
-HBuilderX, Syntax check needs to install a plug-in. Different languages have different verification plug-ins。After installing the verification plug-in, syntax verification will be performed automatically when saving the file.
+HBuilderX, Syntax check needs to install a plugin. Different languages have different validation plugins。After installing the validation plugin, validation will be performed automatically when saving the file.
 
 [Syntax Check](/Tutorial/UserGuide/SyntaxCheck)
 
 
-The summary result of the verification will be displayed in the status bar. 
+The summary result of the validation will be displayed in the status bar. 
 
-For example, if there are two errors , you can press `F4` to switch to different errors. A red wavy line is drawn. When the mouse moves over the red wavy line, a specific error message will be displayed.
+For example, if there are two errors , you can press `F4` to switch to different errors. A red wavy line is drawn. When the mouse moves over the red wavy line, a detail message of error will be displayed.
 
 <img src="/static/snapshots/started_tutorial/plugins-syntax-check-01.png" style="zoom: 90%;border:1px solid #eee;border-radius: 5px;" />
 
-
-Directly click the menu tool-verify the verification syntax of this document to verify.
+You can also click [Tools] [Validation Document] to verify the file, even if the file is not saved.
 
 <img src="/static/snapshots/started_tutorial/plugins-syntax-check-en.png" style="zoom: 40%;border:1px solid #eee;border-radius: 5px;" />
 
@@ -187,12 +186,13 @@ Take git as an example: (git project: need to install the git plugin, TortoiseGi
 There are pre-compilers for various languages in [Tool] -> [Plug-in Installation], such as less, ts, etc. After installing the pre-compiler, all projects can be shared.
 
 **sass Example：**  
+> After install pre-compiler, you will find the command in "External Commands".
 
 <img src="/static/snapshots/started_tutorial/plugins-precompiler.gif" style="zoom: 90%;border:1px solid #eee;border-radius: 5px;" />
 
 **sass/less tips：**
 
-Less and sass can be configured to automatically compile when saving files in the plug-in configuration.
+Less and sass can be configured to automatically compile when saving files.
 
 > After installing the less or sass plugin, enter the menu [Tools] [Plug-in Installation] [compile-less], click the package.json file, and modify onDidSaveExecution to true. Please note that you need to restart HBuilderX for the changes to take effect.
 
