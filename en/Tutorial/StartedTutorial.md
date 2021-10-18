@@ -32,26 +32,26 @@ Code assistant of HBuilderX supports to select an item by `alt+number`.
 
 <img src="/static/snapshots/started_tutorial/code-help.gif" style="zoom: 90%;border:1px solid #eee;border-radius: 5px;" />
 
-#### 4. Syntax help
+#### 4. Syntax guide
 
 
 Place the cursor on an API and press `F1` to open the official manual of this API. Currently supports Vue, uni-app, 5+ apps, etc.
 
-> In prior to 2.5.7, press F1 and Open the help in build-in browser. Starting from 2.5.7.20200116-alpha+, press F1 to open the help through an external browser. 
+> In prior to version 2.5.7, press F1 and open the manual in build-in browser. Starting from 2.5.7.20200116-alpha+, press F1 to open the help through an external browser. 
 
 <img src="/static/snapshots/started_tutorial/code-help-doc.gif" style="zoom: 90%;border:1px solid #eee;border-radius: 5px;" />
 
 
-#### 5. Synchronization of editor and project manager
+#### 5. Sync of editor and project explorer
 
 
-The hx default is to automatically associate the opened tab card with the project manager. The project manager will also follow the changes when switching tabs. If you don’t need this function, you can move the mouse to the project manager area, and there will be a floating menu in the upper right corner. You can cancel "Sync with Editor".
+By default, HBuilderX automatically associates the opened tab with the project explorer. When you switch tabs, the project explorer will also change. If you don't need this feature, you can cancel "Sync with Editor" via the floating menu in the upper right corner.
 
 <img src="/static/snapshots/started_tutorial/sync.jpg" style="zoom: 90%;border:1px solid #eee;border-radius: 5px;" />
 
-It is recommended to cancel the synchronization function when there are multiple projects.
+When there are multiple projects in the project explorer, it is recommended to cancel the synchronization function.
 
-After canceling the synchronization, if you need to manually locate the project where the label card is located, you can right-click the editor-"locate in project manager".
+After canceling the synchronization, if you need to manually locate the project where the label card is located, you can right-click the editor-"locate in project explorer".
 
 <img src="/static/snapshots/started_tutorial/project-manager-position.gif" style="zoom: 90%;border:1px solid #eee;border-radius: 5px;" />
 
@@ -78,27 +78,26 @@ The column selection of hx is `alt+mouse drag selection`. Or use the shortcut ke
 
 
 
-#### 8. Choose file encoding、Code Color highlight
+#### 8. Change file encoding、Code Color highlight
 
-When you open an unknown document, that is, hx cannot be highlighted and colored, you can choose to open it with other editors in the lower right corner.
+When you open an unknown document, hx cannot be highlighted and colored, you can choose to open it with other editors in the lower right corner.
 
 When you open a file with garbled encoding, you can also select the encoding in the lower right corner to reopen it.
 
 <img src="/static/snapshots/started_tutorial/select-encoding.gif" style="zoom: 90%;border:1px solid #eee;border-radius: 5px;" />
 
 
-#### 9. Go to definition
+#### 9. Goto definition
 
-
-Go to definition is a very commonly used function, ordinary editors are not longer than this, only guess the word jump.
+Goto definition is an important part of what makes an editor useful.
 
 HBuilderX has a powerful syntax analysis engine that can accurately jump to the defined position.
 
-The shortcut key to go to the definition is `Alt+d`, and the mouse operation is alt+left click (note that it is not ctrl, because ctrl is reserved for multiple cursors)
+The shortcut key to go to the definition is Alt+D, and the mouse operation is Alt+left click.
 
 <img src="/static/snapshots/started_tutorial/3b6a921a9021ffa5ed54e7633afb7fd0.gif" style="zoom: 90%;border:1px solid #eee;border-radius: 5px;" />
 
-Another feature of HBuilderX is `Go to definition to column`, `ctrl+alt+left mouse button`, you can open the code of a definition on the other side, which is convenient for common viewing。
+Another feature of HBuilderX is `Goto definition to column`, `ctrl+alt+left mouse button`, you can open definition of codes on the other side, which is convenient for general viewing.
 
 <img src="/static/snapshots/started_tutorial/c75ed6bdd5b6c5a9b8c827b2ee1262a9.gif" style="zoom: 90%;border:1px solid #eee;border-radius: 5px;" />
 
@@ -108,29 +107,26 @@ Another feature of HBuilderX is `Go to definition to column`, `ctrl+alt+left mou
 In HBuilderX, `Alt+Left` or click `<` on the toolbar to return to the previous cursor position.
 
 
-Note: Support switching [Ctrl+left mouse button] or [Alt+left mouse button] to go to definition (menu [select], the last menu).
+Note: Support switching [Ctrl+left mouse button] or [Alt+left mouse button] to goto definition (menu [select], the last menu).
 
 <img src="/static/snapshots/started_tutorial/f20f178f0559eebc71106d00c7b4117a.png" style="zoom: 90%;border:1px solid #eee;border-radius: 5px;" />
  
-#### 10. Open files quickly
+#### 10. Quick open files
 
-
-Directly search and open the file name under the project in the top toolbar, or use the shortcut key `ctrl+p`
+Use the search bar on the top toolbar to search and open the file, or use the shortcut key `ctrl+p`
 
 <img src="/static/snapshots/started_tutorial/file_quick_open.gif" style="zoom: 90%;border:1px solid #eee;border-radius: 5px;" />
 
-More commonly used files can be added to favorites in the toolbar.
+You can add more frequently used files to favorites in the toolbar.
 
 <img src="/static/snapshots/started_tutorial/add-to-favorites-en.png" style="zoom: 45%;border:1px solid #eee;border-radius: 15px;" />
 
-`ctrl+p` is also an important tool for tag card management. When the screen is narrow and the left and right open tabs cannot be seen clearly, you can use it to browse all open tabs.
-
-
+`ctrl+p` is also an important tool for tag card management. When the screen is narrow and you cannot see the left and right tabs, you can use it to browse all opened tabs.
 
 #### 11. Search in the directory
 
 
-Right click on the project manager, menu [Character search], Search for strings in all files in this directory.
+Right click on the project explorer, menu [Character search], Search for strings in all files in this directory.
 
 <img src="/static/snapshots/started_tutorial/search-dir.gif" style="zoom: 75%;border:1px solid #eee;border-radius: 5px;" />
 
@@ -138,15 +134,15 @@ Right click on the project manager, menu [Character search], Search for strings 
 
 #### 12. Indent adjustment
 
-HBuilderX, Tab indentation is used by default, and the tab length is 4 spaces
+In HBuilderX, Tab indentation is used by default, and the tab size is 4 spaces.
 
-If you need to adjust the indent length, Adjust in [Tools-Settings].
+If you need to chnage the tab size, Adjust in [Tools-Settings].
 
 <img src="/static/snapshots/started_tutorial/ident_en.png" style="zoom: 45%;border:1px solid #eee;border-radius: 5px;" />
 
 If you don't like to use tabs and prefer to use spaces, you can also adjust them in the settings. Note that this adjustment is only converted to a space when the tab button is pressed in the editor, and it is still tab when formatted.
 
-To adjust the formatting settings, refer to the menu tool-plug-in configuration. hx supports several formatting plug-ins, and they all have their own configuration definition files. Please modify the settings according to the instructions in the plug-in configuration.
+To adjust the formatting settings, refer to the menu tool -> plug-in configuration. hx supports several formatting plug-ins, and they all have their own configuration files. Please modify the settings according to the instructions in the plug-in configuration.
 
 <img src="/static/snapshots/started_tutorial/plugins-code-format.jpg" style="zoom: 80%;border:1px solid #eee;border-radius: 5px;" />
 
@@ -158,7 +154,7 @@ In the menu edit-indent, the indentation of the file can be changed from `tab` t
 
 HBuilderX, Syntax check needs to install a plug-in. Different languages have different verification plug-ins。After installing the verification plug-in, syntax verification will be performed automatically when saving the file.
 
-[语法校验插件详细介绍](/Tutorial/UserGuide/SyntaxCheck)
+[Syntax Check](/Tutorial/UserGuide/SyntaxCheck)
 
 
 The summary result of the verification will be displayed in the status bar. 
@@ -176,6 +172,7 @@ Directly click the menu tool-verify the verification syntax of this document to 
 
 #### 15. svn/git import
 
+Take git as an example: (git project: need to install the git plugin, TortoiseGit, and configure the ssh key)
 
 <img src="/static/snapshots/started_tutorial/project-svn-git-import.gif" style="zoom: 90%;border:1px solid #eee;border-radius: 5px;" />
 
@@ -187,9 +184,7 @@ Directly click the menu tool-verify the verification syntax of this document to 
 
 #### 15. Precompiler(less/sass)
 
-Plug-in market, there are pre-compilers in various languages, such as less, ts, etc. 
-
-After installing the pre-compiler, all projects can be shared.
+There are pre-compilers for various languages in [Tool] -> [Plug-in Installation], such as less, ts, etc. After installing the pre-compiler, all projects can be shared.
 
 **sass Example：**  
 
@@ -199,7 +194,7 @@ After installing the pre-compiler, all projects can be shared.
 
 Less and sass can be configured to automatically compile when saving files in the plug-in configuration.
 
-> After installing the less or sass plugin, enter the menu [Tools] [Plugin Configuration] [compile-less], click the package.json file, and modify onDidSaveExecution to true. Note that you need to restart HBuilderX after the modification to take effect
+> After installing the less or sass plugin, enter the menu [Tools] [Plug-in Installation] [compile-less], click the package.json file, and modify onDidSaveExecution to true. Please note that you need to restart HBuilderX for the changes to take effect.
 
 ```Json
 {
