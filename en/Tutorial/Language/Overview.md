@@ -59,8 +59,8 @@ As shown in the figure below, move the mouse to the code to be viewed, and a flo
 
 Press F1 to open the help documents in the browser.
 
-<img src="/static/snapshots/tutorial/language/hover_helper.png" style="zoom:45%;border: 1px solid #eee;"/>
+<img src="/static/snapshots/tutorial/language/hover_help_en.png" style="zoom:45%;border: 1px solid #eee;"/>
 
 If you don't need it, you can turn off this feature manually in [Settings - Editor].
 
-<img src="/static/snapshots/tutorial/language/settings_hover_help.png" style="zoom:50%;border: 1px solid #eee;"/>
+<img src="/static/snapshots/tutorial/language/settings_hover_help_en.png" style="zoom:50%;border: 1px solid #eee;"/>
