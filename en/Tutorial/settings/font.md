@@ -22,6 +22,6 @@ Take [source-code-pro](https://github.com/adobe-fonts/source-code-pro) as an exa
 
 Downloading the font and click to install. After the installation is successful, the new font will appear in the font list.
 
-<img src="/static/snapshots/tutorial/font_2.png" />
+<img src="/static/snapshots/tutorial/settings/font_2_en.png" class="hd-img"/>
 
-<img src="/static/snapshots/tutorial/font_3.png" />
+<img src="/static/snapshots/tutorial/settings/font_3.png" />
