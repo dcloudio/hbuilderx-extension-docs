@@ -61,4 +61,4 @@ parsers: {
 
 ## Example
 
-<img src="/static/snapshots/tutorial/prettier.gif" style="zoom:80%; border: 1px solid #eee;" />
+<img src="/static/snapshots/tutorial/plugins/prettier_en.gif" style="zoom:80%; border: 1px solid #eee;" />

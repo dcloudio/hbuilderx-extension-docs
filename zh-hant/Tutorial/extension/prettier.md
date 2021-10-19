@@ -60,4 +60,4 @@ parsers: {
 
 ## 示例Gif
 
-<img src="/static/snapshots/tutorial/prettier.gif" style="zoom:80%; border: 1px solid #eee;" />
+<img src="/static/snapshots/tutorial/plugins/prettier.gif" style="zoom:80%; border: 1px solid #eee;" />
