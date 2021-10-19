@@ -40,7 +40,7 @@ HBuilderX，可自定义编辑器升级策略。
 
 启动时自动检查更新，即每次HBuilderX启动，都会检查更新，当存在更新时，弹窗提示更新。
 
-<img src="/static/snapshots/tutorial/settings/upgrade_en.png" class="hd-img" />
+<img src="/static/snapshots/tutorial/settings/upgrade.png" class="hd-img" />
 
 ## 编辑器配置
 
