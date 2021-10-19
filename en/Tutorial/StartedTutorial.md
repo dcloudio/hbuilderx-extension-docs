@@ -7,7 +7,9 @@
 1. In `Project Explorer`, you can quickly open files/projects with single-clicking which is more efficient than double-clicking.
 2. Expand the directory or preview file with single-clicking. Open a file with double-clicking.
 3. When the file is in preview mode, the text on the top tab is italicized. Double-click a file or edit a file, the file will be in edit mode, and the text on the top tab will become normal.
-<img src="/static/snapshots/started_tutorial/overview.png" style="zoom: 90%;"/>
+
+<img src="/static/snapshots/started_tutorial/overview_en.png" class="hd-img" />
+
 4. By default, the project explorer does not display icons, but you can choose `Icon Theme` by clicking the floating menu in the upper right corner. HBuilderX supports a variety of icon theme and you can install more icon themes through "[Tool] [Plug-in Installation]".
 5. HBuilderX supports hot exit feature. Hot Exit enables HBuilderX to exit immediately without prompting, preserving your changes and unsaved files for the next time you run.
 6. HBuilderX has a default behavior of saving temporary files every `30 seconds`（You can adjust the time interval in the settings）.
