@@ -1,8 +1,8 @@
 # Format Document
 
-> Many people do not pay attention to the layout structure of the program when writing a program. Although this will not affect the function of the program, the readability of the program will be greatly reduced.
+> Many people ignore the formatting of the code when writing code. Although this will not affect the function of the program, it will reduce the readability of the program.
 
-> Formatting operation allows the code to be indented or separated according to a specific style to make the program clearer.
+> "Format Document" allows the code to be indented or separated according to a specific style to make the program clearer.
 
 On the opened file, right-click menu, and click [Format Document] to format the current file.
 
@@ -21,13 +21,13 @@ HBuilderX, officially maintained formatting plugins are as follows:
 
 **Remarks:**
 
-1. When there are both `js-beautify` and `format-prettier` plugins, the `vue` file is formatted and the `format-prettier` plugin is called。
+1. When there are both `js-beautify` and `format-prettier` plugins, the `format-prettier` plugin is called to format `vue` file.
 2. `stylus-supremacy` only supports formatting independent stylus files. If you need to format the stylus code in the vue file, you need to install the prettier plugin at the same time.
-3. Local plug-in directory: all plug-ins of HBuilderX are stored in the local `plugins` directory
+3. Local plugin directory: all plugins of HBuilderX are stored in the `plugins` directory.
 
 ### Format plugin configuration
 
-Click the menu [Tools] [Settings -> Plugins], select the corresponding plug-in, and click `Configuration File` to configure.
+Click the menu [Tools] [Settings -> Plugins], select the corresponding plugin, and click `Configuration File` to configure.
 
 <img src="/static/snapshots/tutorial/format/plugin_set_en.png" class="hd-img" />
 
@@ -40,7 +40,7 @@ Click the menu [Tools] [Settings -> Plugins], select the corresponding plug-in, 
 
 ### Format style
 
-Format, indent, read the configuration in the menu [Tools --> Settings].
+The indentation rule of "Format Document" is set in the configuration of the menu [Tools --> Settings].
 
 <img src="/static/snapshots/tutorial/format/indent_en.png" class="hd-img"/>
 
@@ -50,7 +50,7 @@ The `editorconfig` configuration will override the HBuilderX editor configuratio
 [.editorconfig](/Tutorial/UserGuide/editorconfig)
 
 
-### Custom format shortcuts
+### Custom formatting shortcuts
 
 Click the menu [Tools] [Custom Keybingdings], in [User Settings], copy the following code, `key` is the shortcut key you want to define.
 
@@ -58,11 +58,11 @@ Click the menu [Tools] [Custom Keybingdings], in [User Settings], copy the follo
 {"key":"ctrl+k","command":"editor.action.format"}
 ```
 
-### Automatically format when saving files
+### Whether to support automatic formatting when saving a file?
 
-How to realize automatic formatting when saving files?
+How to realize automatic formatting when saving a file?
  
 Answer: Not supported.
 
-1. Normal web projects `do not support` automatic formatting while saving files.
-2. For the vue-cli project, the same effect can be achieved by configuring `eslint` and using the function of `eslint automatic verification and repair`.
+1. Normal web projects `do not support` automatic formatting while saving a file.
+2. For the vue-cli project, the same effect can be achieved by configuring `eslint` and using the function of `eslint automatic verification and repair`. For example, remove semicolon when saving the file.

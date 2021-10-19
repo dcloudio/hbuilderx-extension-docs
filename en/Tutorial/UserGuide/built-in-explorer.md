@@ -1,37 +1,39 @@
 # Built-in Explorer
 
-The built-in resource manager of HBuilderX gives you a larger resource management interface and greatly improves the efficiency of file management.
+> windows: Supported from HBuilderX 2.5.5+; mac：Supported from HBuilderX 2.6.3+
 
-Compared with the resource manager that comes with OS, HBuilderX resource manager provides special optimization for programming files.
+Most IDEs display files and folders in the project explorer on the left, which cannot provide the best convenience and efficiency experience. The built-in resource manager of HBuilderX displays a larger resource management interface for easy files management.
 
-- Large icon view, Directly display the html title, vue page, component name
-- Preview the content of markdown directly
-- Expand a separate column in the list details interface to display svn/git status
+Compared with default resource manager of OS, HBuilderX brings a better experience for developers.
 
-**Use animation**
+- In "Large Icons" mode, HBuilderX display the html title, vue page and component name
+- Preview the content of markdown file
+- In "Details" mode, svn/git status will be displayed on an extra column 
+
+**Demo**
 
 <img src="/static/snapshots/tutorial/explorer/explorer_1_en.gif" style="zoom:80%;" class="border-1px" />
 
-## What are the advantages?
+## Advantages
 
-1. Enter the picture catalog, all pictures are displayed in thumbnail mode. More convenient to view pictures
-2. vue, markdown, txt and other files, thumbnails directly preview the content
-3. List mode, you can visually see the file type, size, and modification time
-4. Thumbnail mode provides more beautiful file icons
-5. Select the file, folder, right-click menu, you can see the properties directly
-6. uni-app projects, creating components and pages, more convenient
-7. More.........
+1. In "Large Icons" mode, all pictures are displayed as thumbnails for easy preview
+2. Preview content from thumbnails of Vue, markdown and txt files
+3. In "Details" mode, the file list shows file type, size, and modification time
+4. In "Large Icons" mode, beautiful icons have been redesigned for each file type
+5. Select the file or folder, right-click menu, you can see the properties of this file
+6. It is easier to create components and pages for uni-app projects
+7. More features .........
 
 ## Address Bar
 
-Use the address bar to return to the upper level directory, top level directory.
+Use the address bar to return to the parent directory and top directory.
 
 <img src="/static/snapshots/tutorial/explorer/explorer_2.png" />
 
 
-## View file properties more easily
+## Quickly check file attributes
 
-Select the file, right-click the menu, view the properties, no need to open the system resource manager.
+Select the file, right-click the menu, click "properties" option. You don't need to open the file through explorer.
 
 <img src="/static/snapshots/tutorial/explorer/explorer_3_en.png" class="hd-img" />
 
@@ -42,7 +44,7 @@ Select the file, right-click the menu, view the properties, no need to open the 
 
 ## svn/git 
 
-In the built-in Explorer, the status of svn project and git project can be seen directly.
+In the built-in resource manager, you can intuitively view the file status of svn and git projects.
 
 <img src="/static/snapshots/tutorial/explorer/explorer_5_en.png" class="hd-img"/>
 
@@ -51,26 +53,26 @@ In the built-in Explorer, the status of svn project and git project can be seen 
 
 <img src="/static/snapshots/tutorial/explorer/explorer_6.png" class="border-1px"/>
 
-##  uni-app create page
+##  Create page for uni-app project
 
 <img src="/static/snapshots/tutorial/explorer/explorer_7_en.png" class="hd-img"/>
 
 
 ## Settings
 
-Built-in Explorer, the default is to double-click to expand the directory, and you can customize it to open and close.
+The way to open the resource manager, the default is to double-click to expand the directory, you can customize it to open and close
 
 - Menu [Tools - Settings - Commonly Used], you can set the way to open the resource manager
 
 <img src="/static/snapshots/tutorial/explorer/explorer_8_en.png" class="hd-img"/>
 
-- Project Explorer, settings in the upper right corner
+- Settings in the upper right corner of the explorer
 
 <img src="/static/snapshots/tutorial/explorer/explorer_9_en.png" class="hd-img"/>
 
-## How to use external commands in Explorer?
+## How to use external commands in explorer?
 
-Some developers hope to compress or decompress files directly in the resource manager; this can be achieved through external commands。
+You can compress or decompress files through external commands in the explorer.
 
 Configure external commands for compression and decompression, see [HBuilderX External Commands](/Tutorial/UserGuide/externalCommands)
 

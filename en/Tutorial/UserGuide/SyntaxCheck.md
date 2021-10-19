@@ -1,19 +1,19 @@
-# Validate Syntax
+# Syntax Validation
 
-A verification tool can help us avoid some stupid mistakes when writing code.
+A good validator can prevent syntax errors when we write codes.
 
-A good verification tool can tell us the problems before we waste time looking for bugs.
+A good validator can save your time to find bugs.
 
-A good verification tool can ensure that a project follows coding standards.
+A good validator can ensure that the coding follows the standard.
 
-HBuilderX includes 4 syntax verification plug-ins, `htmlhint`, `stylelint`,` eslint-plugin-vue`, `eslint-js`. Mainly used to verify html, css/less/sass/scss, vue, javascript
+HBuilderX includes 4 syntax validation plugins, `htmlhint`, `stylelint`,` eslint-plugin-vue`, `eslint-js`. These plugins are mainly used to html, css/less/sass/scss, vue, javascript.
 
 
-## Validate plugins
+## Syntax Validation Plugins
 
-HBuilderX, code syntax Validate, need to install the corresponding plug-in.
+In HBuilderX, you should install the following plugins to implement code inspection.
 
-> The json file has built-in verification function, no need to download any plug-ins.
+> HBuilderX has a built-in validation function and does not require any plugins.
 
 |Language			|Plugin-Name			|URL																|Docs											|
 |--				|--					|--																		|--													|
@@ -22,17 +22,17 @@ HBuilderX, code syntax Validate, need to install the corresponding plug-in.
 |js				|eslint-js			|[Download](https://ext.dcloud.net.cn/plugin?name=eslint-js)			|[Docs](/Tutorial/extension/eslint-js)			|
 |vue			|eslint-vue			|[Download](https://ext.dcloud.net.cn/plugin?name=eslint-vue)			|[Docs](/Tutorial/extension/eslint-vue)			|
 
-**注意：**
-- For scss files, if the code uses the `@-rules` command, and the stylelint check prompts `at-rule-no-unknown`, please configure the rules related to `@`.[stylelint rules](http://stylelint.cn/user-guide/rules/#at-rule)
+**Notice：**
+- For scss files, if you receive the stylelint validation tip `at-rule-no-unknown` when the code calls the `@-rules` command, you should set `@` rules. [stylelint rules](http://stylelint.cn/user-guide/rules/#at-rule)
 
 ## How to use?
 
-Right-click the current file, and click [Validation].
+Right-click on the current file, and click [Validation]. Please install above plugins if you do not find this menu.
 
-<img src="/static/snapshots/tutorial/validate/right_menu_en.png" class="hd-img" />
+<img src="/static/snapshots/tutorial/syntaxcheck.png" style="zoom:90%;" />
 
-The summary result of the verification will be displayed in the `Status Bar`.
+The summary of syntax validation will be displayed on the `Status Bar`.
 
-For example, if there are two errors, you can press `F4` to switch to different errors. A red wavy line is drawn. When the mouse moves over the red wavy line, a specific error message will be displayed.
+You can press "F4" to switch between multiple errors. Each error is accompanied by a red wavy line. When you move your mouse over the red wavy line, an error message will be displayed.
 
 <img src="/static/snapshots/started_tutorial/plugins-syntax-check-01_en.png" style="zoom: 90%;border:1px solid #eee;border-radius: 5px;" />

@@ -4,21 +4,17 @@
 
 ## What is EditorConfig?
 
-EditorConfig helps maintain consistent coding styles for multiple developers working on the same project across various editors and IDEs. 
+Many companies require developers to follow the same programming style. For example, indentation is used for spaces or tabs.
 
-The EditorConfig project consists of a file format for defining coding styles and a collection of text editor plugins that enable editors to read the file format and adhere to defined styles. 
+.editorconfig is a set of specifications to solve the above problems. It can be saved in the root directory of the project. Then team members can share the .editorconfig file via git/svn and follow the same format and style.
 
-EditorConfig files are easily readable and they work nicely with version control systems.
+HBuilderX has built-in support for .editorconfig. You have to download extra plugins to use this feature in Sublime and VSCode.
 
-The official website of `editorconfig` is [https://editorconfig.org/](https://editorconfig.org/)
+The official website of `editorconfig` is [https://editorconfig.org/](https://editorconfig.org/). EditorConfig helps maintain consistent coding styles for multiple developers working on the same project across various editors and IDEs. The EditorConfig project consists of a file format for defining coding styles and a collection of text editor plugins that enable editors to read the file format and adhere to defined styles. EditorConfig files are easily readable and they work nicely with various OS and IDEs.
 
-## HBuilderX EditorConfig
+## How to write .editorconfig file?
 
-`HBuilderX` directly supports this specification, no need to download plug-ins, it can be used out of the box. If sublime and vscode support this specification, you need to download the plug-in first.
-
-## What's an EditorConfig file look like?
-
-Below is an example .editorconfig file setting end-of-line and indentation styles for Python and JavaScript files.
+The following is a sample .editorconfig file for setting end_of_line and indentation styles for Python and JavaScript.
 
 ```
 # EditorConfig is awesome: http://EditorConfig.org
@@ -53,9 +49,9 @@ indent_size = 2
 
 ## Case
 
-Many open source projects use `editorconfig`
+Many open source projects use `editorconfig`.
 
-For example[jQuery](https://github.com/jquery/jquery/blob/master/.editorconfig), `jQuery` `.editorconfig` configuration file on `Github`
+For example [jQuery](https://github.com/jquery/jquery/blob/master/.editorconfig), `jQuery` `.editorconfig` configuration file on `Github`.
 
 ```ini
 root = true
@@ -72,10 +68,10 @@ indent_style = space
 indent_size = 2
 ```
 
-As in the above example, JQuery is configured: encoding format, indentation style, etc.
+From above example, JQuery configuration: encoding format, indentation style, etc.
 
 
-## Where are these files stored?
+## Where are .editorconfig stored?
 
 When opening a file, EditorConfig plugins look for a file named `.editorconfig` in the directory of the opened file and in every parent directory. A search for .editorconfig files will stop if the root filepath is reached or an EditorConfig file with `root=true` is found.
 
@@ -119,13 +115,13 @@ Comments should go on their own lines. EditorConfig files should be `UTF-8` enco
 
 ### Notes
 
-1. Currently all properties and values are case-insensitive. They are lowercased when parsed. Generally, if a property is not specified, the editor settings will be used, i.e. EditorConfig takes no effect on that part. 
+1. Currently all properties and values are case-insensitive. They are lowercased when parsed. Generally, if a property is not specified, the editor settings will be used.
 2. It is acceptable and often preferred to leave certain EditorConfig properties unspecified. For example, tab_width need not be specified unless it differs from the value of `indent_size`. Also, when indent_style is set to tab, it may be desirable to leave `indent_size` unspecified so readers may view the file using their preferred indentation width. Additionally, if a property is not standardized in your project (`end_of_line` for example), it may be best to leave it blank.
-3. If you don't need the function of editorconfig, you can turn off this function in [Settings].
+3. If you don't need the function of editorconfig, you can turn off it in [Settings].
 
 ## HBuilderX editorconfig configuration
 
-In HBuilderX [Settings], there is an editorconfig switch, you can freely choose to turn on or off `.editorconfig`
+In HBuilderX [Settings], there is an editorconfig switch, you can turn on/off `.editorconfig` as needed.
 
 <img src="/static/snapshots/tutorial/settings/editorconfig_en.png" style="zoom: 45%;border: 1px solid #eee; border-radius: 10px;" />
 

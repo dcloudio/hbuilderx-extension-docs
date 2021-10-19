@@ -1,24 +1,26 @@
 ## Select Color Theme
 
-1. In HBuilderX, you can click on the top menu [Tool - Color Theme] and choose to switch the theme color you like.
-2. HBuilderX has 3 built-in themes, namely `Default` `Monokai` `Atom one Dark`
+1. In HBuilderX, you can click on the top menu [Tool - Color Theme] to your favorite color theme.
+2. HBuilderX has 3 built-in themes, `Default` `Monokai` `Atom one Dark`.
 
 <img src="/static/snapshots/tutorial/menu_tool/themes_en.png" style="zoom: 45%; border-radius: 20px;"/>
 
-The current color theme, stored in the user settings ([Settings] [Source View], that is, the settings.json file)
+The settings of the current color theme stored in the user settings ([Settings] [Source View], that is, the settings.json file)
 
 ```
 "editor.colorScheme" : "Default"
 ```
 
 
-## Custom Window theme
+## Custom theme
 
-> Custom form theme function, Only supports HBuilderX 1.8.8+ version
+> Supported from HBuilderX 1.8.8+
 
-In the source view of the file setting.json, customize the theme colors you like by defining the "workbench.colorCustomizations" field.
+The settings of the current color theme stored in `settings.json` file. You can customize the color theme by overriding related settings. The method is as follows:
 
-[Custom theme parameters](/Tutorial/Other/themes_param)
+#### 自定义窗体主题
+
+In settings.json file of source view, you can customize the theme color you like by overriding the "workbench.colorCustomizations" field. [Custom theme parameters](/Tutorial/Other/themes_param)
 
 ```json
 "workbench.colorCustomizations": {
@@ -39,21 +41,21 @@ In the source view of the file setting.json, customize the theme colors you like
 
 ## Custom editor code color
 
-> Custom editor code color function, only applicable to HBuilderX 3.1.19+ version;
+> Custom editor code color function, supported from HBuilderX 3.1.19+;
 
 ### Which code areas can be customized?
 
-Custom code color supports all code partition (token) colors such as `comment`, `string`, `keyword`, `variable`, and `tag`.
+Custom code color supports setting different colors for code snippets, such as `comment`, `string`, `keyword`, `variable`, and `tag`, etc.
 
 Currently supported languages include: `JavaScript(ES6+)`、`HTML(ES6+)`、`Vue`、`CSS`、`Less`、`SCSS`、`Stylus`、`Typescript`、`Markdown`、`JSON`。
 
 ### How to customize？
 
-在文件`setting.json`的源码视图中，通过定义`"editor.tokenColorCustomizations"`字段来自定义您喜欢的主题颜色。
+In settings.json file of source view, you can customize the theme color you like by overriding the "editor.tokenColorCustomizations" field.
 
-将[可自定义代码颜色的相关参数](/Tutorial/Other/themes_code.md)中配置的规则复制到对应主题（`[Default]`、`[Monokai]`、`[Atom One Dark]`）的`rules`节点下，更改对应颜色即可。
+You can copy the settings of [Custom theme parameters](/Tutorial/Other/themes_code.md) to override `rules` block of themes （`[Default]`、`[Monokai]`、`[Atom One Dark]`）, and then just change the color value.
 
-> 注意：此方式相对比较复杂，适合对代码分区规则比较熟悉的同学，**我们建议您采用下面提供的[辅助功能](#自定义代码颜色辅助功能)进行自定义**。
+> Note：This method is only suitable for people who are familiar with the rules of the "settings.json" file. We recommend that you use the "color assist function" to update the "settings.json" file.
 
 Example:
 
@@ -87,21 +89,21 @@ Complete code color list：[Custom code color parameters](/Tutorial/Other/themes
 
 ### Custom code color assist function
 
-为了简化自定义步骤，我们提供了以下步骤可以简便的自定义代码颜色：
+Please follow our steps to customize code color:
 
-1. 在`settings.json`源码视图中加入`"editor.tokenColorCustomizations"`设置（**必须执行该步骤才能看到后面步骤的菜单项**）
-2. 将光标放到要改颜色的代码位置，选择菜单`工具`-`主题`-`Inspect Tokens And Colors`查看当前代码着色信息
-3. 将上一步控制台输出的`Token Color Rule`内容拷贝到`settings.json`的`"editor.tokenColorCustomizations"`对应位置（**注意：要放到对应的主题下**）
-4. 保存`settings.json`文件后即可看到修改后的效果
+1. In `settings.json` file of source view, add the configuration `"editor.tokenColorCustomizations"`. （**This step is required.**）
+2. Place the cursor on the code position where you want to change the color, select the menu `Tools`-`Theme`-`Inspect Tokens And Colors` to view the current code coloring information
+3. Copy the content of `Token Color Rule` output from the console in the previous step to `"editor.tokenColorCustomizations"` field of `settings.json` file. (**Note: Put it under the corresponding theme**)
+4. After saving the `settings.json` file, you can see the modified theme.
 
-**Complete operation animation**：
+**Complete steps**：
 
 <img src="/static/snapshots/tutorial/custom_token_color.gif" style="border: 1px solid #eee;border-radius: 5px; "  />
 
-Notes: At present, it can only be copied on the basis of the existing 3 themes `Default`, `Monokai`, and `Atom One Dark`, and cannot be completely updated with new themes.
+Notes: Now, you can customize the theme based on the 3 built-in themes `Default`, `Monokai` and `Atom One Dark` by overriding the theme settings, but you cannot create new themes.
 
 ## File Icon Theme
 
-Menu [Tools] [File Icon Theme], you can adjust the file icon.
+Menu [Tools] [File Icon Theme], you can choose the file icon theme.
 
 <img src="/static/snapshots/tutorial/menu_tool/file_icon_en.png" style="zoom: 50%; border: 1px solid #eee;border-radius: 15px; " />

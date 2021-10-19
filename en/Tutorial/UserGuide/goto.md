@@ -1,4 +1,4 @@
-# Goto
+# Goto Definition
 
 HBuilderX has a powerful jump function, as follows:
 
@@ -15,7 +15,7 @@ HBuilderX has a powerful jump function, as follows:
 
 ## Goto Previous Location
 
-In HBuilderX, `Alt+Left` (MacOSX: `ctrl + -`), click `<` on the toolbar, to return to the previous cursor position.
+In HBuilderX, `Alt+Left` (MacOSX: `ctrl + -`) or click `<` on the toolbar, to return to the previous cursor position.
 
 <img src="/static/snapshots/tutorial/goto/Previous_Location_en.png" class="hd-img" />
 
@@ -27,14 +27,14 @@ Go to line shortcut：`ctrl + G`
 
 ## Goto the specified rank
 
-> Only supports HBuilderX 2.8.10+
+> Supported from HBuilderX 2.8.10+
 
 <img src="/static/snapshots/tutorial/goto/goto_lc_en.png" class="hd-img" />
 
-- Support input `0` to jump to the first line
-- input `$` to jump to the last line.
+- input `0` to jump to the first line (Supported from HBuilderX 3.1.13+)
+- input `$` to jump to the last line. (Supported from HBuilderX 3.1.13+)
 
-At the same time, it supports opening the specified file through the command line and jumping to the specified row and column.
+HBuilderX supports using the command line to jump to the specified row and column.
 
 ```
 # Example：
@@ -44,21 +44,21 @@ At the same time, it supports opening the specified file through the command lin
 
 ## Goto Definition
 
-Go to definition is a very commonly used function, ordinary editors are not longer than this, only guess the word jump.
+Goto definition is an important part of what makes an editor useful. 
 
 HBuilderX has a powerful syntax analysis engine that can accurately jump to the defined position.
 
-The shortcut key to go to the definition is `Alt+D`, and the mouse operation is `alt+left click`.
+The shortcut key to go to the definition is `Alt+D`, and the mouse operation is `Alt+left click`. 
 
 <img src="/static/snapshots/started_tutorial/goto-definition-en.gif" style="zoom: 90%;border:1px solid #eee;border-radius: 5px;" />
 
-> Remarks: Support switching [Ctrl+left mouse button] or [Alt+left mouse button] to go to definition (menu [select], the last menu)
+> Remarks: Support switching [Ctrl+left mouse button] or [Alt+left mouse button] to go to definition (menu [select], [switch to "Alt+Click" for Multi-Cursor] or [switch to "⌘+Click" for Multi-Cursor])
 
 ## Goto Definition to New Column
 
-Another feature of HBuilderX is `Go to definition to column`.
+Another feature of HBuilderX is `Goto definition to column`.
 
-`ctrl+alt+left click`, you can open the code of a definition on the other side, which is convenient for common viewing.
+`ctrl+alt+left click`, you can open the defined code on the other side for easy viewing.
 
 <img src="/static/snapshots/started_tutorial/goto-definition-col-en.gif" style="zoom: 90%;border:1px solid #eee;border-radius: 5px;" />
 
