@@ -10,7 +10,7 @@
 
 ## 关于node-debug插件
 
-HBuilderX插件开发依赖node-debug插件，如果调试时，弹窗提示安装【node-debug】插件，请务必点击安装，否则无法进行插件。
+HBuilderX插件开发依赖node-debug插件，如果调试时，弹窗提示安装【node-debug】插件，请务必点击安装，否则无法调试插件。
 
 <img src="/static/snapshots/Plug-in-development/debug/node-debug.png" class="hd-img" />
 
@@ -26,10 +26,10 @@ HBuilderX插件开发依赖node-debug插件，如果调试时，弹窗提示安�
 
 **调试视图分为5部分：**
 - 顶部插件信息与操作按钮（包含：插件信息，图标依次对应：`继续`/`停止`、`下一步`、`进入`、`返回`）
-- 变量窗口 (复制值、复制表达式、添加到监视)
+- 变量窗口 (`复制值`、`复制表达式`、`添加到监视`)
 - 监视窗口（包含`添加`/`编辑`/`删除`表达式，以及`复制值`）
 - 调用堆栈窗口
-- 断点窗口（包含删除/启用/禁用断点）
+- 断点窗口（包含`删除`/`启用`/`禁用`断点）
 
 <img src="/static/snapshots/Plug-in-development/debug/debug_view.png" class="hd-img" />
 
