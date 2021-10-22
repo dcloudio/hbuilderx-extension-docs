@@ -8,6 +8,8 @@
 
 <img src="/static/snapshots/Plug-in-development/debug/start_debug.png" class="hd-img" />
 
+点击【调试插件】，即可打开[调试视图](#DebugView)
+
 ## 关于node-debug插件
 
 HBuilderX插件开发依赖node-debug插件，如果调试时，弹窗提示安装【node-debug】插件，请务必点击安装，否则无法调试插件。
@@ -20,12 +22,12 @@ HBuilderX插件开发依赖node-debug插件，如果调试时，弹窗提示安�
 
 <img src="/static/snapshots/Plug-in-development/debug/add_breakpoint.png" class="hd-img" />
 
-## 调试视图
+## 调试视图@DebugView
 
 开启调试后，即可在HBuilderX左侧视图，看到调试视图，具体如下：
 
 **调试视图分为5部分：**
-- 顶部插件信息与操作按钮（包含：插件信息，图标依次对应：`继续`/`停止`、`下一步`、`进入`、`返回`）
+- [调试工具栏](#DebugActions)
 - 变量窗口 (`复制值`、`复制表达式`、`添加到监视`)
 - 监视窗口（包含`添加`/`编辑`/`删除`表达式，以及`复制值`）
 - 调用堆栈窗口
@@ -33,11 +35,22 @@ HBuilderX插件开发依赖node-debug插件，如果调试时，弹窗提示安�
 
 <img src="/static/snapshots/Plug-in-development/debug/debug_view.png" class="hd-img" />
 
-### 继续
+## 调试操作@DebugActions
+
+<img src="/static/snapshots/Plug-in-development/debug/debug_toolbar.png" class="hd-img" />
+
+- [继续](#Continue) `F8`
+- 下一步 `F10`
+- 进入 `F11`
+- 返回 `Shift+F11`
+
+### 继续@Continue
 
 继续(F8)：点击后，运行直到下一个断点。
 
 <img src="/static/snapshots/Plug-in-development/debug/continue.png" class="hd-img" />
+
+## 数据检查和查看变量
 
 ### 添加到监视
 
