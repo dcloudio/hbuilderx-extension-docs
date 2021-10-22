@@ -108,7 +108,7 @@
       <div>羣11：1051710376（2000人已滿）</div>
       <div>羣9：824581834 &nbsp;<a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=EPF0sdsPuYCr3NAQqRAQfSeR5nJoL9MK&jump_from=webapi">點此加入</a></div>
       <div>羣8：759481147（2000人已滿）</div>
-      <div>羣7：768137673（&nbsp;<a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=qMqIz6UhXB5R0oT0RI20lafmDuCtS7u5&jump_from=webapi">點此加入</a></div>
+      <div>羣7：768137673 &nbsp;<a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=qMqIz6UhXB5R0oT0RI20lafmDuCtS7u5&jump_from=webapi">點此加入</a></div>
       <div>羣6：843092525（500人已滿）</div>
       <div>羣5：178140648（1000人已滿）</div>
       <div>羣4：905643840（500人已滿）</div>
