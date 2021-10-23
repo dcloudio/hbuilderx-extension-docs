@@ -4,13 +4,13 @@
 
 Code snippets are templates that make it easier to enter repeating code patterns, such as loops or conditional-statements.
 
-For example, we often type the `if...else` structure. In HBuilderX, you can directly generate the corresponding code structure by hitting `ife` and enter.
+For example, we often use `if...else` conditional-statement. HBuilderX can create the corresponding code pattern by enter `ife`.
 
-input `ife`
+Enter `ife`
 
 <img src="/static/snapshots/tutorial/snippets_3.png" style="zoom: 90%;" />
 
-Generate if structure after carriage return.
+Generate if..else structure after carriage return.
 
 <img src="/static/snapshots/tutorial/snippets_4.png" style="zoom: 90%;" />
 
@@ -79,11 +79,11 @@ HBuilderX uses json to define the snippet format, which is compatible with vscod
 
 | Item	|Description																																													|
 |--									|--																																																		|
-|key								|Snippet name, the name displayed in the code assistant list. The key cannot be repeated. For example, `"if ... else"` is a key.|
+|key								|Snippet name, this name will be displayed in the code assistant list. The key cannot be repeated. For example, `"if ... else"` is a key.|
 |prefix							|Trigger character of snippet																								|
 |body								|The content of the snippet.																																					|
 |triggerAssist			|True means that the code prompt is triggered on the first tabtop and display code assistant immediately after the snippet is entered into the document. The default is false.	|
-|project		| Snippets are scoped so that only relevant snippets are suggested. Scope types are: `uni-app`, `Web`, `App`, `Wap2App`.<br/> Every snippet is scoped to one, several, or all ("global") languages based on how it is defined. For example, `"project": "uni-app"` means the scope of this snippet is only in uni-app project. But `"project": "uni-app,App"` separates the projects name with commas which means that the snippet supports multiple projects.|
+|project		| Snippets are scoped so that only relevant snippets are suggested. Scope types are: `uni-app`, `Web`, `App`, `Wap2App`.<br/> Every snippet is scoped to one, several, or all ("global") languages based on how it is defined. For example, `"project": "uni-app"` means the scope of this snippet is only in uni-app project. `"project": "uni-app,App"` separates the projects name with commas which means that the snippet supports multiple projects.|
 
 **Body description:**
 
@@ -100,9 +100,9 @@ Remark：
 ### Attention
   
 1. Each snippet uses `key` as the primary key, and multiple snippets are separated by `commas`.
-2. If the json format is wrong, you will receive a warning message.
+2. You will receive a warning message if the json format is wrong.
 
-## Comment template For Datetime
+## Datetime variable
 
 > Supported from HBuilderX 2.7.5+, it supports to add "DATE_TIME" variable in annotation snippet.
 
