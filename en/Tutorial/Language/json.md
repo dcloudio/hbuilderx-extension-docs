@@ -14,18 +14,18 @@ HBuilderX will automatically change "fullwidth form" symbols to "halfwidth form"
 
 The undisturbed input of Chinese symbols is the advantage of HBuilderX. Support json, html, js, css, vue and other file types.
 
-### Add comma at the end of the line when carriage return
+### Add comma at the end of the line
 
 Don’t worry about when to enter a comma at the end of the line.
 
-HBuilderX will automatically recognize whether a comma is needed, and automatically fill in the missing comma when you press Enter.
+HBuilderX will automatically recognize whether a comma is needed, and automatically fill in the missing comma when you press "Enter".
 
 ### Automatically delete extra commas
 
 When we copy some json code, some "commas" at the end of the line are also copied.
 HbuilderX will automatically remove illegal "commas" when saving files.
 
-### KeyValue snippet，such as writing key values ​​in excel
+### KeyValue snippet
 
 KeyValue snippet will be added when you enter "kv" in a js file.
 
@@ -35,7 +35,7 @@ You will get "Key:Value" after press "enter" key.
 
 <img src="/static/snapshots/tutorial/json_2.jpeg" style="zoom:50%" />
 
-After typing the text "Key", then press "tab". The cursor will focus on "Value", and then you can type in the contents of "Value". This operation can help you focus on the content of "Key:Value" and similar like "excel".
+After typing the text "Key", then press "tab". The cursor will focus on "Value", and then you can type in the contents of "Value". This operation can help you focus on the content of "Key:Value" and similar like Excel.
 
 Remark：This feature is only applicable to json in js files, not to json files.
 
@@ -56,7 +56,7 @@ HBuilderX provides a more friendly way: `intelligent double-clicks`.
 
 ### Fast repeat insertion
 
-When you want to repeatedly insert key-value pairs or arrays, the fastest way is not to copy and paste, but to use the quick repeat insert function.
+When you want to repeatedly insert key-value pairs or arrays, the fastest way is not to copy and paste, but to use the repeat insert function.
 Windows shortcut: Ctrl+Insert or Ctrl+Shift+r，mac shortcut: Command+Shift+r。
 
 ### Syntax Hint
