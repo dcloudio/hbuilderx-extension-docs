@@ -87,24 +87,24 @@ HBuilderX uses json to define the snippet format, which is compatible with vscod
 
 **Body description:**
 
-- `$1` The position of the cursor after the snippet is entered. If you need multiple cursors, add `$1` in related places; if there are preset data at this place and need to be selected, the grammar is `${1:selectedtext}`; here also supports drop-down candidate menus, multiple options are drop-down candidates The list uses `${1:foo1/foo2/foo3}`
-- `$2` After the code block is entered, the cursor switch position after pressing tab again.
-- `$0` The final cursor position after the code block is entered.
+- `$1` The position of the cursor after the snippet is entered. If you need multiple cursors, add `$1` in related locations; if there are preset data at this location and need to be selected, the grammar is `${1:selectedtext}`; display drop-down menus with `${1:foo1/foo2/foo3}`
+- `$2` With tabstops, you can make the editor cursor move inside a snippet.
+- `$0` The final cursor position via tabstop visited.
 
 Remark：
 1. **Double quotes are escaped with `\"`**
-2. **Line breaks are represented by multiple arrays, one array per line, surrounded by `double quotes` and separated by `commas`**
-3. **The indentation needs to be indicated by `\t`, you cannot directly enter the indentation or spaces! **
+2. **Multiple Lines are represented by multiple arrays, one array per line, wrapped by `double quotes` and separated by `commas`**
+3. **The indentation is indicated by `\t`, you cannot enter the indentation or spaces! **
 
 
-### Matters needing attention
+### Attention
   
-1. Each code block uses `key` as the main key, and multiple code blocks need to be separated by `commas`.
-2. If the json syntax is illegal, an error message will pop up in the editor status bar, and a red wavy line will be drawn in the json, please pay attention to the correction.
+1. Each snippet uses `key` as the primary key, and multiple snippets are separated by `commas`.
+2. If the json format is wrong, you will receive a warning message.
 
 ## Comment template For Datetime
 
-> From HBuilderX 2.7.5+ version, it supports the synchronization time of host annotation template
+> Supported from HBuilderX 2.7.5+, it supports to add "DATE_TIME" variable in annotation snippet.
 
 Click the menu [Tools - Snippets settings - javascript snippets], and enter the following:
 
