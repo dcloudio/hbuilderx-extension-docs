@@ -1,6 +1,6 @@
 #### HBuilderX Project Type
 
-HBuilderX supports multiple project types and can run in different environments.
+HBuilderX supports multiple project types and each type can run in multiple environments.
 
 The following is a list of various project types that can be run.
 
