@@ -10,7 +10,7 @@
 |Local History|workbench.action.files.localHistory|
 |Code Assistant: Activate the code assistant|editor.action.triggerSuggest|
 |Code Assistant: Activate parameter hints|Trigger Parameter Hints|
-|New Tab 【double-click the blank on the right side of the tab】|workbench.action.files.newUntitledFile|
+|New Tab 【Double-click the blank on the right side of the tab】|workbench.action.files.newUntitledFile|
 |Close Tab|workbench.action.closeActiveEditor|
 |Close the Right Tab|workbench.action.closeRightEditor|
 |Close Other Tabs|workbench.action.closeOtherEditors|
@@ -64,7 +64,7 @@
 |Insert Line Aboce|editor.action.insertLineBefore|
 |Insert the Current Row or Selection Repeatedly |editor.action.duplicate|
 |Sourround|editor.action.SurroundBylanguage|
-|UnSourround|editor.action.UnSurroundBylanguage|
+|Anti-Sourround|editor.action.UnSurroundBylanguage|
 |Bold|editor.action.bold|
 |Comment Line/Uncomment|editor.action.commentLine|
 |Block Comment|editor.action.blockCommentLine|
