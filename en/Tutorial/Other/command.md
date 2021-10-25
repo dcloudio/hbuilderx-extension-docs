@@ -63,90 +63,90 @@
 |Insert Line Below|editor.action.insertLineAfter|
 |Insert Line Aboce|editor.action.insertLineBefore|
 |Insert the Current Row or Selection Repeatedly |editor.action.duplicate|
-|包围|editor.action.SurroundBylanguage|
-|反包围|editor.action.UnSurroundBylanguage|
-|加粗|editor.action.bold|
-|注释行/反注释|editor.action.commentLine|
-|块包围注释|editor.action.blockCommentLine|
-|条件编译ifdef|editor.action.CommentIfdef|
-|条件编译ifndef|editor.action.CommentIfndef|
-|有序列表符|editor.action.orderListSymbols|
-|-号无序列表符|editor.action.unOrderListSymbolsByMinus|
-|*号无序列表符|editor.action.unOrderListSymbolsByMultiply|
-|+号无序列表符|editor.action.unOrderListSymbolsByPlus|
-|任务列表符|editor.action.taskListSymbols|
-|已完成任务列表符|editor.action.taskFinishListSymbols|
-|引用列表符|editor.action.quoteListSymbols|
-|将文档换行符转换为\r\n|editor.action.windows|
-|将文档换行符转换为\r|editor.action.macos|
-|将文档换行符转换为\n|editor.action.unix|
-|缩进：向右缩进|tab|
-|缩进：向左缩进（反缩进）|outdent|
-|切换大写|editor.action.transformToUppercase|
-|切换小写|editor.action.transformToLowercase|
-|切换首字母大写|editor.action.transformToTitlecase|
-|全选|editor.action.selectAll|
-|向左选择|cursorLeftSelect|
-|向右选择|cursorRightSelect|
-|向上选择|cursorUpSelect|
-|向下选择|cursorDownSelect|
-|选左词|cursorWordStartLeftSelect|
-|选右词|cursorWordEndRightSelect|
-|向左选择一个驼峰单词|cursorWordPartLeftSelect|
-|向右选择一个驼峰单词|cursorWordPartRightSelect|
-|选择到软行首 Shift+Home|cursorHomeSelect|
-|选择到软行尾 Shift+End|cursorEndSelect|
-|选择到行首|cursorHomeDirectSelect|
-|选择到行尾|cursorEndDirectSelect|
-|选择到段落开头|cursorLineStartSelect|
-|选择到段落结尾|cursorLineEndSelect|
-|选择到上一页 PgUp|cursorPageUpSelect|
-|选择到下一页 PgDown|cursorPageDownSelect|
-|选择到页首 Ctrl+Shift+Home|cursorTopSelect|
-|选择到页尾 Ctrl+Shift+End|cursorBottomSelect|
-|扩大选区|editor.action.expandSelection|
-|向2侧扩大选择|editor.action.expandSelectionTwoSides|
-|由2侧向内减少选择|editor.action.narrowSelectionTwoSides|
-|选当前词或下一个相同词|editor.action.addSelectionToNextFindMatch|
-|选择所有相同词|editor.action.selectAllSameWord|
-|选相同语法词或配对符号|editor.action.SelectSameWordByLan|
-|跳过当前选择并选中下一个相同词|editor.action.skipSelectionAndSelectNext|
-|选当前行或连续行【鼠标单击行号或三击当前行】|expandLineSelection|
-|选当前行【鼠标双击行尾】|editor.action.selectLineNoBlankStr|
-|选择括号内【鼠标双击括号内侧,按Alt选括号外侧】|editor.action.selectMatchBracket|
-|选择引号内【鼠标双击引号内侧,按Alt选引号外侧】|editor.action.selectMatchQuote|
-|选择折叠区域【鼠标双击折叠行首字符左侧】|editor.action.selectFold|
-|选择相同缩进的行【鼠标双击行首空白字符】|editor.action.selectSameIndentationLine|
-|向上列选择|editor.action.insertCursorAbove|
-|向下列选择|editor.action.insertCursorBelow|
-|选区两侧添加光标|editor.action.setCursorSurroundSel|
-|每行行首添加光标|editor.action.setCursorEachLine|
-|取消上一个选区或光标|editor.action.undoSelection|
-|查找：查找文件|workbench.action.quickOpen|
-|查找：查找字符串|actions.find|
-|查找：字符搜索|workbench.action.findInFiles|
-|查找：替换|editor.action.startFindReplaceAction|
-|查找：向下搜索选中单词|editor.action.nextSelectionMatchFindAction|
-|查找：向上搜索选中单词|editor.action.previousSelectionMatchFindAction|
-|查找索引符号|actions.quickFind|
-|光标向左|cursorLeft|
-|光标向下|cursorDown|
-|光标向上|cursorUp|
-|光标向右|cursorRight|
-|光标向左一词|cursorWordStartLeft|
-|光标向右一词|cursorWordEndRight|
-|光标向左一个驼峰单词|cursorWordPartLeft|
-|光标向右一个驼峰单词|cursorWordPartRight|
-|光标到软行首（连续按依次切换自动换行的行首、缩进后的行首、真行首）|cursorHome|
-|光标到软行尾（连续按依次切换自动换行的行尾、真行尾）|cursorEnd|
-|光标到行首|cursorLineStart|
-|光标到行尾|cursorLineEnd|
-|光标到上个段落（空行为分割段落）|cursorParaUp|
-|光标到下个段落（空行为分割段落）|cursorParaDown|
-|光标到上一页|cursorPageUp|
-|光标到下一页|cursorPageDown|
-|光标到页首|cursorTop|
-|光标到页尾|cursorBottom|
+|Sourround|editor.action.SurroundBylanguage|
+|UnSourround|editor.action.UnSurroundBylanguage|
+|Bold|editor.action.bold|
+|Comment Line/Uncomment|editor.action.commentLine|
+|Block Comment|editor.action.blockCommentLine|
+|Conditional Compilation Ifdef|editor.action.CommentIfdef|
+|Conditional Compilation Ifndef|editor.action.CommentIfndef|
+|Ordered List Symbol|editor.action.orderListSymbols|
+|- Unordered List Symbol|editor.action.unOrderListSymbolsByMinus|
+|* Unordered List Symbol|editor.action.unOrderListSymbolsByMultiply|
+|+ Unordered List Symbol|editor.action.unOrderListSymbolsByPlus|
+|Task List Symbol|editor.action.taskListSymbols|
+|Finished Task List Symbol|editor.action.taskFinishListSymbols|
+|Quote List Symbol|editor.action.quoteListSymbols|
+|Convert Document Line Breaks to \r\n|editor.action.windows|
+|Convert Document Line Breaks to \r|editor.action.macos|
+|Convert Document Line Breaks to \n|editor.action.unix|
+|Indentation：Indent to the Right|tab|
+|Indentation：Indent to the Left|outdent|
+|Upper Case|editor.action.transformToUppercase|
+|Lower Case|editor.action.transformToLowercase|
+|Title Case|editor.action.transformToTitlecase|
+|Select All|editor.action.selectAll|
+|Select Left|cursorLeftSelect|
+|Select Right|cursorRightSelect|
+|Select Up|cursorUpSelect|
+|Select Down|cursorDownSelect|
+|Select Left Word|cursorWordStartLeftSelect|
+|Select Right Word|cursorWordEndRightSelect|
+|Select a Hump Word to the Left|cursorWordPartLeftSelect|
+|Select a Hump Word to the Right|cursorWordPartRightSelect|
+|Select to Home of Line Shift+Home|cursorHomeSelect|
+|Select to End of Line Shift+End|cursorEndSelect|
+|Select to Start of Line|cursorHomeDirectSelect|
+|Select to End of Line|cursorEndDirectSelect|
+|Select to Start of Section|cursorLineStartSelect|
+|Select to End of Section|cursorLineEndSelect|
+|Select to Page Up PgUp|cursorPageUpSelect|
+|Select to Page Down PgDown|cursorPageDownSelect|
+|Select to Top of Page Ctrl+Shift+Home|cursorTopSelect|
+|Select to End of Page Ctrl+Shift+End|cursorBottomSelect|
+|Expand Selection|editor.action.expandSelection|
+|Expand Selection to Both Sides|editor.action.expandSelectionTwoSides|
+|Shrink Selection from Both Sides|editor.action.narrowSelectionTwoSides|
+|Select Next Occurrences|editor.action.addSelectionToNextFindMatch|
+|Select All Occurrences|editor.action.selectAllSameWord|
+|Select All Reference Symbols|editor.action.SelectSameWordByLan|
+|Skip Current Selection and Select The Next Same Word|editor.action.skipSelectionAndSelectNext|
+|Expand Selection to Line|expandLineSelection|
+|Expand Selection to Soft Line|editor.action.selectLineNoBlankStr|
+|Expand Selection to Brackets|editor.action.selectMatchBracket|
+|Expand Selection to Quotation|editor.action.selectMatchQuote|
+|Expand Selection to Folding|editor.action.selectFold|
+|Expand Selection to Same Indented Line|editor.action.selectSameIndentationLine|
+|Add Previous Line|editor.action.insertCursorAbove|
+|Add Next Line|editor.action.insertCursorBelow|
+|Add Cursors on Both Sides of the Selection|editor.action.setCursorSurroundSel|
+|Add Cursor at the Start of Each Line|editor.action.setCursorEachLine|
+|Drop Previous Selection or Cursor|editor.action.undoSelection|
+|Find: Find File|workbench.action.quickOpen|
+|Find: Find|actions.find|
+|Find: Find in Files|workbench.action.findInFiles|
+|Find: Replace|editor.action.startFindReplaceAction|
+|Find: Find Next|editor.action.nextSelectionMatchFindAction|
+|Find: Find Previous|editor.action.previousSelectionMatchFindAction|
+|Find Symbol in Editor|actions.quickFind|
+|Cursor Left|cursorLeft|
+|Cursor Down|cursorDown|
+|Cursor Up|cursorUp|
+|Cursor Right|cursorRight|
+|Cursor Left One Word|cursorWordStartLeft|
+|Cursor Right One Word|cursorWordEndRight|
+|Cursor Left One Hump Word||cursorWordPartLeft|
+|Cursor Right One Hump Word||cursorWordPartRight|
+|Cursor to the Start of the Soft Line（连续按依次切换自动换行的行首、缩进后的行首、真行首）|cursorHome|
+|Cursor to the End of the Soft Line（连续按依次切换自动换行的行尾、真行尾）|cursorEnd|
+|Cursor to the Start of Line|cursorLineStart|
+|Cursor to the End of Line|cursorLineEnd|
+|Cursor to the Previous Section（Empty line to split the section）|cursorParaUp|
+|Cursor to the Next Section（Empty line to split the section）|cursorParaDown|
+|Cursor to Page Up|cursorPageUp|
+|Cursor to Page Down|cursorPageDown|
+|Cursor to Page Top|cursorTop|
+|Cursor to Page End|cursorBottom|
 |上一个光标位置|workbench.action.navigateBack|
 |下一个光标位置|workbench.action.navigateForward|
 |转到行|workbench.action.gotoLine|
