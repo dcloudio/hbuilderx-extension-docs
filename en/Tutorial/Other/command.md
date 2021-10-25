@@ -1,68 +1,68 @@
-# HBuilderX Command列表
+# HBuilderX Command List
 
-|说明	|commandID	|
+|Description	|commandID	|
 |--	|--	|
-|从SVN导入...|import.svn|
-|从Git导入...|import.git|
-|从本地目录导入...|workbench.action.files.openFolder|
-|打开文件所在目录|revealFileInOS|
-|使用命令行窗口打开所在目录|revealFileInTerminal|
-|本地历史记录|workbench.action.files.localHistory|
-|代码助手：激活代码助手|editor.action.triggerSuggest|
-|代码助手：激活方法参数提示|Trigger Parameter Hints|
-|新建标签卡【双击标签卡右侧空白】|workbench.action.files.newUntitledFile|
-|关闭标签卡|workbench.action.closeActiveEditor|
-|关闭右侧标签卡|workbench.action.closeRightEditor|
-|关闭其他标签卡|workbench.action.closeOtherEditors|
-|关闭所有已保存标签卡|workbench.action.closeAllSavedEditors|
-|关闭所有标签卡|workbench.action.closeAllEditors|
-|向左切换标签卡|workbench.action.leftTab|
-|向右切换标签卡|workbench.action.rightTab|
-|向左移动标签卡|workbench.action.moveEditorLeftInGroup|
-|向右移动标签卡|workbench.action.moveEditorRightInGroup|
-|显示第1个标签卡|workbench.action.openEditorAtIndex1|
-|显示第2个标签卡|workbench.action.openEditorAtIndex2|
-|显示第3个标签卡|workbench.action.openEditorAtIndex3|
-|显示第4个标签卡|workbench.action.openEditorAtIndex4|
-|显示第5个标签卡|workbench.action.openEditorAtIndex5|
-|显示第6个标签卡|workbench.action.openEditorAtIndex6|
-|显示第7个标签卡|workbench.action.openEditorAtIndex7|
-|显示第8个标签卡|workbench.action.openEditorAtIndex8|
-|显示第9个标签卡|workbench.action.openEditorAtIndex9|
-|显示末尾的标签卡|workbench.action.openEditorAtIndex0|
-|打开文件...|workbench.action.files.openFile|
-|打开目录...|workbench.action.files.openFolder|
-|恢复已关闭标签卡|workbench.action.reopenClosedEditor|
-|清除已关闭文件列表|workbench.action.clearHistoryFiles|
-|保存|workbench.action.files.save|
-|另存为...|workbench.action.files.saveAs|
-|全部保存|workbench.action.files.saveAll|
-|恢复已移除项目：清除项目列表|workbench.action.clearHistoryProjects|
-|在外部资源管理器打开|revealFileInOS|
-|撤销|undo|
-|恢复撤销|redo|
-|复制选区或当前行|editor.action.clipboardCopyAction|
-|剪切选区或当前行|editor.action.clipboardCutAction|
-|交换字母/选区/行|editor.action.swichSelectionOrLine|
-|复制文件路径|editor.action.clipboardCopyPathAction|
-|粘贴|editor.action.clipboardPasteAction|
-|粘贴为HTML|editor.action.clipboardPasteAsHTML|
-|粘贴自历史|editor.action.clipboardPasteFromHistory|
-|格式化: 重排代码格式|editor.action.format|
-|格式化: 合并为一行|editor.action.joinLines|
-|向上移动行|editor.action.moveLinesUpAction|
-|向下移动行|editor.action.moveLinesDownAction|
-|删除行|editor.action.deleteLines|
-|向左删除词|deleteWordLeft|
-|向右删除词|deleteWordRight|
-|向左删除驼峰词|deleteWordPartLeft|
-|向右删除驼峰词|deleteWordPartRight|
-|删至行首|deleteLineLeft|
-|删至行尾|deleteLineRight|
-|删除行尾空白字符|editor.action.triggerDeleteLineEndSpace|
-|向下插入空行|editor.action.insertLineAfter|
-|向上插入空行|editor.action.insertLineBefore|
-|重复插入当前行|editor.action.duplicate|
+|Import From SVN...|import.svn|
+|Import From Git...|import.git|
+|Import From Local Directory...|workbench.action.files.openFolder|
+|Reveal In Finder|revealFileInOS|
+|Open In Terminal|revealFileInTerminal|
+|Local History|workbench.action.files.localHistory|
+|Code Assistant: Activate the code assistant|editor.action.triggerSuggest|
+|Code Assistant: Activate parameter hints|Trigger Parameter Hints|
+|New Tab 【double-click the blank on the right side of the tab】|workbench.action.files.newUntitledFile|
+|Close Tab|workbench.action.closeActiveEditor|
+|Close the Right Tab|workbench.action.closeRightEditor|
+|Close Other Tabs|workbench.action.closeOtherEditors|
+|Close All the Saved Tabs|workbench.action.closeAllSavedEditors|
+|Close All Tabs|workbench.action.closeAllEditors|
+|Switch to Left Tab|workbench.action.leftTab|
+|Switch to Right Tab|workbench.action.rightTab|
+|Move Tab to the Left|workbench.action.moveEditorLeftInGroup|
+|Move Tab to the Right|workbench.action.moveEditorRightInGroup|
+|Show the First Tab|workbench.action.openEditorAtIndex1|
+|Show the Second Tab|workbench.action.openEditorAtIndex2|
+|Show the Third Tab|workbench.action.openEditorAtIndex3|
+|Show the Fourth Tab|workbench.action.openEditorAtIndex4|
+|Show the Fifth Tab|workbench.action.openEditorAtIndex5|
+|Show the Sixth Tab|workbench.action.openEditorAtIndex6|
+|Show the Seventh Tab|workbench.action.openEditorAtIndex7|
+|Show the Eighth Tab|workbench.action.openEditorAtIndex8|
+|Show the Ninth Tab|workbench.action.openEditorAtIndex9|
+|Show the End Tab|workbench.action.openEditorAtIndex0|
+|Open File...|workbench.action.files.openFile|
+|Open Directory...|workbench.action.files.openFolder|
+|Restore closed tabs|workbench.action.reopenClosedEditor|
+|Clear the list of closed files|workbench.action.clearHistoryFiles|
+|Save|workbench.action.files.save|
+|Save As...|workbench.action.files.saveAs|
+|Save All|workbench.action.files.saveAll|
+|Reopen Project: Clear the History List|workbench.action.clearHistoryProjects|
+|Reveal In Finder|revealFileInOS|
+|Undo|undo|
+|Redo|redo|
+|Copy Selection or Current Line|editor.action.clipboardCopyAction|
+|Cut selection or current line|editor.action.clipboardCutAction|
+|Swap Letter/Selection/Line|editor.action.swichSelectionOrLine|
+|Copy File Path|editor.action.clipboardCopyPathAction|
+|Paste|editor.action.clipboardPasteAction|
+|Paste as Html|editor.action.clipboardPasteAsHTML|
+|Paste From History|editor.action.clipboardPasteFromHistory|
+|Format: Format Document|editor.action.format|
+|Format: Join Lines|editor.action.joinLines|
+|Move Lines Up|editor.action.moveLinesUpAction|
+|Move Lines Down|editor.action.moveLinesDownAction|
+|Delete Line|editor.action.deleteLines|
+|Left Delete Word|deleteWordLeft|
+|Right Delete Word|deleteWordRight|
+|Left Delete Hump Word|deleteWordPartLeft|
+|Right Delete Hump Word|deleteWordPartRight|
+|Delete to Start of Line|deleteLineLeft|
+|Delete to End of Line|deleteLineRight|
+|Delete Blank Spaces at the End of the Line|editor.action.triggerDeleteLineEndSpace|
+|Insert Line Below|editor.action.insertLineAfter|
+|Insert Line Aboce|editor.action.insertLineBefore|
+|Insert the Current Row or Selection Repeatedly |editor.action.duplicate|
 |包围|editor.action.SurroundBylanguage|
 |反包围|editor.action.UnSurroundBylanguage|
 |加粗|editor.action.bold|
