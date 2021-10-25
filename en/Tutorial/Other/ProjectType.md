@@ -2,7 +2,7 @@
 
 HBuilderX supports multiple project types and each type can run in multiple environments.
 
-The following is a list of various project types that can be run.
+The following is a list of various project types and the environments in which they can run.
 
 |                       | web | uniapp | 5+ App| wap2app | QuickApp | WeChat |
 | --------------------- | ------- | ------ | ---------- | ------- | ------ | ---------- |
@@ -11,8 +11,8 @@ The following is a list of various project types that can be run.
 | Run to mini program           | ×       | √      | ×          | ×       | ×      | √          |
 | Run to the terminal          | √      | √      | ×          | ×       | ×      | ×          |
 
-- Your project cannot be run on the specified platform because of wrong type.
-- The project type is determined by manifest.json located in the root directory of the project. If the manifest.json file is in the wrong location, HBuilderX will not be able to recognize the project type.
+- The project cannot be run on the specified platform because of wrong type.
+- The project type is determined by manifest.json located in the root directory of the project. If the manifest.json file is in the wrong location/folder, HBuilderX will not be able to recognize the project type.
 - Click the project name, then right-click and choose "Redetect Project Type", HBuilderX can recognize the project type.
 - From menu "Tool->File Icon Theme", choose "HBuilderX Icon" and each file of the project will display an icon according to the file type.
 
