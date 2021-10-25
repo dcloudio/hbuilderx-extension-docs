@@ -111,11 +111,11 @@
 |Select All Occurrences|editor.action.selectAllSameWord|
 |Select All Reference Symbols|editor.action.SelectSameWordByLan|
 |Skip Current Selection and Select The Next Same Word|editor.action.skipSelectionAndSelectNext|
-|Expand Selection to Line|expandLineSelection|
-|Expand Selection to Soft Line|editor.action.selectLineNoBlankStr|
-|Expand Selection to Brackets|editor.action.selectMatchBracket|
-|Expand Selection to Quotation|editor.action.selectMatchQuote|
-|Expand Selection to Folding|editor.action.selectFold|
+|Expand Selection to Line 【Single click line number or triple clicks current line】|expandLineSelection|
+|Expand Selection to Soft Line【Double-click the end of line】|editor.action.selectLineNoBlankStr|
+|Expand Selection to Brackets【Double-click the inside of the bracket, press Alt to select the outside of the bracket】|editor.action.selectMatchBracket|
+|Expand Selection to Quotation 【Double-click the inside of the bracket, press Alt to select the outside of the quotation】|editor.action.selectMatchQuote|
+|Expand Selection to Folding 【Double-click the blank character at the beginning of the line】|editor.action.selectFold|
 |Expand Selection to Same Indented Line|editor.action.selectSameIndentationLine|
 |Add Previous Line|editor.action.insertCursorAbove|
 |Add Next Line|editor.action.insertCursorBelow|
@@ -137,8 +137,8 @@
 |Cursor Right One Word|cursorWordEndRight|
 |Cursor Left One Hump Word||cursorWordPartLeft|
 |Cursor Right One Hump Word||cursorWordPartRight|
-|Cursor to the Start of the Soft Line（连续按依次切换自动换行的行首、缩进后的行首、真行首）|cursorHome|
-|Cursor to the End of the Soft Line（连续按依次切换自动换行的行尾、真行尾）|cursorEnd|
+|Cursor to the Start of the Soft Line|cursorHome|
+|Cursor to the End of the Soft Line|cursorEnd|
 |Cursor to the Start of Line|cursorLineStart|
 |Cursor to the End of Line|cursorLineEnd|
 |Cursor to the Previous Section（Empty line to split the section）|cursorParaUp|
@@ -211,14 +211,14 @@
 |Show/Hide Indentation|editor.action.toggleRenderIndentReference|
 |Displays Whitespace Characters When Highlighted|editor.action.toggleRenderWhitespace|
 |Word Wrap|editor.action.toggleWordWrap|
-|Split: Single Pane|workbench.action.split1e|
-|Split: Two Side Panes|workbench.action.split2e|
-|Split: Three Panes|workbench.action.split3e|
-|Split: Four Panes|workbench.action.split4grid|
-|Split: 上下2栏|workbench.action.split2row|
-|Split:上下3栏|workbench.action.split3row|
-|Split:置焦左侧分栏|workbench.action.prevpane|
-|Split:置焦右侧分栏|workbench.action.nextpane|
+|Split: Single Column|workbench.action.split1e|
+|Split: 2 left and right columns|workbench.action.split2e|
+|Split: 3 left and right columns|workbench.action.split3e|
+|Split: 4 Grid|workbench.action.split4grid|
+|Split: 2 columns up and down|workbench.action.split2row|
+|Split: 3 columns up and down|workbench.action.split3row|
+|Split: Focus on the left column|workbench.action.prevpane|
+|Split: Focus on the right column|workbench.action.nextpane|
 |Zoom In【Ctrl+Scroll Mouse Up】|workbench.action.zoomIn|
 |Zoom out【Ctrl+Scroll Mouse Down】|workbench.action.zoomOut|
 |Performances|workbench.action.openGlobalSettings|
@@ -242,10 +242,10 @@
 |Readme|workbench.action.openReadme|
 |Sponsor Us ...|workbench.action.opensponsor|
 |About...|app.action.quit|
-|uniCloud: 上传部署云函数|cloud.function.upload.deploy|
+|uniCloud: Upload and deploy cloud functions|cloud.function.upload.deploy|
 |HBuilderX svn: Update|ExternalcommandId:SVN_UPDATE|
 |HBuilderX svn: Commit|ExternalcommandId:SVN_COMMIT|
-|HBuilderX svn: 检查修改内容|ExternalcommandId:SVN_REPOSTATUS|
+|HBuilderX svn: Check the modified content|ExternalcommandId:SVN_REPOSTATUS|
 |HBuilderX svn: Log|ExternalcommandId:SVN_LOG|
 |HBuilderX svn: Delete Current File(Single File)|ExternalcommandId:SVN_REMOVE|
 |HBuilderX svn: Add File(Single File)|ExternalcommandId:SVN_ADD|
