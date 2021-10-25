@@ -147,114 +147,114 @@
 |Cursor to Page Down|cursorPageDown|
 |Cursor to Page Top|cursorTop|
 |Cursor to Page End|cursorBottom|
-|上一个光标位置|workbench.action.navigateBack|
-|下一个光标位置|workbench.action.navigateForward|
-|转到行|workbench.action.gotoLine|
-|转到匹配的括号|editor.action.jumpToBracket|
-|设置/取消书签|workbench.action.toggleBookmark|
-|下一个书签|workbench.action.nextBookmark|
-|上一个书签|workbench.action.prevBookmark|
-|删除所有书签|workbench.action.clearBookmarks|
-|跳转到下一个书签|workbench.action.nextBookmark|
-|跳转到下一个搜索结果|editor.action.nextSelectionMatchFindAction|
-|跳转到下一个语法错误|workbench.action.nextError|
-|折叠|workbench.action.foldLineContract|
-|展开|workbench.action.foldLineExpand|
-|折叠子行|workbench.action.foldChildrenContract|
-|展开子行|workbench.action.foldChildrenExpand|
-|全部折叠|workbench.action.foldAllContract|
-|全部展开|workbench.action.foldAllExpand|
-|折叠其他区域|workbench.action.foldContractOther|
-|转到定义|workbench.action.gotoDefinition|
-|转到定义到分栏【Ctrl+Alt+鼠标单击】|workbench.action.gotoDefinitionWithPane|
-|转到定义到分栏【Command+Alt+鼠标单击】|workbench.action.gotoDefinitionWithPane|
-|发行：原生App-云打包|project.action.app.pack|
-|发行：原生App-查看云打包状态|project.action.app.status|
-|发行：生成本地打包App资源|project.action.app.export.app|
-|发行：Android本地打包指南...|workbench.action.openAndroidPackageGuide|
-|发行：iOS本地打包指南...|workbench.action.openIOSPackageGuide|
-|发行：原生App-制作应用wgt包|project.action.app.export.wgt.app|
-|发行：小程序-微信(仅适用于uni-app)|project.action.app.publish.weapp|
-|发行：小程序-百度(仅适用于uni-app)|project.action.app.publish.baiduapp|
-|发行：小程序-支付宝(仅适用于uni-app)|project.action.app.publish.alipayapp|
-|发行：小程序-字节跳动(仅适用于uni-app)|project.action.app.publish.bytedanceapp|
-|发行：小程序-QQ(仅适用于uni-app)|project.action.app.publish.qqapp|
-|发行：小程序-360(仅适用于uni-app)|project.action.app.publish.360app|
-|发行：快应用-华为(仅适用于uni-app)|project.action.app.publish.huaweiapp|
-|发行：快应用-联盟(仅适用于uni-app)|project.action.app.publish.quickappunion|
-|发行：网站-H5手机版(仅适用于uni-app)|project.action.app.publish.html5|
-|发行：生成统一发布页面|project.action.app.publish.app|
-|发行：上传网站到服务器|project.action.app.publish.statichosting|
-|发行：查看服务器端网站文件|project.action.view.statichosting|
-|转到Page.json (uni-app)|workbench.action.openPageJsonFile|
-|视图：最小化|workbench.action.minimize|
-|视图：新建HBuilder窗体|workbench.action.newWindow|
-|视图：切换纯净模式【双击选项卡】|workbench.action.pureMode|
-|视图：切换免打扰模式|workbench.action.distanceFreeMode|
-|视图：置焦到编辑器|workbench.action.focusEditor|
-|视图：置焦到项目管理器|workbench.view.explorer|
-|视图：显示/隐藏左侧视图|workbench.action.toggleSidebarVisibility|
-|视图：显示/隐藏文档结构图|editor.action.triggerOutline|
-|视图：显示/隐藏工具栏|workbench.action.toggleToolbarVisibility|
-|视图：显示/隐藏内置浏览器|workbench.action.togglePreviewBrowserVisibility|
-|视图：显示/隐藏迷你地图|editor.action.toggleMinimap|
-|视图：显示/隐藏状态栏|workbench.action.toggleStatusbarVisibility|
-|视图：显示/隐藏控制台|workbench.debug.action.toggleRepl|
-|视图：显示/隐藏终端|workbench.action.tiggleTerminal|
-|视图：显示/隐藏Webview调试控制台|workbench.action.toggleRemoteDebug|
-|视图：显示/隐藏前端网页托管|workbench.action.toggleUniCloudView|
-|控制台：清空控制台|workbench.console.action.clearLog|
-|控制台：锁定滚动条|workbench.console.action.lock|
-|控制台：全选|workbench.console.action.selectAll|
-|控制台：复制|workbench.console.action.copy|
-|显示/隐藏行号|editor.action.toggleRenderLineNumber|
-|显示/隐藏缩进线|editor.action.toggleRenderIndentReference|
-|高亮时显示空白字符|editor.action.toggleRenderWhitespace|
-|自动换行|editor.action.toggleWordWrap|
-|分栏：单栏|workbench.action.split1e|
-|分栏：左右2栏|workbench.action.split2e|
-|分栏：左右3栏|workbench.action.split3e|
-|分栏：4宫格|workbench.action.split4grid|
-|分栏：上下2栏|workbench.action.split2row|
-|分栏：上下3栏|workbench.action.split3row|
-|分栏：置焦左侧分栏|workbench.action.prevpane|
-|分栏：置焦右侧分栏|workbench.action.nextpane|
-|增大字体【Ctrl+鼠标滚动向上】|workbench.action.zoomIn|
-|减小字体【Ctrl+鼠标滚动向下】|workbench.action.zoomOut|
-|设置|workbench.action.openGlobalSettings|
-|自定义快捷键|workbench.action.openGlobalKeybindings|
-|重新加载代码块|workbench.action.reloadSnippets|
-|自定义其他语言代码块...|workbench.action.newSnippet|
-|自定义代码块教程...|snippet.help|
-|无图标|tool.action.explorericon.none|
-|验证本文档语法|editor.action.validation|
-|入门教程...|workbench.action.openTutorial|
-|Markdown语法帮助|workbench.action.openmarkdownhelp|
-|开发者云端控制台...|workbench.action.openusercenter|
-|插件安装|update.openPluginDialog|
-|邮件反馈|workbench.action.feedback|
-|DCloud论坛 ...|workbench.action.openForum|
-|需求墙 ...|workbench.action.openwish|
-|查看运行日志|workbench.action.openlog|
-|历次更新说明|update.showCurrentReleaseNotes|
-|检查更新|update.checkForUpdate|
-|许可协议|workbench.action.openLicense|
-|自述文件|workbench.action.openReadme|
-|赞助我们 ...|workbench.action.opensponsor|
-|关于...|app.action.quit|
+|Previous Postion|workbench.action.navigateBack|
+|Next Postion|workbench.action.navigateForward|
+|Go to Line|workbench.action.gotoLine|
+|Go to Matching Bracket|editor.action.jumpToBracket|
+|Set/Cancel Bookmark|workbench.action.toggleBookmark|
+|Next Bookmark|workbench.action.nextBookmark|
+|Previous Bookmark|workbench.action.prevBookmark|
+|Clear All Bookmarks|workbench.action.clearBookmarks|
+|Goto Next Bookmark|workbench.action.nextBookmark|
+|Goto Next Search Result|editor.action.nextSelectionMatchFindAction|
+|Goto Next Syntax Error|workbench.action.nextError|
+|Fold|workbench.action.foldLineContract|
+|Expand|workbench.action.foldLineExpand|
+|Fold Child Line|workbench.action.foldChildrenContract|
+|Expand Child Line|workbench.action.foldChildrenExpand|
+|Fold All|workbench.action.foldAllContract|
+|Expand All|workbench.action.foldAllExpand|
+|Fold Region|workbench.action.foldContractOther|
+|Go to Definition|workbench.action.gotoDefinition|
+|Go to Definition【Ctrl+Alt+Click】|workbench.action.gotoDefinitionWithPane|
+|Go to Definition【Command+Alt+Click】|workbench.action.gotoDefinitionWithPane|
+|Build: Mobile App - Cloud Packaging|project.action.app.pack|
+|Build: Mobile App - View Status of Cloud Packaging|project.action.app.status|
+|Build: Generate Local Packaged App Resources |project.action.app.export.app|
+|Build: Local Packaging Guide for Android...|workbench.action.openAndroidPackageGuide|
+|Build: Local Packaging Guide for IOS...|workbench.action.openIOSPackageGuide|
+|Build: Mobile App - Export WGT Resources|project.action.app.export.wgt.app|
+|Build: Mini-Program - WeChat(For uni-app Only)|project.action.app.publish.weapp|
+|Build: Mini-Program - BaiDu(For uni-app Only)|project.action.app.publish.baiduapp|
+|Build: Mini-Program - AliPay(For uni-app Only)|project.action.app.publish.alipayapp|
+|Build: Mini-Program - ByteDance(For uni-app Only)|project.action.app.publish.bytedanceapp|
+|Build: Mini-Program - QQ(For uni-app Only)|project.action.app.publish.qqapp|
+|Build: Mini-Program - 360(For uni-app Only)|project.action.app.publish.360app|
+|Build: QuickApp - HuaWei(For uni-app Only)|project.action.app.publish.huaweiapp|
+|Build: QuickApp - Union(For uni-app Only)|project.action.app.publish.quickappunion|
+|Build: Web - H5(For uni-app Only)|project.action.app.publish.html5|
+|Build: Generated Unified Publishing Page|project.action.app.publish.app|
+|Build: Upload Website to Server|project.action.app.publish.statichosting|
+|Build: View Server Web Files|project.action.view.statichosting|
+|Goto Page.json (uni-app)|workbench.action.openPageJsonFile|
+|View: Minimize|workbench.action.minimize|
+|View: New Window|workbench.action.newWindow|
+|View: Switch to Pure Mode|workbench.action.pureMode|
+|View: Switch to No Disturb Mode |workbench.action.distanceFreeMode|
+|View: Focus on Editor|workbench.action.focusEditor|
+|View: Focus on Project Explorer|workbench.view.explorer|
+|View: Show/Hide Left Side|workbench.action.toggleSidebarVisibility|
+|View: Show/Hide Outline|editor.action.triggerOutline|
+|View: Show/Hide Toolbar|workbench.action.toggleToolbarVisibility|
+|View: Show/Hide Built-in Browser|workbench.action.togglePreviewBrowserVisibility|
+|View: Show/Hide Minimap|editor.action.toggleMinimap|
+|View: Show/Hide Status Bar|workbench.action.toggleStatusbarVisibility|
+|View: Show/Hide Console|workbench.debug.action.toggleRepl|
+|View: Show/Hide Terminal|workbench.action.tiggleTerminal|
+|View: Show/Hide Debug View|workbench.action.toggleRemoteDebug|
+|View: Show/Hide Web Hosting|workbench.action.toggleUniCloudView|
+|Console: Clear Log|workbench.console.action.clearLog|
+|Console: Lock|workbench.console.action.lock|
+|Console: Select All|workbench.console.action.selectAll|
+|Console: Copy|workbench.console.action.copy|
+|Show/Hide Line Number|editor.action.toggleRenderLineNumber|
+|Show/Hide Indentation|editor.action.toggleRenderIndentReference|
+|Displays Whitespace Characters When Highlighted|editor.action.toggleRenderWhitespace|
+|Word Wrap|editor.action.toggleWordWrap|
+|Split: Single Pane|workbench.action.split1e|
+|Split: Two Side Panes|workbench.action.split2e|
+|Split: Three Panes|workbench.action.split3e|
+|Split: Four Panes|workbench.action.split4grid|
+|Split: 上下2栏|workbench.action.split2row|
+|Split:上下3栏|workbench.action.split3row|
+|Split:置焦左侧分栏|workbench.action.prevpane|
+|Split:置焦右侧分栏|workbench.action.nextpane|
+|Zoom In【Ctrl+Scroll Mouse Up】|workbench.action.zoomIn|
+|Zoom out【Ctrl+Scroll Mouse Down】|workbench.action.zoomOut|
+|Performances|workbench.action.openGlobalSettings|
+|Custom Keybindings|workbench.action.openGlobalKeybindings|
+|Reload Snippets|workbench.action.reloadSnippets|
+|Custom Other Language Snippets...|workbench.action.newSnippet|
+|Custom Snippet Tutorial...|snippet.help|
+|No Icon|tool.action.explorericon.none|
+|Validate Document|editor.action.validation|
+|Started Tutorial...|workbench.action.openTutorial|
+|Markdown Help|workbench.action.openmarkdownhelp|
+|Developer Dcloud Console...|workbench.action.openusercenter|
+|Plug-in Installation|update.openPluginDialog|
+|Mail Feedback|workbench.action.feedback|
+|DCloud Forums ...|workbench.action.openForum|
+|Feature Requests ...|workbench.action.openwish|
+|View Running Logs|workbench.action.openlog|
+|Release Notes|update.showCurrentReleaseNotes|
+|Check for Updates|update.checkForUpdate|
+|License|workbench.action.openLicense|
+|Readme|workbench.action.openReadme|
+|Sponsor Us ...|workbench.action.opensponsor|
+|About...|app.action.quit|
 |uniCloud: 上传部署云函数|cloud.function.upload.deploy|
-|HBuilderX svn: 更新|ExternalcommandId:SVN_UPDATE|
-|HBuilderX svn: 提交|ExternalcommandId:SVN_COMMIT|
+|HBuilderX svn: Update|ExternalcommandId:SVN_UPDATE|
+|HBuilderX svn: Commit|ExternalcommandId:SVN_COMMIT|
 |HBuilderX svn: 检查修改内容|ExternalcommandId:SVN_REPOSTATUS|
-|HBuilderX svn: 查看日志|ExternalcommandId:SVN_LOG|
-|HBuilderX svn: 删除当前文件(单个文件)|ExternalcommandId:SVN_REMOVE|
-|HBuilderX svn: 增加文件(单个文件)|ExternalcommandId:SVN_ADD|
-|HBuilderX svn: 还原(revert)|ExternalcommandId:SVN_REVERT|
-|HBuilderX git: 同步|ExternalcommandId:GIT_SYNC|
-|HBuilderX git: 提交|ExternalcommandId:GIT_COMMIT|
-|HBuilderX git: 比较差异|ExternalcommandId:GIT_DIFF|
-|HBuilderX git: 检查修改内容|ExternalcommandId:GIT_REPOSTATUS|
-|HBuilderX git: 查看日志|ExternalcommandId:GIT_LOG|
-|HBuilderX git: 删除当前文件(单个文件)|ExternalcommandId:GIT_REMOVE|
-|HBuilderX git: 增加文件(单个文件)|ExternalcommandId:GIT_ADD|
-|HBuilderX git: 还原(revert)|ExternalcommandId:GIT_REVERT|
+|HBuilderX svn: Log|ExternalcommandId:SVN_LOG|
+|HBuilderX svn: Delete Current File(Single File)|ExternalcommandId:SVN_REMOVE|
+|HBuilderX svn: Add File(Single File)|ExternalcommandId:SVN_ADD|
+|HBuilderX svn: Revert(revert)|ExternalcommandId:SVN_REVERT|
+|HBuilderX git: Sync|ExternalcommandId:GIT_SYNC|
+|HBuilderX git: Commit|ExternalcommandId:GIT_COMMIT|
+|HBuilderX git: Compare Selected Files|ExternalcommandId:GIT_DIFF|
+|HBuilderX git: Status|ExternalcommandId:GIT_REPOSTATUS|
+|HBuilderX git: Log|ExternalcommandId:GIT_LOG|
+|HBuilderX git: Delete File(Single File)|ExternalcommandId:GIT_REMOVE|
+|HBuilderX git: Add File(Single File)|ExternalcommandId:GIT_ADD|
+|HBuilderX git: Revert(revert)|ExternalcommandId:GIT_REVERT|
