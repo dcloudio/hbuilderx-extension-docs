@@ -6,7 +6,7 @@ HBuilderX provides a rich and easy keyboard shortcuts and lets you perform most 
 
 > Command key for MacOSX，Ctrl key for Windows
 
-#### Keep close or same shortcut
+#### Shortcuts that are close to or the same as the OS and browser
 
 For example, shortcut of tabs are the same as those of the browser, `command+t` to open new tab,`command+shift+t` to restore closed tab,  `command+w` to close tab, `command+alt+left/right` to switch tabs.
 
