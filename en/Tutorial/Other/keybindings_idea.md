@@ -1,6 +1,7 @@
 # HBuilderX Shortcuts Target
 
-HBuilderX Shortcuts Target：Define Efficient Shortcuts Only
+HBuilderX Shortcuts Target：Define Efficient Shortcuts
+
 HBuilderX provides a rich and easy keyboard shortcuts and lets you perform most tasks directly from the keyboard.
 
 > Command key for MacOSX，Ctrl key for Windows
