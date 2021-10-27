@@ -12,7 +12,7 @@ For example, shortcut of tabs are the same as those of the browser, `command+t` 
 
 Users who are used to searching for files with `command+t` in the eclipse, remember that the shortcut key for searching files has been changed to `command+p`.
 
-#### command is an action、command+shift is the opposite action、command+alt is for more actions
+#### command and command+shift are the opposite and command+alt is used to more actions
 
 `command+k` to format，`command+shift+k` to join lines
 
@@ -22,9 +22,9 @@ Users who are used to searching for files with `command+t` in the eclipse, remem
 
 #### Symbolize rather than letterize
 
-It's hard to remember shortcut for action "surround" with a letter.
+It's difficult to remember shortcut for action "surround" action with letter.
 
-`command+]` is surround，`command+shift+]` is anti-surround. It's much easy to remember with symbol.
+`command+]` is to surround，`command+shift+]` is to anti-surround. It's much easy to remember with symbol.
 
 `command+shift+|` is to set a cursor for the selected row, "|" can be regarded as a cursor.
 
@@ -33,7 +33,7 @@ It's hard to remember shortcut for action "surround" with a letter.
 - `alt+mouse wheel` is horizontal scrolling
 - `alt+mouse single-click` is goto definition
 - `alt+mouse drag`is column selection
-- `command+mouse single-click` is add mulitple cursor
+- `command+mouse single-click` is to add mulitple cursor
 - `mouse double-click` can do intelligent selection，see "Select" menu
 
 #### Some shortcuts changed from previous HBuilderX version
@@ -56,4 +56,4 @@ It's hard to remember shortcut for action "surround" with a letter.
 - Select tag: Double-click the beginning or end of the tag or indentation
 - Expand selection: `command+=`
 - Duplicate line/selection: `command+shift+r`, not `command+shift+d`
-- You can switch the shortcuts of other tools through "Tool->Keymaps"
+- Switch the shortcuts of other tools through "Tool->Keymaps"
