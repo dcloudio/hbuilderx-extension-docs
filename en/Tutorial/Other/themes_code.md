@@ -1,4 +1,4 @@
-#### The color style of code editor (including three themes: Green Soft - Default, elegant blue - Monokai, cool black - Atom One Dark)
+#### The color style of code editor (including three themes: Green Soft - Default, Elegant Blue - Monokai, Cool Black - Atom One Dark)
 
 - Green soft theme
 ```json
