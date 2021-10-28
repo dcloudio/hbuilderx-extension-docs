@@ -1,22 +1,22 @@
-# 主题颜色配置规则
+# Color Theme Setting 
 
-颜色配置命名规则与vscode相同，方便从vscode提取外观主题。
+HBuilderX has the same configuration of color theme settings as vscode, and it is easy to get theme settings from vscode.
 
-推荐使用主题配置插件: [自定义主题插件](https://ext.dcloud.net.cn/plugin?id=2684)
+It is recommended to use the theme configuration plugin: [Custom Theme Plugin](https://ext.dcloud.net.cn/plugin?id=2684)
 
-### 文本编辑区
+### Text Editor
 
-|名称				|描述			|
+|Name				|Description			|
 |-					|-				|
-|editor.foreground	|编辑区前景颜色	|
-|editor.background	|编辑区背景颜色	|
-|editor.caret|光标颜色|
-|editor.caretLine|光标所在行的行颜色|
-|editor.hyperlink|超链接激活时的文字颜色|
-|editor.indentguide|缩进导轨的颜色|
-|editor.indicator.matchtag|配对括号的突出显示颜色|
-|editor.indicator.sameword|相同词汇的突出显示颜色|
-|editor.linenumber|行号颜色|
+|editor.foreground	|Foreground color of editor	|
+|editor.background	|Background color of editor	|
+|editor.caret|Cursor Color|
+|editor.caretLine| The color of the line where the cursor is|
+|editor.hyperlink|The color of the text when the hyperlink is activated|
+|editor.indentguide|The color of the indentation guide|
+|editor.indicator.matchtag|Highlight color of paired brackets|
+|editor.indicator.sameword|Highlight colors for the same words|
+|editor.linenumber|Line number color|
 |editor.selection|激活的选区颜色|
 |editor.selectRegion|区域内搜索选区颜色|
 |editor.whitespace|空白的颜色(包括TAB和SPACE)|
