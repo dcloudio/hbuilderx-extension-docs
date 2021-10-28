@@ -17,27 +17,27 @@ It is recommended to use the theme configuration plugin: [Custom Theme Plugin](h
 |editor.indicator.matchtag|Highlight color of paired brackets|
 |editor.indicator.sameword|Highlight colors for the same words|
 |editor.linenumber|Line number color|
-|editor.selection|激活的选区颜色|
-|editor.selectRegion|区域内搜索选区颜色|
-|editor.whitespace|空白的颜色(包括TAB和SPACE)|
-|editor.unactive_selection.background|未激活的选区颜色(分栏后在右侧获取选区,然后点击左侧编辑器)|
-|editor.foldMarker.expanded.background|编辑器代码折叠图标展开状态背景色|
-|editor.foldMarker.expanded.foreground|编辑器代码折叠图标展开状态前景色|
-|editor.foldMarker.collapsed.background|编辑器代码折叠图标折叠状态背景色|
-|editor.foldMarker.collapsed.foreground|编辑器代码折叠图标折叠状态前景色|
+|editor.selection|The color of selection|
+|editor.selectRegion|The color of selected region|
+|editor.whitespace|The color of blank area(including TAB and SPACE)|
+|editor.unactive_selection.background|The background color of inactive selection|
+|editor.foldMarker.expanded.background|The background color of the code editor from collapsed to expanded state |
+|editor.foldMarker.expanded.foreground|The foreground color of the code editor from collapsed to expanded state|
+|editor.foldMarker.collapsed.background|The background color of the code editor in the collapsed state|
+|editor.foldMarker.collapsed.foreground|The foreground color of the code editor in the collapsed state|
 
-备注：editor.background之后的颜色，仅对3.2.7+版本生效。
+备注：The setting after editor.background is only valid for 3.2.7+ version.
 
-#### 编辑区代码默认颜色定义
-> 自定义方式，将默认代码区颜色配置拷贝到`settings.json`源码视图中自定义`"editor.tokenColorCustomizations"`节点下对应主题的`"rules"`节点下。
+#### Defult setting of code editor
+> Customize，copy default configuration to `"rules"` node of `"editor.tokenColorCustomizations"` node in the source view of `settings.json`.
 
-> 默认代码区颜色定义参考：[代码区颜色定义](/Tutorial/Other/themes_code.md)
+> The default color of code editor：[Color settings of code editor](/Tutorial/Other/themes_code.md)
 
-举例：
+For example：
 ```json
 //settings.json
 "editor.tokenColorCustomizations": {
-    "[Default]": {//绿柔
+    "[Default]": {//green soft
         "rules":[
             {
                 "scope": ["meta.embedded", "source.groovy.embedded"],
@@ -56,29 +56,29 @@ It is recommended to use the theme configuration plugin: [Custom Theme Plugin](h
 }
 ```
 
-### mac标题栏（只在mac os上生效）
+### mac（Available for macOS）
 
-|名称						|描述		|
+|Name					|Description		|
 |-							|-			|
-|titleBar.activeBackground	|背景颜色	|
-|titleBar.activeForeground	|前景颜色	|
+|titleBar.activeBackground	|Background Color	|
+|titleBar.activeForeground	|Foreground Color	|
 
-### windows菜单栏
+### windows 
 
-> 以下两项，仅对windows 3.2.7+版本生效。
+>  Available few students for windows3.2.7+
 
-|名称						|描述		|
+|Nmae						|Description		|
 |-							|-			|
-|menubar.background	|顶部菜单栏背景颜色	|
-|menubar.foreground	|顶部菜单栏前景颜色	|
+|menubar.background	|Background color of Top Navigation	|
+|menubar.foreground	|Foreground color of Top Navigation	|
 
-### 工具栏
+### Toolbar
 
 
-|名称					|描述							|
+|Name					|Description							|
 |-						|-								|
-|toolBar.background		|工具栏背景颜色					|
-|toolBar.border			|工具栏边框颜色					|
+|toolBar.background		|The background color of toolbar					|
+|toolBar.border			|The border color of toolbar.					|
 |toolBar.hoverBackground|工具栏上图标被选中时的背景颜色	|
 
 ### 搜索框 
