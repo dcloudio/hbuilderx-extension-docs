@@ -1,8 +1,8 @@
-#### 默认的代码区颜色定义（包含三种主题：绿柔、雅蓝、酷黑）
+#### The color style of code editor (including three themes: Green Soft - Default, elegant blue - Monokai, cool black - Atom One Dark)
 
-- 绿柔主题
+- Green soft theme
 ```json
-//绿柔主题
+//Default
 [
   {
       "scope": ["meta.embedded", "source.groovy.embedded"],
@@ -552,10 +552,10 @@
 ```
 
 
-- 雅蓝主题
+- Elegant blue theme
 
 ```json
-//雅蓝主题
+//Monokai
 [
   {
       "name": "Comment",
@@ -2369,10 +2369,10 @@
 ]
 ```
 
-- 酷黑主题
+- Cool black theme
 
 ```json
-//酷黑
+//Atom One Dark
 [
   {
       "settings": {
