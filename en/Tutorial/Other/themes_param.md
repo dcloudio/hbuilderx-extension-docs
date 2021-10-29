@@ -20,11 +20,11 @@ It is recommended to use the theme configuration plugin: [Custom Theme Plugin](h
 |editor.selection|The color of selection|
 |editor.selectRegion|The color of selected region|
 |editor.whitespace|The color of blank area(including TAB and SPACE)|
-|editor.unactive_selection.background|The background color of inactive selection|
-|editor.foldMarker.expanded.background|The background color of the code editor from collapsed to expanded state |
-|editor.foldMarker.expanded.foreground|The foreground color of the code editor from collapsed to expanded state|
-|editor.foldMarker.collapsed.background|The background color of the code editor in the collapsed state|
-|editor.foldMarker.collapsed.foreground|The foreground color of the code editor in the collapsed state|
+|editor.unactive_selection.background|Background color of inactive selection|
+|editor.foldMarker.expanded.background|Background color of the code editor from collapsed to expanded state |
+|editor.foldMarker.expanded.foreground|Foreground color of the code editor from collapsed to expanded state|
+|editor.foldMarker.collapsed.background|Background color of the code editor in the collapsed state|
+|editor.foldMarker.collapsed.foreground|Foreground color of the code editor in the collapsed state|
 
 备注：The setting after editor.background is only valid for 3.2.7+ version.
 
@@ -69,17 +69,17 @@ For example：
 
 |Nmae						|Description		|
 |-							|-			|
-|menubar.background	|The background color of top navigation	|
-|menubar.foreground	|The foreground color of top navigation	|
+|menubar.background	|Background color of top navigation	|
+|menubar.foreground	|Foreground color of top navigation	|
 
 ### Toolbar
 
 
 |Name					|Description							|
 |-						|-								|
-|toolBar.background		|The background color of toolbar					|
-|toolBar.border			|The border color of toolbar					|
-|toolBar.hoverBackground|The background color of the icon when hovering over the icon	|
+|toolBar.background		|Background color of toolbar					|
+|toolBar.border			|Border color of toolbar					|
+|toolBar.hoverBackground|Background color of the icon when hovering over the icon	|
 
 ### Search Bar 
 
@@ -98,9 +98,9 @@ For example：
 
 |Name						|Description				|
 |-								|-						|
-|inputValidation.infoBackground	|The background color of dropdown box		|
-|inputList.hoverBackground		|The background color when the mouse hovers over the list item	|
-|inputList.border				|The border color of dropdown box		|
+|inputValidation.infoBackground	|Background color of dropdown box		|
+|inputList.hoverBackground		|Background color when the mouse hovers over the list item	|
+|inputList.border				|Border color of dropdown box		|
 |inputList.titleColor			|Search title color of dropdown box		|
 |inputList.foreground			|Search text color of dropdown box	|
 
@@ -109,22 +109,22 @@ For example：
 
 |Name				|Description					|
 |-					|-						|
-|input.background	|	The background color of text box		|
-|input.foreground	| The foreground color of text box			|
-|input.border		|The border color of text box			|
-|focusBorder		|The border color when the text box has focus	|
+|input.background	|Background color of text box		|
+|input.foreground	|Foreground color of text box			|
+|input.border		|Border color of text box			|
+|focusBorder		|Border color when the text box has focus	|
 
 ### List component/Tree component
 
 |Name								|Description							|
 |-									|-								|
-|list.foreground					|The foreground color	of list component					|
-|list.activeSelectionBackground		|The background color of selected list item			|
-|list.activeSelectionForeground		|The foreground color of selected list item			|
-|list.hoverBackground				|The background color when the mouse hovers over the list item 			|
-|list.highlightForeground			|The foreground color when the item is highlighted					|
-|list.inactiveSelectionBackground	|The background color of unselected items 				|
-|list.inactiveSelectionForeground	|The foreground color of unselected items				|
+|list.foreground					|Foreground color	of list component					|
+|list.activeSelectionBackground		|Background color of selected list item			|
+|list.activeSelectionForeground		|Foreground color of selected list item			|
+|list.hoverBackground				|Background color when the mouse hovers over the list item 			|
+|list.highlightForeground			|Foreground color when the item is highlighted					|
+|list.inactiveSelectionBackground	|Background color of unselected items 				|
+|list.inactiveSelectionForeground	|Foreground color of unselected items				|
 |explorer.file.status.modified		|File name color of modified files with version control （SVN/GIT）	|
 |explorer.file.status.untracked		|File name color of untracked files with version control （SVN/GIT）|
 |explorer.file.status.added			|File name color of new file with version control （SVN/GIT）	|
@@ -143,17 +143,17 @@ For example：
 
 |Name								|Description									|
 |-									|-										|
-|editorGroupHeader.tabsBackground	|The background color of tabs							|
-|tab.activeBackground				|The background color of selected tab							|
-|tab.border							|The border color of tab							|
-|tab.inactiveBackground				|The background color of unselected tabs						|
-|tab.hoverBackground				|The background color when the mouse hovers over the tab |
-|tab.inactiveForeground				|The foreground color of unselected tabs						|
-|tab.activeBorder					|The border color of selected tab							|
-|tab.activeForeground				|The foreground color of selected tab					|
-|tab.unfocusedInactiveForeground	|The foreground color of the unselected tab in the unfocused column			|
-|tab.unfocusedHoverBackground		|The background color when the mouse hovers over unselected tab in the unfocused column|
-|tab.unfocusedActiveForeground		|The foreground color of selected tab the unfocused column			|
+|editorGroupHeader.tabsBackground	|Background color of tabs							|
+|tab.activeBackground				|Background color of selected tab							|
+|tab.border							|Border color of tab							|
+|tab.inactiveBackground				|Background color of unselected tabs						|
+|tab.hoverBackground				|Background color when the mouse hovers over the tab |
+|tab.inactiveForeground				|Foreground color of unselected tabs						|
+|tab.activeBorder					|Border color of selected tab							|
+|tab.activeForeground				|Foreground color of selected tab					|
+|tab.unfocusedInactiveForeground	|Foreground color of the unselected tab in the unfocused column			|
+|tab.unfocusedHoverBackground		|Background color when the mouse hovers over unselected tab in the unfocused column|
+|tab.unfocusedActiveForeground		|Foreground color of selected tab the unfocused column			|
 
 ### Columns
 
@@ -161,143 +161,143 @@ For example：
 |Name							|Description						|
 |-								|-							|
 |editorGroup.border				|Dividing line color					|
-|tab.unfocusedActiveForeground	|The foreground color of selected tab in unfocused column	|
+|tab.unfocusedActiveForeground	|Foreground color of selected tab in unfocused column	|
 
 ### Button
 
 |Name					|Descritpion					|
 |-						|-						|
-|button.background		|The background color of button	|
-|button.foreground		|The foreground color of button	|
-|button.hoverBackground	|The background color when the mouse hovers over button	|
+|button.background		|Background color of button	|
+|button.foreground		|Foreground color of button	|
+|button.hoverBackground	|Background color when the mouse hovers over button	|
 
 ### Code assistant
 
 
-|名称									|描述						|
+|Name									|Description						|
 |-										|-							|
-|editorSuggestWidget.background			|助手弹窗背景颜色			|
-|editorSuggestWidget.border				|助手弹窗边框颜色			|
-|editorSuggestWidget.selectedBackground	|助手弹窗选中条目时背景颜色	|
-|editorSuggestWidget.link				|助手链接颜色				|
+|editorSuggestWidget.background			|Background color of editor widget			|
+|editorSuggestWidget.border				|Border color of editor widget		|
+|editorSuggestWidget.selectedBackground	|Background color of selected item in editor widget	|
+|editorSuggestWidget.link				|Hyperlink color in editor widget			|
 
 
-### 文档结构图
+### Outline 
 
 
-|名称				|描述			|
+|Name				|Description			|
 |-					|-				|
-|outlineBackground	|文档结构背景颜色	|
+|outlineBackground	|Background color of outline	|
 
-### 滚动条
+### Scroll Bar
 
-|名称							|描述					|
+|Name							|Description					|
 |-								|-						|
-|scrollbarSlider.background		|滚动条背景颜色			|
-|scrollbarSlider.hoverBackground|鼠标滑过滚动条背景颜色	|
+|scrollbarSlider.background		|Background color of scroll bar			|
+|scrollbarSlider.hoverBackground|Background color when the mouse hovers over scroll bar	|
 
-### 预览按钮
+### Preview Button
 
-|名称										|描述					|
+|Name										|Description					|
 |-											|-						|
-|extensionButton.prominentBackground		|背景颜色				|
-|extensionButton.prominentForeground		|前景颜色				|
-|extensionButton.border						|边框颜色				|
-|extensionButton.prominentHoverBackground	|鼠标滑过时的背景颜色	|
-|extensionButton.checkColor					|选中时的前景颜色		|
+|extensionButton.prominentBackground		|Background color			|
+|extensionButton.prominentForeground		|Foreground color				|
+|extensionButton.border						|Border color				|
+|extensionButton.prominentHoverBackground	|Background color when the mouse hovers over it	|
+|extensionButton.checkColor					|Foreground color after it was clicked		|
 
 
-### 设置
+### Settings
 
 
-|名称								|描述						|
+|Name								|Description					|
 |-									|-							|
-|editor.background					|设置页面背景颜色			|
-|inputOption.activeBorder			|文本框有焦点时边框颜色		|
-|settings.textInputBackground		|文本框背景颜色				|
-|settings.textInputBorder			|文本框边框颜色				|
-|settings.textInputDisableBackground|文本框不可用背景颜色		|
-|settings.dropdownForeground		|combobox下拉列表前景颜色	|
-|settings.dropdownBorder			|combobox下拉列表边框颜色	|
-|settings.dropdownBackground		|combobox下拉列表背景颜色	|
-|settings.dropdownListBorder		|combobox item边框颜色		|
+|editor.background					|Background color of editor		|
+|inputOption.activeBorder			|Border color when the input box has focus|
+|settings.textInputBackground		|Background color of input field				|
+|settings.textInputBorder			|Border color of input field				|
+|settings.textInputDisableBackground|Background color of the disabled input field	|
+|settings.dropdownForeground		|Foreground color of dropdown box	|
+|settings.dropdownBorder			|Border color of dropdown box	|
+|settings.dropdownBackground		|Background color of dropdown box	|
+|settings.dropdownListBorder		|Boder color of dropdown list item		|
 
-### 图片预览
+### Image Preview
 
 
-|名称					|描述			|
+|Name					|Description			|
 |-						|-				|
-|imageview.background	|浅色方格颜色	|
-|imageview.foreground	|深色方格颜色	|
+|imageview.background	|Background color of image view	|
+|imageview.foreground	|Foreground color of image view|
 
-### 弹窗提示框
+### Popup Window
 
-|名称									|描述					|
+|Name								|Description					|
 |-										|-						|
-|notifications.border					|弹窗边框颜色			|
-|notifications.background				|弹窗背景颜色			|
-|notifications.foreground				|弹窗前景颜色			|
-|notification.buttonBorder				|弹窗按钮边框颜色		|
-|notification.buttonBackground			|弹窗按钮背景颜色		|
-|notification.buttonForeground			|弹窗按钮前景颜色		|
-|notification.buttonPressedForeground	|弹窗按钮按下前景颜色	|
-|notification.buttonPressedBackground	|弹窗按钮按下背景颜色	|
-|notificationLink.foreground			|弹窗链接颜色			|
+|notifications.border					|Border color of popup window		|
+|notifications.background				|Background color of popup window		|
+|notifications.foreground				|Foreground color of popup window		|
+|notification.buttonBorder				|Border color of button on popup window	|
+|notification.buttonBackground			|Background color of button on popup window	|
+|notification.buttonForeground			|Foreground color of button on popup window	|
+|notification.buttonPressedForeground	|Foreground color when press button on popup window	|
+|notification.buttonPressedBackground	|Background color when press button on popup window|
+|notificationLink.foreground			|Hyperlink color on popup window			|
 
-### 文件对比
+### File Compare
 
-|名称					|描述											|
+|Name					|Description											|
 |-						|-												|
-|filediff.line.add		|添加行背景颜色									|
-|filediff.line.delete	|删除行背景颜色									|
-|filediff.inline.base	|行内比较和右边行有不同字符，左边字符显示颜色	|
-|filediff.inline.modify	|行内比较和左边行有不同字符，右边字符显示颜色	|
+|filediff.line.add		|Background color when add line								|
+|filediff.line.delete	|Background color when delete line								|
+|filediff.inline.base	|Font color of left column if there is some differences in the file comparison	|
+|filediff.inline.modify	|Font color of right column if there is some differences in the file comparison	|
 
-### 控制台
+### Console
 
 
-|名称						|描述				|
+|Name						|Description				|
 |-							|-					|
-|terminal.background		|终端背景颜色		|
-|console.background | 控制台背景颜色|
-|panelTitle.activeForeground|tab选中时的前景颜色|
-|debug.foreground			|前景颜色			|
-|console.ad|控制台广告信息文字颜色|
-|console.error|控制台错误信息文字颜色|
-|console.foreground|控制台窗口前景颜色颜色(控制台窗口文字颜色)|
-|console.success|控制台成功信息文字颜色|
-|console.time|控制台时间信息文字颜色|
-|console.warn|控制台警告信息文字颜色|
+|terminal.background		|Background color of terminal		|
+|console.background | Background color of console|
+|panelTitle.activeForeground|Foreground color of selected tab|
+|debug.foreground			|Foreground color			|
+|console.ad|Text color of Ad in the console|
+|console.error|Text color of error message in the console|
+|console.foreground|Text color of the console dialog|
+|console.success|Text color of success message in the console|
+|console.time|Text color of time message in the console|
+|console.warn|Text color of warning message in the console|
 
-备注：debug.foreground之后的颜色，仅对3.2.7+版本生效。
+Note: The settings after debug.forground are supported from 3.2.7+.
 
-### 查看svn/git日志
+### svn/git log
 
 在svn/git项目上点击右键。只在mac上生效
 
-|名称							|描述					|
+|Name							|Description					|
 |-								|-						|
-|logviewButton.background		|按钮背景颜色			|
-|logviewButton.border			|按钮边框颜色			|
-|logviewButton.hover			|鼠标滑过按钮背景颜色	|
-|logviewButton.disable			|按钮不可用背景颜色		|
-|logviewButtonDisable.border	|按钮不可用边框颜色		|
-|logview.file.action.modified	|选中已修改文件前景色	|
-|logview.file.action.deleted	|选中已删除文件前景色	|
-|logview.file.action.added		|选中已增加文件前景色	|
-|logview.file.action.rename		|选中已重命名文件前景色	|
+|logviewButton.background		|Background color of logview button			|
+|logviewButton.border			|Border color of logview button	|
+|logviewButton.hover			|Background color when the mouse hovers over logview button	|
+|logviewButton.disable			|Background color of the disabled logview button		|
+|logviewButtonDisable.border	|Border color of the disabled logview button		|
+|logview.file.action.modified	|File name color of modified file 	|
+|logview.file.action.deleted	|File name color of deleted file |
+|logview.file.action.added		|File name color of added file|
+|logview.file.action.rename		|File name color after rename file	|
 
 
-### 状态栏
+### Status Bar
 
-|名称					|描述			|
+|Name					|Description			|
 |-						|-				|
-|statusBar.background	|状态栏背景颜色	|
-|statusBar.foreground	|状态栏前景颜色	|
+|statusBar.background	|Background color of status bar	|
+|statusBar.foreground	|Foreground color of status bar|
 
 
-### 右侧迷你地图
+### Mini Map
 
-|名称					|描述			|
+|Name					|Description			|
 |-						|-				|
-|minimap.handle.background	|迷你地图滑块背景	|
+|minimap.handle.background	|Background color of mini map	|
