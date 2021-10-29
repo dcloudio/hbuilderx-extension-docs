@@ -26,7 +26,7 @@ It is recommended to use the theme configuration plugin: [Custom Theme Plugin](h
 |editor.foldMarker.collapsed.background|Background color of the code editor in the collapsed state|
 |editor.foldMarker.collapsed.foreground|Foreground color of the code editor in the collapsed state|
 
-备注：The setting after editor.background is only valid for 3.2.7+ version.
+Note：The setting after editor.background is only valid for 3.2.7+ version.
 
 #### Defult setting of code editor
 > Customize，copy default configuration to `"rules"` node of `"editor.tokenColorCustomizations"` node in the source view of `settings.json`.
@@ -87,12 +87,12 @@ For example：
 
 |Name						|Description		|
 |-							|-			|
-|searchbar.foreground|当input.searchbar.foreground为空时,字符搜索框没有内容时,字符搜索框内的文字颜色(颜色模式为反色的bgr);当input.searchbar.foreground为空时,字符搜索框有内容,且内容被搜索到时,搜索文件的颜色(因是rgb模式,设置的颜色不生效);字符搜索框光标的颜色|
-|searchbar.notfinded.foreground|当input.searchbar.foreground.notfinded为空时,字符搜索框有内容,且内容没有搜索到时,搜索文字的颜色(因是rgb模式,设置的颜色不生效);字符搜索框光标的颜色|
-|searchbar.quick_search_item.icon_selected|搜索栏下拉列表,当前选中项的颜色(颜色模式为反色的bgr)|
-|searchbar.quick_search_item.icon|搜索栏下拉列表,未选中项的颜色(颜色模式为反色的bgr)|
-|input.searchbar.foreground.notfinded|字符搜索框有内容,且内容没有搜索到时,搜索文字的颜色;字符搜索框光标的颜色|
-|input.searchbar.foreground|字符搜索框没有内容时,字符搜索框内的文字颜色;字符搜索框有内容,且内容被搜索到时,搜索文字的颜色;字符搜索框光标的颜色|
+|searchbar.foreground| Foreground color of search bar|
+|searchbar.notfinded.foreground|Foreground color of search bar when the search result is empty|
+|searchbar.quick_search_item.icon_selected|Text color of selected item in the dropdown list of search bar|
+|searchbar.quick_search_item.icon|Text color of unselected item in the dropdown list of search bar|
+|input.searchbar.foreground.notfinded|Text color of input field in the search bar when the search result is empty|
+|input.searchbar.foreground|Text color of input field in the search bar|
 
 ### Dropdown search box
 
@@ -273,7 +273,7 @@ Note: The settings after debug.forground are supported from 3.2.7+.
 
 ### svn/git log
 
-在svn/git项目上点击右键。只在mac上生效
+Right-click on the svn/git project. Only works on mac
 
 |Name							|Description					|
 |-								|-						|
