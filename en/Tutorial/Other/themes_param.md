@@ -10,7 +10,7 @@ It is recommended to use the theme configuration plugin: [Custom Theme Plugin](h
 |-					|-				|
 |editor.foreground	|Foreground color of editor	|
 |editor.background	|Background color of editor	|
-|editor.caret|Cursor Color|
+|editor.caret|Cursor color|
 |editor.caretLine| The color of the line where the cursor is|
 |editor.hyperlink|The color of the text when the hyperlink is activated|
 |editor.indentguide|The color of the indentation guide|
@@ -60,8 +60,8 @@ For example：
 
 |Name					|Description		|
 |-							|-			|
-|titleBar.activeBackground	|Background Color	|
-|titleBar.activeForeground	|Foreground Color	|
+|titleBar.activeBackground	|Background color	|
+|titleBar.activeForeground	|Foreground color	|
 
 ### windows 
 
@@ -69,8 +69,8 @@ For example：
 
 |Nmae						|Description		|
 |-							|-			|
-|menubar.background	|Background color of Top Navigation	|
-|menubar.foreground	|Foreground color of Top Navigation	|
+|menubar.background	|The background color of top navigation	|
+|menubar.foreground	|The foreground color of top navigation	|
 
 ### Toolbar
 
@@ -78,14 +78,14 @@ For example：
 |Name					|Description							|
 |-						|-								|
 |toolBar.background		|The background color of toolbar					|
-|toolBar.border			|The border color of toolbar.					|
-|toolBar.hoverBackground|工具栏上图标被选中时的背景颜色	|
+|toolBar.border			|The border color of toolbar					|
+|toolBar.hoverBackground|The background color of the icon when hovering over the icon	|
 
-### 搜索框 
+### Search Bar 
 
-> 以下6项，仅对3.2.7+版本生效
+> The following items are supported from 3.2.7+
 
-|名称						|描述		|
+|Name						|Description		|
 |-							|-			|
 |searchbar.foreground|当input.searchbar.foreground为空时,字符搜索框没有内容时,字符搜索框内的文字颜色(颜色模式为反色的bgr);当input.searchbar.foreground为空时,字符搜索框有内容,且内容被搜索到时,搜索文件的颜色(因是rgb模式,设置的颜色不生效);字符搜索框光标的颜色|
 |searchbar.notfinded.foreground|当input.searchbar.foreground.notfinded为空时,字符搜索框有内容,且内容没有搜索到时,搜索文字的颜色(因是rgb模式,设置的颜色不生效);字符搜索框光标的颜色|
@@ -94,84 +94,84 @@ For example：
 |input.searchbar.foreground.notfinded|字符搜索框有内容,且内容没有搜索到时,搜索文字的颜色;字符搜索框光标的颜色|
 |input.searchbar.foreground|字符搜索框没有内容时,字符搜索框内的文字颜色;字符搜索框有内容,且内容被搜索到时,搜索文字的颜色;字符搜索框光标的颜色|
 
-### 搜索下拉框
+### Dropdown search box
 
-|名称							|描述					|
+|Name						|Description				|
 |-								|-						|
-|inputValidation.infoBackground	|下拉框背景颜色			|
-|inputList.hoverBackground		|鼠标滑过item背景颜色	|
-|inputList.border				|下拉框边框颜色			|
-|inputList.titleColor			|下拉框左边文字颜色		|
-|inputList.foreground			|下拉框右边文字颜色		|
+|inputValidation.infoBackground	|The background color of dropdown box		|
+|inputList.hoverBackground		|The background color when the mouse hovers over the list item	|
+|inputList.border				|The border color of dropdown box		|
+|inputList.titleColor			|Search title color of dropdown box		|
+|inputList.foreground			|Search text color of dropdown box	|
 
-### 文本框
+### Text box
 
 
-|名称				|描述					|
+|Name				|Description					|
 |-					|-						|
-|input.background	|文本框背景颜色			|
-|input.foreground	|文本框前景颜色			|
-|input.border		|文本框边框颜色			|
-|focusBorder		|文本框有焦点时边框颜色	|
+|input.background	|	The background color of text box		|
+|input.foreground	| The foreground color of text box			|
+|input.border		|The border color of text box			|
+|focusBorder		|The border color when the text box has focus	|
 
-### 列表控件/树控件区
+### List component/Tree component
 
-|名称								|描述							|
+|Name								|Description							|
 |-									|-								|
-|list.foreground					|前景颜色						|
-|list.activeSelectionBackground		|选中条目背景颜色				|
-|list.activeSelectionForeground		|选中条目前景颜色				|
-|list.hoverBackground				|鼠标滑过背景颜色				|
-|list.highlightForeground			|高亮时前景颜色					|
-|list.inactiveSelectionBackground	|未选中条目背景颜色				|
-|list.inactiveSelectionForeground	|未选中条目前景颜色				|
-|explorer.file.status.modified		|svn/git项目修改状态前景色		|
-|explorer.file.status.untracked		|svn/git项目未跟踪状态前景色	|
-|explorer.file.status.added			|svn/git项目添加状态前景色		|
-|explorer.file.status.conflicted	|svn/git项目冲突状态前景色		|
-|explorer.file.status.rename		|svn/git项目重命名状态前景色	|
-|explorer.file.status.marktext		|svn/git项目标记前景色			|
+|list.foreground					|The foreground color	of list component					|
+|list.activeSelectionBackground		|The background color of selected list item			|
+|list.activeSelectionForeground		|The foreground color of selected list item			|
+|list.hoverBackground				|The background color when the mouse hovers over the list item 			|
+|list.highlightForeground			|The foreground color when the item is highlighted					|
+|list.inactiveSelectionBackground	|The background color of unselected items 				|
+|list.inactiveSelectionForeground	|The foreground color of unselected items				|
+|explorer.file.status.modified		|File name color of modified files with version control （SVN/GIT）	|
+|explorer.file.status.untracked		|File name color of untracked files with version control （SVN/GIT）|
+|explorer.file.status.added			|File name color of new file with version control （SVN/GIT）	|
+|explorer.file.status.conflicted	|File name color of conflicted files with version control （SVN/GIT）	|
+|explorer.file.status.rename		|File name color after rename a file with version control	|
+|explorer.file.status.marktext		|File name color of marktext files with version control （SVN/GIT）		|
 
-### 文件资源管理器
+### Explorer
 
-|名称				|描述		|
+|Name				|Description		|
 |-					|-			|
-|sideBar.background	|背景颜色	|
-|sideBar.border		|边框颜色	|
+|sideBar.background	|Background color	|
+|sideBar.border		|Border color	|
 
-### 标签卡
+### Tabs
 
-|名称								|描述									|
+|Name								|Description									|
 |-									|-										|
-|editorGroupHeader.tabsBackground	|tabs背景颜色							|
-|tab.activeBackground				|选中时的背景颜色							|
-|tab.border							|边框颜色								|
-|tab.inactiveBackground				|未选中时的背景颜色						|
-|tab.hoverBackground				|鼠标滑过时的背景颜色						|
-|tab.inactiveForeground				|未选中时的前景颜色						|
-|tab.activeBorder					|选中时的边框颜色							|
-|tab.activeForeground				|选中时的前景颜色							|
-|tab.unfocusedInactiveForeground	|未选中分栏里未选中标签的前景颜色			|
-|tab.unfocusedHoverBackground		|未选中分栏里鼠标滑过未选中标签的背景颜色	|
-|tab.unfocusedActiveForeground		|未选中分栏里选中标签的前景颜色			|
+|editorGroupHeader.tabsBackground	|The background color of tabs							|
+|tab.activeBackground				|The background color of selected tab							|
+|tab.border							|The border color of tab							|
+|tab.inactiveBackground				|The background color of unselected tabs						|
+|tab.hoverBackground				|The background color when the mouse hovers over the tab |
+|tab.inactiveForeground				|The foreground color of unselected tabs						|
+|tab.activeBorder					|The border color of selected tab							|
+|tab.activeForeground				|The foreground color of selected tab					|
+|tab.unfocusedInactiveForeground	|The foreground color of the unselected tab in the unfocused column			|
+|tab.unfocusedHoverBackground		|The background color when the mouse hovers over unselected tab in the unfocused column|
+|tab.unfocusedActiveForeground		|The foreground color of selected tab the unfocused column			|
 
-### 分栏
+### Columns
 
 
-|名称							|描述						|
+|Name							|Description						|
 |-								|-							|
-|editorGroup.border				|分割线颜色					|
-|tab.unfocusedActiveForeground	|未激活分组里选中标签前景色	|
+|editorGroup.border				|Dividing line color					|
+|tab.unfocusedActiveForeground	|The foreground color of selected tab in unfocused column	|
 
-### 按钮
+### Button
 
-|名称					|描述					|
+|Name					|Descritpion					|
 |-						|-						|
-|button.background		|按钮背景颜色			|
-|button.foreground		|按钮前景颜色			|
-|button.hoverBackground	|鼠标滑过按钮背景颜色	|
+|button.background		|The background color of button	|
+|button.foreground		|The foreground color of button	|
+|button.hoverBackground	|The background color when the mouse hovers over button	|
 
-### 代码助手
+### Code assistant
 
 
 |名称									|描述						|
