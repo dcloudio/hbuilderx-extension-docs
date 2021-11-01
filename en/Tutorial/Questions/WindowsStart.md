@@ -1,40 +1,41 @@
-# HBuilderX Windows 启动问题排查指南
+# HBuilderX Windows startup troubleshooting guide
 
-## 前言
+## Summary
 
-此帖子为`windows`解决方案，mac请参考：[mac解决方案](http://hx.dcloud.net.cn/Tutorial/install/macosx?id=启动问题)
+This document is `windows` platform solution，Mac: please refer to：[mac solution](http://hx.dcloud.net.cn/Tutorial/install/macosx?id=启动问题)
   
-`windows`的`zip`包，解压时间比较长，请勿中断！  如中断了解压，请重新解压
+The `zip` package of `windows` takes a long time to decompress, please do not interrupt! If the decompression is interrupted, please decompress again
 
-** Windows HBuilderX起不来，主要有两种：**
+** Windows HBuilderX cannot startup, maybe 2 reasons：**
 
-- 新下载的起不来，请参考`第一章`
-- 以前可以启动，后来起不来，应该是配置文件损坏了，请`直接看4.1章节` 
+- New installation，please refer to `Chapter One`
+- Can start before, but can’t get up later，the configuration file should be damaged，please see `Chapter 4.1` 
 
 
-## 1.  重点：新下载的HBuilderX无法启动
+## 1.  The newly downloaded HBuilderX cannot be started
 -------------------------------
 
-> 近来，部分小伙伴，反馈在windows系统上，新下载的HBuilderX，解压后，无法启动、点击无反应、启动报xxx.dll错误。
+> Someone reported that the newly downloaded HBuilderX could not be started on the windows system after being decompressed, the click did not respond, and the xxx.dll error was reported when it started.
 
-`特别备注：HBuilderX，要求系统最低是win7，不支持xp`
+`Note：HBuilderX requires the minimum window to be win7, and does not support xp`
 
-特别说明： 如果您的电脑AMD显卡，请直接看第6章节
+Note：If your computer has an AMD graphics card, please go directly to Chapter 6
 
-### 1.0 打开方式不对
+### 1.0 Wrong way
 
-有的小伙伴，从`DCloud.io`下载zip包，双击后，在`压缩软件`里，点击`HBuilderX.exe`
+Some one download zip package from `DCloud.io`，double click `HBuilderX.exe` from compress software.
 
-这种是不对的，`zip包需要解压才能使用`
+This is wrong, the `zip package needs to be decompressed before it can be used`
 
 <img src="/static/snapshots/tutorial/windows_error_open.min.png" style="zoom:80%" />
 
 <img src="/static/snapshots/tutorial/install_windows.png" />
 
 
-### 1.1 快捷方式引发的问题
+### 1.1 Shortcuts problems
 
 windows, 部分小伙伴，解压zip后，为了创建快捷方式，把`HBuilderX.exe`直接拖动到桌面了，点击exe启动不了。
+In windows, someone undepress zip for creating shortcut.
 
 创建`桌面快捷方式`的正确姿势：
 
