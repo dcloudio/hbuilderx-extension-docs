@@ -1,10 +1,10 @@
 # MacOSX安裝HBuilderX
 
-## 下載
+## 下載@download
 
 HBuilderX下載地址: [下載地址](https://www.dcloud.io/hbuilderx.html)
 
-## 安裝
+## 安裝@install
 
 如圖，將HBuilderX`拖`到Applications，纔是正確的安裝姿勢。
 
@@ -18,7 +18,7 @@ HBuilderX下載地址: [下載地址](https://www.dcloud.io/hbuilderx.html)
 
 <img src="/static/snapshots/tutorial/mac_download2.min.jpg" style="zoom: 40%; border: 1px solid #eee;border-radius: 10px;"/>
 
-## 配置文件目錄
+## 配置文件目錄@config
 
 配置文件目錄，如下：
 - `$HOME/Library/Application\ Support/HBuilder\ X`
@@ -27,7 +27,7 @@ HBuilderX下載地址: [下載地址](https://www.dcloud.io/hbuilderx.html)
 **請注意：** mac上，如果路徑包含空格，需要`\`進行轉義
 
 
-## 啓動問題
+## 啓動問題@question
 
 某些情況下，MacOSX HBuilderX無法啓動，解決方法如下：
 

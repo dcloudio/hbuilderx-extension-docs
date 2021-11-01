@@ -1,6 +1,6 @@
 # Windows
 
-### DownLoad
+### DownLoad@download
 
 Download URL: [Download](https://www.dcloud.io/hbuilderx.html)
 
