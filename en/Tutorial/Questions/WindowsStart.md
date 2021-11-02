@@ -57,7 +57,7 @@ windows, 部分小伙伴，解压zip后，为了创建快捷方式，把`HBuilde
 
 <img src="/static/snapshots/tutorial/windows_install/1.png" style="zoom:80%;border: 1px solid #eee;" />
 
-> 备注： 如果此方法，没有解决您的问题，请看下【事件查看器】中的错误。[事件查看器](/Tutorial/Question/WindowsStart?id=_3-通过-事件查看器-排查问题)
+> 备注： 如果此方法，没有解决您的问题，请看下【事件查看器】中的错误。[关于事件查看器，请查看章节3](#EventViewer)
 
 ### 1.3 内存不能read
 
@@ -96,7 +96,7 @@ windows, 部分小伙伴，解压zip后，为了创建快捷方式，把`HBuilde
 <img src="/static/snapshots/tutorial/windows_install/env.png" style="zoom: 80%;border: 1px solid #eee;"/>
 
 
-## 3. 通过 事件查看器 排查问题
+## 3. 通过 事件查看器 排查问题@EventViewer
 -------------------------------
 
 ### 3.1 使用事件查看器
