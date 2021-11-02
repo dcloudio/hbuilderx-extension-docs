@@ -13,7 +13,7 @@ The menu displays %xxx% after some users upgrade to latest HBuilderX.
 1. Enter `$HOME/Library/Application\ Support/HBuilder\ X` directory through the terminal command，remove `prefs` file.
 2. Remove `$HOME/Library/Caches/HBuilder\ X` directory through the terminal command.
 
-Please note: On mac, if the path contains `spaces`, it needs to be escaped by `\
+Please note: On mac, if the path contains `spaces`, it needs to be escaped by `\`
 
 #### Windows
 
