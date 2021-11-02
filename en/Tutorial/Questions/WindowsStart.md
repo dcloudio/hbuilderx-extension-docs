@@ -2,30 +2,30 @@
 
 ## Summary
 
-This document is `windows` platform solution，Mac: please refer to：[mac solution](http://hx.dcloud.net.cn/Tutorial/install/macosx?id=启动问题)
+This document is `windows` platform solution，Mac please refer to：[mac solution](http://hx.dcloud.net.cn/Tutorial/install/macosx?id=启动问题)
   
-The `zip` package of `windows` takes a long time to decompress, please do not interrupt! If the decompression is interrupted, please decompress again
+The `zip` package of `windows` takes a long time to decompress, please do not interrupt! If the decompression is interrupted, please decompress again.
 
-** Windows HBuilderX cannot startup, maybe 2 reasons：**
+** Windows HBuilderX cannot startup, maybe two reasons：**
 
-- New installation，please refer to `Chapter One`
-- Can start before, but can’t get up later，the configuration file should be damaged，please see `Chapter 4.1` 
+- New installation，please see `Chapter 1`.
+- If HBuilderX can startup before, but it can’t startup later，the configuration file should be damaged，please see `Chapter 4.1`.
 
 
-## 1.  The newly downloaded HBuilderX cannot be started
+## 1.  The latest downloaded HBuilderX cannot be startuped
 -------------------------------
 
-> Someone reported that the newly downloaded HBuilderX could not be started on the windows system after being decompressed, the click did not respond, and the xxx.dll error was reported when it started.
+> The latest downloaded HBuilderX could not be startuped on the windows system after being decompressed, it did not respond evenif you click it, and the xxx.dll error was reported when it startuped.
 
-`Note：HBuilderX requires the minimum window to be win7, and does not support xp`
+`Note：HBuilderX requires the minimum Windows to be win7, and does not support xp`.
 
-Note：If your computer has an AMD graphics card, please go directly to Chapter 6
+Note：If your computer has an AMD graphics card, please see Chapter 6.
 
-### 1.0 Wrong way
+### 1.0 Wrong way for open
 
-Some one download zip package from `DCloud.io`，double click `HBuilderX.exe` from compress software.
+Some one download zip package from `DCloud.io`，double click `HBuilderX.exe` directly from compress software.
 
-This is wrong, the `zip package needs to be decompressed before it can be used`
+`zip package needs to be decompressed before it can be used`.
 
 <img src="/static/snapshots/tutorial/windows_error_open.min.png" style="zoom:80%" />
 
@@ -34,133 +34,130 @@ This is wrong, the `zip package needs to be decompressed before it can be used`
 
 ### 1.1 Shortcuts problems
 
-windows, 部分小伙伴，解压zip后，为了创建快捷方式，把`HBuilderX.exe`直接拖动到桌面了，点击exe启动不了。
-In windows, someone undepress zip for creating shortcut.
+In Windows, clicking exe file cannot be startuped if you drag `HBuilderX.exe` to desktop from decompressed zip folder.
 
-创建`桌面快捷方式`的正确姿势：
+How to setup `Desktop shortcut`: 
 
-1.  选中`HBuilderX.exe`， 点击鼠标右键，出现菜单
-2. 点击菜单项：`发送到`
-3. 点击`桌面快捷方式`
+1. Select `HBuilderX.exe`, click the right mouse button, and a menu appears
+2. Click on the menu item: `Send to`
+3. Click on `Desktop Shortcut`
 
 
-### 1.2. 问题现象2： 没有任何反应
+### 1.2. Nothing happens
 
-- 解压后，点击HBuilderX.exe,  没有任何反应
-- 解压后，点击HBuilderX.exe, HBuilderX进程启动，又马上关闭
+- After unzipping, click HBuilderX.exe, nothing happens
+- After decompression, click HBuilderX.exe, the HBuilderX process starts and then closes immediately
 
-**尝试以下解决方案**
+**Try the following solutions**
 
-1. 关闭所有的`杀毒软件`后，启动试试
-2. 使用`超级管理员`启动试试
-3. 按照现象1的方案尝试一下
-4. 在`HBuilderX.exe`上，鼠标右键，点击属性。如下图所示操作：
+1. After closing all the `anti-virus software`, try again
+2. Use `super administrator` role to try again
+3. Follow solution 1 to try again
+4. Select `HBuilderX.exe`, right-click and click Properties. Operate as shown in the figure below:
 
 <img src="/static/snapshots/tutorial/windows_install/1.png" style="zoom:80%;border: 1px solid #eee;" />
 
-> 备注： 如果此方法，没有解决您的问题，请看下【事件查看器】中的错误。[事件查看器](/Tutorial/Question/WindowsStart?id=_3-通过-事件查看器-排查问题)
+> Note： If above method does not solve your problem, please see the error in the [Event Viewer]。[Event Viewer](/Tutorial/Question/WindowsStart.md)
 
-### 1.3 内存不能read
+### 1.3 Memory cannot be read
 
-> 如遇到`内存不能read`的问题，请自行百度搜索相关方法
+> If you encounter the problem of `memory cannot be read`, please search related methods on google
 
 
-## 2. Qt引发的问题
+## 2. Problems caused by Qt
 -------------------------------
 
-> 如果您的电脑安装过qt程序，可能会遇到下列问题
+> You may encounter the following problems if you installed Qt application in your computer.
 
-### 2.1 问题现象1：缺少qt*库
+### 2.1 Problem 1：qt* library is missing
 
-- 解压后，点击HBuilderX.exe,  提示缺少`qt5*.dll`库
-- 解压后，点击HBuilderX.exe,  提示`无法定位输入点xxxxxxx于动态链接库xxx.dll上`
+- After decompression, click HBuilderX.exe, it prompts that `qt5*.dll` library is missing
+- After decompression, click HBuilderX.exe, it prompts `Cannot locate xxxxxxx on library xxx.dll`
 
 <img src="/static/snapshots/tutorial/windows_install/qt_error_1.png" style="border: 1px solid #eee;"/>
 
 
-** 解决方案**
+**Solution**
 
-方法1： 解压后，进入HBuilderX目录，进入bin目录，将bin目录下，所有`除了api开头的dll文件`，就是`非api开头的dll文件`，`剪切`到上一级目录。注意是`剪切`，不是`复制`。
+Method 1：After decompression, enter the bin directory of HBuilderX, cut all `dll files beginning without api` to the upper level directory. Note that it is `cut`, not `copy`.
 
-方法2：进入`HBuilderX`目录下`bin`目录，找到弹框里面提到的`dll`文件，然后拷贝到`System32`或者`SysWOW64`文件夹
+Method 2：Enter `bin` directory of `HBuilderX` and copy all `dll` files to `System32` or `SysWOW64` folder.
 
-方法3：检查一下本机是否安装了`qt`，如以前安装过，进入`环境变量`，将qt相关的环境变量删除
+Method 3：Check if `qt` is installed on your computer, please remove qt environment variables if it has been installed before.
 
-### 2.2 问题现象2
+### 2.2 Problem 2
 
-如下图：
+As shown below：
 
 <img src="/static/snapshots/tutorial/windows_install/qt_error_2.png" style="zoom: 80%;border: 1px solid #eee; padding: 10px;"/>
 
-解决方案：检查一下本机是否安装了`qt`，如以前安装过，进入`环境变量`，将qt相关的环境变量删除
+Solution：Check if `qt` is installed on your computer, please remove qt environment variables if it has been installed before.
 
 <img src="/static/snapshots/tutorial/windows_install/env.png" style="zoom: 80%;border: 1px solid #eee;"/>
 
 
-## 3. 通过 事件查看器 排查问题
+## 3. Troubleshoot issues with Event Viewer
 -------------------------------
 
-### 3.1 使用事件查看器
+### 3.1 Event viewer
 
-如果以上的方案都没有解决您的问题，那就需要仔细查找原因了。
+If none of the above solutions solve your problems, we can troubleshoot through the event viewer.
 
-某些错误，会记录在【事件查看器】中。
-
-打开事件查看器的方法： 点击“开始→运行”，输入eventvwr，点击“确定”，就可以打开事件查看器。
+Method： Click “Start→Run”，enter eventvwr，Click "Confirm" and open "Event Viewer". 
 
 <img src="/static/snapshots/tutorial/windows_install/eventvwr_1.png" style="zoom: 90%;border: 1px solid #eee;"/>
 
-如下图： 点击【Windows 日志】--【应用程序】，找到级别为`错误`的记录，如是`HBuilderX`的`记录`，根据`记录`，解决问题
+As shown below: Click[Windows Log]--[Application]，find these records of "error" level，try to fix the problems through these records.
 
 <img src="/static/snapshots/tutorial/windows_install/eventvwr_2.png" style="zoom: 80%; border: 1px solid #eee;"/>
 
-特别说明：如果事件查看器错误显示`unKnow`, 那就下载此 [opengl32sw.dll文件补丁](https://update.dcloud.net.cn/hbuilderx/patch/opengl32sw.dll)，放到HBuilderX根目录试试
+Note：If the record of event viewer displays `unKnown`, please download [opengl32sw.dll patch](https://update.dcloud.net.cn/hbuilderx/patch/opengl32sw.dll), and put it to the root directory of HBuilderX, then try again.
 
-下面罗列，【事件查看器】中可能会遇到的错误
+Listed below, the errors that may be encountered in the [Event Viewer]
 
 
-### 3.2 显卡错误：ig9icd32.dll错误
+### 3.2 Graphics card error：ig9icd32.dll
 
-** 在`事件查看器`中，可能遇到`ig9icd32.dll错误`的解决办法**
+** `ig9icd32.dll error` solution **
 
 <img src="/static/snapshots/tutorial/windows_install/eventvwr_3.png" style="zoom: 80%;" />
 
-方法1：升级显卡驱动
+Method 1：Upgrade graphics driver
 
-方法2：下载此 [opengl32sw.dll文件补丁](https://update.dcloud.net.cn/hbuilderx/patch/opengl32sw.dll), 下载后，将此`dll`文件，放到HBuilderX安装目录的根目录
-
-
-### 3.3 显卡错误：dbgcore.dll错误
-
-** 在`事件查看器`中，可能遇到`dbgcore.dll错误`的解决办法**
-
-下载补丁文件 [dbgcore.dll下载地址](https://update.dcloud.net.cn/hbuilderx/patch/dbgcore.dll), 下载后，将此`dll`文件，放到HBuilderX安装目录的根目录
-
-> 注意：也有可能是配置文件损坏了。参考4章节。
+Method 2：Download [opengl32sw.dll patch](https://update.dcloud.net.cn/hbuilderx/patch/opengl32sw.dll), put it to the root directory of HBuilderX
 
 
-### 3.4 AMD显卡错误： atioglxx.dll错误
+### 3.3 Graphics card error：dbgcore.dll
 
-如果您的电脑配置了AMD显卡，如遇到启动问题（事件查看器atioglxx.dll错误），atioglxx.dll是ati显卡驱动所需要的一个文件。
+** `dbgcore.dll error` solution**
 
-解决办法：
+Downlnoad [dbgcore.dll patch](https://update.dcloud.net.cn/hbuilderx/patch/dbgcore.dll), put it to the root directory of HBuilderX
 
-1. 开始菜单，搜索【计算机管理】
-2. 点击【设备管理器】--> 【显示适配器】
-3. 如果有两块显卡，且其中一块为AMD，选中amd显卡，右键菜单，`禁用`。如果只有一块AMD显卡，就别禁用了。
+> Note：Please refer to Chapter 4 if the configuration file of HBuilderX is damaged.
+
+
+### 3.4 AMD graphics card error： atioglxx.dll
+
+If your computer is equipped with AMD graphics card abd you encounter startup problems ( atioglxx.dll error in event viewer), atioglxx.dll is a file required by the ati graphics card driver.
+
+Solution：
+
+1. Start menu，search【Computer Management】
+2. Click【Device Management】--> 【Display adapter】
+3. Diabled AMD graphic card if you have two graphic cards. Please don't disable it if you have one graphic card only.
 
 <img src="/static/snapshots/tutorial/windows_install/amd.png" />
 
-### 3.5 【设备管理器】显卡上面出现叹号
+### 3.5 【Device Management】An exclamation mark appears on the graphics card
 
-部分类型的显卡，可能因为
+Some types of graphics cards may be due to
 
-1. 开始菜单，搜索【计算机管理】
-2. 点击【设备管理器】--> 【显示适配器】
-3. 如果上面显示`叹号`， 更新到最新版本。
+1. Start menu，search【Computer Management】
+2. Click【Device Management】--> 【Display adapter】
+3. If there is exclamation mark on graphic card, please upgrade to latest version
 
 
-### 3.6 更新显卡驱动后出现问题
+### 3.6 Problems occurred after updating the graphics card driver
 
 如果您更新过`显卡驱动`， 更新驱动之后，启动不了。那就是显卡驱动的问题。请还原显卡驱动，或升级驱动到最新版、或最新稳定版本。
 
