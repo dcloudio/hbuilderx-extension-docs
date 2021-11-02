@@ -4,7 +4,7 @@ Upx is the default unit of measurement in uni-app. upx is a viewport unit that s
 
 uni-app can solve the unit problem evenif the viewport does not match 750upx. 
   
-1. 在HBuilderX 【settings】【Editor】
+1. 在HBuilderX 【Settings】【Editor】
 
 <img src="/static/snapshots/tutorial/upx_1.png" style="zoom: 80%;" />
 

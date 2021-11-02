@@ -4,48 +4,48 @@ In HBuilderX, the vue syntax library will be automatically mounted when you open
 > Notes: If a vue file does not belong to any project. Please create a new project from the project explorer on the left, then open the vue file, the vue syntax library will be loaded automatically.
 
 ## Vue3 Support
-HBuilderX 3.2.5 or later (including 3.2.5) provides vue3 support. Refer to [vue3 support](/Tutorial/Language/vue-next.md) for details.
+HBuilderX 3.2.5 or later (including 3.2.5) provides Vue3 support. Refer to [Vue3 Support](/Tutorial/Language/vue-next.md) for details.
 
-## Syntax highlight
-In addition to the common syntax highlighting support of vue, HBuilderX also supports various expressions and syntax, as well as the highlighting of other languages supported by scripts and styles such as less, scss, stylus, and typescript, without installing any plugins.
+## Syntax Highlight
+In addition to the common syntax highlighting support of Vue, HBuilderX also supports various expressions and syntax, as well as the highlighting of other languages supported by scripts and styles such as less, scss, stylus, and typescript, without installing any plugins.
 
 
-## Code hint
+## Code Completions
 
-### API hint and help
+### API Hint and Help
 HbuilderX provides intelligent code completion based on language semantics and source code analysis. HbuilderX knows possible completions, and IntelliSense suggestions will pop up when you type codes.
 
 In addition to the perfect prompt, there are clear instructions on the right side of the code assistant. The api is explained clearly, and the link to the official website is attached. Click the link to jump to the specified page of the vue official website.
  
 <img src="/static/snapshots/vue/1.png" style="zoom: 80%;border: 1px solid #eee;" />
 
-### Identify 'this' object
+### Identify 'this' Type
 
 <img src="/static/snapshots/vue/this.png" style="zoom: 70%;border: 1px solid #eee;" />
 
-### Syntax hint
+### Syntax Hint
 
 <img src="/static/snapshots/vue/hint_1.png" style="zoom: 60%;border: 1px solid #eee;" />
 
 <img src="/static/snapshots/vue/hint_2.png" style="zoom: 80%;border: 1px solid #eee;" />
 
-### Vue methods hint
+### Vue Methods Hint
 
-<img src="/static/snapshots/vue/hint_3.png" style="zoom: 80%;border: 1px solid #eee;" />
+<img src="/static/snapshots/vue/hint_3_en.png" class="hd-img" />
 
-### Customized components hint
+### Customized Components Hint
 
 Based on powerful component syntax analysis, HBuilderX can directly prompt component tags and attributes.
 
 <img src="/static/snapshots/vue/hint_4.png" style="zoom: 50%;border: 1px solid #eee;" />
 
-### Doc
+### Vue Doc
 
 Vue doc is a powerful tool for vue component developers. By writing the jsdoc class, your component can implement comprehensive code hints and help.
 
 <img src="/static/snapshots/vue/hint_5.png" style="zoom: 50%;border: 1px solid #eee;" />
 
-### Compatible with the vscode vetur plugin
+### Compatible with the VSCode Vetur Plugin
 
 Some vue component libraries have been produced according to the `vetur` specification, such as `Element UI`, `Onsen UI`, `Bootstrap Vue` and other frameworks.
 
@@ -53,7 +53,7 @@ These frameworks are installed in npm or installed in the new HBuilderX template
 
 <img src="/static/snapshots/vue/hint_6.png" style="zoom: 50%;border: 1px solid #eee;" />
 
-### Built-in snippets / Setup owned snippets
+### Built-in Snippets / Custom Snippets
 
 Type `v`, you can see a large number of vue snippets in hints.
 
@@ -61,7 +61,7 @@ You can also add more customized snippets in menu [`Tools` - `Snippets Settings`
 
 <img src="/static/snapshots/vue/hint_7.gif" style="zoom: 50%;border: 1px solid #eee;" />
 
-### Vue router
+### Vue Router
 
 Support $router and $route objects.
 
@@ -88,13 +88,13 @@ Place the cursor on the `api` and press `F1` to open the corresponding help file
 
 <img src="/static/snapshots/vue/help_doc.gif" style="zoom: 60%;border: 1px solid #eee;" />
 
-## Go to definition
+## Go to Definition
 
 Press `alt+mouse click` to trace the source of various `variables`, `style`, and `methods`, and switch to related files between `templates`, `scripts` and `styles`. Very powerful and flexible.
 
 <img src="/static/snapshots/vue/goto.gif" style="zoom: 50%;border: 1px solid #eee;" />
 
-## Refactoring or select same syntax word
+## Refactoring or Select Same Variable
 
 If you want to know where a variable is referenced, or select all variables to rename. Right click on the word [Select all occurrences (ctrl+shift+e)]
 
@@ -103,7 +103,7 @@ Example below: There are many "list" in the script, but only exact variables are
 <img src="/static/snapshots/vue/select.png" style="zoom: 40%;border: 1px solid #eee;" />
 
 
-## Eslint check
+## ESLint Check
 
 Firstly, please install the plugin `eslint-plugin-vue`. Then there are 2 ways to check syntax, click [Tool - Validate Document], or save the vue document as it will be verified automatically when saving.
 
@@ -119,7 +119,7 @@ Select any tag in outline will bring cursor to the corresponding section of the 
 
 <img src="/static/snapshots/vue/outline_en.jpg" style="zoom: 40%;border: 1px solid #eee;border-radius: 20px;" />
 
-## Use vue without command line
+## Use Vue without Command Line
 
 If you don't like node development environment, this will not affect you drive into the vue programming.
 

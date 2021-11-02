@@ -1,4 +1,4 @@
-# How HBuilderX protect the programmer's physical and mental health
+# How HBuilderX Protect the Programmer's Physical and Mental Health
 
 Keyboards and chair have ergonomics solution. But why should the IDE have this concept?
 
@@ -7,7 +7,7 @@ The answer is Yes. A good development tool is important to your eyes and hands.
 Dcloud spent a lot of time and cost to design an excellent IDE about the physical and mental health of developers.
 
 
-### Easy on the eyes: soft-green theme
+### Easy on the Eyes: Soft-green Theme
 
 Many people mistakenly think that black themes are the most eye-protective. But we did an in-depth research after realizing this was a mistake.
 
@@ -60,7 +60,7 @@ We put the health of developers first. After a long period of research, we final
 
 Some IDEs give high priority to UI design, but HX put health first. Maybe HX is not the most beautiful IDE, but it must be the healthiest IDE.
 
-### Drag-free selection
+### Drag-free Selection
 
 Repetitive Strain Injuries (RSI) is very common for a programmer. Do you know what is the most severe strain during mouse operation? The answer is drag.
 

@@ -49,7 +49,7 @@ HBuilderX内置的资源管理器，给你一个更大的资源管理界面，�
 - 直接预览markdown的内容
 - 在列表详情界面扩充单独的列来显示svn/git状态
 
-<img src="/static/snapshots/tutorial/explorer.gif" style="zoom:98%" />
+<img src="/static/snapshots/tutorial/explorer/explorer.gif" style="zoom:98%" />
 
 ### 编辑器布局
 

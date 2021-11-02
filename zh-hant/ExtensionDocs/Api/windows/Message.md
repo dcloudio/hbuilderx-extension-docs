@@ -46,7 +46,7 @@
 ```
 效果如下：
 
-<img src="/static/snapshots/info.jpg" style="zoom:50%" />
+<img src="/static/snapshots/Plug-in-development/info.jpg" style="zoom:50%" />
 
 ## showWarningMessage
 在窗口右下角顯示警告消息通知框

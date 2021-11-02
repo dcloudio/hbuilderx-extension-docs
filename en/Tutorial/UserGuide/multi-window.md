@@ -30,6 +30,7 @@ You can use shortcut key to switch between main window and single project window
 |	MacOSX|ctrl+F6 or ⌘+`	|
 | Windows  |Alt+`    |
 
+Notes：For some MacBooks (with Touch Bar function), the shortcut key is: command+`
 
 ## Open the project in the taskbar
 

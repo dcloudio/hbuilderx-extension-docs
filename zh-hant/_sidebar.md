@@ -13,6 +13,7 @@
     * [快捷鍵](/Tutorial/keybindings.md)
     * [項目](/Tutorial/project.md)
     * [插件安裝](/Tutorial/PluginsInstall)
+    * [本地化](/Tutorial/localizedLanguage.md)
 * 進階
     * [高效极客技巧](/Tutorial/UserGuide/skill.md)
     * [跳轉/轉到定義](/Tutorial/UserGuide/goto.md)
@@ -27,6 +28,7 @@
     * [本地歷史記錄](/Tutorial/UserGuide/LocalHistory.md)
     * [.editorconfig](/Tutorial/UserGuide/editorconfig.md)
     * [外部命令](/Tutorial/UserGuide/externalCommands.md)
+    * [終端](/Tutorial/UserGuide/terminal.md)
 * 語言服務/代碼提示
     * [概述](/Tutorial/Language/Overview.md)
     * [代碼助手](/Tutorial/Language/CodeAssistant.md)
@@ -74,6 +76,7 @@
     * [插件安裝失敗解決方案](/Tutorial/faq/pluginInstall.md)
     * [語言服務啓動失敗解決方案](/Tutorial/Questions/StartLSFailed.md)
     * [內置瀏覽器開發者控制檯空白問題](/Tutorial/faq/devtools.md)
+    * [云函数上传ContentAccessDenied错误](/Tutorial/Questions/win10-defender-contentaccessdenied.md)
 * [崩潰報告](/Tutorial/CrashReporter.md)
 * [歷史版本](/Tutorial/HistoryVersion.md)
 * [LICENSE](/license.md)
@@ -100,13 +103,14 @@
     <img src="/static/icon/qq.png" width="20" height="20" />
     <div class="contact-smg">
       <div>官方QQ交流羣</div>
+      <div>羣15：793046085 &nbsp;<a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=vjmkPrMiTXhv2QLm0pBwY4gdWBpRA8cw&jump_from=webapi">點此加入</a></div>
       <div>羣14：750929504 &nbsp;<a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=b-4dxcNc29PQ09NJXf-RKZienjxJqTKg&jump_from=webap">點此加入</a></div>
       <div>羣13：1029243934（2000人已滿）</div>
       <div>羣12：1051711389（1000人已滿）</div>
       <div>羣11：1051710376（2000人已滿）</div>
       <div>羣9：824581834 &nbsp;<a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=EPF0sdsPuYCr3NAQqRAQfSeR5nJoL9MK&jump_from=webapi">點此加入</a></div>
       <div>羣8：759481147（2000人已滿）</div>
-      <div>羣7：768137673（&nbsp;<a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=qMqIz6UhXB5R0oT0RI20lafmDuCtS7u5&jump_from=webapi">點此加入</a></div>
+      <div>羣7：768137673 &nbsp;<a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=qMqIz6UhXB5R0oT0RI20lafmDuCtS7u5&jump_from=webapi">點此加入</a></div>
       <div>羣6：843092525（500人已滿）</div>
       <div>羣5：178140648（1000人已滿）</div>
       <div>羣4：905643840（500人已滿）</div>

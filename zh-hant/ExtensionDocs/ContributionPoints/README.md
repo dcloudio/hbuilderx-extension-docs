@@ -305,7 +305,7 @@ menus節點下配置的對象內的key指的是要註冊到哪個彈出菜單裏
 
 對應的位置如下圖所示：
 
-<img src = "/static/snapshots/editor_context.jpg" style="zoom:50%" />
+<img src = "/static/snapshots/Plug-in-development/group/editor_context.jpg" style="zoom:50%" />
 
 - `explorer/context` ：項目管理器右鍵菜單
     * new
@@ -317,7 +317,7 @@ menus節點下配置的對象內的key指的是要註冊到哪個彈出菜單裏
 
 對應的位置如下圖所示：
 
-<img src = "/static/snapshots/explorer_context.jpg" style="zoom:50%" />
+<img src = "/static/snapshots/Plug-in-development/group/explorer_context.jpg" style="zoom:50%" />
 
 - `menubar/file` : 頂部菜單的`文件`菜單
     * new
@@ -327,7 +327,7 @@ menus節點下配置的對象內的key指的是要註冊到哪個彈出菜單裏
 
 對應的位置如下圖所示：
 
-<img src = "/static/snapshots/menubar_file.jpg" style="zoom:50%" />
+<img src = "/static/snapshots/Plug-in-development/group/menubar_file.jpg" style="zoom:50%" />
 
 - `menubar/edit` : 頂部菜單的`編輯`菜單
     * undo
@@ -338,7 +338,7 @@ menus節點下配置的對象內的key指的是要註冊到哪個彈出菜單裏
 
 對應的位置如下圖所示：
 
-<img src = "/static/snapshots/edit.jpg" style="zoom:50%" />
+<img src = "/static/snapshots/Plug-in-development/group/edit.jpg" style="zoom:50%" />
 
 - `menubar/select` : 頂部菜單的`選擇`菜單
     * selectAll
@@ -351,7 +351,7 @@ menus節點下配置的對象內的key指的是要註冊到哪個彈出菜單裏
 
 對應的位置如下圖所示：
 
-<img src = "/static/snapshots/select.jpg" style="zoom:50%" />
+<img src = "/static/snapshots/Plug-in-development/group/select.jpg" style="zoom:50%" />
 
 - `menubar/find` : 頂部菜單的`查找`菜單
     * findFile
@@ -360,7 +360,7 @@ menus節點下配置的對象內的key指的是要註冊到哪個彈出菜單裏
 
 對應的位置如下圖所示：
 
-<img src = "/static/snapshots/find.jpg" style="zoom:50%" />
+<img src = "/static/snapshots/Plug-in-development/group/find.jpg" style="zoom:50%" />
 
 - `menubar/goto` : 頂部菜單的`跳轉`菜單
     * system_goto
@@ -369,7 +369,7 @@ menus節點下配置的對象內的key指的是要註冊到哪個彈出菜單裏
 
 對應的位置如下圖所示：
 
-<img src = "/static/snapshots/goto.jpg" style="zoom:50%" />
+<img src = "/static/snapshots/Plug-in-development/group/goto.jpg" style="zoom:50%" />
 
 - `menubar/run` : 頂部菜單的`運行`菜單
     * 0_foot
@@ -391,7 +391,7 @@ menus節點下配置的對象內的key指的是要註冊到哪個彈出菜單裏
 
 對應的位置如下圖所示：
 
-<img src = "/static/snapshots/view.jpg" style="zoom:50%" />
+<img src = "/static/snapshots/Plug-in-development/group/view.jpg" style="zoom:50%" />
 
 - `menubar/tool` : 頂部菜單的`工具`菜單
     * shortcuts
@@ -400,7 +400,7 @@ menus節點下配置的對象內的key指的是要註冊到哪個彈出菜單裏
 
 對應的位置如下圖所示：
 
-<img src = "/static/snapshots/tool.jpg" style="zoom:50%" />
+<img src = "/static/snapshots/Plug-in-development/group/tool.jpg" style="zoom:50%" />
 
 - `menubar/help` : 頂部菜單的`幫助`菜單
     * documents
@@ -409,7 +409,7 @@ menus節點下配置的對象內的key指的是要註冊到哪個彈出菜單裏
 
 對應的位置如下圖所示：
 
-<img src = "/static/snapshots/help.jpg" style="zoom:50%" />
+<img src = "/static/snapshots/Plug-in-development/group/help.jpg" style="zoom:50%" />
 
 
 ### when

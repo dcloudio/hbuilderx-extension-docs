@@ -1,10 +1,10 @@
 # Windows安裝HBuilderX
 
-### 下載
+### 下載@download
 
 HBuilderX下載地址: [下載地址](https://www.dcloud.io/hbuilderx.html)
 
-### 解壓安裝包
+### 解壓安裝包@unzip
 
 HBuilderX，Windows爲zip包，解壓後才能使用。
 

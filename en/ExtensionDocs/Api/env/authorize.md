@@ -21,7 +21,7 @@ authorize二级模块对象，用于处理插件授权登录，获取HBuilderX�
 
 对应的效果如下图所示：
 
-<img src = "/static/snapshots/authorize.png" />
+<img src = "/static/snapshots/Plug-in-development/authorize.png" />
 
 ## login
 

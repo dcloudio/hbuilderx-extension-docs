@@ -4,21 +4,21 @@
 
 > 注意：插件名稱只能用英文字母和數字，不支持中文和空格。
 
-<img src="/static/snapshots/1.jpg" style="zoom:50%" />
+<img src="/static/snapshots/Plug-in-development/create_extension.jpg" style="zoom:45%;border: 1px solid #eee;" />
 
 ### 運行插件
 建好插件項目後，選中該項目或者打開項目下某個文件，然後點擊工具欄上`運行`按鈕或者快捷鍵`ctrl+r`打開運行菜單，選擇`運行插件xxx`即可新開一個HBuilderX窗體，這個新窗體將自動載入該插件。如下圖
 
-<img src="/static/snapshots/2.jpg" style="zoom:50%" />
+<img src="/static/snapshots/Plug-in-development/start_run_extension.jpg" style="zoom:50%;border: 1px solid #eee;" />
 
 運行起來的效果圖如下：
 
-<img src="/static/snapshots/5.jpg" style="zoom:50%" />
+<img src="/static/snapshots/Plug-in-development/show_run_extension.jpg" style="zoom:50%" />
 
 
 插件擴展開發模板示例中在代碼編輯器右鍵菜單上註冊了一個`Hello World`菜單，**此時我們打開一個文檔**，然後右鍵即可看到`Hello World`菜單。點擊該菜單運行後會在窗口顯示一個提示框。如下圖
 
-<img src="/static/snapshots/run.gif" style="zoom:50%" />
+<img src="/static/snapshots/Plug-in-development/run.gif" style="zoom:50%" />
 
 也就是在老窗體寫插件代碼，保存插件代碼後，在新窗體預覽效果。
 > 修改插件代碼後需要重新運行插件

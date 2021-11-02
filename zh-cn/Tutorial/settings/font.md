@@ -5,7 +5,7 @@
 Windows: 菜单【工具】【设置】【常用配置】
 MacOSX: 菜单【HBuilderX】【偏好设置】【常用配置】
 
-<img src="/static/snapshots/tutorial/font_1.png" />
+<img src="/static/snapshots/tutorial/settings/font_1.png" />
 
 ### 如何自定义字体？
 
@@ -21,6 +21,6 @@ MacOSX: 菜单【HBuilderX】【偏好设置】【常用配置】
 
 下载字体后，点击安装，安装成功后就会出现字体列表中。
 
-<img src="/static/snapshots/tutorial/font_2.png" />
+<img src="/static/snapshots/tutorial/settings/font_2.png" />
 
-<img src="/static/snapshots/tutorial/font_3.png" />
+<img src="/static/snapshots/tutorial/settings/font_3.png" />

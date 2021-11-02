@@ -12,6 +12,7 @@
     * [如何注册一个`视图`](/ExtensionTutorial/views.md)
     * [如何扩展一个`自定义编辑器`](/ExtensionTutorial/customeditor.md)
     * [如何适配主题](/ExtensionTutorial/fitTheme.md)
+    * [如何调试插件](/ExtensionTutorial/HowToDebug.md)
 * 插件发布
     * [如何发布插件](/ExtensionTutorial/HowToPublish.md)
 <div class="contact-box">

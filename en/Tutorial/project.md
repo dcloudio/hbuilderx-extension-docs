@@ -32,15 +32,15 @@ In the project explorer, select the project, right-click the menu, and click [Cl
 
 Of course, you can also open the required project from the [Closed Project] and move it to the project explorer.
 
-<img src="/static/snapshots/tutorial/project/project_close.png" style="zoom: 85%;" />
+<img src="/static/snapshots/tutorial/project/project_close_en.png" style="zoom: 45%;" />
 
 ## Porject Alias
 
-HBuilderX supports to set/update alias name for projects. 
+HBuilderX supports to set/update alias name for projects.
 
 In the project explorer, select the project, right-click the menu, and click [Setting Alias Name] to create an alias.
 
-<img src="/static/snapshots/tutorial/project/project_alias_en.png" style="zoom: 45%;border: 1px solid #eee;border-radius: 25px;" />
+<img src="/static/snapshots/tutorial/project/project_alias_en.png" style="zoom: 45%; border: 1px solid #eee; border-radius: 20px;" />
 
 ## Others
 

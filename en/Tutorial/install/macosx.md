@@ -1,18 +1,17 @@
 # MacOSX 
 
-## DownLoad
+## Download
 
-HBuilderX Download URL:  [Download](https://www.dcloud.io/hbuilderx.html)
+HBuilderX download url:  [download](https://www.dcloud.io/hbuilderx.html)
 
 ## Install
 
-Drag and drop the HBuilderX app to the Applications folder.
+Drag and drop the HBuilderX app to the applications folder.
 
 <img src="/static/snapshots/tutorial/install_mac.jpeg" />
 
 > The HBuilder application should be installed in the /Applications directory on MacOSX to avoid problems such as extension installation failure and project creation failure.
-> 
-Please jump to `System Perference -> Security & Privacy -> General`, allow to use HBuilderX.app.
+> Please jump to `System Perference -> Security & Privacy -> General`, allow to use HBuilderX.app.
 
 
 ## Question
@@ -23,7 +22,7 @@ In some cases, MacOSX HBuilderX Unable to start up, Please try the following sol
 - Delete the .lock file in the $HOME/Library/Application\ Support/HBuilder\ X/ [Details](/Tutorial/install/macosx?id=del-.lock-file)
 - Reset HBuilderX configuration file [Details](/Tutorial/install/macosx?id=reset-config-file)
 
-### del .lock file
+### DEL .lock File
 
 Open `Terminal`，input the command： 
 
@@ -32,7 +31,7 @@ rm -f $HOME/Library/Application\ Support/HBuilder\ X/.lock
 ```
 If HBuilderX still fails to startup after deleting the .lock file, please remove the configuration folder.
 
-### reset configuration file
+### Reset Configuration File
 
 > Please backup before remove any files.
 > 

@@ -52,7 +52,7 @@ resultPromise.then((result)=>{
 hx.window.showInformationMessage('详情可访问<a href="http://www.dcloud.io">参考文档</a>');
 ```
 
-<img src="/static/snapshots/info.jpg" style="zoom:50%" />
+<img src="/static/snapshots/Plug-in-development/info.jpg" style="zoom:50%" />
 
 ## showWarningMessage
 

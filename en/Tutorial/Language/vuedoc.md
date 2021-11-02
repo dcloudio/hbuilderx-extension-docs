@@ -1,6 +1,6 @@
 > Only supports HBuilderX 1.9.0+
 
-### What is vue doc ?
+### What is Vue Doc ?
 
 It can be understood as vue `component` instructions.
 

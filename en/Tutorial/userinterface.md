@@ -50,7 +50,7 @@ Compared with the resource manager that comes with OS, HBuilderX resource manage
 - Preview the content of markdown directly
 - Expand an extra column in the list details to display svn/git status
 
-<img src="/static/snapshots/tutorial/explorer.gif" style="zoom:98%; border: 1px solid #eee;" />
+<img src="/static/snapshots/tutorial/explorer/explorer_1_en.gif" style="zoom:78%; border: 1px solid #eee;" />
 
 ## editor layout
 

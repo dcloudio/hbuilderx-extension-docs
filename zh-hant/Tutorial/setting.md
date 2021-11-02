@@ -32,6 +32,14 @@
 - 項目管理器打擊展開/摺疊目錄，關閉此項則是雙擊展開/摺疊目錄
 - 項目管理器點擊目錄時打開內部資源管理器
 
+#### 更新設置
+
+HBuilderX，可自定義編輯器升級策略。
+
+啓動時自動檢查更新，即每次HBuilderX啓動，都會檢查更新，當存在更新時，彈窗提示更新。
+
+<img src="/static/snapshots/tutorial/settings/upgrade.png" class="hd-img" />
+
 ## 編輯器配置
 
 - 自動換行: 默認不換行，如需要，請啓用。
@@ -61,12 +69,15 @@
 - 智能計算製表符長度
 - 編輯器向下滾動一屏
 
-## 與編輯器同步
+## uniapp運行設置@uniapp-run-setting
 
-<p>項目管理器，右上角，點擊 <svg t="1631502274114" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="24803" width="14" height="14"><path d="M873.8304 552.96h-737.28c-22.528 0-40.96-18.432-40.96-40.96s18.432-40.96 40.96-40.96h737.28c22.528 0 40.96 18.432 40.96 40.96s-18.432 40.96-40.96 40.96zM873.8304 307.2h-737.28c-22.528 0-40.96-18.432-40.96-40.96s18.432-40.96 40.96-40.96h737.28c22.528 0 40.96 18.432 40.96 40.96s-18.432 40.96-40.96 40.96zM873.8304 798.72h-737.28c-22.528 0-40.96-18.432-40.96-40.96s18.432-40.96 40.96-40.96h737.28c22.528 0 40.96 18.432 40.96 40.96s-18.432 40.96-40.96 40.96z" p-id="24804" fill="#707070"></path></svg> 圖標</svg>，即可設置編輯器同步功能</p>
+如果uniapp編譯遇到`JavaScript heap out of memory`問題，請調整uniapp node啓動內存參數。
 
-<img src="/static/snapshots/tutorial/settings/sync.png" style="zoom: 50%;border: 1px solid #eee;" />
+點擊菜單【設置 - 運行設置 - uniapp運行設置】，如下圖：
 
+<img src="/static/snapshots/tutorial/settings/uniapp_run_setting.png" style="zoom: 45%;border: 1px solid #eee;"/>
+
+如果调整node启动内存参数，仍无法解决此问题，建议优化项目或代码。
 
 ## 源碼視圖常見問題
 

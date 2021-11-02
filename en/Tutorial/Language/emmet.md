@@ -4,6 +4,6 @@ Emmet is a plugin for many popular text editors which greatly improves HTML & CS
 
 It has been built into HBuilderX without any extensions.
 
-<img src="/static/snapshots/tutorial/emmet.gif" style="zoom: 100%; border: 1px solid #eee;" />
+<img src="/static/snapshots/tutorial/language/emmet.gif" style="zoom: 100%; border: 1px solid #eee;" />
 
 More Emmet syntax: [Emmet Website](https://docs.emmet.io/)

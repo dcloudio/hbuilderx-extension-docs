@@ -21,7 +21,7 @@
             // 获取浏览器语言
             var lan = (navigator.systemLanguage || navigator.language).toLowerCase();
 
-            try{
+            try {
                 if (lan.substr(0, 2) == 'zh') {
                     lan = "zh-cn";
                     // if (!["zh", "zh_cn", "zh-cn", "zh-hans"].includes(lan)) {
@@ -30,17 +30,17 @@
                 } else {
                     lan = "en";
                 };
-            }catch(e){
+            } catch (e) {
                 lan = "zh-cn";
             };
 
             var user_set_language = getCookie("user_set_language");
-            if (["en","zh-cn", "zh-hant"].includes(user_set_language)) {
+            if (["en", "zh-cn", "zh-hant"].includes(user_set_language)) {
                 lan = user_set_language;
             };
 
             // 以防万一，获取的语言没有相应的目录
-            if (!["en","zh-cn", "zh-hant"].includes(lan)) {
+            if (!["en", "zh-cn", "zh-hant"].includes(lan)) {
                 lan = 'zh-cn';
             };
             // 设置title
@@ -65,7 +65,7 @@
             window.$docsify = {
                 alias: alias,
                 basePath: basePath,
-                name: 'extension-docs',
+                name: 'HBuilderX Docs',
                 // TODO 如需提交,必须改为 history 模式
                 routerMode: 'history',
                 // routerMode: 'hash',
@@ -90,14 +90,25 @@
                 notFoundPage: {
                     '/': '_404.md'
                 },
+                requestHeaders: {
+                    'cache-control': 'max-age=1800',
+                },
                 plugins: [
                     function(hook, vm) {
                         hook.afterEach(function(html) {
-                            var url = '//github.com/dcloudio/hbuilderx-extension-docs/tree/master' + vm.route.file;
+                            var url = '//github.com/dcloudio/hbuilderx-extension-docs/tree/master' + vm
+                                .route.file;
                             if (lan.substr(0, 2) != 'zh') {
-                                return html + '<hr align=center color=#987cb9 size=1>Found mistake? Want to participate in editing?<a href=' +url + ' target=_blank> Edit this page on GitHub</a>' + '<br/><br/><span>HBuilderX plug-in development document, not translated into English, welcome to contribute. <span>' + `<a href="https://github.com/dcloudio/hbuilderx-extension-docs/tree/master/en" target="_blank">Translate this document on github</a>`;
+                                return html +
+                                    '<hr align=center color=#987cb9 size=1>Found mistake? Want to participate in editing?<a href=' +
+                                    url + ' target=_blank> Edit this page on GitHub</a>' +
+                                    '<br/><br/><span>HBuilderX plug-in development document, not translated into English, welcome to contribute. <span>' +
+                                    `<a href="https://github.com/dcloudio/hbuilderx-extension-docs/tree/master/en" target="_blank">Translate this document on github</a>`;
                             };
-                            return html + '<hr align=center color=#987cb9 size=1>发现错误？想参与编辑？<a href=' +url + ' target=_blank> 在 GitHub 上编辑此页面！</a>' + '<br/><br/><span>HBuilderX插件开发文档尚未翻译，欢迎参与贡献。<span>' + `<a href="https://github.com/dcloudio/hbuilderx-extension-docs/tree/master/en" target="_blank">在 Github 上翻译页面！</a>`;
+                            return html + '<hr align=center color=#987cb9 size=1>发现错误？想参与编辑？<a href=' +
+                                url + ' target=_blank> 在 GitHub 上编辑此页面！</a>' +
+                                '<br/><br/><span>HBuilderX插件开发文档尚未翻译，欢迎参与贡献。<span>' +
+                                `<a href="https://github.com/dcloudio/hbuilderx-extension-docs/tree/master/en" target="_blank">在 Github 上翻译页面！</a>`;
                         });
                     }
                 ]
@@ -120,8 +131,8 @@
 
             //获取指定名称的cookie的值
             function getCookie(name) {
-                let arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
-                if(arr=document.cookie.match(reg)) {
+                let arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+                if (arr = document.cookie.match(reg)) {
                     return unescape(arr[2]);
                 } else {
                     return null;

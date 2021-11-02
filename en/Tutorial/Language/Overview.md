@@ -1,14 +1,14 @@
 > HBuilderX has built-in richness language libraries and supports different syntax models.
 
-## Built-in syntax library
-- Web： `html`, `js`, `css` syntax library
-- App： `plus` extended syntax library
-- Uni-app: `uni-app` syntax library
-- WeChat Apps and quickapps: corresponding built-in syntax libraries
+## Built-in API Library
+- Web： `html`, `js`, `css` api library
+- App： `plus` extended api library
+- Uni-app: `uni-app` api library
+- WeChat Apps and quickapps: corresponding built-in api libraries
 
-## js syntax library（sdocml Format）
+## Javascript Framework Library（.sdocml Format）
 
-In HBuilderX, you can click on the "Javascript Libraries" in the bottom status bar and select the build-in syntax type for js and html files.
+In HBuilderX, you can click on the "Javascript Libraries" in the bottom status bar and select the library for js and html files.
 
 <img src="/static/snapshots/tutorial/lang_1.png" />
 
@@ -16,19 +16,19 @@ node.js is also one of the syntax list. After selecting a js syntax type, it wil
 
 The selected syntax type can be used for the entire project. On the contrary, it does not apply to any individual file.
 
-If HBuilderX can detect that there are common frameworks such as jquery or mui under the project, it will usually automatically mount the syntax library. Otherwise, you have to manually load these syntax libraries.
+If HBuilderX can detect that there are common frameworks such as jquery or mui under the project, it will usually automatically mount the library. Otherwise, you have to manually load these libraries.
 
 ## d.ts
 
-Many frameworks have built-in `d.ts` file. HBuilderX also fully supports the `d.ts` file. If there is a d.ts file in this framework, HBuilderX can display the syntax hints of this framework.
+Many frameworks have built-in `d.ts` file. HBuilderX also fully supports the `d.ts` file. If there is a d.ts file in this framework, HBuilderX can display the code hints of this framework.
 
-## jsdoc+
+## JSDoc+
 
 jsdoc declares methods, parameters and attributes via annotations. HBuilderX provides extended jsdoc+ which can realize powerful syntax prompts.
 
 <img src="/static/snapshots/tutorial/lang_2.png" style="zoom:50%;" />
 
-## vue doc
+## Vue Doc
 
 Vue component developers should write 'vue doc' if they want to provide a better way for component users to use.
 
@@ -36,7 +36,7 @@ Vue doc is similar to jsdoc, which describing component methods, parameters and 
 
 Details [vue doc](https://hx.dcloud.net.cn/Tutorial/Language/vuedoc)
 
-## Compatible with the vscode vetur plugin
+## Compatible with the VSCode Vetur Plugin
 
 Some vue component libraries have been produced according to the vetur specification, such as Element UI, Onsen UI, Bootstrap Vue and other frameworks.
 
@@ -59,8 +59,8 @@ As shown in the figure below, move the mouse to the code to be viewed, and a flo
 
 Press F1 to open the help documents in the browser.
 
-<img src="/static/snapshots/tutorial/language/hover_helper.png" style="zoom:45%;border: 1px solid #eee;"/>
+<img src="/static/snapshots/tutorial/language/hover_help_en.png" style="zoom:45%;border: 1px solid #eee;"/>
 
 If you don't need it, you can turn off this feature manually in [Settings - Editor].
 
-<img src="/static/snapshots/tutorial/language/settings_hover_help.png" style="zoom:50%;border: 1px solid #eee;"/>
+<img src="/static/snapshots/tutorial/language/settings_hover_help_en.png" style="zoom:50%;border: 1px solid #eee;"/>

@@ -19,7 +19,7 @@
 - 插件配置：已安装的插件扩展配置
 - 源码视图：json文件，包含以上自定义的配置
 
-## 常用配置
+## 常用配置项
 
 - 编辑器字体大小
 - 编辑字体，[详情](/Tutorial/settings/font)
@@ -31,7 +31,7 @@
 - 搜索默认不包含的目录：搜索时默认不包含`.git`、`.cvs`、`.svn`、`node_modules`、`unpackage`
 - 打开终端数量：最多允许打开的终端数量，默认8
 - 本地历史记录，[详情](/Tutorial/UserGuide/LocalHistory)
-- 项目管理器打击展开/折叠目录，关闭此项则是双击展开/折叠目录
+- 项目管理器单击展开/折叠目录（备注：若关闭此项则是双击展开/折叠目录）
 - 项目管理器点击目录时打开内部资源管理器 (即点击时，是否打开内置资源管理器)
 
 #### 更新设置
@@ -40,7 +40,7 @@ HBuilderX，可自定义编辑器升级策略。
 
 启动时自动检查更新，即每次HBuilderX启动，都会检查更新，当存在更新时，弹窗提示更新。
 
-<img src="/static/snapshots/tutorial/settings/upgrade_en.png" class="hd-img" />
+<img src="/static/snapshots/tutorial/settings/upgrade.png" class="hd-img" />
 
 ## 编辑器配置
 
@@ -70,6 +70,16 @@ HBuilderX，可自定义编辑器升级策略。
 - 使用Ctrl+鼠标滚轮缩放编辑器
 - 智能计算制表符长度
 - 编辑器向下滚动一屏
+
+## uniapp运行设置@uniapp-run-setting
+
+如果uniapp编译遇到`JavaScript heap out of memory`问题，请调整uniapp node启动内存参数。
+
+点击菜单【设置 - 运行设置 - uniapp运行设置】，如下图：
+
+<img src="/static/snapshots/tutorial/settings/uniapp_run_setting.png" style="zoom: 45%;border: 1px solid #eee;"/>
+
+如果调整node启动内存参数，仍无法解决此问题，建议优化项目或代码。
 
 ## 源码视图常见问题
 

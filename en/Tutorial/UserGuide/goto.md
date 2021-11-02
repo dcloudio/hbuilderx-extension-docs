@@ -50,7 +50,7 @@ HBuilderX has a powerful syntax analysis engine that can accurately jump to the 
 
 The shortcut key to go to the definition is `Alt+D`, and the mouse operation is `Alt+left click`. 
 
-<img src="/static/snapshots/started_tutorial/3b6a921a9021ffa5ed54e7633afb7fd0.gif" style="zoom: 90%;border:1px solid #eee;border-radius: 5px;" />
+<img src="/static/snapshots/started_tutorial/goto-definition-en.gif" style="zoom: 90%;border:1px solid #eee;border-radius: 5px;" />
 
 > Remarks: Support switching [Ctrl+left mouse button] or [Alt+left mouse button] to go to definition (menu [select], [switch to "Alt+Click" for Multi-Cursor] or [switch to "⌘+Click" for Multi-Cursor])
 
@@ -60,7 +60,7 @@ Another feature of HBuilderX is `Goto definition to column`.
 
 `ctrl+alt+left click`, you can open the defined code on the other side for easy viewing.
 
-<img src="/static/snapshots/started_tutorial/c75ed6bdd5b6c5a9b8c827b2ee1262a9.gif" style="zoom: 90%;border:1px solid #eee;border-radius: 5px;" />
+<img src="/static/snapshots/started_tutorial/goto-definition-col-en.gif" style="zoom: 90%;border:1px solid #eee;border-radius: 5px;" />
 
 
 

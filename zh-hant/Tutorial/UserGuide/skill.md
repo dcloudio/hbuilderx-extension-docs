@@ -40,11 +40,11 @@ HBuilderX提供了更友好方式：`智能双击`和`Ctrl+扩大选区`。
 2. 按Ctrl+]包围，就可以在这个选区首尾加父标签，同时闪烁光标。如果在js里，按下Ctrl+]不是包围tag，而是包围if、for等函数库，方便快速把一段代码放入if块中。
 3. 输入div即可在首尾添加包围标签
 
-<img src="/static/snapshots/tutorial/dbclick.gif" />
+<img src="/static/snapshots/tutorial/skill/dbclick.gif" />
 
 ### 多光标
 
-<img src="/static/snapshots/tutorial/more_cursor.gif" />
+<img src="/static/snapshots/tutorial/skill/more_cursor.gif" />
 
 
 ### 扩大选区
@@ -53,7 +53,7 @@ HBuilderX提供了更友好方式：`智能双击`和`Ctrl+扩大选区`。
 
 在HBuilderX里可以智能的判断选区范围，持续扩大选区，无鼠标快速选中你需要的选区。
 
-<img src="/static/snapshots/tutorial/selection_expand.gif" />
+<img src="/static/snapshots/tutorial/skill/selection_expand.gif" />
 
 
 ### 反包围
@@ -61,7 +61,7 @@ HBuilderX提供了更友好方式：`智能双击`和`Ctrl+扩大选区`。
 1. 双击tag p开头，选中该tag。
 2. 按反包围`Ctrl+Shift+]`，可去掉tag p并自动处理子节点的缩进。
 
-<img src="/static/snapshots/tutorial/selection_1.gif" />
+<img src="/static/snapshots/tutorial/skill/selection_1.gif" />
 
 这里多提一句HBuilderX的快捷键理念，就是符号化，而不是字母化。很多工具的快捷键都是控制键+功能英文单词中的一个字母，这个是极难记忆的。
 
@@ -75,7 +75,7 @@ HBuilderX提供了更友好方式：`智能双击`和`Ctrl+扩大选区`。
 2. 下图按下选择相同语法词，同时选中tag首尾的div，而不会选中子节点的div。
 3. 然后就可以方便的将原div改名为p
 
-<img src="/static/snapshots/tutorial/selection_2.gif" />
+<img src="/static/snapshots/tutorial/skill/selection_2.gif" />
 
 备注：
 - 如果想选择配对括号，靠相同词是不行的。选中相同语法词会选中匹配的2个左右括号
@@ -87,7 +87,7 @@ HBuilderX提供了更友好方式：`智能双击`和`Ctrl+扩大选区`。
 
 MacOSX快捷键：command+shift+d；Windows快捷键：ctrl+shift+e
 
-<img src="/static/snapshots/tutorial/renameTag.gif" style="zoom: 50%;border: 1px solid #eee; border-radius: 5px;" >
+<img src="/static/snapshots/tutorial/skill/renameTag.gif" style="zoom: 50%;border: 1px solid #eee; border-radius: 5px;" >
 
 ### 交换选区内容
 
@@ -99,11 +99,11 @@ MacOSX快捷键：command+shift+d；Windows快捷键：ctrl+shift+e
 2. 按下Ctrl后继续双击第2个style属性后的引号内侧，可选中2个引号内的选区。
 3. 按下Ctrl+Shift+x，交换style属性的内容。
 
-<img src="/static/snapshots/tutorial/selection_swap_1.gif" />
+<img src="/static/snapshots/tutorial/skill/selection_swap_1.gif" />
 
 如果不选择内容，光标放置到2行，可直接交换这2行的内容，如下图
 
-<img src="/static/snapshots/tutorial/selection_swap_2.gif" />
+<img src="/static/snapshots/tutorial/skill/selection_swap_2.gif" />
 
 
 ### 撤销最后一个多选区或多光标
@@ -114,7 +114,7 @@ MacOSX快捷键：command+shift+d；Windows快捷键：ctrl+shift+e
 2. 按`Ctrl+e`选中相同词
 3. 按`Ctrl+Shift+z`，不再选中最后一个词。
 
-<img src="/static/snapshots/tutorial/selection_cancel.gif" />
+<img src="/static/snapshots/tutorial/skill/selection_cancel.gif" />
 
 如果多选了一个词，还可以点`Ctrl+鼠标右键`取消一个选区。
 
@@ -125,7 +125,7 @@ MacOSX快捷键：command+shift+d；Windows快捷键：ctrl+shift+e
 
 下图示例，是把css合并为一行时的快捷操作
 
-<img src="/static/snapshots/tutorial/selection_merge.gif" />
+<img src="/static/snapshots/tutorial/skill/selection_merge.gif" />
 
 1. 双击`{`内侧选中class
 2. 按`Ctrl+双击`选中另一个class
@@ -140,7 +140,7 @@ if块的调整很常见，除了包围、反包围外，常用操作还有同时
 2. 按`Ctrl+\`在选区首尾加光标，变成多光标模式
 3. 按`Ctrl+/`注释掉选区首尾行
 
-<img src="/static/snapshots/tutorial/selection_if.gif" />
+<img src="/static/snapshots/tutorial/skill/selection_if.gif" />
 
 ### 其它技巧
 - [转到定义](/Tutorial/UserGuide/goto?id=转到定义)

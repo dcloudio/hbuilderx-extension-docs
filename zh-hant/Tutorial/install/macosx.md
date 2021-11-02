@@ -1,10 +1,10 @@
 # MacOSX安裝HBuilderX
 
-## 下載
+## 下載@download
 
 HBuilderX下載地址: [下載地址](https://www.dcloud.io/hbuilderx.html)
 
-## 安裝
+## 安裝@install
 
 如圖，將HBuilderX`拖`到Applications，纔是正確的安裝姿勢。
 
@@ -18,15 +18,24 @@ HBuilderX下載地址: [下載地址](https://www.dcloud.io/hbuilderx.html)
 
 <img src="/static/snapshots/tutorial/mac_download2.min.jpg" style="zoom: 40%; border: 1px solid #eee;border-radius: 10px;"/>
 
-## 啓動問題
+## 配置文件目錄@config
+
+配置文件目錄，如下：
+- `$HOME/Library/Application\ Support/HBuilder\ X`
+- `$HOME/Library/Caches/HBuilder\ X`
+
+**請注意：** mac上，如果路徑包含空格，需要`\`進行轉義
+
+
+## 啓動問題@question
 
 某些情況下，MacOSX HBuilderX無法啓動，解決方法如下：
 
 - 重啓電腦
-- 配置文件目錄下的.lock文件問題 [解決方案](/Tutorial/install/macosx?id=刪除lock文件)
-- 配置文件損壞，導致HBuilderX無法啓動，重置配置文件即可。[解決方案](/Tutorial/install/macosx?id=重置配置文件)
+- 配置文件目錄下的.lock文件問題 [解決方案](#deleteLockFile)
+- 配置文件損壞，導致HBuilderX無法啓動，重置配置文件即可。[解決方案](#resetConfig)
 
-### 刪除.lock文件
+#### 刪除.lock文件@deleteLockFile
 
 打開操作系統終端，輸入如下命令： 
 
@@ -34,20 +43,19 @@ HBuilderX下載地址: [下載地址](https://www.dcloud.io/hbuilderx.html)
 rm -f $HOME/Library/Application\ Support/HBuilder\ X/.lock
 ```
 
-如刪除.lock文件還無法解決啓動問題，請嘗試刪除配置文件目錄。
+如刪除.lock文件還無法解決啓動問題，請嘗試刪除配置文件目錄, [詳見](#resetConfig)。
 
-### 重置配置文件
 
-> 如HBuilderX內，有重要文件，刪除前，先備份
+#### 重置配置文件目錄@resetConfig
 
-配置文件目錄：`$HOME/Library/Application\ Support/HBuilder\ X`
-
-**請注意：** mac上，如果路徑包含空格，需要`\`進行轉義
+> 如在HBuilderX內，曾設置過快捷鍵、代碼塊、以及其它設置項，如需保存，刪除前，建議備份。
+> 目錄：$HOME/Library/Application\ Support/HBuilder\ X/user
 
 ```shell
 # 備份配置文件，如不需要，請略過
-cp -rf $HOME/Library/Application\ Support/HBuilder\ X   $HOME/Desktop/HX
+cp -r $HOME/Library/Application\ Support/HBuilder\ X   $HOME/Desktop/HX
 
 # 直接刪除配置文件目錄
-rm -rf $HOME/Library/Application\ Support/HBuilder\ X
+rm -r $HOME/Library/Application\ Support/HBuilder\ X
+rm -r $HOME/Library/Caches/HBuilder\ X
 ```

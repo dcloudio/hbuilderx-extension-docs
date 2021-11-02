@@ -305,7 +305,7 @@ menus节点下配置的对象内的key指的是要注册到哪个弹出菜单里
 
 对应的位置如下图所示：
 
-<img src = "/static/snapshots/editor_context.jpg" style="zoom:50%" />
+<img src = "/static/snapshots/Plug-in-development/group/editor_context.jpg" style="zoom:50%" />
 
 - `explorer/context` ：项目管理器右键菜单
     * new
@@ -317,7 +317,7 @@ menus节点下配置的对象内的key指的是要注册到哪个弹出菜单里
 
 对应的位置如下图所示：
 
-<img src = "/static/snapshots/explorer_context.jpg" style="zoom:50%" />
+<img src = "/static/snapshots/Plug-in-development/group/explorer_context.jpg" style="zoom:50%" />
 
 - `menubar/file` : 顶部菜单的`文件`菜单
     * new
@@ -327,7 +327,7 @@ menus节点下配置的对象内的key指的是要注册到哪个弹出菜单里
 
 对应的位置如下图所示：
 
-<img src = "/static/snapshots/menubar_file.jpg" style="zoom:50%" />
+<img src = "/static/snapshots/Plug-in-development/group/menubar_file.jpg" style="zoom:50%" />
 
 - `menubar/edit` : 顶部菜单的`编辑`菜单
     * undo
@@ -338,7 +338,7 @@ menus节点下配置的对象内的key指的是要注册到哪个弹出菜单里
 
 对应的位置如下图所示：
 
-<img src = "/static/snapshots/edit.jpg" style="zoom:50%" />
+<img src = "/static/snapshots/Plug-in-development/group/edit.jpg" style="zoom:50%" />
 
 - `menubar/select` : 顶部菜单的`选择`菜单
     * selectAll
@@ -351,7 +351,7 @@ menus节点下配置的对象内的key指的是要注册到哪个弹出菜单里
 
 对应的位置如下图所示：
 
-<img src = "/static/snapshots/select.jpg" style="zoom:50%" />
+<img src = "/static/snapshots/Plug-in-development/group/select.jpg" style="zoom:50%" />
 
 - `menubar/find` : 顶部菜单的`查找`菜单
     * findFile
@@ -360,7 +360,7 @@ menus节点下配置的对象内的key指的是要注册到哪个弹出菜单里
 
 对应的位置如下图所示：
 
-<img src = "/static/snapshots/find.jpg" style="zoom:50%" />
+<img src = "/static/snapshots/Plug-in-development/group/find.jpg" style="zoom:50%" />
 
 - `menubar/goto` : 顶部菜单的`跳转`菜单
     * system_goto
@@ -369,7 +369,7 @@ menus节点下配置的对象内的key指的是要注册到哪个弹出菜单里
 
 对应的位置如下图所示：
 
-<img src = "/static/snapshots/goto.jpg" style="zoom:50%" />
+<img src = "/static/snapshots/Plug-in-development/group/goto.jpg" style="zoom:50%" />
 
 - `menubar/run` : 顶部菜单的`运行`菜单
     * 0_foot
@@ -391,7 +391,7 @@ menus节点下配置的对象内的key指的是要注册到哪个弹出菜单里
 
 对应的位置如下图所示：
 
-<img src = "/static/snapshots/view.jpg" style="zoom:50%" />
+<img src = "/static/snapshots/Plug-in-development/group/view.jpg" style="zoom:50%" />
 
 - `menubar/tool` : 顶部菜单的`工具`菜单
     * shortcuts
@@ -400,7 +400,7 @@ menus节点下配置的对象内的key指的是要注册到哪个弹出菜单里
 
 对应的位置如下图所示：
 
-<img src = "/static/snapshots/tool.jpg" style="zoom:50%" />
+<img src = "/static/snapshots/Plug-in-development/group/tool.jpg" style="zoom:50%" />
 
 - `menubar/help` : 顶部菜单的`帮助`菜单
     * documents
@@ -409,7 +409,7 @@ menus节点下配置的对象内的key指的是要注册到哪个弹出菜单里
 
 对应的位置如下图所示：
 
-<img src = "/static/snapshots/help.jpg" style="zoom:50%" />
+<img src = "/static/snapshots/Plug-in-development/group/help.jpg" style="zoom:50%" />
 
 
 ### when

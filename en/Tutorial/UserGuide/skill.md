@@ -35,11 +35,11 @@ The following is an example. Double-click to select the tag and wrap the parent 
 2. Press `Ctrl+]` to wrap, you can add parent tags at the beginning and end of this selection, the cursor blinks at the same time. If you are in js file, pressing `Ctrl+]` does not wrap the tag, but wraps code block such as `if`, `for`, etc., then you can quickly add a code block into the `if` bracket.
 3. Enter `div` to add tag wrapping at the beginning and end of block.
 
-<img src="/static/snapshots/tutorial/dbclick.gif" />
+<img src="/static/snapshots/tutorial/skill/dbclick.gif" />
 
 ### Multi-cursor
 
-<img src="/static/snapshots/tutorial/more_cursor.gif" />
+<img src="/static/snapshots/tutorial/skill/more_cursor_en.gif" />
 
 
 ### Expand the selection
@@ -48,7 +48,7 @@ The following is an example. Double-click to select the tag and wrap the parent 
 
 HBuilderX can intelligently judge the selected area, and use the shortcut key `Ctrl+=` to continue to expand the area without using the mouse.
 
-<img src="/static/snapshots/tutorial/selection_expand.gif" />
+<img src="/static/snapshots/tutorial/skill/selection_expand.gif" />
 
 
 ### Unwrap tag
@@ -56,7 +56,7 @@ HBuilderX can intelligently judge the selected area, and use the shortcut key `C
 1. Double-click the beginning of tag p and select the block of tag p.
 2. Press "Ctrl+Shift+]" to remove the tag p and automatically process the indentation of the child nodes.
 
-<img src="/static/snapshots/tutorial/selection_1.gif" />
+<img src="/static/snapshots/tutorial/skill/selection_1.gif" />
 
 HBuilderX uses symbolization to improve the memorability of shortcut keys. Because of the alphabetization, it is more difficult to remember.
 
@@ -70,7 +70,7 @@ The reverse operation or enhancement operation is generally to add `Shift`, for 
 2. In the following figure, press `Ctrl+Shift+e` (MacOSX: `Cmd+Shift+d`), only the pair of `div` tags will be selected, and the same type of tags in the child nodes will be excluded.
 3. Then you can easily rename the original `div` to `p`
 
-<img src="/static/snapshots/tutorial/selection_2.gif" />
+<img src="/static/snapshots/tutorial/skill/selection_2.gif" />
 
 Remark:
 -If you only want to choose a pairing tag, you cannot with shortcut key `Ctrl+e` (MacOSX: `Cmd+d`). You should use shortcut key `Ctrl+Shift+e` (MacOSX: `Cmd+Shift+d`)
@@ -84,7 +84,7 @@ MacOSX shortcut keys：`command+shift+d`
 
 Windows shortcut keys：`ctrl+shift+e`
 
-<img src="/static/snapshots/tutorial/renameTag.gif" style="zoom: 50%;border: 1px solid #eee; border-radius: 5px;" >
+<img src="/static/snapshots/tutorial/skill/renameTag.gif" style="zoom: 50%;border: 1px solid #eee; border-radius: 5px;" >
 
 ### Swap selection content
 
@@ -96,11 +96,11 @@ Compared with Ctrl+x, `Ctrl+Shift+x` is an enhanced operation to swap selection 
 2. Press Ctrl and double-click the inside of the quotation mark of the second style attribute to select the entire content of quotation marks.
 3. Press `Ctrl+Shift+x` to swap the contents of the style attribute.
 
-<img src="/static/snapshots/tutorial/selection_swap_1.gif" />
+<img src="/static/snapshots/tutorial/skill/selection_swap_1.gif" />
 
 If you don’t select the content, just place the cursor before the beginning of two blocks, and you can directly swap the content of these two blocks.
 
-<img src="/static/snapshots/tutorial/selection_swap_2.gif" />
+<img src="/static/snapshots/tutorial/skill/selection_swap_2.gif" />
 
 
 ### Undo the last multi-selection area or multi-cursor
@@ -111,7 +111,7 @@ If you select the wrong blocks, it is easy to select again. `Ctrl+Shift+z` is no
 2. Press `Ctrl+e` to select the same words
 3. Press `Ctrl+Shift+z`, deselect the last word.
 
-<img src="/static/snapshots/tutorial/selection_cancel.gif" />
+<img src="/static/snapshots/tutorial/skill/selection_cancel.gif" />
 
 If you select one more word, you can click `Ctrl+right mouse click` to cancel a selection.
 
@@ -122,7 +122,7 @@ Skip the current word and select the other same words with shortcut `Alt+Shift+e
 
 This example is a shortcut to merge multiple lines of css code into one line.
 
-<img src="/static/snapshots/tutorial/selection_merge.gif" />
+<img src="/static/snapshots/tutorial/skill/selection_merge.gif" />
 
 1. Double-click inside `{` to select class
 2. Press `Ctrl+double-click` to select another class
@@ -137,7 +137,7 @@ In addition to `wrap tag` or `unwrap tag`, we also often comment `if` tags.
 2. Press `Ctrl+\` to add the cursor at the beginning and end of the `if` bracket at the same time
 3. Press `Ctrl+/` to comment out the first and last lines of the selection
 
-<img src="/static/snapshots/tutorial/selection_if.gif" />
+<img src="/static/snapshots/tutorial/skill/selection_if.gif" />
 
 ### Other
 - [Goto Definition](/Tutorial/UserGuide/goto?id=转到定义)
