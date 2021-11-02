@@ -18,7 +18,7 @@ Please note: On mac, if the path contains `spaces`, it needs to be escaped by `\
 #### Windows
 
 1. Enter `%appdata%` in the address bar of Windows resource manager, find `HBuilder X` directory. Delete `prefs` file from `HBuilder X` directory.
-2. If he the problem still exists, then enter `%localAppdata%` in the address bar of Windows resource manager and delete `HBuilder X` directory.
+2. If the problem still exists, then enter `%localAppdata%` in the address bar of Windows resource manager and delete `HBuilder X` directory.
 
 ### Method 2：Re-install
 
