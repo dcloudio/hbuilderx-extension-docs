@@ -159,63 +159,59 @@ Some types of graphics cards may be due to
 
 ### 3.6 Problems occurred after updating the graphics card driver
 
-如果您更新过`显卡驱动`， 更新驱动之后，启动不了。那就是显卡驱动的问题。请还原显卡驱动，或升级驱动到最新版、或最新稳定版本。
+If HBuilderx cannot startup after updated the graphic driver, that is the problem of the graphics card driver. Please restore the graphics card driver, or upgrade the driver to the latest version or the stable version.
 
 
-## 4. 配置文件损坏
+## 4. The configuration file is damaged
 --------------
 
-> 还有小伙伴反应，昨天还用的好好的，今天启动不了，怎么回事呢？
+> Sometimes, HBuilderX ran well yesterday, but it cannot startup today. Someone also encountered this problem in the latest HBuilderX.
 
-> 新下载的小伙伴，也有可能遇到这个问题。
+It may be that the configuration file is damaged and HBuilderX cannot be started.
 
-有可能是配置文件损坏了，导致无法启动。
+### 4.1 Method 1：Delete .lock file
 
-### 4.1 方案1：删除.lock文件
+Enter `%appdata%` in the address bar of the operating system resource manager and press Enter; in this directory, open HBuilderX directory.
 
-在操作系统资源管理器地址栏输入`%appdata%`回车； 在此目录下，找到HBuilder X目录，打开。
-
-进入后，如发现存在`.lock`文件，删除此文件，然后尝试启动HBuilderX。
+Delete `.lock` file and try to restart HBuilder X again.
 
 <img src="/static/snapshots/tutorial/lock.png" />
 
-### 4.2 方案2：重置配置文件目录
+### 4.2 Method 2：Reset configuration file directory
 
-1. 先点击一下安装目录下的`reset.bat`文件
-2. 还不行，再尝试如下方案， 如下图所示，在地址栏输入`%appdata%`回车； 在此目录下，找到HBuilder X目录，注意：将此目录随便重命名一下，也可以删除掉
+1. Click `reset.bat` file in HBuilderX directory.
+2. If step1 not work, then try the following method. As shown below，enter `%appdata%` in the address bar and press enter; find the HBuilder X directory and rename it. Note: Rename this directory, or delete it.
 
 <img src="/static/snapshots/tutorial/windows_install/appdata.png" style="border: 1px solid #eee;"/>
 
 
-## 5. win:启动后，顶部工具栏显示不全
+## 5. After startup, the top toolbar is not fully displayed
 -----------------
 
-> 部分用户反馈，启动后，部分笔记本顶部工具栏显示不全
+Reason：On some laptops, the top menu of HBuilderX is not fully displayed due to resolution or scaling.
 
-原因：在部分笔记本电脑上，因为分辨率或缩放的原因，HBuilderX启动顶部菜单显示不全。
+Solution：
 
-解决方法：
-
-1. 快捷键 `alt + 空格 + x`, 最大化HBuilderX
-2. 桌面，点击右键菜单【显示设置】，调整下分辨率和缩放。
+1. Maximize HBuilderX with shortcut key `alt + space + x`.
+2. On the desktop, click the right-click menu [Display Settings] to adjust the resolution and zoom.
 
 
-## 6. 备注
+## 6. Remark
 
-### 6.1 联系方式
+### 6.1 Contact us
 
-如果以上都尝试了，还未解决，请联系官方：
+If you have tried all of the above and have not resolved it, please contact us:
 
 1. Email: ide@dcloud.io
-2. QQ: 搜群，群关键字：HBuilderX ,加入群后，找群管理员帮您解决。
-3. 去论坛发帖。论坛地址：http://ask.dcloud.net.cn
+2. QQ: search keyword HBuilderX and find our QQ account, join our qq and our administrator will help you to fix problems。
+3. Post question on our forum。Forum url：http://ask.dcloud.net.cn
 
-### 6.2 如何提问？
+### 6.2 How to ask questions?
 
-如果您遇到启动问题，发邮件、或添加qq寻求帮助时，请您提供下列信息，这样可以得到更快帮助！
+If you encounter startup problems, send an email or add QQ for help, please provide the following information, so that you can get faster help!
 
-需要提供的信息：
+Information to be provided:
 
-- 操作系统信息，（windows 还是 Mac）
-- 是首次下载，无法启动？还是以前可以打开，现在无法打开？
-- windows电脑：如果遇到界面显示问题，请提供分辨率、缩放。（桌面，右键菜单【显示设置】
+- Operating system information, (Windows or Mac)
+- This is the first download and cannot startup? Or can it be opened before, but cannot be opened now?
+- Windows OS：If you encounter display problems, please provide resolution and zoom. (Desktop, right-click menu [Display Settings])
