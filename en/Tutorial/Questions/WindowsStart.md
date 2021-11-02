@@ -122,7 +122,7 @@ Listed below, the errors that may be encountered in the [Event Viewer]
 
 <img src="/static/snapshots/tutorial/windows_install/eventvwr_3.png" style="zoom: 80%;" />
 
-Method 1: Upgrade graphics driver.
+Method 1: Upgrade graphic card driver.
 
 Method 2: Download [opengl32sw.dll patch](https://update.dcloud.net.cn/hbuilderx/patch/opengl32sw.dll), put it to the root directory of HBuilderX.
 
