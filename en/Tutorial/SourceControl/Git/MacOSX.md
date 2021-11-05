@@ -4,18 +4,18 @@
 
 In HBuilderX, you have to install the Git plug-in before you can use Git. 
 
-HBuilderX Top menu, 【Tool】-> 【plug-in installation】. Open the plug-in installation window, Find Git, Click【Install】.
+HBuilderX Top menu, [Tool]-> [plug-in installation]. Open the plug-in installation window, Find Git, Click [Install].
 
 <img src="/static/snapshots/tutorial/source_control/plugin_macosx_en.png" style="zoom: 45%;border: 1px solid #eee;border-radius: 20px;"/>
 
 ## clone and import project
 
-- Top Menu, 【File】-> 【Import】-> 【Import From Git】
-- HBuilderX Project manager, Right click menu【Import】-> 【Import From Git】
+- Top Menu, [File]-> [Import]-> [Import From Git]
+- HBuilderX Project manager, Right click menu [Import]-> [Import From Git]
 
 <img src="/static/snapshots/tutorial/source_control/git_macosx_clone_en.jpg" style="zoom:40%;border: 1px solid #eee;" />
 
-## Git operation menu
+## Git menu
 
 In the project manager, select the project and right-click the menu to see the git related operation menu.
 
@@ -35,43 +35,32 @@ In the project manager, select the project and right-click the menu to see the g
 
 <img src="/static/snapshots/tutorial/source_control/git-new-push-en.png" style="zoom:50%; border: 1px solid #eee;" />
 
-**Remark**：git push --force: It means to push the current code library of your own computer to the remote end and overwrite it. Please use it with caution.
+**Remark**：git push --force: It means to push the current code library of your own computer to the remote server and overwrite it. Please use it with caution.
 
 ## Commit
-
-> git-commit - Record changes to the repository
 
 1. Select the file or the directory or the project to be submitted, right-click the menu and click [commit]
 2. In the pop-up window, enter the `commit message` and click the [Submit] button.
 
 <img src="/static/snapshots/tutorial/source_control/git_macosx_ac_en.jpg" style="zoom:40%; border: 1px solid #eee;" />
 
-## Show Log
+## View Log
 
-Selected Project，right-click menu 【Git】->【show log】
+Selected Project，right-click menu [Git]->[View Log]
 
 <img src="/static/snapshots/tutorial/source_control/git_macosx_log_en.png" style="zoom:45%; border: 1px solid #eee;border-radius: 20px;" />
 
-## Branch: Switch
-
-Selected Project, right-click menu【Git】-> 【Switch Branch-Checkout】
- 
-<img src="/static/snapshots/tutorial/source_control/git-switch-branch-en.png" style="zoom:45%; border: 1px solid #eee;" />
-
-## Branch: New
-
-- New branch：Selected Project, right-click menu【Git】-> 【Git New Branch】
+## Branch
+- New Branch: Selected Project, right-click menu【Git】-> 【Git New Branch】 
+- Switch Branch：Selected Project, right-click menu【Git】-> 【Git Switch Branch-Checkoutf】
+- Delete Branch：Selected Project, right-click menu【Git】-> 【Git Delete Branch】
+- Merge Bbranch：Selected Project, right-click menu【Git】-> 【Git Merge Branch】 
 
 <img src="/static/snapshots/tutorial/source_control/git_macosx_branch_en.jpg" style="zoom:60%; border: 1px solid #eee;border-radius: 20px;" />
 
-## Branch: Operation
-- switch branch：Selected Project, right-click menu【Git】-> 【Git switch branch-checkoutf】
-- delete branch：Selected Project, right-click menu【Git】-> 【Git delete branch】
-- merge branch：Selected Project, right-click menu【Git】-> 【Git merge branch】 
+## Shortcut Configuration
 
-## Shortcut configuration
-
-1. top menu, 【tool】-->【custom keybindings】
+1. top menu, 【Tool】-->【Custom Keybindings】
 2. All Git command configurations can be seen at the bottom of the left side of the document
 
 ```
@@ -116,7 +105,7 @@ xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools
 ```
 
 Solution, open the terminal and enter the following command:
-
+s`
 ```
 xcode-select --install
 ```
