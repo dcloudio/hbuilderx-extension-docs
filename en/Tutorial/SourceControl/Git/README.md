@@ -72,10 +72,10 @@ $ git commit -m [message]
 # Record multiple files changes to the repository
 $ git commit [file1] [file2] ... -m [message]
 
-# Tell the command to automatically stage files that have been modified and deleted, but new files you have not told Git about are not affected.
+# Tell the command to automatically index files that have been modified and deleted, but new files you have not told Git about are not affected.
 $ git commit -a
 
-# Show unified diff between the HEAD commit and committing file
+# Show unified diff between the HEAD and index file
 $ git commit -v
 
 # Replace the tip of the current branch by creating a new commit
@@ -100,7 +100,7 @@ $ git branch -a
 # Create new branch
 $ git branch [branch-name]
 
-# Create new branch and switch this branch
+# Create new branch and switch to new branch
 $ git checkout -b [branch]
 
 # Create new branch and point to this commit
@@ -153,10 +153,10 @@ $ git push origin :refs/tags/[tagName]
 # Show tag info
 $ git show [tag]
 
-# PUsh tag to remote
+# Push tag to remote branch
 $ git push [remote] [tag]
 
-# Push all tags to remote
+# Push all tags to remote branch
 $ git push [remote] --tags
 
 # Create new branch and point to the tag
@@ -169,7 +169,7 @@ $ git checkout -b [branch] [tag]
 # Show project changes and project info
 $ git status
 
-# Sshow git log of current branch
+# Show git log of current branch
 $ git log
 
 # Show git commit records
@@ -191,7 +191,7 @@ $ git whatchanged [file]
 # Show every commit diff of specified file
 $ git log -p [file]
 
-# Show last 5 commit
+# Show latest 5 commits
 $ git log -5 --pretty --oneline
 
 # Show all submitted users, sorted by the number of submissions
@@ -200,13 +200,13 @@ $ git shortlog -sn
 # Show who and when modified file
 $ git blame [file]
 
-# Show the diff between head and cached
+# Show changes between latest commit and current branch
 $ git diff
 
-# Show the diff between cached and last commit 
+# Show the diff between latest commit and current branch
 $ git diff --cached [file]|
 
-# Show the diff between Head and current branch
+# Show the diff between HEAD and current branch
 $ git diff HEAD
 
 # Show the diff between 2 commits
@@ -237,7 +237,7 @@ $ git fetch [remote]
 # List all remote repositories
 $ git remote -v
 
-# Show info of a remote repository
+# Show infomation of remote repository
 $ git remote show [remote]
 
 # Add a new remote repository and rename it
@@ -259,28 +259,28 @@ $ git push [remote] --all
 #### reset
 
 ```
-# Restore the specified files from the temporary storage area to the workspace
+# Restore the specified files from index area to current branch
 $ git checkout [file]
 
-# Restore the specified file of a commit to the workspace
+# Restore the specified file of a commit to current branch
 $ git checkout [commit] [file]
 
-# Restore all file of a commit to the workspace
+# Restore all file of a commit to current branch
 $ git checkout .
 
-# Reset current HEAD to the specified state
+# Reset the specified file from index area to be consistent with the last commit
 $ git reset [file]
 
-# Reset the staging area and workspace to be consistent with the last commit
+# Reset files of index area to be consistent with the last commit
 $ git reset --hard
 
-# Reset the pointer of the current branch to the specified commit, and reset staging area, but the workspace remains unchanged
+# Reset the pointer of the current branch to the specified commit, and reset index area
 $ git reset [commit]
 
-# Reset the HEAD of the current branch to the specified commit, and reset staging area and workspace at the same time, consistent with the specified commit
+# Reset the HEAD of the current branch to the specified commit, and reset index area and current branch, consistent with the specified commit
 $ git reset --hard [commit]
 
-# Reset the current HEAD to the specified commit, but keep staging area and the workspace are unchanged
+# Reset the current HEAD to the specified commit, but keep index area and the current branch are unchanged
 $ git reset --keep [commit]
 
 # Create a new commit to revoke the specified commit
