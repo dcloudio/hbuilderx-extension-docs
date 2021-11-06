@@ -6,7 +6,7 @@ The SVN plug-in calls the `external SVN command line tool`, you need to install 
 
 ## SVN Command line tool
 
-Open `Operating System Terminal` and enter the following command. If brew is not installed, please install it first[Homebrew](https://brew.sh/index_zh-cn)
+Open `Operating System Terminal` and enter the following command. If brew is not installed, please install it first [Homebrew](https://brew.sh/index_zh-cn)
 
 ```
 brew install subversion
