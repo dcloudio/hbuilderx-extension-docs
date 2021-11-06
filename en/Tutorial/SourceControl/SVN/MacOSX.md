@@ -1,31 +1,29 @@
 # MacOSX SVN
 
-In HBuilderX, to use SVN, you need to install the SVN plug-in first. 
+In HBuilderX, you have to install the SVN plug-in before you can use SVN.
 
-The SVN plug-in calls the `external SVN command line tool`, so you also need to install the svn command tool.
+The SVN plug-in calls the `external SVN command line tool`, you need to install SVN command tool.
 
 ## SVN Command line tool
 
-Open `Operating System Terminal` and enter the following command.
- 
-If brew is not installed, please install it first[Homebrew](https://brew.sh/index_zh-cn)
+Open `Operating System Terminal` and enter the following command. If brew is not installed, please install it first[Homebrew](https://brew.sh/index_zh-cn)
 
 ```
 brew install subversion
 
-# check svn command
+# check svn installed or not
 which svn
 ```
 
-## plug-in Install
+## Install SVB Plugin
 
-HBuilderX Top menu, 【Tool】-> 【plug-in installation】. Open the plug-in installation window, Find SVN, Click【Install】.
+HBuilderX Top menu, [Tool]-> [plug-in installation]. Open the plug-in installation window, Find SVN, Click [Install].
 
 <img src="/static/snapshots/tutorial/source_control/plugin_macosx_en.png" style="zoom:40%; border-radius: 20px;border: 1px solid #eee;" />
 
-## Operation menu
+## SVN menu
 
-Project manager, select the project, right-click the menu, you can see the SVN related operation menu.
+In the project manager, select the project and right-click the menu to see the SVN related operation menu. 
 
 <img src="/static/snapshots/tutorial/source_control/svn_macosx_menu_en.png" style="zoom:50%;border-radius: 5px;border: 1px solid #eee;" />
 
@@ -38,13 +36,13 @@ Project manager, select the project, right-click the menu, you can see the SVN r
 
 ## Show Log
 
-select the project, right-click the menu,  【SVN】->【Log】
+Select the project, right-click the menu,  【SVN】->【Log】
 
 <img src="/static/snapshots/tutorial/source_control/svn_macosx_log_en.jpg" style="zoom:40%; border: 1px solid #eee;border-radius: 20px;" />
 
-## Shortcut key configuration
+## Shortcut Configuration
 
-1. toop menu, 【tool】-->【custom keybindings】
+1. Top menu, 【Tool】-->【Custom Keybindings】
 2. All SVN command configurations can be seen at the bottom of the left side of the document
 
 ```
