@@ -12,9 +12,9 @@ The Git plug-in calls the `external Git command line tool`, you need to install`
 
 [TortoiseGit Download](https://tortoisegit.org/download/), double click exe file after download and then follow the instructions to complete the installation.
 
-Note：TortoiseGit is available in 32-bit and 64-bit, please download according to your computer OS.
+Note：TortoiseGit is available in 32-bit and 64-bit, please download right file according to your computer OS.
 
-After downloaded TortoiseGit, double-click to open it to install it.
+After download TortoiseGit, double-click to open it to install it.
 
 <img src="/static/snapshots/tutorial/source_control/TortoiseGit1.png" style="zoom:90%; border: 1px solid #eee;" />
 
