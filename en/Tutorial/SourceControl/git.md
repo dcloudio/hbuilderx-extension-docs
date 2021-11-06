@@ -10,7 +10,7 @@ Note: In HBuilderX, to use Git, you need to install the Git plug-in first. The G
 
 ### Git shortcut menu
 
-The label can be clicked to open the Git shortcut operation menu, and the menu list is configured in the "scm/file/branchlabel" extension point in the Git plugin. This feature is turned on by default
+The label can be clicked to open the Git shortcut operation menu, and the menu list is configured in the "scm/file/branchlabel" extension point in the Git plugin. This feature is turned on by default.
 
 <img src="/static/snapshots/tutorial/source_control/git_update/gitextension_branch_menu.png" style="border:1px solid #eee; border-radius: 5px;"/>
 
@@ -28,7 +28,7 @@ The status will be displayed in the status bar when checking out:
 
 ### Fetch
 
-Click the "Fetch" menu and execute the git fetch command in the current project
+Click the "Fetch" menu and execute the git fetch command in the current project.
 
 ### Checkout
 
