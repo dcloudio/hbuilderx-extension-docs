@@ -1,43 +1,50 @@
 # Windows SVN
 
-## Introduce
+## Summary
+ 
+In HBuilderX, you have to install the SVN plug-in before you can use SVN. 
 
-In HBuilderX, to use SVN, you need to install the SVN plug-in first. 
+The SVN plug-in calls the `external SVN command line tool`, you need to install `TortoiseSVN`。
 
-The SVN plug-in calls the `external SVN command line tool`, So need to install`TortoiseSVN`。
+[TortoiseSVN Download](https://tortoisesvn.net/downloads.html), double click exe file after download and then follow the instructions to complete the installation.
 
-[TortoiseSVN Download](https://tortoisesvn.net/downloads.html)
+## Install SVN Plugin
 
-> Note: HBuilderX SVN plug-ins all call TortoiseSVN, so this article will not describe the TortoiseSVN operation tutorial in detail.
-
-## Plug-in Install
-
-HBuilderX Top menu, 【Tool】-> 【plug-in installation】. Open the plug-in installation window, Find SVN, Click【Install】.
+HBuilderX Top menu, [Tool]-> [plug-in installation]. Open the plug-in installation window, Find SVN, Click [Install].
 
 <img src="/static/snapshots/tutorial/source_control/plugin_window_en.png" style="zoom:70%" />
 
-## SVN Import
+## SVN menu
 
-<img src="/static/snapshots/tutorial/source_control/svn_windows_import_en.png" style="zoom:80%;border: 1px solid #eee;" />
+In the project manager, select the project and right-click the menu to see the SVN related operation menu.
 
-## Operation menu
+> Note: HBuilderX SVN plug-in calls TortoiseSVN for all SVN operation, please search TortoiseSVN manual for more details.
 
-Project manager, select the project, right-click the menu, you can see the SVN related operation menu.
+<img src="/static/snapshots/tutorial/source_control/svn_windows_menu.png" style="border-radius: 5px;border: 1px solid #eee;" />
 
-<img src="/static/snapshots/tutorial/source_control/svn_windows_menu_en.png" style="border-radius: 5px;border: 1px solid #eee;" />
+## Shortcut Configuration
 
-## Shortcut key configuration
-
-1. toop menu, 【tool】-->【custom keybindings】
+1. Top menu, [Tool]-->[Custom Keybindings]
 2. All SVN command configurations can be seen at the bottom of the left side of the document
 
 ```
-// svn update//{"key":"","command":"ExternalCommand:SVN_UPDATE"},
-// svn commit//{"key":"","command":"ExternalCommand:SVN_COMMIT"},
-//svn show log//{"key":"","command":"ExternalCommand:SVN_LOG"},
-//svn delete file//{"key":"","command":"ExternalCommand:SVN_REMOVE"},
-//svn add file//{"key":"","command":"ExternalCommand:SVN_ADD"},
-//svn revert file//{"key":"","command":"ExternalCommand:SVN_REVERT"}
+// svn update
+//{"key":"","command":"ExternalCommand:SVN_UPDATE"},
+
+// svn commit
+//{"key":"","command":"ExternalCommand:SVN_COMMIT"},
+
+//svn show log
+//{"key":"","command":"ExternalCommand:SVN_LOG"},
+
+//svn delete file
+//{"key":"","command":"ExternalCommand:SVN_REMOVE"},
+
+//svn add file
+//{"key":"","command":"ExternalCommand:SVN_ADD"},
+
+//svn revert file
+//{"key":"","command":"ExternalCommand:SVN_REVERT"}
 ```
 
 Select the required command and copy it to the right, configure your own shortcut keys
