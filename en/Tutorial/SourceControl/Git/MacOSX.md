@@ -105,7 +105,6 @@ xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools
 ```
 
 Solution, open the terminal and enter the following command:
-s`
 ```
 xcode-select --install
 ```
