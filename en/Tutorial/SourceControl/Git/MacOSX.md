@@ -24,14 +24,14 @@ In the project manager, select the project and right-click the menu to see the g
 ## Pull
 
 > git-pull - In explorer, select a project and right-click mouse, then click [Git
->  pull] from menus.
+>  Pull] from menus.
 
 <img src="/static/snapshots/tutorial/source_control/git-new-pull-en.png" style="zoom:50%; border: 1px solid #eee;" />
 
 ## Push
 
 > git-push - In explorer, select a project and right-click mouse, then click [Git
->  push] from menus.
+>  Push] from menus.
 
 <img src="/static/snapshots/tutorial/source_control/git-new-push-en.png" style="zoom:50%; border: 1px solid #eee;" />
 
@@ -39,8 +39,8 @@ In the project manager, select the project and right-click the menu to see the g
 
 ## Commit
 
-1. Select the file or the directory or the project to be submitted, right-click the menu and click [commit]
-2. In the pop-up window, enter the `commit message` and click the [Submit] button.
+1. Select the file or the directory or the project to be submitted, right-click the menu and click [Git Commit]
+2. In the pop-up window, enter the `commit message` and click the [Commit] button.
 
 <img src="/static/snapshots/tutorial/source_control/git_macosx_ac_en.jpg" style="zoom:40%; border: 1px solid #eee;" />
 
@@ -60,7 +60,7 @@ Selected Project，right-click menu [Git]->[View Log]
 
 ## Shortcut Configuration
 
-1. top menu, 【Tool】-->【Custom Keybindings】
+1. Top menu, 【Tool】-->【Custom Keybindings】
 2. All Git command configurations can be seen at the bottom of the left side of the document
 
 ```
@@ -76,7 +76,7 @@ Selected Project，right-click menu [Git]->[View Log]
 //git add File
 //{"key":"","command":"ExternalCommand:GIT_ADD"},
 
-//git Switch branch
+//git switch branch
 //{"key":"","command":"ExternalCommand:GIT_CHECKOUT_BRANCH"},
 
 //git status
