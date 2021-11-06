@@ -4,7 +4,7 @@
 
 In HBuilderX, you have to install the Git plug-in before you can use Git. 
 
-The Git plug-in calls the `external Git command line tool`, So need to install`TortoiseGit`。
+The Git plug-in calls the `external Git command line tool`, you need to install`TortoiseGit`。
 
 [TortoiseGit DownLoad](https://tortoisegit.org/download/)
 
