@@ -15,7 +15,7 @@ brew install subversion
 which svn
 ```
 
-## Install SVB Plugin
+## Install SVN Plugin
 
 HBuilderX Top menu, [Tool]-> [plug-in installation]. Open the plug-in installation window, Find SVN, Click [Install].
 
