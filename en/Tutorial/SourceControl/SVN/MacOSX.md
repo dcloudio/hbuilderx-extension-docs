@@ -29,20 +29,20 @@ In the project manager, select the project and right-click the menu to see the S
 
 ## Commit
 
-1. On the file, directory, or project to be submitted, right-click the menu and click [SVN Submit]
-2. In the SVN window, enter the Message, and click the [SVN Submit] button.
+1. On the file, directory, or project to be submitted, right-click the menu and click [SVN Commit]
+2. In the SVN window, enter the Message, and click the [SVN Commit] button.
 
 <img src="/static/snapshots/tutorial/source_control/svn_macosx_ci_en.jpg" style="zoom:45%; border: 1px solid #eee;" />
 
-## Show Log
+## View Log
 
-Select the project, right-click the menu,  【SVN】->【Log】
+Select the project, right-click the menu,  [SVN]->[View Log]
 
 <img src="/static/snapshots/tutorial/source_control/svn_macosx_log_en.jpg" style="zoom:40%; border: 1px solid #eee;border-radius: 20px;" />
 
 ## Shortcut Configuration
 
-1. Top menu, 【Tool】-->【Custom Keybindings】
+1. Top menu, [Tool]-->[Custom Keybindings]
 2. All SVN command configurations can be seen at the bottom of the left side of the document
 
 ```
