@@ -1,22 +1,22 @@
-# 终端
+# Terminal
 
-## 安装内置终端
+## Install Build-in Terminal
 
-点击顶部菜单【工具 - 插件安装】，打开插件安装窗口，选择`内置终端`，点击安装。
+Click the top menu [Tools-> Plug-in Installation] to open the plug-in installation window, select `Built-in Terminal`, and click Install.
 
 <img src="/static/snapshots/tutorial/terminal/terminal_install.png" style="zoom: 50%; border: 1px solid #eee; border-radius: 10px;"/>
 
-## 启动终端
+## Startup Terminal
 
-HBuilderX支持通过多种方式打开终端：
+HBuilderX supports multiple ways to open the terminal:
 
-- 左侧视图（项目管理器），选中项目，右键菜单【使用命令行窗口打开所在目录】
-- 顶部菜单【视图 - 显示终端】
-- 底部状态栏，点击终端图标
-- 快捷键方式：Windows (Alt+C); MacOSX (Ctrl+Shift+C)
+- Left view (project manager), select the project, right-click menu [Open in Terminal]
+- Top menu [View -> Show Terminal]
+- In the status bar at the bottom of the window, click the terminal icon
+- Shortcut Keys：Windows (Alt+C); MacOSX (Ctrl+Shift+C)
 
-## Open Links@open-links
+## Open Links with @open-links
 
-> HBuilderX 3.2.10+, supports clicking on the url of the terminal and opening it in the browser
+> HBuilderX 3.2.10+, supports clicking the url of the terminal and opening it in the browser
 
 <img src="/static/snapshots/tutorial/terminal/terminal_url_en.png" style="zoom: 50%; border: 1px solid #eee; border-radius: 10px;"/>
