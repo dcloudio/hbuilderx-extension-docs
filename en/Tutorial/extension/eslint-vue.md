@@ -1,8 +1,8 @@
 # About eslint-vue
 
-This plugin is used for Vue syntax verification. [eslint-vue install](https://ext.dcloud.net.cn/plugin?id=2005)
+This plugin is used for Vue syntax verification. [eslint-vue installation](https://ext.dcloud.net.cn/plugin?id=2005)
 
-It needs to be used with eslint-js, [eslint-js plug-in installation address](https://ext.dcloud.net.cn/plugin?id=2037)
+It needs to be used with eslint-js, [eslint-js installation](https://ext.dcloud.net.cn/plugin?id=2037)
 
 ## Error Highlight
 
