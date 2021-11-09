@@ -56,8 +56,8 @@ More configuration instructions can refer to [options](https://eslint.org/docs/r
 Rule Settings:
 
 - "off" or 0 - turn the rule off
-- "warn" or 1 - turn the rule on as a warning (doesn't affect exit code)
-- "error" or 2 - turn the rule on as an error (exit code is 1 when triggered)
+- "warn" or 1 - turn the rule on as a warning (doesn't affect the program to exit)
+- "error" or 2 - turn the rule on as an error (the program will exit when triggered)
 
 Example:
 
