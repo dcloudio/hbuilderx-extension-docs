@@ -113,7 +113,9 @@ HbuilderX provides shortcuts settings and whether to automatically trigger when 
 
 ## Outline
 
-Select View -show outline. Or right-click anywhere in script, select toggle outline.
+- Editor top menu - view -> Show Outline. 
+- Editor file, right-click menu -> Toggle Outline.
+- Editor bottom status bar, Click on the first icon. 
  
 Select any tag in outline will bring cursor to the corresponding section of the script.
 
