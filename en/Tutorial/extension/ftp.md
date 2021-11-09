@@ -7,7 +7,7 @@ HBuilderX optimized SFTP/FTP plugin from version 2.7.12+.
 [SFTP/FTP Installation](https://ext.dcloud.net.cn/plugin?id=2038)
 
 This plugin is a popular ftp plugin in vscode. Because HBuilderX is compatible with part of the plugin ecology of vscode, it can also be used in HBuilderX.
-- Use this plug-in to synchronize local workspace files with FTP server or Linux server files.
+- Use this plug-in to synchronize local workspace files with FTP server or Linux server files
 - Support `ftp/sftp` protocol
 - Support remote file directory `browse`, `upload`, `download`, `delete`
 - Support `auto save upload`
@@ -16,13 +16,13 @@ This plugin is a popular ftp plugin in vscode. Because HBuilderX is compatible w
 
 Steps：
 
-1. As shown in the figure below, in the project manager, create an empty directory or empty project, and then select
-2. Right-click menu, click [FTP: Create Connection Configuration]
-3. The system automatically creates the `.ftp/ftp-sync.json` configuration file
-4. Edit `ftp-sync.json`, enter`host（ip）`、`username`、`password`、`port`、`protocol`
-5. After filling in the configuration file, right-click the menu and click [Ftp:remote remote files]
-6. Select the file directory and perform the operations of `upload`, `download`, and `delete`
-Ope
+1. As shown in the figure below, in the project manager, create an empty directory or empty project, and then select.
+2. Right-click menu, click [Ftp: Create connection configuration].
+3. The system automatically creates the `.ftp/ftp-sync.json` configuration file.
+4. Edit `ftp-sync.json`, enter`host（ip）`、`username`、`password`、`port`、`protocol`.
+5. After filling in the configuration file, right-click the menu and click [Ftp:browse remote files].
+6. Select the file directory and perform the operations of `upload`, `download`, and `delete`.
+
 
 ### 2.1 Setup ftp/sftp configuration file
 
@@ -37,12 +37,12 @@ Ope
 
 ### 2.3 Edit remote files locally, delete remote files
 
-Select the item and right-click the menu [FTP: browse remote files] to open the `SFTP view`
+Select an item from project manager and right-click the menu [FTP: browse remote files] to open the `SFTP view`.
 
 <img src="/static/snapshots/tutorial/ftp3.png" style="zoom:80%" />
 
 
-## 3. ftp Configuration file parameter description
+## 3. ftp configuration file parameter description
 
 ```json
 {
@@ -63,20 +63,20 @@ Select the item and right-click the menu [FTP: browse remote files] to open the 
 
 ## 4. ftp、sftp agreement description
 
-Support FTP、sftp agreements。
+Support Ftp、Sftp 2 protocol.
 
-If the remote server has set up the `ftp` service, `username` and `password` need to fill in the ftp user passwordfcc
+If the remote server has set up the `ftp` service, `username` and `password` need to fill in the ftp user password.
 
 `sftp` doesn't need any configuration. Turning on `SSH` will enable `SFTP` by default. In other words, if your remote server is a `linux` system, even if the `ftp` service is not set up, you can still connect via `sftp` and use the file synchronization service.
 
 - SSH/SFTP，default port：22
-- Use sftp service, you need to fill in the user and password of the target computer
+- Use sftp service, you need to fill in the user and password of the target computer.
 
 ## 5. ftp/sftp menu configuration shortcuts
 
 Menu [Tool] [Custom Keybindings]，you can configure shortcut keys for sftp related menus.
 
-The details are as follows, you can change the `key` value to the shortcut key you want
+The details are as follows, you can change the `key` value to the shortcut key you want.
 
 ```
 [
@@ -95,17 +95,17 @@ The details are as follows, you can change the `key` value to the shortcut key y
         "key": "ctrl+shift+l",
         "command": "sftp.sync.localToRemote"
     },
-    // Upload current folder
+    // Upload the current folder
     {
         "key": "ctrl+shift+h",
         "command": "sftp.upload.folder"
     },
-    // Download current folder
+    // Download the current folder
     {
         "key": "ctrl+shift+q",
         "command": "sftp.download.folder"
     },
-    // In project explore,  right-click menu FTP: Upload selected files
+    // In project manager, right-click menu Ftp: Upload the current file
     {
         "key": "ctrl+shift+u",
         "command": "sftp.upload.file"
