@@ -119,9 +119,9 @@ HbuilderX provides shortcuts settings and whether to automatically trigger when 
  
 Select any tag in outline will bring cursor to the corresponding section of the script.
 
-<img src="/static/snapshots/vue/outline_en.jpg" style="zoom: 40%;border: 1px solid #eee;border-radius: 20px;" />
+<img src="/static/snapshots/vue/outline_en.png" style="zoom: 40%;border: 1px solid #eee;border-radius: 20px;" />
 
-## Use Vue without Command Line
+## Easy to create and run Vue project
 
 If you don't like node development environment, this will not affect you drive into the vue programming.
 
