@@ -72,7 +72,7 @@ Click the menu [Tools -> External Command Setting -> compile-node-sass -> packag
 
 Click the menu [Tools -> External Command Setting -> compile-node-sass -> package.json] to open the package.json file.
 
-Open package.json and modify the key value to config the shortcut key; this external command can be run directly through this shortcut key. For example: `"key": "ctrl + alt + C"`
+Open package.json and modify the key value to configure the shortcut key; this external command can be run directly through this shortcut key. For example: `"key": "ctrl + alt + C"`
   
 ## Save and Compile
   
