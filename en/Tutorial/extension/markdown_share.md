@@ -63,7 +63,7 @@ Open HBuilderX, click [Settings] and choose "Plugins", then set `uniCloud` space
 
 ## 4. How to use plugin
 
-### 4.1 MarkDown File conversion
+### 4.1 MarkDown File Conversion
 
 在`md`文件上，右键菜单，点击【一键分享】,会将`md`文件转换为html，并自动上传到云端。并在控制台打印出`URL`
 In the `md` file, right-click and select [Share to Weblink], HBuilderX will convert `md` file to html file and upload to uniCloud, then output "URL" in the console.
