@@ -1,18 +1,18 @@
-> 仅支持HBuilderX 2.8.7+ 版本
+> Supported from HBuilderX 2.8.7
 
-## 1. 概述
+## 1. Summary
 
-markdown拥有迷人的输入体验，但分享并不方便，尤其是缺少免费、稳定、高速的图床。
+Markdown has an excellent input experience, but it is difficult to share because of the lack of free, stable, and high-speed hosting servers.
 
-[uniCloud](https://unicloud.dcloud.net.cn/)提供了免费、稳定、高速的服务器和cdn。
+[uniCloud](https://unicloud.dcloud.net.cn/) provide free, stable and high-speed hosting servers and CDN.
 
-HBuilderX 2.8.7起，基于uniCloud，提供了markdown的`一键分享`功能。
+Since HBuilderX 2.8.7, based on uniCloud, it provides markdown `one-click sharing` function.
 
-利用uniCloud的前端网页托管，将markdown稳定转成了HTML网页，并发布为在线的URL。您可以把URL发送给任何想要分享的人。
+You can convert markdown into HTML web pages with uniCloud web hosting services and publish them as online URLs. Then you can send the URL to anyone who wants to share.
 
-同时markdown里涉及的图片也会自动上传到前端网页托管里免费cdn中。
+At the same time, the pictures involved in markdown will also be automatically uploaded to the CDN of uniCloud Hosting Server.
 
-## 2. 使用方式
+## 2. How to use
 
 在`md`文件上，点击【右键菜单 - 一键分享】，然后在控制台就会返回URL。
 <img src="/static/snapshots/tutorial/markdown_share_1.jpeg" style="zoom:65%" />
