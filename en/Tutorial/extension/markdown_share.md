@@ -10,11 +10,11 @@ Since HBuilderX 2.8.7, based on uniCloud, it provides markdown `one-click sharin
 
 You can convert markdown into HTML web pages with uniCloud web hosting services and publish them as online URLs. Then you can send the URL to anyone who wants to share.
 
-At the same time, the pictures involved in markdown will also be automatically uploaded to the CDN of uniCloud Hosting Server.
+At the same time, the pictures involved in markdown will also be automatically uploaded to the CDN of uniCloud.
 
 ## 2. How to use
 
-In the `md` file, right-click and select [Share to Weblink], you can find "return url" in the console.
+In the `md` file, right-click and select [Share to Weblink], you can find that the "url" will be output from the console.
 
 <img src="/static/snapshots/tutorial/markdown_share_1.jpeg" style="zoom:65%" />
 
@@ -25,9 +25,9 @@ To use markdown one-click sharing, you have to complete the configuration in adv
  
 DCloud cooperated with Alibaba Cloud to establish uniCloud to provide web servers for developers.
 
-uniCloud is a free, high-speed web hosting server that can help you store web pages。See details：[https://uniapp.dcloud.io/uniCloud/hosting](https://uniapp.dcloud.io/uniCloud/hosting).
+uniCloud is a free, high-speed web hosting server that can help you to store web pages。More details：[https://uniapp.dcloud.io/uniCloud/hosting](https://uniapp.dcloud.io/uniCloud/hosting).
 
-Developers need to log in in HBuilderX and activate uniCloud service.
+Developers need to log in HBuilderX and activate uniCloud service.
 
 ### 3.1 Sign Up uniCloud
 
@@ -35,7 +35,7 @@ Sign up uniCloud：[https://unicloud.dcloud.net.cn/](https://unicloud.dcloud.net
 
 <img src="/static/snapshots/tutorial/markdown_share_2.jpeg" style="zoom:80%" />
 
-Note: In accordance with national legal requirements and Alibaba Cloud requirements, to use uniCloud services, real-name authentication is required.
+Note: In accordance with national legal and Alibaba Cloud requirements, to use uniCloud services, real-name authentication is required.
 
 <img src="/static/snapshots/tutorial/markdown_share_3.jpeg" style="zoom:80%" />
 
@@ -65,7 +65,6 @@ Open HBuilderX, click [Settings] and choose "Plugins", then set `uniCloud` space
 
 ### 4.1 MarkDown File Conversion
 
-在`md`文件上，右键菜单，点击【一键分享】,会将`md`文件转换为html，并自动上传到云端。并在控制台打印出`URL`
 In the `md` file, right-click and select [Share to Weblink], HBuilderX will convert `md` file to html file and upload to uniCloud, then output "URL" in the console.
 
 <img src="/static/snapshots/tutorial/markdown_share_8.jpeg" style="zoom:80%" />
