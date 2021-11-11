@@ -8,7 +8,7 @@ Using Sass and the Compass style library can help better organize and manage sty
 
 ## Plugin Installation
 
-In HBuilderX, the use of `scss/sass` requires the installation of the `compile-node-sass compilation plugin`. This plugin can compile `scss/sass` to css file.
+In HBuilderX, the use of `scss/sass` requires the installation of the `compile-node-sass compilation plugin`. This plugin can compile `scss/sass` to css.
 
 [compile-node-sass Download](https://ext.dcloud.net.cn/plugin?id=2046)
 
