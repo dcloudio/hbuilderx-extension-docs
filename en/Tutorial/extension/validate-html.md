@@ -1,13 +1,11 @@
-# validate-html
-
-### Plugin Install
+### Plugin Installation
 
 The html syntax verification plug-in needs to be installed in [HBuilderX Plugin Market](https://ext.dcloud.net.cn/plugin?name=validate-html).
 
 
-### configure options
+### How to configure options
 
-After the installation is complete, enter [Settings] [Plugin Configuration] [htmlhintrc], and click `htmlhintrc` to configure related rules.
+After the installation is complete, enter [Settings] [Plugins] [htmlhint], and click `htmlhintrc` to edit rules.
 
 <img src="/static/snapshots/plugins/plugin_setting_en.png" style="zoom: 45%; border: 1px solid #eee;border-radius: 20px;"/>
 
@@ -16,7 +14,7 @@ The option configuration file is `.htmlhintrc`, and the corresponding descriptio
 | Option | Description |
 | ------------------------ | ------------------------ -------------------------------- |
 | tagname-lowercase | Whether to enable lowercase for tag names; `true: enable, false: disable` |
-| attr-lowercase | Whether lowercase is enabled for attribute names, `true: enable, false: disable` |
+| attr-lowercase | Whether to enable lowercase for attribute names, `true: enable, false: disable` |
 | attr-value-double-quotes | Whether the attribute value must be enclosed in double quotes, `true: enable, false: disable` |
 | doctype-first | Whether Doctype must be the first line of the HTML document, `true: enable, false: disable` |
 | tag-pair | Whether tags must be paired, `true: enable, false: disable` |
@@ -25,7 +23,7 @@ The option configuration file is `.htmlhintrc`, and the corresponding descriptio
 | src-not-empty | Whether the src attribute is empty, `true: enable, false: disable` |
 | attr-no-duplication: | In the same tag, whether the attribute value cannot be repeated, `true: enable, false: disable` |
   
-Detailed configuration instructions can refer to [htmlhint options](https://github.com/htmlhint/HTMLHint/wiki/Usage)
+More details can refer to [htmlhint options](https://github.com/htmlhint/HTMLHint/wiki/Usage)
 
 ## How to add other options？
 
