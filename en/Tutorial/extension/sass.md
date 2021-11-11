@@ -15,7 +15,7 @@ In HBuilderX, the use of `scss/sass` requires the installation of the `compile-n
 ## How to use
 
 - The uni-app project will automatically compile files that use sass。
-- How to compile the sass file separately. Select the sass file, right-click and choose menu -> External Commands -> Scss/Sass compliation -> Compile Scss/Sass.
+- How to compile the sass file separately. Select the sass file, right-click and choose menu -> External Commands -> Scss/Sass compilation -> Compile Scss/Sass.
 
 <img src="/static/snapshots/tutorial/menu_tool/project-explorer_menu_en.png"  class="hd-img"/>
 
