@@ -4,9 +4,9 @@
 
 This plugin is used to format `less`, `sass`, `vue`, `stylus`, `ts`, `yaml` code.
 
-This plugin needs to be downloaded from [HBuilderX Plugin Market](https://ext.dcloud.net.cn/plugin?id=2025)
+This plugin needs to be downloaded from [HBuilderX Plugin Market](https://ext.dcloud.net.cn/plugin?id=2025).
 
-## Config File
+## Configuration
 
 Click the menu [Tools] -> [Settings] -> [Plugin Configuration] -> prettier -> prettier.config.js to open the configuration file.
 
@@ -55,7 +55,7 @@ parsers: {
     ".vue": "vue",
     ".ux": "vue",
     ".yml": "yaml",
-    ".foo":"flow"//文件后缀名对应的格式化处理器
+    ".foo":"flow"//Format program corresponding to file suffix
 }
 ~~~
 
