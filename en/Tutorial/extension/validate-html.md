@@ -11,17 +11,18 @@ After the installation is complete, enter [Settings] [Plugins] [htmlhint], and c
 
 The option configuration file is `.htmlhintrc`, and the corresponding descriptions of the existing options are as follows:
 
-| Option | Description |
-| ------------------------ | ------------------------ -------------------------------- |
-| tagname-lowercase | Whether to enable lowercase for tag names; `true: enable, false: disable` |
-| attr-lowercase | Whether to enable lowercase for attribute names, `true: enable, false: disable` |
-| attr-value-double-quotes | Whether the attribute value must be enclosed in double quotes, `true: enable, false: disable` |
-| doctype-first | Whether Doctype must be the first line of the HTML document, `true: enable, false: disable` |
-| tag-pair | Whether tags must be paired, `true: enable, false: disable` |
-| spec-char-escape | Whether special characters must be escaped, `true: enable, false: disable` |
-| id-unique | Whether the ID attribute must be unique, `true: enable, false: disable` |
-| src-not-empty | Whether the src attribute is empty, `true: enable, false: disable` |
-| attr-no-duplication: | In the same tag, whether the attribute value cannot be repeated, `true: enable, false: disable` |
+| Option                     | Description                                                     |
+| ------------------------ | -------------------------------------------------------- |
+| tagname-lowercase        | Whether to enable lowercase for tag names; `true: enable, false: disable`                |
+| attr-lowercase           | Whether to enable lowercase for attribute names, `true: enable, false: disable`                |
+| attr-value-double-quotes | Whether the attribute value must be enclosed in double quotes, `true: enable, false: disable`        |
+| doctype-first            | Whether Doctype must be the first line of the HTML document, `true: enable, false: disable` |
+| tag-pair                 | Whether tags must be paired, `true: enable, false: disable`                  |
+| spec-char-escape         | Whether special characters must be escaped, `true: enable, false: disable`              |
+| id-unique                | Whether the ID attribute must be unique, `true: enable, false: disable`                |
+| src-not-empty            | Whether the src attribute is empty, `true: enable, false: disable`                  |
+| attr-no-duplication:     | In the same tag, whether the attribute value cannot be repeated, `true: enable, false: disable`    |
+  
   
 More details can refer to [htmlhint options](https://github.com/htmlhint/HTMLHint/wiki/Usage)
 
