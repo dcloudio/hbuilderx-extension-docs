@@ -131,6 +131,14 @@ module.exports = {
     extends: [
         'plugin:vue/recommended'
     ],
+	parserOptions: {
+		'ecmaVersion': 2018,
+		'sourceType': 'module',
+		'ecmaFeatures': {
+			'jsx': true
+		},
+		'allowImportExportEverywhere': false
+	},
     rules: {
         "no-alert": 0,
         "no-multi-spaces": "error",         // disallow multiple spaces 
