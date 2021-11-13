@@ -1,98 +1,102 @@
-## 前言
+## Foreword
 
-> 首先保证`iTunes`或`Android手机助手`（如360手机助手）可以正常连接手机。
+> First, make sure that `iTunes` or `Android Phone Assistant` (such as 360 Phone Assistant) can connect to the phone normally.
 
-> 如果仍有问题请查阅以下问题是否与自己遇到的情况相同
+> If you still have problems, please check whether the following problems are the same with your problem.
 
-**特别注意**：
-- `iOS13真机运行，需要升级至HBuilderX 2.2.5+以上版本。`
-- itunes `12.10.9.3`版本，连接`ios 14+`的iphone手机，可能存在问题；请下载12.9.4.102之前的版本 
-- Android 11部分手机真机运行文件同步失败的问题，HBuilderX 3.1.19已解决此问题，请升级HBuilderX 到3.1.19+版本。
+**Note**：
+- `You need to upgrade to HBuilderX 2.2.5+ or higher if you want to run on iOS13 device.`
+- Itunes `12.10.9.3` connected to `ios 14+` iphone phones, there may be problems; please download the version before 12.9.4.102
+- Some Android 11 mobile phones fail to sync files on real devices. HBuilderX 3.1.19 has solved this problem. Please upgrade HBuilderX to 3.1.19+.
 
-出现问题手机分析清楚问题在哪个环节。
-从在HBuilder/HBuilderX菜单里点真机运行，程序会执行如下几个步骤：
+We need to analyze where the problem is. The program will perform the following steps after click the real device to run:
 
-1. 手机硬件通过usb线连接到HBuilder所在电脑，此时可能因为`手机驱动`、usb口、数据线、手机硬件等多种问题造成连接失败。
-2. HBuilderX通过adb或itunes服务检测手机。此时可能因为手机渠道、usb连接设置、adb设置或adb冲突、itunes设置造成检测不到。
-3. HBuilderX安装调试基座到手机。此时可能因为手机禁止usb安装、Android手机没有sd卡、iOS手机没有信任证书而安装失败。
-4. HBuilderX将ide中的代码同步到手机上并启动调试基座。这一步一般不会出问题。
+1. The mobile phone hardware is connected to the computer through the USB cable. The connection may fail due to various problems such as the `mobile phone driver`, USB port, data cable, and mobile phone hardware.
+
+2. HBuilderX detects mobile phones through adb or itunes services. It may not be detected due to mobile phone channels, usb connection settings, adb settings or adb conflicts, or itunes settings.
+
+3. HBuilderX installs and debugs the base to the mobile phone. The installation may fail because the mobile phone prohibits USB installation, the Android phone does not have an SD card, and the iOS phone does not have a trusted certificate.
+
+4. HBuilderX sync the code in the IDE to the mobile phone and starts the debugging dock. This step is usually correct.
 
 
-下面把各种常见FAQ列出，大家可按图索骥。
+Below is a list of various common FAQs which you can check at any time during future use.
 
-## 1. 没有运行到手机的菜单
+## 1. No menu running to the phone
 ---
-> 真机运行只能运行App项目，选中App项目或将焦点放在将要运行的App项目的文件编辑器上
+> The real machine can only run the App project, select the App project or focus on the file editor of the App project to be run.
 
-HBuilderX支持web项目和app项目，项目前面是有图标的，W表示web项目，A表示App项目。其中只有`App项目可以运行`。
+HBuilderX supports web projects and app projects. There is an icon in front of the project. W stands for web project and A stands for App project. Only the `App project can run`.
 
-HBuilderX支持项目类型较多，只有`uni-app`、`5+app`、`wap2app`可以真机运行。他们都会在项目根目录下有个`manifest.json`文件（uni-cli项目会在src目录下有manifest.json）。
+HBuilderX supports more project types, only `uni-app`, `5+app`, and `wap2app` can run on real machine. They will all have a `manifest.json` file in the project root directory (uni-cli projects will have manifest.json in the src directory).
 
-## 2. 检查手机设置
+## 2. Check phone settings
 ---
-特别注意：Windows连接Android手机，一定要确保电脑已安装相应的手机驱动。
+Note：To connect Windows OS to an Android phone, make sure that the computer has installed the corresponding phone driver.
 
-1. 确保数据线或usb口正常，可替换不同的线或口来验证。
-2. 确认Android手机设置中`USB调试`模式已开启。这个设置一般在【设置】【开发者选项】里。有的手机在插上数据线后在push通知栏里也可以设置。注意不能设置为u盘模式，如果是充电模式则必须同时设置充电时`允许usb调试`。
-3. 如手机屏幕弹出需信任本计算机的询问，请`同意该授权`。并且最好是把始终同意该设备调试勾上。如不小心拒绝，需要重插手机或重启电脑。
-4. Android5.0及以上系统，不要使用访客模式。这种模式下无法成功运行。
-5. 部分手机如小米，有usb安装应用的权限设置，需在手机上允许通过usb安装应用。不同rom的界面不一样，请自行百度你的手机打开usb安装应用的方式。
+1. Ensure that the data line or usb port is normal, and you can replace it with a different line or port to verify.
+2. Make sure that the `USB debugging` mode is turned on in the Android phone settings. This setting is generally in [Settings] [Developer Options]. Some mobile phones can also be set in the push notification bar after plugging in the data cable. Note that it cannot be set to USB flash drive mode. If it is charging mode, you must also set the `allow usb debugging` when charging.
+3. If a request to trust this computer pops up on the phone screen, please `Agree to this authorization`. And it is best to check the Always agree to debug the device. If you accidentally refuse, you need to replug the phone or restart the computer.
+4. Android5.0 and above systems, do not use guest mode. It cannot run successfully in this mode.
+5. a Some mobile phones, such as Xiaomi, have the permission to install applications via usb, and need to allow the installation of applications via usb on the mobile phone. The interface of different roms is different, please open the way to install the application by using the usb on your mobile phone on Baidu.
 
-## 3. Mac 连接手机/模拟器说明
+## 3. Mac Mac connection to mobile phone/emulator instructions
 ---
-分Android和iOS手机分别列出排查方式：
+The troubleshooting methods are listed separately for Android and iOS phones:
 
-### 3.1 Mac: iOS真机
+### 3.1 Mac: iOS real machine
 
-1. 确认手机已通过数据线连接电脑
-2. 确认iTunes能正常连接手机
-3. 如手机屏幕弹出需信任本计算机的询问，请同意该授权
+1. Confirm that the phone is connected to the computer via the data cable;
+2. Confirm that iTunes can connect to the phone normally;
+3. If a request to trust this computer pops up on the phone screen, please agree to the authorizations;
 
-### 3.2 Mac: iOS模拟器
+### 3.2 Mac: iOS simulator
 
-1. Xcode必须安装在应用程序（Application）中
-2. 首先确认Xcode（版本必须是6.0及以上版本）已安装并能正常启动模拟器
-3. 如果仍然无法检测到，则打开Xcode，然后打开Xcode的 `Preferences --> Locations`，设置该界面中的 `Command Line Tools` 项，选择正确的`Xcode`版本即可
+1. Xcode must be installed in the application (Application);
+2. Confirm that Xcode (version must be 6.0 and above) has been installed and can start the simulator normally
+3. If it still cannot be detected, open Xcode, then open Xcode's `Preferences --> Locations`, set the `Command Line Tools` item in this interface, and select the correct `Xcode` version..
+
+
 
 <img src="/static/snapshots/tutorial/ios_simulator.png" />
 
-### 3.2 Mac: 连接Android手机
+### 3.2 Mac: Connect Android phone
 
-1. 关于本机(指Mac系统的关于本机，非手机) --> 系统报告 -> usb  -> 你所连接的device --> 厂商ID或者供应商ID(Vendor ID)
-2. 在终端执行如下命令：echo xxxxxx >> ~/.android/adb_usb.ini （“xxxxxx”为厂商ID或者供应商ID(Vendor ID)，有些系统下echo命令并不能正确写入文件，可在~/.android/目录下修改或新建adb_usb.ini添加xxxxxx）
-3. 重启HBuilderX。
-4. 如重启HBuilderX仍然不行，请使用命令行(终端.app)，切换到HBuilderX自带的adb目录。
-5. HBuilderX正式版的adb目录位置：tools/adbs目录（MAC下为HBuilderX.app/Contents/tools/adbs目录）
-6. HBuilderX Alpha版的adb目录位置：plugins/launcher/tools/adbs目录（MAC下为`/Applications/HBuilderX-Alpha.app/Contents/HBuilderX/plugins/launcher/tools/adbs`目录）
-7. 在adbs目录下运行`./adb kill-server`重试。
-8. 重启电脑重试。
+1. About this machine (refers to Mac system about this machine, not mobile phone) --> system report -> usb -> the device you are connected to --> vendor ID or vendor ID (Vendor ID).
+2. Echo xxxxxx >> ~/.android/adb_usb.ini ("xxxxxx" is the vendor ID or vendor ID (Vendor ID). Under some systems, the echo command cannot write the file correctly. You can use it in ~/ Modify or create adb_usb.ini under the .android/ directory and add xxxxxx).
+3. Reboot HBuilderX.
+4. If restarting HBuilderX still does not work, please use the command line (terminal.app) to switch to the adb directory that comes with HBuilderX.
+5. /tools/adbs directory of the official version of HBuilderX（MAC: HBuilderX.app/Contents/tools/adbs directory）.
+6. HBuilderX Alpha ：plugins/launcher/tools/adbs directory（MAC:`/Applications/HBuilderX-Alpha.app/Contents/HBuilderX/plugins/launcher/tools/adbs` directory）.
+7. Run `./adb kill-server` in the adbs directory to try again.
+8. Reboot computer.
 
-## 4. Windows 连接手机/模拟器说明
+## 4. Windows connection phone/emulator instructions
 ---
-### 4.1 Windows: 连接Android手机
+### 4.1 Windows: Connect Android phone
 
-#### 4.1.1 驱动：
+#### 4.1.1 Driver：
 
-> 请确认已安装Android手机驱动。
+> Please confirm that the Android phone driver has been installed.
 
-如果手机连接没有任何反应或提示驱动问题，可通过以下方式解决：
-  1. 安装`驱动精灵`类程序，通过它们来安装驱动
-  2. 装驱动比较好的方式是使用各种手机助手，比如`360、腾讯的各种手机助手`，如果有问题，尝试升级助手的版本。
+If the phone connection does not respond or prompts a driver problem, you can solve it in the following ways:
+  1. Install `Driver Wizard` programs, install drivers through them
+  2. The better way to install the driver is to use various mobile assistants, such as `360, Tencent's various mobile assistants`, if there is a problem, try to upgrade the version of the assistant.
 
-#### 4.1.2 其它注意事项：
-  1. 如果在启动HBuilderX后才安装驱动连接上手机，可能需要重启HBuilderX。
-  2. 使用管理员权限运行HBuilder。
-  3. 关闭WebView调试模式，重启HBuilderX重试。
-  4. 如果其他软件可以连接手机，而HBuilderX无法检测到手机，可能是其他软件独占了Google的ADB服务通道。
-  5. Android的`ADB服务`已经被大量软件滥用，除了各种手机助手自带adb，其他如QQ、搜狗输入法、暴风影音、酷狗音乐、阿里旺旺等众多软件都自带`adb`。有些工具的`adb`版本低且独占手机通道，就会导致HBuilderX无法连接手机。
-  6. 在任务管理器中找到`adb.exe`相关进程（包括`kadb.exe`等），在任务管理中右键该进程，打开文件位置，查看该进程是什么软件启动的。
-  7. 禁止这些软件监听手机插入（一般在该软件的设置中）、禁止自动启动。
-  8. 有些软件结束adb进程后又会自动启动，所以得将`adb.exe`文件重命名一下，实在不行卸载了这些流氓软件。
-  9. 关闭所有手机助手及进程里各种`adb.exe`（包括`kadb.exe`等），再试。
+#### 4.1.2 Other Problems：
+  1. If you install the driver after starting HBuilderX and connect to the phone, you may need to restart HBuilderX.
+  2. Run HBuilder with administrator privileges.
+  3. Close the WebView debugging mode, restart HBuilderX and try again.
+  4. If other software can connect to the phone, but HBuilderX cannot detect the phone, it may be that other software monopolizes Google's ADB service channel.
+  5. Android's `ADB service` has been abused by a large number of software. In addition to various mobile phone assistants that come with adb, other software such as QQ, Sogou input method, Baofengyingyin, Kugou music, Ali Wangwang and many other software have their own `adb`. Some tools have a low version of `adb` and monopolize the phone channel, which will cause HBuilderX to fail to connect to the phone.
+  6. Find the `adb.exe` related process (including `kadb.exe`, etc.) in the task manager, complete the process in the task management, open the file location, and check what software started the process.
+  7. It is forbidden for these software to monitor the phone plug-in (usually in the software's settings), and forbid automatic startup.
+  8. Some software will automatically start after finishing the adb process, so you have to rename the `adb.exe` file, it is impossible to uninstall these rogue software.
+  9. Close all mobile assistants and various `adb.exe` (including `kadb.exe`, etc.) in the process, and try again.
 
-#### 4.1.3 adb占用问题
+#### 4.1.3 ADB occupancy problem
 
-如果你找不到被谁占用，则还可以使用如下方式检测，寻找幕后黑手：
+If you can't find who is occupied, you can also use the following methods to detect and find the  behind the scenes:
 1. 打开命令行窗口
 2. 确认adb的启动进程：
   寻找端口是`5037`的`tcp连接`，在命令行中输入：`netstat -ano | findstr 5037`
