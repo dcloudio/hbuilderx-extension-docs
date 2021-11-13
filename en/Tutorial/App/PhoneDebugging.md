@@ -96,29 +96,31 @@ If the phone connection does not respond or prompts a driver problem, you can so
 
 #### 4.1.3 ADB occupancy problem
 
-If you can't find who is occupied, you can also use the following methods to detect and find the  behind the scenes:
-1. 打开命令行窗口
-2. 确认adb的启动进程：
-  寻找端口是`5037`的`tcp连接`，在命令行中输入：`netstat -ano | findstr 5037`
+If you can't find who is occupied, you can also use the following methods to detect and find the problem:
+1. Open Terminals
+2. Confirm the startup process of adb:
+Find the `tcp connection` whose port is `5037`, and enter in the command line: `netstat -ano | findstr 5037`
+    
+Find a line similar to the following in the output:
   
-  在输出结果中找到类似下面的一行：
   TCP    127.0.0.1:5037         0.0.0.0:0              **LISTENING**       **5816**
-  *如果内容为空，可能是没有程序在占用adb端口。*
+  *If the content is empty, there may be no program occupying the adb port.*
   
-  或者使用 netstat -ano | findstr 5037>d:/1.txt 输出到文件中查找。
-  根据查询结果确认端口为5037的连接被那个进程占用，结果中显示的“5816”表示占用adb端口的进程PID。
+  Or use netstat -ano | findstr 5037>d:/1.txt to output to the file for search.
+  According to the query result, it is confirmed that the connection with port 5037 is occupied by that process. The “5816” displayed in the result indicates the PID of the process occupying the adb port.
 
-3. 根据进程的PID可以找到具体进程。
+3. The specific process can be found according to the PID of the process.
 
-  在命令行中输入：`tasklist | findstr 5816`
-  在输出结果中找到类似下面的一行：
+  
+Enter in the command line：`tasklist | findstr 5816`
+  Find a line similar to the following in the output:
   ```shell
   adb.exe                     5816 Console                 0      4,440 K
   ```
-  adb.exe（名称一般不是adb.exe，以adb.exe举例）为启动的adb进程。
-  或者手工在任务管理器中定位这个进程，打开任务管理器后，进入进程选项卡，如果列表里有PID，直接找；如果列表里没有PID，点菜单查看-选择列，勾上PID。
+  adb.exe（The name is generally not adb.exe, take adb.exe for example) as the started adb process。
+  Or manually locate the process in the task manager, after opening the task manager, enter the process tab, if there is PID in the list, find it directly; if there is no PID in the list, click the menu to view-select column, and tick PID.
 
-#### 4.1.4 其它问题
+#### 4.1.4 Other questions
 
 如果以上方式仍然不行，还有一种可能是手机对adb的版本有特定要求（遇到一些魅族手机有此问题），此时需要更换HBuilder的adb版本。
 - HBuilder安装目录下带了多个版本的adb。
