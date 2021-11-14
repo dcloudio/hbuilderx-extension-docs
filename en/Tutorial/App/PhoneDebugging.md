@@ -6,7 +6,7 @@
 
 **Note**：
 - `You need to upgrade to HBuilderX 2.2.5+ or higher if you want to run on iOS13 device.`
-- Itunes `12.10.9.3` connected to `ios 14+` iphone phones, there may be problems; please download the version before 12.9.4.102
+- Itunes `12.10.9.3` connected to `ios 14+` iphone phones, there may be problems; please download the version before 12.9.4.102.
 - Some Android 11 mobile phones fail to sync files on real devices. HBuilderX 3.1.19 has solved this problem. Please upgrade HBuilderX to 3.1.19+.
 
 We need to analyze where the problem is. The program will perform the following steps after click the real device to run:
@@ -22,13 +22,13 @@ We need to analyze where the problem is. The program will perform the following 
 
 Below is a list of various common FAQs which you can check at any time during future use.
 
-## 1. No menu running to the phone
+## 1. No menu "Run on real device"
 ---
-> The real machine can only run the App project, select the App project or focus on the file editor of the App project to be run.
+> The real device can only run the App project, select the App project or focus on the file editor of the App project to be run.
 
 HBuilderX supports web projects and app projects. There is an icon in front of the project. W stands for web project and A stands for App project. Only the `App project can run`.
 
-HBuilderX supports more project types, only `uni-app`, `5+app`, and `wap2app` can run on real machine. They will all have a `manifest.json` file in the project root directory (uni-cli projects will have manifest.json in the src directory).
+HBuilderX supports more project types, only `uni-app`, `5+app`, and `wap2app` can run on real device. They will all have a `manifest.json` file in the project root directory (uni-cli projects will have manifest.json in the src directory).
 
 ## 2. Check phone settings
 ---
@@ -44,7 +44,7 @@ Note：To connect Windows OS to an Android phone, make sure that the computer ha
 ---
 The troubleshooting methods are listed separately for Android and iOS phones:
 
-### 3.1 Mac: iOS real machine
+### 3.1 Mac: iOS real device
 
 1. Confirm that the phone is connected to the computer via the data cable;
 2. Confirm that iTunes can connect to the phone normally;
@@ -122,43 +122,50 @@ Enter in the command line：`tasklist | findstr 5816`
 
 #### 4.1.4 Other questions
 
-如果以上方式仍然不行，还有一种可能是手机对adb的版本有特定要求（遇到一些魅族手机有此问题），此时需要更换HBuilder的adb版本。
-- HBuilder安装目录下带了多个版本的adb。
-- HBuilder的adb目录位置：tools/adbs目录（MAC下为HBuilder.app/Contents/tools/adbs目录）
-- HBuilderX的adb目录位置：plugins/launcher/tools/adbs目录（MAC下为`/Applications/HBuilderX-Alpha.app/Contents/HBuilderX/plugins/launcher/tools/adbs`目录）
-替换版本前，将默认版本的adb.exe备份下。然后把1.0.31版的adb.exe拷贝出来替换主目录下的exe。
+If the above methods still does not work, there is another possibility that the phone has specific requirements for the adb version (some meizu phones have this problem), and you have to change the adb of HBuilderX.
+- There are multiple adb versions in installation directory of HBuilderX.
+- Adb directory path of HBuilder: tools/adbs (Mac: HBuilder.app/Contents/tools/adbs)
+- Adb directory path of HBuilderX: plugins/launcher/tools/adbs (Mac: `/Applications/HBuilderX-Alpha.app/Contents/HBuilderX/plugins/launcher/tools/adbs`)
+Please backup adb.exe of default version before replace it. Then copy adb.exe of version 1.0.31 to replace exe file in the main directory.
 
-### 4.2 Windows: 连接iOS手机
+### 4.2 Windows: Connect iOS Phone
 
-1. 确认手机已通过数据线连接电脑
-2. 确认已安装iTunes，若未安装点击[itunes历史版本下载地址](https://mydown.yesky.com/pcsoft/33491427/versions/), 请下载12.9.4.102之前的版本
-3. 确认iTunes能正常连接手机
-4. 如手机屏幕弹出需信任本计算机的询问，请同意该授权
-5. 如果是第一次安装完itunes，建议重新启动HBuilderX
-6. 如果以上方案都无法解决，有可能是因为本地库与iTunes带的库冲突了，一般是iTunes库目录（32位系统目录为：C:\Program Files\Common Files\Apple\Apple Application Support，64位系统目录为：C:\Program Files (x86)\Common Files\Apple\Apple Application Support）下的dll文件和系统库目录（32位系统目录为：C:\WINDOWS\system32，64位系统目录为：C:\Windows\SysWOW64）下的dll重名，可将iTunes库目录下的同名dll文件拷贝到系统库目录下，或者将系统目录下的同名dll文件重命名或删除，然后再重启HBuilder或者重试真机运行
-7. 有可能是iTunes安装时依赖库丢失，尝试重装iTunes解决问题 
-8. iTools提供了一个修复驱动的工具和教程，可以参考[http://bbs.itools.cn/thread-129390-1-1.html](http://bbs.itools.cn/thread-129390-1-1.html)
+1. Confirm that the phone is connected to the computer via the cable.
+2. Confirm that iTunes is installed, if not, click[Itunes historical version download](https://mydown.yesky.com/pcsoft/33491427/versions/), Please download the version before 12.9.4.102.
+3. Confirm that iTunes can connect with the phone.
+4. If a request popup about trust this computer, please agree to the authorization.
+5. If it is the first time to install itunes, it is recommended to restart HBuilderX.
+6. If none of the above solutions can be solved, it may be because the local library conflicts with the library brought by iTunes. Usually the dll file of the iTunes library directory has same name with the dll file of system library. You can copy the dll file with the same name in the iTunes library directory to the system library directory, or rename or delete the dll file with the same name in the system directory, and then restart HBuilder or retry on the real device.
+(
+32-bit system - iTune direcotry path: C:\Program Files\Common Files\Apple\Apple Application Support; 
+32-bit system - System library directory path: C:\WINDOWS\system32;
+64-bit system - iTune direcotry path: C:\Program Files (x86)\Common Files\Apple\Apple Application Support; 
+64-bit system - System library directory path: C:\WINDOWS\SysWOW64;
+)
+11. It is possible that the dependent library was lost when iTunes was installed. Try to reinstall iTunes to solve the problem. 
+12. iTools provides a tool and tutorial to repair the driver, you can refer to [http://bbs.itools.cn/thread-129390-1-1.html](http://bbs.itools.cn/thread-129390-1-1.html)
 
-**注意1：**
+**Note 1：**
 
-itunes `12.10.9.3`版本，连接`ios 14+`的iphone手机，可能存在问题。
+There is a problem when linking itunes `12.10.9.3` to `ios 14+` iphone.
 
-如无法连接，请下载itunes历史版本。 [itunes历史版本下载地址](https://mydown.yesky.com/pcsoft/33491427/versions/)
+If you can't connect, please download the historical version of itunes. [
+Itunes historical version download] (https://mydown.yesky.com/pcsoft/33491427/versions/)
 
 
-**注意2：**
+**Note 2：**
 
-iTunes12.1起更改了接口，会造成无法连接：
-  ①、HBuilderX菜单：工具 - 插件安装，打开插件安装界面，选择【iOS连接插件】（HBuilderX叫做真机运行插件）并安装，安装完并重启HBuilderX，尝试是否解决；
-  ②、安装最新版本的iTools，重启HBuilderX。
+Since iTunes 12.1, the interface has been changed, which will cause the connection to be unavailable：
+  ①、HBuilderX menu：[Tools] - [Plug-in Installation]，Open the "Plugin Install" window, select [iOS connection plugin] (HBuilderX is called the real device running plugin) and install it. After installation, restart HBuilderX, and try to solve it;
+  ②、Install the latest version of iTools and restart HBuilderX.
 
-## 5. 其它问题
+## 5. Other questions
 ---
-#### Q1: 能检测到手机，但处于置灰状态无法点击
+#### Q1: The phone can be detected, but it is grayed out (disabled) and cannot be clicked
 
-发生此情况一般为检测到手机后，中间因为其他软件连接断开了，需要重新插拔手机或重启HBuilderX。
+This situation usually occurs after the mobile phone is detected, and the connection to other software is disconnected in the middle, and the mobile phone needs to be plugged in or unplugged or HBuilderX restarted.
 
-#### Q2: 能检测到手机，但点HBuilder的真机运行，安装调试基座失败
+#### Q2: The mobile phone can be detected, but the installation and debugging of the base fails when the HBuilder is running on the real machine
 
 1. 部分Android rom如小米有usb安装apk的权限，可能是关闭状态，此时需要在手机管家等设置里寻找usb安装apk的权限，将其打开。
 2. 部分Android手机在usb安装apk时，会在手机界面上弹框，如果不能及时点弹框，会因为超时而安装失败。请注意手机屏幕的显示。
