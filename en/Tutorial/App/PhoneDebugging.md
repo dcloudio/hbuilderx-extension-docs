@@ -165,30 +165,31 @@ Since iTunes 12.1, the interface has been changed, which will cause the connecti
 
 This situation usually occurs after the mobile phone is detected, and the connection to other software is disconnected in the middle, and the mobile phone needs to be plugged in or unplugged or HBuilderX restarted.
 
-#### Q2: The mobile phone can be detected, but the installation and debugging of the base fails when the HBuilder is running on the real machine
+#### Q2: The mobile phone can be detected, but the installation and debugging fails when the HBuilder is running on the real device.
 
-1. 部分Android rom如小米有usb安装apk的权限，可能是关闭状态，此时需要在手机管家等设置里寻找usb安装apk的权限，将其打开。
-2. 部分Android手机在usb安装apk时，会在手机界面上弹框，如果不能及时点弹框，会因为超时而安装失败。请注意手机屏幕的显示。
-   当HBuilder控制台提示`“安装HBuilder基座App失败，请使用手机助手手动安装xxx\android_base.apk。”`时，基本都属于这种情况。
-3. iOS版本偶发也会报错。同样需要根据提示手动安装iPhone_base.ipa。安装方式推荐itools，没有itools使用itunes也可以。
-安装完毕后，会在手机上有一个HBuilder的应用。
-以后再点真机运行，就可以把项目部署到手机上，然后手动点击HBuilder应用，就能看到项目的结果。
+1. Some Android roms such as Xiaomi have the permission to install apk by usb, which may be closed. You have to find the permission to install apk by usb in the settings of the phone manager, and then turn it on.
 
-#### Q3: HBuilder控制台不输出日志问题的解决办法
+2. When some Android phones install apk on usb, they will pop up warning message on the phone. The installation will fail due to timeout if you can not click it. Please pay attention to the display on the phone screen. The case is when the HBuilder console prompts `"Failed to install the HBuilder Base App, please manually install xxx\android_base.apk with mobile assistant."`.
+   
+3. The iOS will occasionally report an error. You need to manually install iPhone_base.ipa according to the prompts. The installation method recommends itools, and you can use itunes without itools. After installation, there will be a HBuilder application on the phone. 
 
-参考[http://ask.dcloud.net.cn/article/1336](http://ask.dcloud.net.cn/article/1336)
+Then the project will be deployed to mobile phone after you click "run on real device". Then click HBuilder application manually, you will see the results of the project.
 
-#### Q4: Android手机真机运行提示应用安装成功，但是其实手机上并没有HBuilder应用
+#### Q3: Solution to the problem that the HBuilder console does not output logs
 
-1. 确认USB调试模式是否打开。如果未打开，请打开USB调试模式重新运行真机调试。
-2. 如果HBuilder已经检测到手机，可能存在与手机助手冲突的情况，请关闭所有的手机助手重新运行真机调试。 
-3. 利用手机助手手动安装android_base.apk到手机上，然后重新运行真机调试。
+Refer to [http://ask.dcloud.net.cn/article/1336](http://ask.dcloud.net.cn/article/1336)
 
-#### Q5: Android真机联调报文件操作Permission denied
+#### Q4: The Android phone prompts the application has been installed successfully, but there is no HBuilder application on the phone.
 
-请尝试以下方法解决：
-1. 拔出数据线
-2. 重新`打开USB调试模式`
+1. Confirm whether the USB debugging mode is turned on. If it is not turned on, please turn on the USB debugging mode to re-run the real device debugging.
+2. If HBuilder has detected the mobile phone, there may be a conflict with the mobile assistant. Please close all mobile assistants and run the real-device debugging again. 
+3. Use the phone assistant to manually install android_base.apk on the phone, and then re-run the real device debugging.
+
+#### Q5: Android real device joint debugging report file operation Permission denied
+
+Please try the following methods：
+1. Unplug the cable
+2. Reopen`the USB debugging mode`
 3. 重新插上数据线，此时手机上可能需要授权确认，点击确认
 4. 重新运行真机调试看看是否还有问题
 5. 重启手机，再重新运行真机调试，看看问题是否解决
