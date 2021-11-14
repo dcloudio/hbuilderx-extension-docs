@@ -185,67 +185,64 @@ Refer to [http://ask.dcloud.net.cn/article/1336](http://ask.dcloud.net.cn/articl
 2. If HBuilder has detected the mobile phone, there may be a conflict with the mobile assistant. Please close all mobile assistants and run the real-device debugging again. 
 3. Use the phone assistant to manually install android_base.apk on the phone, and then re-run the real device debugging.
 
-#### Q5: Android real device joint debugging report file operation Permission denied
+#### Q5: Android real device debugging report file operation Permission denied
 
 Please try the following methods：
-1. Unplug the cable
-2. Reopen`the USB debugging mode`
-3. 重新插上数据线，此时手机上可能需要授权确认，点击确认
-4. 重新运行真机调试看看是否还有问题
-5. 重启手机，再重新运行真机调试，看看问题是否解决
-6. 如果还有问题，重新启动HBuilder，重复1-4步骤，再重新运行真机调试，看看问题是否解决
-7. 如果问题仍然没有解决，则重新安装手机驱动：
-   1）我的电脑---右键--属性--硬件---设备管理器--删除USB驱动
-   2）打开手机助手重新安装驱动; 此时手机上可能需要授权确认，点击确认，然后再重新运行真机调试
-8. 如果以上方案均无法解决，则有可能是手机root的时候，把sdcard目录的权限搞错了，导致无法真机运行，此时可以恢复出厂设置，或者重新root，或者刷机解决此问题
+1. Unplug the cable.
+2. Reopen`the USB debugging mode`.
+3. Plug in the cable again. Authorization confirmation may be required on the phone, please click confirm.
+4. Re-run the real device debugging to see if there are still problems.
+5. Restart the phone, and then re-run the real device debugging to see if the problem is solved/
+6. If the problem still exist, restart HBuilder and repeat steps 1-4, and then re-run the real device debugging to see if the problem is solved.
+7. If the problem is still exist, reinstall the phone driver:
+   1）My Computer --- Right-click --Properties -- Hardware --- Device Manager -- Delete USB Driver.
+   2）Open the mobile assistant to reinstall the driver; Authorization confirmation may be required on the mobile phone, click confirm, and then re-run the real device debugging.
+8. If none of the above solutions can be solved, it is possible that the permissions of the sdcard directory are mistaken, which makes it impossible to run on the real device. You can restore the factory settings, or re-root, or flash the device to solve this problem.
 
-#### Q6: Android真机联调报：open '/dev/hwlog_switch' fail -1, 13. Permission denied
+#### Q6: Android real device debugging：open '/dev/hwlog_switch' fail -1, 13. Permission denied
 
-请尝试以下方法解决：
+Please try the following methods:
 
-1. 参考 [http://ask.dcloud.net.cn/article/1336](http://ask.dcloud.net.cn/article/1336)
-2. 拔插数据线重试
-3. 重新打开USB调试模式重试
-4. 重启手机重试
-5. 重新启动HBuilder重试
-6. 如果以上方案均无法解决，则有可能是手机root的时候，把sdcard目录的权限搞错了，导致无法真机运行，此时可以恢复出厂设置，或者重新root，或者刷机解决此问题
-
-
-#### Q7: 为什么Android手机没有SDCard就不能真机调试？
-
-Android没有root的手机只有SDCard才有权限。不过此SDCard并不是非得外插一张实体sd卡，是手机里一个叫SDCard的根目录。
-如果是使用Android模拟器，在模拟器里可以配置SDCard是否存在及大小。
-此情况已过期，目前正常手机都有SDCard目录。
-
-#### Q8: 控制台显示手机应用已启动，但手机屏幕上没有出现？
-
-Android手机第一次安装基座应用时，手机端大多有各种杀毒软件要检测一会才会放行，需要等一会。
-
-#### Q9: 5+App运行后手机端一直在启动画面停留，不停转圈不能进入
-
-这是应用的js代码的问题，启动画面的关闭是可配置的。参考 [http://ask.dcloud.net.cn/article/110](http://ask.dcloud.net.cn/article/110)
+1. Refer to [http://ask.dcloud.net.cn/article/1336](http://ask.dcloud.net.cn/article/1336)
+2. Unplug and retry the cable
+3. Re-open the USB debugging mode and try again
+4. Restart mobile phone
+5. Restart HBuilder
+6. If none of the above solutions can be solved, it is possible that the permissions of the sdcard directory are mistaken, which makes it impossible to run on the real device. You can restore the factory settings, or re-root, or flash the device to solve this problem.
 
 
-#### Q10: 为什么我电脑没有插iphone，但HBuilder检测到iOS设备？
+#### Q7: Why can't it be debugged on the Android phone without SDCard?
 
-iTunes支持wifi同步，如果iOS设备启动了wifi同步，电脑端的iTunes就可以检测到，进而HBuilder也可以检测到。
+Android phones do not have root permissions, only SDCard access permissions. However, this SDCard does not have to be an external physical SD card, it is a root directory called SDCard in the phone. If you are using the Android emulator, you can configure the existence and size of the SDCard in the emulator. At present, normal android phones have SDCard directories.
 
-#### Q11: 真机运行成功启动，但手机端软件启动后显示的不是正在运行的项目。
+#### Q8: The console shows that the mobile application is activated, but does not appear on the phone screen?
 
-这种情况是adb连接手机成功，但copy项目文件到手机上失败了。重新运行真机调试。
-或者检查待运行工程的目录名文件名是不是有特殊符号或超长导致Android不识别。
+When HBuilder is installed on an Android phone for the first time, most of the anti-virus software on the phone side will not be released until it is tested for a while, and it will take a while.
 
-#### Q12: 真机运行启动后显示HBuilder真机运行（log）界面 {#synchronous}
+#### Q9: After the 5+App is running, the mobile phone has been stuck on the startup screen
 
-1. 重新运行真机调试尝试解决问题
-2. Android设备可能存在与手机助手冲突的情况，请关闭所有的手机助手重新运行真机调试
-3. 如果步骤2无法解决，请更换别的手机助手，重新运行真机调试尝试解决问题
-4. 确认手机上HBuilder应用安装位置，如果手机上有外置sdcard，不要把HBuilder基座App安装在外置sdcard上，如果是安装在外置sdcard上，卸载外置sdcard上的HBuilder基座App，并在设置中将应用的默认安装位置不要设置为外置的sdcard上，或者将应用转移至手机内存或内置sdcard上，并重新运行真机调试
+This is js code issue of the application, and the closing of the startup screen is configurable. Refer to [http://ask.dcloud.net.cn/article/110](http://ask.dcloud.net.cn/article/110)
 
-#### Q13: 使用genymotion模拟器真机运行，安装apk时报INSTALL_FAILED_CPU_ABI_INCOMPATIBLE
 
-参见[genymotion模拟器报INSTALL_FAILED_CPU_ABI_INCOMPATIBLE的解决办法](http://blog.csdn.net/wjr2012/article/details/16359113)
-其他模拟器的适配在论坛中搜索即可。
+#### Q10: Why is there no iphone in my computer, but HBuilder detects the iOS device
+
+iTunes supports wifi synchronization. If the iOS device starts wifi synchronization, it can be detected by iTunes on the computer, and HBuilder can also detect it.
+
+#### Q11: The app is successfully started on mobile phone, but the running app is not selected app.
+
+In these cases, adb successfully connected to the phone, but failed to copy the project file to the phone. Re-run the real machine debugging. Or check whether the directory name and file name of the project to be run has special symbols or is too long to cause Android to not recognize it.
+
+#### Q12: After the real device is started, the screen is displaying log information {#synchronous}
+
+1. Re-run the real device debugging to try to solve the problem.
+2. There may be conflicts between Android devices and mobile assistants. Please close all mobile assistants and re-run the real device debugging.
+3. If step 2 cannot be solved, please change to another mobile assistant and re-run the real device debugging to try to solve the problem.
+4. Confirm the installation location of the HBuilder application on the phone. Do not install the HBuilder App on the external sdcard. If HBuilder application has been installed on external sdcard and uninstall it, then change the default installation position. Or install application to memory-card or built-in sdcard, then re-run the real device debugging.
+
+#### Q13: Use genymotion emulator to debug, install apk and get error: INSTALL_FAILED_CPU_ABI_INCOMPATIBLE
+
+Refer to [genymotion emulator apk error solution - INSTALL_FAILED_CPU_ABI_INCOMPATIBLE](http://blog.csdn.net/wjr2012/article/details/16359113)
+The adaptation of other simulators can be searched in the forum.
 
 #### Q14: 如何通过wifi真机运行，不插数据线？
 
