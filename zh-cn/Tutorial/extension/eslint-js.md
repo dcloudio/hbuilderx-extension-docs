@@ -113,14 +113,14 @@ module.exports = {
 
 ## 示例：vue-cli项目
 
-vue-cli项目，如果使用项目下的配置规则，需要安装相关库、并在项目根目录创建`.eslintrc.js`文件
+vue-cli项目，如果使用项目下的配置规则，需要安装`相关库`、并在项目根目录创建`.eslintrc.js`文件
 
 备注：
 1. 注意：项目下`eslint规则`会覆盖HBuilderX编辑器`eslint插件中的规则`
 2. 校验vue语法，需要安装`eslint-vue`插件，[插件地址](https://ext.dcloud.net.cn/plugin?id=2005)
 
 ```shell
-npm install --save eslint eslint-plugin-vue eslint-plugin-html eslint-config-standard eslint-plugin-import eslint-plugin-node eslint-plugin-promise eslint-plugin-standard
+npm install --save eslint eslint-plugin-vue eslint-plugin-html eslint-config-standard eslint-plugin-import eslint-plugin-node eslint-plugin-promise eslint-plugin-standard babel-eslint
 ```
 
 
