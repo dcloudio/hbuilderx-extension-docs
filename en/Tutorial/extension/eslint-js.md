@@ -122,7 +122,7 @@ Note:
 2. You have to install `eslint-vue` plugin, [plugin address](https://ext.dcloud.net.cn/plugin?id=2005) to verify vue syntax.
 
 ```shell
-npm install --save eslint eslint-plugin-vue eslint-plugin-html eslint-config-standard eslint-plugin-import eslint-plugin-node eslint-plugin-promise eslint-plugin-standard
+npm install --save eslint eslint-plugin-vue eslint-plugin-html eslint-config-standard eslint-plugin-import eslint-plugin-node eslint-plugin-promise eslint-plugin-standard babel-eslint
 ```
 
 
