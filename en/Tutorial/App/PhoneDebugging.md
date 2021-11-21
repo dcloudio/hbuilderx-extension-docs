@@ -32,30 +32,29 @@ HBuilderX supports more project types, only `uni-app`, `5+app`, and `wap2app` ca
 
 ## 2. Check phone settings
 ---
-Note：To connect Windows OS to an Android phone, make sure that the computer has installed the corresponding phone driver.
+Note：To connect Windows OS to an android phone, make sure that the computer has installed the related phone driver.
 
-1. Ensure that the data line or usb port is normal, and you can replace it with a different line or port to verify.
-2. Make sure that the `USB debugging` mode is turned on in the Android phone settings. This setting is generally in [Settings] [Developer Options]. Some mobile phones can also be set in the push notification bar after plugging in the data cable. Note that it cannot be set to USB flash drive mode. If it is charging mode, you must also set the `allow usb debugging` when charging.
-3. If a request to trust this computer pops up on the phone screen, please `Agree to this authorization`. And it is best to check the Always agree to debug the device. If you accidentally refuse, you need to replug the phone or restart the computer.
+1. Ensure that the data line or usb port is working properly, and you can replace it with a different line or port to verify.
+2. Make sure that the `USB debugging` mode is turned on in the android phone settings. This setting is generally in [Settings] [Developer Options]. Some mobile phones can also be set in the push notification bar after plugging in the data cable. Note that it cannot be set to USB flash drive mode. If it is charging mode, you must also set the `allow usb debugging` when charging.
+3. If a request to trust this computer pops up on the phone screen, please `Agree to this authorization`. And it is best to check the always agree to debug the device. If you accidentally refuse, you need to replug the phone or restart the computer.
 4. Android5.0 and above systems, do not use guest mode. It cannot run successfully in this mode.
-5. a Some mobile phones, such as Xiaomi, have the permission to install applications via usb, and need to allow the installation of applications via usb on the mobile phone. The interface of different roms is different, please open the way to install the application by using the usb on your mobile phone on Baidu.
+5. Some mobile phones, such as Xiaomi, have the permission to install applications via usb, and need to allow the installation of applications via usb on the mobile phone. The interface of different roms is different, please find the way to install the application by using the usb on your mobile phone.
 
-## 3. Mac Mac connection to mobile phone/emulator instructions
+## 3. Mac connection to mobile phone/emulator instructions
 ---
 The troubleshooting methods are listed separately for Android and iOS phones:
 
 ### 3.1 Mac: iOS real device
 
 1. Confirm that the phone is connected to the computer via the data cable;
-2. Confirm that iTunes can connect to the phone normally;
+2. Confirm that iTunes can connect to the phone properly;
 3. If a request to trust this computer pops up on the phone screen, please agree to the authorizations;
 
 ### 3.2 Mac: iOS simulator
 
-1. Xcode must be installed in the application (Application);
-2. Confirm that Xcode (version must be 6.0 and above) has been installed and can start the simulator normally
+1. Xcode must be installed in the application (Application).
+2. Confirm that Xcode (version must be 6.0 and above) has been installed and can start the simulator properly.
 3. If it still cannot be detected, open Xcode, then open Xcode's `Preferences --> Locations`, set the `Command Line Tools` item in this interface, and select the correct `Xcode` version..
-
 
 
 <img src="/static/snapshots/tutorial/ios_simulator.png" />
@@ -81,14 +80,14 @@ The troubleshooting methods are listed separately for Android and iOS phones:
 
 If the phone connection does not respond or prompts a driver problem, you can solve it in the following ways:
   1. Install `Driver Wizard` programs, install drivers through them
-  2. The better way to install the driver is to use various mobile assistants, such as `360, Tencent's various mobile assistants`, if there is a problem, try to upgrade the version of the assistant.
+  2. The better way to install the driver is to use mobile assistants, such as `360, Tencent's mobile assistants`, if there is a problem, try to upgrade the version of the assistant.
 
 #### 4.1.2 Other Problems：
   1. If you install the driver after starting HBuilderX and connect to the phone, you may need to restart HBuilderX.
-  2. Run HBuilder with administrator privileges.
-  3. Close the WebView debugging mode, restart HBuilderX and try again.
+  2. Run HBuilder with administrator role.
+  3. Close the Webview debugging mode, restart HBuilderX and try again.
   4. If other software can connect to the phone, but HBuilderX cannot detect the phone, it may be that other software monopolizes Google's ADB service channel.
-  5. Android's `ADB service` has been abused by a large number of software. In addition to various mobile phone assistants that come with adb, other software such as QQ, Sogou input method, Baofengyingyin, Kugou music, Ali Wangwang and many other software have their own `adb`. Some tools have a low version of `adb` and monopolize the phone channel, which will cause HBuilderX to fail to connect to the phone.
+  5. Android's `ADB service` has been abused by a large number of software. In addition to mobile phone assistants that come with adb, other software such as QQ, Sogou input method, Baofengyingyin, Kugou music, Ali Wangwang and many other software have their own `adb`. Some tools have a low version of `adb` and monopolize the phone channel, which will cause HBuilderX to fail to connect to the phone.
   6. Find the `adb.exe` related process (including `kadb.exe`, etc.) in the task manager, complete the process in the task management, open the file location, and check what software started the process.
   7. It is forbidden for these software to monitor the phone plug-in (usually in the software's settings), and forbid automatic startup.
   8. Some software will automatically start after finishing the adb process, so you have to rename the `adb.exe` file, it is impossible to uninstall these rogue software.
@@ -123,7 +122,7 @@ Enter in the command line：`tasklist | findstr 5816`
 #### 4.1.4 Other questions
 
 If the above methods still does not work, there is another possibility that the phone has specific requirements for the adb version (some meizu phones have this problem), and you have to change the adb of HBuilderX.
-- There are multiple adb versions in installation directory of HBuilderX.
+- There are multiple adb versions in directory of HBuilderX.
 - Adb directory path of HBuilder: tools/adbs (Mac: HBuilder.app/Contents/tools/adbs)
 - Adb directory path of HBuilderX: plugins/launcher/tools/adbs (Mac: `/Applications/HBuilderX-Alpha.app/Contents/HBuilderX/plugins/launcher/tools/adbs`)
 Please backup adb.exe of default version before replace it. Then copy adb.exe of version 1.0.31 to replace exe file in the main directory.
@@ -185,14 +184,14 @@ Refer to [http://ask.dcloud.net.cn/article/1336](http://ask.dcloud.net.cn/articl
 2. If HBuilder has detected the mobile phone, there may be a conflict with the mobile assistant. Please close all mobile assistants and run the real-device debugging again. 
 3. Use the phone assistant to manually install android_base.apk on the phone, and then re-run the real device debugging.
 
-#### Q5: Android real device debugging report file operation Permission denied
+#### Q5: Android real device debugging and report file operation "Permission denied"
 
 Please try the following methods：
 1. Unplug the cable.
 2. Reopen`the USB debugging mode`.
 3. Plug in the cable again. Authorization confirmation may be required on the phone, please click confirm.
 4. Re-run the real device debugging to see if there are still problems.
-5. Restart the phone, and then re-run the real device debugging to see if the problem is solved/
+5. Restart the phone, and then re-run the real device debugging to see if the problem is solved.
 6. If the problem still exist, restart HBuilder and repeat steps 1-4, and then re-run the real device debugging to see if the problem is solved.
 7. If the problem is still exist, reinstall the phone driver:
    1）My Computer --- Right-click --Properties -- Hardware --- Device Manager -- Delete USB Driver.
@@ -244,9 +243,9 @@ In these cases, adb successfully connected to the phone, but failed to copy the 
 Refer to [genymotion emulator apk error solution - INSTALL_FAILED_CPU_ABI_INCOMPATIBLE](http://blog.csdn.net/wjr2012/article/details/16359113)
 The adaptation of other simulators can be searched in the forum.
 
-#### Q14: 如何通过wifi真机运行，不插数据线？
+#### Q14: How to run through wifi without data cable?
 
-参考[http://ask.dcloud.net.cn/article/565](http://ask.dcloud.net.cn/article/565)
+Refer to [http://ask.dcloud.net.cn/article/565](http://ask.dcloud.net.cn/article/565)
 
 
 
