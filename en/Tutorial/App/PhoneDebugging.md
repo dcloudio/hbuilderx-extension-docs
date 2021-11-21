@@ -1,12 +1,12 @@
 ## Foreword
 
-> First, make sure that `iTunes` or `Android Phone Assistant` (such as 360 Phone Assistant) can connect to the phone normally.
+> First, make sure that `iTunes` or `Android Phone Assistant` (such as 360 Phone Assistant) can connect to the phone.
 
-> If you still have problems, please check whether the following problems are the same with your problem.
+> If you still have problems, please check whether the following problems are matching with your problems.
 
 **Note**：
 - `You need to upgrade to HBuilderX 2.2.5+ or higher if you want to run on iOS13 device.`
-- Itunes `12.10.9.3` connected to `ios 14+` iphone phones, there may be problems; please download the version before 12.9.4.102.
+- Itunes `12.10.9.3` connected to `ios 14+`; please download the version before 12.9.4.102.
 - Some Android 11 mobile phones fail to sync files on real devices. HBuilderX 3.1.19 has solved this problem. Please upgrade HBuilderX to 3.1.19+.
 
 We need to analyze where the problem is. The program will perform the following steps after click the real device to run:
@@ -15,18 +15,18 @@ We need to analyze where the problem is. The program will perform the following 
 
 2. HBuilderX detects mobile phones through adb or itunes services. It may not be detected due to mobile phone channels, usb connection settings, adb settings or adb conflicts, or itunes settings.
 
-3. HBuilderX installs and debugs the base to the mobile phone. The installation may fail because the mobile phone prohibits USB installation, the Android phone does not have an SD card, and the iOS phone does not have a trusted certificate.
+3. HBuilderX installs and debugs. The installation may fail because the mobile phone prohibits USB installation, the Android phone does not have an SD card, and the iOS phone does not have a trusted certificate.
 
 4. HBuilderX sync the code in the IDE to the mobile phone and starts the debugging dock. This step is usually correct.
 
 
-Below is a list of various common FAQs which you can check at any time during future use.
+Below is a list of FAQs which you can check at any time during future use.
 
 ## 1. No menu "Run on real device"
 ---
-> The real device can only run the App project, select the App project or focus on the file editor of the App project to be run.
+> The real device can only run the app project, select the app project or focus on the file editor of the app project to be run.
 
-HBuilderX supports web projects and app projects. There is an icon in front of the project. W stands for web project and A stands for App project. Only the `App project can run`.
+HBuilderX supports web projects and app projects. There is an icon in front of the project. W stands for web project and A stands for app project. Only the `App project can run`.
 
 HBuilderX supports more project types, only `uni-app`, `5+app`, and `wap2app` can run on real device. They will all have a `manifest.json` file in the project root directory (uni-cli projects will have manifest.json in the src directory).
 
