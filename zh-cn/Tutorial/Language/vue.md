@@ -124,7 +124,9 @@ HBuilderX支持强大的vue doc，是vue组件开发者的利器，通过类jsdo
 
 ## 大纲
 
-选择视图菜单-显示文档结构图，或右键菜单里选择，即可在左侧出现大纲。点击左侧即可快读跳转右侧。
+- 编辑器顶部菜单 - 视图 -> 显示文档结构图。 
+- 编辑器文件 - 右键菜单 ->  显示文档结构图。
+- 编辑器底部状态栏，点击第一个图标。
 
 <img src="/static/snapshots/vue/outline.jpeg" style="zoom: 50%;border: 1px solid #eee;" />
 

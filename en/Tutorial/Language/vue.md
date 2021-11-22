@@ -113,13 +113,15 @@ HbuilderX provides shortcuts settings and whether to automatically trigger when 
 
 ## Outline
 
-Select View -show outline. Or right-click anywhere in script, select toggle outline.
+- Editor top menu - view -> Show Outline. 
+- Editor file, right-click menu -> Toggle Outline.
+- Editor bottom status bar, Click on the first icon. 
  
 Select any tag in outline will bring cursor to the corresponding section of the script.
 
-<img src="/static/snapshots/vue/outline_en.jpg" style="zoom: 40%;border: 1px solid #eee;border-radius: 20px;" />
+<img src="/static/snapshots/vue/outline_en.png" style="zoom: 40%;border: 1px solid #eee;border-radius: 20px;" />
 
-## Use Vue without Command Line
+## Easy to create and run Vue project
 
 If you don't like node development environment, this will not affect you drive into the vue programming.
 

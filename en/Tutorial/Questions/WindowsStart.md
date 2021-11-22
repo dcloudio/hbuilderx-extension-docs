@@ -57,7 +57,9 @@ How to setup `Desktop shortcut`:
 
 <img src="/static/snapshots/tutorial/windows_install/1.png" style="zoom:80%;border: 1px solid #eee;" />
 
-> Note: If above method does not solve your problem, please see the error in the [Event Viewer].[Event Viewer](/Tutorial/Question/WindowsStart.md)
+
+> Note: If above method does not solve your problem, please see the error in the [Event Viewer](#EventViewer)
+
 
 ### 1.3 Memory cannot be read
 
@@ -96,7 +98,8 @@ Solution: Check if `qt` is installed on your computer, please remove qt environm
 <img src="/static/snapshots/tutorial/windows_install/env.png" style="zoom: 80%;border: 1px solid #eee;"/>
 
 
-## 3. Troubleshoot issues with Event Viewer
+
+## 3. Troubleshoot issues with Event Viewer@EventViewer
 -------------------------------
 
 ### 3.1 Event viewer
