@@ -1,12 +1,12 @@
-# 内置浏览器开发者控制台空白问题
+# The developer console of the built-in browser is blank
 
-MacOSX，某些情况下，内置浏览器开发者控制台显示空白。
+On MacOSX, in some cases, the developer console of the built-in browser is blank.
 
-这是由于端口被占用造成的。
+This is caused by the port being occupied.
 
-### 解决方法
+### Solution
 
-打开终端，输入如下命令：
+Open the terminal and enter the following command:
 
 ```shell
 lsof -i:9777 | awk '{print $2}' | tail -n +2 | xargs kill -9

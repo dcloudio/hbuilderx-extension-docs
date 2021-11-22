@@ -1,51 +1,51 @@
-# Git重大更新
+# Git major update
 
-HBuilderX 3.1.23+ 支持在项目管理上对Git项目进行一些快捷操作。
+HBuilderX 3.1.23+ supports some quick operations on Git projects in project management.
 
-在Git项目名称后面显示该Git仓库的当前分支，样式如图所示：
+The current branch of the Git repository is displayed after the Git project name, and the style is as shown in the figure:
 
 <img src="/static/snapshots/tutorial/source_control/git_update/gitextension_branch.png" style="border:1px solid #eee; border-radius: 5px;"/>
 
-备注：在HBuilderX内，使用Git，需要先安装Git插件，Git插件调用的是`外部Git工具`，因此需要安装的Git命令行工具；同时windows也需要安装[TortoiseGit](https://tortoisegit.org/download/)。
+Note: In HBuilderX, to use Git, you need to install the Git plug-in first. The Git plug-in calls the `external Git command tool`, so you need to install the Git command line tool; at the same time, Windows also needs to install [TortoiseGit](https://tortoisegit.org/download/)。
 
-### Git快捷操作菜单
+### Git shortcut menu
 
-该标签可以点击，打开Git快捷操作菜单，在Git插件里“scm/file/branchlabel”扩展点配置了该菜单列表。该功能默认开启：
+The label can be clicked to open the Git shortcut operation menu, and the menu list is configured in the "scm/file/branchlabel" extension point in the Git plugin. This feature is turned on by default.
 
 <img src="/static/snapshots/tutorial/source_control/git_update/gitextension_branch_menu.png" style="border:1px solid #eee; border-radius: 5px;"/>
 
-同时，对旧版本的Git插件以下命令做了升级：
+At the same time, the following commands of the old version of the Git plugin have been upgraded:
 
-### 切换分支（checkout）
+### Switch change（checkout）
 
-点击“切换分支”菜单，弹出分支选择列表，选择本地分支或远程分支执行签出：
+Click the "Switch Branch" menu to pop up the branch selection list, select the local branch or the remote branch to checkout:
 
 <img src="/static/snapshots/tutorial/source_control/git_update/gitextension_checkout.png" style="border:1px solid #eee; border-radius: 5px;"/>
 
-执行签出时会在状态栏提示状态：
+The status will be displayed in the status bar when checking out:
 
 <img src="/static/snapshots/tutorial/source_control/git_update/gitextension_checkout_tips.png" style="border:1px solid #eee; border-radius: 5px;"/>
 
-### 获取（fetch）
+### Fetch
 
-点击“获取”菜单，在当前项目执行git fetch命令
+Click the "Fetch" menu and execute the git fetch command in the current project.
 
-### 拉取（pull）
+### Checkout
 
-点击“拉取”菜单，默认提供了几个拉取选项（目前不能自定义）：
+Click the "Switch Branch" menu to pop up the branch selection list, select the local branch or the remote branch to checkout:
 
 <img src="/static/snapshots/tutorial/source_control/git_update/gitextension_pull.png" style="border:1px solid #eee; border-radius: 5px;"/>
 
 ```
-# git pull和git pull --rebase的区别
+# the diff between git pull和git pull --rebase
 git pull = git fetch + git merge
 git pull --rebase = git fetch + git rebase
 ```
 
-### 推送（push）
+### Push
 
-点击“推送”菜单，默认提供了几个推送选项（目前不能自定义），当选择“force”选项是，会进行二次确认是否继续执行：
+Click the "Push" menu, several push options are provided by default (currently cannot be customized). When the "force" option is selected, a second confirmation will be made whether to continue execution:
 
 <img src="/static/snapshots/tutorial/source_control/git_update/gitextension_push.png" style="border:1px solid #eee; border-radius: 5px;"/>
 
-特别说明： `git push --force` 强制推送，会覆盖远端内容，请谨慎操作。
+Remark：`git push --force`: It means to push the current code library of your own computer to the remote server and overwrite it. Please use it with caution.

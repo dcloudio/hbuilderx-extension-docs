@@ -1,21 +1,21 @@
-# MacOSX Git
+# MacOSX Git Manual
 
-## Introduce
+## Summary
 
-In HBuilderX, to use Git, you need to install the Git plug-in first. 
+In HBuilderX, you have to install the Git plug-in before you can use Git. 
 
-HBuilderX Top menu, 【Tool】-> 【plug-in installation】. Open the plug-in installation window, Find Git, Click【Install】.
+HBuilderX Top menu, [Tool]-> [plug-in installation]. Open the plug-in installation window, Find Git, Click [Install].
 
 <img src="/static/snapshots/tutorial/source_control/plugin_macosx_en.png" style="zoom: 45%;border: 1px solid #eee;border-radius: 20px;"/>
 
-## clone and import
+## clone and import project
 
-- Top Menu, 【File】-> 【Import】-> 【Import From Git】
-- HBuilderX Project manager, Right click menu【Import】-> 【Import From Git】
+- Top Menu, [File]-> [Import]-> [Import From Git]
+- HBuilderX Project manager, Right click menu [Import]-> [Import From Git]
 
 <img src="/static/snapshots/tutorial/source_control/git_macosx_clone_en.jpg" style="zoom:40%;border: 1px solid #eee;" />
 
-## Operation menu
+## Git menu
 
 In the project manager, select the project and right-click the menu to see the git related operation menu.
 
@@ -23,58 +23,44 @@ In the project manager, select the project and right-click the menu to see the g
 
 ## Pull
 
-> git-pull - Fetch from and integrate with another repository or a local branch
-
-Project, right-click menu 【Git pull】
+> git-pull - In explorer, select a project and right-click mouse, then click [Git
+>  Pull] from menus.
 
 <img src="/static/snapshots/tutorial/source_control/git-new-pull-en.png" style="zoom:50%; border: 1px solid #eee;" />
 
 ## Push
 
-> git-push - Update remote refs along with associated objects
-
-Project, right-click menu 【Git Push】
+> git-push - In explorer, select a project and right-click mouse, then click [Git
+>  Push] from menus.
 
 <img src="/static/snapshots/tutorial/source_control/git-new-push-en.png" style="zoom:50%; border: 1px solid #eee;" />
 
-**备注**：git push --force: 表示将目前自己本机的代码库推送到远端，并覆盖。请谨慎使用。
+**Remark**：git push --force: It means to push the current code library of your own computer to the remote server and overwrite it. Please use it with caution.
 
 ## Commit
 
-> git-commit - Record changes to the repository
-
-1. On the file, directory, or project to be submitted, right-click the menu and click [commit]
-2. In the pop-up window, enter the `commit Message` and click the [Submit] button.
+1. Select the file or the directory or the project to be submitted, right-click the menu and click [Git Commit]
+2. In the pop-up window, enter the `commit message` and click the [Commit] button.
 
 <img src="/static/snapshots/tutorial/source_control/git_macosx_ac_en.jpg" style="zoom:40%; border: 1px solid #eee;" />
 
-## Show Log
+## View Log
 
-Selected Project，right-click menu 【Git】->【show log】
+Selected Project，right-click menu [Git]->[View Log]
 
 <img src="/static/snapshots/tutorial/source_control/git_macosx_log_en.png" style="zoom:45%; border: 1px solid #eee;border-radius: 20px;" />
 
-## Branch: Switch
-
-Selected Project, right-click menu【Git】-> 【Switch Branch-Checkout】
- 
-<img src="/static/snapshots/tutorial/source_control/git-switch-branch-en.png" style="zoom:45%; border: 1px solid #eee;" />
-
-## Branch: New
-
-- create branch：Selected Project, right-click menu【Git】-> 【Git New Branch】
+## Branch
+- New Branch: Selected Project, right-click menu【Git】-> 【Git New Branch】 
+- Switch Branch：Selected Project, right-click menu【Git】-> 【Git Switch Branch-Checkoutf】
+- Delete Branch：Selected Project, right-click menu【Git】-> 【Git Delete Branch】
+- Merge Bbranch：Selected Project, right-click menu【Git】-> 【Git Merge Branch】 
 
 <img src="/static/snapshots/tutorial/source_control/git_macosx_branch_en.jpg" style="zoom:60%; border: 1px solid #eee;border-radius: 20px;" />
 
-## Branch: Other operating
+## Shortcut Configuration
 
-
-- delete branch：Selected Project, right-click menu【Git】-> 【Git delete branch】
-- merge branch：Selected Project, right-click menu【Git】-> 【Git merge branch】 
-
-## Shortcut key configuration
-
-1. toop menu, 【tool】-->【custom keybindings】
+1. Top menu, 【Tool】-->【Custom Keybindings】
 2. All Git command configurations can be seen at the bottom of the left side of the document
 
 ```
@@ -90,7 +76,7 @@ Selected Project, right-click menu【Git】-> 【Switch Branch-Checkout】
 //git add File
 //{"key":"","command":"ExternalCommand:GIT_ADD"},
 
-//git Switch branch
+//git switch branch
 //{"key":"","command":"ExternalCommand:GIT_CHECKOUT_BRANCH"},
 
 //git status
@@ -119,7 +105,6 @@ xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools
 ```
 
 Solution, open the terminal and enter the following command:
-
 ```
 xcode-select --install
 ```

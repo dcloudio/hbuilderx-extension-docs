@@ -1,22 +1,22 @@
-# HBuilderX插件安装失败解决方案
+# HBuilderX plug-in installation failure solution
 
-插件安装失败，可能有各种各样的原因。当出现插件安装失败，又没有明确提示相关错误时，点击菜单【帮助】【查看运行日志】，看下日志中的错误。根据具体错误来解决问题
+There may be various reasons for the plug-in installation failure. When the plug-in installation fails and there is no any indication of errors, click the menu [Help] [View Running Logs] to check the error in the log. Then solve the problem by specific error details.
 
-## 问题：npm install执行失败
+## Question：npm installation failed
 ---
 
-某些nodejs插件，比如`less`、`eslint-js`插件，插件zip包没有自带node_modules。
+For some nodejs plugins, such as `less` and `eslint-js` plugins, the plugin zip package does not come with node_modules.
 
-从插件市场导入此类插件后，HBuilderX会自动安装node_modules，如果node_modules安装失败，会导致插件安装失败。
+After importing plug-ins from the plug-in market, HBuilderX will automatically install node_modules. If the node_modules installation fails, the plug-in installation will fail.
 
-#### 解决方案
+#### Solution
 
-以`less`插件为例：打开HBuilderX安装目录，进入`plugins/compile-less`目录，看下目录下是否存在`node_modules`。
+Take the `less` plugin as an example: open the HBuilderX installation directory，enter `plugins/compile-less` directory，check if there is `node_modules` in the directory。
 
-如果不存在，在终端打开此目录，手动执行`npm install`
+If it does not exist, open this directory in the terminal and manually execute `npm install`
 
 <img src="/static/snapshots/faq/npminstall.png" style="zoom:90%;" />
 
-**扩展**
+**Extension**
 
-什么是`npm`? npm是随同[NodeJS](https://nodejs.org/en/)一起安装的包管理工具。HBuilderX已内置`npm`和`node`工具，路径：HBuilderX安装目录，`plugins`目录下，就可以看到npm。
+What is `npm`? npm is a package management tool installed with [NodeJS](https://nodejs.org/en/). HBuilderX has built-in `npm` and `node` tools, path: HBuilderX installation directory, under the `plugins` directory, you can see npm.

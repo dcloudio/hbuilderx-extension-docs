@@ -1,6 +1,4 @@
-# Git Introduce
-
-## Introduce
+# About Git
 
 Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
 
@@ -15,63 +13,79 @@ Git GUI Client: [TortoiseGit（Windows）](https://tortoisegit.org/download/)
 #### Repository
 
 ```
-# Create an empty Git repository or reinitialize an existing one
+# Create a new Git repository
 $ git init
+
+# Initialize a Git repository for project
 $ git init [project-name]
 
-# Clone a repository into a new directory
+# Clone a repository into a directory
 $ git clone [url]
 ```
 
-#### Config
+#### Configuration
 
 ```
-# get git config list
+# Display git configuration of current repository 
 $ git config --list
 
-# edit git config file
+# Edit git configuration file
 $ git config -e [--global]
 
-# set git user.name and user.email
+# Set git user.name and user.email
 $ git config [--global] user.name "[name]"
 $ git config [--global] user.email "[email address]"
 ```
 
-#### add/rm File
+#### Add/Remove File
 
 ```
 #  Add file contents to the index
 $ git add [file1] [file2] ...
 
-#  Add Dir to the index
+# Add whole directory to the index
 $ git add [dir]
 
-# Add current Dir all Files to the index
+# Add all files of current directory to the index
 $ git add .
+
+# Before adding each change, it will ask for confirmation
+# For multiple changes of the same file, it can be submitted in stages
 $ git add -p
 
-# git rm file
+# Git will remove files from repository
 $ git rm [file1] [file2] ...
+
+# Git remove the file's contents from the index
 $ git rm --cached [file]
 
-# git rename file
+# Git move or rename file, a directory, or a symlink
 $ git mv [file-original] [file-renamed]
 ```
 
-#### commit
+#### Commit
 
 ```
 # Record changes to the repository
-
 $ git commit -m [message]
+
+# Record multiple files changes to the repository
 $ git commit [file1] [file2] ... -m [message]
+
+# Tell the command to automatically index files that have been modified and deleted, but new files you have not told Git about are not affected.
 $ git commit -a
+
+# Show unified diff between the HEAD and index file
 $ git commit -v
+
+# Replace the tip of the current branch by creating a new commit
 $ git commit --amend -m [message]
+
+# Redo last commit with selected files
 $ git commit --amend [file1] [file2] ...
 ```
 
-#### branch
+#### Branch
 
 ```
 # List the local branch
@@ -83,37 +97,37 @@ $ git branch -r
 # List the local and the remote branch
 $ git branch -a
 
-# create branch
+# Create new branch
 $ git branch [branch-name]
 
-# create branch and switch branch
+# Create new branch and switch to new branch
 $ git checkout -b [branch]
 
-# create branch
+# Create new branch and point to this commit
 $ git branch [branch] [commit]
 
-# create branch
+# Create a new branch and establish a tracking with remote branch
 $ git branch --track [branch] [remote-branch]
 
-# switch branch
+# Switch to branch
 $ git checkout [branch-name]
 
-# switch last branch
+# Switch to last branch
 $ git checkout -
 
 # Establish a tracking relationship between the local branch and the remote branch
 $ git branch --set-upstream [branch] [remote-branch]
 
-# merge branch to current branch
+# Merge branch to current branch
 $ git merge [branch]
 
-# git cherry-pick commit to branch
+# Select a commit and merge to main branch
 $ git cherry-pick [commit]
 
-# delete local branch
+# Delete local branch
 $ git branch -d [branch-name]
 
-# delete remote branch
+# Delete remote branch
 $ git push origin --delete [branch-name]
 $ git branch -dr [remote/branch]
 ```
@@ -124,106 +138,156 @@ $ git branch -dr [remote/branch]
 # List all tag
 $ git tag
 
-# create tag
+# Create a tag for current commit
 $ git tag [tag]
 
 # Create a new tag at the specified commit
 $ git tag [tag] [commit]
 
-# delete the local tag
+# Delete the local tag
 $ git tag -d [tag]
 
-# delete the remote tag
+# Delete the remote tag
 $ git push origin :refs/tags/[tagName]
 
-# show tag info
+# Show tag info
 $ git show [tag]
 
-# push tag to remote
+# Push tag to remote branch
 $ git push [remote] [tag]
 
-# push all tags to remote
+# Push all tags to remote branch
 $ git push [remote] --tags
 
-# create new branch at the tag
+# Create new branch and point to the tag
 $ git checkout -b [branch] [tag]
 ```
 
 #### Status and Log
 
 ```
-# show project changes and project info
+# Show project changes and project info
 $ git status
 
-# show git log
+# Show git log of current branch
 $ git log
+
+# Show git commit records
 $ git log --stat
+
+# Show git commit records with keyword
 $ git log -S [keyword]
+
+# Show git commit records with format lines
 $ git log [tag] HEAD --pretty=format:%s
+
+# Show git commit records with matched search
 $ git log [tag] HEAD --grep feature
+
+# Show git commit records of file
 $ git log --follow [file]
 $ git whatchanged [file]
+
+# Show every commit diff of specified file
 $ git log -p [file]
+
+# Show latest 5 commits
 $ git log -5 --pretty --oneline
+
+# Show all submitted users, sorted by the number of submissions
 $ git shortlog -sn
 
+# Show who and when modified file
 $ git blame [file]
 
-# git diff change
+# Show changes between latest commit and current branch
 $ git diff
-$ git diff --cached [file]
+
+# Show the diff between latest commit and current branch
+$ git diff --cached [file]|
+
+# Show the diff between HEAD and current branch
 $ git diff HEAD
+
+# Show the diff between 2 commits
 $ git diff [first-branch]...[second-branch]
+
+# Output total number of modified files, as well as number of added and deleted lines.
 $ git diff --shortstat "@{0 day ago}"
 
-# git show change or other info
+# Show change of a commit
 $ git show [commit]
+
+# Show the changed file name in a commit
 $ git show --name-only [commit]
+
+# Show the file content in a commit
 $ git show [commit]:[filename]
 
-# show last commit
+# Show last commit
 $ git reflog
 ```
 
-#### pull-push-fetch
+#### Remote Sync
 
 ```
+# Get all changed files from remote repository and merge with local files
 $ git fetch [remote]
 
-# show remote url info
+# List all remote repositories
 $ git remote -v
 
-# show remote info
+# Show infomation of remote repository
 $ git remote show [remote]
 
+# Add a new remote repository and rename it
 $ git remote add [shortname] [url]
 
+# Get all changed files from remote repository and merge with local branch
 $ git pull [remote] [branch]
 
+# Push local changed files to remote repository
 $ git push [remote] [branch]
 
+# Push local changed files to remote repository, even if there are conflicts
 $ git push [remote] --force
 
+# Push all local changed files to remote repository
 $ git push [remote] --all
 ```
 
 #### reset
 
 ```
+# Restore the specified files from index area to current branch
 $ git checkout [file]
 
+# Restore the specified file of a commit to current branch
 $ git checkout [commit] [file]
 
+# Restore all file of a commit to current branch
 $ git checkout .
 
-# Reset current HEAD to the specified state
+# Reset the specified file from index area to be consistent with the last commit
 $ git reset [file]
+
+# Reset files of index area to be consistent with the last commit
 $ git reset --hard
+
+# Reset the pointer of the current branch to the specified commit, and reset index area
 $ git reset [commit]
+
+# Reset the HEAD of the current branch to the specified commit, and reset index area and current branch, consistent with the specified commit
 $ git reset --hard [commit]
+
+# Reset the current HEAD to the specified commit, but keep index area and the current branch are unchanged
 $ git reset --keep [commit]
+
+# Create a new commit to revoke the specified commit
+# All changes in the latter will be offset by the former and applied to the current branch
 $ git revert [commit]
 
+# Temporarily remove uncommitted changes and move them in later
 $ git stash
 $ git stash pop
 ```

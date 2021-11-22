@@ -1,29 +1,29 @@
-## eslint-js
+## About eslint-js
 
-ESLint is an open source JavaScript linting utility.
+ESLint is an open source JavaScript linting utility and used to verify the js code in js and html.
 
 [eslint-js Download](https://ext.dcloud.net.cn/plugin?id=2037)
 
-## Error message
+## Error Highlight
 
 As shown in the figure below, when an error is detected, a red wavy line will appear.
 
 <img src="/static/snapshots/tutorial/plugins/eslint-js-error.png" class="hd-img" />
 
-## ESLint Plugin configuration
+## ESLint Plugin Configuration
 
-Click the menu [Tools] [Settings -> Plugin] [eslint-js], you can see the eslint-js related configuration.
+Click the menu [Tools] [Settings -> Plugin] [eslint-js], you can see the eslint-js configuration.
 
 <img src="/static/snapshots/tutorial/plugins/settings_eslint_en.png" class="hd-img"/>
 
-**Real-time verification and automatically fixable**
+**Real-time verification and automatic modification**
 
-> Only supports HBuilderX 2.6.8+ version
+> Supported from HBuilderX 2.6.8+ version
 
 1. To use this function, you must install the [eslint-js](https://ext.dcloud.net.cn/plugin?id=2037) plugin
 2. The `vue-cli` project needs to install the eslint library and configure the eslint rules.
 3. If the above conditions are met, when the code is written and saved, if there is an error in the code, it will be automatically repaired;
-4. Real-time verification function, not enabled by default, you need to manually enable this function
+4. Real-time verification function, not enabled by default, you have to manually enable this function
 
 
 ## HBuilderX eslint-js configuration files
@@ -53,11 +53,11 @@ More configuration instructions can refer to [options](https://eslint.org/docs/r
 
 [rules list: https://cn.eslint.org/docs/rules/](https://cn.eslint.org/docs/rules/)
 
-ESLint comes with a large number of built-in rules and you can add more rules through plugins. You can modify which rules your project uses either using configuration comments or configuration files. To change a rule setting, you must set the rule ID equal to one of these values:
+Rule Settings:
 
 - "off" or 0 - turn the rule off
-- "warn" or 1 - turn the rule on as a warning (doesn't affect exit code)
-- "error" or 2 - turn the rule on as an error (exit code is 1 when triggered)
+- "warn" or 1 - turn the rule on as a warning (doesn't affect the program to exit)
+- "error" or 2 - turn the rule on as an error (the program will exit when triggered)
 
 Example:
 
@@ -72,7 +72,7 @@ Example:
 ```
 
 
-## Exampl：Html Project
+## Exampl：Web Project
 
 Use eslint to check extra spaces and fix them automatically.
 
@@ -103,8 +103,8 @@ module.exports = {
 
 ## Example：uni-app project
 
-- vue file, verify vue syntax, need to install `eslint-vue` plugin, [plugin address](https://ext.dcloud.net.cn/plugin?id=2005)
-- The vue file, the verification rules, need to be configured from the `eslint-vue` plugin.
+- You have to install `eslint-vue` plugin, [plugin address](https://ext.dcloud.net.cn/plugin?id=2005) to verify vue syntax.
+- To configure validation rules, you must config rules in the `eslint-vue` plugin.
 - Menu [Tools] [Settings] [Plugins] [eslint-vue] [.eslintrc.js], edit the `.eslintrc.js` file
 
 
@@ -115,9 +115,11 @@ Example: eslint automatically fixes double quotes to single quotes
 
 ## Example：vue-cli project
 
-1. For the vue-cli project, if you use the configuration rules under the project, you need to install the relevant libraries and create the `.eslintrc.js` file in the project root directory
-2. The `eslint rules` under the project will override the rules in the HBuilderX editor `eslint plugin`
-3. vue file, verify vue syntax, need to install `eslint-vue` plugin, [plugin address](https://ext.dcloud.net.cn/plugin?id=2005)
+For the vue-cli project, if you use the configuration rules under the project, you need to install the relevant libraries and create the `.eslintrc.js` file in the project root directory
+
+Note:
+1. The `eslint rules` of a project will override the rules in the HBuilderX editor `eslint plugin`
+2. You have to install `eslint-vue` plugin, [plugin address](https://ext.dcloud.net.cn/plugin?id=2005) to verify vue syntax.
 
 ```shell
 npm install --save eslint eslint-plugin-vue eslint-plugin-html eslint-config-standard eslint-plugin-import eslint-plugin-node eslint-plugin-promise eslint-plugin-standard

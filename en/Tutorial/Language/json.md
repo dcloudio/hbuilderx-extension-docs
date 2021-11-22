@@ -1,91 +1,77 @@
-# HBuilderX对json的优化有多强
+# Deep optimization of json in HBuilderX
 
-json是一种对计算机友好，对人不友好的文件格式。
+Json does not improve human readability, although it does make it easier to write and implement for machines.
 
-以前都是服务器生成json，前端程序员很少手写json。
+In the past, the server generated json, and front-end programmers rarely wrote json manually.
 
-但现代前端开发里，json的应用范围越来越多，各种配置文件、js的export里，全是json，写起来让人倍感痛苦，遍地是坑。
+Nowadays, JSON is everywhere on the web, such as configuration files, js export, etc. But it is really not easy to write a json file because of strict specifications.
 
-比如半角符号错输成全角，比如少了逗号或结尾多了逗号，比如没有语法提示和代码块，比如键值对的选中和复制很低效...
+HBuilderX provides a number of optimization techniques to achieve the best json editing experience. 
 
-HBuilderX提供了多项优化技巧，达到最好的json编辑体验。学会这些，效率翻倍！
+### Undisturbed Chinese symbols input
 
-### 中文符号免干扰输入
+HBuilderX will automatically change "fullwidth form" symbols to "halfwidth form" symbols except "fullwidth form" symbol is in a string. 
 
-在HBuilderX里写json，不用管输入法状态，如果光标位置应该是半角符号，即使你按下全角符号也会自动变成半角。
+The undisturbed input of Chinese symbols is the advantage of HBuilderX. Support json, html, js, css, vue and other file types.
 
-当然在字符串里，按下全角符号不会被转换半角; 舒畅书写，不用分神，不用紧张。
+### Add comma at the end of the line
 
-其实中文符号免干扰输入是HBuilder多年来一直的亮点，不止是json，在html、js、css、vue里都支持中文符号免干扰输入。 
+Don’t worry about when to enter a comma at the end of the line.
 
-我们深切体会中国程序员的痛苦，并动手做出改进。
+HBuilderX will automatically recognize whether a comma is needed, and automatically fill in the missing comma when you press "Enter".
 
-### 回车时自动补行尾逗号
+### Automatically delete extra commas
 
-不用担心回车时什么时候该输入行尾逗号，什么时候不输入。
+When we copy some json code, some "commas" at the end of the line are also copied.
+HbuilderX will automatically remove illegal "commas" when saving files.
 
-HBuilderX会自动识别是否需要逗号，并在回车时把缺失的逗号自动补齐。
+### KeyValue snippet
 
-### 保存时自动删除数组或键值对结尾的多余逗号
-
-我们复制一段json时，经常把行尾的逗号也复制过来，但最后一行其实是不能用逗号的，还得记得手动删除。
-
-HBuilderX在保存时会自动清理这些不合法的逗号，无需操心太多。
-
-### KeyValue代码块，像写excel那样写键值对
-
-在js的json里敲kv，会出现KeyValue代码块，
+KeyValue snippet will be added when you enter "kv" in a js file.
 
 <img src="/static/snapshots/tutorial/json_1.jpeg" style="zoom:50%" />
 
-回车后生成这样的键值对
+You will get "Key:Value" after press "enter" key.
 
 <img src="/static/snapshots/tutorial/json_2.jpeg" style="zoom:50%" />
 
-此时敲完key的文字，然后按tab，就可以把光标自动转到value那里并选中value，然后继续敲value的内容即可。
-不用再被敲冒号逗号打断，专注于写KeyValue内容，就像用excel。
+After typing the text "Key", then press "tab". The cursor will focus on "Value", and then you can type in the contents of "Value". This operation can help you focus on the content of "Key:Value" and similar like Excel.
 
-注：此功能在纯json文件中不生效，仅在js中使用json时生效。
+Remark：This feature is only applicable to json in js files, not to json files.
 
-### 智能双击，快速选中数组或键值对
+### Intelligent double-clicks
 
-当我们想选中一段数组或键值对，不管是准备复制还是删除，过去都需要拖动。
-而拖动选择其实是一个极其低效又损伤手的行为：按下食指鼠标或触摸板，不能松开继续拖动到结尾，这个过程缓慢且食指神经一直紧张。
+When frequently dragging and selecting a code block with the mouse is not an easy task.
 
-HBuilderX提供了强大的`智能双击`来解决这个问题，具体在json中：
+HBuilderX provides a more friendly way: `intelligent double-clicks`.
 
-- 双击逗号左部，是选中逗号以前的键值对或数组
-- 双击逗号右部，是选中逗号以后的键值对或数组
-- 双击行尾，选中整行
-- 双击括号内侧，选中括号内的内容
-- 按下Alt同时双击括号内侧，选中括号内的内容(包含括号)
-- 双击引号内侧，选中引号内的内容
-- 按下Alt同时双击引号内侧，选中引号内的内容(包含引号)
+- Double-click on both sides of the `comma` to select a code block before or after the comma
+- Double-click the `end of line` to select the entire line
+- Double-click the inside of `brackets` to select the content in `brackets`
+- Press `Alt` and double-click the inside of `brackets` to select the content in `brackets` (include brackets)
+- Double-click the inside of `quotation marks` to select the content in `quotation marks`
+- Press `Alt` and double-click the inside of `quotation marks` to select the content in `quotation marks` (include quotation marks)
 
-> 了解更多智能双击，点HBuilderX的选择菜单。所有双击都支持搭配Ctrl实现多选。HBuilderX完善的多光标支持让操作效率如虎添翼。
+> For more intelligent double-clicks, please check "select" menu. You can use "Ctrl" and double-clicks to achieve multiple selection.
 
-### 快速重复插入
+### Fast repeat insertion
 
-当你想重复插入一段键值对或数组时，最快捷的方式不是复制然后找新位置粘贴，而是使用快速重复插入功能。
-windows上是Ctrl+Insert或Ctrl+Shift+r，mac上是Command+Shift+r。
+When you want to repeatedly insert key-value pairs or arrays, the fastest way is not to copy and paste, but to use the repeat insert function.
+Windows shortcut: Ctrl+Insert or Ctrl+Shift+r，mac shortcut: Command+Shift+r。
 
-### 语法提示
+### Syntax Hint
 
-很多js方法把多个参数合并为一个json对象，那么这些参数的语法提示怎么办？
-HBuilderX也有完美的json参数语法提示支持。
+Many js methods combine multiple parameters into a json object. What about the syntax hints for these parameters?
+HBuilderX also has complete json parameter syntax prompt support.
 
 <img src="/static/snapshots/tutorial/json_3.jpeg" style="zoom:50%" />
 
-如果参数里有回调函数，还可以在回车时自动生成匿名函数，如下：
+If there is a callback function in the parameter, an anonymous function can also be automatically generated during input, as follows:
 
 <img src="/static/snapshots/tutorial/json_4.jpeg" style="zoom:50%" />
 
-多想业务，少为形式浪费时间，这是HBuilderX要帮助开发者做到的事。
+In some special configuration files that support syntax prompts, such as uni-app's pages.json.
 
-另外某些特殊的配置文件，比如uni-app里的pages.json，也支持语法提示，以提升编程效率。
+### Automatically validate syntax when saving
 
-### 保存时自动校验语法
-
-json和js的校验是HBuilderX内置的，都是在保存时会校验语法，每处错误会标记红色波浪线，按F4可跳转到下个错误。
-
-掌握这些技巧，开启你的高效之旅！
+HBuilderX has built-in validation functions for json and js files. You will receive an error warning when saving the file. Press F4 to view the next error.

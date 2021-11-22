@@ -1,125 +1,126 @@
-> `本文档仅适用于HBuilderX 2.7.12+版本`
+> `Supported from HBuilderX 2.7.12+`
 
-## 1. sftp/ftp插件简介
+## 1. About sftp/ftp
 
-HBuilderX 2.7.12+版本，优化了SFTP/FTP插件
+HBuilderX optimized SFTP/FTP plugin from version 2.7.12+.
 
-[SFTP/FTP插件市场插件地址](https://ext.dcloud.net.cn/plugin?id=2038)
+[SFTP/FTP Installation](https://ext.dcloud.net.cn/plugin?id=2038)
 
-此插件是vscode中流行的ftp插件，因HBuilderX兼容vscode的部分插件生态，也可以在HBuilderX中使用。
-- 使用此插件，可将本地工作区文件，与FTP服务器或linux服务器文件同步。
-- 支持`ftp/sftp`协议
-- 支持远程文件目录`浏览`、`上传`、`下载`、`删除`
-- 支持`自动保存上传`
+This plugin is a popular ftp plugin in vscode. Because HBuilderX is compatible with part of the plugin ecology of vscode, it can also be used in HBuilderX.
+- Use this plug-in to synchronize local workspace files with FTP server or Linux server files
+- Support `ftp/sftp` protocol
+- Support remote file directory `browse`, `upload`, `download`, `delete`
+- Support `auto save upload`
 
-## 2. sftp/ftp使用介绍
+## 2. sftp/ftp introduction
 
-使用步骤：
+Steps：
 
-1. 如下图，在项目管理器，新建一个空目录或空项目，然后选中
-2. 右键菜单，点击【Ftp: 创建连接配置】
-3. 系统自动创建`.ftp/ftp-sync.json`配置文件
-4. 编辑`ftp-sync.json`, 填写`host（ip）`、`username（用户名）`、`password（密码）`、`port（端口）`、`protocol（协议）`
-5. 填写完配置文件，右键菜单，点击【Ftp: 浏览远程文件】
-6. 选择文件目录，进行`上传`、`下载`、`删除`操作
+1. As shown in the figure below, in the project manager, create an empty directory or empty project, and then select.
+2. Right-click menu, click [Ftp: Create connection configuration].
+3. The system automatically creates the `.ftp/ftp-sync.json` configuration file.
+4. Edit `ftp-sync.json`, enter`host（ip）`、`username`、`password`、`port`、`protocol`.
+5. After filling in the configuration file, right-click the menu and click [Ftp:browse remote files].
+6. Select the file directory and perform the operations of `upload`, `download`, and `delete`.
 
-### 2.1 创建ftp/sftp配置文件
+
+### 2.1 Setup ftp/sftp configuration file
 
 <img src="/static/snapshots/tutorial/ftp1.gif" style="zoom:80%" />
 
-### 2.2 同步目录
+### 2.2 Sync directory
 
-- 从远程同步到本地
-- 从本地同步到远程
+- Sync from remote to local
+- Sync from local to remote server
 
 <img src="/static/snapshots/tutorial/ftp2.png" style="zoom:80%" />
 
-### 2.3 本地编辑远程文件、删除远程文件
+### 2.3 Edit remote files locally, delete remote files
 
-选中项目，右键菜单【FTP: 浏览远程文件】，即可打开`SFTP视图`
+Select an item from project manager and right-click the menu [FTP: browse remote files] to open the `SFTP view`.
 
 <img src="/static/snapshots/tutorial/ftp3.png" style="zoom:80%" />
 
 
-## 3. ftp配置文件参数说明
+## 3. ftp configuration file parameter description
 
 ```json
 {
-    "name": "Linux测试服务器",
-    "host": "ip地址",
+    "name": "Linux Testing Server",
+    "host": "ip",
     "protocol": "sftp",
     "port": 22,
-    "username": "用户名",
-    "password": "密码",
-    "remotePath": "远程目录",
+    "username": "username",
+    "password": "password",
+    "remotePath": "remote directory",
     "uploadOnSave": false
 }
 ```
 
 
-**注意：配置文件是放在项目下的普通json文件，存放着ftp账号。若你的项目使用三方node库，请注意其可靠性，避免ftp账户失窃**
+**Note：The configuration file is an ordinary json file placed under the project, which stores the ftp account. If your project uses the third party node library, please pay attention to its reliability to avoid the theft of ftp accounts**
 
 
-## 4. ftp、sftp协议说明
+## 4. ftp、sftp agreement description
 
-本插件支持FTP、sftp两种协议。
+Support Ftp、Sftp 2 protocol.
 
-如果远程服务器，搭建了`ftp`服务，`username`和`password`需要填写ftp的用户密码
+If the remote server has set up the `ftp` service, `username` and `password` need to fill in the ftp user password.
 
-`sftp`不需要任何配置，开启`SSH`默认就开启了`SFTP`。也就是说，如果您的远程服务器为`linux`系统，即使没有搭建`ftp`服务，也可以通过`sftp`连接，使用文件同步的服务。
+`sftp` doesn't need any configuration. Turning on `SSH` will enable `SFTP` by default. In other words, if your remote server is a `linux` system, even if the `ftp` service is not set up, you can still connect via `sftp` and use the file synchronization service.
 
-- SSH/SFTP，默认端口为：22
-- 使用sftp服务，`username`和`password`，需要填写目标电脑的用户、密码
+- SSH/SFTP，default port：22
+- Use sftp service, you need to fill in the user and password of the target computer.
 
-## 5. ftp/sftp 菜单配置快捷键
+## 5. ftp/sftp menu configuration shortcuts
 
-菜单【工具】【自定义快捷键】，即可对sftp相关菜单配置快捷键。
+Menu [Tool] [Custom Keybindings]，you can configure shortcut keys for sftp related menus.
 
-具体如下， 可以把`key`值改成自己想要的快捷键
+The details are as follows, you can change the `key` value to the shortcut key you want.
 
 ```
 [
-    // 浏览远程文件
+    // Browse remote files
     {
         "key": "ctrl+shift+w",
         "command": "sftp.revealInRemoteExplorer"
     },
-    // 同步远程数据到本地
+    // Synchronize remote data to local
     {
         "key": "ctrl+shift+r",
         "command": "sftp.sync.remoteToLocal"
     },
-    // 同步本地数据到远程
+    // Synchronize local data to remote
     {
         "key": "ctrl+shift+l",
         "command": "sftp.sync.localToRemote"
     },
-    // 上传当前文件夹
+    // Upload the current folder
     {
         "key": "ctrl+shift+h",
         "command": "sftp.upload.folder"
     },
-    // 下载当前文件夹
+    // Download the current folder
     {
         "key": "ctrl+shift+q",
         "command": "sftp.download.folder"
     },
-    // 项目管理器 右键菜单 FTP: 上传选中文件
+    // In project manager, right-click menu Ftp: Upload the current file
     {
         "key": "ctrl+shift+u",
         "command": "sftp.upload.file"
     },
-    // 在本地编辑远程文件
+    // Edit remote files locally
     {
         "key": "ctrl+shift+e",
         "command": "sftp.remoteExplorer.editInLocal"
     },
-    // 删除远程文件
+    // Delete remote files
     {
         "key": "ctrl+shift+d",
         "command": "sftp.delete.remote"
     },
-    // 刷新
+    // Refresh
     {
         "key": "ctrl+shift+f",
         "command": "sftp.remoteExplorer.refresh"

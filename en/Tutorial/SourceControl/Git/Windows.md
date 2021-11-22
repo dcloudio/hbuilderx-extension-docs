@@ -1,57 +1,69 @@
 # Windows Git
 
-## Introduce
+## Summary
 
-In HBuilderX, to use Git, you need to install the Git plug-in first. 
+In HBuilderX, you have to install the Git plug-in before you can use Git. 
 
-The Git plug-in calls the `external Git command line tool`, So need to install`TortoiseGit`。
+The Git plug-in calls the `external Git command line tool`, you need to install `TortoiseGit`。
 
 [TortoiseGit DownLoad](https://tortoisegit.org/download/)
 
-## Plug-in Install
+## Install TortoiseGit
 
-HBuilderX Top menu, 【Tool】-> 【plug-in installation】. Open the plug-in installation window, Find Git, Click【Install】.
+[TortoiseGit Download](https://tortoisegit.org/download/), double click exe file after download and then follow the instructions to complete the installation.
+
+Note：TortoiseGit is available in 32-bit and 64-bit, please download right file according to your computer OS.
+
+After download TortoiseGit, double-click to open it to install it.
+
+<img src="/static/snapshots/tutorial/source_control/TortoiseGit1.png" style="zoom:90%; border: 1px solid #eee;" />
+
+<img src="/static/snapshots/tutorial/source_control/TortoiseGit2.png" style="zoom:90%; border: 1px solid #eee;"/>
+
+After the installation is complete, right-click the mouse and the TortoiseGit menu will appear, as shown below:
+
+<img src="/static/snapshots/tutorial/source_control/TortoiseGit3.png" style="zoom:50%;border: 1px solid #eee;" />
+
+## Install Git Plugin
+
+HBuilderX Top menu, [Tool]-> [plug-in installation]. Open the plug-in installation window, Find Git, Click [Install].
 
 <img src="/static/snapshots/tutorial/source_control/plugin_window_en.png" style="zoom:70%" />
 
-## clone and import
+## Clone or Import
 
-- Top Menu, 【File】-> 【Import】-> 【Import From Git】
-- HBuilderX Project manager, Right click menu【Import】-> 【Import From Git】
+- Top Menu, [File]-> [Import]-> [Import From Git]
+- HBuilderX Project manager, Right click menu [Import]-> [Import From Git]
 
 <img src="/static/snapshots/tutorial/source_control/git_windows_clone_en.png" style="zoom:70%;border: 1px solid #eee;" />
 
-## Operation menu
+## Git menu
 
-In the project manager, select the project and right-click the menu to see the git related operation menu. 
+In the project manager, select the project and right-click the menu to see the git related operation menu. Click the related menu to bring up TortoiseGit.
 
-Click the related menu to bring up TortoiseGit.
-
-> Note: HBuilderX Git plug-in all calls TortoiseGit, so this article will not describe the TortoiseGit operation tutorial in detail.
+> Note: HBuilderX Git plug-in calls TortoiseGit for all git operation, please search TortoiseGit manual for more details.
 
 <img src="/static/snapshots/tutorial/source_control/git-new-show.png" style="zoom:50%; border: 1px solid #eee;" />
 
 ## Pull
 
-> git-pull - Fetch from and integrate with another repository or a local branch
-
-Project, right-click menu 【Git pull】
+> git-pull - In explorer, select a project and right-click mouse, then click [Git
+>  Pull] from menus.
 
 <img src="/static/snapshots/tutorial/source_control/git-new-pull-en.png" style="zoom:50%; border: 1px solid #eee;" />
 
 ## Push
 
-> git-push - Update remote refs along with associated objects
-
-Project, right-click menu 【Git Push】
+> git-push - In explorer, select a project and right-click mouse, then click [Git
+>  Push] from menus.
 
 <img src="/static/snapshots/tutorial/source_control/git-new-push-en.png" style="zoom:50%; border: 1px solid #eee;" />
 
-**备注**：git push --force: 表示将目前自己本机的代码库推送到远端，并覆盖。请谨慎使用。
+**Remark**：git push --force: It means to push the current code library of your own computer to the remote server and overwrite it. Please use it with caution.
 
-## Shortcut key configuration
+## Shortcut Configuration
 
-1. toop menu, 【tool】-->【custom keybindings】
+1. Top menu, 【Tool】-->【Custom Keybindings】
 2. All Git command configurations can be seen at the bottom of the left side of the document
 
 ```

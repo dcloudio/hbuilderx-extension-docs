@@ -1,25 +1,25 @@
-# 菜单异常问题
+# Menu Problems
 
-### 问题
+### Problem
 
-某些用户，升级后，出现异常异常，即菜单显示%xxx%。
+The menu displays %xxx% after some users upgrade to latest HBuilderX.
 
 <img src="/static/snapshots/other/menu_error.png" class="hd-img" />
 
-### 方法1：清除配置文件
+### Method 1: Remove configuration file
 
 #### MacOSX
 
-1. 在命令行，进入`$HOME/Library/Application\ Support/HBuilder\ X`目录，删除`prefs`文件
-2. 在命令行，删除`$HOME/Library/Caches/HBuilder\ X`目录。
+1. Enter `$HOME/Library/Application\ Support/HBuilder\ X` directory through the terminal command，remove `prefs` file.
+2. Remove `$HOME/Library/Caches/HBuilder\ X` directory through the terminal command.
 
-请注意： mac上，如果路径包含`空格`，需要`\`进行转义
+Please note: On mac, if the path contains `spaces`, it needs to be escaped by `\`
 
 #### Windows
 
-1. 操作系统资源管理器，输入`%appdata%`回车，找到`HBuilder X`目录并进入，删除`prefs`文件
-2. 如果还存在问题，接着输入`%localAppdata%`回车，找到`HBuilder X`目录并删除。
+1. Enter `%appdata%` in the address bar of Windows resource manager, find `HBuilder X` directory. Delete `prefs` file from `HBuilder X` directory.
+2. If the problem still exists, then enter `%localAppdata%` in the address bar of Windows resource manager and delete `HBuilder X` directory.
 
-### 方法2：重新安装
+### Method 2：Re-install
 
-进入[HBuilderX官网](https://www.dcloud.io/hbuilderx.html)，重新下载安装HBuilderX。
+Open [HBuilderX Official Website](https://www.dcloud.io/hbuilderx.html)，download and re-install again。
