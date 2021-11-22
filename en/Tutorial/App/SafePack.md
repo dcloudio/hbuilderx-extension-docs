@@ -1,17 +1,16 @@
-# 安心打包使用指南
+# Packaging Guidelines
 
-过去，App云端打包时需要将应用代码、打包证书等提交到DCloud云端打包机，在云端打包机的原生开发环境中生成安装包apk/ipa。
-DCloud云端服务器虽然不会保存开发者应用代码和证书等信息，但开发者可能还是不放心，或者担心在网络传输过程中可能存在拦截泄漏的风险。
+Before we need to submit the source code and packaging certificate to DCloud for App packaging, and then generate the apk/ipa file in the cloud native development environment. Although the DCloud  server does not store information such as sources code and certificates, the developer may still be uneasy or worry that there may be a risk of intercepting leakage during network transmission.
 
-而离线打包，不但不方便，还有2个重要功能无法使用：
-1. 原生混淆，保护js代码（因为秘钥的安全问题，离线打包无法使用）
-2. 插件市场的付费原生插件（因为插件版权问题，离线打包无法使用）
+Offline packaging is inconvenient, and two important functions are lost.
+1. Native obfuscation, protect js code (Due to the security of the secret key, offline packaging cannot be used)
+2. Paid native plug-ins in the market (Due to copyright issues, offline packaging cannot be used)
 
-> HBuilderX2.9.9版本新增Android平台**安心打包**功能，不再提交应用代码及打包证书到云端服务器，同时也减轻云端打包机压力，缩短高峰期云端打包等待时间。
-> HBuilderX3.0.7版本新增iOS平台支持**安心打包**功能（仅支持MacOS）
+> The HBuilderX 2.9.9 version adds the Android platform **safe packaging** function, the developer does no longer submit sources code and packaging certificate to the cloud server, but also reduce the pressure of packaging machine, shorten the peak period of cloud packaging waiting time.
+> HBuilderX 3.0.7 version adds iOS platform to support **Safe Packaging** function (only supports MacOS)
 
 
-## 安心打包原理
+## Safe Packing
 
 - 首次打包
   1. HBuilderX会提交App的模块配置信息到云端，在云端打包机生成原生代码包（不包含应用代码、证书信息）
