@@ -2,7 +2,7 @@
 
 > This document is only applicable to systems below MacOSX 10.14, and not applicable to systems above MacOS 10.14. Also not applicable to windows.
 
-## Preface
+## Foreword
 
 For systems below MacOSX 10.14, rest assured to use ios packaging, you need to install related certificates.
 
