@@ -1,8 +1,8 @@
-# Chrome调试Android应用
+# Chrome debugging Android Applications
 
-> 注意本文档仅适用于 5+App应用。
+> Note that this document only applies to 5+App applications.
 
-HBuilder对前端代码的调试方式有边改边看、真机运行、webkit remote debug真机调试3种。webkit remote debug其实是google、apple官方提供的服务，本文主要介绍google的chrome下如何调试Android手机上webview里运行的网页。
+HBuilder changes the debugging method of front-end code while watching and running on real machine。webkit remote debug其实是google、apple官方提供的服务，本文主要介绍google的chrome下如何调试Android手机上webview里运行的网页。
 *系列文章目录导航：*
 - [调试方式介绍一 边改边看](http://ask.dcloud.net.cn/article/483)
 - [调试方式介绍二 真机运行](http://ask.dcloud.net.cn/article/484)
