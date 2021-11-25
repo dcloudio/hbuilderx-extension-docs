@@ -5,7 +5,7 @@
 - [Install iOS Simulator](/Tutorial/App/installSimulator?id=ios模拟器)
 - [Install Android Simulator](/Tutorial/App/installSimulator?id=android模拟器)
 
-## iOS Emulator
+## iOS Simulator
 
 On MacOSX，please install [xcode](https://developer.apple.com/xcode/) first before install iOS simulator; or search for xcode in the App store to complete the installation.
 
@@ -43,6 +43,6 @@ After the Android simulator is started, HBuilderX will recognize it as an Androi
 
 <img src="/static/snapshots/app/Android-emulator.jpg"  style="border: 1px solid #eee; zoom:45%;border-radius: 25px;"/>
 
-The effect of running the app project to the android emulator is as follows:
+The effect of running the app project to the android simulator is as follows:
 
 <img src="/static/snapshots/app/Android-emulator-start.jpg"  style="border: 1px solid #eee; zoom:35%;border-radius: 25px;"/>
