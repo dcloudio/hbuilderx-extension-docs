@@ -1,49 +1,48 @@
-# 安装模拟器
+# Install Simulator
 
-> Android模拟器在MacOSX、Windows上都可以安装；iOS模拟器只能在MacOSX上安装。
+> The Android simulator can be installed on MacOSX and Windows; the iOS simulator can only be installed on MacOSX.
 
-- [安装iOS模拟器](/Tutorial/App/installSimulator?id=ios模拟器)
-- [安装Android模拟器](/Tutorial/App/installSimulator?id=android模拟器)
+- [Install iOS Simulator](/Tutorial/App/installSimulator?id=ios模拟器)
+- [Install Android Simulator](/Tutorial/App/installSimulator?id=android模拟器)
 
-## ios模拟器
+## iOS Emulator
 
-MacOSX，安装ios模拟器，需要先安装[xcode](https://developer.apple.com/xcode/)；或在App store中搜索xcode完成安装。
+On MacOSX，please install [xcode](https://developer.apple.com/xcode/) first before install iOS simulator; or search for xcode in the App store to complete the installation.
 
-xcode安装打开，按下快捷键`command+,`，打开`Preferences`窗口，如下图：
+Open the xcode installation, press the shortcut key `command+,` to open the `Preferences` window, as shown below:
 
 <img src="/static/snapshots/tutorial/macosx/iosSimulator.jpg"  style="border: 1px solid #eee; zoom:45%;border-radius: 25px;"/>
 
-如上窗口，点击【Locations】，点击【Command Line Tools】
+As in the above window, click [Locations], click [Command Line Tools]
 
 <img src="/static/snapshots/tutorial/macosx/xcodeCommandLineTools.jpg"  style="border: 1px solid #eee; zoom:45%;border-radius: 25px;"/>
 
-## 运行App到iOS模拟器
+## Run the app on the iOS simulator
 
-项目管理器，选中要运行的项目，点击工具栏 运行图标，如下图：
+In the project manager, select the project and click the run icon in the toolbar, as shown in the figure below:
 
 <img src="/static/snapshots/app/app_ios_simulator.jpg"  style="border: 1px solid #eee; zoom:45%;border-radius: 25px;"/>
 
-
-运行app项目到iOS模拟器效果如下：
+The effect of running the app project to the iOS simulator is as follows:
 
 <img src="/static/snapshots/app/app_ios_simulator_run.jpg"  style="border: 1px solid #eee; zoom:40%;border-radius: 25px;"/>
 
-## Android模拟器
+## Android Simulator
 
-市场上有很多成熟的Android模拟器，这里就不推荐了。自行搜索安装。
+There are many Android simulator on the market, please search one and install by yourself.
 
-当然，Google官方也有自己的模拟器，您可以在[Android Studio](https://developer.android.com/studio/install)中安装不同版本的模拟器。
-
-android studio模拟器如下图所示：
+Google provide one offcial simulator and you can install different version from [Android Studio].
+]
+The android studio simulator is shown below:
 
 <img src="/static/snapshots/tutorial/macosx/androidSimulator.jpg"  style="border: 1px solid #eee; zoom:45%;border-radius: 25px;"/>
 
-## 运行App到Android模拟器
+## Run the app on the Android simulator
 
-Android模拟器启动后，HBuilderX会将其识别为名称为`emulator-xxxx`的Android手机，其中的xxxx为模拟器的id如下图：
+After the Android simulator is started, HBuilderX will recognize it as an Android phone with the name `emulator-xxxx`, where xxxx is the id of the emulator as shown below:
 
 <img src="/static/snapshots/app/Android-emulator.jpg"  style="border: 1px solid #eee; zoom:45%;border-radius: 25px;"/>
 
-运行app项目到android模拟器效果如下：
+The effect of running the app project to the android emulator is as follows:
 
 <img src="/static/snapshots/app/Android-emulator-start.jpg"  style="border: 1px solid #eee; zoom:35%;border-radius: 25px;"/>
