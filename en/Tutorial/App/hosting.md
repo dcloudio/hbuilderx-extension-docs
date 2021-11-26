@@ -83,11 +83,12 @@ This chapter introduces the description of various configuration items provided 
 
 ### Configure domain@domain
 
-`前端网页托管`，自带一个测试域名，仅用于产品体验及测试可快速体验前端网页部署的完整流程，该域名有如下限制：
-  + 阿里云每分钟最多60次请求，默认每日仅允许10个公网IP访问，超出部分，需通过手动方式将来源IP加入白名单,IP白名单也会有数量限制
-  + 腾讯云限速100K/sd
+`Front-end web hosting`, comes with a test domain name, which is only used for product experience and testing to quickly experience the complete process of front-end web deployment. The domain name has the following restrictions:
+  + Alibaba Cloud has a maximum of 60 requests per minute. By default, only 10 public network IPs are allowed to visit per day. If the excess is exceeded, the source IP must be manually added to the whitelist, and the IP whitelist will also have a limit on the number
+  + Tencent Cloud speed limit 100K/sd
 
 业务如要上线商用，请配置自己的正式域名，配置自己的正式域名后，将不受上述测试域名的限制。（尤其注意阿里云测试域名是公共的，任意一个服务空间如果有上传恶意文件被投诉，会导致测试域名被微信内置浏览器整体禁封）
+If the business is to be deployed, please configure your own official domain name. After configuring your own official domain name, you will not be restricted by the above-mentioned test domain name. (In particular, note that the Alibaba Cloud test domain name is public. If any service space is complained of uploading malicious files, the test domain name will be banned by the built-in WeChat browser as a whole)
 
 
 前端网页托管配置自己域名的步骤如下：
