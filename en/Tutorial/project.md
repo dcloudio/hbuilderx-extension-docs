@@ -24,7 +24,7 @@ HBuilderX supports a variety of project types, mainly: web projects, 5+App proje
 - Toolbar, The first icon
 - Top menu [File -> New -> Project]
 
-<img src="/static/snapshots/tutorial/project/project_create.png" style="zoom: 49%;" />
+<img src="/static/snapshots/tutorial/project/project_create_en.png" style="zoom: 49%;" />
 
 ## Close Project@close
 
