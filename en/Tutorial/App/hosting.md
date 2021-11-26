@@ -1,59 +1,59 @@
-## 简介
+## Summary
 
-DCloud为开发者提供了网站发布、App发布等功能，`前端网页托管`是其中的网页发布环节产品。
+DCloud provides some functions such as website publishing and App publishing for developers. `Front-end web hosting` is one product of the web publishing.
 
-`前端网页托管`基于[uniCloud](https://unicloud.dcloud.net.cn/login)的能力，为开发者的html网页提供**更快速、更安全、更省心、更便宜**的网站发布。
+`Front-end web hosting` base on [uniCloud](https://unicloud.dcloud.net.cn/login), provides a **faster, safer, more powerful, and cheaper** website publishing for developers' html pages.
 
-- 更快速：不经过web server，页面和资源直接上cdn，就近访问，速度更快。
-- 更安全：不存在传统服务器各种操作系统、web server的漏洞，不用天天想着打补丁。不怕DDoS攻击，永远打不垮的服务。
-- 更省心：无需再购买虚拟机、安装操作系统、配置web服务器、处理负载均衡、处理大并发、处理DDoS攻击......您什么都不用管，只需上传您写的页面文件
-- 更便宜：uniCloud由DCloud联合阿里云和腾讯云推出，其中阿里云版本完全免费。
+- Faster: Without going through the web server, the pages and resources are directly uploaded to the CDN, which can be accessed nearby, and the speed is faster.
+- Safer: There are no vulnerabilities in the operating systems and web servers of traditional servers. A service that will never be defeated by DDoS attacks.
+- Powerful：You don't need to purchase any hardware or software to protect your files.  Don’t worry about anything, just upload your files.
+- Cheaper：uniCloud is launched by DCloud in conjunction with Alibaba Cloud and Tencent Cloud, and the Alibaba Cloud is completely free.
 
-## 案例
+## Cases
 
-- `HBuilderX`文档网站，是一个基于`markdown`的文档系统，域名：[https://hx.dcloud.net.cn/](https://hx.dcloud.net.cn/)
-- `uni统计`官网现已部署到uniCloud，一份报表，掌握业务全景，域名：[https://tongji.dcloud.net.cn](https://tongji.dcloud.net.cn)
-- `hello uni-app`项目现已部署到uniCloud，线上地址：[https://hellouniapp.dcloud.net.cn](https://hellouniapp.dcloud.net.cn)
+- `HBuilderX` websites, which is a document system based on `markdown`, URL：[https://hx.dcloud.net.cn/](https://hx.dcloud.net.cn/)
+- `uni statistics` the official website has now been deployed to uniCloud, with a report to master the  business，URL：[https://tongji.dcloud.net.cn](https://tongji.dcloud.net.cn)
+- `hello uni-app` the project  has deployed to uniCloud, URL：[https://hellouniapp.dcloud.net.cn](https://hellouniapp.dcloud.net.cn)
 
-## 开通
+## Activation
 
-首先开发者需要开通`uniCloud`，登录[https://unicloud.dcloud.net.cn/](https://unicloud.dcloud.net.cn/)。
+Firstly, developers need to activate `uniCloud`, login [https://unicloud.dcloud.net.cn/](https://unicloud.dcloud.net.cn/).
 
-然后选择或创建一个服务空间。
+Then choose or create a service space.
 
-最后在上述网页左侧导航点击`前端网页托管`，即可开始使用。
+Finally, in the left navigation of the above webpage, click on `Front-end web hosting` to start using.
 
-`前端网页托管`和云函数没有绑定关系，可以和云函数部署在一个服务空间，也可以是不同的空间，甚至是不同云服务商的空间。
+`Front-end web hosting` has no binding with cloud functions. It can be deployed in a service space with cloud functions, or in a different space, or even a space of different cloud service providers.
 
-- 阿里云`前端网页托管`免费。
-- 腾讯云`前端网页托管`需付费开通，定价由腾讯云提供。腾讯云的不同档套餐有不同规格，见文末附表：
+- Aliyun `front-end web hosting` is free.
+- Tencent Cloud `front-end web hosting` requires payment to activate, and pricing is provided by Tencent Cloud. Different packages of Tencent Cloud have different specifications, see the attached table at the end of the article.
 
 
-## 使用
+## How to use
 
-开通后，需要把开发者的前端网页，上传到uniCloud的`前端网页托管`中。
+After activation, you need to upload front-end web page to uniCloud's `Front-end web hosting`.
 
-目前提供了2种方式操作：
+Two ways:
 
-方式1. 通过[uniCloud控制台](https://unicloud.dcloud.net.cn/)，在web界面上传。
+Method 1. Via [uniCloud Console](https://unicloud.dcloud.net.cn/), upload on the web page.
 
-  上传时，可以按文件上传，也可以按文件夹上传。
+  When uploading, you can upload by file or folder.
 
-  如果是按文件夹上传，可以选择上传后的目录是否包含上传文件夹的根目录。
+  If you upload by folder, you can choose whether the uploaded directory contains the root directory of the upload folder.
 
 <img src="https://img.cdn.aliyun.dcloud.net.cn/uni-app/uniCloud/unicloud-web-hosting.jpg"  style="border: 1px solid #eee; zoom: 80%;"/>
 
-方式2. 通过HBuilderX工具上传。
+Method 2. Upload through the HBuilderX tool
 
-  > HBuilderX 2.8+起，支持在HBuilderX中直接上传前端网页到uniCloud中。
+  > From HBuilderX 2.8+, it supports to upload front-end web pages directly to uniCloud in HBuilderX.
 
-  在菜单发行中，选择`上传网站到服务器`。
+  In the menu 'release', select `upload website to server`.
 
-  - 对于uni-app项目，可以先编译为h5，然后直接把编译后的h5上传上去。如下图
+  - For uni-app projects, you can compile to h5 first, and then upload the compiled h5 directly. As shown below:
 
 <img src="https://img.cdn.aliyun.dcloud.net.cn/uni-app/uniCloud/unicloud-hx-hosting.jpg" style="border: 1px solid #eee; zoom: 80%;"/>
 
-  - 对于非uni-app项目，可以自己选择要上传的目录，包含html、js、css、图片等静态前端文件接口。如下图
+  - For non-uni-app projects, you can choose the directory to upload, including static front-end file interfaces such as html, js, css, and pictures. As shown below
 
 <img src="https://img.cdn.aliyun.dcloud.net.cn/uni-app/uniCloud/unicloud-hx-hosting-h5.jpg" style="border: 1px solid #eee; zoom: 80%;"/>
 
