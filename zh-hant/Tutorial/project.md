@@ -1,10 +1,10 @@
-# 項目
+# 項目@project
 
 使用HBuilderX，從創建項目開始吧。
 
 下面將介紹項目創建、導入、關閉、創建別名、移除、重命名項目、重新識別項目類型、重新構建項目索引等操作。
 
-## 導入項目/目錄
+## 導入項目/目錄@import
 
 點擊頂部菜單【文件】【導入】，或點擊菜單【打開目錄】，即可導入項目到HBuilderX。
 
@@ -14,17 +14,19 @@ svn、git導入項目，需要先安裝svn、git插件。
 
 <img src="/static/snapshots/tutorial/project/project_import.png" style="zoom: 85%;" />
 
-## 創建項目
+## 创建项目@CreateProjectWindows
 
-HBuilderX支持多種項目類型，主要有：web項目、5+App項目、uni-app項目、微信小程序、快應用、wap2app等。[項目類型詳細介紹](/Tutorial/Other/ProjectType)    
+> 本章节适用于HBuilderX 3.3.0+版本, 低版本HBuilderX新建项目请[参考](/Tutorial/history/project?id=CreateProjectWindows) 
 
-- 歡迎頁面，點擊`新建項目`
-- 【工具欄】第一個圖標
-- 頂部菜單【文件 -> 新建 -> 項目】
+HBuilderX支持多种项目类型，主要有：web项目、5+App项目、uni-app项目、wap2app、HBuilderX扩展插件等。[项目类型详细介绍](/Tutorial/Other/ProjectType)    
 
-<img src="/static/snapshots/tutorial/project/project_new.png" style="zoom: 85%;" />
+- 欢迎页面，点击`新建项目`
+- 【工具栏】第一个图标
+- 顶部菜单【文件 -> 新建 -> 项目】
 
-## 關閉項目
+<img src="/static/snapshots/tutorial/project/project_create.png" style="zoom: 49%;" />
+
+## 關閉項目@close
 
 當項目管理器，項目數量過多時，您可以`關閉項目`；
 
@@ -34,7 +36,7 @@ HBuilderX支持多種項目類型，主要有：web項目、5+App項目、uni-ap
 
 <img src="/static/snapshots/tutorial/project/project_close.png" style="zoom: 85%;" />
 
-## 項目別名
+## 項目別名@alias
 
 HBuilderX，支持對項目創建或修改`別名`。
 
@@ -42,7 +44,15 @@ HBuilderX，支持對項目創建或修改`別名`。
 
 <img src="/static/snapshots/tutorial/project/project_alias.png" style="zoom: 85%;" />
 
-## 其它操作
+## toolbar@toolbar
+
+> HBuilderX 3.3.0+版本, 项目管理器视图toolbar 新增定位和折叠所有快捷功能
+
+注意：将鼠标移动到HBuilderX项目管理器范围内，相关图标才会显示出来。
+
+<img src="/static/snapshots/tutorial/project/project_toolbar.png" class="hd-img" />
+
+## 其它操作@other
 
 **移除項目**：您可以將項目，從項目管理器移除，或移動到回收站。
 
@@ -50,7 +60,7 @@ HBuilderX，支持對項目創建或修改`別名`。
 
 **重新構建項目索引**：某些情況下，代碼提示異常（比如圖片路徑無法提示），通過`重新構建項目索引`即可解決。
 
-## 與編輯器同步
+## 與編輯器同步@sync
 
 <p>項目管理器，右上角，點擊 <svg t="1631502274114" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="24803" width="14" height="14"><path d="M873.8304 552.96h-737.28c-22.528 0-40.96-18.432-40.96-40.96s18.432-40.96 40.96-40.96h737.28c22.528 0 40.96 18.432 40.96 40.96s-18.432 40.96-40.96 40.96zM873.8304 307.2h-737.28c-22.528 0-40.96-18.432-40.96-40.96s18.432-40.96 40.96-40.96h737.28c22.528 0 40.96 18.432 40.96 40.96s-18.432 40.96-40.96 40.96zM873.8304 798.72h-737.28c-22.528 0-40.96-18.432-40.96-40.96s18.432-40.96 40.96-40.96h737.28c22.528 0 40.96 18.432 40.96 40.96s-18.432 40.96-40.96 40.96z" p-id="24804" fill="#707070"></path></svg> 圖標</svg>，即可設置編輯器同步功能</p>
 
