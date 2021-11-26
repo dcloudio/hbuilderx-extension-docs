@@ -47,45 +47,45 @@ Method 2. Upload through the HBuilderX tool
 
   > From HBuilderX 2.8+, it supports to upload front-end web pages directly to uniCloud in HBuilderX.
 
-  In the menu 'release', select `upload website to server`.
+  In the menu 'publish', select `upload website to server`.
 
   - For uni-app projects, you can compile to h5 first, and then upload the compiled h5 directly. As shown below:
 
 <img src="https://img.cdn.aliyun.dcloud.net.cn/uni-app/uniCloud/unicloud-hx-hosting.jpg" style="border: 1px solid #eee; zoom: 80%;"/>
 
-  - For non-uni-app projects, you can choose the directory to upload, including static front-end file interfaces such as html, js, css, and pictures. As shown below
+  - For non-uni-app projects, you can choose the directory to upload, including static front-end file interfaces such as html, js, css, and pictures. As shown below:
 
 <img src="https://img.cdn.aliyun.dcloud.net.cn/uni-app/uniCloud/unicloud-hx-hosting-h5.jpg" style="border: 1px solid #eee; zoom: 80%;"/>
 
-  > HBuilderX 2.8.9+，支持前端网页托管管理器。
+  > HBuilderX 2.8.9+，support front-end web hosting manager.
 
-  在菜单视图中，或者在左下角状态栏中，点击`前端网页托管`，可在左侧打开前端网页托管管理器。如下图
+  In the menu view, or in the status bar in the lower left corner, click `Front-end web hosting` to open the front-end web hosting manager on the left. As shown below:
 
 <img src="/static/snapshots/tutorial/hosting.jpeg" style="border: 1px solid #eee; zoom: 50%;">
 
-  在前端网页托管管理器中，可以看到当前用户的服务空间列表，置灰表示该服务空间还没有开通前端网页托管，点击后可根据提示开通。（如上图中置灰的ali1服务空间）。
+In the front-end web hosting manager, you can see the current user's service space list, grayed out means that the front-end web hosting has not been activated in the service space, and you can activate it according to the prompts after clicking. (As shown in the grayed-out ali1 service space in the figure above).
 
-  点击可用的服务空间，在右侧可以看到远端的资源管理器，把本地文件拖进入，即可上传文件。
+  Click on the available service space, you can see the remote resource manager on the right, drag the local file into it, and you can upload the file.
 
-**注意事项**
+**Note**
 
-1. `前端网页托管`适于uni-app的h5页面发布。尤其是配搭uniCloud云开发，将彻底不用再租用任何传统的服务器。
-2. `前端网页托管`适于所有前后端分离的网站中的前端页面发布，包括pc网页。
-3. 仅支持html、CSS、JavaScript、字体、图片、音视频、json等文件。不支持php、java、python、ruby、go、c++等其他需要额外语言解释器解释的语言文件。
-4. 如果开发者需要做a/b test或灰度新功能，需要自己在js里写代码实现，不能通过路由到不同服务器实现。
-5. uni-app项目编译为h5时，在项目的manifest中配置二级目录。上传时无需重复设置二级目录。
-6. 一个`前端网页托管`的空间里，可以上传多个网站，用不同目录区分开，访问时使用同一个域名后加不同目录的方式访问。不支持每个目录单独设置不同域名。
-7. 部署到不同的服务空间的`前端网页托管`内的网站，也是可以访问同一个服务空间内的云函数的，只需要在部署云函数的服务空间的`跨域配置`内添加部署前端页面的域名即可
+1. `Front-end web hosting` is suitable for publishing h5 pages of uni-app. Especially with uniCloud cloud development, there will be no need to rent any traditional servers at all.
+2. `Front-end web hosting` is suitable for publishing front-end pages in all websites where the front-end and back-end are separated, including PC web pages.
+3. Only supports html, CSS, JavaScript, fonts, pictures, audio and video, json and other files. It does not support php, java, python, ruby, go, c++ and other language files that require interpretation by an additional language interpreter.
+4. If developers need to do a/b test or grayscale new functions, they need to write code in js to implement them, and they cannot be implemented by routing to different servers.
+5. When the uni-app project is compiled to h5, configure the secondary directory in the project's manifest. There is no need to set the secondary directory repeatedly when uploading.
+6. In a `front-end web hosting` space, multiple websites can be uploaded, separated by different directories, and accessed by using the same domain name followed by different directories. It is not supported to set a different domain name separately for each directory.
+7. Websites in `front-end web hosting` deployed to different service spaces can also access cloud functions in the same service space. You only need to add deployment front-end pages to the `cross-domain configuration` of the service space where cloud functions are deployed. Domain name
 
-## 基础配置@base-config
+## Basic Configuration @base-config
 
-本章节介绍`前端网页托管`提供的各种配置项目说明。其中配置域名、网站首页、404页面，是阿里云和腾讯云均支持的，其他配置仅腾讯云支持。
+This chapter introduces the description of various configuration items provided by `Front End Web Hosting`. The configuration of domain name, website homepage, and 404 page are supported by both Alibaba Cloud and Tencent Cloud, and other configurations are only supported by Tencent Cloud.
 
-### 配置域名@domain
+### Configure domain@domain
 
 `前端网页托管`，自带一个测试域名，仅用于产品体验及测试可快速体验前端网页部署的完整流程，该域名有如下限制：
   + 阿里云每分钟最多60次请求，默认每日仅允许10个公网IP访问，超出部分，需通过手动方式将来源IP加入白名单,IP白名单也会有数量限制
-  + 腾讯云限速100K/s
+  + 腾讯云限速100K/sd
 
 业务如要上线商用，请配置自己的正式域名，配置自己的正式域名后，将不受上述测试域名的限制。（尤其注意阿里云测试域名是公共的，任意一个服务空间如果有上传恶意文件被投诉，会导致测试域名被微信内置浏览器整体禁封）
 
