@@ -278,11 +278,11 @@ If you deploy multiple projects to a service space, you can use different basic 
 - The maximum storage usage of web hosting is 2GB
 - The maximum limit for a single file is 50MB 
 
-### Word Interpretation
+### Glossary
 
 **CDN return-to-source traffic**
 
-Refers to the traffic generated when the CDN return-to-source storage after CDN acceleration is turned on.
+Refers to the traffic generated when the CDN request files\functions\codes from original web hosting after CDN acceleration is turned on.
 
 <!--
 ### Tencent Cloud Price List
