@@ -5,7 +5,7 @@
 HBuilder has three ways to debug the front-end code，for example watch while changing, running on real device, and webkit remote debugg on real device. 
 Webkit remote debug is actually an official service provided by Google and Apple. This article mainly introduces how to debug webpages running in webview on Android phones under google's chrome.
 
-*Series articles navigation:*
+*Articles Navigation:*
 - [Method 1 - watch while changing](http://ask.dcloud.net.cn/article/483)
 - [Method 2 - running on real device](http://ask.dcloud.net.cn/article/484)
 - [Method 3 - webkit remote debugg on real device (Android Phone)]
@@ -25,44 +25,45 @@ The debugging effect is shown in the figure:
 
 
 ## Real device debugging environment
-如果你有Android设备，并且系统是4.4以上版本，那么可以直接使用Chrome连接进行调试。
+If you have an Android device and the system is version 4.4 or higher, you can directly use Chrome to connect for debugging.
 
-### 检测设备版本
-打开系统“设置”-> “关于”，查看Android版本：
+### Get device version
+Open the system "Settings" -> "About" to check the Android version:
 
 ![](http://www.dcloud.io/docs/a/adebug/3.1.png)
 
-Android版本必需是4.4及以上，否则无法进行应用调试。请参考“模拟器调试环境”章节使用模拟器进行应用调试。
+The Android version must be 4.4 and above, otherwise application debugging cannot be performed. Please refer to the "Simulator Debugging Environment" chapter to use the simulator for application debugging.
 
-### 显示开发者选项
-Android设备默认“开发者选项”是隐藏的，需要打开“设置”-> “关于”页面，多次（7次）点击“版本号”项，返回到“设置”页面可显示“开发者选项”：
+### Show developer options
+Android device default "Developer Options" is hidden, you need to open the "Settings" -> "About" page, click on the "Version Number" item multiple times (7 times), return to the "Settings" page to display "Developer Options" :
 
 ![](http://www.dcloud.io/docs/a/adebug/3.2.png)
 
-点击“开发者选项”，打开“开发者选项”设置页面。
+Click "Developer Options" to open the "Developer Options" settings page.
 
-### 开启USB调试
+### Turn on USB debugging
 
 ![](http://www.dcloud.io/docs/a/adebug/3.3.png)
 
-### 连接PC
-Android设备通过USB数据线连接到PC，如果系统无法正确识别，则需要安装驱动，通常可到设备制造商的官方网站下载安装。也可使用第三方手机助手软件安装，如“360手机助手”、“应用宝”等。
+### Connect PC
 
-PC识别到设备后，这时可通过HBuilder的真机运行功能进行连接并安装HBuilder应用。
+The Android device is connected to the PC via a USB data cable. If the system cannot recognize it correctly, you need to install the driver, which can usually be downloaded and installed from the official website of the device manufacturer. You can also use third-party mobile assistant software to install, such as "360 mobile assistant", "app treasure" and so on.
 
-## 使用HBuilder调试
-在HBuilder最新版里，点运行菜单，或者HBuilderX的视图菜单，点里面的“打开Webview调试模式”。
-确保手机连接正常、确保启动了可调试的app，那么右侧或底部会列出可调试的页面。点击调试/inspect即可打开chrome控制台进行调试。
+After the PC find the device, you can connect and install the HBuilder application through the real device running function of HBuilder.
 
-**注意：chrome83起调整了协议。HBuilderX2.8起适配了新协议。如果你的chrome升级到83以上版本，需更新HBuilderX到2.8+才能正常使用**
+## Use HBuilder to debug
+In the latest version of HBuilder, click the run menu, or the view menu of HBuilderX, and click "Open Webview debugging mode" inside.
+Make sure that the phone is connected and the debuggable app is activated, then the debuggable pages will be listed on the right or bottom. Click debug/inspect to open the chrome console for debugging.
+
+**Note：Since chrome83, the agreement has been adjusted. Since HBuilderX2.8, the new protocol has been adapted. If your chrome is upgraded to version 83 or higher, you need to update HBuilderX to 2.8+**
 
 
 ================================================
-**正常情况下，开发者阅读到此结束。后续文档是Android模拟器的安装教程和不使用HBuilder调试而使用chrome调试的教程**
+**This is the end of the developer's reading. The follow-up documents are the installation tutorial of the Android emulator and the tutorial of using chrome to debug without using HBuilder.**
 ================================================
 ================================================
-## 附录：Android模拟器调试环境
-如果你没有Android手机，又想调试Android应用，那么你需要安装Google官方的Android模拟器。
+## Appendix: Android emulator debugging environment
+If you don't have an Android phone and want to debug Android applications, then you need to install Google's official Android emulator.
 注意三方模拟器如genymotion、海马玩、Bluestacks蓝叠等模拟器只能真机运行，不能debug调试。
 
 下文仅介绍Google官方模拟器的安装方法。由于Google经常更新，也建议开发者随时关注网上的其他更新教程。
