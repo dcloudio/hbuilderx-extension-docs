@@ -1,28 +1,30 @@
-# Chrome debugging Android Applications
+# Chrome Debugging Android Applications
 
 > Note that this document only applies to 5+App applications.
 
-HBuilder changes the debugging method of front-end code while watching and running on real machine。webkit remote debug其实是google、apple官方提供的服务，本文主要介绍google的chrome下如何调试Android手机上webview里运行的网页。
-*系列文章目录导航：*
-- [调试方式介绍一 边改边看](http://ask.dcloud.net.cn/article/483)
-- [调试方式介绍二 真机运行](http://ask.dcloud.net.cn/article/484)
-- [调试方式介绍三 webkit remote debug之Chrome调试Android手机]
-- [调试方式介绍四 webkit remote debug之Safari调试iOS手机](http://ask.dcloud.net.cn/article/143)
+HBuilder has three ways to debug the front-end code，for example watch while changing, running on real device, and webkit remote debugg on real device. 
+Webkit remote debug is actually an official service provided by Google and Apple. This article mainly introduces how to debug webpages running in webview on Android phones under google's chrome.
 
-## Chrome调试Android手机之概述
+*Series articles navigation:*
+- [Method 1 - watch while changing](http://ask.dcloud.net.cn/article/483)
+- [Method 2 - running on real device](http://ask.dcloud.net.cn/article/484)
+- [Method 3 - webkit remote debugg on real device (Android Phone)]
+- [Method 4 - webkit remote debugg on real device (iOS Phone)](http://ask.dcloud.net.cn/article/143)
 
-调试是软件开发过程中很重要的环节，它能帮助开发者快速的定位和解决开发过程中碰到的问题。对于HTML5的开发，大家都知道Chrome的DevTools工具有强大的功能和友好的用户体验，不仅能快速方便调试JavaScript、检查HTML页面DOM结构、实时同步更新元素CSS样式，还能跟踪分析页面资源加载性能等问题。对于移动平台的开发者来说，从Android4.4开始，也可以通过Chrome的DevTools工具连接设备对于应用进行调试。
+## Overview of Chrome debugging Android phones
 
-调试效果如图所示：
+Debugging is a very important part of the software development process, it can help developers quickly locate and solve the problems encountered in the development process. For the development of HTML5, everyone knows that Chrome's DevTools tool has powerful functions and friendly user experience. It can not only debug JavaScript quickly and easily, check the DOM structure of HTML pages, update the CSS styles of elements in real time, but also track and analyze page resource loading performance and other issues. For developers of mobile platforms, from Android 4.4, you can also use Chrome's DevTools to connect the device to debug the application.
 
-![Android 调试效果图](http://www.dcloud.io/docs/a/adebug/1.1.png)
+The debugging effect is shown in the figure:
 
-**软件要求**
-- Android设备或模拟器的系统版本为4.4及以上；
+![Android Debugging](http://www.dcloud.io/docs/a/adebug/1.1.png)
+
+**Software requirements**
+- The system version of the Android device or emulator is 4.4+;
 
 
 
-## 真机调试环境
+## Real device debugging environment
 如果你有Android设备，并且系统是4.4以上版本，那么可以直接使用Chrome连接进行调试。
 
 ### 检测设备版本
