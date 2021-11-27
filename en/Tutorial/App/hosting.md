@@ -59,7 +59,7 @@ Method 2. Upload through the HBuilderX tool
 
   > HBuilderX 2.8.9+，support front-end web hosting manager.
 
-  In the menu view, or in the status bar in the lower left corner, click `Front-end web hosting` to open the front-end web hosting manager on the left. As shown below:
+  In the menu view, or in the status bar in the lower left corner, click `Web Hosting` to open the front-end web hosting manager on the left. As shown below:
 
 <img src="/static/snapshots/tutorial/hosting.jpeg" style="border: 1px solid #eee; zoom: 50%;">
 
@@ -85,53 +85,54 @@ This chapter introduces the description of various configuration items provided 
 
 `Front-end web hosting`, comes with a test domain name, which is only used for product experience and testing to quickly experience the complete process of front-end web deployment. The domain name has the following restrictions:
   + Alibaba Cloud has a maximum of 60 requests per minute. By default, only 10 public network IPs are allowed to visit per day. If the excess is exceeded, the source IP must be manually added to the whitelist, and the IP whitelist will also have a limit on the number
-  + Tencent Cloud speed limit 100K/sd
+  + Tencent Cloud speed limit 100K/s
 
-业务如要上线商用，请配置自己的正式域名，配置自己的正式域名后，将不受上述测试域名的限制。（尤其注意阿里云测试域名是公共的，任意一个服务空间如果有上传恶意文件被投诉，会导致测试域名被微信内置浏览器整体禁封）
-If the business is to be deployed, please configure your own official domain name. After configuring your own official domain name, you will not be restricted by the above-mentioned test domain name. (In particular, note that the Alibaba Cloud test domain name is public. If any service space is complained of uploading malicious files, the test domain name will be banned by the built-in WeChat browser as a whole)
+If the business is to be deployed, please set your own domain name. After configuring your own domain name, you will not be restricted by the above-mentioned test domain. (Note: The Alibaba Cloud test domain is public. If any service space is complained of uploading malicious files, the test domain will be banned by the built-in WeChat browser.)
 
 
-前端网页托管配置自己域名的步骤如下：
+The steps for web hosting to configure your own domain are as follows:
 
-1. 登录[uniCloud控制台](https://unicloud.dcloud.net.cn/)。
-2. 进入前端网页托管页面，选择【基础设置】，单击【添加域名】，进行域名添加，如下图所示：
+1. Login[uniCloud Console](https://unicloud.dcloud.net.cn/)。
+2. Open "Web Hosting" page, select [Basic Configuration], click [Add Domain] to add new domain name, as shown below:
 
 <img src="https://dcloud-img.oss-cn-hangzhou.aliyuncs.com/uni-app/uniCloud/uniCloud-hosting-domain-add.jpg " style="border: 1px solid #eee; zoom: 80%;" />
 
-3. 添加后，系统会自动分配一个 CNAME 域名，CNAME 域名不能直接访问，您需要在域名服务提供商处完成 CNAME 配置（将添加的域名CNAME到此域名），配置生效后，新域名即可使用。
+3. The system will automatically assign a CNAME domain. The CNAME cannot be asscessed directly and you have to add CNAME configuration at the domain name service provider (DNS). After the configuration takes effect, the new domain name can be used.
 
-阿里云现已支持http强制跳转https，在上述添加界面打开对应开关即可
+Alibaba Cloud supports HTTP forced redirection to https, please turn on the configuration on above setting page.
 
-**域名备案**
+**Domain Registration**
 
-如果你已经有备案过的域名，直接解析过来即可；如果你要新注册域名，首先自行在网上购买，然后注意域名如果想在国内正常绑定阿里云或腾讯云，需要域名备案。这里的备案流程和传统云主机略有不同，涉及一个uniCloud没有固定ip的问题。此时可以去买花生壳的备案服务；也可以临时买一个短期传统云，走传统备案；还有授权码方案，这里有开发者分享的经验贴：[https://ask.dcloud.net.cn/article/38116](https://ask.dcloud.net.cn/article/38116)
+If you already have a registered domain name, just resolve it directly; You have to buy domain name if you want to register a new domain name. Please note: You must receive a ICP License (Internet Content Provider License) if you want to use Alibaba Cloud or Tencent Cloud. The registation process here is slightly different from traditional cloud hosts, and there is a problem that uniCloud does not have a fixed IP. So you can purchase domain registation service from oray company or use traditional domain registation by temporarily purchasing a short-term traditional cloud. There is also an authorization code solution, please see the posts shared by the developers:
+[https://ask.dcloud.net.cn/article/38116](https://ask.dcloud.net.cn/article/38116)
 
-**关于证书内容与私钥**
+**About certificate and private key**
 
-域名如果使用https，则需要证书。证书签发后，可下载到本地，然后将内容复制黏贴到uniCloud web控制台。
+A certificate is required if the domain name use https. After the certificate is issued, it can be downloaded to the local, and then the content can be copied and pasted to the uniCloud web console.
 
-注意：各运营商下载证书的后缀可能不同，一般来说，`.key`文件对应私钥，`.pem`或`.crt`文件对应证书。这几种类型文件都是文本内容，可选择记事本打开查看内容。
+Note: The suffix of the certificate may be different. The `.key` file is the private key, and the `.pem` or `.crt` file is the certificate. You can use Notepad to open and view the content of these files.
 
-如果您还没有SSL证书，点此[快速获取](https://cloud.tencent.com/act/cps/redirect?redirect=33848&cps_key=c858f748f10419214b870236b5bb94c6)。
 
-**注意事项**
+If you have not SSL certificate, click here[Quick Request](https://cloud.tencent.com/act/cps/redirect?redirect=33848&cps_key=c858f748f10419214b870236b5bb94c6)。
 
-- 在阿里云开启了泛域名加速的情况下，对应的子域名可能无法配置到前端网页托管，**这种情况下可能会提示：该域名已被添加过，不能重复添加**
-- 暂不支持绑定中文域名
+**Note**
 
-### 路由规则@routing
+- When you enabled *.domainname acceleration on Alibaba Cloud, the subdomain name may not be configured for web hosting. **In this case, you may be prompted: The domain name has already been added and cannot be added repeatedly***
+- Not support binding Chinese domain names
 
-**网站首页**
+### @routing
 
-设置网站首页文档名
+**Home Page**
 
-**404页面**
+Set home page name
 
-访问静态网站出错后返回的页面。
+**404 page**
 
-**重定向规则**
+404 page returned after an error occurred while visiting the website.
 
-> 仅腾讯云支持
+**Redirection rules**
+
+> Only supported by Tencent Cloud
 
 支持以下三种组合配置
 
