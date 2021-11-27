@@ -120,7 +120,7 @@ If you have not SSL certificate, click here[Quick Request](https://cloud.tencent
 - When you enabled *.domainname acceleration on Alibaba Cloud, the subdomain name may not be configured for web hosting. **In this case, you may be prompted: The domain name has already been added and cannot be added repeatedly***
 - Not support binding Chinese domain names
 
-### @routing
+### Routing @routing
 
 **Home Page**
 
@@ -134,71 +134,72 @@ Set home page name
 
 > Only supported by Tencent Cloud
 
-支持以下三种组合配置
+Support the following three combination configurations.
 
-- 类型：错误码、规则：替换路径。将特定错误码的请求重定向到目标文档，仅支持对4xx错误码。
+- Type: Error code, rule: replace path。Redirect requests for specific error codes to the target document. Only 4xx error codes are supported.
 
-例：将404错误码重定向至index.html，需做如下配置（uni-app项目使用history模式发行到h5时可以使用此配置）：
+Example: To redirect the 404 error code to index.html, you need to do the following configuration (This configuration can be used when the uni-app project is released to h5 in history mode):
 
-|类型		|描述	|规则			|替换内容		|
+|Type		|Description	|Rule			|Replace Content		|
 |:-:		|:-:	|:-:			|:-:				|
-|错误码	|404	|替换路径	|index.html	|
+|Error Code	|404	|Replace path	|index.html	|
 
-- 类型：前缀匹配、规则：替换路径。将匹配到特定前缀的请求重定向到目标文档
+- Type: Prefix match, Rule: Replace path. Redirect requests matching a specific prefix to the target document.
 
-例：当您删除了images/文件夹（即删除了具有前缀images/的所有对象）。您可以添加重定向规则，将具有前缀images/的任何对象的请求重定向至test.html页面。
+For example: When you delete the images/ folder (that is, delete all objects with the prefix images/). You can add redirection rules to redirect requests for any object with the prefix images/ to the test.html page.
 
-|类型			|描述		|规则			|替换内容	|
+|Type			|Description		|Rule			|Replace Content	|
 |:-:			|:-:		|:-:			|:-:			|
-|前缀匹配	|images/|替换路径	|test.html|
+|Prefix match	|images/|Replace path	|test.html|
 
-- 类型：前缀匹配、规则：替换前缀。将匹配到特定前缀的请求中的前缀替换为替换内容，例：
+- Type: Prefix match, Rule: Replace prefix. Replace the prefix in the request that matches a specific prefix with the replacement content, for example:
 
-例：当您将文件夹从docs/重命名为documents/后，用户在访问docs/文件夹会产生错误。所以，您可以将前缀docs/的请求重定向至documents/。
+For example: When you rename the folder from docs/ to documents/, users will get an error when accessing the docs/ folder. Therefore, you can redirect requests with the prefix docs/ to documents/.
 
-|类型			|描述	|规则			|替换内容		|
+|Type			|Description	|Rule			|Replace Content		|
 |:-:			|:-:	|:-:			|:-:				|
-|前缀匹配	|docs/|替换前缀	|documents/	|
+|Prefix match	|docs/|Replace prefix	|documents/	|
 
-### 缓存配置@cache
+### Cache Configuration @cache
 
-> 仅腾讯云支持
+> Only supported by Tencent Cloud
 
-- 文件类型：根据填入的文件后缀进行缓存过期时间设置，格式为.jpg形式，不同后缀之间用;间隔。
-- 文件夹：根据填入的目录路径进行缓存过期时间设置，格式为/test形式，无需以/结尾，不同目录之间用;间隔。
-- 全路径文件：指定完整的文件路径进行缓存过期时间设置，格式为/index.html，支持完整路径加文件类型匹配模式，如/test/*.jpg。
+- File Type: Set the cache expiration time according to the file suffix. The format is .jpg, and the interval is used between different suffixes.
+- Folder: Set the cache expiration time according to the directory path. The format is /test, and there is no need to end with /. Use interval between different directories.
+- Full Path File: Specify the full file path to set the cache expiration time, the format is /index.html, and the full path plus file type matching mode is supported, such as /test/*.jpg.
 
-**注意**
+**Note**
 
-- 缓存过期规则最多可配置10条。
-- 多条缓存过期规则之间的优先级为底部优先。
-- 缓存过期时间最多可设置365天。
+- Up to 10 cache expiration rules can be configured.
+- The priority among multiple cache expiration rules is from bottom to top.
+- The cache expiration time can be set up to 365 days.
 
-### 防盗链配置@referer
+### Prevent Hotlinking Configuration @referer
 
-> 仅腾讯云支持
+> Only supported by Tencent Cloud
 
-**referer 黑名单：**
+**referer Blacklist: **
 
-- 若请求的 referer 字段匹配黑名单内设置的内容，CDN 节点拒绝返回该请求信息，直接返回403状态码。
-- 若请求的 referer 不匹配黑名单内设置的内容，则 CDN 节点正常返回请求信息。
-- 当勾选包含空 referer 选项时，此时若请求 referer 字段为空或无 referer 字段（如浏览器请求），则 CDN 节点拒绝返回该请求信息，返回403状态码。
+- If the referer field of the request matches the content set in the blacklist, the CDN node refuses to return the requested information and returns 403 error code.
+- If the requested referer does not match the content set in the blacklist, the CDN node returns the requested information.
+- When the option of including empty referer is checked, if the request referer field is empty or there is no referer field (such as a browser request), the CDN node refuses to return the request information and returns 403 error code.
 
-**referer白名单：**
+**referer Whitelist：**
 
-- 若请求的 referer 字段匹配白名单设置的内容，则 CDN 节点正常返回请求信息。
-- 若请求的 referer 字段不匹配白名单设置的内容，则 CDN 节点拒绝返回该请求信息，会直接返回状态码403。
-- 当设置白名单时，CDN 节点只能返回符合该白名单内字符串内容的请求。
-- 当勾选包含空 referer 选项时，此时若请求 referer 字段为空或无 referer 字段（如浏览器请求），则 CDN 正常返回请求信息。
+- If the requested referer field matches the content set in the whitelist, the CDN node returns the requested information.
+- If the referer field of the request does not match the content set in the whitelist, the CDN node will refuse to return the requested information and will returns 403 error code.
+- When the whitelist is set, the CDN node can only return requests that match the string content in the whitelist.
+- When the option of including empty referer is checked, if the request referer field is empty or there is no referer field (such as a browser request), the CDN will return the request information.
 
-**配置规则：**
+**Configuration Rule: **
 
-防盗链支持域名 / IP 规则，匹配方式为前缀匹配（仅支持路径情况下，域名的前缀匹配不支持），即假设配置名单为www.abc.com，则www.abc.com/123匹配，www.abc.com.cn不匹配；假设配置名单为127.0.0.1，则127.0.0.1/123也会匹配。
-防盗链支持通配符匹配，即假设名单为*.qq.com，则www.qq.com、a.qq.com均会匹配。
+Anti-hotlinking supports domain name/IP rules, and the matching method is prefix matching (only path is supported, domain name prefix matching is not supported), that is, if the configuration list is www.abc.com, then www.abc.com/123 will match, www.abc.com.cn does not match; assuming the configuration list is 127.0.0.1, 127.0.0.1/123 will also match.
+Anti-hotlinking supports wildcard matching, for example, if the list is *.qq.com, both www.qq.com and a.qq.com will match.
 
-### IP黑白名单配置@ip-filter
 
-> 仅腾讯云支持
+### IP Blacklist @ip-filter
+
+> Only supported by Tencent Cloud
 
 **IP 黑名单**
 
@@ -217,7 +218,7 @@ Set home page name
 
 ### 默认域名IP白名单@default-domain-ip-whitelist
 
-> 仅阿里云支持
+> Only supported by Alibaba Cloud
 
 为保障默认域名不被滥用，阿里云对默认域名做出了如下限制：每天前10个IP可以直接访问，超出10个IP后需要配置IP白名单才可以访问
 
@@ -225,7 +226,7 @@ Set home page name
 
 ### IP访问限频配置@ip-freq
 
-> 仅腾讯云支持
+> Only supported by Tencent Cloud
 
 **配置说明**
 
