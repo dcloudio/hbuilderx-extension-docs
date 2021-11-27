@@ -180,14 +180,14 @@ For example: When you rename the folder from docs/ to documents/, users will get
 
 **referer Blacklist: **
 
-- If the referer field of the request matches the content set in the blacklist, the CDN node refuses to return the requested information and returns 403 error code.
+- If the referer field of the request matches the content set in the blacklist, the CDN node refuses to return the requested information and returns 403 status code.
 - If the requested referer does not match the content set in the blacklist, the CDN node returns the requested information.
-- When the option of including empty referer is checked, if the request referer field is empty or there is no referer field (such as a browser request), the CDN node refuses to return the request information and returns 403 error code.
+- When the option of including empty referer is checked, if the request referer field is empty or there is no referer field (such as a browser request), the CDN node refuses to return the request information and returns 403 status code.
 
 **referer Whitelist：**
 
 - If the requested referer field matches the content set in the whitelist, the CDN node returns the requested information.
-- If the referer field of the request does not match the content set in the whitelist, the CDN node will refuse to return the requested information and will returns 403 error code.
+- If the referer field of the request does not match the content set in the whitelist, the CDN node will refuse to return the requested information and will returns 403 status code.
 - When the whitelist is set, the CDN node can only return requests that match the string content in the whitelist.
 - When the option of including empty referer is checked, if the request referer field is empty or there is no referer field (such as a browser request), the CDN will return the request information.
 
@@ -197,123 +197,126 @@ Anti-hotlinking supports domain name/IP rules, and the matching method is prefix
 Anti-hotlinking supports wildcard matching, for example, if the list is *.qq.com, both www.qq.com and a.qq.com will match.
 
 
-### IP Blacklist @ip-filter
+### IP Blacklist Configuration @ip-filter
 
 > Only supported by Tencent Cloud
 
-**IP 黑名单**
+**IP Blacklist**
 
-用户端 IP 匹配黑名单中的 IP 或 IP 段时 ，访问 CDN 节点时将直接返回403状态码。
+When the client IP matches the IP or IP segment in the blacklist, the 403 status code will be returned when accessing the CDN node.
 
-**IP 白名单**
+**IP Whitelist*
 
-用户端 IP 未匹配白名单中的 IP 或 IP 段时 ，访问 CDN 节点时将直接返回403状态码。
+When the client IP does not match the IP or IP segment in the whitelist, the 403 status code will be returned directly when accessing the CDN node.
 
-**名单规则**
+**Blacklist/Whitelist Rules**
 
-- IP 黑名单与 IP 白名单二选一，不可同时配置。
-- IP 段仅支持 /8、/16、/24 网段，不支持其他网段。
-- 不支持IP：端口形式的黑白名单
-- 名单最多可输入50个。
+- Only one of the IP blacklist and the IP whitelist can be selected, not at the same time.
+- The IP segment only supports /8, /16, /24 network segments, and does not support other network segments.
+- Not support IP: black and white list with port.
+- Up to 50 lists.
 
-### 默认域名IP白名单@default-domain-ip-whitelist
+### Default domain name IP whitelist @default-domain-ip-whitelist
 
 > Only supported by Alibaba Cloud
 
-为保障默认域名不被滥用，阿里云对默认域名做出了如下限制：每天前10个IP可以直接访问，超出10个IP后需要配置IP白名单才可以访问
+In order to ensure that the default domain name is not abused, Alibaba Cloud has made the following restrictions on the default domain name: the first 10 IPs can be accessed directly every day, and the IP whitelist needs to be configured after the 10 IPs can be accessed.
 
-仅支持配置ipv4，可以配置IP或者IP网段，掩码位数取值范围24-31。最多可同时配置三个，多个之间用逗号隔开，如：123.120.5.235/24,123.123.123.123
+Only ipv4 is supported, IP or IP network segment can be configured, and the mask digits range from 24-31. Up to three can be configured at the same time, separated by commas, such as:
+123.120.5.235/24,123.123.123.123
 
-### IP访问限频配置@ip-freq
+### IP access frequency limit configuration @ip-freq
 
 > Only supported by Tencent Cloud
 
-**配置说明**
+**Configuration Instructions**
 
-- 配置开启后，超出 QPS 限制的请求会直接返回514，设置较低频次限制可能会影响您的正常高频用户的使用，请根据业务情况、使用场景合理设置阈值。
-- 限频仅针对与单 IP 单节点访问次数进行约束，若恶意用户海量 IP 针对性的进行全网节点攻击，则通过此功能无法进行有效控制。
+- After the configuration is enabled, requests that exceed the QPS limit will be returned to 514. Setting a lower frequency limit may affect the use of your high-frequency users. Please set the threshold reasonably according to business conditions and usage scenarios.
 
-## 最佳实践
+- Frequency limitation only restricts the number of visits to a single IP and a single node. If malicious users carry out targeted attacks with massive IPs, this function is unstoppable.
 
-### 部署uni-app项目@host-uni-app
+## Best Practices
 
-uni-app项目根据路由模式不同需要做不同的配置
+### Deploy uni-app project @host-uni-app
 
-- 使用hash模式时，无需特别的配置即可正常使用
+The uni-app project needs to be configured differently according to different routing modes.
 
-- 使用history模式时可以配置如下规则
+- When using hash mode, it can be used without special configuration
 
-  + 腾讯云配置重定向规则将404错误码重定向至`index.html`
-  + 阿里云配置错误文档为`index.html`
+- The following rules can be configured when using history mode
 
-手动部署uni-app项目时需要注意将文件部署在配置的h5基础路径下。**HBuilderX一键部署时会自动按照manifest.json内配置的基础路径进行部署**
+  + Tencent Cloud configures redirection rules to redirect 404 error codes to `index.html`
+  + Alibaba Cloud configuration error document to `index.html`
 
-如果部署多个项目到一个服务空间可以使用不同的基础路径来区分，需要注意的是这多个项目中只有一个项目可以使用history模式
+When manually deploying uni-app projects, you need to pay attention to deploying the files under the  h5 base path. **HBuilderX one-click deployment will automatically follow the basic path configured in manifest.json for deployment**
 
-## 腾讯云计费详细说明
+If you deploy multiple projects to a service space, you can use different basic paths to distinguish them. It should be noted that only one of these multiple projects can use the history mode
 
-|套餐名		|前端网页部署增值包1|前端网页部署增值包2|前端网页部署增值包3|
+## Tencent Cloud Price List
+
+|Package		|Package1|Package2|Package3|
 |:-:			|:-:								|:-:								|:-:								|
-|容量			|5G									|10G								|100G								|
-|流量			|5G/月							|50G/月							|500G/月						|
-|读次数		|150万次/月					|200万次/月					|1500万次/月				|
-|写次数		|60万次/月					|100万次/月					|600万次/月					|
-|回源流量	|5G/月							|10G/月							|150G/月						|
+|Capacity			|5G									|10G								|100G								|
+|Traffic			|5G/月							|50G/月							|500G/月						|
+|Reads		|150万次/月					|200万次/月					|1500万次/月				|
+|Writes		|60万次/月					|100万次/月					|600万次/月					|
+|Return Traffic	|5G/月							|10G/月							|150G/月						|
 
 <!--
 |费用			|9.9元/月						|35元/月						|330元/月						|
 -->
 
-**注意**
+**Note**
 
-- 资源统计页面展示的数据可能会有延迟
-- 读次数、写次数、回源流量为系统限制，在现有套餐的容量、流量限制下一般不会超出
-- 腾讯云前端网页部署套餐到期之后会保留7天，超过7天将会销毁
-- 如果服务空间是包月套餐，在服务空间到期但是前端网页托管未到期的情况下，前端网页托管也会随服务空间销毁，请注意给服务空间续费
+- The data displayed on the resource statistics page may be delayed
+- The number of reads, writes, and return-to-source traffic are system limits, and generally will not exceed the capacity and traffic limits of the existing package
+- Tencent Cloud's web page deployment package will be retained for 7 days after expiration, and will be destroyed after 7 days
+- If the hosting service is a monthly package, if the hosting service expires but web hosting has not expired, web hosting will also be destroyed with the hosting. Please pay attention to renew the hosting.
 
-## 阿里云使用限制
+## Alibaba Cloud usage restrictions
 
-- 前端网页部署限制为最大存储空间用量2GB
-- 单文件最大限制为50MB
+- The maximum storage usage of web hosting is 2GB
+- The maximum limit for a single file is 50MB 
 
-### 名词解释
+### Word Interpretation
 
-**CDN 回源流量**
+**CDN return-to-source traffic**
 
-指开启了 CDN 加速后，CDN 回源存储时产生的流量。
+Refers to the traffic generated when the CDN return-to-source storage after CDN acceleration is turned on.
 
 <!--
-### 腾讯云费用说明
+### Tencent Cloud Price List
 
-**新购**
+**New purchase**
 
-- 新购时某套餐时有效期按自然月计。例：2020年5月28日购买2个月套餐，则套餐有效期至2020年7月28日23时59分59秒
+- When you buy a package, the validity period is calculated in natural months. Example: If you purchase a 2-month package on May 28, 2020, the package will be valid until 23:59:59 on July 28, 2020
 
-**续费**
+**Renew**
 
-- 续费逻辑和新购一样以自然月计。例：当前有效期至2020年7月28日23时59分59秒，续费一个月，则套餐有效期至2020年8月28日23时59分59秒
+- The renewal is calculated in natural months like new purchases. Example: The current validity period will be until 23:59:59 on July 28, 2020. If the renewal is one month, the package will be valid until 23:59:59 on August 28, 2020.
 
-**升配**
+**Upgrade**
 
-- 升配费用 = 按月升配差价 × 升配天数 / (365 / 12) × 适用折扣
-  - 按月升配差价：新老配置原价按月的单价。
-  - 升配的费用按天计算：升配天数 = 资源到期时间 - 当前时间。
-  - 适用折扣：根据升配天数向下匹配适用折扣。
-  - 折扣为现网生效的折扣。
-- 升配不影响资源到期时间。
+- Upgrade Cost = Monthly upgrade price difference × Upgrade days / (365 / 12) × Discount
+  - Monthly upgrade price difference: the monthly unit price of the original price of the new and old configuration.
+  - The cost of the upgrade is calculated on a daily basis: the number of days of the upgrade = the resource expiration time - the current time.
+  - Discount：The applicable discount is matched downwards according to the number of upgrade days.
+  - The discount is the discount in effect on the live network.
+- Upgrading does not affect the resource expiration time.
 
-**升配示例**
+**Example of Upgrade**
 
->以下价格仅作示例用，非官网实际价格，实际单价请以购买时为准。
+>The following prices are for example only, not the actual prices on the official website, and the actual unit price shall prevail at the time of purchase.
 
-举例：
+For Example:
 
-2019年11月1日，购买3个月专业版套餐，到期时间为2020年2月1日23时59分59秒，包年包月单价为100元/月。
 
-2019年12月15日，将该套餐升级为1000元/月的企业版套餐。
+On November 1, 2019, you can purchase a 3-month professional package. The expiration time is 23:59:59 on February 1, 2020. The unit price of the annual and monthly subscription is 100 yuan/month.
 
-- 按月升配差价 = 1000 - 100 = 900元/月
-- 升配天数 = 31 × 1 + 15 + 1 = 47天（1指1月份为31天，15指12月份剩余15天， 1指2月份1天）
-- 适用折扣：暂无折扣
-- 升配费用 = （1000 - 100） × 47 /（365 / 12） = 1390.53元
+On December 15, 2019, the package will be upgraded to an enterprise package of 1,000 yuan/month.
+
+- Monthly upgrade price difference = 1000 - 100 = 900元/Month
+- Days of Upgrade = 31 × 1 + 15 + 1 = 47 Days（1 means 31 days in January, 15 means 15 days remaining in December, 1 means 1 day in February）
+- Discount：No valid discount
+- Cost of Upgrade = （1000 - 100） × 47 /（365 / 12） = 1390.53 Yuan
 -->
