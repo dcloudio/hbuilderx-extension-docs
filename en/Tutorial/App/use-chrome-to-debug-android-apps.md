@@ -320,45 +320,47 @@ After the application is launched, you can connect to it for debugging through C
 
 
 ### Use Chrome to debug
-我们推荐开发者直接使用HBuilder的调试，详见上文。这样可以免翻墙。
-如果你不使用HBuilder的调试，而要自己使用chrome调试，可以看这里的教程，注意要翻墙。
-**检测Chrome版本号**
-Chrome 30及以上版本才支持Android设备调试，打开Chrome的关于页面查看：
+We recommend that developers directly use HBuilder for debugging, see above for details. This can avoid to use VPN.
+If you don't use HBuilder's debugging, but you want to use chrome to debug by yourself, you can watch the tutorial here, and pay attention to overcoming the wall.
+**Check Chrome Version**
+Chrome 30 and above only support debugging on Android devices. Open Chrome's About page to view:
 
 ![](http://www.dcloud.io/docs/a/adebug/4.2.1.png)
-要求最低Chrome30以上版本，如果版本太低则需更新版本，推荐使用最新版本。
+A minimum version of Chrome30 or above is required. If the version is too low, an updated version is required. The latest version is recommended.
 
-**打开设备检查页面**
-在Chrome地址栏，输入“chrome://inspect”或通过“菜单”->“工具”->“检查设备”打开设备检查页面：
-
+**Open the device check page**
+In the Chrome address bar, enter "chrome://inspect" or go to "Menu" -> "Tools" -> "Inspect Device" to open the device inspection page:
 ![](http://www.dcloud.io/docs/a/adebug/4.2.2.png)
-DevTools工具会自动检测已连接设备运行的可调试页面列表，点击对应页面的“inspect”链接打开调试页面。
-如果上图界面没有显示可调试的手机，请重新根据上文提到的方法检查手机的usb调试模式或驱动安装情况。同时注意Android4.4以下的手机无法调试，注意海马玩等模拟器无法调试。
-如果上图界面有手机，但没有可调试的app，可能的原因如下：
-1. 手机端需要调试的HBuilder基座或其他app并没有启动或没有运行任何html页面；
-2. 要调试的app拒绝了调试请求。HBuilder调试基座是默认开放调试请求的，但云打包或本地打包的app默认是关闭调试请求的。云打包是在manifest里配置是否允许调试，具体请查询[manifest配置指南](http://ask.dcloud.net.cn/article/94)，本地打包也要配置debug="true"，具体需要看本地打包配置环境。
+The DevTools tool will automatically detect the list of debuggable pages running on the connected device. Click the "inspect" link of the corresponding page to open the debug page.If the screen above does not display a phone that can be debugged, please check the USB debugging mode or driver installation of the phone again according to the method mentioned above. At the same time, note that mobile phones below Android 4.4 cannot be debugged, and emulators such as Haima Play cannot be debugged.
+If there is a mobile phone in the above interface, but there is no app that can be debugged, the possible reasons are as follows:
 
-**点击"inspect"时，如果遇到启动了一个白屏界面，说明被墙了。因为此服务需要连接google的服务器**
-一般情况下，只在第一次使用"inspect"时需要翻墙，以后会缓存在本地。
-开发者可以使用三方翻墙服务，但注意并不是可以访问google.com就可以使用chrome调试，有些翻墙软件支持的dns并不全。关键是要ping通chrometophone.appspot.com（此url可能随google调整服务而变化）。
+1. The HBuilder dock or other apps that need to be debugged on the mobile phone are not started or are not running any html pages;
+2. The app to be debugged rejected the debug request. The HBuilder debugging base opens debugging requests by default, but cloud-packaged or locally packaged apps close debugging requests by default. Cloud packaging is to configure whether to allow debugging in the manifest,
+3. Please inquire for details[manifest Configuration guide](http://ask.dcloud.net.cn/article/94)，local packaging must also configure debug="true", depending on the local packaging configuration environment。
 
-还有一个简单易行的方法是修改本机host。这里提供一些host清单。[https://github.com/racaljk/hosts](https://github.com/racaljk/hosts)，注意及时更新。于2016年7月25日亲测可行，注意此host文件涉及的国外域名很多，不需要的dns解析可以删除）
-注意host文件修改在window下需要管理员权限，具体方法本文不讲述请自行百度。
+**Click "inspect"，if you start a white screen interface, it means that you have been walled. Because this service needs to connect to Google's server**
+Generally, you only need to call VPN when you use "inspect" for the first time, and it will be cached locally in the future.
+Developers can use the three-party pair service, but note that it is not possible to use chrome to debug by visiting google.com. Some circumvention software supports incomplete dns. The key is to ping chrometophone.appspot.com (this url may change with google adjustment service).
 
-**页面调试**
-打开调试页面后DevTools会自动加载相关资源，调试页面操作方式与普通html调试页面完全一致。
-- 在Elements下查看DOM结构
+
+Another simple and easy way is to modify the local host. Here is a list of some hosts.。[https://github.com/racaljk/hosts](https://github.com/racaljk/hosts). Pay attention to timely updates. Pro-testing is feasible on July 25, 2016. Note that this host file involves many foreign domain names, and the unnecessary dns resolution can be deleted)
+
+Note that the host file modification requires administrator rights under the window, the specific method is not described in this article, please Baidu by yourself.
+
+**Page Adjustment**
+After opening the debugging page, DevTools will automatically load the relevant resources, and the operation mode of the debugging page is exactly the same as that of the normal html debugging page.
+- View the DOM structure under Elements
 
 ![](http://www.dcloud.io/docs/a/adebug/4.2.3.png)
 
-选中DOM元素后，在设备上会高亮显示，右侧Styles下修改CSS属性可即时生效：
+After the DOM element is selected, it will be highlighted on the device, and the CSS properties modified under Styles on the right can take effect immediately:
 
 ![](http://www.dcloud.io/docs/a/adebug/4.2.4.png)
 
-- 在Sources下断点调试JavaScript
+- Debug JavaScript with breakpoints under Sources
 
 ![](http://www.dcloud.io/docs/a/adebug/4.2.5.png)
 
-按F5可重新加载页面，重新开始调试。
+Press F5 to reload the page and restart debugging.
 
-**注意：每个Webview在chrome候选调试列表里是不同的列表，需要单独点inspect。当你inspect WebviewA时，点击了一个按钮，打开了WebviewB，此时若要调试B，需要返回chrome://inspect/#devices页面，找到WebviewB，然后点inspect。**
+**Note: Each Webview is a different list in the chrome candidate debugging list, and you need to click inspect separately. When you inspect WebviewA, click a button to open WebviewB. If you want to debug B, you need to return to the chrome://inspect/#devices page, find WebviewB, and click inspect. **
