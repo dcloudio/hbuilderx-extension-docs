@@ -174,7 +174,7 @@ To use the Intel HAXM acceleration simulator, you must select the following item
 | :-------- | :--: | :--: |
 | Tools | Android SDK Platform-tools | Android platform tools, basic components |
 | Android 4.4.2（API19） | SDK Platform | Android4.4.2 SDK，emulator basic components |
-| Android 4.4.2（API19） | Intel x86 Atom System Image | Inter x86平台的Android4.4.2 emulator image file |
+| Android 4.4.2（API19） | Intel x86 Atom System Image | Inter x86 Android4.4.2 emulator image file |
 | Extras | Intel x86 Emulator Accelerator (HAXM installer) | Inter x86 Android eimulator hardware acceleration program |
 
 After selecting the download item, as shown in the figure below:
@@ -224,7 +224,7 @@ Click "Next"。
 ![](http://www.dcloud.io/docs/a/adebug/2.3.4.png)
 
 
-### 创建模拟器
+### Create Emulator
 The ADT tool comes with the Android Virtual Device Manager (Android Virtual Device Manager), you can double-click to run the "AVD Manager.exe" program in the Android SDK root directory (such as "D:\AndroidSDK").
 
 ![](http://www.dcloud.io/docs/a/adebug/2.4.1.png)
@@ -248,7 +248,7 @@ Since no emulator has been created, no available emulator is displayed in the li
 | Internal Storage | Internal memory size, set according to the size of the PC system disk space, 200M is recommended |
 | SD Card | Internal memory size, set according to the size of the PC system disk space, 200M is recommended |
 
-**Note that the SD Card must be set up, otherwise it will not run on the real machine.**
+**Note that the SD Card must be set up, otherwise it will not run on the real device.**
 Complete installation, click "OK"
 
 - Confirm Configration
