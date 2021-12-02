@@ -113,7 +113,7 @@ A certificate is required if the domain name use https. After the certificate is
 Note: The suffix of the certificate may be different. The `.key` file is the private key, and the `.pem` or `.crt` file is the certificate. You can use Notepad to open and view the content of these files.
 
 
-If you have not SSL certificate, click here[Quick Request](https://cloud.tencent.com/act/cps/redirect?redirect=33848&cps_key=c858f748f10419214b870236b5bb94c6)。
+If you have not SSL certificate, click here [Quick Request](https://cloud.tencent.com/act/cps/redirect?redirect=33848&cps_key=c858f748f10419214b870236b5bb94c6)。
 
 **Note**
 
@@ -257,13 +257,13 @@ If you deploy multiple projects to a service space, you can use different basic 
 |Package		|Package1|Package2|Package3|
 |:-:			|:-:								|:-:								|:-:								|
 |Capacity			|5G									|10G								|100G								|
-|Traffic			|5G/月							|50G/月							|500G/月						|
-|Reads		|150万次/月					|200万次/月					|1500万次/月				|
-|Writes		|60万次/月					|100万次/月					|600万次/月					|
-|Return Traffic	|5G/月							|10G/月							|150G/月						|
+|Traffic			|5G/Month							|50G/Month							|500G/Month						|
+|Reads		|1.5 Million Times/Month					|2 Million Times/Month					|15 Million Times/Month				|
+|Writes		|0.6 Million Times/Month					|1 Million Times/Month					|6 Million times/Month					|
+|Return Traffic	|5G/Month							|10G/Month							|150G/Month						|
 
 <!--
-|费用			|9.9元/月						|35元/月						|330元/月						|
+|费用			|¥9.9/Month						|¥35/Month						|¥330/Month						|
 -->
 
 **Note**
