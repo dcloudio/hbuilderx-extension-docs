@@ -31,8 +31,8 @@ The effect of running the app project to the iOS simulator is as follows:
 
 There are many Android simulator on the market, please search one and install by yourself.
 
-Google provide one offcial simulator and you can install different version from [Android Studio].
-]
+Google provide one offcial simulator and you can install different version from [Android Studio](https://developer.android.com/studio/install).
+
 The android studio simulator is shown below:
 
 <img src="/static/snapshots/tutorial/macosx/androidSimulator.jpg"  style="border: 1px solid #eee; zoom:45%;border-radius: 25px;"/>

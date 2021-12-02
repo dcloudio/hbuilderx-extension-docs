@@ -8,7 +8,7 @@ Webkit remote debug is actually an official service provided by Google and Apple
 *Articles Navigation:*
 - [Method 1 - watch while changing](http://ask.dcloud.net.cn/article/483)
 - [Method 2 - running on real device](http://ask.dcloud.net.cn/article/484)
-- [Method 3 - webkit remote debugg on real device (Android Phone)]
+- [Method 3 - webkit remote debugg on real device (Android Phone)](https://ask.dcloud.net.cn/article/69)
 - [Method 4 - webkit remote debugg on real device (iOS Phone)](http://ask.dcloud.net.cn/article/143)
 
 ## Overview of Chrome debugging Android phones
