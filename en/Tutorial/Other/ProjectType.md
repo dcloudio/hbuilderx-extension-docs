@@ -4,7 +4,7 @@ HBuilderX supports multiple project types and each type can run in multiple envi
 
 The following is a list of various project types and the environments in which they can run.
 
-|                       | web | uniapp | 5+ App| wap2app | QuickApp | WeChat |
+|                       | web | uni-app | 5+ App| wap2app | QuickApp | WeChat |
 | --------------------- | ------- | ------ | ---------- | ------- | ------ | ---------- |
 | Run to phone or emulator | ×       | √      | √          | √       | √      | ×          |
 | Run to browser           | √       | √      | √          | √       | ×      | ×          |

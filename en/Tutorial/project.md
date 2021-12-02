@@ -57,7 +57,7 @@ Note: Move the mouse to the scope of the HBuilderX project manager, and the rele
 
 **Remove Project**：You can remove the project from the project explorer, or move it to the recycle bin.
 
-**Re-identify Project Type**：In some cases, HBuilderX does not correctly identify the project type (for example, uniapp project, the run menu cannot be displayed), causing the relevant menu to fail to be displayed correctly, which can be solved by re-identifying the project type.[Details](/Tutorial/ProjectType)
+**Re-identify Project Type**：In some cases, HBuilderX does not correctly identify the project type (for example, uni-app project, the run menu cannot be displayed), causing the relevant menu to fail to be displayed correctly, which can be solved by re-identifying the project type.[Details](/Tutorial/ProjectType)
 
 **Rebuild Project Index**：In some cases, the code prompt is abnormal (for example, the image path cannot be prompt), It can be solved by `Rebuild Project Index`.
 

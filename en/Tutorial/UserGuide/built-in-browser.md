@@ -3,7 +3,7 @@
 HBuilderX has built-in browser and support live preview。
 
 - Support preview markdown files
-- Support preview web project, vue project, uniapp project, 5+ project
+- Support preview web project, vue project, uni-app project, 5+ project
 - ......
 
 ### Highlight the Elements in the Browser、Find DOM Node in File

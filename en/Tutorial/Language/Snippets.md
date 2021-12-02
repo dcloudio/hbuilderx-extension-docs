@@ -37,7 +37,7 @@ Enter `v`, HBuilderX will display list of vue snippets.
 
 **uni-app Snippets**
 
-Enter `u`, HBuilderX will display list of uniapp snippets. From HBuilderX 1.9.10+, you can use snippets `ifios` and `ifandroid` to check whether it belongs to the iOS and android platforms.
+Enter `u`, HBuilderX will display list of uni-app snippets. From HBuilderX 1.9.10+, you can use snippets `ifios` and `ifandroid` to check whether it belongs to the iOS and android platforms.
 
 ## Snippets settings
 

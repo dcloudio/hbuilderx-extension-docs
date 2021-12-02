@@ -8,7 +8,7 @@ uni-app 使用 upx 作为默认尺寸单位， upx 是相对于基准宽度的�
 
 <img src="/static/snapshots/tutorial/upx_1.png" style="zoom: 80%;" />
 
-2. 启用px转upx后，就可以愉快的在uniapp中使用了。如下图：
+2. 启用px转upx后，就可以愉快的在uni-app中使用了。如下图：
 
 <img src="/static/snapshots/tutorial/upx_2.png" style="zoom: 80%;" />
 

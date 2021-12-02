@@ -69,11 +69,11 @@ HBuilderX，可自定義編輯器升級策略。
 - 智能計算製表符長度
 - 編輯器向下滾動一屏
 
-## uniapp運行設置@uniapp-run-setting
+## uni-app運行設置@uniapp-run-setting
 
-如果uniapp編譯遇到`JavaScript heap out of memory`問題，請調整uniapp node啓動內存參數。
+如果uni-app編譯遇到`JavaScript heap out of memory`問題，請調整uni-app node啓動內存參數。
 
-點擊菜單【設置 - 運行設置 - uniapp運行設置】，如下圖：
+點擊菜單【設置 - 運行設置 - uni-app運行設置】，如下圖：
 
 <img src="/static/snapshots/tutorial/settings/uniapp_run_setting.png" style="zoom: 45%;border: 1px solid #eee;"/>
 
