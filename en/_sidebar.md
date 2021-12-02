@@ -27,6 +27,7 @@
     * [Local History](/Tutorial/UserGuide/LocalHistory.md)
     * [editorconfig](/Tutorial/UserGuide/editorconfig.md)
     * [External Commands](/Tutorial/UserGuide/externalCommands.md)
+    * [Build-in Terminal](/Tutorial/UserGuide/terminal.md)
 * Languages
     * [Overview](/Tutorial/Language/Overview.md)
     * [CodeAssistant](/Tutorial/Language/CodeAssistant.md)
@@ -35,7 +36,16 @@
     * [Vue](/Tutorial/Language/vue.md)
     * [Vue3](/Tutorial/Language/vue-next.md)
     * [Vue Doc](/Tutorial/Language/vuedoc.md)
+    * [JSON](/Tutorial/Language/json.md)
     * [MarkDown](/Tutorial/Language/markdown.md)
+* App
+    * [Phone Debugging](/Tutorial/App/PhoneDebugging.md)
+    * [Install Simulator](/Tutorial/App/installSimulator.md)
+    * [Android Custom Channel Packages](/Tutorial/App/AndroidChannel.md)
+    * [Safe Packing](/Tutorial/App/SafePack.md)
+    * [iOS Safe Packing For Certificate](/Tutorial/App/iosSafePack.md)
+    * [web hosting](/Tutorial/App/hosting.md)
+    <!-- * [Chrome调试 5+ Android应用](Tutorial/App/use-chrome-to-debug-android-apps.md) -->
 * Version Control
     * [Git Introduce](/Tutorial/SourceControl/Git/README.md)
     * [Git Windows](/Tutorial/SourceControl/Git/Windows.md)
@@ -49,9 +59,23 @@
     * [eslint-vue](/Tutorial/extension/eslint-vue.md)
     * [sass](/Tutorial/extension/sass.md)
     * [Formator Prettier](/Tutorial/extension/prettier.md)
+    * [FTP/SFTP](/Tutorial/extension/ftp.md)
+    * [MarkDown Share](/Tutorial/extension/markdown_share.md)
 * Other
     * [Font Setting](/Tutorial/settings/font.md)
+    * [px-upx](/Tutorial/settings/px-upx)
+    * [Project Type](/Tutorial/Other/ProjectType.md)
+    * [keybindings Commands](/Tutorial/Other/command.md)
+    * [Color Theme Setting](/Tutorial/Other/themes_param.md)
+    * [keybindings Idea](/Tutorial/Other/keybindings_idea.md)
     * [Health](/Tutorial/Other/health.md)
+    * [Security](/Tutorial/Security.md)
+* FAQ
+    * [HBuilderX Windows startup troubleshooting guide](/Tutorial/Questions/WindowsStart.md)
+    * [plug-in installation failure solution](/Tutorial/faq/pluginInstall.md)
+    * [Troubleshoot failure to startup language service](/Tutorial/Questions/StartLSFailed.md)
+    * [Built-in browser developer console whitespace solution](/Tutorial/faq/devtools.md)
+    <!-- * [云函数上传ContentAccessDenied错误](/Tutorial/Questions/win10-defender-contentaccessdenied.md) -->
 * [Crash Reporter](/Tutorial/CrashReporter.md)
 * [LICENSE](/license.md)
 <div class="contact-box">
