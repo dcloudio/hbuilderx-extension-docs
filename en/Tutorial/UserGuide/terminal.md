@@ -4,7 +4,7 @@
 
 Click the top menu [Tools-> Plug-in Installation] to open the plug-in installation window, select `Built-in Terminal`, and click Install.
 
-<img src="/static/snapshots/tutorial/terminal/terminal_install.png" style="zoom: 50%; border: 1px solid #eee; border-radius: 10px;"/>
+<img src="/static/snapshots/tutorial/terminal/terminal_install_en.png" style="zoom: 50%; border: 1px solid #eee; border-radius: 10px;"/>
 
 ## Startup Terminal
 

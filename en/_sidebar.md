@@ -12,7 +12,7 @@
     * [Keybindings](/Tutorial/keybindings.md)
     * [Theme](/Tutorial/themes.md)
     * [Project](/Tutorial/project.md)
-    * [Plugins Install](Tutorial/PluginsInstall.md)
+    * [Plugins Install](/Tutorial/PluginsInstall.md)
 * User Guide
     * [Skill](/Tutorial/UserGuide/skill.md)
     * [Goto](/Tutorial/UserGuide/goto.md)

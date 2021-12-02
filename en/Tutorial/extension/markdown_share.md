@@ -16,7 +16,7 @@ At the same time, the pictures involved in markdown will also be automatically u
 
 In the `md` file, right-click and select [Share to Weblink], you can find that the "url" will be output from the console.
 
-<img src="/static/snapshots/tutorial/markdown_share_1.jpeg" style="zoom:65%" />
+<img src="/static/snapshots/tutorial/markdown_share/markdown_share_1_en.png" class="hd-img" />
 
 
 ## 3. Configuration
@@ -58,7 +58,7 @@ After successful activation, go to the homepage and copy the service spaceID.
 
 Open HBuilderX, click [Settings] and choose "Plugins", then set `uniCloud` space ID. (Current only support Alibaba Cloud)
 
-<img src="/static/snapshots/tutorial/markdown_share_7.jpeg" style="zoom:80%" />
+<img src="/static/snapshots/tutorial/markdown_share/markdown_share_7_en.png" class="hd-img" />
 
 
 ## 4. How to use plugin
@@ -67,10 +67,10 @@ Open HBuilderX, click [Settings] and choose "Plugins", then set `uniCloud` space
 
 In the `md` file, right-click and select [Share to Weblink], HBuilderX will convert `md` file to html file and upload to uniCloud, then output "URL" in the console.
 
-<img src="/static/snapshots/tutorial/markdown_share_8.jpeg" style="zoom:80%" />
+<img src="/static/snapshots/tutorial/markdown_share/markdown_share_8_en.png" class="hd-img" />
 
 ### 4.2 View MarkDown Share History
 
 Click menu [Tool]->[View Markdown Share History]
 
-<img src="/static/snapshots/tutorial/markdown_share_9.jpeg" style="zoom:80%" />
+<img src="/static/snapshots/tutorial/markdown_share/markdown_history_en.png" class="hd-img" />

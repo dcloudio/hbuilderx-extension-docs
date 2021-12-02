@@ -33,13 +33,13 @@ Steps：
 - Sync from remote to local
 - Sync from local to remote server
 
-<img src="/static/snapshots/tutorial/ftp2.png" style="zoom:80%" />
+<img src="/static/snapshots/tutorial/ftp/ftp_sync_en.png" class="hd-img" />
 
 ### 2.3 Edit remote files locally, delete remote files
 
 Select an item from project manager and right-click the menu [FTP: browse remote files] to open the `SFTP view`.
 
-<img src="/static/snapshots/tutorial/ftp3.png" style="zoom:80%" />
+<img src="/static/snapshots/tutorial/ftp/ftp_right_menu_en.png" class="hd-img" />
 
 
 ## 3. ftp configuration file parameter description
