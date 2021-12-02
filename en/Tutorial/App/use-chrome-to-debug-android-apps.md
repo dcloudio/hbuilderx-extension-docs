@@ -1,361 +1,366 @@
-# Chrome调试Android应用
+# Chrome Debugging Android Applications
 
-> 注意本文档仅适用于 5+App应用。
+> Note that this document only applies to 5+App applications.
 
-HBuilder对前端代码的调试方式有边改边看、真机运行、webkit remote debug真机调试3种。webkit remote debug其实是google、apple官方提供的服务，本文主要介绍google的chrome下如何调试Android手机上webview里运行的网页。
-*系列文章目录导航：*
-- [调试方式介绍一 边改边看](http://ask.dcloud.net.cn/article/483)
-- [调试方式介绍二 真机运行](http://ask.dcloud.net.cn/article/484)
-- [调试方式介绍三 webkit remote debug之Chrome调试Android手机]
-- [调试方式介绍四 webkit remote debug之Safari调试iOS手机](http://ask.dcloud.net.cn/article/143)
+HBuilder has three ways to debug the front-end code，for example watch while changing, running on real device, and webkit remote debugg on real device. 
+Webkit remote debug is actually an official service provided by Google and Apple. This article mainly introduces how to debug webpages running in webview on Android phones under google's chrome.
 
-## Chrome调试Android手机之概述
+*Articles Navigation:*
+- [Method 1 - watch while changing](http://ask.dcloud.net.cn/article/483)
+- [Method 2 - running on real device](http://ask.dcloud.net.cn/article/484)
+- [Method 3 - webkit remote debugg on real device (Android Phone)]
+- [Method 4 - webkit remote debugg on real device (iOS Phone)](http://ask.dcloud.net.cn/article/143)
 
-调试是软件开发过程中很重要的环节，它能帮助开发者快速的定位和解决开发过程中碰到的问题。对于HTML5的开发，大家都知道Chrome的DevTools工具有强大的功能和友好的用户体验，不仅能快速方便调试JavaScript、检查HTML页面DOM结构、实时同步更新元素CSS样式，还能跟踪分析页面资源加载性能等问题。对于移动平台的开发者来说，从Android4.4开始，也可以通过Chrome的DevTools工具连接设备对于应用进行调试。
+## Overview of Chrome debugging Android phones
 
-调试效果如图所示：
+Debugging is a very important part of the software development process, it can help developers quickly locate and solve the problems encountered in the development process. For the development of HTML5, everyone knows that Chrome's DevTools tool has powerful functions and friendly user experience. It can not only debug JavaScript quickly and easily, check the DOM structure of HTML pages, update the CSS styles of elements in real time, but also track and analyze page resource loading performance and other issues. For developers of mobile platforms, from Android 4.4, you can also use Chrome's DevTools to connect the device to debug the application.
 
-![Android 调试效果图](http://www.dcloud.io/docs/a/adebug/1.1.png)
+The debugging effect is shown in the figure:
 
-**软件要求**
-- Android设备或模拟器的系统版本为4.4及以上；
+![Android Debugging](http://www.dcloud.io/docs/a/adebug/1.1.png)
+
+**Software requirements**
+- The system version of the Android device or emulator is 4.4+;
 
 
 
-## 真机调试环境
-如果你有Android设备，并且系统是4.4以上版本，那么可以直接使用Chrome连接进行调试。
+## Real device debugging environment
+If you have an Android device and the system is version 4.4 or higher, you can directly use Chrome to connect for debugging.
 
-### 检测设备版本
-打开系统“设置”-> “关于”，查看Android版本：
+### Get device version
+Open the system "Settings" -> "About" to check the Android version:
 
 ![](http://www.dcloud.io/docs/a/adebug/3.1.png)
 
-Android版本必需是4.4及以上，否则无法进行应用调试。请参考“模拟器调试环境”章节使用模拟器进行应用调试。
+The Android version must be 4.4 and above, otherwise application debugging cannot be performed. Please refer to the "Simulator Debugging Environment" chapter to use the simulator for application debugging.
 
-### 显示开发者选项
-Android设备默认“开发者选项”是隐藏的，需要打开“设置”-> “关于”页面，多次（7次）点击“版本号”项，返回到“设置”页面可显示“开发者选项”：
+### Show developer options
+Android device default "Developer Options" is hidden, you need to open the "Settings" -> "About" page, click on the "Version Number" item multiple times (7 times), return to the "Settings" page to display "Developer Options" :
 
 ![](http://www.dcloud.io/docs/a/adebug/3.2.png)
 
-点击“开发者选项”，打开“开发者选项”设置页面。
+Click "Developer Options" to open the "Developer Options" settings page.
 
-### 开启USB调试
+### Turn on USB debugging
 
 ![](http://www.dcloud.io/docs/a/adebug/3.3.png)
 
-### 连接PC
-Android设备通过USB数据线连接到PC，如果系统无法正确识别，则需要安装驱动，通常可到设备制造商的官方网站下载安装。也可使用第三方手机助手软件安装，如“360手机助手”、“应用宝”等。
+### Connect PC
 
-PC识别到设备后，这时可通过HBuilder的真机运行功能进行连接并安装HBuilder应用。
+The Android device is connected to the PC via a USB data cable. If the system cannot recognize it correctly, you need to install the driver, which can usually be downloaded and installed from the official website of the device manufacturer. You can also use third-party mobile assistant software to install, such as "360 mobile assistant", "app treasure" and so on.
 
-## 使用HBuilder调试
-在HBuilder最新版里，点运行菜单，或者HBuilderX的视图菜单，点里面的“打开Webview调试模式”。
-确保手机连接正常、确保启动了可调试的app，那么右侧或底部会列出可调试的页面。点击调试/inspect即可打开chrome控制台进行调试。
+After the PC find the device, you can connect and install the HBuilder application through the real device running function of HBuilder.
 
-**注意：chrome83起调整了协议。HBuilderX2.8起适配了新协议。如果你的chrome升级到83以上版本，需更新HBuilderX到2.8+才能正常使用**
+## Use HBuilder to debug
+In the latest version of HBuilder, click the run menu, or the view menu of HBuilderX, and click "Open Webview debugging mode" inside.
+Make sure that the phone is connected and the debuggable app is activated, then the debuggable pages will be listed on the right or bottom. Click debug/inspect to open the chrome console for debugging.
+
+**Note：Since chrome83, the agreement has been adjusted. Since HBuilderX2.8, the new protocol has been adapted. If your chrome is upgraded to version 83 or higher, you need to update HBuilderX to 2.8+**
 
 
 ================================================
-**正常情况下，开发者阅读到此结束。后续文档是Android模拟器的安装教程和不使用HBuilder调试而使用chrome调试的教程**
+**This is the end of the developer's reading. The follow-up documents are the installation tutorial of the Android emulator and the tutorial of using chrome to debug without using HBuilder.**
 ================================================
 ================================================
-## 附录：Android模拟器调试环境
-如果你没有Android手机，又想调试Android应用，那么你需要安装Google官方的Android模拟器。
-注意三方模拟器如genymotion、海马玩、Bluestacks蓝叠等模拟器只能真机运行，不能debug调试。
+## Appendix: Android emulator debugging environment
+If you don't have an Android phone and want to debug Android applications, then you need to install Google's official Android emulator. Note: Three-party emulators such as genymotion, Droid (Haimawan), Bluestacks and other emulators can only run on real devices, and cannot be debugged.
 
-下文仅介绍Google官方模拟器的安装方法。由于Google经常更新，也建议开发者随时关注网上的其他更新教程。
+The following content only introduces the installation of Google's official emulator. As Google updates frequently, it is recommended that developers follow other updated tutorials on the Internet at any time.
 
-如果没有Android4.4及以上版本设备，可以配置Android模拟器来调试。Android模拟器一直都以运行速度慢著称，其实官方已经提供解决方案使用Intel HAXM技术来加速，使得模拟器运行速度有大幅的提升。
-**硬件要求**
+If you do not have a device with Android 4.4 and above, you can configure the Android emulator for debugging. The Android emulator has always been known for its slow running. In fact, the official has provided a solution to use Intel HAXM to accelerate, which greatly improves the running speed of the emulator.
 
-- CPU支持Intel VT技术（AMD CPU无法使用HAXM加速）；
-- 内存推荐4G；
-- Window XP/Vista/7/8（32/64-bit），推荐Windows 7/8（64-bit）。
+**Hardware Requirements**
 
-**网络要求**
-使用Google的服务，不得不付出的代价就是要准备好翻墙工具。
-模拟器安装更新和调试初始化时都必须翻墙。
-**无条件翻墙的同学可以尝试修改本机host的方法来访问Google相关服务，host内容参考[google-hosts](https://github.com/txthinking/google-hosts/blob/master/hosts)，注意及时更新：）**
+- CPU supports Intel VT technology (AMD CPU cannot use HAXM acceleration);
+- Recommended 4G memory
+- Window XP/Vista/7/8（32/64-bit），Recommended Windows 7/8（64-bit）。
 
-### ADT工具
-配置模拟器调试环境需要安装ADT工具，如果已经配置过android开发环境，则可跳过此章节。
+**Network Requirements**
+You have to use VPN for visiting google services.
+It is necessary to use VPN for emulator during installation, update and debugging initialization.
+**Please try to modify local host configuration if you cannot visit google, host reference to [google-hosts](https://github.com/txthinking/google-hosts/blob/master/hosts)）**
 
-**下载ADT工具**
+### ADT Tool
+To configure the simulator debugging environment, you need to install the ADT tool. If you have already configured the android development environment, you can skip this chapter.
 
-Android模拟器开发环境需通过ADT工具进行安装，这里不需要下载完整的ADT Bundle，使用独立ADT工具即可：
-- 进入官网下载Android SDK Tools
+**Download ADT Tool**
+
+The Android emulator development environment needs to be installed through the ADT tool. There is no need to download the complete ADT Bundle, just use the independent ADT tool:
+- Download Android SDK Tools
 
 ![](http://www.dcloud.io/docs/a/adebug/2.1.1.1.png)
 
-选择windows平台下的独立ADT插件安装包。
+Select the independent ADT plug-in installation package for the windows platform.
 
-- 同意使用条款和条件
+- Agree to the terms and conditions
 
 ![](http://www.dcloud.io/docs/a/adebug/2.1.1.2.png)
 
-点击下载按钮。
+Click download button
 
-- 保存安装包
-目前版本为22.6.2，保存到本地为：installer_r22.6.2-windows.exe。
+- Save Installation
+The current version is 22.6.2, saved it as:：installer_r22.6.2-windows.exe。
 
 
-**安装ADT工具**
-- 双击运行保存的ADT安装文件（install_r22.6.2-windows.exe），开始安装
+**Install ADT Tool**
+- Double-click to run the saved ADT installation file（install_r22.6.2-windows.exe）, start to install.
 
 ![](http://www.dcloud.io/docs/a/adebug/2.1.2.1.png)
 
-选择下一步“Next”。
+Choose "Next",
 
-- 配置JDK环境
-如果已经安装了JDK环境，则提示确认：
+- Configure the JDK environment
+If you have already installed the JDK environment, you are prompted to confirm:
 
 ![](http://www.dcloud.io/docs/a/adebug/2.1.2.2.png)
 
-直接选择下一步“Next”。
-如果没有安装过JDK，则会提示没有找到：
+Click "Next"
+If you have not installed the JDK, you will be prompted that it was not found:
 
 ![](http://www.dcloud.io/docs/a/adebug/2.1.2.3.png)
 
-需安装JDK，并设置JAVA_HOME环境变量，完成后重新运行ADT安装文件。
+Set JAVA_HOME environment variable after installing JDK, and re-run the ADT installation file.
 
-- 选择用户
+- Choose Users
 
 ![](http://www.dcloud.io/docs/a/adebug/2.1.2.4.png)
 
-选择默认值，仅当前用户使用即可，选择下一步“Next”。
+Choose default value "Install just for me"，then click "Next".
 
-- 选择安装目录
+- Choose Install Location
 
 ![](http://www.dcloud.io/docs/a/adebug/2.1.2.5.png)
 
-选择非系统盘目录（如“D:\AndroidSDK”），确保有足够的磁盘空间安装SDK及模拟器文件（至少需要1G的空间）。选择下一步“Next”。
+Select non-system disk directory（Such as "D:\AndroidSDK"）, ensure that there is enough disk space to install the SDK and emulator files (at least 1G of space is required). Click "Next".
 
-- 选择开始菜单目录
+- Choose Start Menu Folder
 
 ![](http://www.dcloud.io/docs/a/adebug/2.1.2.6.png)
 
-保持默认值，选择下一步“Next”。
+Keep default value, then click "Next"
 
-- 解压安装
+- Extract and install
 
 ![](http://www.dcloud.io/docs/a/adebug/2.1.2.7.png)
 
-完成后，选择下一步“Next”：
+After completion, click "Next":
 
 ![](http://www.dcloud.io/docs/a/adebug/2.1.2.8.png)
 
-- 完成安装
+- Installation Complete
 
 ![](http://www.dcloud.io/docs/a/adebug/2.1.2.9.png)
 
-选择立即启动SDK管理器（Android SDK Manager），选择下一步“Next”，完成ADT工具的安装。
-如未立即启动，可在Android SDK根目录（如“D:\AndroidSDK”），双击运行“SDK Manager.exe”程序。
+Start SDK Manager（Android SDK Manager）, click "Next", complete the installation of the ADT tool.
+If it does not start immediately, you can double-click to run the "SDK Manager.exe" program in the Android SDK root directory (such as "D:\AndroidSDK").
 
 
-### 下载SDK和模拟器
-安装ADT工具后，启动SDK管理程序对各版本编译工具、SDK、模拟器、插件进行管理，如升级、安装、卸载等。如果已经下载了SDK和模拟器，可跳过此章节。
-- 更新SDK列表
-启动SDK管理程序后会自动获取最新的工具、SDK、模拟器及扩展插件列表。
+### Download SDK and emulator
+After installing the ADT tool, start the SDK management to manage each version of the compilation tool, SDK, emulator, and plug-ins, such as upgrade, installation, uninstallation, etc. If you have already downloaded the SDK and emulator, you can skip this chapter.
+- Update SDK list
+After starting the SDK management program, the latest tool, SDK, emulator and extension plug-in list will be automatically obtained.
 
 ![](http://www.dcloud.io/docs/a/adebug/2.2.1.png)
 
-- 列表更新完成
-更新完成后，显示日志：
+- List update completed
+After the update is complete, the log is displayed:
 
 ![](http://www.dcloud.io/docs/a/adebug/2.2.2.png)
 
-- 选择下载项
-使用Intel HAXM加速模拟器，必须选择以下项下载：
+- Choose Download Items
+To use the Intel HAXM acceleration simulator, you must select the following items to download:
 
-| 目录 | 项	 | 用途 |
+| Directory | Item	 | Purpose |
 | :-------- | :--: | :--: |
-| Tools | Android SDK Platform-tools | Android平台工具，基础组件 |
-| Android 4.4.2（API19） | SDK Platform | Android4.4.2 SDK，模拟器基础组件 |
-| Android 4.4.2（API19） | Intel x86 Atom System Image | Inter x86平台的Android4.4.2模拟器镜像文件 |
-| Extras | Intel x86 Emulator Accelerator (HAXM installer) | Inter x86平台Android模拟器硬件加速程序 |
+| Tools | Android SDK Platform-tools | Android platform tools, basic components |
+| Android 4.4.2（API19） | SDK Platform | Android4.4.2 SDK，emulator basic components |
+| Android 4.4.2（API19） | Intel x86 Atom System Image | Inter x86 Android4.4.2 emulator image file |
+| Extras | Intel x86 Emulator Accelerator (HAXM installer) | Inter x86 Android eimulator hardware acceleration program |
 
-选择好下载项后，如下图所示：
+After selecting the download item, as shown in the figure below:
 
 ![](http://www.dcloud.io/docs/a/adebug/2.2.3.png)
 
-选择“Intall 4 Packages...”，开始下载安装。
+Choose "Intall 4 Packages...", Start to download and install.
 
-- 接受许可协议
+- Accept the license agreement
 
 ![](http://www.dcloud.io/docs/a/adebug/2.2.4.png)
 
-分别选择右侧packages列表中的项后，选中“Accept License”接受许可协议。然后点击“Install”，开始下载。
+After selecting the items in the packages list on the right, select "Accept License" to accept the license agreement. Then click "Install" to start downloading.
 
-- 开始下载
+- Start to download
 
 ![](http://www.dcloud.io/docs/a/adebug/2.2.5.png)
 
-由于SDK和模拟器镜像文件比较大，下载时间会比较长，而且国内访问google官方网站不太稳定，经常提示下载失败：
+Because the SDK and emulator image files are large, the download time will be relatively long, and the domestic visit to the official Google website is not stable, and the download failure is often prompted:
 
 ![](http://www.dcloud.io/docs/a/adebug/2.2.6.png)
 
-关闭提示对话框，重新下载，或者**翻墙后再尝试下载**。
+Close the prompt dialog and download again, or **retry downloading after overriding the wall**.
 
 
-### 安装Intel X86HAXM
-下载Intel X86 HAXM插件后，需要到下载目录运行安装程序进行安装，目录为： “%ADT安装目录%\extras\intel\Hardware_Accelerated_Execution_Manager\”。双击运行intelhaxm.exe进行安装，目前新版本为1.0.8，如果已经安装过低版本，建议升级。
+### Install Intel X86HAXM
+After downloading the Intel X86 HAXM plug-in, you need to run the installer in the download directory to install it. The directory is: "%ADT installation directory%\extras\intel\Hardware_Accelerated_Execution_Manager\". Double-click to run intelhaxm.exe to install, the current new version is 1.0.8, if the lower version has been installed, it is recommended to upgrade.
 
-- 开始安装
+- Start installation
 
 ![](http://www.dcloud.io/docs/a/adebug/2.3.1.png)
 
-选择下一步“Next”。
+Click "Next"。
 
-- 配置HAXM使用最大内存
+- Configure HAXM to use maximum memory
 
 ![](http://www.dcloud.io/docs/a/adebug/2.3.2.png)
-安装程序会自动计算推荐值，使用默认值，选择下一步“Next”。
+The installer will automatically calculate the recommended value, use the default value, select the next step "Next".
 
-- 确认配置
+- Confirm configuration
 
 ![](http://www.dcloud.io/docs/a/adebug/2.3.3.png)
-选择下一步“Next”。
+Click "Next"。
 
-- 完成安装
+- Complete Installation
 
 ![](http://www.dcloud.io/docs/a/adebug/2.3.4.png)
 
 
-### 创建模拟器
-ADT工具带Android模拟器管理程序（Android Virtual Device Manager），可在Android SDK根目录（如“D:\AndroidSDK”），双击运行“AVD Manager.exe”程序。
+### Create Emulator
+The ADT tool comes with the Android Virtual Device Manager (Android Virtual Device Manager), you can double-click to run the "AVD Manager.exe" program in the Android SDK root directory (such as "D:\AndroidSDK").
 
 ![](http://www.dcloud.io/docs/a/adebug/2.4.1.png)
 
-由于没有创建过模拟器，在列表中显示无可用模拟器，点击“New...”开始新建模拟器。
+Since no emulator has been created, no available emulator is displayed in the list, click "New..." to start creating a new emulator.
 
-- 新建模拟器
+- Create emulator
 
 ![](http://www.dcloud.io/docs/a/adebug/2.4.2.png)
 
-| 项 | 说明 |
+| Item | Description |
 | :-------- | :-------- |
-| AVD Name | 模拟器名称，根据爱好输入 |
-| Device | 模拟设备，根据爱好选择，建议根据显示器分辨率来选择，大显示器选择则高分比率模拟器 |
-| Target | 选择“Android 4.4.2 - API Level 19” |
-| CPU/ABI | 选择“Intel Atom (x86)” |
-| Skin | 模拟器皮肤，根据爱好选择，推荐选择WVGA800 |
-| Front Camera | 前置摄像头，用不到就选“None”，模拟摄像头就选“Emulated”，使用PC的摄像头就选“WebCam0” |
-| Back Camera | 后置摄像头，与前置摄像头选择类似 |
-| Memory Options | 内存大小，根据PC内存大小设置，推荐RAM：512；Heap：64 |
-| Internal Storage | 内部存储器大小，根据PC系统盘空间大小设置，推荐200M |
-| SD Card | SD卡存储器大小，根据PC系统盘空间大小设置，推荐200M |
+| AVD Name | Emulator name, input according to hobbies |
+| Device | Analog equipment, choose according to your hobby, it is recommended to choose according to the display resolution, large display selection is a high score ratio emulator |
+| Target | Choose "Android 4.4.2 - API Level 19" |
+| CPU/ABI | Choose "Intel Atom (x86)" |
+| Skin | Emulator skin, choose according to hobbies, recommend choosing WVGA800 |
+| Front Camera | For front camera, select "None" if you don't need it, select "Emulated" for analog camera, select "WebCam0" for PC camera |
+| Back Camera | Rear camera, similar to the front camera selection |
+| Memory Options | Memory size, set according to PC memory size, recommended RAM: 512; Heap: 64 |
+| Internal Storage | Internal memory size, set according to the size of the PC system disk space, 200M is recommended |
+| SD Card | Internal memory size, set according to the size of the PC system disk space, 200M is recommended |
 
-**注意务必设置好SD Card，否则无法真机运行。**
-设置完成后，点击“OK”。
+**Note that the SD Card must be set up, otherwise it will not run on the real device.**
+Complete installation, click "OK"
 
-- 确认配置
+- Confirm Configration
 
 ![](http://www.dcloud.io/docs/a/adebug/2.4.3.png)
 
-- 创建完成后在模拟器列表中显示
+- After the creation is completed, it will be displayed in the emulator list
 
 ![](http://www.dcloud.io/docs/a/adebug/2.4.4.png)
 
-### 启动模拟器
-创建完模拟器，每次启动Android模拟器管理程序都能在列表中显示：
+### Start emulator
+After creating the emulator, it can be displayed in the list every time you start the Android emulator management program
 
 ![](http://www.dcloud.io/docs/a/adebug/2.5.1.png)
 
-- 启动模拟器
+- Start emulator
 
 ![](http://www.dcloud.io/docs/a/adebug/2.5.2.png)
-选择“Android4.4.2”模拟器，点击“Start...”启动。
+Choose "Android4.4.2" emulator, click "Start..." button.
 
-- 设置启动配置信息
+- Set startup configuration
 
 ![](http://www.dcloud.io/docs/a/adebug/2.5.3.png)
 
-| 项 | 说明 |
+| Item | Description |
 | :-------- | :-------- |
-| Scale Display to real size | 是否缩放到设置的模拟器分辨率，在PC分辨率低时使用 |
-| Wipe user data | 是否擦除用户数据，重置模拟器时使用 |
+| Scale Display to real size | Whether to zoom to the set simulator resolution, used when the PC resolution is low |
+| Wipe user data | Whether to erase user data, used when resetting the emulator |
 
-点击“Launch”启动。
+Click "Launch" to start。
 
-- 等待加载模拟器
+- Wait for the emulator to load
 
 ![](http://www.dcloud.io/docs/a/adebug/2.5.4.png)
 
-PC的配置决定速度，耐心等待模拟器的启动。
+The configuration of the PC determines the speed, and wait patiently for the emulator to start.
 
-- 完成启动模拟器
+- Finish starting the emulator
 
 ![](http://www.dcloud.io/docs/a/adebug/2.5.5.png)
 
-模拟器配置完毕，这时可通过HBuilder的真机运行功能进行连接，参考后面“应用调试”章节。
+After the simulator is configured, you can connect through the real device running function of HBuilder. Refer to the "Application Debugging" chapter later.
 
+## Appendix: Use chrome to debug webview {#chromedebug}
+After configuring the emulator or real device debugging environment, you can quickly debug the mobile application developed by HBuilder through Chrome's DevTools tool.
 
-## 附录：使用chrome调试webview {#chromedebug}
-配置完模拟器或真机调试环境后，可通过Chrome的DevTools工具快速调试HBuilder开发的移动应用。
+### Install HBuilder Application
+After starting HBuilder, it will automatically detect the device (emulator or real device) connected to the PC. After creating a "mobile App", you can install the HBuilder application on the device for debugging in the following ways:
 
-### 安装HBuilder应用
-启动HBuilder后会自动检测连接到PC上的设备（模拟器或真机），创建“移动App”后，可通过以下方式在设备上安装HBuilder应用进行调试：
-运行的快捷键是Ctrl+R。也可以通过鼠标操作（注意下图中run in device的按钮在新版中已经不存在了，只需点击手机即可）
-- 通过“运行”菜单启动
+The shortcut key for running is Ctrl+R. It can also be operated by mouse (note that the button for run in device in the figure below no longer exists in the new version, just click on the phone)
+- Through "Run" to start menu
 
 ![](http://www.dcloud.io/docs/a/adebug/4.1.1.png)
 
-- 通过工具栏启动
+- Launch via toolbar
 
 ![](http://www.dcloud.io/docs/a/adebug/4.1.2.png)
-设备上安装完HBuilder应用后，会同步应用资源并自动运行。
+After the HBuilder application is installed on the device, the application resources will be synchronized and run automatically.
 
 
-- 模拟器
+- Emulator
 
 ![](http://www.dcloud.io/docs/a/adebug/4.1.3.png)
 
-- 真机
+- Real Device
 
 ![](http://www.dcloud.io/docs/a/adebug/4.1.4.png)
-应用启动后则可通过Chrome的DevTools工具连接进行调试。
+After the application is launched, you can connect to it for debugging through Chrome's DevTools.
 
 
-### 使用Chrome调试
-我们推荐开发者直接使用HBuilder的调试，详见上文。这样可以免翻墙。
-如果你不使用HBuilder的调试，而要自己使用chrome调试，可以看这里的教程，注意要翻墙。
-**检测Chrome版本号**
-Chrome 30及以上版本才支持Android设备调试，打开Chrome的关于页面查看：
+### Use Chrome to debug
+We recommend that developers directly use HBuilder for debugging, see above for details. This can avoid to use VPN.
+If you don't use HBuilder's debugging, but you want to use chrome to debug by yourself, you can watch the tutorial here, and pay attention to overcoming the wall.
+**Check Chrome Version**
+Chrome 30 and above only support debugging on Android devices. Open Chrome's About page to view:
 
 ![](http://www.dcloud.io/docs/a/adebug/4.2.1.png)
-要求最低Chrome30以上版本，如果版本太低则需更新版本，推荐使用最新版本。
+A minimum version of Chrome30 or above is required. If the version is too low, an updated version is required. The latest version is recommended.
 
-**打开设备检查页面**
-在Chrome地址栏，输入“chrome://inspect”或通过“菜单”->“工具”->“检查设备”打开设备检查页面：
-
+**Open the device check page**
+In the Chrome address bar, enter "chrome://inspect" or go to "Menu" -> "Tools" -> "Inspect Device" to open the device inspection page:
 ![](http://www.dcloud.io/docs/a/adebug/4.2.2.png)
-DevTools工具会自动检测已连接设备运行的可调试页面列表，点击对应页面的“inspect”链接打开调试页面。
-如果上图界面没有显示可调试的手机，请重新根据上文提到的方法检查手机的usb调试模式或驱动安装情况。同时注意Android4.4以下的手机无法调试，注意海马玩等模拟器无法调试。
-如果上图界面有手机，但没有可调试的app，可能的原因如下：
-1. 手机端需要调试的HBuilder基座或其他app并没有启动或没有运行任何html页面；
-2. 要调试的app拒绝了调试请求。HBuilder调试基座是默认开放调试请求的，但云打包或本地打包的app默认是关闭调试请求的。云打包是在manifest里配置是否允许调试，具体请查询[manifest配置指南](http://ask.dcloud.net.cn/article/94)，本地打包也要配置debug="true"，具体需要看本地打包配置环境。
+The DevTools tool will automatically detect the list of debuggable pages running on the connected device. Click the "inspect" link of the corresponding page to open the debug page.If the screen above does not display a phone that can be debugged, please check the USB debugging mode or driver installation of the phone again according to the method mentioned above. At the same time, note that mobile phones below Android 4.4 cannot be debugged, and emulators such as Haima Play cannot be debugged.
+If there is a mobile phone in the above interface, but there is no app that can be debugged, the possible reasons are as follows:
 
-**点击"inspect"时，如果遇到启动了一个白屏界面，说明被墙了。因为此服务需要连接google的服务器**
-一般情况下，只在第一次使用"inspect"时需要翻墙，以后会缓存在本地。
-开发者可以使用三方翻墙服务，但注意并不是可以访问google.com就可以使用chrome调试，有些翻墙软件支持的dns并不全。关键是要ping通chrometophone.appspot.com（此url可能随google调整服务而变化）。
+1. The HBuilder dock or other apps that need to be debugged on the mobile phone are not started or are not running any html pages;
+2. The app to be debugged rejected the debug request. The HBuilder debugging base opens debugging requests by default, but cloud-packaged or locally packaged apps close debugging requests by default. Cloud packaging is to configure whether to allow debugging in the manifest,
+3. Please inquire for details[manifest Configuration guide](http://ask.dcloud.net.cn/article/94)，local packaging must also configure debug="true", depending on the local packaging configuration environment。
 
-还有一个简单易行的方法是修改本机host。这里提供一些host清单。[https://github.com/racaljk/hosts](https://github.com/racaljk/hosts)，注意及时更新。于2016年7月25日亲测可行，注意此host文件涉及的国外域名很多，不需要的dns解析可以删除）
-注意host文件修改在window下需要管理员权限，具体方法本文不讲述请自行百度。
+**Click "inspect"，if you start a white screen interface, it means that you have been walled. Because this service needs to connect to Google's server**
+Generally, you only need to call VPN when you use "inspect" for the first time, and it will be cached locally in the future.
+Developers can use the three-party pair service, but note that it is not possible to use chrome to debug by visiting google.com. Some circumvention software supports incomplete dns. The key is to ping chrometophone.appspot.com (this url may change with google adjustment service).
 
-**页面调试**
-打开调试页面后DevTools会自动加载相关资源，调试页面操作方式与普通html调试页面完全一致。
-- 在Elements下查看DOM结构
+
+Another simple and easy way is to modify the local host. Here is a list of some hosts.。[https://github.com/racaljk/hosts](https://github.com/racaljk/hosts). Pay attention to timely updates. Pro-testing is feasible on July 25, 2016. Note that this host file involves many foreign domain names, and the unnecessary dns resolution can be deleted)
+
+Note that the host file modification requires administrator rights under the window, the specific method is not described in this article, please Baidu by yourself.
+
+**Page Adjustment**
+After opening the debugging page, DevTools will automatically load the relevant resources, and the operation mode of the debugging page is exactly the same as that of the normal html debugging page.
+- View the DOM structure under Elements
 
 ![](http://www.dcloud.io/docs/a/adebug/4.2.3.png)
 
-选中DOM元素后，在设备上会高亮显示，右侧Styles下修改CSS属性可即时生效：
+After the DOM element is selected, it will be highlighted on the device, and the CSS properties modified under Styles on the right can take effect immediately:
 
 ![](http://www.dcloud.io/docs/a/adebug/4.2.4.png)
 
-- 在Sources下断点调试JavaScript
+- Debug JavaScript with breakpoints under Sources
 
 ![](http://www.dcloud.io/docs/a/adebug/4.2.5.png)
 
-按F5可重新加载页面，重新开始调试。
+Press F5 to reload the page and restart debugging.
 
-**注意：每个Webview在chrome候选调试列表里是不同的列表，需要单独点inspect。当你inspect WebviewA时，点击了一个按钮，打开了WebviewB，此时若要调试B，需要返回chrome://inspect/#devices页面，找到WebviewB，然后点inspect。**
+**Note: Each Webview is a different list in the chrome candidate debugging list, and you need to click inspect separately. When you inspect WebviewA, click a button to open WebviewB. If you want to debug B, you need to return to the chrome://inspect/#devices page, find WebviewB, and click inspect. **

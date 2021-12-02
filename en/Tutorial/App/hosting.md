@@ -1,316 +1,322 @@
-## 简介
+## Summary
 
-DCloud为开发者提供了网站发布、App发布等功能，`前端网页托管`是其中的网页发布环节产品。
+DCloud provides some functions such as website publishing and App publishing for developers. `Front-end web hosting` is one product of the web publishing.
 
-`前端网页托管`基于[uniCloud](https://unicloud.dcloud.net.cn/login)的能力，为开发者的html网页提供**更快速、更安全、更省心、更便宜**的网站发布。
+`Front-end web hosting` base on [uniCloud](https://unicloud.dcloud.net.cn/login), provides a **faster, safer, more powerful, and cheaper** website publishing for developers' html pages.
 
-- 更快速：不经过web server，页面和资源直接上cdn，就近访问，速度更快。
-- 更安全：不存在传统服务器各种操作系统、web server的漏洞，不用天天想着打补丁。不怕DDoS攻击，永远打不垮的服务。
-- 更省心：无需再购买虚拟机、安装操作系统、配置web服务器、处理负载均衡、处理大并发、处理DDoS攻击......您什么都不用管，只需上传您写的页面文件
-- 更便宜：uniCloud由DCloud联合阿里云和腾讯云推出，其中阿里云版本完全免费。
+- Faster: Without going through the web server, the pages and resources are directly uploaded to the CDN, which can be accessed nearby, and the speed is faster.
+- Safer: There are no vulnerabilities in the operating systems and web servers of traditional servers. A service that will never be defeated by DDoS attacks.
+- Powerful：You don't need to purchase any hardware or software to protect your files.  Don’t worry about anything, just upload your files.
+- Cheaper：uniCloud is launched by DCloud in conjunction with Alibaba Cloud and Tencent Cloud, and the Alibaba Cloud is completely free.
 
-## 案例
+## Cases
 
-- `HBuilderX`文档网站，是一个基于`markdown`的文档系统，域名：[https://hx.dcloud.net.cn/](https://hx.dcloud.net.cn/)
-- `uni统计`官网现已部署到uniCloud，一份报表，掌握业务全景，域名：[https://tongji.dcloud.net.cn](https://tongji.dcloud.net.cn)
-- `hello uni-app`项目现已部署到uniCloud，线上地址：[https://hellouniapp.dcloud.net.cn](https://hellouniapp.dcloud.net.cn)
+- `HBuilderX` websites, which is a document system based on `markdown`, URL：[https://hx.dcloud.net.cn/](https://hx.dcloud.net.cn/)
+- `uni statistics` the official website has now been deployed to uniCloud, with a report to master the  business，URL：[https://tongji.dcloud.net.cn](https://tongji.dcloud.net.cn)
+- `hello uni-app` the project  has deployed to uniCloud, URL：[https://hellouniapp.dcloud.net.cn](https://hellouniapp.dcloud.net.cn)
 
-## 开通
+## Activation
 
-首先开发者需要开通`uniCloud`，登录[https://unicloud.dcloud.net.cn/](https://unicloud.dcloud.net.cn/)。
+Firstly, developers need to activate `uniCloud`, login [https://unicloud.dcloud.net.cn/](https://unicloud.dcloud.net.cn/).
 
-然后选择或创建一个服务空间。
+Then choose or create a service space.
 
-最后在上述网页左侧导航点击`前端网页托管`，即可开始使用。
+Finally, in the left navigation of the above webpage, click on `Front-end web hosting` to start using.
 
-`前端网页托管`和云函数没有绑定关系，可以和云函数部署在一个服务空间，也可以是不同的空间，甚至是不同云服务商的空间。
+`Front-end web hosting` has no binding with cloud functions. It can be deployed in a service space with cloud functions, or in a different space, or even a space of different cloud service providers.
 
-- 阿里云`前端网页托管`免费。
-- 腾讯云`前端网页托管`需付费开通，定价由腾讯云提供。腾讯云的不同档套餐有不同规格，见文末附表：
+- Aliyun `front-end web hosting` is free.
+- Tencent Cloud `front-end web hosting` requires payment to activate, and pricing is provided by Tencent Cloud. Different packages of Tencent Cloud have different specifications, see the attached table at the end of the article.
 
 
-## 使用
+## How to use
 
-开通后，需要把开发者的前端网页，上传到uniCloud的`前端网页托管`中。
+After activation, you need to upload front-end web page to uniCloud's `Front-end web hosting`.
 
-目前提供了2种方式操作：
+Two ways:
 
-方式1. 通过[uniCloud控制台](https://unicloud.dcloud.net.cn/)，在web界面上传。
+Method 1. Via [uniCloud Console](https://unicloud.dcloud.net.cn/), upload on the web page.
 
-  上传时，可以按文件上传，也可以按文件夹上传。
+  When uploading, you can upload by file or folder.
 
-  如果是按文件夹上传，可以选择上传后的目录是否包含上传文件夹的根目录。
+  If you upload by folder, you can choose whether the uploaded directory contains the root directory of the upload folder.
 
 <img src="https://img.cdn.aliyun.dcloud.net.cn/uni-app/uniCloud/unicloud-web-hosting.jpg"  style="border: 1px solid #eee; zoom: 80%;"/>
 
-方式2. 通过HBuilderX工具上传。
+Method 2. Upload through the HBuilderX tool
 
-  > HBuilderX 2.8+起，支持在HBuilderX中直接上传前端网页到uniCloud中。
+  > From HBuilderX 2.8+, it supports to upload front-end web pages directly to uniCloud in HBuilderX.
 
-  在菜单发行中，选择`上传网站到服务器`。
+  In the menu 'publish', select `upload website to server`.
 
-  - 对于uni-app项目，可以先编译为h5，然后直接把编译后的h5上传上去。如下图
+  - For uni-app projects, you can compile to h5 first, and then upload the compiled h5 directly. As shown below:
 
 <img src="https://img.cdn.aliyun.dcloud.net.cn/uni-app/uniCloud/unicloud-hx-hosting.jpg" style="border: 1px solid #eee; zoom: 80%;"/>
 
-  - 对于非uni-app项目，可以自己选择要上传的目录，包含html、js、css、图片等静态前端文件接口。如下图
+  - For non-uni-app projects, you can choose the directory to upload, including static front-end file interfaces such as html, js, css, and pictures. As shown below:
 
 <img src="https://img.cdn.aliyun.dcloud.net.cn/uni-app/uniCloud/unicloud-hx-hosting-h5.jpg" style="border: 1px solid #eee; zoom: 80%;"/>
 
-  > HBuilderX 2.8.9+，支持前端网页托管管理器。
+  > HBuilderX 2.8.9+，support front-end web hosting manager.
 
-  在菜单视图中，或者在左下角状态栏中，点击`前端网页托管`，可在左侧打开前端网页托管管理器。如下图
+  In the menu view, or in the status bar in the lower left corner, click `Web Hosting` to open the front-end web hosting manager on the left. As shown below:
 
 <img src="/static/snapshots/tutorial/hosting.jpeg" style="border: 1px solid #eee; zoom: 50%;">
 
-  在前端网页托管管理器中，可以看到当前用户的服务空间列表，置灰表示该服务空间还没有开通前端网页托管，点击后可根据提示开通。（如上图中置灰的ali1服务空间）。
+In the front-end web hosting manager, you can see the current user's service space list, grayed out means that the front-end web hosting has not been activated in the service space, and you can activate it according to the prompts after clicking. (As shown in the grayed-out ali1 service space in the figure above).
 
-  点击可用的服务空间，在右侧可以看到远端的资源管理器，把本地文件拖进入，即可上传文件。
+  Click on the available service space, you can see the remote resource manager on the right, drag the local file into it, and you can upload the file.
 
-**注意事项**
+**Note**
 
-1. `前端网页托管`适于uni-app的h5页面发布。尤其是配搭uniCloud云开发，将彻底不用再租用任何传统的服务器。
-2. `前端网页托管`适于所有前后端分离的网站中的前端页面发布，包括pc网页。
-3. 仅支持html、CSS、JavaScript、字体、图片、音视频、json等文件。不支持php、java、python、ruby、go、c++等其他需要额外语言解释器解释的语言文件。
-4. 如果开发者需要做a/b test或灰度新功能，需要自己在js里写代码实现，不能通过路由到不同服务器实现。
-5. uni-app项目编译为h5时，在项目的manifest中配置二级目录。上传时无需重复设置二级目录。
-6. 一个`前端网页托管`的空间里，可以上传多个网站，用不同目录区分开，访问时使用同一个域名后加不同目录的方式访问。不支持每个目录单独设置不同域名。
-7. 部署到不同的服务空间的`前端网页托管`内的网站，也是可以访问同一个服务空间内的云函数的，只需要在部署云函数的服务空间的`跨域配置`内添加部署前端页面的域名即可
+1. `Front-end web hosting` is suitable for publishing h5 pages of uni-app. Especially with uniCloud cloud development, there will be no need to rent any traditional servers at all.
+2. `Front-end web hosting` is suitable for publishing front-end pages in all websites where the front-end and back-end are separated, including PC web pages.
+3. Only supports html, CSS, JavaScript, fonts, pictures, audio and video, json and other files. It does not support php, java, python, ruby, go, c++ and other language files that require interpretation by an additional language interpreter.
+4. If developers need to do a/b test or grayscale new functions, they need to write code in js to implement them, and they cannot be implemented by routing to different servers.
+5. When the uni-app project is compiled to h5, configure the secondary directory in the project's manifest. There is no need to set the secondary directory repeatedly when uploading.
+6. In a `front-end web hosting` space, multiple websites can be uploaded, separated by different directories, and accessed by using the same domain name followed by different directories. It is not supported to set a different domain name separately for each directory.
+7. Websites in `front-end web hosting` deployed to different service spaces can also access cloud functions in the same service space. You only need to add deployment front-end pages to the `cross-domain configuration` of the service space where cloud functions are deployed. Domain name
 
-## 基础配置@base-config
+## Basic Configuration @base-config
 
-本章节介绍`前端网页托管`提供的各种配置项目说明。其中配置域名、网站首页、404页面，是阿里云和腾讯云均支持的，其他配置仅腾讯云支持。
+This chapter introduces the description of various configuration items provided by `Front End Web Hosting`. The configuration of domain name, website homepage, and 404 page are supported by both Alibaba Cloud and Tencent Cloud, and other configurations are only supported by Tencent Cloud.
 
-### 配置域名@domain
+### Configure domain@domain
 
-`前端网页托管`，自带一个测试域名，仅用于产品体验及测试可快速体验前端网页部署的完整流程，该域名有如下限制：
-  + 阿里云每分钟最多60次请求，默认每日仅允许10个公网IP访问，超出部分，需通过手动方式将来源IP加入白名单,IP白名单也会有数量限制
-  + 腾讯云限速100K/s
+`Front-end web hosting`, comes with a test domain name, which is only used for product experience and testing to quickly experience the complete process of front-end web deployment. The domain name has the following restrictions:
+  + Alibaba Cloud has a maximum of 60 requests per minute. By default, only 10 public network IPs are allowed to visit per day. If the excess is exceeded, the source IP must be manually added to the whitelist, and the IP whitelist will also have a limit on the number
+  + Tencent Cloud speed limit 100K/s
 
-业务如要上线商用，请配置自己的正式域名，配置自己的正式域名后，将不受上述测试域名的限制。（尤其注意阿里云测试域名是公共的，任意一个服务空间如果有上传恶意文件被投诉，会导致测试域名被微信内置浏览器整体禁封）
+If the business is to be deployed, please set your own domain name. After configuring your own domain name, you will not be restricted by the above-mentioned test domain. (Note: The Alibaba Cloud test domain is public. If any service space is complained of uploading malicious files, the test domain will be banned by the built-in WeChat browser.)
 
 
-前端网页托管配置自己域名的步骤如下：
+The steps for web hosting to configure your own domain are as follows:
 
-1. 登录[uniCloud控制台](https://unicloud.dcloud.net.cn/)。
-2. 进入前端网页托管页面，选择【基础设置】，单击【添加域名】，进行域名添加，如下图所示：
+1. Login[uniCloud Console](https://unicloud.dcloud.net.cn/)。
+2. Open "Web Hosting" page, select [Basic Configuration], click [Add Domain] to add new domain name, as shown below:
 
 <img src="https://dcloud-img.oss-cn-hangzhou.aliyuncs.com/uni-app/uniCloud/uniCloud-hosting-domain-add.jpg " style="border: 1px solid #eee; zoom: 80%;" />
 
-3. 添加后，系统会自动分配一个 CNAME 域名，CNAME 域名不能直接访问，您需要在域名服务提供商处完成 CNAME 配置（将添加的域名CNAME到此域名），配置生效后，新域名即可使用。
+3. The system will automatically assign a CNAME domain. The CNAME cannot be asscessed directly and you have to add CNAME configuration at the domain name service provider (DNS). After the configuration takes effect, the new domain name can be used.
 
-阿里云现已支持http强制跳转https，在上述添加界面打开对应开关即可
+Alibaba Cloud supports HTTP forced redirection to https, please turn on the configuration on above setting page.
 
-**域名备案**
+**Domain Registration**
 
-如果你已经有备案过的域名，直接解析过来即可；如果你要新注册域名，首先自行在网上购买，然后注意域名如果想在国内正常绑定阿里云或腾讯云，需要域名备案。这里的备案流程和传统云主机略有不同，涉及一个uniCloud没有固定ip的问题。此时可以去买花生壳的备案服务；也可以临时买一个短期传统云，走传统备案；还有授权码方案，这里有开发者分享的经验贴：[https://ask.dcloud.net.cn/article/38116](https://ask.dcloud.net.cn/article/38116)
+If you already have a registered domain name, just resolve it directly; You have to buy domain name if you want to register a new domain name. Please note: You must receive a ICP License (Internet Content Provider License) if you want to use Alibaba Cloud or Tencent Cloud. The registation process here is slightly different from traditional cloud hosts, and there is a problem that uniCloud does not have a fixed IP. So you can purchase domain registation service from oray company or use traditional domain registation by temporarily purchasing a short-term traditional cloud. There is also an authorization code solution, please see the posts shared by the developers:
+[https://ask.dcloud.net.cn/article/38116](https://ask.dcloud.net.cn/article/38116)
 
-**关于证书内容与私钥**
+**About certificate and private key**
 
-域名如果使用https，则需要证书。证书签发后，可下载到本地，然后将内容复制黏贴到uniCloud web控制台。
+A certificate is required if the domain name use https. After the certificate is issued, it can be downloaded to the local, and then the content can be copied and pasted to the uniCloud web console.
 
-注意：各运营商下载证书的后缀可能不同，一般来说，`.key`文件对应私钥，`.pem`或`.crt`文件对应证书。这几种类型文件都是文本内容，可选择记事本打开查看内容。
+Note: The suffix of the certificate may be different. The `.key` file is the private key, and the `.pem` or `.crt` file is the certificate. You can use Notepad to open and view the content of these files.
 
-如果您还没有SSL证书，点此[快速获取](https://cloud.tencent.com/act/cps/redirect?redirect=33848&cps_key=c858f748f10419214b870236b5bb94c6)。
 
-**注意事项**
+If you have not SSL certificate, click here[Quick Request](https://cloud.tencent.com/act/cps/redirect?redirect=33848&cps_key=c858f748f10419214b870236b5bb94c6)。
 
-- 在阿里云开启了泛域名加速的情况下，对应的子域名可能无法配置到前端网页托管，**这种情况下可能会提示：该域名已被添加过，不能重复添加**
-- 暂不支持绑定中文域名
+**Note**
 
-### 路由规则@routing
+- When you enabled *.domainname acceleration on Alibaba Cloud, the subdomain name may not be configured for web hosting. **In this case, you may be prompted: The domain name has already been added and cannot be added repeatedly***
+- Not support binding Chinese domain names
 
-**网站首页**
+### Routing @routing
 
-设置网站首页文档名
+**Home Page**
 
-**404页面**
+Set home page name
 
-访问静态网站出错后返回的页面。
+**404 page**
 
-**重定向规则**
+404 page returned after an error occurred while visiting the website.
 
-> 仅腾讯云支持
+**Redirection rules**
 
-支持以下三种组合配置
+> Only supported by Tencent Cloud
 
-- 类型：错误码、规则：替换路径。将特定错误码的请求重定向到目标文档，仅支持对4xx错误码。
+Support the following three combination configurations.
 
-例：将404错误码重定向至index.html，需做如下配置（uni-app项目使用history模式发行到h5时可以使用此配置）：
+- Type: Error code, rule: replace path。Redirect requests for specific error codes to the target document. Only 4xx error codes are supported.
 
-|类型		|描述	|规则			|替换内容		|
+Example: To redirect the 404 error code to index.html, you need to do the following configuration (This configuration can be used when the uni-app project is released to h5 in history mode):
+
+|Type		|Description	|Rule			|Replace Content		|
 |:-:		|:-:	|:-:			|:-:				|
-|错误码	|404	|替换路径	|index.html	|
+|Error Code	|404	|Replace path	|index.html	|
 
-- 类型：前缀匹配、规则：替换路径。将匹配到特定前缀的请求重定向到目标文档
+- Type: Prefix match, Rule: Replace path. Redirect requests matching a specific prefix to the target document.
 
-例：当您删除了images/文件夹（即删除了具有前缀images/的所有对象）。您可以添加重定向规则，将具有前缀images/的任何对象的请求重定向至test.html页面。
+For example: When you delete the images/ folder (that is, delete all objects with the prefix images/). You can add redirection rules to redirect requests for any object with the prefix images/ to the test.html page.
 
-|类型			|描述		|规则			|替换内容	|
+|Type			|Description		|Rule			|Replace Content	|
 |:-:			|:-:		|:-:			|:-:			|
-|前缀匹配	|images/|替换路径	|test.html|
+|Prefix match	|images/|Replace path	|test.html|
 
-- 类型：前缀匹配、规则：替换前缀。将匹配到特定前缀的请求中的前缀替换为替换内容，例：
+- Type: Prefix match, Rule: Replace prefix. Replace the prefix in the request that matches a specific prefix with the replacement content, for example:
 
-例：当您将文件夹从docs/重命名为documents/后，用户在访问docs/文件夹会产生错误。所以，您可以将前缀docs/的请求重定向至documents/。
+For example: When you rename the folder from docs/ to documents/, users will get an error when accessing the docs/ folder. Therefore, you can redirect requests with the prefix docs/ to documents/.
 
-|类型			|描述	|规则			|替换内容		|
+|Type			|Description	|Rule			|Replace Content		|
 |:-:			|:-:	|:-:			|:-:				|
-|前缀匹配	|docs/|替换前缀	|documents/	|
+|Prefix match	|docs/|Replace prefix	|documents/	|
 
-### 缓存配置@cache
+### Cache Configuration @cache
 
-> 仅腾讯云支持
+> Only supported by Tencent Cloud
 
-- 文件类型：根据填入的文件后缀进行缓存过期时间设置，格式为.jpg形式，不同后缀之间用;间隔。
-- 文件夹：根据填入的目录路径进行缓存过期时间设置，格式为/test形式，无需以/结尾，不同目录之间用;间隔。
-- 全路径文件：指定完整的文件路径进行缓存过期时间设置，格式为/index.html，支持完整路径加文件类型匹配模式，如/test/*.jpg。
+- File Type: Set the cache expiration time according to the file suffix. The format is .jpg, and the interval is used between different suffixes.
+- Folder: Set the cache expiration time according to the directory path. The format is /test, and there is no need to end with /. Use interval between different directories.
+- Full Path File: Specify the full file path to set the cache expiration time, the format is /index.html, and the full path plus file type matching mode is supported, such as /test/*.jpg.
 
-**注意**
+**Note**
 
-- 缓存过期规则最多可配置10条。
-- 多条缓存过期规则之间的优先级为底部优先。
-- 缓存过期时间最多可设置365天。
+- Up to 10 cache expiration rules can be configured.
+- The priority among multiple cache expiration rules is from bottom to top.
+- The cache expiration time can be set up to 365 days.
 
-### 防盗链配置@referer
+### Prevent Hotlinking Configuration @referer
 
-> 仅腾讯云支持
+> Only supported by Tencent Cloud
 
-**referer 黑名单：**
+**referer Blacklist: **
 
-- 若请求的 referer 字段匹配黑名单内设置的内容，CDN 节点拒绝返回该请求信息，直接返回403状态码。
-- 若请求的 referer 不匹配黑名单内设置的内容，则 CDN 节点正常返回请求信息。
-- 当勾选包含空 referer 选项时，此时若请求 referer 字段为空或无 referer 字段（如浏览器请求），则 CDN 节点拒绝返回该请求信息，返回403状态码。
+- If the referer field of the request matches the content set in the blacklist, the CDN node refuses to return the requested information and returns 403 status code.
+- If the requested referer does not match the content set in the blacklist, the CDN node returns the requested information.
+- When the option of including empty referer is checked, if the request referer field is empty or there is no referer field (such as a browser request), the CDN node refuses to return the request information and returns 403 status code.
 
-**referer白名单：**
+**referer Whitelist：**
 
-- 若请求的 referer 字段匹配白名单设置的内容，则 CDN 节点正常返回请求信息。
-- 若请求的 referer 字段不匹配白名单设置的内容，则 CDN 节点拒绝返回该请求信息，会直接返回状态码403。
-- 当设置白名单时，CDN 节点只能返回符合该白名单内字符串内容的请求。
-- 当勾选包含空 referer 选项时，此时若请求 referer 字段为空或无 referer 字段（如浏览器请求），则 CDN 正常返回请求信息。
+- If the requested referer field matches the content set in the whitelist, the CDN node returns the requested information.
+- If the referer field of the request does not match the content set in the whitelist, the CDN node will refuse to return the requested information and will returns 403 status code.
+- When the whitelist is set, the CDN node can only return requests that match the string content in the whitelist.
+- When the option of including empty referer is checked, if the request referer field is empty or there is no referer field (such as a browser request), the CDN will return the request information.
 
-**配置规则：**
+**Configuration Rule: **
 
-防盗链支持域名 / IP 规则，匹配方式为前缀匹配（仅支持路径情况下，域名的前缀匹配不支持），即假设配置名单为www.abc.com，则www.abc.com/123匹配，www.abc.com.cn不匹配；假设配置名单为127.0.0.1，则127.0.0.1/123也会匹配。
-防盗链支持通配符匹配，即假设名单为*.qq.com，则www.qq.com、a.qq.com均会匹配。
+Anti-hotlinking supports domain name/IP rules, and the matching method is prefix matching (only path is supported, domain name prefix matching is not supported), that is, if the configuration list is www.abc.com, then www.abc.com/123 will match, www.abc.com.cn does not match; assuming the configuration list is 127.0.0.1, 127.0.0.1/123 will also match.
+Anti-hotlinking supports wildcard matching, for example, if the list is *.qq.com, both www.qq.com and a.qq.com will match.
 
-### IP黑白名单配置@ip-filter
 
-> 仅腾讯云支持
+### IP Blacklist Configuration @ip-filter
 
-**IP 黑名单**
+> Only supported by Tencent Cloud
 
-用户端 IP 匹配黑名单中的 IP 或 IP 段时 ，访问 CDN 节点时将直接返回403状态码。
+**IP Blacklist**
 
-**IP 白名单**
+When the client IP matches the IP or IP segment in the blacklist, the 403 status code will be returned when accessing the CDN node.
 
-用户端 IP 未匹配白名单中的 IP 或 IP 段时 ，访问 CDN 节点时将直接返回403状态码。
+**IP Whitelist*
 
-**名单规则**
+When the client IP does not match the IP or IP segment in the whitelist, the 403 status code will be returned directly when accessing the CDN node.
 
-- IP 黑名单与 IP 白名单二选一，不可同时配置。
-- IP 段仅支持 /8、/16、/24 网段，不支持其他网段。
-- 不支持IP：端口形式的黑白名单
-- 名单最多可输入50个。
+**Blacklist/Whitelist Rules**
 
-### 默认域名IP白名单@default-domain-ip-whitelist
+- Only one of the IP blacklist and the IP whitelist can be selected, not at the same time.
+- The IP segment only supports /8, /16, /24 network segments, and does not support other network segments.
+- Not support IP: black and white list with port.
+- Up to 50 lists.
 
-> 仅阿里云支持
+### Default domain name IP whitelist @default-domain-ip-whitelist
 
-为保障默认域名不被滥用，阿里云对默认域名做出了如下限制：每天前10个IP可以直接访问，超出10个IP后需要配置IP白名单才可以访问
+> Only supported by Alibaba Cloud
 
-仅支持配置ipv4，可以配置IP或者IP网段，掩码位数取值范围24-31。最多可同时配置三个，多个之间用逗号隔开，如：123.120.5.235/24,123.123.123.123
+In order to ensure that the default domain name is not abused, Alibaba Cloud has made the following restrictions on the default domain name: the first 10 IPs can be accessed directly every day, and the IP whitelist needs to be configured after the 10 IPs can be accessed.
 
-### IP访问限频配置@ip-freq
+Only ipv4 is supported, IP or IP network segment can be configured, and the mask digits range from 24-31. Up to three can be configured at the same time, separated by commas, such as:
+123.120.5.235/24,123.123.123.123
 
-> 仅腾讯云支持
+### IP access frequency limit configuration @ip-freq
 
-**配置说明**
+> Only supported by Tencent Cloud
 
-- 配置开启后，超出 QPS 限制的请求会直接返回514，设置较低频次限制可能会影响您的正常高频用户的使用，请根据业务情况、使用场景合理设置阈值。
-- 限频仅针对与单 IP 单节点访问次数进行约束，若恶意用户海量 IP 针对性的进行全网节点攻击，则通过此功能无法进行有效控制。
+**Configuration Instructions**
 
-## 最佳实践
+- After the configuration is enabled, requests that exceed the QPS limit will be returned to 514. Setting a lower frequency limit may affect the use of your high-frequency users. Please set the threshold reasonably according to business conditions and usage scenarios.
 
-### 部署uni-app项目@host-uni-app
+- Frequency limitation only restricts the number of visits to a single IP and a single node. If malicious users carry out targeted attacks with massive IPs, this function is unstoppable.
 
-uni-app项目根据路由模式不同需要做不同的配置
+## Best Practices
 
-- 使用hash模式时，无需特别的配置即可正常使用
+### Deploy uni-app project @host-uni-app
 
-- 使用history模式时可以配置如下规则
+The uni-app project needs to be configured differently according to different routing modes.
 
-  + 腾讯云配置重定向规则将404错误码重定向至`index.html`
-  + 阿里云配置错误文档为`index.html`
+- When using hash mode, it can be used without special configuration
 
-手动部署uni-app项目时需要注意将文件部署在配置的h5基础路径下。**HBuilderX一键部署时会自动按照manifest.json内配置的基础路径进行部署**
+- The following rules can be configured when using history mode
 
-如果部署多个项目到一个服务空间可以使用不同的基础路径来区分，需要注意的是这多个项目中只有一个项目可以使用history模式
+  + Tencent Cloud configures redirection rules to redirect 404 error codes to `index.html`
+  + Alibaba Cloud configuration error document to `index.html`
 
-## 腾讯云计费详细说明
+When manually deploying uni-app projects, you need to pay attention to deploying the files under the  h5 base path. **HBuilderX one-click deployment will automatically follow the basic path configured in manifest.json for deployment**
 
-|套餐名		|前端网页部署增值包1|前端网页部署增值包2|前端网页部署增值包3|
+If you deploy multiple projects to a service space, you can use different basic paths to distinguish them. It should be noted that only one of these multiple projects can use the history mode
+
+## Tencent Cloud Price List
+
+|Package		|Package1|Package2|Package3|
 |:-:			|:-:								|:-:								|:-:								|
-|容量			|5G									|10G								|100G								|
-|流量			|5G/月							|50G/月							|500G/月						|
-|读次数		|150万次/月					|200万次/月					|1500万次/月				|
-|写次数		|60万次/月					|100万次/月					|600万次/月					|
-|回源流量	|5G/月							|10G/月							|150G/月						|
+|Capacity			|5G									|10G								|100G								|
+|Traffic			|5G/月							|50G/月							|500G/月						|
+|Reads		|150万次/月					|200万次/月					|1500万次/月				|
+|Writes		|60万次/月					|100万次/月					|600万次/月					|
+|Return Traffic	|5G/月							|10G/月							|150G/月						|
 
 <!--
 |费用			|9.9元/月						|35元/月						|330元/月						|
 -->
 
-**注意**
+**Note**
 
-- 资源统计页面展示的数据可能会有延迟
-- 读次数、写次数、回源流量为系统限制，在现有套餐的容量、流量限制下一般不会超出
-- 腾讯云前端网页部署套餐到期之后会保留7天，超过7天将会销毁
-- 如果服务空间是包月套餐，在服务空间到期但是前端网页托管未到期的情况下，前端网页托管也会随服务空间销毁，请注意给服务空间续费
+- The data displayed on the resource statistics page may be delayed
+- The number of reads, writes, and return-to-source traffic are system limits, and generally will not exceed the capacity and traffic limits of the existing package
+- Tencent Cloud's web page deployment package will be retained for 7 days after expiration, and will be destroyed after 7 days
+- If the hosting service is a monthly package, if the hosting service expires but web hosting has not expired, web hosting will also be destroyed with the hosting. Please pay attention to renew the hosting.
 
-## 阿里云使用限制
+## Alibaba Cloud usage restrictions
 
-- 前端网页部署限制为最大存储空间用量2GB
-- 单文件最大限制为50MB
+- The maximum storage usage of web hosting is 2GB
+- The maximum limit for a single file is 50MB 
 
-### 名词解释
+### Glossary
 
-**CDN 回源流量**
+**CDN return-to-source traffic**
 
-指开启了 CDN 加速后，CDN 回源存储时产生的流量。
+Refers to the traffic generated when the CDN request files\functions\codes from original web hosting after CDN acceleration is turned on.
 
 <!--
-### 腾讯云费用说明
+### Tencent Cloud Price List
 
-**新购**
+**New purchase**
 
-- 新购时某套餐时有效期按自然月计。例：2020年5月28日购买2个月套餐，则套餐有效期至2020年7月28日23时59分59秒
+- When you buy a package, the validity period is calculated in natural months. Example: If you purchase a 2-month package on May 28, 2020, the package will be valid until 23:59:59 on July 28, 2020
 
-**续费**
+**Renew**
 
-- 续费逻辑和新购一样以自然月计。例：当前有效期至2020年7月28日23时59分59秒，续费一个月，则套餐有效期至2020年8月28日23时59分59秒
+- The renewal is calculated in natural months like new purchases. Example: The current validity period will be until 23:59:59 on July 28, 2020. If the renewal is one month, the package will be valid until 23:59:59 on August 28, 2020.
 
-**升配**
+**Upgrade**
 
-- 升配费用 = 按月升配差价 × 升配天数 / (365 / 12) × 适用折扣
-  - 按月升配差价：新老配置原价按月的单价。
-  - 升配的费用按天计算：升配天数 = 资源到期时间 - 当前时间。
-  - 适用折扣：根据升配天数向下匹配适用折扣。
-  - 折扣为现网生效的折扣。
-- 升配不影响资源到期时间。
+- Upgrade Cost = Monthly upgrade price difference × Upgrade days / (365 / 12) × Discount
+  - Monthly upgrade price difference: the monthly unit price of the original price of the new and old configuration.
+  - The cost of the upgrade is calculated on a daily basis: the number of days of the upgrade = the resource expiration time - the current time.
+  - Discount：The applicable discount is matched downwards according to the number of upgrade days.
+  - The discount is the discount in effect on the live network.
+- Upgrading does not affect the resource expiration time.
 
-**升配示例**
+**Example of Upgrade**
 
->以下价格仅作示例用，非官网实际价格，实际单价请以购买时为准。
+>The following prices are for example only, not the actual prices on the official website, and the actual unit price shall prevail at the time of purchase.
 
-举例：
+For Example:
 
-2019年11月1日，购买3个月专业版套餐，到期时间为2020年2月1日23时59分59秒，包年包月单价为100元/月。
 
-2019年12月15日，将该套餐升级为1000元/月的企业版套餐。
+On November 1, 2019, you can purchase a 3-month professional package. The expiration time is 23:59:59 on February 1, 2020. The unit price of the annual and monthly subscription is 100 yuan/month.
 
-- 按月升配差价 = 1000 - 100 = 900元/月
-- 升配天数 = 31 × 1 + 15 + 1 = 47天（1指1月份为31天，15指12月份剩余15天， 1指2月份1天）
-- 适用折扣：暂无折扣
-- 升配费用 = （1000 - 100） × 47 /（365 / 12） = 1390.53元
+On December 15, 2019, the package will be upgraded to an enterprise package of 1,000 yuan/month.
+
+- Monthly upgrade price difference = 1000 - 100 = 900元/Month
+- Days of Upgrade = 31 × 1 + 15 + 1 = 47 Days（1 means 31 days in January, 15 means 15 days remaining in December, 1 means 1 day in February）
+- Discount：No valid discount
+- Cost of Upgrade = （1000 - 100） × 47 /（365 / 12） = 1390.53 Yuan
 -->
