@@ -135,8 +135,8 @@
 |Cursor Right|cursorRight|
 |Cursor Left One Word|cursorWordStartLeft|
 |Cursor Right One Word|cursorWordEndRight|
-|Cursor Left One Hump Word||cursorWordPartLeft|
-|Cursor Right One Hump Word||cursorWordPartRight|
+|Cursor Left One Hump Word|cursorWordPartLeft|
+|Cursor Right One Hump Word|cursorWordPartRight|
 |Cursor to the Start of the Soft Line|cursorHome|
 |Cursor to the End of the Soft Line|cursorEnd|
 |Cursor to the Start of Line|cursorLineStart|
