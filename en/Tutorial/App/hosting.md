@@ -35,7 +35,7 @@ After activation, you need to upload front-end web page to uniCloud's `Front-end
 
 Two ways:
 
-Method 1. Via [uniCloud Console](https://unicloud.dcloud.net.cn/), upload on the web page.
+Method 1. Visit [uniCloud Console](https://unicloud.dcloud.net.cn/), upload on the web page.
 
   When uploading, you can upload by file or folder.
 
@@ -51,17 +51,17 @@ Method 2. Upload through the HBuilderX tool
 
   - For uni-app projects, you can compile to h5 first, and then upload the compiled h5 directly. As shown below:
 
-<img src="https://img.cdn.aliyun.dcloud.net.cn/uni-app/uniCloud/unicloud-hx-hosting.jpg" style="border: 1px solid #eee; zoom: 80%;"/>
+<img src="/static/snapshots/tutorial/unicloud/unicloud-web-hosting-en.png" class="hd-img" />
 
   - For non-uni-app projects, you can choose the directory to upload, including static front-end file interfaces such as html, js, css, and pictures. As shown below:
 
-<img src="https://img.cdn.aliyun.dcloud.net.cn/uni-app/uniCloud/unicloud-hx-hosting-h5.jpg" style="border: 1px solid #eee; zoom: 80%;"/>
+<img src="/static/snapshots/tutorial/unicloud/unicloud-hx-hosting-h5-en.png" class="hd-img" />
 
   > HBuilderX 2.8.9+，support front-end web hosting manager.
 
   In the menu view, or in the status bar in the lower left corner, click `Web Hosting` to open the front-end web hosting manager on the left. As shown below:
 
-<img src="/static/snapshots/tutorial/hosting.jpeg" style="border: 1px solid #eee; zoom: 50%;">
+<img src="/static/snapshots/tutorial/unicloud/open-hosting-en.jpg" class="hd-img" />
 
 In the front-end web hosting manager, you can see the current user's service space list, grayed out means that the front-end web hosting has not been activated in the service space, and you can activate it according to the prompts after clicking. (As shown in the grayed-out ali1 service space in the figure above).
 
