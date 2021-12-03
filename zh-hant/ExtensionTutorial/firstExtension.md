@@ -4,7 +4,7 @@
 
 > 注意：插件名稱只能用英文字母和數字，不支持中文和空格。
 
-<img src="/static/snapshots/Plug-in-development/create_extension.jpg" style="zoom:45%;border: 1px solid #eee;" />
+<img src="/static/snapshots/Plug-in-development/create_extension.png" style="zoom:45%;border: 1px solid #eee;" />
 
 ### 運行插件
 建好插件項目後，選中該項目或者打開項目下某個文件，然後點擊工具欄上`運行`按鈕或者快捷鍵`ctrl+r`打開運行菜單，選擇`運行插件xxx`即可新開一個HBuilderX窗體，這個新窗體將自動載入該插件。如下圖

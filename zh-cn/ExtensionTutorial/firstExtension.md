@@ -4,7 +4,7 @@
 
 > 注意：插件名称只能用英文字母和数字，不支持中文和空格。
 
-<img src="/static/snapshots/Plug-in-development/create_extension.jpg" style="zoom:45%;border: 1px solid #eee;" />
+<img src="/static/snapshots/Plug-in-development/create_extension.png" style="zoom:45%;border: 1px solid #eee;" />
 
 ### 运行插件
 建好插件项目后，选中该项目或者打开项目下某个文件，然后点击工具栏上`运行`按钮或者快捷键`ctrl+r`打开运行菜单，选择`运行插件xxx`即可新开一个HBuilderX窗体，这个新窗体将自动载入该插件。如下图
