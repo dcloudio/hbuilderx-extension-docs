@@ -18,7 +18,7 @@ The following is a list of various project types and the environments in which t
 
 See the following image for project types:
 
-<img src="/static/snapshots/tutorial/ProjectType.png" style="zoom: 70%;border: 1px solid #eee;" />
+<img src="/static/snapshots/tutorial/ProjectType_en.png" class="hd-img" />
 
 #### Notes
 

@@ -15,7 +15,7 @@ Take the `less` plugin as an example: open the HBuilderX installation directoryï
 
 If it does not exist, open this directory in the terminal and manually execute `npm install`
 
-<img src="/static/snapshots/faq/npminstall.png" style="zoom:90%;" />
+<img src="/static/snapshots/faq/npminstall_en.jpeg" class="hd-img" style="border-radius: 25px;"/>
 
 **Extension**
 
