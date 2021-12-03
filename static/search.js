@@ -692,15 +692,13 @@
 
     var install = function (hook, vm) {
         var config = getConfig(vm, CONFIG);
-        var isAuto = config.paths === 'auto';
+        // var isAuto = config.paths === 'auto';
 
         hook.ready(function (_) {
-            // init(config, vm);
-            !isAuto && init$1(config, vm);
         });
         hook.doneEach(function (_) {
             update(config, vm);
-            isAuto && init$1(config, vm);
+            init$1(config, vm);
         });
     };
 
