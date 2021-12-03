@@ -1,11 +1,11 @@
-(function() {
+(function () {
 
     /**
      * Create a cached version of a pure function.
      */
     function cached(fn) {
         var cache = Object.create(null);
-        return function(str) {
+        return function (str) {
             var key = isPrimitive(str) ? str : JSON.stringify(str);
             var hit = cache[key];
             return hit || (cache[key] = fn(str))
@@ -15,8 +15,8 @@
     /**
      * Hyphenate a camelCase string.
      */
-    var hyphenate = cached(function(str) {
-        return str.replace(/([A-Z])/g, function(m) {
+    var hyphenate = cached(function (str) {
+        return str.replace(/([A-Z])/g, function (m) {
             return '-' + m.toLowerCase();
         })
     });
@@ -28,7 +28,7 @@
      */
     var merge =
         Object.assign ||
-        function(to) {
+        function (to) {
             var arguments$1 = arguments;
 
             for (var i = 1; i < arguments.length; i++) {
@@ -54,7 +54,7 @@
     /**
      * Perform no operation.
      */
-    function noop() {}
+    function noop() { }
 
     /**
      * Check if value is function
@@ -65,39 +65,39 @@
 
     function config() {
         var config = merge({
-                el: '#app',
-                repo: '',
-                maxLevel: 6,
-                subMaxLevel: 0,
-                loadSidebar: null,
-                loadNavbar: null,
-                homepage: 'README.md',
-                coverpage: '',
-                basePath: '',
-                auto2top: false,
-                name: '',
-                themeColor: '',
-                nameLink: window.location.pathname,
-                autoHeader: false,
-                executeScript: null,
-                noEmoji: false,
-                ga: '',
-                ext: '.md',
-                mergeNavbar: false,
-                formatUpdated: '',
-                externalLinkTarget: '_blank',
-                routerMode: 'hash',
-                noCompileLinks: []
-            },
+            el: '#app',
+            repo: '',
+            maxLevel: 6,
+            subMaxLevel: 0,
+            loadSidebar: null,
+            loadNavbar: null,
+            homepage: 'README.md',
+            coverpage: '',
+            basePath: '',
+            auto2top: false,
+            name: '',
+            themeColor: '',
+            nameLink: window.location.pathname,
+            autoHeader: false,
+            executeScript: null,
+            noEmoji: false,
+            ga: '',
+            ext: '.md',
+            mergeNavbar: false,
+            formatUpdated: '',
+            externalLinkTarget: '_blank',
+            routerMode: 'hash',
+            noCompileLinks: []
+        },
             window.$docsify
         );
 
         var script =
             document.currentScript || [].slice
-            .call(document.getElementsByTagName('script'))
-            .filter(function(n) {
-                return /docsify\./.test(n.src);
-            })[0];
+                .call(document.getElementsByTagName('script'))
+                .filter(function (n) {
+                    return /docsify\./.test(n.src);
+                })[0];
 
         if (script) {
             for (var prop in config) {
@@ -144,9 +144,9 @@
 
         vm._hooks = {};
         vm._lifecycle = {};
-        hooks.forEach(function(hook) {
+        hooks.forEach(function (hook) {
             var arr = (vm._hooks[hook] = []);
-            vm._lifecycle[hook] = function(fn) {
+            vm._lifecycle[hook] = function (fn) {
                 return arr.push(fn);
             };
         });
@@ -157,13 +157,13 @@
 
         var queue = vm._hooks[hook];
 
-        var step = function(index) {
+        var step = function (index) {
             var hook = queue[index];
             if (index >= queue.length) {
                 next(data);
             } else if (typeof hook === 'function') {
                 if (hook.length === 2) {
-                    hook(data, function(result) {
+                    hook(data, function (result) {
                         data = result;
                         step(index + 1);
                     });
@@ -189,7 +189,7 @@
      */
     var supportsPushState =
         inBrowser &&
-        (function() {
+        (function () {
             // Borrowed wholesale from https://github.com/defunkt/jquery-pjax
             return (
                 window.history &&
@@ -387,12 +387,12 @@
         // 设置title
         var searchResultAside = ''
         if (locale.substr(0, 2) === 'zh') {
-          searchResultAside = '<div class="search-result-aside-placeholder" id="search-results-aside">' +
-          '<div class="search-result-aside">'+
-          '<div class="search-result-aside-link" id="search-result-aside-link">'+
-          '</div>'+
-          '</div>'+
-          '</div>'
+            searchResultAside = '<div class="search-result-aside-placeholder" id="search-results-aside">' +
+                '<div class="search-result-aside">' +
+                '<div class="search-result-aside-link" id="search-result-aside-link">' +
+                '</div>' +
+                '</div>' +
+                '</div>'
         };
 
         return (
@@ -400,8 +400,8 @@
             '<section class="content">' +
             '<article class="markdown-section" id="main"><!--main--></article>' +
             // fixed by hxy 添加同级的容器，用于展示搜索结果。
-            '<article class="search search-result hide" id="search-results">'+
-            '<div class="markdown-section search-result-list" id="search-results-list"><!--searchResults--></div>'+
+            '<article class="search search-result hide" id="search-results">' +
+            '<div class="markdown-section search-result-list" id="search-results-list"><!--searchResults--></div>' +
             searchResultAside +
             '</article>' +
             '</section>' +
@@ -440,7 +440,7 @@
             return ''
         }
 
-        toc.forEach(function(node) {
+        toc.forEach(function (node) {
             // fixed by hxy
             // 导航部分，不需要出现方法的括号，CanvasGradient、CanvasContext。
             var title = node.title.replace(/\(.*\)/, '').replace(/CanvasContext|CanvasGradient/, '');
@@ -499,7 +499,7 @@
 
         if (num >= 95) {
             clearTimeout(timeId);
-            timeId = setTimeout(function(_) {
+            timeId = setTimeout(function (_) {
                 barEl.style.opacity = 0;
                 barEl.style.width = '0%';
             }, 200);
@@ -521,14 +521,14 @@
         if (headers === void 0) headers = {};
 
         var xhr = new XMLHttpRequest();
-        var on = function() {
+        var on = function () {
             xhr.addEventListener.apply(xhr, arguments);
         };
         var cached$$1 = cache[url];
 
         if (cached$$1) {
             return {
-                then: function(cb) {
+                then: function (cb) {
                     return cb(cached$$1.content, cached$$1.opt);
                 },
                 abort: noop
@@ -563,12 +563,12 @@
         xhr.send();
 
         return {
-            then: function(success, error) {
+            then: function (success, error) {
                 if (error === void 0) error = noop;
 
                 if (hasBar) {
                     var id = setInterval(
-                        function(_) {
+                        function (_) {
                             return progressbar({
                                 step: Math.floor(Math.random() * 5 + 1)
                             });
@@ -577,17 +577,17 @@
                     );
 
                     on('progress', progressbar);
-                    on('loadend', function(evt) {
+                    on('loadend', function (evt) {
                         progressbar(evt);
                         clearInterval(id);
                     });
                 }
 
                 on('error', error);
-                on('load', function(ref) {
+                on('load', function (ref) {
                     var target = ref.target;
 
-                    if(extName === 'md' && xhr.getResponseHeader('content-type').indexOf('text/html') === 0) {
+                    if (extName === 'md' && xhr.getResponseHeader('content-type').indexOf('text/html') === 0) {
                         error(target);
                     } else if (target.status >= 400) {
                         error(target);
@@ -603,7 +603,7 @@
                     }
                 });
             },
-            abort: function(_) {
+            abort: function (_) {
                 return xhr.readyState !== 4 && xhr.abort();
             }
         }
@@ -625,7 +625,7 @@
         }
 
         var styleBlocks = findAll('style:not(.inserted),link');
-        [].forEach.call(styleBlocks, function(block) {
+        [].forEach.call(styleBlocks, function (block) {
             if (block.nodeName === 'STYLE') {
                 replaceVar(block, color);
             } else if (block.nodeName === 'LINK') {
@@ -635,7 +635,7 @@
                     return
                 }
 
-                get(href).then(function(res) {
+                get(href).then(function (res) {
                     var style$$1 = create('style', res);
 
                     head.appendChild(style$$1);
@@ -650,7 +650,7 @@
     var dict = {
         YYYY: 'getFullYear',
         YY: 'getYear',
-        MM: function(d) {
+        MM: function (d) {
             return d.getMonth() + 1;
         },
         DD: 'getDate',
@@ -662,12 +662,12 @@
     function tinydate(str) {
         var parts = [],
             offset = 0;
-        str.replace(RGX, function(key, _, idx) {
+        str.replace(RGX, function (key, _, idx) {
             // save preceding string
             parts.push(str.substring(offset, idx - 1));
             offset = idx += key.length + 1;
             // save function
-            parts.push(function(d) {
+            parts.push(function (d) {
                 return ('00' + (typeof dict[key] === 'string' ? d[dict[key]]() : dict[key](d))).slice(-
                     key.length);
             });
@@ -677,7 +677,7 @@
             parts.push(str.substring(offset));
         }
 
-        return function(arg) {
+        return function (arg) {
             var out = '',
                 i = 0,
                 d = arg || new Date();
@@ -701,14 +701,14 @@
         }, fn(module, module.exports), module.exports;
     }
 
-    var marked = createCommonjsModule(function(module, exports) {
+    var marked = createCommonjsModule(function (module, exports) {
         /**
          * marked - a markdown parser
          * Copyright (c) 2011-2014, Christopher Jeffrey. (MIT Licensed)
          * https://github.com/chjj/marked
          */
 
-        (function() {
+        (function () {
             var block = {
                 newline: /^\n+/,
                 code: /^( {4}[^\n]+\n*)+/,
@@ -823,7 +823,7 @@
              * Static Lex Method
              */
 
-            Lexer.lex = function(src, options) {
+            Lexer.lex = function (src, options) {
                 var lexer = new Lexer(options);
                 return lexer.lex(src);
             };
@@ -832,7 +832,7 @@
              * Preprocessing
              */
 
-            Lexer.prototype.lex = function(src) {
+            Lexer.prototype.lex = function (src) {
                 src = src
                     .replace(/\r\n|\r/g, '\n')
                     .replace(/\t/g, '    ')
@@ -846,7 +846,7 @@
              * Lexing
              */
 
-            Lexer.prototype.token = function(src, top, bq) {
+            Lexer.prototype.token = function (src, top, bq) {
                 var this$1 = this;
 
                 var src = src.replace(/^ +$/gm, ''),
@@ -1128,7 +1128,7 @@
 
                     if (src) {
                         throw new
-                        Error('Infinite loop on byte: ' + src.charCodeAt(0));
+                            Error('Infinite loop on byte: ' + src.charCodeAt(0));
                     }
                 }
 
@@ -1218,7 +1218,7 @@
 
                 if (!this.links) {
                     throw new
-                    Error('Tokens array requires a `links` property.');
+                        Error('Tokens array requires a `links` property.');
                 }
 
                 if (this.options.gfm) {
@@ -1242,7 +1242,7 @@
              * Static Lexing/Compiling Method
              */
 
-            InlineLexer.output = function(src, links, options) {
+            InlineLexer.output = function (src, links, options) {
                 var inline = new InlineLexer(links, options);
                 return inline.output(src);
             };
@@ -1251,7 +1251,7 @@
              * Lexing/Compiling
              */
 
-            InlineLexer.prototype.output = function(src) {
+            InlineLexer.prototype.output = function (src) {
                 var this$1 = this;
 
                 var out = '',
@@ -1271,8 +1271,8 @@
                         if (cap[2] === '@') {
                             text = escape(
                                 cap[1].charAt(6) === ':' ?
-                                this$1.mangle(cap[1].substring(7)) :
-                                this$1.mangle(cap[1])
+                                    this$1.mangle(cap[1].substring(7)) :
+                                    this$1.mangle(cap[1])
                             );
                             href = this$1.mangle('mailto:') + text;
                         } else {
@@ -1302,8 +1302,8 @@
                         src = src.substring(cap[0].length);
                         out += this$1.options.sanitize ?
                             this$1.options.sanitizer ?
-                            this$1.options.sanitizer(cap[0]) :
-                            escape(cap[0]) :
+                                this$1.options.sanitizer(cap[0]) :
+                                escape(cap[0]) :
                             cap[0];
                         continue;
                     }
@@ -1381,7 +1381,7 @@
 
                     if (src) {
                         throw new
-                        Error('Infinite loop on byte: ' + src.charCodeAt(0));
+                            Error('Infinite loop on byte: ' + src.charCodeAt(0));
                     }
                 }
 
@@ -1392,7 +1392,7 @@
              * Compile Link
              */
 
-            InlineLexer.prototype.outputLink = function(cap, link) {
+            InlineLexer.prototype.outputLink = function (cap, link) {
                 var href = escape(link.href),
                     title = link.title ? escape(link.title) : null;
 
@@ -1405,7 +1405,7 @@
              * Smartypants Transformations
              */
 
-            InlineLexer.prototype.smartypants = function(text) {
+            InlineLexer.prototype.smartypants = function (text) {
                 if (!this.options.smartypants) {
                     return text;
                 }
@@ -1430,7 +1430,7 @@
              * Mangle Links
              */
 
-            InlineLexer.prototype.mangle = function(text) {
+            InlineLexer.prototype.mangle = function (text) {
                 if (!this.options.mangle) {
                     return text;
                 }
@@ -1458,7 +1458,7 @@
                 this.options = options || {};
             }
 
-            Renderer.prototype.code = function(code, lang, escaped) {
+            Renderer.prototype.code = function (code, lang, escaped) {
                 if (this.options.highlight) {
                     var out = this.options.highlight(code, lang);
                     if (out != null && out !== code) {
@@ -1481,15 +1481,15 @@
                     '\n</code></pre>\n';
             };
 
-            Renderer.prototype.blockquote = function(quote) {
+            Renderer.prototype.blockquote = function (quote) {
                 return '<blockquote>\n' + quote + '</blockquote>\n';
             };
 
-            Renderer.prototype.html = function(html) {
+            Renderer.prototype.html = function (html) {
                 return html;
             };
 
-            Renderer.prototype.heading = function(text, level, raw) {
+            Renderer.prototype.heading = function (text, level, raw) {
                 return '<h' +
                     level +
                     ' id="' +
@@ -1502,24 +1502,24 @@
                     '>\n';
             };
 
-            Renderer.prototype.hr = function() {
+            Renderer.prototype.hr = function () {
                 return this.options.xhtml ? '<hr/>\n' : '<hr>\n';
             };
 
-            Renderer.prototype.list = function(body, ordered) {
+            Renderer.prototype.list = function (body, ordered) {
                 var type = ordered ? 'ol' : 'ul';
                 return '<' + type + '>\n' + body + '</' + type + '>\n';
             };
 
-            Renderer.prototype.listitem = function(text) {
+            Renderer.prototype.listitem = function (text) {
                 return '<li>' + text + '</li>\n';
             };
 
-            Renderer.prototype.paragraph = function(text) {
+            Renderer.prototype.paragraph = function (text) {
                 return '<p>' + text + '</p>\n';
             };
 
-            Renderer.prototype.table = function(header, body) {
+            Renderer.prototype.table = function (header, body) {
                 return '<table>\n' +
                     '<thead>\n' +
                     header +
@@ -1530,11 +1530,11 @@
                     '</table>\n';
             };
 
-            Renderer.prototype.tablerow = function(content) {
+            Renderer.prototype.tablerow = function (content) {
                 return '<tr>\n' + content + '</tr>\n';
             };
 
-            Renderer.prototype.tablecell = function(content, flags) {
+            Renderer.prototype.tablecell = function (content, flags) {
                 var type = flags.header ? 'th' : 'td';
                 var tag = flags.align ?
                     '<' + type + ' style="text-align:' + flags.align + '">' :
@@ -1543,27 +1543,27 @@
             };
 
             // span level renderer
-            Renderer.prototype.strong = function(text) {
+            Renderer.prototype.strong = function (text) {
                 return '<strong>' + text + '</strong>';
             };
 
-            Renderer.prototype.em = function(text) {
+            Renderer.prototype.em = function (text) {
                 return '<em>' + text + '</em>';
             };
 
-            Renderer.prototype.codespan = function(text) {
+            Renderer.prototype.codespan = function (text) {
                 return '<code>' + text + '</code>';
             };
 
-            Renderer.prototype.br = function() {
+            Renderer.prototype.br = function () {
                 return this.options.xhtml ? '<br/>' : '<br>';
             };
 
-            Renderer.prototype.del = function(text) {
+            Renderer.prototype.del = function (text) {
                 return '<del>' + text + '</del>';
             };
 
-            Renderer.prototype.link = function(href, title, text) {
+            Renderer.prototype.link = function (href, title, text) {
                 if (this.options.sanitize) {
                     try {
                         var prot = decodeURIComponent(unescape(href))
@@ -1588,7 +1588,7 @@
                 return out;
             };
 
-            Renderer.prototype.image = function(href, title, text) {
+            Renderer.prototype.image = function (href, title, text) {
                 if (this.options.baseUrl && !originIndependentUrl.test(href)) {
                     href = resolveUrl(this.options.baseUrl, href);
                 }
@@ -1600,7 +1600,7 @@
                 return out;
             };
 
-            Renderer.prototype.text = function(text) {
+            Renderer.prototype.text = function (text) {
                 return text;
             };
 
@@ -1621,7 +1621,7 @@
              * Static Parse Method
              */
 
-            Parser.parse = function(src, options, renderer) {
+            Parser.parse = function (src, options, renderer) {
                 var parser = new Parser(options, renderer);
                 return parser.parse(src);
             };
@@ -1630,7 +1630,7 @@
              * Parse Loop
              */
 
-            Parser.prototype.parse = function(src) {
+            Parser.prototype.parse = function (src) {
                 var this$1 = this;
 
                 this.inline = new InlineLexer(src.links, this.options, this.renderer);
@@ -1648,7 +1648,7 @@
              * Next Token
              */
 
-            Parser.prototype.next = function() {
+            Parser.prototype.next = function () {
                 return this.token = this.tokens.pop();
             };
 
@@ -1656,7 +1656,7 @@
              * Preview Next Token
              */
 
-            Parser.prototype.peek = function() {
+            Parser.prototype.peek = function () {
                 return this.tokens[this.tokens.length - 1] || 0;
             };
 
@@ -1664,7 +1664,7 @@
              * Parse Text Tokens
              */
 
-            Parser.prototype.parseText = function() {
+            Parser.prototype.parseText = function () {
                 var this$1 = this;
 
                 var body = this.token.text;
@@ -1680,7 +1680,7 @@
              * Parse Current Token
              */
 
-            Parser.prototype.tok = function() {
+            Parser.prototype.tok = function () {
                 var this$1 = this;
 
                 switch (this.token.type) {
@@ -1715,9 +1715,9 @@
                             };
                             cell += this$1.renderer.tablecell(
                                 this$1.inline.output(this$1.token.header[i]), {
-                                    header: true,
-                                    align: this$1.token.align[i]
-                                }
+                                header: true,
+                                align: this$1.token.align[i]
+                            }
                             );
                         }
                         header += this.renderer.tablerow(cell);
@@ -1729,9 +1729,9 @@
                             for (j = 0; j < row.length; j++) {
                                 cell += this$1.renderer.tablecell(
                                     this$1.inline.output(row[j]), {
-                                        header: false,
-                                        align: this$1.token.align[j]
-                                    }
+                                    header: false,
+                                    align: this$1.token.align[j]
+                                }
                                 );
                             }
 
@@ -1807,7 +1807,7 @@
 
             function unescape(html) {
                 // explicitly match decimal, hex, and named HTML entities
-                return html.replace(/&(#(?:\d+)|(?:#x[0-9A-Fa-f]+)|(?:\w+));?/ig, function(_, n) {
+                return html.replace(/&(#(?:\d+)|(?:#x[0-9A-Fa-f]+)|(?:\w+));?/ig, function (_, n) {
                     n = n.toLowerCase();
                     if (n === 'colon') {
                         return ':';
@@ -1859,7 +1859,7 @@
             var baseUrls = {};
             var originIndependentUrl = /^$|^[a-z][a-z0-9+.-]*:|^[?#]/i;
 
-            function noop() {}
+            function noop() { }
             noop.exec = noop;
 
             function merge(obj) {
@@ -1905,7 +1905,7 @@
 
                     pending = tokens.length;
 
-                    var done = function(err) {
+                    var done = function (err) {
                         if (err) {
                             opt.highlight = highlight;
                             return callback(err);
@@ -1937,11 +1937,11 @@
                     }
 
                     for (; i < tokens.length; i++) {
-                        (function(token) {
+                        (function (token) {
                             if (token.type !== 'code') {
                                 return --pending || done();
                             }
-                            return highlight(token.text, token.lang, function(err, code) {
+                            return highlight(token.text, token.lang, function (err, code) {
                                 if (err) {
                                     return done(err);
                                 }
@@ -1978,7 +1978,7 @@
              */
 
             marked.options =
-                marked.setOptions = function(opt) {
+                marked.setOptions = function (opt) {
                     merge(marked.defaults, opt);
                     return marked;
                 };
@@ -2023,14 +2023,14 @@
                 module.exports = marked;
             }
 
-        }).call(function() {
+        }).call(function () {
             return this || (typeof window !== 'undefined' ? window : commonjsGlobal);
         }());
     });
 
-    var prism = createCommonjsModule(function(module) {
+    var prism = createCommonjsModule(function (module) {
         /* **********************************************
-        	 Begin prism-core.js
+             Begin prism-core.js
         ********************************************** */
 
         var _self = (typeof window !== 'undefined') ?
@@ -2038,9 +2038,9 @@
             :
             (
                 (typeof WorkerGlobalScope !== 'undefined' && self instanceof WorkerGlobalScope) ?
-                self // if in worker
-                :
-                {} // if in node js
+                    self // if in worker
+                    :
+                    {} // if in node js
             );
 
         /**
@@ -2049,7 +2049,7 @@
          * @author Lea Verou http://lea.verou.me
          */
 
-        var Prism = (function() {
+        var Prism = (function () {
 
             // Private helper vars
             var lang = /\blang(?:uage)?-(\w+)\b/i;
@@ -2059,7 +2059,7 @@
                 manual: _self.Prism && _self.Prism.manual,
                 disableWorkerMessageHandler: _self.Prism && _self.Prism.disableWorkerMessageHandler,
                 util: {
-                    encode: function(tokens) {
+                    encode: function (tokens) {
                         if (tokens instanceof Token) {
                             return new Token(tokens.type, _.util.encode(tokens.content),
                                 tokens.alias);
@@ -2071,12 +2071,12 @@
                         }
                     },
 
-                    type: function(o) {
+                    type: function (o) {
                         return Object.prototype.toString.call(o).match(/\[object (\w+)\]/)[
                             1];
                     },
 
-                    objId: function(obj) {
+                    objId: function (obj) {
                         if (!obj['__id']) {
                             Object.defineProperty(obj, '__id', {
                                 value: ++uniqueId
@@ -2086,7 +2086,7 @@
                     },
 
                     // Deep clone a language definition (e.g. to extend it)
-                    clone: function(o) {
+                    clone: function (o) {
                         var type = _.util.type(o);
 
                         switch (type) {
@@ -2102,7 +2102,7 @@
                                 return clone;
 
                             case 'Array':
-                                return o.map(function(v) {
+                                return o.map(function (v) {
                                     return _.util.clone(v);
                                 });
                         }
@@ -2112,7 +2112,7 @@
                 },
 
                 languages: {
-                    extend: function(id, redef) {
+                    extend: function (id, redef) {
                         var lang = _.util.clone(_.languages[id]);
 
                         for (var key in redef) {
@@ -2131,7 +2131,7 @@
                      * @param insert Object with the key/value pairs to insert
                      * @param root The object that contains `inside`. If equal to Prism.languages, it can be omitted.
                      */
-                    insertBefore: function(inside, before, insert, root) {
+                    insertBefore: function (inside, before, insert, root) {
                         root = root || _.languages;
                         var grammar = root[inside];
 
@@ -2168,7 +2168,7 @@
                         }
 
                         // Update references in other language definitions
-                        _.languages.DFS(_.languages, function(key, value) {
+                        _.languages.DFS(_.languages, function (key, value) {
                             if (value === root[inside] && key != inside) {
                                 this[key] = ret;
                             }
@@ -2178,18 +2178,18 @@
                     },
 
                     // Traverse a language definition with Depth First Search
-                    DFS: function(o, callback, type, visited) {
+                    DFS: function (o, callback, type, visited) {
                         visited = visited || {};
                         for (var i in o) {
                             if (o.hasOwnProperty(i)) {
                                 callback.call(o, i, o[i], type || i);
 
                                 if (_.util.type(o[i]) === 'Object' && !visited[_.util.objId(
-                                        o[i])]) {
+                                    o[i])]) {
                                     visited[_.util.objId(o[i])] = true;
                                     _.languages.DFS(o[i], callback, null, visited);
                                 } else if (_.util.type(o[i]) === 'Array' && !visited[_.util
-                                        .objId(o[i])]) {
+                                    .objId(o[i])]) {
                                     visited[_.util.objId(o[i])] = true;
                                     _.languages.DFS(o[i], callback, i, visited);
                                 }
@@ -2199,11 +2199,11 @@
                 },
                 plugins: {},
 
-                highlightAll: function(async, callback) {
+                highlightAll: function (async, callback) {
                     _.highlightAllUnder(document, async, callback);
                 },
 
-                highlightAllUnder: function(container, async, callback) {
+                highlightAllUnder: function (container, async, callback) {
                     var env = {
                         callback: callback,
                         selector: 'code[class*="language-"], [class*="language-"] code, code[class*="lang-"], [class*="lang-"] code'
@@ -2214,11 +2214,11 @@
                     var elements = env.elements || container.querySelectorAll(env.selector);
 
                     for (var i = 0, element; element = elements[i++];) {
-                        _.highlightElement(element, async ===true, env.callback);
+                        _.highlightElement(element, async === true, env.callback);
                     }
                 },
 
-                highlightElement: function(element, async, callback) {
+                highlightElement: function (element, async, callback) {
                     // Find language
                     var language, grammar, parent = element;
 
@@ -2268,10 +2268,10 @@
 
                     _.hooks.run('before-highlight', env);
 
-                    if (async &&_self.Worker) {
+                    if (async && _self.Worker) {
                         var worker = new Worker(_.filename);
 
-                        worker.onmessage = function(evt) {
+                        worker.onmessage = function (evt) {
                             env.highlightedCode = evt.data;
 
                             _.hooks.run('before-insert', env);
@@ -2302,12 +2302,12 @@
                     }
                 },
 
-                highlight: function(text, grammar, language) {
+                highlight: function (text, grammar, language) {
                     var tokens = _.tokenize(text, grammar);
                     return Token.stringify(_.util.encode(tokens), language);
                 },
 
-                matchGrammar: function(text, strarr, grammar, index, startPos, oneshot, target) {
+                matchGrammar: function (text, strarr, grammar, index, startPos, oneshot, target) {
                     var Token = _.Token;
 
                     for (var token in grammar) {
@@ -2370,13 +2370,13 @@
                                     }
 
                                     var from = match.index + (lookbehind ? match[1].length :
-                                            0),
+                                        0),
                                         to = match.index + match[0].length,
                                         k = i,
                                         p = pos;
 
                                     for (var len = strarr.length; k < len && (p < to || (!
-                                            strarr[k].type && !strarr[k - 1].greedy)); ++k) {
+                                        strarr[k].type && !strarr[k - 1].greedy)); ++k) {
                                         p += strarr[k].length;
                                         // Move the index i to the element in strarr that is closest to from
                                         if (from >= p) {
@@ -2449,7 +2449,7 @@
                     }
                 },
 
-                tokenize: function(text, grammar, language) {
+                tokenize: function (text, grammar, language) {
                     var strarr = [text];
 
                     var rest = grammar.rest;
@@ -2470,7 +2470,7 @@
                 hooks: {
                     all: {},
 
-                    add: function(name, callback) {
+                    add: function (name, callback) {
                         var hooks = _.hooks.all;
 
                         hooks[name] = hooks[name] || [];
@@ -2478,7 +2478,7 @@
                         hooks[name].push(callback);
                     },
 
-                    run: function(name, env) {
+                    run: function (name, env) {
                         var callbacks = _.hooks.all[name];
 
                         if (!callbacks || !callbacks.length) {
@@ -2492,7 +2492,7 @@
                 }
             };
 
-            var Token = _.Token = function(type, content, alias, matchedStr, greedy) {
+            var Token = _.Token = function (type, content, alias, matchedStr, greedy) {
                 this.type = type;
                 this.content = content;
                 this.alias = alias;
@@ -2501,13 +2501,13 @@
                 this.greedy = !!greedy;
             };
 
-            Token.stringify = function(o, language, parent) {
+            Token.stringify = function (o, language, parent) {
                 if (typeof o == 'string') {
                     return o;
                 }
 
                 if (_.util.type(o) === 'Array') {
-                    return o.map(function(element) {
+                    return o.map(function (element) {
                         return Token.stringify(element, language, o);
                     }).join('');
                 }
@@ -2529,7 +2529,7 @@
 
                 _.hooks.run('wrap', env);
 
-                var attributes = Object.keys(env.attributes).map(function(name) {
+                var attributes = Object.keys(env.attributes).map(function (name) {
                     return name + '="' + (env.attributes[name] || '').replace(/"/g,
                         '&quot;') + '"';
                 }).join(' ');
@@ -2547,7 +2547,7 @@
 
                 if (!_.disableWorkerMessageHandler) {
                     // In worker
-                    _self.addEventListener('message', function(evt) {
+                    _self.addEventListener('message', function (evt) {
                         var message = JSON.parse(evt.data),
                             lang = message.language,
                             code = message.code,
@@ -2598,7 +2598,7 @@
 
 
         /* **********************************************
-        	 Begin prism-markup.js
+             Begin prism-markup.js
         ********************************************** */
 
         Prism.languages.markup = {
@@ -2645,7 +2645,7 @@
             Prism.languages.markup['entity'];
 
         // Plugin to make entity title show the real entity, idea by Roman Komarov
-        Prism.hooks.add('wrap', function(env) {
+        Prism.hooks.add('wrap', function (env) {
 
             if (env.type === 'entity') {
                 env.attributes['title'] = env.content.replace(/&amp;/, '&');
@@ -2659,7 +2659,7 @@
 
 
         /* **********************************************
-        	 Begin prism-css.js
+             Begin prism-css.js
         ********************************************** */
 
         Prism.languages.css = {
@@ -2716,18 +2716,18 @@
         }
 
         /* **********************************************
-        	 Begin prism-clike.js
+             Begin prism-clike.js
         ********************************************** */
 
         Prism.languages.clike = {
             'comment': [{
-                    pattern: /(^|[^\\])\/\*[\s\S]*?(?:\*\/|$)/,
-                    lookbehind: true
-                },
-                {
-                    pattern: /(^|[^\\:])\/\/.*/,
-                    lookbehind: true
-                }
+                pattern: /(^|[^\\])\/\*[\s\S]*?(?:\*\/|$)/,
+                lookbehind: true
+            },
+            {
+                pattern: /(^|[^\\:])\/\/.*/,
+                lookbehind: true
+            }
             ],
             'string': {
                 pattern: /(["'])(?:\\(?:\r\n|[\s\S])|(?!\1)[^\\\r\n])*\1/,
@@ -2750,7 +2750,7 @@
 
 
         /* **********************************************
-        	 Begin prism-javascript.js
+             Begin prism-javascript.js
         ********************************************** */
 
         Prism.languages.javascript = Prism.languages.extend('clike', {
@@ -2826,15 +2826,15 @@
         Prism.languages.json = Prism.languages.javascript;
 
         /* **********************************************
-        	 Begin prism-file-highlight.js
+             Begin prism-file-highlight.js
         ********************************************** */
 
-        (function() {
+        (function () {
             if (typeof self === 'undefined' || !self.Prism || !self.document || !document.querySelector) {
                 return;
             }
 
-            self.Prism.fileHighlight = function() {
+            self.Prism.fileHighlight = function () {
 
                 var Extensions = {
                     'js': 'javascript',
@@ -2849,7 +2849,7 @@
                 };
 
                 Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach(
-                    function(pre) {
+                    function (pre) {
                         var src = pre.getAttribute('data-src');
 
                         var language, parent = pre;
@@ -2880,7 +2880,7 @@
 
                         xhr.open('GET', src, true);
 
-                        xhr.onreadystatechange = function() {
+                        xhr.onreadystatechange = function () {
                             if (xhr.readyState == 4) {
 
                                 if (xhr.status < 400 && xhr.responseText) {
@@ -2918,7 +2918,7 @@
         var headlines = [];
         var last = {};
 
-        toc.forEach(function(headline) {
+        toc.forEach(function (headline) {
             var level = headline.level || 1;
             var len = level - 1;
 
@@ -2985,7 +2985,7 @@
         return slug;
     }
 
-    slugify.clear = function() {
+    slugify.clear = function () {
         cache$1 = {};
     };
 
@@ -2996,7 +2996,7 @@
 
     function emojify(text) {
         return text
-            .replace(/<(pre|template|code)[^>]*?>[\s\S]+?<\/(pre|template|code)>/g, function(m) {
+            .replace(/<(pre|template|code)[^>]*?>[\s\S]+?<\/(pre|template|code)>/g, function (m) {
                 return m.replace(/:/g, '__colon__');
             })
             .replace(/:(\w+?):/ig, (inBrowser && window.emojify) || replace)
@@ -3016,7 +3016,7 @@
         }
 
         // Simple parse
-        query.split('&').forEach(function(param) {
+        query.split('&').forEach(function (param) {
             var parts = param.replace(/\+/g, ' ').split('=');
 
             res[parts[0]] = parts[1] && decode(parts[1]);
@@ -3036,25 +3036,25 @@
             }
             qs.push(
                 obj[key] ?
-                ((encode(key)) + "=" + (encode(obj[key]))).toLowerCase() :
-                encode(key)
+                    ((encode(key)) + "=" + (encode(obj[key]))).toLowerCase() :
+                    encode(key)
             );
         }
 
         return qs.length ? ("?" + (qs.join('&'))) : ''
     }
 
-    var isAbsolutePath = cached(function(path) {
+    var isAbsolutePath = cached(function (path) {
         return /(:|(\/{2}))/g.test(path)
     });
 
-    var getParentPath = cached(function(path) {
+    var getParentPath = cached(function (path) {
         return /\/$/g.test(path) ?
             path :
             (path = path.match(/(\S*\/)[^/]+$/)) ? path[1] : ''
     });
 
-    var cleanPath = cached(function(path) {
+    var cleanPath = cached(function (path) {
         return path.replace(/^\/+/, '/').replace(/([^:])\/{2,}/g, '$1/')
     });
 
@@ -3066,7 +3066,7 @@
         return cleanPath(args.join('/'))
     }
 
-    var replaceSlug = cached(function(path) {
+    var replaceSlug = cached(function (path) {
         return path.replace('#', '?id=')
     });
 
@@ -3079,7 +3079,7 @@
 
         if (str) {
             str = str
-                .replace(/:([\w-]+)=?([\w-]+)?/g, function(m, key, value) {
+                .replace(/:([\w-]+)=?([\w-]+)?/g, function (m, key, value) {
                     config[key] = (value && value.replace(/&quot;/g, '')) || true;
                     return ''
                 })
@@ -3152,7 +3152,7 @@
         }
 
         this._marked = compile;
-        this.compile = cached(function(text) {
+        this.compile = cached(function (text) {
             var html = '';
 
             if (!text) {
@@ -3237,7 +3237,7 @@
          * Render anchor tag
          * @link https://github.com/chjj/marked#overriding-renderer-methods
          */
-        origin.heading = renderer.heading = function(text, level) {
+        origin.heading = renderer.heading = function (text, level) {
             var titleText = '';
             // fixed by hxy 支持别名用来优化路由，主要是为了处理中文的情况。
             var matchSlug = text.match(/@([A-Za-z0-9\-]+)/);
@@ -3278,7 +3278,7 @@
                 "\" class=\"anchor\"><span>" + titleText + "</span></a></h" + level + ">")
         };
         // Highlight code
-        origin.code = renderer.code = function(code, lang) {
+        origin.code = renderer.code = function (code, lang) {
             if (lang === void 0) lang = '';
 
             code = code.replace(/@DOCSIFY_QM@/g, '`');
@@ -3290,7 +3290,7 @@
             return ("<pre v-pre data-lang=\"" + lang + "\"><code class=\"lang-" + lang + "\">" + hl +
                 "</code></pre>")
         };
-        origin.link = renderer.link = function(href, title, text) {
+        origin.link = renderer.link = function (href, title, text) {
             if (title === void 0) title = '';
 
             var attrs = '';
@@ -3327,7 +3327,7 @@
 
             return ("<a href=\"" + href + "\"" + attrs + ">" + text + "</a>")
         };
-        origin.paragraph = renderer.paragraph = function(text) {
+        origin.paragraph = renderer.paragraph = function (text) {
             var result;
             // fixed by hxy 特殊处理下 FAQ 的换行。
             var faqReg = /Q[\：\:].*\nA[\：\:]/;
@@ -3343,7 +3343,7 @@
             }
             return result
         };
-        origin.image = renderer.image = function(href, title, text) {
+        origin.image = renderer.image = function (href, title, text) {
             var url = href;
             var attrs = '';
 
@@ -3369,7 +3369,7 @@
         };
 
         var CHECKED_RE = /^\[([ x])\] +/;
-        origin.listitem = renderer.listitem = function(text) {
+        origin.listitem = renderer.listitem = function (text) {
             var checked = CHECKED_RE.exec(text);
             if (checked) {
                 text = text.replace(
@@ -3535,12 +3535,12 @@
      * Toggle button
      */
     function btn(el) {
-        var toggle = function(_) {
+        var toggle = function (_) {
             return body.classList.toggle('close');
         };
 
         el = getNode(el);
-        on(el, 'click', function(e) {
+        on(el, 'click', function (e) {
             e.stopPropagation();
             toggle();
         });
@@ -3549,7 +3549,7 @@
             on(
                 body,
                 'click',
-                function(_) {
+                function (_) {
                     return body.classList.contains('close') && toggle();
                 }
             );
@@ -3558,7 +3558,7 @@
     function collapse(el) {
         el = getNode(el);
 
-        on(el, 'click', function(ref) {
+        on(el, 'click', function (ref) {
             var target = ref.target;
 
             if (
@@ -3601,9 +3601,9 @@
         var hash = decodeURI(router.toURL(router.getCurrentPath()));
         var target;
 
-        links.sort(function(a, b) {
+        links.sort(function (a, b) {
             return b.href.length - a.href.length;
-        }).forEach(function(a) {
+        }).forEach(function (a) {
             var href = a.getAttribute('href');
             var node = isParent ? a.parentNode : a;
 
@@ -3622,7 +3622,7 @@
         return target
     }
 
-    var _createClass = function() {
+    var _createClass = function () {
         function defineProperties(target, props) {
             for (var i = 0; i < props.length; i++) {
                 var descriptor = props[i];
@@ -3634,7 +3634,7 @@
                 Object.defineProperty(target, descriptor.key, descriptor);
             }
         }
-        return function(Constructor, protoProps, staticProps) {
+        return function (Constructor, protoProps, staticProps) {
             if (protoProps) {
                 defineProperties(Constructor.prototype, protoProps);
             }
@@ -3651,7 +3651,7 @@
         }
     }
 
-    var Tweezer = function() {
+    var Tweezer = function () {
         function Tweezer() {
             var opts = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
@@ -3700,7 +3700,7 @@
                 var _this = this;
 
                 var e = this.events[name];
-                e && e.forEach(function(handler) {
+                e && e.forEach(function (handler) {
                     return handler.call(_this, val);
                 });
             }
@@ -3732,7 +3732,7 @@
                 return {
                     up: this.next < this.end && lastTick <= this.next,
                     down: this.next > this.end && lastTick >= this.next
-                } [this.direction];
+                }[this.direction];
             }
         }, {
             key: '_defaultEase',
@@ -3759,14 +3759,14 @@
         }
         enableScrollEvent = false;
         scroller = new Tweezer({
-                start: window.pageYOffset,
-                end: el.getBoundingClientRect().top + window.pageYOffset,
-                duration: 500
-            })
-            .on('tick', function(v) {
+            start: window.pageYOffset,
+            end: el.getBoundingClientRect().top + window.pageYOffset,
+            duration: 500
+        })
+            .on('tick', function (v) {
                 return window.scrollTo(0, v);
             })
-            .on('done', function() {
+            .on('done', function () {
                 enableScrollEvent = true;
                 scroller = null;
             })
@@ -3862,16 +3862,16 @@
             return
         }
         var path = router.getCurrentPath();
-        off('scroll', function() {
+        off('scroll', function () {
             return highlight(path);
         });
-        on('scroll', function() {
+        on('scroll', function () {
             return highlight(path);
         });
-        on(sidebar, 'mouseover', function() {
+        on(sidebar, 'mouseover', function () {
             hoverOver = true;
         });
-        on(sidebar, 'mouseleave', function() {
+        on(sidebar, 'mouseleave', function () {
             hoverOver = false;
         });
     }
@@ -3915,7 +3915,7 @@
             return cb({})
         }
 
-        var next = function(text) {
+        var next = function (text) {
             var embedToken;
             if (text) {
                 if (token.embed.type === 'markdown') {
@@ -3964,11 +3964,11 @@
         var linkRE = compile.InlineLexer.rules.link;
         var links = tokens.links;
 
-        tokens.forEach(function(token, index) {
+        tokens.forEach(function (token, index) {
             if (token.type === 'paragraph') {
                 token.text = token.text.replace(
                     new RegExp(linkRE.source, 'g'),
-                    function(src, filename, href, title) {
+                    function (src, filename, href, title) {
                         var embed = compiler.compileEmbed(href, title);
 
                         if (embed) {
@@ -3992,7 +3992,7 @@
             compile: compile,
             embedTokens: embedTokens,
             fetch: fetch
-        }, function(ref) {
+        }, function (ref) {
             var embedToken = ref.embedToken;
             var token = ref.token;
 
@@ -4015,7 +4015,7 @@
 
     function executeScript() {
         var script = findAll('.markdown-section>script')
-            .filter(function(s) {
+            .filter(function (s) {
                 return !/template/.test(s.type);
             })[0];
         if (!script) {
@@ -4026,7 +4026,7 @@
             return false
         }
 
-        setTimeout(function(_) {
+        setTimeout(function (_) {
             window.__EXECUTE_RESULT__ = new Function(code)();
         }, 0);
     }
@@ -4034,8 +4034,8 @@
     function formatUpdated(html, updated, fn) {
         updated =
             typeof fn === 'function' ?
-            fn(updated) :
-            typeof fn === 'string' ? tinydate(fn)(new Date(updated)) : updated;
+                fn(updated) :
+                typeof fn === 'string' ? tinydate(fn)(new Date(updated)) : updated;
 
         return html.replace(/{docsify-updated}/g, updated)
     }
@@ -4055,7 +4055,7 @@
             typeof window.Vue !== 'undefined' &&
             !executeScript()
         ) {
-            setTimeout(function(_) {
+            setTimeout(function (_) {
                 var vueVM = window.__EXECUTE_RESULT__;
                 vueVM && vueVM.$destroy && vueVM.$destroy();
                 window.__EXECUTE_RESULT__ = new window.Vue().$mount('#main');
@@ -4084,7 +4084,7 @@
     }
 
     function renderMixin(proto) {
-        proto._renderTo = function(el, content, replace) {
+        proto._renderTo = function (el, content, replace) {
             var node = getNode(el);
             if (node) {
                 //fixed by hulin 在微信上不显示四个二维码 屏蔽应用案例
@@ -4106,7 +4106,7 @@
                 //添加banner by hulin
                 var banner = contentDocument.querySelector('.banner');
                 if (banner && $docsify.banner && $docsify.banner.length > 0) {
-                    if (typeof(StartBanner) === 'undefined') {
+                    if (typeof (StartBanner) === 'undefined') {
                         var hm = document.createElement("script");
                         hm.src = "/static/banner.min.js";
                         var s = document.getElementsByTagName("script")[0];
@@ -4118,7 +4118,7 @@
             }
         };
 
-        proto._renderSidebar = function(text) {
+        proto._renderSidebar = function (text) {
             var ref = this.config;
             var maxLevel = ref.maxLevel;
             var subMaxLevel = ref.subMaxLevel;
@@ -4136,7 +4136,7 @@
             this._bindEventOnRendered(activeEl);
         };
 
-        proto._bindEventOnRendered = function(activeEl) {
+        proto._bindEventOnRendered = function (activeEl) {
             var ref = this.config;
             var autoHeader = ref.autoHeader;
             var auto2top = ref.auto2top;
@@ -4156,7 +4156,7 @@
             auto2top && scroll2Top(auto2top);
         };
 
-        proto._renderNav = function(text) {
+        proto._renderNav = function (text) {
             text && this._renderTo('nav', this.compiler.compile(text));
             // fixed by hxy PC端搜索条在初始化导航条结束后，再执行初始化。
             if (!isMobile && !!this.config.searchPlugin) {
@@ -4172,7 +4172,7 @@
             } else {
                 var navElFold = navEl.querySelector("ul li:last-child");
 
-                navElFold.addEventListener('click', function(e) {
+                navElFold.addEventListener('click', function (e) {
                     if (e.target === navElFold && navElFold.className !== 'active') {
                         navElFold.className = "active";
                         navElFold.querySelector("ul").style.display = "block";
@@ -4187,7 +4187,7 @@
         };
 
         // add by hxy 创建网站标题
-        proto._createSiteName = function() {
+        proto._createSiteName = function () {
             var linkEl = document.createElement('div');
             linkEl.classList.add('logo');
             linkEl.innerHTML =
@@ -4195,7 +4195,7 @@
             return linkEl;
         };
 
-        proto._renderMain = function(text, opt, next) {
+        proto._renderMain = function (text, opt, next) {
             var this$1 = this;
             if (opt === void 0) opt = {};
 
@@ -4203,14 +4203,14 @@
                 return renderMain.call(this, text)
             }
 
-            callHook(this, 'beforeEach', text, function(result) {
+            callHook(this, 'beforeEach', text, function (result) {
                 var html;
-                var callback = function() {
+                var callback = function () {
                     if (opt.updatedAt) {
                         html = formatUpdated(html, opt.updatedAt, this$1.config.formatUpdated);
                     }
 
-                    callHook(this$1, 'afterEach', html, function(text) {
+                    callHook(this$1, 'afterEach', html, function (text) {
                         return renderMain.call(this$1, text);
                     });
                 };
@@ -4220,10 +4220,10 @@
                     next();
                 } else {
                     prerenderEmbed({
-                            compiler: this$1.compiler,
-                            raw: result
-                        },
-                        function(tokens) {
+                        compiler: this$1.compiler,
+                        raw: result
+                    },
+                        function (tokens) {
                             html = this$1.compiler.compile(tokens);
                             callback();
                             next();
@@ -4233,7 +4233,7 @@
             });
         };
 
-        proto._renderCover = function(text, coverOnly) {
+        proto._renderCover = function (text, coverOnly) {
             var el = getNode('.cover');
 
             toggleClass(getNode('main'), coverOnly ? 'add' : 'remove', 'hidden');
@@ -4269,7 +4269,7 @@
             sticky();
         };
 
-        proto._updateRender = function() {
+        proto._updateRender = function () {
             // Render name link
             renderNameLink(this);
         };
@@ -4338,7 +4338,7 @@
     var cached$2 = {};
 
     function getAlias(path, alias, last) {
-        var match = Object.keys(alias).filter(function(key) {
+        var match = Object.keys(alias).filter(function (key) {
             var re = cached$2[key] || (cached$2[key] = new RegExp(("^" + key + "$")));
             return re.test(path) && path !== last
         })[0];
@@ -4408,11 +4408,11 @@
         cb();
     };
 
-    History.prototype.getCurrentPath = function getCurrentPath() {};
+    History.prototype.getCurrentPath = function getCurrentPath() { };
 
-    History.prototype.normalize = function normalize() {};
+    History.prototype.normalize = function normalize() { };
 
-    History.prototype.parse = function parse() {};
+    History.prototype.parse = function parse() { };
 
     History.prototype.toURL = function toURL(path, params, currentRoute) {
         var local = currentRoute && path[0] === '#';
@@ -4436,7 +4436,7 @@
         location.replace(location.href.slice(0, i >= 0 ? i : 0) + '#' + path);
     }
 
-    var HashHistory = (function(History$$1) {
+    var HashHistory = (function (History$$1) {
         function HashHistory(config) {
             History$$1.call(this, config);
             this.mode = 'hash';
@@ -4513,7 +4513,7 @@
         return HashHistory;
     }(History));
 
-    var HTML5History = (function(History$$1) {
+    var HTML5History = (function (History$$1) {
         function HTML5History(config) {
             History$$1.call(this, config);
             this.mode = 'history';
@@ -4537,7 +4537,7 @@
         HTML5History.prototype.onchange = function onchange(cb) {
             if (cb === void 0) cb = noop;
 
-            on('click', function(e) {
+            on('click', function (e) {
                 var el = e.target.tagName === 'A' ? e.target : e.target.parentNode;
 
                 if (el && el.tagName === 'A' && !/_blank/.test(el.target)) {
@@ -4613,7 +4613,7 @@
         updateRender(vm);
         lastRoute = vm.route;
 
-        router.onchange(function(_) {
+        router.onchange(function (_) {
             // fixed by hxy
             // 先把搜索结果关了，再执行原来的后续逻辑。
             if (!isMobile && vm.config.searchPlugin.searching) {
@@ -4634,7 +4634,7 @@
     }
 
     function eventMixin(proto) {
-        proto.$resetEvents = function() {
+        proto.$resetEvents = function () {
             scrollIntoView(this.route.path, this.route.query.id);
 
             if (this.config.loadNavbar) {
@@ -4667,7 +4667,7 @@
             vm.router.getFile(path + file) + qs,
             false,
             vm.config.requestHeaders
-        ).then(next, function(_) {
+        ).then(next, function (_) {
             return loadNested(path, qs, file, next, vm);
         });
     }
@@ -4675,16 +4675,16 @@
     function fetchMixin(proto) {
         var last;
 
-        var abort = function() {
+        var abort = function () {
             return last && last.abort && last.abort();
         };
-        var request = function(url, hasbar, requestHeaders) {
+        var request = function (url, hasbar, requestHeaders) {
             abort();
             last = get(url, true, requestHeaders);
             return last
         };
 
-        var get404Path = function(path, config) {
+        var get404Path = function (path, config) {
             var notFoundPage = config.notFoundPage;
             var ext = config.ext;
             var defaultPath = '_404' + (ext || '.md');
@@ -4701,10 +4701,10 @@
 
                 case 'object':
                     key = Object.keys(notFoundPage)
-                        .sort(function(a, b) {
+                        .sort(function (a, b) {
                             return b.length - a.length;
                         })
-                        .find(function(key) {
+                        .find(function (key) {
                             return path.match(new RegExp('^' + key));
                         });
 
@@ -4718,15 +4718,15 @@
             return path404
         };
 
-        proto._loadSideAndNav = function(path, qs, loadSidebar, cb) {
+        proto._loadSideAndNav = function (path, qs, loadSidebar, cb) {
             var this$1 = this;
 
-            return function() {
+            return function () {
                 if (!loadSidebar) {
                     return cb()
                 }
 
-                var fn = function(result) {
+                var fn = function (result) {
                     this$1._renderSidebar(result);
                     cb();
                 };
@@ -4736,7 +4736,7 @@
             }
         };
 
-        proto._fetch = function(cb) {
+        proto._fetch = function (cb) {
             var this$1 = this;
             if (cb === void 0) cb = noop;
 
@@ -4758,14 +4758,14 @@
 
             // Load main content
             req.then(
-                function(text, opt) {
+                function (text, opt) {
                     return this$1._renderMain(
                         text,
                         opt,
                         this$1._loadSideAndNav(path, qs, loadSidebar, cb)
                     );
                 },
-                function(_) {
+                function (_) {
                     this$1._fetchFallbackPage(file, qs, cb) || this$1._fetch404(file, qs, cb);
                 }
             );
@@ -4776,7 +4776,7 @@
                     path,
                     qs,
                     loadNavbar,
-                    function(text) {
+                    function (text) {
                         return this$1._renderNav(text);
                     },
                     this,
@@ -4784,7 +4784,7 @@
                 );
         };
 
-        proto._fetchCover = function() {
+        proto._fetchCover = function () {
             var this$1 = this;
 
             var ref = this.config;
@@ -4812,7 +4812,7 @@
                     path = this.router.getFile(root + path);
                     this.coverIsHTML = /\.html$/g.test(path);
                     get(path + stringifyQuery(query, ['id']), false, requestHeaders).then(
-                        function(text) {
+                        function (text) {
                             return this$1._renderCover(text, coverOnly);
                         }
                     );
@@ -4823,11 +4823,11 @@
             }
         };
 
-        proto.$fetch = function(cb) {
+        proto.$fetch = function (cb) {
             var this$1 = this;
             if (cb === void 0) cb = noop;
 
-            var done = function() {
+            var done = function () {
                 callHook(this$1, 'doneEach');
                 cb();
             };
@@ -4837,14 +4837,14 @@
             if (onlyCover) {
                 done();
             } else {
-                this._fetch(function() {
+                this._fetch(function () {
                     this$1.$resetEvents();
                     done();
                 });
             }
         };
 
-        proto._fetchFallbackPage = function(path, qs, cb) {
+        proto._fetchFallbackPage = function (path, qs, cb) {
             var this$1 = this;
             if (cb === void 0) cb = noop;
 
@@ -4866,14 +4866,14 @@
             var req = request(newPath + qs, true, requestHeaders);
 
             req.then(
-                function(text, opt) {
+                function (text, opt) {
                     return this$1._renderMain(
                         text,
                         opt,
                         this$1._loadSideAndNav(path, qs, loadSidebar, cb)
                     );
                 },
-                function() {
+                function () {
                     return this$1._fetch404(path, qs, cb);
                 }
             );
@@ -4888,7 +4888,7 @@
          * @returns {*}
          * @private
          */
-        proto._fetch404 = function(path, qs, cb) {
+        proto._fetch404 = function (path, qs, cb) {
             var this$1 = this;
             if (cb === void 0) cb = noop;
 
@@ -4902,10 +4902,10 @@
                 var path404 = get404Path(path, this.config);
 
                 request(this.router.getFile(path404), true, requestHeaders).then(
-                    function(text, opt) {
+                    function (text, opt) {
                         return this$1._renderMain(text, opt, fnLoadSideAndNav);
                     },
-                    function() {
+                    function () {
                         return this$1._renderMain(null, {}, fnLoadSideAndNav);
                     }
                 );
@@ -4932,14 +4932,14 @@
             callHook(vm, 'doneEach');
             callHook(vm, 'ready');
         } else {
-            vm.$fetch(function(_) {
+            vm.$fetch(function (_) {
                 return callHook(vm, 'ready');
             });
         }
     }
 
     function initMixin(proto) {
-        proto._init = function() {
+        proto._init = function () {
             var vm = this;
             vm.config = config();
 
@@ -4957,7 +4957,7 @@
     }
 
     function initPlugin(vm) {
-        [].concat(vm.config.plugins).forEach(function(fn) {
+        [].concat(vm.config.plugins).forEach(function (fn) {
             return isFn(fn) && fn(vm._lifecycle, vm);
         });
     }
@@ -5040,7 +5040,7 @@
     /**
      * Run Docsify
      */
-    ready(function(_) {
+    ready(function (_) {
         return new Docsify();
     });
 
