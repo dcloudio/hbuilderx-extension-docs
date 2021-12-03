@@ -18,7 +18,7 @@ The settings of the current color theme stored in the user settings ([Settings] 
 
 The settings of the current color theme stored in `settings.json` file. You can customize the color theme by overriding related settings. The method is as follows:
 
-#### 自定义窗体主题
+#### Custom Window Theme
 
 In settings.json file of source view, you can customize the theme color you like by overriding the "workbench.colorCustomizations" field. [Custom theme parameters](/Tutorial/Other/themes_param)
 
