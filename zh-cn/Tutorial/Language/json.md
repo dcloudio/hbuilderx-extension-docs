@@ -1,4 +1,8 @@
-# HBuilderX对json的优化有多强
+# HBuilderX对json的优化有多强@json
+
+<!--
+keyword: json
+-->
 
 json是一种对计算机友好，对人不友好的文件格式。
 

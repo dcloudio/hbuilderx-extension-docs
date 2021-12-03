@@ -1,4 +1,4 @@
-# HBuilderX 自动转px为upx
+# HBuilderX 自动转px为upx@pxToUpx
 
 uni-app 使用 upx 作为默认尺寸单位， upx 是相对于基准宽度的单位，可以根据屏幕宽度进行自适应。uni-app 规定屏幕基准宽度750upx。  
 但如果设计稿不是750px，那换算单位可头疼了。

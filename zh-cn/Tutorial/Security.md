@@ -4,11 +4,11 @@
 通过后才会正式更新。请放心使用。
 几年来，安全公司从未检测出一个病毒木马。但不给他们提交检测，他们就会乱报警告。
 
-#### 360 审核截图
+#### 360 审核截图@360
 
 <img src="/static/snapshots/tutorial/Security_1.png" style="zoom: 80%;" />
 
-#### 微软审核截图
+#### 微软审核截图@microsoft
 
 <img src="/static/snapshots/tutorial/Security_2.png" style="zoom: 80%;" />
 

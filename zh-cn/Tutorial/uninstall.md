@@ -1,5 +1,9 @@
 # 如何卸载HBuilderX
 
+<!--
+keyword: uninstall,卸载
+-->
+
 ## Windows卸载HBuilderX
 
 1. 删除数据目录和及注册表，进入HBuilderX安装目录，找到`reset.bat`，点击运行。此操作可以删除HBuilderX数据目录及注册表。

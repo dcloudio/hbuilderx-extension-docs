@@ -1,6 +1,10 @@
-# 自定义字体
+# 自定义字体@font
 
-### 设置字体
+<!--
+keyword: 自定义字体,font
+-->
+
+### 设置字体@setting
 
 Windows: 菜单【工具】【设置】【常用配置】
 MacOSX: 菜单【HBuilderX】【偏好设置】【常用配置】
@@ -15,7 +19,7 @@ MacOSX: 菜单【HBuilderX】【偏好设置】【常用配置】
 
 如需要自定义，则需要先安装相应字体。
 
-### 示例
+### 示例@example
 
 以[source-code-pro](https://github.com/adobe-fonts/source-code-pro)为例。
 

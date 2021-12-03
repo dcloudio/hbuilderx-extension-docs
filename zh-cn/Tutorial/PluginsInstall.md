@@ -1,13 +1,17 @@
-# 插件安装
+# 插件安装@install
 
-### 安装插件
+<!--
+keyword: 安装插件,插件安装,install
+-->
+
+### 安装插件@install
 HBuilderX启动后，点击菜单【工具】【插件安装】，即可打开插件安装窗口。
 
 除下图所示插件外，其它插件，需要到[插件市场](https://ext.dcloud.net.cn/?cat1=1&cat2=11&orderBy=TotalDownload)进行下载。
 
 <img src="/static/snapshots/tutorial/plugins_install_1.jpg" style="zoom: 45%;border: 1px solid #eee;border-radius: 20px;"/>
 
-### 已安装插件
+### 已安装插件@installed
 
 如下图，HBuilderX已安装的插件，会显示在【已安装插件】中。
 
@@ -15,13 +19,13 @@ HBuilderX启动后，点击菜单【工具】【插件安装】，即可打开�
 
 <img src="/static/snapshots/tutorial/plugins_install_2.jpg" style="zoom: 45%;border: 1px solid #eee;border-radius: 20px;"/>
 
-### 插件市场安装插件
+### 插件市场安装插件@market
 
 如下图所示，在[插件市场](https://ext.dcloud.net.cn/?cat1=1&cat2=11&orderBy=TotalDownload)，进入插件详情页，点击【导入插件】，会自动拉起本地安装的HBuilderX。
 
 <img src="/static/snapshots/tutorial/plugins_install_3.jpg" style="zoom: 45%;border: 1px solid #eee;border-radius: 20px;"/>
 
-### 离线安装插件
+### 离线安装插件@OfflineInstall
 
 > `nodejs`插件，如果插件内，没有`node_modules`，需要手动执行`npm install`
 
@@ -46,7 +50,7 @@ open /Applications/HBuilderX.app/Contents/HBuilderX/plugins/
 open /Applications/HBuilderX-Alpha.app/Contents/HBuilderX/plugins/
 ```
 
-### 问题
+### 问题@question
 
 某些node插件，比如`sass`、`less`, 安装成功，项目运行时，却提示安装失败。
 

@@ -6,7 +6,7 @@ Scss/Sass 是一款强化 CSS 的辅助工具，它在 CSS 语法的基础上增
 
 [scss/sass中文文档](https://www.sass.hk/docs/)
 
-### 插件安装
+### 安装compile-node-sass插件@install
 
 compile-node-sass插件，编译sass/scss为css。
 

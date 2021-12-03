@@ -1,4 +1,4 @@
-# cli 打包
+# cli 打包@pack
 
 > HBuilderX cli命令行工具, 仅适用于HBuilderX 3.1.5+版本
 

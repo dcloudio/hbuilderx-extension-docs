@@ -1,4 +1,8 @@
-### 插件安装
+### 安装validate-html插件@install
+
+<!--
+keyword: 语法校验,语法检查
+-->
 
 html语法校验插件，需要到[插件市场](https://ext.dcloud.net.cn/plugin?name=validate-html)安装。
 

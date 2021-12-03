@@ -1,4 +1,4 @@
-# cli 文件操作
+# cli 文件操作@file
 
 > 仅适用于HBuilderX 3.1.11+版本
 

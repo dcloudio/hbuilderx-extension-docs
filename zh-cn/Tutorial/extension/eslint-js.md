@@ -1,5 +1,9 @@
 ## eslint-js简介
 
+<!--
+keyword: 语法校验,语法检查,eslint
+-->
+
 eslint-js, 用于校验js和html中的js代码
 
 [eslint-js插件安装地址](https://ext.dcloud.net.cn/plugin?id=2037)

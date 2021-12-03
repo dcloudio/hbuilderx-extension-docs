@@ -2,6 +2,10 @@
 
 ## 1. 概述
 
+<!--
+keyword: markdown, markdown-share
+-->
+
 markdown拥有迷人的输入体验，但分享并不方便，尤其是缺少免费、稳定、高速的图床。
 
 [uniCloud](https://unicloud.dcloud.net.cn/)提供了免费、稳定、高速的服务器和cdn。

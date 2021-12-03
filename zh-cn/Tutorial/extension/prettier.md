@@ -1,5 +1,9 @@
 # Formator-Prettier
 
+<!--
+keyword: format, prettier, 格式化
+-->
+
 ## 简介
 
 此插件用于格式化less、sass、vue、stylus、ts、yaml代码

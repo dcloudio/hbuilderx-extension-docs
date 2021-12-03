@@ -1,4 +1,4 @@
-# Vue支持
+# Vue支持@vue
 
 HBuilderX中使用vue，如果是打开vue文件，会自动挂载vue语法库。
 如果是HTML文件里引用vue框架，需要点右下角的语法提示库，选择vue语法库。

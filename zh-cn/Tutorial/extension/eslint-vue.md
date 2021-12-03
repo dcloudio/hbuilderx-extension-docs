@@ -1,5 +1,9 @@
 ## eslint-vue简介
 
+<!--
+keyword: 语法校验,语法检查,eslint
+-->
+
 此插件用于vue语法校验。[eslint-vue插件安装地址](https://ext.dcloud.net.cn/plugin?id=2005)
 
 和eslint-js搭配使用，[eslint-js插件安装地址](https://ext.dcloud.net.cn/plugin?id=2037)

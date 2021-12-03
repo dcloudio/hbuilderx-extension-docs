@@ -1,6 +1,10 @@
 ### 简介
 
-validate-stylelint, 用于校验css、less、scss的exex语法。
+<!--
+keyword: 语法校验,语法检查,css,less.scss
+-->
+
+validate-stylelint, 用于校验css、less、scss语法。
 
 此插件，需要到[插件市场](https://ext.dcloud.net.cn/plugin?name=validate-stylelint)安装。
 
