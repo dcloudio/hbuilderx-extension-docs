@@ -110,7 +110,7 @@ module.exports = {
 
 Example: eslint automatically fixes double quotes to single quotes
 
-<img src="/static/snapshots/tutorial/eslint-uniapp-example.gif" style="zoom: 90%; border: 1px solid #eee;" />
+<img src="/static/snapshots/tutorial/eslint-uniapp-example-en.gif" style="zoom: 90%; border: 1px solid #eee;" />
 
 
 ## Example：vue-cli project
