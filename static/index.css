@@ -694,6 +694,12 @@ a.contact-item {
   line-height: 24px;
 }
 
+.contact-qq div:nth-child(n+2) {
+	font-size: 13px;
+	color: #000000;
+	line-height: 24px;
+}
+
 /* 修改logo样式 */
 .logo {
   position: absolute;
