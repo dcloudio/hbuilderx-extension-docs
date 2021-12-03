@@ -18,7 +18,7 @@
 6. **Powerfull Intellisense**
 <br/>`HX` is the unique software company in china with its own independent IDE syntax analysis engine. It provides accurate auto-completion and [Go to definition](/Tutorial/UserGuide/goto)(Alt+Left mouse)
 7. **Efficient Text Editing**
-<br/>Multi-cursor / multi-line selection. Smart auto selection on double click.Smart hotkeys that work even without selection. [Details](/Tutorial/UserGuide/selection)
+<br/>Multi-cursor / multi-line selection. Smart auto selection on double click.Smart hotkeys that work even without selection. [Details](/Tutorial/UserGuide/skill)
 8. **Powerful JSON support**
 <br/>`HX` provides more efficient way for modern json structures. [Details](/Tutorial/Language/json)
 

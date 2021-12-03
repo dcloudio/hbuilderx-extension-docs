@@ -21,7 +21,7 @@
 7. 强大的语法提示
 	`HX`是中国唯一一家拥有自主IDE语法分析引擎的公司，对前端语言提供准确的代码提示和[转到定义](/Tutorial/UserGuide/goto?id=转到定义)(Alt+鼠标左键)
 8. 高效极客工具
-	更强大的多光标、智能双击...让字处理的效率大幅提升 [详见](/Tutorial/UserGuide/selection)，
+	更强大的多光标、智能双击...让字处理的效率大幅提升 [详见](/Tutorial/UserGuide/skill)，
 9. 更强的json支持
 	现代js开发中大量json结构的写法，`HX`提供了比其他工具更高效的操作
 	[详见](/Tutorial/Language/json)
