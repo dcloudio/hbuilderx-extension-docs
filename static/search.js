@@ -1,4 +1,4 @@
-(function() {
+(function () {
 	var INDEXS = {};
 	var helper;
 
@@ -14,7 +14,7 @@
 			'/': '&#x2F;'
 		};
 
-		return String(string).replace(/[&<>"'/]/g, function(s) {
+		return String(string).replace(/[&<>"'/]/g, function (s) {
 			return entityMap[s];
 		})
 	}
@@ -22,7 +22,7 @@
 	function getAllPaths(router) {
 		var paths = [];
 
-		helper.dom.findAll('a:not([data-nosearch])').forEach(function(node) {
+		helper.dom.findAll('a:not([data-nosearch])').forEach(function (node) {
 			var href = node.href;
 			var originHref = node.getAttribute('href');
 			var path = router.parse(href).path;
@@ -40,6 +40,7 @@
 	}
 
 	function saveData(maxAge) {
+		localStorage.setItem('docsify.search.locale', getCookie('user_set_language'))
 		localStorage.setItem('docsify.search.expires', Date.now() + maxAge);
 		localStorage.setItem('docsify.search.index', JSON.stringify(INDEXS));
 	}
@@ -66,6 +67,28 @@
 		return text;
 	}
 
+  const docMetaReg = /^<!--+\s*\n\/\/\/\s+meta\s*\n(.*)\n\s*-->/s
+
+  function isMeta(html) {
+    return docMetaReg.test(html)
+  }
+
+  function parseMeta(html) {
+    var metaMatch = html.match(docMetaReg)
+    if (!metaMatch || !metaMatch[1]) {
+      return
+    }
+    var result = {}
+    metaMatch[1].split('\n').forEach(row => {
+      row = row.trim()
+      row = row.split(':')
+      if (row.length === 2) {
+        result[row[0].trim()] = row[1].trim()
+      }
+    })
+    return result
+  }
+
 	function genIndex(path, content, router, depth) {
 		content = content.replace(/^\s*$/g, '') || '';
 		// fixed by hxy 处理页面顶部无标题时，内容无法被搜索到的情况。
@@ -87,56 +110,67 @@
 		var fixl = 4; // 需要添加前缀的标题级别
 		var fixspan = 3; // 被作为前缀添加的标题级别
 
-		tokens.forEach(function(token) {
-			if (token.type === 'heading' && token.depth <= depth) {
-				if(token.depth < fixspan) fixf = null;
-				if(token.depth === fixspan) fixf = token.text;
+		tokens.forEach(function (token, tokenIndex) {
+      // modified by wangyaqi 搜索结果不限制标题层级
+      if (token.type === 'heading') {
+        if (token.depth < fixspan) fixf = null;
+        if (token.depth === fixspan) fixf = token.text;
 
-				// created by xxxxxx 处理标题别名
-				var matchSlug = token.text.match(/@([A-Za-z0-9\-]+)/);
-				var slugText = '';
-				if (matchSlug) {
-					slugText = matchSlug[1];
-					token.text = token.text.replace(matchSlug[0], '');
-				} else {
-					slugText = token.text;
-				}
-				slug = router.toURL(path, {
-					id: slugify(slugText)
-				});
-				index[slug] = {
-					slug: slug,
-					title: token.text,
-					body: ''
-				};
-				if(token.depth === fixl && fixf) {
-					index[slug].title = fixf + '#' + index[slug].title;
-				}
-			} else {
-				if (!slug) {
-					return
-				}
-				if (!index[slug]) {
-					index[slug] = {
-						slug: slug,
-						title: '',
-						body: ''
-					};
-				} else if (index[slug].body) {
-					if (token.type === 'table') {
-						index[slug].body += '\n' + (_serializeTable(token));
-					} else {
-						index[slug].body += '\n' + (token.text || '');
-					}
-				} else {
-					if (token.type === 'table') {
-						index[slug].body = _serializeTable(token);
-					} else {
-						index[slug].body = token.text;
-					}
-				}
-			}
-		});
+        // created by xxxxxx 处理标题别名
+        var matchSlug = token.text.match(/@([A-Za-z0-9\-]+)/);
+        var slugText = '';
+        if (matchSlug) {
+          slugText = matchSlug[1];
+          token.text = token.text.replace(matchSlug[0], '');
+        } else {
+          slugText = token.text;
+        }
+        slug = router.toURL(path, {
+          id: slugify(slugText)
+        });
+        index[slug] = {
+          slug: slug,
+          title: token.text,
+          body: '',
+          keyword: []
+        };
+
+        var metaToken = tokens[tokenIndex + 1]
+        if (metaToken && metaToken.type === 'html' && isMeta(metaToken.text)) {
+          var meta = parseMeta(metaToken.text)
+          if (meta && meta.keyword) {
+            index[slug].keyword = meta.keyword.split(',').map(item => item.trim())
+          }
+        }
+
+        if (token.depth === fixl && fixf) {
+          index[slug].title = fixf + '#' + index[slug].title;
+        }
+      } else {
+        if (!slug) {
+          return
+        }
+        if (!index[slug]) {
+          index[slug] = {
+            slug: slug,
+            title: '',
+            body: ''
+          };
+        } else if (index[slug].body) {
+          if (token.type === 'table') {
+            index[slug].body += '\n' + (_serializeTable(token));
+          } else {
+            index[slug].body += '\n' + (token.text || '');
+          }
+        } else {
+          if (token.type === 'table') {
+            index[slug].body = _serializeTable(token);
+          } else {
+            index[slug].body = token.text;
+          }
+        }
+      }
+    });
 		slugify.clear();
 		return index
 	}
@@ -145,19 +179,20 @@
 	 * created by xxxxxx
 	 * handle body&title
 	 */
-	function _handlePost(post) {
-		var title = post.title || '';
-		var body = post.body || '';
-		// title 去除掉方法后面的括号及里面的内容
-		title = title.replace(/\(.*\)/, '');
-		// body 部分去除换行和空格
-		body = body.replace(/\n\s+/g, '');
-		return {
-			title: _replaceMark(title),
-			body: _replaceMark(body),
-			slug: post.slug
-		}
-	};
+   function _handlePost(post) {
+    var title = post.title || '';
+    var body = post.body || '';
+    // title 去除掉方法后面的括号及里面的内容
+    title = title.replace(/\(.*\)/, '');
+    // body 部分去除换行和空格
+    body = body.replace(/\n\s+/g, '');
+    return {
+      title: _replaceMark(title),
+      body: _replaceMark(body),
+      slug: post.slug,
+      keyword: post.keyword
+    }
+  };
 
 	// 移除部分.md的标记
 	function _replaceMark(str) {
@@ -176,102 +211,137 @@
 	 * @param {String} query
 	 * @returns {Array}
 	 */
+  var TiTlePriority = 10
+  var BaseKeywordPriority = 2
+  var ContentPriority = 1
 	function search(query) {
-		var matchingResults = [];
-		var data = [];
-		Object.keys(INDEXS).forEach(function(key) {
-			data = data.concat(Object.keys(INDEXS[key]).map(function(page) {
-				return INDEXS[key][page];
-			}));
-		});
-		var keyword = query;
-		// query = query.trim();
-		// 		var keywords = query.split(/[\s\-，\\/]+/); //fixed by hulin 输入什么搜什么
-		// 		if (keywords.length !== 1) {
-		// 			keywords = [].concat(query, keywords);
-		// 		}
-		var loop = function(i) {
-			var post = _handlePost(data[i]);
-			var isMatch = false;
-			var resultStr = '';
-			var postTitle = post.title && post.title.trim();
-			var postContent = post.body && post.body.trim();
-			var postUrl = post.slug || '';
-			if (postTitle && postContent) {
-				// From https://github.com/sindresorhus/escape-string-regexp
-				var regEx = new RegExp(
-					keyword.replace('-', '\-').replace(/[|\\{}()[\]^$+*?.]/g, '\\$&'),
-					'gi'
-				);
-				var indexTitle = -1;
-				var indexContent = -1;
+    var matchingResults = [];
+    var data = [];
+    Object.keys(INDEXS).forEach(function (key) {
+      data = data.concat(Object.keys(INDEXS[key]).map(function (page) {
+        return INDEXS[key][page];
+      }));
+    });
+    var keyword = query;
+    // query = query.trim();
+    // 		var keywords = query.split(/[\s\-，\\/]+/); //fixed by hulin 输入什么搜什么
+    // 		if (keywords.length !== 1) {
+    // 			keywords = [].concat(query, keywords);
+    // 		}
+    var loop = function (i) {
+      var post = _handlePost(data[i]);
+      var isMatch = false;
+      var resultStr = '';
+      var postTitle = post.title && post.title.trim();
+      var postKeyword = post.keyword || [];
+      var postContent = post.body && post.body.trim();
+      var postUrl = post.slug || '';
+      if (postTitle && postContent) {
+        // From https://github.com/sindresorhus/escape-string-regexp
+        var regEx = new RegExp(
+          keyword.replace('-', '\-').replace(/[|\\{}()[\]^$+*?.]/g, '\\$&'),
+          'gi'
+        );
+        var indexTitle = -1;
+        var indexContent = -1;
 
-				isTitle = postTitle && postTitle.match(regEx);
-				isContent = postContent && postContent.match(regEx);
+        isTitle = postTitle && postTitle.match(regEx);
+        var matchedKeyword = postKeyword.filter(function (item) {
+          return query.toLowerCase().indexOf(item.toLowerCase()) > -1
+        });
+        isKeyword = matchedKeyword.length > 0
+        isContent = postContent && postContent.match(regEx);
 
-				if (!isTitle && !isContent) {
-					isMatch = false;
-				} else {
-					isMatch = true;
-					var indexContent = 0;
-					if (isContent) {
-						indexContent = postContent.indexOf(keyword)
-					}
-					var start = 0;
-					var end = 0;
-					// fixed by xxxxxx
-					// PC端结果加长
-					var limit = isMobile ? 70 : 500;
+        var matchPriority = 0
+        switch (true) {
+          case isTitle:
+            matchPriority = TiTlePriority
+            break;
+          case isKeyword:
+            matchPriority = BaseKeywordPriority + matchedKeyword.length
+            break;
+          case isContent:
+            matchPriority = ContentPriority
+            break;
+          default:
+            break;
+        }
 
-					start = indexContent < 11 ? 0 : indexContent - 10;
-					end = start === 0 ? limit : indexContent + keyword.length + limit;
+        if (!isTitle && !isKeyword && !isContent) {
+          isMatch = false;
+        } else {
+          isMatch = true;
+          var indexContent = 0;
+          // postContent = postContent.replace(docMetaReg, '');
+          postContent = postContent.replace(/<!--(.*?)-->/s, '')
 
-					if (end > postContent.length) {
-						end = postContent.length;
-					}
+          if (isContent) {
+            indexContent = postContent.indexOf(keyword)
+          }
+          var start = 0;
+          var end = 0;
+          // fixed by xxxxxx
+          // PC端结果加长
+          var limit = isMobile ? 70 : 500;
 
-					var matchContent =
-						'...' +
-						escapeHtml(postContent.substring(start, end))
-						.replace(regEx, ("<em class=\"search-keyword\">" + keyword + "</em>")) +
-						'...';
+          start = indexContent < 11 ? 0 : indexContent - 10;
+          end = start === 0 ? limit : indexContent + keyword.length + limit;
 
-					resultStr += matchContent;
+          if (end > postContent.length) {
+            end = postContent.length;
+          }
 
-					// title 也高亮处理下
-					postTitle = escapeHtml(postTitle).replace(regEx, ("<em class=\"search-keyword\">" + keyword + "</em>"))
-				}
+          var matchContent =
+            '...' +
+            escapeHtml(postContent.substring(start, end))
+              .replace(regEx, ("<em class=\"search-keyword\">" + keyword + "</em>")) +
+            '...';
 
-				if (isMatch) {
-					var matchingPost = {
-						title: postTitle,
-						content: resultStr,
-						url: postUrl
-					};
-					if (postTitle.indexOf("<em class=") === 0) { //如果title第一个就是keyword，则应该加在前面
-						matchingResults.unshift(matchingPost);
-					} else {
-						matchingResults.push(matchingPost);
-					}
-				}
-			}
-		};
+          resultStr += matchContent;
 
-		for (var i = 0; i < data.length; i++) loop(i);
 
-		return matchingResults
-	}
+          // title 也高亮处理下
+          postTitle = escapeHtml(postTitle).replace(regEx, ("<em class=\"search-keyword\">" + keyword + "</em>"))
+        }
+
+        if (isMatch) {
+          var matchingPost = {
+            title: postTitle,
+            content: resultStr,
+            url: postUrl,
+            type: matchPriority
+          };
+          // TODO 调整不同情况的优先级
+          if (postTitle.indexOf("<em class=") === 0) { //如果title第一个就是keyword，则应该加在前面
+            matchingPost.type = 1000
+          }
+          matchingResults.push(matchingPost)
+        }
+      }
+    };
+
+    for (var i = 0; i < data.length; i++) loop(i);
+
+    matchingResults.sort((a,b) => {
+      return b.type - a.type
+    })
+
+    return matchingResults
+  }
 
 	function init$1(config, vm) {
 		helper = Docsify;
 
 		var isAuto = config.paths === 'auto';
+		var indexLocale = localStorage.getItem('docsify.search.locale')
+		var siteLocale = getCookie('user_set_language')
 		var isExpired = localStorage.getItem('docsify.search.expires') < Date.now();
 		INDEXS = JSON.parse(localStorage.getItem('docsify.search.index'));
 
-		if (isExpired) {
+		if (isExpired || indexLocale !== siteLocale) {
 			INDEXS = {};
 		} else if (!isAuto) {
+			initSearch(config, vm)
 			return
 		}
 
@@ -279,18 +349,30 @@
 		var len = paths.length;
 		var count = 0;
 
-		paths.forEach(function(path) {
-			if (INDEXS[path]) {
-				return count++
+		function loaded() {
+			if (count === len) {
+				saveData(config.maxAge);
+				initSearch(config, vm)
 			}
+		}
 
+		paths.forEach(function (path) {
+			if (INDEXS[path]) {
+				count++
+				loaded()
+				return
+			}
 			helper
 				.get(vm.router.getFile(path), false, vm.config.requestHeaders)
-				.then(function(result) {
-					// console.log('path:' + path);
+				.then(function (result) {
 					INDEXS[path] = genIndex(path, result, vm.router, config.depth);
-					len === ++count && saveData(config.maxAge);
-				});
+					count++
+					loaded()
+				}, function (err) {
+					console.error(err)
+					count++
+					loaded()
+				})
 		});
 	}
 
@@ -386,11 +468,11 @@
 
 		html += '\n<h2>' + (post.title) + '</h2></div>';
 
-		if(!!value){
+		if (!!value) {
 			html += '<p>' + post.comment_count + '个' + commentText + '<span class="aw-text-space">-</span>' + post.view_count + '次浏览</p>';
 		}
 
-		html += '\n<p>' + (post.content) +'</p>\n</a>\n</div>';
+		html += '\n<p>' + (post.content) + '</p>\n</a>\n</div>';
 
 		return html;
 	}
@@ -411,7 +493,7 @@
 
 		html += '<p>' + ext.total_download + '次下载</p>';
 
-		html += '\n<p>' + (ext.description) +'</p>\n</a>\n</div>';
+		html += '\n<p>' + (ext.description) + '</p>\n</a>\n</div>';
 
 		return html;
 	}
@@ -425,104 +507,57 @@
 	 */
 	function doSearch(value, vm) {
 		var $search = Docsify.dom.find('div.search');
-		var $panel = isMobile ? Docsify.dom.find($search, '.results-panel') : document.getElementById(
-			'search-results');
+    var $panel = isMobile ? Docsify.dom.find($search, '.results-panel') : document.getElementById('search-results');
+    var $searchResultListPanel = isMobile ? $panel : document.getElementById('search-results-list');
+    var $searchLinkPanel = document.getElementById('search-result-aside-link');
 		var $clearBtn = Docsify.dom.find($search, '.clear-button');
 
-		var $main = document.getElementById('main');
+    var $main = document.getElementById('main');
 
-		if (!value) {
-			$clearBtn.classList.remove('show');
-			$panel.classList.remove('show');
-			$panel.innerHTML = '';
-			if (!isMobile && $main) {
-				$main.classList.remove('hide');
-			}
-			vm.config.searchPlugin.searching = false;
-			return;
-		}
-		var matchs = search(value);
-		var html = '';
-		matchs.forEach(function(post) {
-			html += _renderPost(post);
-		});
+    if (!value) {
+      $clearBtn.classList.remove('show');
+      $panel.classList.remove('show');
+      $searchResultListPanel.innerHTML = '';
+      if (!isMobile && $main) {
+        $main.classList.remove('hide');
+      }
+      vm.config.searchPlugin.searching = false;
+      return;
+    }
+    var matchs = search(value);
+    var html = '';
+    matchs.forEach(function (post) {
+      html += _renderPost(post);
+    });
 
-		$panel.classList.add('show');
-		$clearBtn.classList.add('show');
-		// fixed by xxxxxx 文档中搜索无结果，不显示提示，因为还有联网查询。
-		// $panel.innerHTML = html || ("<p class=\"empty\">" + NO_DATA_TEXT + "</p>");
-		$panel.innerHTML = html || ("<p class=\"empty\"></p>");
+    $panel.classList.add('show');
+    $clearBtn.classList.add('show');
+    // fixed by xxxxxx 文档中搜索无结果，不显示提示，因为还有联网查询。
+    // $panel.innerHTML = html || ("<p class=\"empty\">" + NO_DATA_TEXT + "</p>");
+    $searchResultListPanel.innerHTML = html || ("<p class=\"empty\"></p>");
+    !isMobile && $main.classList.add('hide');
+
+    if ($searchLinkPanel) {
+      // TODO 跳转对应搜索结果页面
+      var searchTarget = [{
+        text: '前往DCloud社区搜索',
+        href: 'https://ask.dcloud.net.cn/'
+      }, {
+        text: '前往uni-app文档搜索',
+        href: 'https://uniapp.dcloud.net.cn/?s=' + value
+      }, {
+        text: '前往原生开发文档搜索',
+        href: 'https://nativesupport.dcloud.net.cn/'
+      }]
+
+      var searchTargetHtml = searchTarget.map(function(item) {
+        return '<a href="' + item.href + '" target="_blank">'+ item.text +'</a>'
+      }).join('<br/>')
+      $searchLinkPanel.innerHTML = searchTargetHtml
+    }
+
+		$searchResultListPanel.innerHTML = html || ("<p class=\"empty\"></p>");
 		!isMobile && $main.classList.add('hide');
-
-		// search ext
-		// $docsify.get('//ext.dcloud.net.cn/search/json?query=' + encodeURIComponent(value)).then(function(res) {
-		// 	// console.log('ext:', res)
-		// 	var ret = JSON.parse(res);
-		// 	if (ret.ret === 0) {
-		// 		var data = ret.data;
-		// 		var extHtml = '';
-		// 		for (var i = 0, len = data.length; i < len; i++) {
-		// 			extHtml += _renderExt(data[i], value);
-		// 		}
-		// 		$panel.innerHTML += extHtml;
-		// 	}
-
-		// 	$docsify.get('//ask.dcloud.net.cn/search/ajax/search_result/search_type-doc__q-' + value + '__page-1').then(
-		// 		function(res) {
-		// 			// console.log('ask:', res)
-		// 			if (!res) {
-		// 				return;
-		// 			}
-		// 			var ret = JSON.parse(res);
-		// 			if (ret.code !== 0) {
-		// 				// 如果联网查询都没有结果，那么依旧要展示无信息。
-		// 				if (!html) {
-		// 					$panel.innerHTML = "<p class=\"empty\">" + NO_DATA_TEXT + "</p>";
-		// 				}
-		// 				return;
-		// 			}
-
-		// 			var data = ret.data;
-		// 			var askHtml = '';
-		// 			data.forEach(function(item) {
-		// 				askHtml += _renderPost(item, value);
-		// 			});
-		// 			if (!!askHtml) {
-		// 				askHtml += '<div class="more"><a href="//ask.dcloud.net.cn/search/q-' + ret.searchKeyword +
-		// 					'#all" target="_blank">前往社区搜索更多内容</a></div>';
-		// 				$panel.innerHTML += askHtml;
-		// 			}
-		// 		});
-
-		// });
-
-		// 异步向ask发起请求
-		// 		$docsify.get('//ask.dcloud.net.cn/search/ajax/search_result/search_type-posts__q-' + value + '__page-1').then(
-		// 			function(res) {
-		// 				if (!res) {
-		// 					return;
-		// 				}
-		// 				var ret = JSON.parse(res);
-		// 				if (ret.code !== 0) {
-		// 					// 如果联网查询都没有结果，那么依旧要展示无信息。
-		// 					if (!html) {
-		// 						$panel.innerHTML = "<p class=\"empty\">" + NO_DATA_TEXT + "</p>";
-		// 					}
-		// 					return;
-		// 				}
-		//
-		// 				var data = ret.data;
-		// 				var askHtml = '';
-		// 				data.forEach(function(item) {
-		// 					askHtml += _renderPost(item, value);
-		// 				});
-		// 				if (!!askHtml) {
-		// 					askHtml += '<div class="more"><a href="http://ask.dcloud.net.cn/search/q-' + ret.searchKeyword +
-		// 						'#all" target="_blank">前往社区搜索更多内容</a></div>';
-		// 					$panel.innerHTML += askHtml;
-		// 				}
-		// 			});
-
 		vm.config.searchPlugin.searching = true;
 	}
 
@@ -558,19 +593,19 @@
 		Docsify.dom.on(
 			$search,
 			'click',
-			function(e) {
+			function (e) {
 				return e.target.tagName !== 'A' && e.stopPropagation();
 			}
 		);
-		Docsify.dom.on($input, 'input', function(e) {
+		Docsify.dom.on($input, 'input', function (e) {
 			clearTimeout(timeId);
 			// fixed by xxxxxx
 			// 出发间隔太短了，加长一些。100 -> 1000
-			timeId = setTimeout(function(_) {
+			timeId = setTimeout(function (_) {
 				return doSearch(e.target.value.trim(), vm);
 			}, 1000);
 		});
-		Docsify.dom.on($inputWrap, 'click', function(e) {
+		Docsify.dom.on($inputWrap, 'click', function (e) {
 			// Click input outside
 			if (e.target.tagName !== 'INPUT') {
 				$input.value = '';
@@ -587,7 +622,7 @@
 		if (typeof text === 'string') {
 			$input.placeholder = text;
 		} else {
-			var match = Object.keys(text).filter(function(key) {
+			var match = Object.keys(text).filter(function (key) {
 				return path.indexOf(key) > -1;
 			})[0];
 			$input.placeholder = text[match];
@@ -598,14 +633,14 @@
 		if (typeof text === 'string') {
 			NO_DATA_TEXT = text;
 		} else {
-			var match = Object.keys(text).filter(function(key) {
+			var match = Object.keys(text).filter(function (key) {
 				return path.indexOf(key) > -1;
 			})[0];
 			NO_DATA_TEXT = text[match];
 		}
 	}
 
-	function init(opts, vm) {
+	function initSearch(opts, vm) {
 		var keywords = vm.router.parse().query.s;
 
 		// fixed by xxxxxx 将css抽离成单独的文件
@@ -617,7 +652,7 @@
 		 * 初始化事件和搜索方法，均传入Docsify实例对象。
 		 */
 		bindEvents(vm);
-		keywords && setTimeout(function(_) {
+		keywords && setTimeout(function (_) {
 			return doSearch(keywords, vm);
 		}, 500);
 	}
@@ -639,7 +674,7 @@
 	 * fixed by xxxxxx
 	 * 将初始化的内容独立出来
 	 */
-	var getConfig = function(vm, config) {
+	var getConfig = function (vm, config) {
 		var util = Docsify.util;
 		var opts = vm.config.search || CONFIG;
 
@@ -655,15 +690,15 @@
 		return config;
 	};
 
-	var install = function(hook, vm) {
+	var install = function (hook, vm) {
 		var config = getConfig(vm, CONFIG);
 		var isAuto = config.paths === 'auto';
 
-		hook.ready(function(_) {
+		hook.ready(function (_) {
 			// init(config, vm);
 			!isAuto && init$1(config, vm);
 		});
-		hook.doneEach(function(_) {
+		hook.doneEach(function (_) {
 			update(config, vm);
 			isAuto && init$1(config, vm);
 		});
@@ -679,6 +714,6 @@
 		install: install,
 		clear: clearSearch,
 		searching: false,
-		init: init
+		init: function(){}
 	};
 }());

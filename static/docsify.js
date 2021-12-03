@@ -383,12 +383,27 @@
                 '</aside>';
         }
 
+        var locale = getLang()
+        // 设置title
+        var searchResultAside = ''
+        if (locale.substr(0, 2) === 'zh') {
+          searchResultAside = '<div class="search-result-aside-placeholder" id="search-results-aside">' +
+          '<div class="search-result-aside">'+
+          '<div class="search-result-aside-link" id="search-result-aside-link">'+
+          '</div>'+
+          '</div>'+
+          '</div>'
+        };
+
         return (
             (isMobile ? (aside + "<main>") : ("<main>" + aside)) +
             '<section class="content">' +
             '<article class="markdown-section" id="main"><!--main--></article>' +
             // fixed by hxy 添加同级的容器，用于展示搜索结果。
-            '<article class="markdown-section search" id="search-results"><!--searchResults--></article>' +
+            '<article class="search search-result hide" id="search-results">'+
+            '<div class="markdown-section search-result-list" id="search-results-list"><!--searchResults--></div>'+
+            searchResultAside +
+            '</article>' +
             '</section>' +
             '</main>'
         )
