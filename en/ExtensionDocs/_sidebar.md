@@ -56,5 +56,20 @@
       <div>DCloud Forum</div>
     </div>
   </a>
+  <div class="contact-item">
+    <img src="/static/icon/qq.png" width="20" height="20" />
+    <div class="contact-smg">
+      <div>Official QQ Group</div>
+      <div>Group 1: 1090431141 &nbsp;<a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=RrAC77FPpgT213CVSRw-hXOUEzNLR53Q&jump_from=webapi">Join Us</a>
+      </div>
+    </div>
+  </div>
+  <div class="contact-item">
+    <img src="/static/icon/weixin@2x.png" width="20" height="20" />
+    <div class="contact-smg">
+      <div>Wechat QRcode</div>
+      <img src="/static/icon/weixin.jpeg" width="90" height="90" />
+    </div>
+  </div>
 </div>
 
