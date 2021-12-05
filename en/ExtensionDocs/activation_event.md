@@ -1,5 +1,5 @@
-Plugin activation[manifest](/ExtensionDocs/manifest.md) is controlled by the `activationEvents` field in the `package.json` file. The plugin will be activated when the event configured by `activationEvents` occurs. If `activationEvents` is empty, the plugin will be automatically activated when HBuilderX startup.
-> **We strongly recommend that you must configure `activationEvents`, activating the plugin at startup will reduce the performance of HBuilderX.**
+Plug-in activation [manifest](/ExtensionDocs/manifest.md) is controlled by the `activationEvents` field in the `package.json` file. The plug-in will be activated when the event configured by `activationEvents` occurs. If `activationEvents` is empty, the plug-in will be automatically activated when HBuilderX startup.
+> **We strongly recommend that you must configure `activationEvents`, activating the plug-in at startup will reduce the performance of HBuilderX.**
 
 The following lists the currently available activation events:
 - **onCommand**
@@ -9,7 +9,7 @@ The following lists the currently available activation events:
 - ** \* **
 
 ### onCommand
-The activation event will be generated when a plugin `command` is to be triggered.
+The activation event will be generated when a plug-in `command` is to be triggered.
 
 ``` json
 "activationEvents": [
