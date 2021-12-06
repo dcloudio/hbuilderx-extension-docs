@@ -1,3 +1,8 @@
+# HBuilderX插件开发@extension
+<!--
+keyword:插件扩展,插件开发,插件API,Extension
+-->
+
 HBuilderX 2.7+版本起，开放了插件扩展机制。开发者可以通过`JavaScript`语言编写HBuilderX的插件，自定义和增强HBuilderX，打造更趁手的利器。
 
 ### 插件扩展能做什么？
