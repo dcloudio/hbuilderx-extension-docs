@@ -1,4 +1,4 @@
-## Foreword
+## Foreword@foreword
 
 > First, make sure that `iTunes` or `Android Phone Assistant` (such as 360 Phone Assistant) can connect to the phone.
 
@@ -22,7 +22,7 @@ We need to analyze where the problem is. The program will perform the following 
 
 Below is a list of FAQs which you can check at any time during future use.
 
-## 1. No menu "Run on real device"
+## 1. No menu "Run on real device"@no_menu
 ---
 > The real device can only run the app project, select the app project or focus on the file editor of the app project to be run.
 
@@ -30,7 +30,7 @@ HBuilderX supports web projects and app projects. There is an icon in front of t
 
 HBuilderX supports more project types, only `uni-app`, `5+app`, and `wap2app` can run on real device. They will all have a `manifest.json` file in the project root directory (uni-cli projects will have manifest.json in the src directory).
 
-## 2. Check phone settings
+## 2. Check phone settings@check
 ---
 Note：To connect Windows OS to an android phone, make sure that the computer has installed the related phone driver.
 
@@ -40,17 +40,17 @@ Note：To connect Windows OS to an android phone, make sure that the computer ha
 4. Android5.0 and above systems, do not use guest mode. It cannot run successfully in this mode.
 5. Some mobile phones, such as Xiaomi, have the permission to install applications via usb, and need to allow the installation of applications via usb on the mobile phone. The interface of different roms is different, please find the way to install the application by using the usb on your mobile phone.
 
-## 3. Mac connection to mobile phone/emulator instructions
+## 3. Mac connection to mobile phone/emulator instructions@macosx
 ---
 The troubleshooting methods are listed separately for Android and iOS phones:
 
-### 3.1 Mac: iOS real device
+### 3.1 Mac: iOS real device@mac-iphone
 
 1. Confirm that the phone is connected to the computer via the data cable;
 2. Confirm that iTunes can connect to the phone properly;
 3. If a request to trust this computer pops up on the phone screen, please agree to the authorizations;
 
-### 3.2 Mac: iOS simulator
+### 3.2 Mac: iOS simulator@mac-iOS-Simulator
 
 1. Xcode must be installed in the application (Application).
 2. Confirm that Xcode (version must be 6.0 and above) has been installed and can start the simulator properly.
@@ -59,7 +59,7 @@ The troubleshooting methods are listed separately for Android and iOS phones:
 
 <img src="/static/snapshots/tutorial/ios_simulator.png" />
 
-### 3.2 Mac: Connect Android phone
+### 3.2 Mac: Connect Android phone@mac-android
 
 1. About this machine (refers to Mac system about this machine, not mobile phone) --> system report -> usb -> the device you are connected to --> vendor ID or vendor ID (Vendor ID).
 2. Echo xxxxxx >> ~/.android/adb_usb.ini ("xxxxxx" is the vendor ID or vendor ID (Vendor ID). Under some systems, the echo command cannot write the file correctly. You can use it in ~/ Modify or create adb_usb.ini under the .android/ directory and add xxxxxx).
@@ -70,9 +70,9 @@ The troubleshooting methods are listed separately for Android and iOS phones:
 7. Run `./adb kill-server` in the adbs directory to try again.
 8. Reboot computer.
 
-## 4. Windows connection phone/emulator instructions
+## 4. Windows connection phone/emulator instructions@windows
 ---
-### 4.1 Windows: Connect Android phone
+### 4.1 Windows: Connect Android phone@windows-android
 
 #### 4.1.1 Driver：
 
@@ -127,7 +127,7 @@ If the above methods still does not work, there is another possibility that the 
 - Adb directory path of HBuilderX: plugins/launcher/tools/adbs (Mac: `/Applications/HBuilderX-Alpha.app/Contents/HBuilderX/plugins/launcher/tools/adbs`)
 Please backup adb.exe of default version before replace it. Then copy adb.exe of version 1.0.31 to replace exe file in the main directory.
 
-### 4.2 Windows: Connect iOS Phone
+### 4.2 Windows: Connect iOS Phone@windows-ios
 
 1. Confirm that the phone is connected to the computer via the cable.
 2. Confirm that iTunes is installed, if not, click[Itunes historical version download](https://mydown.yesky.com/pcsoft/33491427/versions/), Please download the version before 12.9.4.102.
@@ -158,7 +158,7 @@ Since iTunes 12.1, the interface has been changed, which will cause the connecti
   ①、HBuilderX menu：[Tools] - [Plug-in Installation]，Open the "Plugin Install" window, select [iOS connection plugin] (HBuilderX is called the real device running plugin) and install it. After installation, restart HBuilderX, and try to solve it;
   ②、Install the latest version of iTools and restart HBuilderX.
 
-## 5. Other questions
+## 5. Other questions@other
 ---
 #### Q1: The phone can be detected, but it is grayed out (disabled) and cannot be clicked
 
