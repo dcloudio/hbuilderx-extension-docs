@@ -1,6 +1,6 @@
 # Clipboard
 
-> Supported from HBuilderX 2.7.6+ version
+> Supported from HBuilderX 2.7.6+
 
 Clipboard object, which can be used to read the content of the clipboard and write content to the clipboard. Currently, only text format is supported	
 
