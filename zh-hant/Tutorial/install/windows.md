@@ -1,4 +1,4 @@
-# Windows安裝HBuilderX
+# Windows安裝HBuilderX@Windows
 
 ### 下載@download
 
@@ -15,7 +15,7 @@ HBuilderX，Windows爲zip包，解壓後才能使用。
 
 <img src="/static/snapshots/tutorial/install_windows.png" />
 
-### 錯誤的打開方式
+### 錯誤的打開方式@wrong-approach
 
 1. 直接雙擊，在壓縮包中，打開`HBuilderX.exe`是錯誤的。
 2. 從壓縮包中，把`HBuilderX.exe`拖到桌面也是錯誤的。
@@ -24,16 +24,16 @@ HBuilderX，Windows爲zip包，解壓後才能使用。
 
 <img src="/static/snapshots/tutorial/windows_error_open.min.png" style="zoom:80%" />
 
-### 創建桌面快捷方式
+### 創建桌面快捷方式@desktop-shortcut
 
 <img src="/static/snapshots/tutorial/create_shortcut.png" style="zoom:80%" />
 
-### 啓動問題排查指南
+### 啓動問題排查指南@@startup-troubleshooting
 
 1. 您可能會碰到在windows上，無法啓動HBuilderX的問題，請參考: [HBuilderX啓動問題排查指南](/Tutorial/Questions/WindowsStart)
 2. HBuilderX的配置文件損壞，也會導致軟件無法啓動，請參考: [配置文件損壞解決方案](/Tutorial/Questions/WindowsStart?id=_4-配置文件損壞)
 
-### HBuilderX被誤報病毒木馬的說明
+### HBuilderX被誤報病毒木馬的說明@security
 
 首先說明，HBuilderX每次發版都會經過`專業安全公司`的單獨檢測。 通過後纔會正式更新。請放心使用。 幾年來，安全公司從未檢測出一個病毒木馬。但不給他們提交檢測，他們就會亂報警告。
 
