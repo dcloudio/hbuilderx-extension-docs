@@ -1,10 +1,10 @@
-### 用户界面
+### 用户界面@userinterface
 
 像许多其他代码编辑器一样，HBuilderX采用通用的用户界面和左侧的资源管理器布局，而右侧的编辑器则显示已打开文件的内容。 
 
 <img src="/static/snapshots/tutorial/HBuilderX.png" style="zoom:90%" />
 
-### 基本布局
+### 基本布局@basic-layout
 
 用户界面主要分为：
 
@@ -16,7 +16,7 @@
 
 每次启动HBuilderX时，它的打开状态与上次关闭时的状态相同。
 
-### 迷你地图
+### 迷你地图@minimap
 
 `迷你地图`，为您提供了源代码的高级概述，这对于快速导航和理解代码很有用。
 
@@ -28,7 +28,7 @@
 - 您可以在编辑器最右侧，点击右键，关闭或打开迷你地图。
 - 【设置】【编辑器设置】，也可以调整迷你地图像素宽度，默认100
 
-### 文档结构图
+### 文档结构图@outline
 
 左边的大纲是长文档导航的利器。HBuilderX提供了优雅简洁的文档导览界面。
 
@@ -36,7 +36,7 @@
 
 <img src="/static/snapshots/tutorial/outline.png" style="zoom:90%" />
 
-### 内置资源管理器
+### 内置资源管理器@Built-in-Explorer
 
 > 此处只是简单介绍下内置资源管理器，请查看[详细用法](Tutorial/UserGuide/built-in-explorer)
 
@@ -51,7 +51,7 @@ HBuilderX内置的资源管理器，给你一个更大的资源管理界面，�
 
 <img src="/static/snapshots/tutorial/explorer/explorer.gif" style="zoom:98%" />
 
-### 编辑器布局
+### 编辑器布局@editor-layout
 
 HBuilderX，默认情况下，编辑器组以垂直列布局。
 
@@ -61,7 +61,7 @@ HBuilderX，默认情况下，编辑器组以垂直列布局。
 
 <img src="/static/snapshots/tutorial/subfield.png" style="zoom:98%" />
 
-### 单窗体
+### 单窗体@single-window
 
 单窗体： 就是项目管理器，只显示一个项目。
 
