@@ -27,9 +27,7 @@ Someone download zip package from `DCloud.io`, double click `HBuilderX.exe` dire
 
 `zip package needs to be decompressed before it can be used`.
 
-<img src="/static/snapshots/tutorial/windows_error_open.min.png" style="zoom:80%" />
-
-<img src="/static/snapshots/tutorial/install_windows.png" />
+<img src="/static/snapshots/tutorial/install_windows_en.png" class="hd-img" />
 
 
 ### 1.1 Shortcuts problems
@@ -55,7 +53,7 @@ How to setup `Desktop shortcut`:
 3. Follow solution 1 to try again.
 4. Select `HBuilderX.exe`, right-click and click Properties. Operate as shown in the figure below:
 
-<img src="/static/snapshots/tutorial/windows_install/1.png" style="zoom:80%;border: 1px solid #eee;" />
+<img src="/static/snapshots/tutorial/windows_install/compatible_mode_en.png" class="hd-img" />
 
 
 > Note: If above method does not solve your problem, please see the error in the [Event Viewer](#EventViewer)
@@ -95,7 +93,7 @@ As shown below:
 
 Solution: Check if `qt` is installed on your computer, please remove qt environment variables if it has been installed before.
 
-<img src="/static/snapshots/tutorial/windows_install/env.png" style="zoom: 80%;border: 1px solid #eee;"/>
+<img src="/static/snapshots/tutorial/windows_install/env_en.png"  class="hd-img" />
 
 
 
@@ -108,11 +106,11 @@ If none of the above solutions solve your problems, we can troubleshoot through 
 
 Method: Click “Start→Run”, enter eventvwr, Click "Confirm" and open "Event Viewer". 
 
-<img src="/static/snapshots/tutorial/windows_install/eventvwr_1.png" style="zoom: 90%;border: 1px solid #eee;"/>
+<img src="/static/snapshots/tutorial/windows_install/eventvwr_1_en.png" class="hd-img" />
 
 As shown below: Click[Windows Log]--[Application], find records of "error" level and try to fix these problems.
 
-<img src="/static/snapshots/tutorial/windows_install/eventvwr_2.png" style="zoom: 80%; border: 1px solid #eee;"/>
+<img src="/static/snapshots/tutorial/windows_install/eventvwr_2_en.png" class="hd-img" />
 
 Note: If the record of event viewer displays `unKnown`, please download [opengl32sw.dll patch](https://update.dcloud.net.cn/hbuilderx/patch/opengl32sw.dll), and put it to the root directory of HBuilderX, then try again.
 
@@ -178,14 +176,14 @@ Enter `%appdata%` in the address bar of Windows resource manager and press enter
 
 Delete `.lock` file and try to restart HBuilder X again.
 
-<img src="/static/snapshots/tutorial/lock.png" />
+<img src="/static/snapshots/tutorial/windows_install/lock_en.png" class="hd-img" />
 
 ### 4.2 Method 2: Reset configuration file directory
 
 1. Click `reset.bat` file in HBuilderX directory.
 2. If step1 not work, then try the following method. As shown below, enter `%appdata%` in the address bar and press enter; find the HBuilder X directory and rename it. Note: Rename this directory with any name or delete it.
 
-<img src="/static/snapshots/tutorial/windows_install/appdata.png" style="border: 1px solid #eee;"/>
+<img src="/static/snapshots/tutorial/windows_install/appdata_en.png" class="hd-img" />
 
 
 ## 5. After startup, the top toolbar is not fully displayed
