@@ -1,4 +1,8 @@
-# Built-in Browser
+# Built-in Browser@browser
+
+<!--
+keyword: Built-in Browser,内置浏览器,浏览器
+-->
 
 HBuilderX has built-in browser and support live preview。
 

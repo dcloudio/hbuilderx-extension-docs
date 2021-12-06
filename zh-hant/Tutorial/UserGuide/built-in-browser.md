@@ -1,4 +1,8 @@
-# 內置瀏覽器
+# 內置瀏覽器@browser
+
+<!--
+keyword: Built-in Browser,内置浏览器,浏览器,內置瀏覽器
+-->
 
 HBuilderX，內置瀏覽器，支持邊改邊預覽。
 

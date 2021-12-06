@@ -1,5 +1,9 @@
 # Terminal
 
+<!--
+keyword: 终端,内置终端,命令行工具,terminal,cmd
+-->
+
 ## Install Build-in Terminal
 
 Click the top menu [Tools-> Plug-in Installation] to open the plug-in installation window, select `Built-in Terminal`, and click Install.
