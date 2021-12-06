@@ -1,6 +1,6 @@
 > 仅支持HBuilderX 2.8.7+ 版本
 
-## 1. 概述
+## 1. 概述@about
 
 <!--
 keyword: markdown, markdown-share
@@ -16,13 +16,13 @@ HBuilderX 2.8.7起，基于uniCloud，提供了markdown的`一键分享`功能�
 
 同时markdown里涉及的图片也会自动上传到前端网页托管里免费cdn中。
 
-## 2. 使用方式
+## 2. 使用方式@use
 
 在`md`文件上，点击【右键菜单 - 一键分享】，然后在控制台就会返回URL。
 <img src="/static/snapshots/tutorial/markdown_share_1.jpeg" style="zoom:65%" />
 
 
-## 3. 配置方式
+## 3. 配置方式@config
 
 使用markdown一键分享，需要提前完成配置，包括插件下载、uniCloud开通、服务空间绑定。
 
@@ -57,14 +57,14 @@ uniCloud包括`前端网页托管`功能，它是一个免费、高速的网页�
 
 <img src="/static/snapshots/tutorial/markdown_share_6.jpeg" style="zoom:65%" />
 
-### 3.4 HBuilderX 插件设置
+### 3.4 HBuilderX 插件设置@setting
 
 打开HBuilderX,  点击菜单【设置】，插件设置，配置`uniCloud`空间ID （目前只支持阿里云）
 
 <img src="/static/snapshots/tutorial/markdown_share_7.jpeg" style="zoom:80%" />
 
 
-## 4. 插件使用
+## 4. 插件使用@usage
 
 ### 4.1 MarkDown文件转换
 

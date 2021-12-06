@@ -1,4 +1,4 @@
-# Windows安装HBuilderX@Windows
+# Windows安装HBuilderX@install
 
 <!--
 keyword:安装,安装HBuilderX,下载
