@@ -1,10 +1,10 @@
-# Find and replace
+# Find and replace@find-replace
 
 - Find files
 - Find and replace strings (by file, by project, by directory), and support regular expression
 - Find symbol
 
-## Find files
+## Find files@find-files
 
 `ctrl+p (MacOSX: ⌘P)`, You can navigate to the search box, enter the file name, and quickly open any file.
 
@@ -16,20 +16,20 @@ Press and hold `Ctrl+Tab`, you can view the list of all files opened in the edit
 
 <img src="/static/snapshots/tutorial/find/find_file_2_en.png" style="zoom: 48%;border-radius: 24px;border:1px solid #eee;"/>
 
-## Find symbol
+## Find symbol@find-symbol
 
 In the current file, press `Ctrl + Shift + O` to find symbol.
 
 <img src="/static/snapshots/tutorial/find/find_symbol_en.png" style="border:1px solid #eee;"/>
 
-## Find string
+## Find string@find-string
 
 - Scope：String search, support `by current file`, `by directory`, `by left side selection`, `by current project`, `by all project` to search.
 - Function：String search, support `whole word matching`, `regular expression matching`, `case matching`, and support `exclude` specific directories
 
 <img src="/static/snapshots/tutorial/find/find_str_en.png" class="hd-img" />
 
-## Find in selection
+## Find in selection@find-in-selection
 
 > Supported from HBuilderX 3.1.15+
 
