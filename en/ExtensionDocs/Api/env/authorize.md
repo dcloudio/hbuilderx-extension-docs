@@ -49,14 +49,14 @@ At the same time, note that after calling the login method, HBuilderX will pop u
 
 |Type								|Description			|
 |--												|--				|
-|Promise&lt;Object&gt;	| Promise对象	|
+|Promise&lt;Object&gt;	| Promise Object	|
 
-返回值属性说明
+Return attribute description
 
 |Attribute name		|Type	|Description									|
 |--			|--			|--										|
-|code |String		| CODE码，有效期5分钟。用于插件作者服务器端换取accessToken，通过accessToken换取授权的基本信息 |
-|error |Number		| code获取失败时的错误码 |
+|code |String		| CODE is only valid for 5 minutes. Used to exchange the accessToken for the plug-in server, and exchange the basic information of authorization through the accessToken |
+|error |Number		| The error code when the code acquisition fails |
 
 #### Example
 ``` javascript
@@ -69,17 +69,17 @@ At the same time, note that after calling the login method, HBuilderX will pop u
 
 #### 主要错误码信息
 
-|错误码		| Description									|
+|Error code		| Description									|
 |--			|--										|
-|0	| 无错误 |
-|1	| 当前没有登录用户 |
-|2	| 用户取消了授权（直接关闭窗口操作） |
-|3 	| （已废弃） |
-|4	| 插件状态异常 |
-|5	| 用户拒绝授权（用户点击拒绝），或当申请的scopes包含拒绝的授权时会返回该错误码，不影响已通过的授权 |
-|1002	| 服务器参数错误 |
+|0	| No error |
+|1	| No logged-in users |
+|2	| The user canceled the authorization (close the window directly) |
+|3 	| (Obsolete)） |
+|4	| Extension status is abnormal |
+|5	| The user refuses the authorization (the user clicks to refuse), or the error code will be returned when the scopes applied for contains a denied authorization, which does not affect the authorized authorization |
+|1002	| Server parameter error |
 |2001	| 应用信息不存在，在[DCloud开发者开放开台](https://open.dcloud.net.cn/)检查client_id与插件id是否错误或匹配，插件规范参考[这里](/ExtensionDocs/manifest)。|
-|3004	| 超时 |
+|3004	| Timeout |
 |3203	| 404 |
 
 - *关于错误码 2001，开发者在创建HBuilderX插件项目，会以填写的项目名称作为插件目录和插件id。插件开发过程中，在[DCloud开发者开放开台](https://open.dcloud.net.cn/)新增授权申请时需要填写此插件id，与生成的client_id绑定。最终在提交至插件市场时，如果更换了新的插件id，为保证本地正常开发，需要修改插件目录为新的id，并在[DCloud开发者开放开台](https://open.dcloud.net.cn/)重新提交申请。*
@@ -111,19 +111,19 @@ At the same time, note that after calling the login method, HBuilderX will pop u
 ```
 
 ## onUserLogout
-当前登录用户退出事件
+Logout event of logged in user
 
 #### Parameter
 
 |Name	|Type	|Description			|
 |--			|--			|--				|
-|callback		|Function		|当前登录用户退出时的回调函数，无参数|
+|callback		|Function		| Callback function when the currently logged in user exits, no parameters
 
 #### Returns
 
 |Type	|Description			|
 |--			|--				|
-|[Disposable](#Disposable)	| Disposable对象	|
+|[Disposable](#Disposable)	| Disposable Object	|
 
 #### Example
 ``` javascript
