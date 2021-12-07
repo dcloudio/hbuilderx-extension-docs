@@ -1,25 +1,25 @@
 # authorize
 
-> HBuilderX 3.0.0+起支持
+> Supported from HBuilderX 3.0.0+
 
-## authorize介绍
-authorize二级模块对象，用于处理插件授权登录，获取HBuilderX当前登录用户的信息授权。
+## authorize summary
+authorize is the second-level module authorization object, used to process extension login, and obtain the information authorization of the current user who log in to HBuilderX.
 
-它是[DCloud用户开放平台](https://open.dcloud.net.cn/)在HBuilderX插件API中的具体体现。
+It is [DCloud Platform](https://open.dcloud.net.cn/) an example in HBuilderX extension API.
 
-使用场景：
+Scenes:
 
-三方的开发者服务商，比如Git服务商，可以制作HBuilderX插件，并且将账户打通。比如插件注册项目的右键菜单，在HBuilderX中对项目点右键，一键上传到某Git服务商，且无需再重复注册三方Git服务账户。
+Three-party developer service providers, such as Git, which can make HBuilderX extension and allow developer to setup accounts setting. Then, If this extension is registered with the right-click menu of the project, right-click the project in HBuilderX, and upload codes to a Git service provider with one click, and there is no need to re-register third-party Git service accounts.
 
-当然不止是Git服务商，所有其他开发者服务商，如测试、加固、多渠道发布、招聘...，均可通过[DCloud用户开放平台](https://open.dcloud.net.cn/)共享DCloud的开发者资源。
+Of course, not only Git service providers, all other developer service providers, such as testing, reinforcement, multi-channel publishing, recruitment..., can pass [DCloud Platform](https://open.dcloud.net.cn/) to share the developer resources of DCloud.
 
-使用步骤：
+Steps:
 
-1. 三方开发商需要在[DCloud用户开放平台](https://open.dcloud.net.cn/)注册插件应用
-2. 开发HBuilderX插件，调用 `hx.authorize.login` API，拿到code码。（见下面文档）
-3. 插件将code码传到三方开发商服务器，从服务器端向 DCloud用户开放平台 的服务器请求，获取用户信息。文档详见：[https://ask.dcloud.net.cn/article/38005](https://ask.dcloud.net.cn/article/38005)
+1. Third-party developers need to register extension applications in [DCloud Platform](https://open.dcloud.net.cn/)
+2. Develop the HBuilderX extension, call the `hx.authorize.login` API, and get the code code. (See document below)
+3. The extension transmits the code to the third-party developer server, and requests from the server of the DCloud platform to obtain user information. For details, please refer to: [https://ask.dcloud.net.cn/article/38005](https://ask.dcloud.net.cn/article/38005)
 
-对应的效果如下图所示：
+As shown below:
 
 <img src = "/static/snapshots/Plug-in-development/authorize.png" />
 
@@ -29,21 +29,21 @@ authorize二级模块对象，用于处理插件授权登录，获取HBuilderX�
 
 |Name	|Type	|Description			|
 |--			|--			|--				|
-|params		| Object	|授权登录必要的信息|
+|params		| Object	|Information necessary to authorize login|
 
-参数属性说明
+Attributes
 
 |Attribute name		|Type	|Description									|
 |--			|--			|--										|
-|client_id |String		|  在[DCloud开发者开放开台](https://open.dcloud.net.cn/)添加授权插件后创建的client_id |
-|scopes |Array&lt;String&gt;		| 授权范围列表, 取值范围：basic, email, phone。basic必填|
-|description | String	| 关于授权信息描述，可以向用户简单解释插件将如何使用申请的信息（HBuilderX 3.1.7新增） |
+|client_id |String		|  The client_id created after adding the authorization extension in [DCloud Platform](https://open.dcloud.net.cn/) |
+|scopes |Array&lt;String&gt;		| Authorization range list, value range: basic, email, phone. basic is required.|
+|description | String	| Regarding the description of the authorization information, you can simply explain to the user how the plug-in will use the requested information (new in HBuilderX 3.1.7) |
 
-basic包括用户的openid、昵称、头像。
+Basic includes the user's openid, nickname, and avatar.
 
-email和phone请谨慎使用，非必要申请授权会招致HBuilderX的用户反感。
+Email and phone should only be applied when necessary. Non-essential application for authorization will arouse the disgust of HBuilderX users.
 
-同时注意在调用login方法后，HBuilderX会弹出授权确认框，用户可能拒绝授权或拒绝授权email、phone等敏感信息。
+At the same time, note that after calling the login method, HBuilderX will pop up an authorization confirmation box, and the user may refuse to authorize or refuse to authorize sensitive information such as email and phone.
 
 #### Returns
 

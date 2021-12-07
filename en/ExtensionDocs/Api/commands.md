@@ -1,15 +1,14 @@
 # commands
 
-commands, the second-level module object, used to process the logic related to `command`.
+commands is the second-level module object, used to process the logic related to `command`.
 
-`命令`包含2部分：唯一ID和自定义的function，可以通过registerCommand或registerTextEditorCommand注册。
-
+`Command` contains 2 parts: unique ID and custom function, which can be registered through registerCommand or registerTextEditorCommand.
 
 ## Declare command
 
-#### 菜单：将命令通过`menus`扩展点关联到某个菜单。
+#### Menu: Associate commands to a menu through the `menus` extension point.
 
-1. 通过commands扩展点声明一个command，然后关联到`menus`上
+1. Declare a command through the commands extension point, and then associate it with `menus`
 
 ```json
 {
@@ -33,7 +32,7 @@ commands, the second-level module object, used to process the logic related to `
 }
 ```
 
-2. 在插件的激活回调(`activate`)中注册该command
+2. Register the command in the activation callback (`activate`) of the extension
 
 ``` javascript
     hx.commands.registerCommand('extension.firstExtension',()=>{
@@ -43,7 +42,7 @@ commands, the second-level module object, used to process the logic related to `
 
 #### Custom shortcuts
 
-用户自定义快捷键：使用插件的用户可以通过得知`命令`的ID（一般在package.json中有声明），然后通过`自定义快捷键`配置一个快捷键。
+User-defined shortcut keys: Users who use the extension can learn the ID of the `command` (usually declared in package.json), and then configure a shortcut key through the `custom shortcut key`.
 
 ```json
 // Keybindings.json;
@@ -57,7 +56,7 @@ commands, the second-level module object, used to process the logic related to `
 
 ## executeCommand
 
-执行指定id的`命令`。除了插件扩展的`命令`外，还可以执行HBuilderX内置的`命令`，完整的内置`命令`列表可以通过HBuilderX的顶部菜单`工具`-`自定义快捷键`，然后在打开的配置文件左侧部分找到所有列出的`command`字段，如下图：
+Execute the `command` with the specified id. In addition to the `commands` extended by the extension, you can also execute the built-in `commands` of HBuilderX. The complete list of built-in `commands` can be through the top menu of HBuilderX `tools`-`custom shortcut keys`, and then on the left of the opened configuration file In the side section, find all the listed `command` fields, as shown below:
 
 <img src="/static/snapshots/commands@2x.png" style="zoom:50%" />
 
@@ -65,37 +64,37 @@ commands, the second-level module object, used to process the logic related to `
 
 |Parameter	    |Type	    |Description			|
 |--			|--			|--				|
-|command	|String		|要执行的`命令`id	|
+|command	|String		| The id of the command to be executed|
 
 ##### Returns
 |Type	|Description		|
 |--			|--			|
-|Promise	|Promise对象|
+|Promise	|Promise Object|
 
 
 ##### Example
 ``` javascript
-//执行插件扩展的命令
+//Execute the command for extension
 hx.commands.executeCommand('extension.firstExtension')
-//执行内置的命令（关闭所有打开的编辑器）
+//Execute built-in commands (close all open editors)
 hx.commands.executeCommand('workbench.action.closeAllEditors')
 ```
 
 ## registerCommand
 
-注册一个指定id的`命令`，并关联一个自定义的函数
+Register a `command` with a specified id and associate a custom function
 
 ##### Parameter
 
 |Parameter	|Type	|Description					|
 |--			|--			|--						|
-|commandId	|String		|`命令`id				|
-|handler	|Function	|`命令`触发时执行的函数	|
+|commandId	|String		|`command`id				|
+|handler	|Function	|The function to be executed when the command is triggered	|
 
 ##### Returns
 |Type					|Description																									|
 |--							|--																										|
-|[Disposable](/ExtensionDocs/Api/other/Disposable)	|该`命令`的销毁器,可将该对象放置到插件的context.subscriptions数组内，插件卸载时，将会自动注销该`命令`	|
+|[Disposable](/ExtensionDocs/Api/other/Disposable)	|The destroyer of this `command` can place the object in the context.subscriptions array of the extension. When the extension is uninstalled, the `command` will be automatically cancelled.	|
 
 
 ##### Example

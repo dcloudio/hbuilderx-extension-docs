@@ -1,12 +1,12 @@
 # env
 
-> Supported from HBuilderX 2.7.6+ version
+> Supported from HBuilderX 2.7.6+
 
-Env second-level module object, including methods related to operating environment information and system interaction
+env is a secondary module object, which contains information about the operating environment and methods related to system interaction
 
 Attribute list：
 
-|Attribute name		|Type				|description																	|
+|Name		|Type				|description																	|
 |--			|--						|--																		|
 |appName	|String					|Application name：HBuilder X												|
 |appVersion	|String					|Application main version. Can be viewed in the menu [Help]-[About]						|
