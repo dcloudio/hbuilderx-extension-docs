@@ -5,7 +5,7 @@
 ## authorize summary
 authorize is the second-level module authorization object, used to process extension login, and obtain the information authorization of the current user who log in to HBuilderX.
 
-It is [DCloud Platform](https://open.dcloud.net.cn/) an example in HBuilderX extension API.
+It is an example of [DCloud Platform](https://open.dcloud.net.cn/) in HBuilderX extension API.
 
 Scenes:
 
@@ -29,7 +29,7 @@ As shown below:
 
 |Name	|Type	|Description			|
 |--			|--			|--				|
-|params		| Object	|Information necessary to authorize login|
+|params		| Object	|Authorize login information|
 
 Attributes
 
@@ -67,7 +67,7 @@ Return attribute description
 	});
 ```
 
-#### 主要错误码信息
+#### Primary error codes
 
 |Error code		| Description									|
 |--			|--										|
@@ -78,23 +78,23 @@ Return attribute description
 |4	| Extension status is abnormal |
 |5	| The user refuses the authorization (the user clicks to refuse), or the error code will be returned when the scopes applied for contains a denied authorization, which does not affect the authorized authorization |
 |1002	| Server parameter error |
-|2001	| 应用信息不存在，在[DCloud开发者开放开台](https://open.dcloud.net.cn/)检查client_id与插件id是否错误或匹配，插件规范参考[这里](/ExtensionDocs/manifest)。|
+|2001	| The application information does not exist. Check [DCloud Platform](https://open.dcloud.net.cn/) to check whether the client_id and the extension id are wrong or match, please refer to the extension specification [here] (/ExtensionDocs/manifest)。|
 |3004	| Timeout |
 |3203	| 404 |
 
-- *关于错误码 2001，开发者在创建HBuilderX插件项目，会以填写的项目名称作为插件目录和插件id。插件开发过程中，在[DCloud开发者开放开台](https://open.dcloud.net.cn/)新增授权申请时需要填写此插件id，与生成的client_id绑定。最终在提交至插件市场时，如果更换了新的插件id，为保证本地正常开发，需要修改插件目录为新的id，并在[DCloud开发者开放开台](https://open.dcloud.net.cn/)重新提交申请。*
+- *Regarding error code 2001, when a developer creates an HBuilderX extension project, the project name filled in will be used as the extension directory and extension id. In the process of extension development, you need to fill in the extension id when adding a new authorization application in [DCloud  Platform] (https://open.dcloud.net.cn/) and bind it with the generated client_id. In the final submission to the plug-in market, if a new extension id is changed, in order to ensure normal local development, the extension directory needs to be modified to the new id, and the extension catalog must be changed to [DCloud Platform](https://open.dcloud. net.cn/) resubmit the application. *
 
-- *关于错误码 3，开发者在测试过程中，如果需要重新弹出授权窗口，可以手动删除HBuilderX缓存的加密授权信息记录。Windows平台位置：C:\Users\[UserName]\AppData\Roaming\HBuilder X\prefs, MacOS平台位置：~/Library/Application Support/HBuilder X/prefs，删除该文件[authorization]组下所有内容。*
+- *Regarding error code 3, developers can manually delete the encrypted authorization information records cached by HBuilderX if they need to re-pop up the authorization window during the test. Windows platform location: C:\Users\[UserName]\AppData\Roaming\HBuilder X\prefs, MacOS platform location: ~/Library/Application Support/HBuilder X/prefs, delete all content under the file [authorization] group. *
 
 
 ## onUserLogin
-用户登录事件
+User login event
 
 #### Parameter
 
 |Name	|Type	|Description			|
 |--			|--			|--				|
-|callback		|Function		|用户登录时的回调函数，无参数|
+|callback		|Function		|Callback function when the user logs in, no parameters|
 
 #### Returns
 
