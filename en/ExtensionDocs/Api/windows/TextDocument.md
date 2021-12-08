@@ -1,102 +1,101 @@
 # TextDocument
-编辑器打开的文档文件
+Document file opened by the editor
 
-## 属性列表
+## Attributes List
 
-|Attribute name	|Type																												|Description																																										|
+|Name	|Type																												|Description																																										|
 |--							|--																													|--																																															|
-|fileName				|String																											|文件名称																																												|
-|isDirty				|Boolean																										|是否是修改状态																																									|
-|isUntitled			|Boolean																										| 是否是无标题文件																																							|
-|lineCount			|Number																											|文档总行数																																											|
-|uri						|[Uri](/ExtensionDocs/Api/other/Uri)												|文档的uri，如果是本地文件，可通过uri.fsPath获取本地文件路径																		|
-|languageId			|String																											|编程语言Id，如'javascript','html'等，完整id列表参见[这里](/ExtensionDocs/Api/other/languageId)	|
-|workspaceFolder|[WorkspaceFolder](/ExtensionDocs/Api/other/WorkspaceFolder)|该文档文件所属的项目对象																																				|
+|fileName				|String																											|File Name																																											|
+|isDirty				|Boolean																										|Is it a modified status																																									|
+|isUntitled			|Boolean																										|Whether it is an untitled file																																							|
+|lineCount			|Number																											|Total number of document lines																																											|
+|uri						|[Uri](/ExtensionDocs/Api/other/Uri)												|The uri of the document, if it is a local file, the local file path can be obtained through uri.fsPath																		|
+|languageId			|String																											|Programming language Id，for example 'javascript','html' etc，see full id list [Here](/ExtensionDocs/Api/other/languageId)	|
+|workspaceFolder|[WorkspaceFolder](/ExtensionDocs/Api/other/WorkspaceFolder)|Which project object the document belongs to																																			|
 
 ## getText
-获取指定区域内的文本
+Get the text in the specified area
 
 |Name	|Type		|Description													|
 |--			|--				|--														|
-|range		|[Range](#Range)|[可选]文本区域，如果不传该参数，则获取整个文档的内容	|
+|range		|[Range](#Range)|[Optional] Text area, if this parameter is not passed, the content of the entire document is obtained	|
 
-**Returns**
+**Return Values**
 
 |Type	|Description		|
 |--			|--			|
-|String		|文本字符串	|
+|String		|Text string	|
 
 
 ## lineAt
-获取指定行号的行信息
+Get the line information of the specified line number
 
 |Name	|Type	|Description			|
 |--			|--			|--				|
-|lineno		|Number		|行号，从0开始	|
+|lineno		|Number		|Line number, starting from 0	|
 
-**Returns**
+**Return Values**
 
 |Type						|Description		|
 |--										|--			|
-| Promise&lt;[TextLine](#TextLine)&gt;	|文本行对象	|
+| Promise&lt;[TextLine](#TextLine)&gt;	|Text line objec	|
 
 ## lineFromPosition
-根据光标位置获取光标所在行。
+Get the line where the cursor is based on the cursor position.。
 
 |Name	|Type	|Description		|
 |--			|--			|--			|
-|pos		|Number		|光标位置	|
+|pos		|Number		|Cursor Position	|
 
-**Returns**
+**Return Values**
 
 |Type						|Description		|
 |--										|--			|
-|Promise&lt;[TextLine](#TextLine)&gt;	|文本行对象	|
+|Promise&lt;[TextLine](#TextLine)&gt;	|Text line object	|
 
 
 ## Range
-文本区域
+Text area
 
-### 属性列表
+### Attributes List
 
 |Attribute name	|Type	|Description		|
 |--		|--			|--			|
-|start	|Number		|起始位置	|
-|end	|Number		|结束位置	|
+|start	|Number		|Start Position	|
+|end	|Number		|End Position	|
 
 ## TextLine
-文档中的某一行
+A line in the document
 
-### 属性列表
+### Attributes List
 
 |Attribute name	|Type	|Description						|
 |--		|--			|--							|
-|start	|Number		|行起始位置					|
-|end	|Number		|行结束位置，不计算换行符	|
-|text	|String		|行内容，不包含换行符		|
+|start	|Number		|Line start position					|
+|end	|Number		|The end of the line, not counting line breaks|
 
 
 ## TextEdit
-文档编辑
+Document editing
 
 ### 属性列表
 
-|Attribute name	|Type			|Description			|
+|Name	|Type			|Description			|
 |--		|--					|--				|
-|range	|[Range](#Range)	|要修改的区域	|
-|newText|String				|要插入的新内容	|
+|range	|[Range](#Range)	|The area to be modified	|
+|newText|String		ss		|New content to insert	|
 
 ### replace **static**
 
-#### Parameter
+#### Parameters
 
 |Name	|Type			|Description			|
 |--			|--					|--				|
-|range		|[Range](#Range)	|要修改的区域	|
-|newText	|String				|要插入的新内容	|
+|range		|[Range](#Range)	|The area to be modified	|
+|newText	|String				|New content to insert	|
 
-#### Returns
+#### Return Valus
 
 |Type	|Description	|
 |--			|--		|
-|[TextEdit](#TextEdit)|	文档编辑对象|
+|[TextEdit](#TextEdit)|	Document editing object|
