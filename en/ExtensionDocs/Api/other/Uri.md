@@ -1,14 +1,14 @@
 # Uri
 
-A universal resource identifier representing either a file on disk or another resource, like untitled resources.
+A universal resource identifier
 
 **Attribute list**
 
-|Parameter		|Type	|Description				|
+|Name		|Type	|Description				|
 |--			|--			|--					|
-|fsPath		|String		|The string representing the corresponding file system path of this Uri.		|
-|authority	|String		|Uri中的authority	|
-|fragment	|String		|Uri中的fragment	|
-|path		|String		|Uri中的path		|
-|query		|String		|Uri中的query		|
-|scheme		|String		|Uri中的scheme		|
+|fsPath		|String		|Local file path		|
+|authority	|String		|authority in Uri	|
+|fragment	|String		|fragment in Uri	|
+|path		|String		|path in Uri|
+|query		|String		|Uquery in Uri|
+|scheme		|String		|scheme in Uri|
