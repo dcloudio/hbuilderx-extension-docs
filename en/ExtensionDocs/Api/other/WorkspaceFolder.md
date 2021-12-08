@@ -1,6 +1,6 @@
 # WorkspaceFolder
 
-The project directory under the workspace, each project in the project manager on the left represents a WorkspaceFolder
+The project directory under the workspace, each project in the project manager on the left represents a WorkspaceFolder.
 
 **Attribute list**
 
