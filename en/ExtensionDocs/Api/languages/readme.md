@@ -1,3 +1,3 @@
 # languages
 
-languages二级模块对象，用于处理和编程语言相关的逻辑，目前仅支持校验文档时创建问题列表。
+Languages is second-level module object, used to process logic related to programming languages. Currently, it only supports creating a list of questions when verifying documents.
