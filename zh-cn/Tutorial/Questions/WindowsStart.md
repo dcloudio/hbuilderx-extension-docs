@@ -1,4 +1,7 @@
 # HBuilderX Windows 启动问题排查指南
+<!--
+keyword: 无法启动,HBuilderX无法启动,HBuilderX点击没有反应,打开闪退,配置文件损坏,HBuilderX崩溃闪退,无法打开HBuilderX
+-->
 
 ## 前言
 
