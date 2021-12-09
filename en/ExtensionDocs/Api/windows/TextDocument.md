@@ -5,12 +5,12 @@ Document file opened by the editor
 
 |Name	|Type																												|Description																																										|
 |--							|--																													|--																																															|
-|fileName				|String																											|File Name																																											|
-|isDirty				|Boolean																										|Is it a modified status																																									|
-|isUntitled			|Boolean																										|Whether it is an untitled file																																							|
-|lineCount			|Number																											|Total number of document lines																																											|
-|uri						|[Uri](/ExtensionDocs/Api/other/Uri)												|The uri of the document, if it is a local file, the local file path can be obtained through uri.fsPath																		|
-|languageId			|String																											|Programming language Id，for example 'javascript','html' etc，see full id list [Here](/ExtensionDocs/Api/other/languageId)	|
+|fileName				|String																											|The file system path of the associated resource. 																																											|
+|isDirty				|Boolean																										|true if there are unpersisted changes.																																									|
+|isUntitled			|Boolean																										|Is this document representing an untitled file which has never been saved yet.																																							|
+|lineCount			|Number																											|The number of lines in this document.|
+|uri						|[Uri](/ExtensionDocs/Api/other/Uri)												|The associated uri for this document.|
+|languageId			|String																											|The identifier of the language associated with this document，for example 'javascript','html' etc，see full id list [Here](/ExtensionDocs/Api/other/languageId)	|
 |workspaceFolder|[WorkspaceFolder](/ExtensionDocs/Api/other/WorkspaceFolder)|Which project object the document belongs to																																			|
 
 ## getText
@@ -20,7 +20,7 @@ Get the text in the specified area
 |--			|--				|--														|
 |range		|[Range](#Range)|[Optional] Text area, if this parameter is not passed, the content of the entire document is obtained	|
 
-**Return Values**
+**Returns**
 
 |Type	|Description		|
 |--			|--			|
@@ -47,7 +47,7 @@ Get the line where the cursor is based on the cursor position.。
 |--			|--			|--			|
 |pos		|Number		|Cursor Position	|
 
-**Return Values**
+**Returns**
 
 |Type						|Description		|
 |--										|--			|
@@ -78,7 +78,7 @@ A line in the document
 ## TextEdit
 Document editing
 
-### 属性列表
+### Attributes List
 
 |Name	|Type			|Description			|
 |--		|--					|--				|
@@ -94,7 +94,7 @@ Document editing
 |range		|[Range](#Range)	|The area to be modified	|
 |newText	|String				|New content to insert	|
 
-#### Return Valus
+#### Returns
 
 |Type	|Description	|
 |--			|--		|
