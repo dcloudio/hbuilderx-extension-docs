@@ -1,19 +1,17 @@
-# Message
-
-> Notification box in the lower right corner of the window.
+#  Notification box in the lower right corner of the window
 
 ## showErrorMessage
 
-> Show an error message.
+> Display an error notification box in the lower right corner of the window
 
-#### Parameter
+#### Parameters
 
 |Name	|Type			|Description					|
 |--			|--					|--						|
 |message	|String				|Message content, support html tags	|
 |buttons	|Array&lt;String&gt;|Button group in notification box		|
 
-#### Returns
+#### Return Values
 
 |Type				|Description									|
 |--						|--										|
@@ -33,39 +31,39 @@ resultPromise.then((result)=>{
 
 ## showInformationMessage
 
-> Show an information message to users.
+> Display a message notification box in the lower right corner of the window
 
-#### Parameter
+#### Parameters
 
 |Name	|Type			|Description					|
 |--			|--					|--						|
 |message	|String				|Message content, support html tags	|
 |buttons	|Array&lt;String&gt;|Button group in notification box		|
 
-#### Returns
+#### Return Values
 |Type				|Description									|
 |--						|--										|
 |Promise&lt;String&gt;	|If a button is set, return which button the user clicked	|
 
 #### Example
 ``` javascript
-hx.window.showInformationMessage('详情可访问<a href="http://www.dcloud.io">参考文档</a>');
+hx.window.showInformationMessage('Learn More <a href="http://www.dcloud.io">Reference Documents</a>');
 ```
 
 <img src="/static/snapshots/Plug-in-development/info.jpg" style="zoom:50%" />
 
 ## showWarningMessage
 
-> Show a warning message.
+> Display a warning message notification box in the lower right corner of the window
 
-#### Parameter
+#### Parameters
 
 |Name	|Type			|Description					|
 |--			|--					|--						|
 |message	|String				|Message content, support html tags	|
 |buttons	|Array&lt;String&gt;|Button group in notification box		|
 
-#### Returns
+#### Return Values
 |Type				|Description									|
 |--						|--										|
 |Promise&lt;String&gt;	|If a button is set, return which button the user clicked	|

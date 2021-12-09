@@ -1,12 +1,12 @@
 # WorkspaceFolder
 
-The project directory under the workspace, each project in the project manager on the left represents a WorkspaceFolder
+The project directory under the workspace, each project in the project manager on the left represents a WorkspaceFolder.
 
 **Attribute list**
 
-|Attribute name	|Type			|Description			|
+|Name	|Type			|Description			|
 |--		|--					|--				|
-|uri	|String或[Uri](/ExtensionDocs/Api/other/Uri)|Project Path	|
-|name	|String				|Project directory name	|
+|uri	|String or [Uri](/ExtensionDocs/Api/other/Uri)|Project Directory Path	|
+|name	|String				|Project Directory Name	|
 |nature	|String				|Project Type		|
-|id		|String				|Project ID	|
+|id		|String				|Project Unique ID	|

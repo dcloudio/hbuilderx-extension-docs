@@ -1,10 +1,8 @@
 # createDiagnosticCollection
 
-Create a diagnostics collection. 
+Create a diagnostics collection that can be used to display wavy lines in the error area of the document to identify problems during document verification.
 
-For document verification, wavy lines are displayed in the error area of the document to identify problems.
-
-## Parameter and Returns
+## Parameter and Return Value
 
 ##### Parameter
 
@@ -12,7 +10,7 @@ For document verification, wavy lines are displayed in the error area of the doc
 |--			|--			|--				|
 |name		|String		|The name of the problem list, which will be displayed in tooltips when the mouse is moved over the wavy line|
 
-##### Returns
+##### Return Value
 
 |Type										|Description			|
 |--												|--				|
@@ -26,8 +24,8 @@ For document verification, wavy lines are displayed in the error area of the doc
     activeEditor.then(function(editor) {
         // Get file path
         let file_url = editor.document.uri.fsPath;
-        // 通过editor.document可以获取文档对象进行校验
-        // 创建一个测试问题集合
+        // The document object can be obtained for verification through editor.document
+        // Create a test question collection
         let collections = [{
                 column: 0,
                 line: 3,
@@ -48,7 +46,7 @@ For document verification, wavy lines are displayed in the error area of the doc
 
 |Name	|Type	|Description		|
 |--		|--			|--			|
-|name	|String		|The name of the collection.	|
+|name	|String		|The name of the collection	|
 
 #### set
 
@@ -57,9 +55,9 @@ For document verification, wavy lines are displayed in the error area of the doc
 |Name	|Type										|Description		|
 |--			|--												|--			|
 |uri		|String or Uri									|Document path	|
-|diagnostics|Array&lt;[DiagnosticItem](#DiagnosticItem)&gt;	|Diagnostic Item	|
+|diagnostics|Array&lt;[DiagnosticItem](#DiagnosticItem)&gt;	|Diagnostic Collection	|
 
-##### Returns
+##### Return Value
 
 |Type	|Description	|
 |--			|--		|
@@ -88,5 +86,5 @@ For document verification, wavy lines are displayed in the error area of the doc
 |--			|--			|--													|
 |line		|String		|lines of the document										|
 |column		|String		|column of the document										|
-|message	|String		|The human-readable message.									|
-|severity	|String		|The severity, default is error. Scope:'error'，'warn'. |
+|message	|String		|Question details									|
+|severity	|String		|Problem level, value range:'error','warn'. The default value is'error' |

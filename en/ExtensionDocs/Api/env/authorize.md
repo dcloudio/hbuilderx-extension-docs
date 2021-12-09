@@ -5,7 +5,7 @@
 ## authorize summary
 authorize is the second-level module authorization object, used to process extension login, and obtain the information authorization of the current user who log in to HBuilderX.
 
-It is [DCloud Platform](https://open.dcloud.net.cn/) an example in HBuilderX extension API.
+It is an example of [DCloud Platform](https://open.dcloud.net.cn/) in HBuilderX extension API.
 
 Scenes:
 
@@ -29,7 +29,7 @@ As shown below:
 
 |Name	|Type	|Description			|
 |--			|--			|--				|
-|params		| Object	|Information necessary to authorize login|
+|params		| Object	|Authorize login information|
 
 Attributes
 
@@ -49,14 +49,14 @@ At the same time, note that after calling the login method, HBuilderX will pop u
 
 |Type								|Description			|
 |--												|--				|
-|Promise&lt;Object&gt;	| Promise对象	|
+|Promise&lt;Object&gt;	| Promise Object	|
 
-返回值属性说明
+Return attribute description
 
 |Attribute name		|Type	|Description									|
 |--			|--			|--										|
-|code |String		| CODE码，有效期5分钟。用于插件作者服务器端换取accessToken，通过accessToken换取授权的基本信息 |
-|error |Number		| code获取失败时的错误码 |
+|code |String		| CODE is only valid for 5 minutes. Used to exchange the accessToken for the plug-in server, and exchange the basic information of authorization through the accessToken |
+|error |Number		| The error code when the code acquisition fails |
 
 #### Example
 ``` javascript
@@ -67,34 +67,34 @@ At the same time, note that after calling the login method, HBuilderX will pop u
 	});
 ```
 
-#### 主要错误码信息
+#### Primary error codes
 
-|错误码		| Description									|
+|Error code		| Description									|
 |--			|--										|
-|0	| 无错误 |
-|1	| 当前没有登录用户 |
-|2	| 用户取消了授权（直接关闭窗口操作） |
-|3 	| （已废弃） |
-|4	| 插件状态异常 |
-|5	| 用户拒绝授权（用户点击拒绝），或当申请的scopes包含拒绝的授权时会返回该错误码，不影响已通过的授权 |
-|1002	| 服务器参数错误 |
-|2001	| 应用信息不存在，在[DCloud开发者开放开台](https://open.dcloud.net.cn/)检查client_id与插件id是否错误或匹配，插件规范参考[这里](/ExtensionDocs/manifest)。|
-|3004	| 超时 |
+|0	| No error |
+|1	| No logged-in users |
+|2	| The user canceled the authorization (close the window directly) |
+|3 	| (Obsolete)） |
+|4	| Extension status is abnormal |
+|5	| The user refuses the authorization (the user clicks to refuse), or the error code will be returned when the scopes applied for contains a denied authorization, which does not affect the authorized authorization |
+|1002	| Server parameter error |
+|2001	| The application information does not exist. Check [DCloud Platform](https://open.dcloud.net.cn/) to check whether the client_id and the extension id are wrong or match, please refer to the extension specification [here] (/ExtensionDocs/manifest)。|
+|3004	| Timeout |
 |3203	| 404 |
 
-- *关于错误码 2001，开发者在创建HBuilderX插件项目，会以填写的项目名称作为插件目录和插件id。插件开发过程中，在[DCloud开发者开放开台](https://open.dcloud.net.cn/)新增授权申请时需要填写此插件id，与生成的client_id绑定。最终在提交至插件市场时，如果更换了新的插件id，为保证本地正常开发，需要修改插件目录为新的id，并在[DCloud开发者开放开台](https://open.dcloud.net.cn/)重新提交申请。*
+- *Regarding error code 2001, when a developer creates an HBuilderX extension project, the project name filled in will be used as the extension directory and extension id. In the process of extension development, you need to fill in the extension id when adding a new authorization application in [DCloud  Platform] (https://open.dcloud.net.cn/) and bind it with the generated client_id. In the final submission to the plug-in market, if a new extension id is changed, in order to ensure normal local development, the extension directory needs to be modified to the new id, and the extension catalog must be changed to [DCloud Platform](https://open.dcloud. net.cn/) resubmit the application. *
 
-- *关于错误码 3，开发者在测试过程中，如果需要重新弹出授权窗口，可以手动删除HBuilderX缓存的加密授权信息记录。Windows平台位置：C:\Users\[UserName]\AppData\Roaming\HBuilder X\prefs, MacOS平台位置：~/Library/Application Support/HBuilder X/prefs，删除该文件[authorization]组下所有内容。*
+- *Regarding error code 3, developers can manually delete the encrypted authorization information records cached by HBuilderX if they need to re-pop up the authorization window during the test. Windows platform location: C:\Users\[UserName]\AppData\Roaming\HBuilder X\prefs, MacOS platform location: ~/Library/Application Support/HBuilder X/prefs, delete all content under the file [authorization] group. *
 
 
 ## onUserLogin
-用户登录事件
+User login event
 
 #### Parameter
 
 |Name	|Type	|Description			|
 |--			|--			|--				|
-|callback		|Function		|用户登录时的回调函数，无参数|
+|callback		|Function		|Callback function when the user logs in, no parameters|
 
 #### Returns
 
@@ -111,19 +111,19 @@ At the same time, note that after calling the login method, HBuilderX will pop u
 ```
 
 ## onUserLogout
-当前登录用户退出事件
+Logout event of logged in user
 
 #### Parameter
 
 |Name	|Type	|Description			|
 |--			|--			|--				|
-|callback		|Function		|当前登录用户退出时的回调函数，无参数|
+|callback		|Function		| Callback function when the currently logged in user exits, no parameters
 
 #### Returns
 
 |Type	|Description			|
 |--			|--				|
-|[Disposable](#Disposable)	| Disposable对象	|
+|[Disposable](#Disposable)	| Disposable Object	|
 
 #### Example
 ``` javascript
