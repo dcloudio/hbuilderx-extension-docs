@@ -11,7 +11,7 @@
 |message	|String				|Message content, support html tags	|
 |buttons	|Array&lt;String&gt;|Button group in notification box		|
 
-#### Return Values
+#### Returns
 
 |Type				|Description									|
 |--						|--										|
@@ -63,7 +63,7 @@ hx.window.showInformationMessage('Learn More <a href="http://www.dcloud.io">Refe
 |message	|String				|Message content, support html tags	|
 |buttons	|Array&lt;String&gt;|Button group in notification box		|
 
-#### Return Values
+#### Returns
 |Type				|Description									|
 |--						|--										|
 |Promise&lt;String&gt;	|If a button is set, return which button the user clicked	|
