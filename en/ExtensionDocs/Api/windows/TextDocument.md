@@ -1,5 +1,5 @@
 # TextDocument
-Document file opened by the editor
+Represents a text document, such as a source file. Text documents have lines and knowledge about an underlying resource like a file.
 
 ## Attributes List
 
@@ -14,31 +14,31 @@ Document file opened by the editor
 |workspaceFolder|[WorkspaceFolder](/ExtensionDocs/Api/other/WorkspaceFolder)|Which project object the document belongs to																																			|
 
 ## getText
-Get the text in the specified area
+Get the text of this document.
 
 |Name	|Type		|Description													|
 |--			|--				|--														|
-|range		|[Range](#Range)|[Optional] Text area, if this parameter is not passed, the content of the entire document is obtained	|
+|range		|[Range](#Range)|[Optional] Include only the text included by the range.	|
 
 **Returns**
 
 |Type	|Description		|
 |--			|--			|
-|String		|Text string	|
+|String		|The text inside the provided range or the entire text.	|
 
 
 ## lineAt
-Get the line information of the specified line number
+Returns a text line denoted by the line number. 
 
 |Name	|Type	|Description			|
 |--			|--			|--				|
-|lineno		|Number		|Line number, starting from 0	|
+|lineno		|Number		|A line number in [0, lineCount).	|
 
-**Return Values**
+**Returns**
 
 |Type						|Description		|
 |--										|--			|
-| Promise&lt;[TextLine](#TextLine)&gt;	|Text line objec	|
+| Promise&lt;[TextLine](#TextLine)&gt;	|A line|
 
 ## lineFromPosition
 Get the line where the cursor is based on the cursor position.。
