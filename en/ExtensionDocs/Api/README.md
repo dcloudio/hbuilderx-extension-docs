@@ -8,8 +8,8 @@ This page lists all available HBuilderX APIs.
 
 |API	|Details	|
 |--	|--	|
-|commands	|commands is a second-level module object, used to process logic related to `command`. [Details](/ExtensionDocs/Api/commands)	|
-|hx.languages.createDiagnosticCollection()	|Create a diagnostics collection that can be used to display wavy lines in the error area of ​​the document to identify the details of the problem during document verification. [Details](/ExtensionDocs/Api/languages/createDiagnosticCollection)		|
+|commands	|a command is a function with a unique identifier. [Details](/ExtensionDocs/Api/commands)	|
+|hx.languages.createDiagnosticCollection()	|Create a diagnostics collection that can be used to display wavy lines in the error area of ​the document to identify the details of the problem during document verification. [Details](/ExtensionDocs/Api/languages/createDiagnosticCollection)		|
 
 #### api:windows
 |API									|Description																											|
