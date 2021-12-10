@@ -2,11 +2,11 @@
 
 > Supported from HBuilderX 2.7.6+
 
-Clipboard object, which can be used to read the content of the clipboard and write content to the clipboard. Currently, only text format is supported	
+The clipboard provides read and write access to the system's clipboard. Currently, only text format is supported.	
 
 ## readText
 
-> Read clipboard content
+> Read the current clipboard contents as text.
 
 #### Parameter Description
 No parameters
@@ -14,7 +14,7 @@ No parameters
 #### Returns
 |Type				|Description			|
 |--						|--				|
-|Promise&lt;String&gt;	|Return to clipboard content	|
+|Promise&lt;String&gt;	|A promise that resolves to a string.	|
 
 #### Example
 
@@ -27,7 +27,7 @@ No parameters
 
 ## writeText
 
-> Write clipboard content
+> Writes text into the clipboard.
 
 #### Parameter Description
 
@@ -39,7 +39,7 @@ No parameters
 
 |Type			|Description	|
 |--					|--		|
-|Promise&lt;void&gt;|Promise|
+|Promise&lt;void&gt;|A promise that resolves when writing happened.|
 
 #### Example
 
