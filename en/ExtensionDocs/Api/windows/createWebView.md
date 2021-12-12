@@ -68,14 +68,14 @@ A panel that contains a webview.
 |Name	|Type	|Description				|
 |--			|--			|--			|
 |webView	|[WebView](#WebView)	|Webview belonging to the panel.|
-|dispose()  |dispose方法  |Call to close the extended view    |
+|dispose()  |dispose Method  |Call to close the extended view    |
 
 
 ## WebView
 
-调用[createWebView](#createWebView)创建WebView对象
+Displays html content, similarly to an iframe.
 
-### WebView属性列表
+### WebView Attributes List
 
 |Name	|Type	|Description				|
 |--			|--			|--			|
@@ -106,7 +106,7 @@ A panel that contains a webview.
 
 ### postMessage(message: any): Thenable
 
-> 在WebView中发送消息
+> Post a message to the webview content.
 
 **Parameter**
 
