@@ -41,17 +41,17 @@ Returns a text line denoted by the line number.
 | Promise&lt;[TextLine](#TextLine)&gt;	|A line|
 
 ## lineFromPosition
-Get the line where the cursor is based on the cursor position.。
+Returns a text line denoted by the position.
 
 |Name	|Type	|Description		|
 |--			|--			|--			|
-|pos		|Number		|Cursor Position	|
+|pos		|Number		|A position	|
 
 **Returns**
 
 |Type						|Description		|
 |--										|--			|
-|Promise&lt;[TextLine](#TextLine)&gt;	|Text line object	|
+|Promise&lt;[TextLine](#TextLine)&gt;	|A line	|
 
 
 ## Range
