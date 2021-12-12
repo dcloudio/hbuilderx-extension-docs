@@ -118,7 +118,7 @@ Displays html content, similarly to an iframe.
 
 |Type	|Description	|
 |--			|--		|
-|Thenable| Execute after asynchronous delay|
+|Thenable| (Javascript) Execute after asynchronous delay|
 
 
 ### asWebviewUri
