@@ -6,7 +6,7 @@
 
 Create a view with the specified viewId, and create a tab item at the same level as the `Project Manager` in the left area of the form. The content area of the tab is a tree control, which can load nodes by itself.
 
-The viewId needs to be configured in the package.json file [views](/ExtensionDocs/ContributionPoints/README.md#views), the complete extended view process reference [How to register a new view? ](/ExtensionTutorial/views?id=treeview)
+The viewId needs to be declared in the configuration extension point [views] (/ExtensionDocs/ContributionPoints/README.md#views) in the package.json file. The complete extended view process reference [How to register a new view? ](/ExtensionTutorial/views?id=treeview)
 
 Parameter: 
 
