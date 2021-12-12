@@ -1,12 +1,9 @@
 # createWebView
 
-> 从HBuilderX 2.8.1及以上版本开始支持
+> Supported from 2.8.1+
+Create a WebView control view with a specified viewId, and create a tab item in the left or right area of the window. The tab content is webview, and html pages can be loaded in webview, which can render customized content more flexibly.
 
-创建指定viewId的WebView控件视图，在窗体左侧或右侧区域创建一个tab项。tab内容为webview，webview里可装载html页面，可以较灵活的渲染自定义的内容。
-
-viewId需要在package.json文件内的配置扩展点[views](/ExtensionDocs/ContributionPoints/README.md#views)中声明。
-
-完整的扩展视图流程参考 <a href="/ExtensionTutorial/views?id=webview" target="_blank">如何注册一个新的视图？</a>
+The viewId needs to be declared in the configuration extension point [views](/ExtensionDocs/ContributionPoints/README.md#views) in the package.json file.  The complete extended view process reference to <a href="/ExtensionTutorial/views?id=webview" target="_blank"> How to register a new view? </a>.
 
 ## Introduction
 
@@ -14,14 +11,14 @@ viewId需要在package.json文件内的配置扩展点[views](/ExtensionDocs/Con
 
 |Name		|Type															|Description																|
 |--			|--																|--																					|
-|viewId	|String														|视图Id，需要首先在配置扩展点`views`中声明。|
-|options|[WebViewOptions](#WebViewOptions)|WebView属性																|
+|viewId	|String														|Id of the view contributed using the extension point views.|
+|options|[WebViewOptions](#WebViewOptions)|Content settings for a webview.																|
 
 **Returns**
 
 |Type|Description							|					|
 |--				|--								| --				|
-|WebViewPanel	|[WebViewPanel](#WebViewPanel)	|WebViewPanel属性	|
+|WebViewPanel	|[WebViewPanel](#WebViewPanel)	|A panel that contains a webview.	|
 
 **Example**
 ```Javascript
@@ -53,13 +50,13 @@ viewId需要在package.json文件内的配置扩展点[views](/ExtensionDocs/Con
 
 ## WebViewOptions
 
-webview的配置项
+Content settings for a webview
 
 **Attribute list**
 
 |Attribute name				|Type								|Description															|
 |--					|--										|--																|
-|enableScripts 	|Boolean								|是否启用JavaScript脚本支持	|
+|enableScripts 	|Boolean								|Controls whether scripts are enabled in the webview content or not.	|
 
 
 ## WebViewPanel
