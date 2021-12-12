@@ -61,14 +61,14 @@ Content settings for a webview
 
 ## WebViewPanel
 
-调用createWebView返回的WebViewPanel对象
+A panel that contains a webview.
 
 **Attribute list**
 
 |Name	|Type	|Description				|
 |--			|--			|--			|
-|webView	|[WebView](#WebView)	|WebView 关联的WebView对象|
-|dispose()  |dispose方法  |调用关闭该扩展视图    |
+|webView	|[WebView](#WebView)	|Webview belonging to the panel.|
+|dispose()  |dispose方法  |Call to close the extended view    |
 
 
 ## WebView
@@ -79,24 +79,24 @@ Content settings for a webview
 
 |Name	|Type	|Description				|
 |--			|--			|--			|
-|options	|[WebViewOptions](#WebViewOptions)	|调用[createWebView](#createWebView)创建WebView时传入的options参数|
-|html |     String | WebView中要显示的html内容 |
+|options	|[WebViewOptions](#WebViewOptions)	|Content settings for the webview.|
+|html |     String | HTML contents of the webview. |
 
 ### onDidReceiveMessage
 
-> 收到hbuilderx.postMessage发出的消息时调用回调函数。
+> Fired when the webview content posts a message.
 
 **Parameter**
 
 |Name	|Type	|Description		|
 |--			|--																	|--			|
-|callback	|Function	|响应收到消息的回调|
+|callback	|Function	|Respond to the callback of the received message|
 
 **Returns**
 
 |Type	|
 |--	|
-|无 | 
+|No | 
 
 **Example**
 ``` javascript
@@ -112,27 +112,27 @@ Content settings for a webview
 
 |Name	|Type	|Description		|
 |--			|--	|--			|
-|message	|Any	| 消息内容|
+|message	|Any	| Body of the message|
 
 **Returns**
 
 |Type	|Description	|
 |--			|--		|
-|Thenable| Javascript异步延迟后执行|
+|Thenable| Execute after asynchronous delay|
 
 
 ### asWebviewUri
 
-> 将本地资源转换成可在WebView中加载的uri。
+> Convert a uri for the local file system to one that can be used inside webviews.
 
 **Parameter**
 
 |Name	|Type	|Description		|
 |--			|--																	|--			|
-|localResource	|[Uri](/ExtensionDocs/Api/other/Uri)	|统一资源访问符|
+|localResource	|[Uri](/ExtensionDocs/Api/other/Uri)	|universal resource identifier |
 
 **Returns**
 
 |Type	|Description	|
 |--			|--		|
-|[Uri](/ExtensionDocs/Api/other/Uri)|可在[WebView](#WebView)中加载的uri|
+|[Uri](/ExtensionDocs/Api/other/Uri)|Uri that can be loaded in [WebView](#WebView)|
