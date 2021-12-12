@@ -74,7 +74,7 @@ Returns：No
         }
     ]
     hx.commands.registerCommand("extension.helloWorld",function(param){
-        hx.window.showInformationMessage("选中了TreeItem:" + param[0]);
+        hx.window.showInformationMessage("Selected TreeItem:" + param[0]);
     });
     hx.window.createTreeView("extensions.treedemo",{
         showCollapseAll:true,
