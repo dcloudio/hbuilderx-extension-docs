@@ -1,30 +1,30 @@
 # createWebViewDialog
 
-> HBuilderX 3.0.0起支持
+> Supported from HBuilderX 3.0.0
 
-创建基于WebView页面的对话框，通过html渲染对话框的主要内容，可通过参数定制对话框标题、按钮等内容。按钮被添加到对话框下方的按钮组里，点击按钮会向WebView发送消息，开发者可在html通过js监听。
+Create a dialog box based on the WebView page, render the main content of the dialog box through html, and customize the dialog box title, buttons, etc. The button is added to the button group at the bottom of the dialog box. Clicking the button will send a message to the WebView, and the developer can monitor it through js in the html.
 
 ## Parameter
 
 |Name	|Type					|Description											|
 |--		|--							|--												|
-|dialogOptions 	|[DialogOptions](#DialogOptions)	|对话框基本属性，包括标题、按钮等	|
-|webviewOptions |[WebViewOptions](#WebViewOptions)	|WebView属性	|
+|dialogOptions 	|[DialogOptions](#DialogOptions)	|Basic attributes of the dialog box, including title, button, etc	|
+|webviewOptions |[WebViewOptions](#WebViewOptions)	|Content settings for a webview.	|
 
 ## Returns
 
 |Type|Description							|					|
 |--				|--								| --				|
-|WebViewDialog	|[WebViewDialog](#WebViewDialog)	| WebViewDialog，控制对话框显示和关闭等	|
+|WebViewDialog	|[WebViewDialog](#WebViewDialog)	| WebViewDialog, control dialog box display and close etc.|
 
 ## Example
 ```Javascript
 let webviewDialog = hx.window.createWebViewDialog({
     modal: false,
-    title: "是否删除文件？",
-    description: "删除后无法恢复，请谨慎操作。也可以到回收站看看。",
+    title: "Whether to delete the file？",
+    description: "It cannot be restored after deletion, please operate with caution. You can also go to the recycle bin.",
     dialogButtons: [
-        "确定", "取消"
+        "Confirm", "Cancel"
     ],
     size: {
         width: 400,
@@ -42,10 +42,10 @@ webview.html = `
         hbuilderx.onDidReceiveMessage((msg)=>{
             if(msg.type == 'DialogButtonEvent'){
                 let button = msg.button;
-                if(button == '确定'){
-                    //TODO 处理表单提交
-                }else if(button == '取消'){
-                    //TODO 处理取消逻辑
+                if(button == 'Confirm'){
+                    //TODO Process form submit
+                }else if(button == 'Cancel'){
+                    //TODO Process cancel logic
                         hbuilderx.postMessage({
                         command: 'cancel'
                     });
@@ -67,31 +67,33 @@ webview.onDidReceiveMessage((msg) => {
 
 let promi = webviewDialog.show();
 promi.then(function (data) {
-    // 处理错误信息
+    // process error message
 });
 ```
 
 ## WebViewOptions
-`从HBuilderX 2.8.1及以上版本开始支持`
+`Supported from 2.8.1+`
 
-调用createWebView创建[WebView](#WebView)时需要的配置项
+Content settings for a webview.
 
 **Attribute list**
 
 |Attribute name			|Type	|Description						|
 |--				|--			|--							|
-|enableScripts	|Boolean	|是否启用JavaScript脚本支持	|
+|enableScripts	|Boolean	|Whether to enable JavaScript script support	|
 
 
 ## DialogOptions
 
-调用createWebViewDialog需要的对话框属性参数。
+Options to configure the behaviour of dialog.
 
 **Attribute list**
 
 |Attribute name		|Type	|Description				|
 |--			|--			|--					|
-|modal      | Boolean	| 是否显示为模态窗口，默认模态窗口 |
+|modal      | Boolean	| Indicates that this dialog is modal.sss
+
+ |
 |title      | String	| 对话框主标题 |
 |description       | String	| 对话框副标题 |
 |dialogButtons   | Array&lt;String&gt;	| 需要在对话框下方按钮组区域添加的按钮列表 |
