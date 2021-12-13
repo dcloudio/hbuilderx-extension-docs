@@ -21,7 +21,7 @@ Create a dialog box based on the WebView page, render the main content of the di
 ```Javascript
 let webviewDialog = hx.window.createWebViewDialog({
     modal: false,
-    title: "Whether to delete the file？",
+    title: "Delete the file？",
     description: "It cannot be restored after deletion, please operate with caution. You can also go to the recycle bin.",
     dialogButtons: [
         "Confirm", "Cancel"
@@ -105,7 +105,7 @@ Options to configure the behaviour of dialog.
 
 WebView properties refer to[WebView](#WebView)。
 
-#### 属性列表
+#### Attribute list
 
 |Attribute name		|Type	|Description				|
 |--			|--			|--					|
