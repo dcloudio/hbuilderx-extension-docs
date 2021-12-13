@@ -1,18 +1,18 @@
 # showInputBox
 
-An input box pops up in the middle of the window to get user input. Similar to the prompt method of the browser.
+Opens an input box to ask the user for input.
 
 #### Parameter
 
 |Name	|Type							|Description			|
 |--			|--									|--				|
-|options	|[InputBoxOptions](#InputBoxOptions Attribute list)|Input box settings	|
+|options	|[InputBoxOptions](#InputBoxOptions Attribute list)|Configures the behavior of the input box.	|
 
 #### Returns
 
 |Type				|Description			|
 |--						|--				|
-|Promise&lt;String&gt;	|User input result	|
+|Promise&lt;String&gt;	|A promise that resolves to a string the user provided or to undefined in case of dismissal.	|
 
 #### Example
 
@@ -28,11 +28,11 @@ inputPromise.then((result)=>{
 
 #### InputBoxOptions Attribute list
 
-> Input box settings
+> Options to configure the behavior of the input box UI.
 
 |Name		|Type	|Description						|
 |--			|--			|--							|
-|prompt		|String		|Description of the input box				|
-|value		|String		|The default value of the input box				|
-|placeHolder|String		|Placeholder content when the content of the input box is empty	|
-|password	|Boolean	|Is it a password box				|
+|prompt		|String		|The text to display underneath the input box.				|
+|value		|String		|The value to prefill in the input box.			|
+|placeHolder|String		|An optional string to show as placeholder in the input box to guide the user what to type.	|
+|password	|Boolean	|Controls if a password input is shown. Password input hides the typed text.		|
