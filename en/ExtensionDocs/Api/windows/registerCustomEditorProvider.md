@@ -87,7 +87,7 @@ provider.onDidChangeCustomDocument.fire(new CustomDocumentEditEvent(document));
 
 |Type	|Description		|
 |--			|--			|
-|Promise&lt;boolean&gt; 或 boolean	|Promise signaling that saving has completed.|
+|Promise&lt;boolean&gt; or boolean	|Promise signaling that saving has completed.|
 
 ### saveCustomDocumentAs
 
