@@ -1,18 +1,18 @@
 # registerCustomEditorProvider
-`从HBuilderX 2.9.2及以上版本开始支持`
+`Supported from HBuilderX 2.9.2+`
 
-完整的自定义编辑器示例：<a href="/ExtensionTutorial/customeditor" target="_blank">如何扩展一个自定义编辑器？</a>
+A complete custom editor example: <a href="/ExtensionTutorial/customeditor" target="_blank">how to extend a custom editor?</a>
 
 ## Introduction
 
-注册指定类型的CustomEditorProvider，当用户打开匹配的文件时，在编辑器区域创建自定义编辑器标签卡。自定义编辑器使用webview提供视图显示。
+Register a provider for custom editors for the viewType contributed by the customEditors extension point.
 
 #### Parameter
 
 |Name	|Type					|Description											|
 |--		|--							|--												|
-|type	|String	|自定义编辑器类型，需要首先在配置扩展点`customEditors`中声明。	|
-|provider|CustomEditorProvider |用户自定义CustomEditorProvider|
+|type	|String	|	Unique identifier for the custom editor provider. This should match the viewType from the customEditors contribution point.	|
+|provider|CustomEditorProvider |Provider that resolves custom editors.|
 
 
 #### Example
@@ -22,23 +22,23 @@ hx.window.registerCustomEditorProvider("catEdit.catScratch", new CatCustomEditor
 
 ## CustomDocument
 
-> 自定义文档，用户可以继承。
+> Represents a custom document used by a CustomEditorProvider.
 
 ##### Attribute list
 
 |Attribute name		|Type	|Description				|
 |--			|--			|--					|
-|uri		|String		|本地文件地址（file:///C:/abc/test.txt），通过构造函数初始化 |
+|uri		|String		|The associated uri for this document. (File:///C:/abc/test.txt)|
 
 ## CustomEditorProvider
 
-> 自定义编辑器数据提供接口，用户需要继承。
+> Provider for editable custom editors that use a custom document model.
 
 #### Attribute list
 
 |Attribute name		|Type	|Description				|
 |--			|--			|--					|
-|onDidChangeCustomDocument | HBuilderX内置的EventEmitter	| 用于触发文件变化事件，编辑器置为未保存状态 |
+|onDidChangeCustomDocument | HBuilderX built-in EventEmitter	| Signal that an edit has occurred inside a custom editor. This event must be fired by your extension whenever an edit happens in a custom editor. |
 
 #### Example
 ``` javascript
@@ -48,62 +48,63 @@ provider.onDidChangeCustomDocument.fire(new CustomDocumentEditEvent(document));
 
 ### openCustomDocument
 
-> 当用户用户打开匹配的文件时，由HBuilderX调用，开发者创建并返回CustomDocument
-> 。HBuilderX在这之后会创建WebViewPanel，并调用[resolveCustomEditor](#resolveCustomEditor)。
+> Create a new document for a given resource. openCustomDocument is called when the first time an editor for a given resource is opened. The opened document is then passed to resolveCustomEditor so that the editor can be shown to the user.
 
 ##### Parameter
 |Name	    |Type	    |Description			|
 |--			|--			|--				|
-|uri	|String		|本地文件地址（file:///C:/abc/test.txt） |
+|uri	|String		|Uri of the document to open. (File:///C:/abc/test.txt) |
 
 ##### Returns
 |Type	|Description		|
 |--			|--			|
-|Promise&lt;[CustomDocument](#CustomDocument)&gt;	|Promise对象|
+|Promise&lt;[CustomDocument](#CustomDocument)&gt;	|The custom document.|
 
 ### resolveCustomEditor
 
-> HBuilderX使用WebViewPanel来作为自定义编辑器的视图，创建WebViewPanel并与document关联后，调用该方法。
-> [WebViewPanel](#WebViewPanel)的用法也可以参考[视图扩展](/views.md#WebView)中部分示例。
+> Resolve a custom editor for a given resource. This is called whenever the user opens a new editor for this CustomEditorProvider.
+> The usage of [WebViewPanel](#WebViewPanel) can also refer to some examples in [View Extension](/views.md#WebView).
 
 ##### Parameter
 |Name	    |Type	    |Description			|
 |--			|--			|--				|
-|document	|[CustomDocument](#CustomDocument)		|由开发者创建的CustomDocument|
-|webViewPanel	|[WebViewPanel](/ExtensionDocs/Api/windows/createWebView?id=webviewpanel)		|与document关联的WebViewPanel|
+|document	|[CustomDocument](#CustomDocument)		|Document for the resource being resolved.|
+|webViewPanel	|[WebViewPanel](/ExtensionDocs/Api/windows/createWebView?id=webviewpanel)		|The webview panel used to display the editor UI for this resource.
+
+|
 
 ### saveCustomDocument
 
-> 用户执行“保存”操作时，HBuilderX调用该方法。
+> Save a custom document. This method is invoked by the editor when the user saves a custom editor. This can happen when the user triggers save while the custom editor is active, by commands such as save all, or by auto save if enabled.
 
 ##### Parameter
 
 |Name	    |Type	    |Description			|
 |--			|--			|--				|
-|document	|[CustomDocument](#CustomDocument)		| 保存操作对应的CustomDocument |
+|document	|[CustomDocument](#CustomDocument)		| Document to save. |
 
 ##### Returns
 
 |Type	|Description		|
 |--			|--			|
-|Promise&lt;boolean&gt; 或 boolean	|true表示成功，编辑器标签卡会移除dirty状态|
+|Promise&lt;boolean&gt; 或 boolean	|Promise signaling that saving has completed.|
 
 ### saveCustomDocumentAs
 
-> 用户执行“另存为”操作，选择目标文件后，HBuilderX调用该方法。成功后，HBuilderX会重新关联document与目标文件。
+> Save a custom document to a different location. This method is invoked by the editor when the user triggers 'save as' on a custom editor. The implementer must persist the custom editor to destination.
 
 ##### Parameter
 
 |Name	    |Type	    |Description			|
 |--			|--			|--				|
-|document	|[CustomDocument](#CustomDocument)		| 保存操作对应的CustomDocument |
-|destination	|String		| 目标文件地址（例如：file:///C:/abc/test.txt） |
+|document	|[CustomDocument](#CustomDocument)		| Document to save. |
+|destination	|String		| Location to save to. (For example: file:///C:/abc/test.txt) |
 
 ##### Returns
 
 |Type	|Description		|
 |--			|--			|
-|Promise&lt;boolean&gt; 或 boolean	|true表示成功，编辑器标签卡会移除dirty状态|
+|Promise&lt;boolean&gt; or boolean	|Promise signaling that saving has completed|
 
 ### CustomDocumentEditEvent
-用[CustomDocument](#CustomDocument)构造CustomDocumentEditEvent对象。[CustomEditorProvider](#CustomEditorProvider)可以向HBuilderX发送该事件，编辑器标签卡会置为未保存状态。
+Event triggered by extensions to signal to the editor that an edit has occurred on an CustomDocument.
