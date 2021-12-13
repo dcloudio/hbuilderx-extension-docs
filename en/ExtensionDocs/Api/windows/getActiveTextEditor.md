@@ -1,6 +1,6 @@
 # getActiveTextEditor
 
-> Get the currently active editor, if there is no open editor, return undefined
+> The currently active editor or undefined. The active editor is the one that currently has focus or, when none has focus, the one that has changed input most recently.
 
 #### Parameter
 
