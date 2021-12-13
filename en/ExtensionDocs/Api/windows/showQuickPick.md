@@ -1,6 +1,6 @@
 # showQuickPick
 
-In the middle of the window, Shows a selection list allowing multiple selections.
+Shows a selection list allowing multiple selections.
 
 #### Parameter
 
@@ -21,10 +21,10 @@ In the middle of the window, Shows a selection list allowing multiple selections
     const pickResult = hx.window.showQuickPick([
       {
         label: '../',
-        description: '回到上一级目录',
+        description: 'Back to the previous directory录',
         backPath: 'foo/bar'
       }
-    ], {placeHolder: '请选择一个目录或者文件'});
+    ], {placeHolder: 'Please select a directory or file'});
     
     pickResult.then(function(result) {
       if (!result) {
@@ -54,4 +54,4 @@ In the middle of the window, Shows a selection list allowing multiple selections
 |label		|String		|A human-readable string which is rendered prominent. 	|
 |description|String		|A human-readable string which is rendered less prominent in the same line.	|
 
-> 如果要传递额外的数据，可以追加自定义的属性，当用户选择该项后，会通过回调返回选择了哪个候选项
+> If you want to pass additional data, you can add a custom attribute, when the user selects the item, it will return which candidate is selected through a callback.
