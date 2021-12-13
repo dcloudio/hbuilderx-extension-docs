@@ -39,7 +39,6 @@ When you enter the URL of the above format in the browser address bar or jump to
         }
     }, context);
 ```
-上面的示例中，假设插件id为foo，则在浏览器地址栏中输入hbuilderx://requestExtension/foo?param=abc时，将自动激活该插件，并执行handleUri函数，uri的值即为地址栏中输入的地址，示例中uri.query的值为param=abc。
 
 In the above example, assuming that the extension id is foo, when you enter hbuilderx://requestExtension/foo?param=abc in the browser, the extension will be automatically activated and the handleUri function will be executed. The value of uri is the address entered in the example, the value of uri.query in the example is param=abc.
 
