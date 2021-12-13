@@ -91,92 +91,92 @@ Options to configure the behaviour of dialog.
 
 |Attribute name		|Type	|Description				|
 |--			|--			|--					|
-|modal      | Boolean	| Indicates that this dialog is modal.sss
+|modal      | Boolean	| Indicates that this dialog is modal.
 
  |
-|title      | String	| 对话框主标题 |
-|description       | String	| 对话框副标题 |
-|dialogButtons   | Array&lt;String&gt;	| 需要在对话框下方按钮组区域添加的按钮列表 |
-|size       | 对话框尺寸 | 需要显示的对话框大小，结构：{ width: Number, height: Number } |
+|title      | String	| Dialog title. |
+|description       | String	| Dialog subtitle |
+|dialogButtons   | Array&lt;String&gt;	| Buttons group of dialog |
+|size       | Size of dialog | The size of the dialog box that needs to be displayed,setting:{ width: Number, height: Number } |
 
-- *以上所有属性可选，但不建议*
+- *All the above attributes are optional, but not recommended*
 
 ## WebViewDialog
 
-WebView相关属性可以参考[WebView](#WebView)。
+WebView properties refer to[WebView](#WebView)。
 
 #### 属性列表
 
 |Attribute name		|Type	|Description				|
 |--			|--			|--					|
-|webView | [WebView](#WebView)	| 用于渲染对话框主要内容 |
-|id      | String	| 用于内部通信的对话框id |
+|webView | [WebView](#WebView)	| WebView object |
+|id      | String	| Dialog id used for internal communication |
 
 ### show
 
-显示对话框，返回显示成功或者失败的信息，主要包含内置浏览器相关状态。
+Reveal the view in the UI.
 
 **Returns**
 
 |Type	|Description		|
 |--			|--			|
-|Promise&lt;Object&gt;	|Promise对象，Object结构：{"code":2, "message":"Built-in browser not exist."}|
+|Promise&lt;Object&gt;	|Promise object，Object structure：{"code":2, "message":"Built-in browser not exist."}|
 
-**主要错误码信息**
+**Error Codes**
 
-|错误码		| Description									|
+|Error code		| Description									|
 |--			|--										|
-|0	| 无错误 |
-|1	| 内置浏览器插件正在下载 |
-|2	| 内置浏览器插件不存在（弹出下载内置浏览器插件窗口，用户点击了取消）|
+|0	| None |
+|1	| The built-in browser plug-in is downloading |
+|2	| The built-in browser plug-in does not exist |
 
 ### close
 
-关闭对话框，插件通过close主动关闭对话框
+Close the dialog box
 
 ### displayError
 
-在对话框副标题下方显示红色错误信息，错误信息会由动态抖动效果
+A red error message will be displayed under the subtitle of the dialog box.
 
 **Parameter**
 
 |Name	|Type	|Description			|
 |--			|--			|--				|
-|text		|String		| 错误信息  |
+|text		|String		| Error message  |
 
 ### setButtonStatus
 
-设置对话框指定按钮状态，对话框按钮通过[createWebViewDialog](#createWebViewDialog)参数[DialogOptions](#DialogOptions)提供。
+Set the state of the specified button in the dialog box, and the dialog box button [createWebViewDialog](#createWebViewDialog) is provided by the parameter [DialogOptions](#DialogOptions).
 
 **Parameter**
 
 |Name	|Type	|Description			|
 |--			|--			|--				|
-|button		|String		| 按钮字符串  |
-|status		|Array&lt;String&gt;	| 按钮状态列表，为空时设置默认状态|
+|button		|String		| Button text  |
+|status		|Array&lt;String&gt;	| Button status list|
 
-### 按钮状态说明
+### Button status description
 
-|状态		| Description      |
+|Status		| Description      |
 |--			|--	        |
-|"loading"	| 按钮文字前方增加loading动态提示 |
-|"disable"	| 禁用按钮，可与loading组合使用 |  
+|"loading"	| Add loading prompt before button text |
+|"disable"	| Disable button, can be used in combination with loading  |  
 
 **Example**
 ``` javascript
-    webviewDialog.setButtonStatus("确定", ["loading", "disable"]);
+    webviewDialog.setButtonStatus("Confirm", ["loading", "disable"]);
 ```
 
 ### onDialogClosed
 
-注册窗口关闭回调。
+Callback when the registration window is closed.
 
 |Name	|Type	|Description			|
 |--			|--			|--				|
-|callback	|Function		|当窗口显示后，用户关闭或调用close后，触发该回调，无参数|
+|callback	|Function		|When the window is displayed, the user closes or calls close event, the callback is triggered, no parameters.
 
 ### Returns
 
 |Type	|Description			|
 |--			|--				|
-|[Disposable](/ExtensionDocs/Api/other/Disposable)	| Disposable对象	|
+|[Disposable](/ExtensionDocs/Api/other/Disposable)	| Disposable object	|
