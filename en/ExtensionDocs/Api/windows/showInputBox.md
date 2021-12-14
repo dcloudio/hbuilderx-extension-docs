@@ -12,7 +12,7 @@ Opens an input box to ask the user for input.
 
 |Type				|Description			|
 |--						|--				|
-|Promise&lt;String&gt;	|A promise that resolves to a string the user provided or to undefined in case of dismissal.	|
+|Promise&lt;String&gt;	||
 
 #### Example
 
