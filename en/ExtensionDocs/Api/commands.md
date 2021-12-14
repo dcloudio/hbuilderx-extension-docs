@@ -69,7 +69,7 @@ Execute the `command` with the specified id. In addition to the `commands` exten
 ##### Returns
 |Type	|Description		|
 |--			|--			|
-|Promise	|A promise that resolves to the returned value of the given command. Returns undefined when the command handler function doesn't return anything.
+|Promise	|
 
 
 ##### Example
