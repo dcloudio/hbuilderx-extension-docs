@@ -83,7 +83,7 @@ Document editing
 |Name	|Type			|Description			|
 |--		|--					|--				|
 |range	|[Range](#Range)	|The area to be modified	|
-|newText|String		ss		|New content to insert	|
+|newText|String	|New content to insert	|
 
 ### replace **static**
 

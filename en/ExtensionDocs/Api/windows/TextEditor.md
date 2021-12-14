@@ -25,7 +25,7 @@ Represents an editor that is attached to a document.
 
 |Type	|Description	|
 |--			|--		|
-|Promise&lt;void&gt;	|A promise that resolves with a value indicating if the edits could be applied.	|
+|Promise&lt;void&gt;	|Promise	|
 
 **Example**
 
@@ -59,7 +59,7 @@ Represents an editor that is attached to a document.
 
 |Type	|Description	|
 |--			|--		|
-|Promise&lt;void&gt;	|A promise that resolves with a value indicating if set selection could be applied.	|
+|Promise&lt;void&gt;	|Promise	|
 
 **Example**
 
@@ -87,7 +87,7 @@ editor.then((editor)=>{
 
 |Type	|Description	|
 |--			|--		|
-|Promise&lt;void&gt;	|A promise that resolves with a value indicating if set selection could be applied.	|
+|Promise&lt;void&gt;	|Promise.	|
 
 **Example**
 
