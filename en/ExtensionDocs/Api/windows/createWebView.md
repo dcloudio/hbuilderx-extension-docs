@@ -129,10 +129,10 @@ Displays html content, similarly to an iframe.
 
 |Name	|Type	|Description		|
 |--			|--																	|--			|
-|localResource	|[Uri](/ExtensionDocs/Api/other/Uri)	|universal resource identifier |
+|localResource	|[Uri](/ExtensionDocs/Api/other/Uri)	| |
 
 **Returns**
 
 |Type	|Description	|
 |--			|--		|
-|[Uri](/ExtensionDocs/Api/other/Uri)|Uri that can be loaded in [WebView](#WebView)|
+|[Uri](/ExtensionDocs/Api/other/Uri)||
