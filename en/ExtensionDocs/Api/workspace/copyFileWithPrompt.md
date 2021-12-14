@@ -55,7 +55,7 @@ Returns:
 |--			|--			|--							|
 |src		|[Uri](/ExtensionDocs/Api/other/Uri)		|The source address of the copied file, the address is an absolute path|
 |dest		|[Uri](/ExtensionDocs/Api/other/Uri)	|The destination address of the copied file, the address is an absolute path and a directory|
-|rootPromptTips	|String		|root directory prompt|
+|rootPromptTips	|String		|Root directory prompt|
 |filePromptTips	|String |Target file prompt |
-|filter	|Function([Uri](/ExtensionDocs/Api/other/Uri)) | callback uri |
-|errorHandler	|Function([Uri](/ExtensionDocs/Api/other/Uri))	|error callback handler, 0: cancel, 1: retry, 2: skip |
+|filter	|Function([Uri](/ExtensionDocs/Api/other/Uri)) | Callback uri |
+|errorHandler	|Function([Uri](/ExtensionDocs/Api/other/Uri))	|Error callback handler, 0: cancel, 1: retry, 2: skip |
