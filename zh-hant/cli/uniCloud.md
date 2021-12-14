@@ -1,8 +1,8 @@
-# uniCloud cli 雲開發
+# uniCloud cli 雲開發@uniCloud
 
 > uniCloud cli僅支持HBuilderX 3.1.9+
 
-## 列舉資源信息
+## 列舉資源信息@list
 
 #### 命令語法
 
@@ -34,7 +34,7 @@ cli cloud functions --list space --prj myproject --provider aliyun
 cli cloud functions --list cloudfunction --prj myproject --provider aliyun --cloud 
 ```
 
-## 上傳資源
+## 上傳資源@upload
 
 #### 命令語法
 
@@ -86,7 +86,7 @@ cli cloud functions --upload db --prj hello-uniapp --provider aliyun --name book
 cli cloud functions --upload vf --prj hello-uniapp --provider aliyun --name v.js
 ```
 
-## 下載資源
+## 下載資源@download
 
 #### 命令語法
 
@@ -138,7 +138,7 @@ cli cloud functions --download db --prj hello-uniapp --provider aliyun --name bo
 cli cloud functions --download vf --prj hello-uniapp --provider aliyun --name v.js
 ```
 
-## 初始化數據庫
+## 初始化數據庫@initdatabase
 
 #### 命令語法
 
@@ -154,7 +154,7 @@ cli cloud functions --prj 項目名稱或序號 --provider 雲服務商代號 --
 cli cloud functions --prj hello-uniapp --provider aliyun --initdatabase
 ```
 
-## 指定雲空間
+## 指定雲空間@assignspace
 
 #### 命令語法
 
