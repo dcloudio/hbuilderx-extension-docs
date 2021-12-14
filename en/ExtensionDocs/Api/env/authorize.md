@@ -49,7 +49,7 @@ At the same time, note that after calling the login method, HBuilderX will pop u
 
 |Type								|Description			|
 |--												|--				|
-|Promise&lt;Object&gt;	| Promise Object	|
+|Promise&lt;Object&gt;	| 	|
 
 Return attribute description
 
