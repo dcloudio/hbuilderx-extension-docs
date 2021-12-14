@@ -14,7 +14,7 @@ No parameters
 #### Returns
 |Type				|Description			|
 |--						|--				|
-|Promise&lt;String&gt;	|A promise that resolves to a string.	|
+|Promise&lt;String&gt;	|	|
 
 #### Example
 
@@ -39,7 +39,7 @@ No parameters
 
 |Type			|Description	|
 |--					|--		|
-|Promise&lt;void&gt;|A promise that resolves when writing happened.|
+|Promise&lt;void&gt;||
 
 #### Example
 
