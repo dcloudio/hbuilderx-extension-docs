@@ -1,22 +1,22 @@
 # onDidChangeConfiguration
 
-> Supported from HBuilderX 2.7.10+ version
+> Supported from HBuilderX 2.7.10+
 
 ## Introduce
 
-全局配置改变事件，比如"editor.fontSize"改变，或者通过插件扩展的配置项改变。
+An event that is emitted when the configuration changed.
 
 **Parameter**
 
 |Name	|Type															|Description		|
 |--			|--																	|--			|
-|listener	|Function([ConfigurationChangeEvent](#ConfigurationChangeEvent))	|配置修改事件回调	|
+|listener	|Function([ConfigurationChangeEvent](#ConfigurationChangeEvent))	|Configuration  event callback	|
 
 **Returns**
 
 |Type	|Description				|
 |--			|--					|
-|[Disposable](/ExtensionDocs/Api/other/Disposable)	|该事件回调的销毁器，可将该对象放置到插件的context.subscriptions数组内，插件卸载时，将会自动注销该`事件回调`	|
+|[Disposable](/ExtensionDocs/Api/other/Disposable)	|The destroyer of the event callback can place the object in the context.subscriptions array of the extension. When the extension is uninstalled, the event callback will be automatically cancelled.	|
 
 **Example**
 
@@ -30,11 +30,11 @@ let configurationChangeDisplose = hx.workspace.onDidChangeConfiguration(function
 
 ## ConfigurationChangeEvent
 
-> An event that is emitted when the configuration changed.
+> An event describing the change in Configuration.
 
 ### affectsConfiguration
 
-Checks if the given section has changed.
+Checks if the given section has changed. If scope is provided, checks if the section has changed for resources under the given scope.
 
 **Parameter**
 
