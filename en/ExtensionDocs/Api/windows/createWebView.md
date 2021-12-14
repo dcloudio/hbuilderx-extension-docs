@@ -1,12 +1,9 @@
 # createWebView
 
-> 从HBuilderX 2.8.1及以上版本开始支持
+> Supported from 2.8.1+
+Create a WebView control view with a specified viewId, and create a tab item in the left or right area of the window. The tab content is webview, and html pages can be loaded in webview, which can render customized content more flexibly.
 
-创建指定viewId的WebView控件视图，在窗体左侧或右侧区域创建一个tab项。tab内容为webview，webview里可装载html页面，可以较灵活的渲染自定义的内容。
-
-viewId需要在package.json文件内的配置扩展点[views](/ExtensionDocs/ContributionPoints/README.md#views)中声明。
-
-完整的扩展视图流程参考 <a href="/ExtensionTutorial/views?id=webview" target="_blank">如何注册一个新的视图？</a>
+The viewId needs to be declared in the configuration extension point [views](/ExtensionDocs/ContributionPoints/README.md#views) in the package.json file.  The complete extended view process reference to <a href="/ExtensionTutorial/views?id=webview" target="_blank"> How to register a new view? </a>.
 
 ## Introduction
 
@@ -14,14 +11,14 @@ viewId需要在package.json文件内的配置扩展点[views](/ExtensionDocs/Con
 
 |Name		|Type															|Description																|
 |--			|--																|--																					|
-|viewId	|String														|视图Id，需要首先在配置扩展点`views`中声明。|
-|options|[WebViewOptions](#WebViewOptions)|WebView属性																|
+|viewId	|String														|Id of the view contributed using the extension point views.|
+|options|[WebViewOptions](#WebViewOptions)|Content settings for a webview.																|
 
 **Returns**
 
 |Type|Description							|					|
 |--				|--								| --				|
-|WebViewPanel	|[WebViewPanel](#WebViewPanel)	|WebViewPanel属性	|
+|WebViewPanel	|[WebViewPanel](#WebViewPanel)	|A panel that contains a webview.	|
 
 **Example**
 ```Javascript
@@ -53,53 +50,53 @@ viewId需要在package.json文件内的配置扩展点[views](/ExtensionDocs/Con
 
 ## WebViewOptions
 
-webview的配置项
+Content settings for a webview
 
 **Attribute list**
 
 |Attribute name				|Type								|Description															|
 |--					|--										|--																|
-|enableScripts 	|Boolean								|是否启用JavaScript脚本支持	|
+|enableScripts 	|Boolean								|Controls whether scripts are enabled in the webview content or not.	|
 
 
 ## WebViewPanel
 
-调用createWebView返回的WebViewPanel对象
+A panel that contains a webview.
 
 **Attribute list**
 
 |Name	|Type	|Description				|
 |--			|--			|--			|
-|webView	|[WebView](#WebView)	|WebView 关联的WebView对象|
-|dispose()  |dispose方法  |调用关闭该扩展视图    |
+|webView	|[WebView](#WebView)	|Webview belonging to the panel.|
+|dispose()  |dispose Method  |Call to close the extended view    |
 
 
 ## WebView
 
-调用[createWebView](#createWebView)创建WebView对象
+Displays html content, similarly to an iframe.
 
-### WebView属性列表
+### WebView Attributes List
 
 |Name	|Type	|Description				|
 |--			|--			|--			|
-|options	|[WebViewOptions](#WebViewOptions)	|调用[createWebView](#createWebView)创建WebView时传入的options参数|
-|html |     String | WebView中要显示的html内容 |
+|options	|[WebViewOptions](#WebViewOptions)	|Content settings for the webview.|
+|html |     String | HTML contents of the webview. |
 
 ### onDidReceiveMessage
 
-> 收到hbuilderx.postMessage发出的消息时调用回调函数。
+> Fired when the webview content posts a message.
 
 **Parameter**
 
 |Name	|Type	|Description		|
 |--			|--																	|--			|
-|callback	|Function	|响应收到消息的回调|
+|callback	|Function	|Respond to the callback of the received message|
 
 **Returns**
 
 |Type	|
 |--	|
-|无 | 
+|No | 
 
 **Example**
 ``` javascript
@@ -109,33 +106,33 @@ webview的配置项
 
 ### postMessage(message: any): Thenable
 
-> 在WebView中发送消息
+> Post a message to the webview content.
 
 **Parameter**
 
 |Name	|Type	|Description		|
 |--			|--	|--			|
-|message	|Any	| 消息内容|
+|message	|Any	| Body of the message|
 
 **Returns**
 
 |Type	|Description	|
 |--			|--		|
-|Thenable| Javascript异步延迟后执行|
+|Thenable| (Javascript) Execute after asynchronous delay|
 
 
 ### asWebviewUri
 
-> 将本地资源转换成可在WebView中加载的uri。
+> Convert a uri for the local file system to one that can be used inside webviews.
 
 **Parameter**
 
 |Name	|Type	|Description		|
 |--			|--																	|--			|
-|localResource	|[Uri](/ExtensionDocs/Api/other/Uri)	|统一资源访问符|
+|localResource	|[Uri](/ExtensionDocs/Api/other/Uri)	|universal resource identifier |
 
 **Returns**
 
 |Type	|Description	|
 |--			|--		|
-|[Uri](/ExtensionDocs/Api/other/Uri)|可在[WebView](#WebView)中加载的uri|
+|[Uri](/ExtensionDocs/Api/other/Uri)|Uri that can be loaded in [WebView](#WebView)|

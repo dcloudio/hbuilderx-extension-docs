@@ -14,7 +14,7 @@ Creates a new output channel with the given name.
 
 |Type				|Description		|
 |--								|--			|
-|[OutputChannel](#OutputChannel)| OutputChannel	|
+|[OutputChannel](#OutputChannel)| An output channel is a container for readonly textual information.	|
 
 **Example**
 
@@ -30,7 +30,7 @@ Creates a new output channel with the given name.
 
 |Attribute name	|Type	|Description		|
 |--		|--			|--			|
-|name	|String		|Human-readable string which will be used to represent the channel in the UI.	|
+|name	|String		|The human-readable name of this output channel.	|
 
 ### appendLine
 
@@ -57,6 +57,8 @@ Creates a new output channel with the given name.
 ```
 
 ### show
+
+Reveal this channel in the UI.
 
 **Parameter**
 

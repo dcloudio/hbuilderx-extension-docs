@@ -1,18 +1,18 @@
 # openExternal
 
-Open an external link, such as `https://www.dcloud.io`、`mailto:ide@dcloud.io`
+Opens a link externally using the default application. Depending on the used scheme this can be: a browser (http:, https:) or a mail client (mailto:). Such as `https://www.dcloud.io`、`mailto:ide@dcloud.io`.
 
 #### Parameters
 
 |parameter name	|Type	|Description			|
 |--			|--			|--				|
-|uri		|String		|External link address	|
+|uri		|String		|	|
 
 #### Returns
 
 |Type				|Description				|
 |--						|--					|
-|Promise&lt;Boolean&gt;	|Returns whether the opening is successful	|
+|Promise&lt;Boolean&gt;	|	|
 
 #### Example
 ``` javascript

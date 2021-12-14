@@ -1,21 +1,21 @@
 # createTreeView
 
-> `从HBuilderX 2.7.12及以上版本开始支持`
+> `Supported from HBuilderX 2.7.12+`
 
 ## Introduce
 
-创建指定viewId的视图，在窗体左侧区域创建一个和`项目管理器`同级的tab项。tab的内容区为一个树控件，可自行装载节点。
+Create a view with the specified viewId, and create a tab item at the same level as the `Project Manager` in the left area of the form. The content area of the tab is a tree control, which can load nodes by itself.
 
-viewId需要在package.json文件内的配置扩展点[views](/ExtensionDocs/ContributionPoints/README.md#views)中声明，完整的扩展视图流程参考[如何注册一个新的视图？](/ExtensionTutorial/views?id=treeview)
+The viewId needs to be declared in the configuration extension point [views] (/ExtensionDocs/ContributionPoints/README.md#views) in the package.json file. The complete extended view process reference to [How to register a new view? ](/ExtensionTutorial/views?id=treeview).
 
 Parameter: 
 
 |Name	|Type							|Description										|
 |--			|--									|--											|
-|viewId		|String								|视图Id，需要首先在配置扩展点`views`中声明。|
-|options	|[TreeViewOptions](#TreeViewOptions)|创建TreeView时需要的设置项。				|
+|viewId		|String								|Id of the view contributed using the extension point views.|
+|options	|[TreeViewOptions](#TreeViewOptions)|Options for creating the TreeView				|
 
-Returns：无
+Returns：No
 
 **Example**：
 
@@ -74,7 +74,7 @@ Returns：无
         }
     ]
     hx.commands.registerCommand("extension.helloWorld",function(param){
-        hx.window.showInformationMessage("选中了TreeItem:" + param[0]);
+        hx.window.showInformationMessage("Selected TreeItem:" + param[0]);
     });
     hx.window.createTreeView("extensions.treedemo",{
         showCollapseAll:true,
@@ -84,54 +84,55 @@ Returns：无
 
 ## TreeViewOptions 
 
-> 创建TreeView需要的配置项
+> Options for creating a TreeView
 
 **Attribute list**
 
 |Attribute name				|Type								|Description															|
 |--					|--										|--																|
-|showCollapseAll	|Boolean								|是否显示折叠所有												|
-|treeDataProvider	|[TreeDataProvider](#TreeDataProvider)	|TreeView树控件获取数据的接口，需要自己写一个子类实现该接口。	|
+|showCollapseAll	|Boolean								|Whether to show collapse all action or not.												|
+|treeDataProvider	|[TreeDataProvider](#TreeDataProvider)	|A data provider that provides tree data.	|
 
 
 ## TreeDataProvider
 
-TreeView树控件获取数据的接口，不可直接实例化该对象，需要自己写一个子类实现该接口，每个自定义的treeDataProvider都需要实现该接口下列出的方法
+A data provider that provides tree data. You cannot instantiate the object directly, you need to write a subclass to implement this interface, and each custom treeDataProvider needs to implement the methods listed under this interface.
 
 ### getChildren
 
-> 获取某个节点的下的子节点，如果参数为空，则表示要获取根节点
+> Get the children of element or root if no element is passed.
 
 **Parameter**
 
 |Name	|Type	|Description															|
 |--			|--			|--																|
-|element	|Any?		|获取该节点下的子节点列表，如果参数为空，则是要获取根节点列表	|
+|element	|Any?		|The element from which the provider gets children. Can be undefined.	|
 
 **Returns**
 
 |Type	|Description	|
 |--			|--		|
-|Promise&lt;Any[]&gt;	|Promise	|
+|Promise&lt;Any[]&gt;	|Children of element or root if no element is passed.	|
 
 ### getTreeItem
 
-> 获取用于显示自定义数据element(通过getChildren获取的对象)的TreeItem对象
+> Get TreeItem representation of the element
 
 **Parameter**
 
 |Name	|Type	|Description									|
 |--			|--			|--										|
-|element	|Any?		|通过getChildren获取的列表对象中某一项	|
+|element	|Any?		|The element for which TreeItem representation is asked for.	|
 
 **Returns**
 
 |Type	|Description				|
 |--			|--					|
-|[TreeItem](#TreeItem)	|保存有节点的显示信息	|
+|[TreeItem](#TreeItem)	|	TreeItem representation of the element.	|
 
 ### onDidChangeTreeData
-该接口用于通知HBuilderX数据变化，需要刷新视图，目前仅支持刷新整个视图。**该属性需要开发者在构造TreeDataProvider时创建**。
+
+An optional event to signal that an element or root has changed. This will trigger the view to update the changed element/root and its children recursively (if shown). **This property needs to be created by the developer when constructing the TreeDataProvider**。
 
 **Example**:
 ``` javascript
@@ -145,31 +146,32 @@ TreeView树控件获取数据的接口，不可直接实例化该对象，需要
         ... // other function
     }
 
-    // 数据变化主动通知
+    // Proactive notification of data changes
     provider.dataChangeEmitter.fire();
     
 ```
 
 
 ## TreeItem
-保存有节点的显示信息
+Store the display information of the node
 
 **Attribute list**
 
 |Attribute name				|Type					|Description																																					|
 |--					|--							|--																																						|
-|collapsibleState	|Number						|是否可展开，目前取值有：0：不可展开；1：可展开																											|
-|label				|String						|该item的显示名称																																		|
-|contextValue		|String						|该item的上下文信息，在通过`menus`扩展点的`view/item/context`类别注册右键菜单时，用when表达式中的`viewItem`变量控制菜单显示。举例：`viewItem == 'test'`	|
-|command			|[CommandInfo](#CommandInfo)|当选中该item时要执行的`命令`																															|
-|tooltip			|String						|鼠标悬浮到该item上的tooltip提示消息																													|
+|collapsibleState	|Number						|Collapsible state of the tree item, 0: unexpandable; 1: expandable																					|
+|label				|String						|A human-readable string describing this item. 																																		|
+|contextValue		|String						|Context value of the tree item, when registering the right-click menu through the `view/item/context` of the `menus` extension point, use the `viewItem` variable in the when expression to control the menu display. Example: `viewItem =='test'`	|
+|command			|[CommandInfo](#CommandInfo)|The Command that should be executed when the tree item is selected.																														|
+|tooltip			|String						|The tooltip text when you hover over this item.
+																													|
 
 ## CommandInfo
-配置一个`命令`需要的信息对象
+Configure an information object required by a `command`
 
 **Attribute list**
 
 |Attribute name		|Type	|Description						|
 |--			|--			|--							|
-|command	|String		|要执行的`命令`id			|
-|arguments	|any[]		|执行该`命令`时传递的参数	|
+|command	|String		|The id of the command to be executed			|
+|arguments	|any[]		|Parameters passed when executing the `command`	|

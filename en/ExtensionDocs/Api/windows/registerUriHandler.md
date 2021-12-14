@@ -1,33 +1,30 @@
 # registerUriHandler
 
-> 从HBuilderX 2.8.1及以上版本开始支持
+> Supported from HBuilderX 2.8.1+
 
-注册一个依赖hbuilderx协议的自定义网络请求处理器(schema)，格式为：
+Registers a uri handler capable of handling system-wide uris, format is:
 ```
 hbuilderx://requestExtension/exampleid/examplerequest/example?example1=example2&...
 \________/  \_____________/ \________/ \__________________________________________/
     |              |             |                  ｜
-   协议     自定义插件请求的标记  插件id          任意的自定义信息
+  product-name      uri-schema  extension id          custom information
 ```
 
-当在浏览器地址栏中输入以上格式的url时或者跳转到以上格式的url，已安装了HBuilderX的系统将会把该请求转入HBuilderX, 由HBuilderX识别该请求并检测对应插件(如上例子中名为exampleid的插件)的配置信息(package.json)中是否声明了
-[onUri](/ExtensionDocs/activation_event.md#onUri), 此时如果当前的插件并没有激活，那么HBuilderX会先激活该插件并把对应请求转发到由registerUriHandler方法注册的处理器中。
+When you enter the URL of the above format in the browser address bar or jump to the URL of the above format, the system that has installed HBuilderX will forward the request to HBuilderX, and HBuilderX will recognize the request and detect the corresponding extesnion (as in the above example) Is it declared in the configuration information (package.json) of the extension named exampleid? If the current extension is not activated at this time, HBuilderX will activate the extension first and forward the request to the processor registered by the registerUriHandler method. If the extension is not installed, HBuilderX will prompt whether to install the extension.
 
-如果exampleid对应插件并未安装，则HBuilderX会弹框提示是否安装该插件。
-
-#### 适用的场景
-- 需要通过浏览器等外部应用启动HBuilderX，然后通过指定插件响应请求
+#### Scenes
+- Start HBuilderX through an external application such as a browser, and then respond to the request through the specified extension.
 
 #### Parameter
 |Name	|Type					|Description											|
 |--			|--							|--												|
-|handler	|[UriHandler](#UriHandler)	|scheme的处理器									|
-|context	|ExtensionContext			|插件激活方法activate中传入的(context)参数对象	|
+|handler	|[UriHandler](#UriHandler)	|The uri handler to register for this extension.									|
+|context	|ExtensionContext			|Context of extension	|
 
 #### Returns
 |Type	|Description																											|
 |--			|--																												|
-|Disposable	|注册的UriHandler的销毁器，可将该对象放置到插件的context.subscriptions数组内，插件卸载时，将会自动注销该handler	|
+|Disposable	|The registered UriHandler destroyer can place the object in the context.subscriptions array of the extension. When the extension is uninstalled, the handler will be automatically deregistered.	|
 
 
 #### Example
@@ -35,18 +32,19 @@ hbuilderx://requestExtension/exampleid/examplerequest/example?example1=example2&
 ```javascript
     hx.window.registerUriHandler({
         handleUri:function(uri){
-            //处理scheme请求
+            //Processing scheme request
             let path = uri.path;
             let params = uri.query;
             hx.window.showInformationMessage(uri.toString());
         }
     }, context);
 ```
-上面的示例中，假设插件id为foo，则在浏览器地址栏中输入hbuilderx://requestExtension/foo?param=abc时，将自动激活该插件，并执行handleUri函数，uri的值即为地址栏中输入的地址，示例中uri.query的值为param=abc。
+
+In the above example, assuming that the extension id is foo, when you enter hbuilderx://requestExtension/foo?param=abc in the browser, the extension will be automatically activated and the handleUri function will be executed. The value of uri is the address entered in the example, the value of uri.query in the example is param=abc.
 
 
 #### UriHandler
-uri处理器接口
+A uri handler is responsible for handling system-wide uris.
 
 #### handleUri
 
@@ -54,8 +52,8 @@ uri处理器接口
 
 |Name	|Type	|Description																		|
 |--			|--			|--																			|
-|uri		|Uri		|scheme请求对应的uri，eg：hbuilderx://requestExtension/extensionId?foo=bar	|
+|uri		|Uri		|	|
 
 **Returns**
-无
+No
 

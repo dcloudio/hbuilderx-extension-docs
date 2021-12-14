@@ -2,19 +2,19 @@
 
 Create a diagnostics collection that can be used to display wavy lines in the error area of the document to identify problems during document verification.
 
-## Parameter and Return Value
+## Parameters and Returns 
 
-##### Parameter
+##### Parameters
 
 |Name	|Type	|Description			|
 |--			|--			|--				|
-|name		|String		|The name of the problem list, which will be displayed in tooltips when the mouse is moved over the wavy line|
+|name		|String		|TThe name of the collection, which will be displayed in tooltips when the mouse is moved over the wavy line|
 
-##### Return Value
+##### Returns
 
 |Type										|Description			|
 |--												|--				|
-|[DiagnosticCollection](#DiagnosticCollection)	|List of questions created	|
+|[DiagnosticCollection](#DiagnosticCollection)	|A new diagnostic collection.	|
 
 
 ##### Example
@@ -40,28 +40,28 @@ Create a diagnostics collection that can be used to display wavy lines in the er
 
 ## DiagnosticCollection
 
-> Diagnostic Collection
+> A diagnostics collection is a container that manages a set of diagnostics. Diagnostics are always scopes to a diagnostics collection and a resource.
 
 #### Attributes List
 
 |Name	|Type	|Description		|
 |--		|--			|--			|
-|name	|String		|The name of the collection	|
+|name	|String		|The name of this diagnostic collectionn	|
 
 #### set
 
-##### Parameter
+##### Parameters
 
 |Name	|Type										|Description		|
 |--			|--												|--			|
-|uri		|String or Uri									|Document path	|
-|diagnostics|Array&lt;[DiagnosticItem](#DiagnosticItem)&gt;	|Diagnostic Collection	|
+|uri		|String or Uri									|A resource identifier.	|
+|diagnostics|Array&lt;[DiagnosticItem](#DiagnosticItem)&gt;	|Array of diagnostics or undefined	|
 
-##### Return Value
+##### Returns
 
 |Type	|Description	|
 |--			|--		|
-|Promise&lt;void&gt;	|Promise	|
+|Promise&lt;void&gt;	|	|
 
 ##### Example
 

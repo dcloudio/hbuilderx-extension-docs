@@ -1,31 +1,31 @@
 # TextEditor
-文本编辑器对象
+Represents an editor that is attached to a document.
 
 ## TextEditor
 
 ### TextEditor Attribute list
 |Attribute name		|Type										|Description						|
 |--			|--												|--							|
-|document	|[TextDocument](#TextDocument)					|该编辑器关联的文档			|
-|selection	|[TextSelection](#TextSelection)				|当前光标选中的位置			|
-|selections	|Array&lt;[TextSelection](#TextSelection)&gt;	|当前多光标选中的位置集合	|
-|options	|[TextEditorOptions](#TextEditorOptions)		|该编辑器的设置项			|
+|document	|[TextDocument](#TextDocument)					|The document associated with this text editor. The document will be the same for the entire lifetime of this text editor.			|
+|selection	|[TextSelection](#TextSelection)				|The primary selection on this text editor. Shorthand for TextEditor.selections[0].			|
+|selections	|Array&lt;[TextSelection](#TextSelection)&gt;	|The selections in this text editor. The primary selection is always at index 0.	|
+|options	|[TextEditorOptions](#TextEditorOptions)		|Text editor options.			|
 
 ### edit
 
-> 修改当前编辑器打开的文档
+> Perform an edit on the document associated with this text editor.
 
 **Parameter**
 
 |Name	|Type									|Description			|
 |--			|--											|--				|
-|callback		|Function([TextEditorEdit](#TextEditorEdit))	|文档编辑操作回调	|
+|callback		|Function([TextEditorEdit](#TextEditorEdit))	|A function which can create edits using an edit-builder.	|
 
 **Returns**
 
 |Type	|Description	|
 |--			|--		|
-|Promise&lt;void&gt;	|Promise	|
+|Promise&lt;void&gt;	|A promise that resolves with a value indicating if the edits could be applied.	|
 
 **Example**
 
@@ -44,14 +44,14 @@
 
 ### setSelection
 
-> 设置主选择区域，该API会首先清除原来的光标选择，如果要使用多光标，请使用[addSelection](#addSelection)方法
+> Set the main selection area, the API will clear your selection first, if you want to use multiple channels, please use[addSelection](#addSelection)方法
 
 **Parameter**
 
 |Name	|Type	|Description		|
 |--			|--			|--			|
-|active		|Number		|选择区域中带光标的一侧，详情见下图|
-|anchor		|Number		|选择区域中不带光标的一侧，详情见下图	|
+|active		|Number		|Select the side with the cursor, see the figure below|
+|anchor		|Number		|Select the side without the cursor, see the figure below	|
 
 <img src="/static/snapshots/Plug-in-development/anchor_active.jpg" style="zoom:50%" />
 
@@ -59,7 +59,7 @@
 
 |Type	|Description	|
 |--			|--		|
-|Promise&lt;void&gt;	|Promise	|
+|Promise&lt;void&gt;	|A promise that resolves with a value indicating if set selection could be applied.	|
 
 **Example**
 
@@ -72,14 +72,14 @@ editor.then((editor)=>{
 
 ### addSelection
 
-> 增加新的选择区域，调用后会在编辑器内追加一个新一个光标。
+> Add a new selection area, and a new cursor will be added in the editor after calling.
 
 **Parameter**
 
 |Name	|Type	|Description		|
 |--			|--			|--			|
-|active		|Number		|选择区域中带光标的一侧，详情见下图|
-|anchor		|Number		|选择区域中不带光标的一侧，详情见下图	|
+|active		|Number		|Select the side with the cursor, see the figure below|
+|anchor		|Number		|Select the side without the cursor, see the figure below	|
 
 <img src="/static/snapshots/Plug-in-development/anchor_active.jpg" style="zoom:50%" />
 
@@ -87,7 +87,7 @@ editor.then((editor)=>{
 
 |Type	|Description	|
 |--			|--		|
-|Promise&lt;void&gt;	|Promise	|
+|Promise&lt;void&gt;	|A promise that resolves with a value indicating if set selection could be applied.	|
 
 **Example**
 
@@ -102,74 +102,75 @@ editorPromise.then((editor)=>{
 
 ## TextDocument
 
-> 编辑器打开的文档文件
+> Represents a text document, such as a source file. Text documents have lines and knowledge about an underlying resource like a file.
 
 ### Attribute list
 
 |Attribute name			|Type							|Description														|
 |--				|--									|--															|
-|fileName		|String								|文件名称													|
-|isDirty		|Boolean							|是否是修改状态												|
-|isUntitled		|Boolean							| 是否是无标题文件											|
-|lineCount		|Number								|文档总行数													|
-|uri			|[Uri](/ExtensionDocs/Api/other/Uri)						|文档的uri，如果是本地文件，可通过uri.fsPath获取本地文件路径|
-|languageId|String|编程语言Id，如'javascript','html'等，完整id列表参见[这里](/ExtensionDocs/Api/other/languageId)									|
-|workspaceFolder|[WorkspaceFolder](/ExtensionDocs/Api/other/WorkspaceFolder)|该文档文件所属的项目对象									|
+|fileName		|String								|The file system path of the associated resource. 				|
+|isDirty		|Boolean							|true if there are unpersisted changes.|
+|isUntitled		|Boolean							| Is this document representing an untitled file which has never been saved yet. 											|
+|lineCount		|Number								|The number of lines in this document													|
+|uri			|[Uri](/ExtensionDocs/Api/other/Uri)						|The associated uri for this document.If it is local file, which can get local file path through uri.fsPath.|
+|languageId|String|language Id，for example 'javascript','html' etc, see for complete id list [Here](/ExtensionDocs/Api/other/languageId)									|
+|workspaceFolder|[WorkspaceFolder](/ExtensionDocs/Api/other/WorkspaceFolder)|
+The project object to which the document file belongs									|
 
 ### getText
 
-> 获取指定区域内的文本
+> Get the text of this document. 
 
 |Name	|Type		|Description													|
 |--			|--				|--														|
-|range		|[Range](#Range)|[可选]文本区域，如果不传该参数，则获取整个文档的内容	|
+|range		|[Range](#Range)|[Optional]Include only the text included by the range.	|
 
 **Returns**
 
 |Type	|Description		|
 |--			|--			|
-|String		|文本字符串	|
+|String		|The text inside the provided range or the entire text.	|
 
 
 ### lineAt
 
-> 获取指定行号的行信息
+> Returns a text line denoted by the line number.
 
 |Name	|Type	|Description			|
 |--			|--			|--				|
-|lineno		|Number		|行号，从0开始	|
+|lineno		|Number		|A line number in [0, lineCount).	|
 
 **Returns**
 
 |Type						|Description		|
 |--										|--			|
-| Promise&lt;[TextLine](#TextLine)&gt;	|文本行对象	|
+| Promise&lt;[TextLine](#TextLine)&gt;	|	A line.	|
 
 ### lineFromPosition
 
-> 根据光标位置获取光标所在行。
+> Returns a text line denoted by the position. 
 
 |Name	|Type	|Description		|
 |--			|--			|--			|
-|pos		|Number		|光标位置	|
+|pos		|Number		|A position.	|
 
 **Returns**
 
 |Type						|Description		|
 |--										|--			|
-|Promise&lt;[TextLine](#TextLine)&gt;	|文本行对象	|
+|Promise&lt;[TextLine](#TextLine)&gt;	|A line.	|
 
 
 ## TextEdit
 
-TextEdit: 文档编辑
+TextEdit: A text edit represents edits that should be applied to a document.
 
 ### TextEdit Attribute list
 
 |Attribute name	|Type			|Description			|
 |--		|--					|--				|
-|range	|[Range](#Range)	|要修改的区域	|
-|newText|String				|要插入的新内容	|
+|range	|[Range](#Range)	|A range.	|
+|newText|String				|A new text edit object.	|
 
 ### replace **static**
 
@@ -177,34 +178,34 @@ TextEdit: 文档编辑
 
 |Name	|Type			|Description			|
 |--			|--					|--				|
-|range		|[Range](#Range)	|要修改的区域	|
-|newText	|String				|要插入的新内容	|
+|range		|[Range](#Range)	|A range.	|
+|newText	|String				|A string.	|
 
 **Returns**
 
 |Type	|Description	|
 |--			|--		|
-|[TextEdit](#TextEdit)|	文档编辑对象|
+|[TextEdit](#TextEdit)|	A new text edit object.|
 
 ## Range
 
-Range: 文本区域
+Range: A range represents an ordered pair of two positions. 
 
 **Attribute list**
 
 |Attribute name	|Type	|Description		|
 |--		|--			|--			|
-|start	|Number		|起始位置	|
-|end	|Number		|结束位置	|
+|start	|Number		|The start position. It is before or equal to end.	|
+|end	|Number		|The end position. It is after or equal to start.	|
 
 ## TextLine
 
-TextLine: 文档中的某一行
+TextLine: Represents a line of text, such as a line of source code.
 
 **Attribute list**
 
 |Attribute name	|Type	|Description						|
 |--		|--			|--							|
-|start	|Number		|行起始位置					|
-|end	|Number		|行结束位置，不计算换行符	|
-|text	|String		|行内容，不包含换行符		|
+|start	|Number		|The start position of row. 				|
+|end	|Number		|The end position of row without the line separator characters.	|
+|text	|String		|The text of this line without the line separator characters.		|

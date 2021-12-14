@@ -8,11 +8,11 @@ Attribute list：
 
 |Name		|Type				|description																	|
 |--			|--						|--																		|
-|appName	|String					|Application name：HBuilder X												|
+|appName	|String					|The application name of the editor: HBuilder X												|
 |appVersion	|String					|Application main version. Can be viewed in the menu [Help]-[About]						|
-|appRoot	|String					|Application installation path														|
+|appRoot	|String					|The application root folder from which the editor is running.								|
 |appData	|String					|Application data storage path													|
-|clipboard	|[Clipboard](/ExtensionDocs/Api/env/Clipboard)|Clipboard object, which can be used to read the content of the clipboard and write content to the clipboard. Currently, only text format is supported	|
+|clipboard	|[Clipboard](/ExtensionDocs/Api/env/Clipboard)|The system clipboard, which can be used to read the content of the clipboard and write content to the clipboard. Currently, only text format is supported	|
 
 #### Example
 

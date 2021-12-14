@@ -1,12 +1,10 @@
 # showView
 
-> Supported from HBuilderX 2.9.9+ version
+> Supported from HBuilderX 2.9.9+.
 
-Switch the WebView control view of the specified viewId. 
+Switch the WebView control view of the specified viewId. After the extension creates multiple WebView views and opens them, you can switch the specified tab page in the left/right view area of the window through this interface. 
 
-After the plug-in creates multiple WebView views and opens them, you can switch the specified tab page in the left/right view area of the window through this interface. 
-
-This interface is not suitable for creating
+This interface is not suitable for creating.
 
 #### Parameter
 

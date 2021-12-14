@@ -2,20 +2,20 @@
 
 ## showErrorMessage
 
-> Display an error notification box in the lower right corner of the window
+> Show an error message in the lower right corner of the window.
 
 #### Parameters
 
 |Name	|Type			|Description					|
 |--			|--					|--						|
-|message	|String				|Message content, support html tags	|
+|message	|String				|The message to show, support html tags	|
 |buttons	|Array&lt;String&gt;|Button group in notification box		|
 
-#### Return Values
+#### Returns
 
 |Type				|Description									|
 |--						|--										|
-|Promise&lt;String&gt;	|If a button is set, return which button the user clicked	|
+|Promise&lt;String&gt;	|A promise that resolves to the selected item.	|
 
 #### Example
 ``` javascript
@@ -31,19 +31,19 @@ resultPromise.then((result)=>{
 
 ## showInformationMessage
 
-> Display a message notification box in the lower right corner of the window
+> Show an information message in the lower right corner of the window.
 
 #### Parameters
 
 |Name	|Type			|Description					|
 |--			|--					|--						|
-|message	|String				|Message content, support html tags	|
+|message	|String				|The message to show, support html tags	|
 |buttons	|Array&lt;String&gt;|Button group in notification box		|
 
-#### Return Values
+#### Returns
 |Type				|Description									|
 |--						|--										|
-|Promise&lt;String&gt;	|If a button is set, return which button the user clicked	|
+|Promise&lt;String&gt;	|A promise that resolves to the selected item.	|
 
 #### Example
 ``` javascript
@@ -54,19 +54,19 @@ hx.window.showInformationMessage('Learn More <a href="http://www.dcloud.io">Refe
 
 ## showWarningMessage
 
-> Display a warning message notification box in the lower right corner of the window
+> Show a warning message in the lower right corner of the window.
 
 #### Parameters
 
 |Name	|Type			|Description					|
 |--			|--					|--						|
-|message	|String				|Message content, support html tags	|
+|message	|String				|The message to show, support html tags	|
 |buttons	|Array&lt;String&gt;|Button group in notification box		|
 
-#### Return Values
+#### Returns
 |Type				|Description									|
 |--						|--										|
-|Promise&lt;String&gt;	|If a button is set, return which button the user clicked	|
+|Promise&lt;String&gt;	|A promise that resolves to the selected item.	|
 
 #### Example
 ``` javascript

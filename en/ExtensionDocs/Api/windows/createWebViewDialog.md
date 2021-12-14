@@ -1,30 +1,30 @@
 # createWebViewDialog
 
-> HBuilderX 3.0.0起支持
+> Supported from HBuilderX 3.0.0
 
-创建基于WebView页面的对话框，通过html渲染对话框的主要内容，可通过参数定制对话框标题、按钮等内容。按钮被添加到对话框下方的按钮组里，点击按钮会向WebView发送消息，开发者可在html通过js监听。
+Create a dialog box based on the WebView page, render the main content of the dialog box through html, and customize the dialog box title, buttons, etc. The button is added to the button group at the bottom of the dialog box. Clicking the button will send a message to the WebView, and the developer can monitor it through js in the html.
 
 ## Parameter
 
 |Name	|Type					|Description											|
 |--		|--							|--												|
-|dialogOptions 	|[DialogOptions](#DialogOptions)	|对话框基本属性，包括标题、按钮等	|
-|webviewOptions |[WebViewOptions](#WebViewOptions)	|WebView属性	|
+|dialogOptions 	|[DialogOptions](#DialogOptions)	|Basic attributes of the dialog box, including title, button, etc	|
+|webviewOptions |[WebViewOptions](#WebViewOptions)	|Content settings for a webview.	|
 
 ## Returns
 
 |Type|Description							|					|
 |--				|--								| --				|
-|WebViewDialog	|[WebViewDialog](#WebViewDialog)	| WebViewDialog，控制对话框显示和关闭等	|
+|WebViewDialog	|[WebViewDialog](#WebViewDialog)	| WebViewDialog, control dialog box display and close etc.|
 
 ## Example
 ```Javascript
 let webviewDialog = hx.window.createWebViewDialog({
     modal: false,
-    title: "是否删除文件？",
-    description: "删除后无法恢复，请谨慎操作。也可以到回收站看看。",
+    title: "Delete the file？",
+    description: "It cannot be restored after deletion, please operate with caution. You can also go to the recycle bin.",
     dialogButtons: [
-        "确定", "取消"
+        "Confirm", "Cancel"
     ],
     size: {
         width: 400,
@@ -42,10 +42,10 @@ webview.html = `
         hbuilderx.onDidReceiveMessage((msg)=>{
             if(msg.type == 'DialogButtonEvent'){
                 let button = msg.button;
-                if(button == '确定'){
-                    //TODO 处理表单提交
-                }else if(button == '取消'){
-                    //TODO 处理取消逻辑
+                if(button == 'Confirm'){
+                    //TODO Process form submit
+                }else if(button == 'Cancel'){
+                    //TODO Process cancel logic
                         hbuilderx.postMessage({
                         command: 'cancel'
                     });
@@ -67,114 +67,116 @@ webview.onDidReceiveMessage((msg) => {
 
 let promi = webviewDialog.show();
 promi.then(function (data) {
-    // 处理错误信息
+    // process error message
 });
 ```
 
 ## WebViewOptions
-`从HBuilderX 2.8.1及以上版本开始支持`
+`Supported from 2.8.1+`
 
-调用createWebView创建[WebView](#WebView)时需要的配置项
+Content settings for a webview.
 
 **Attribute list**
 
 |Attribute name			|Type	|Description						|
 |--				|--			|--							|
-|enableScripts	|Boolean	|是否启用JavaScript脚本支持	|
+|enableScripts	|Boolean	|Whether to enable JavaScript script support	|
 
 
 ## DialogOptions
 
-调用createWebViewDialog需要的对话框属性参数。
+Options to configure the behaviour of dialog.
 
 **Attribute list**
 
 |Attribute name		|Type	|Description				|
 |--			|--			|--					|
-|modal      | Boolean	| 是否显示为模态窗口，默认模态窗口 |
-|title      | String	| 对话框主标题 |
-|description       | String	| 对话框副标题 |
-|dialogButtons   | Array&lt;String&gt;	| 需要在对话框下方按钮组区域添加的按钮列表 |
-|size       | 对话框尺寸 | 需要显示的对话框大小，结构：{ width: Number, height: Number } |
+|modal      | Boolean	| Indicates that this dialog is modal.
 
-- *以上所有属性可选，但不建议*
+ |
+|title      | String	| Dialog title. |
+|description       | String	| Dialog subtitle |
+|dialogButtons   | Array&lt;String&gt;	| Buttons group of dialog |
+|size       | Size of dialog | The size of the dialog box that needs to be displayed,setting:{ width: Number, height: Number } |
+
+- *All the above attributes are optional, but not recommended*
 
 ## WebViewDialog
 
-WebView相关属性可以参考[WebView](#WebView)。
+WebView properties refer to[WebView](#WebView)。
 
-#### 属性列表
+#### Attribute list
 
 |Attribute name		|Type	|Description				|
 |--			|--			|--					|
-|webView | [WebView](#WebView)	| 用于渲染对话框主要内容 |
-|id      | String	| 用于内部通信的对话框id |
+|webView | [WebView](#WebView)	| WebView object |
+|id      | String	| Dialog id used for internal communication |
 
 ### show
 
-显示对话框，返回显示成功或者失败的信息，主要包含内置浏览器相关状态。
+Reveal the view in the UI.
 
 **Returns**
 
 |Type	|Description		|
 |--			|--			|
-|Promise&lt;Object&gt;	|Promise对象，Object结构：{"code":2, "message":"Built-in browser not exist."}|
+|Promise&lt;Object&gt;	|Promise object，Object structure：{"code":2, "message":"Built-in browser not exist."}|
 
-**主要错误码信息**
+**Error Codes**
 
-|错误码		| Description									|
+|Error code		| Description									|
 |--			|--										|
-|0	| 无错误 |
-|1	| 内置浏览器插件正在下载 |
-|2	| 内置浏览器插件不存在（弹出下载内置浏览器插件窗口，用户点击了取消）|
+|0	| None |
+|1	| The built-in browser plug-in is downloading |
+|2	| The built-in browser plug-in does not exist |
 
 ### close
 
-关闭对话框，插件通过close主动关闭对话框
+Close the dialog box
 
 ### displayError
 
-在对话框副标题下方显示红色错误信息，错误信息会由动态抖动效果
+A red error message will be displayed under the subtitle of the dialog box.
 
 **Parameter**
 
 |Name	|Type	|Description			|
 |--			|--			|--				|
-|text		|String		| 错误信息  |
+|text		|String		| Error message  |
 
 ### setButtonStatus
 
-设置对话框指定按钮状态，对话框按钮通过[createWebViewDialog](#createWebViewDialog)参数[DialogOptions](#DialogOptions)提供。
+Set the state of the specified button in the dialog box, and the dialog box button [createWebViewDialog](#createWebViewDialog) is provided by the parameter [DialogOptions](#DialogOptions).
 
 **Parameter**
 
 |Name	|Type	|Description			|
 |--			|--			|--				|
-|button		|String		| 按钮字符串  |
-|status		|Array&lt;String&gt;	| 按钮状态列表，为空时设置默认状态|
+|button		|String		| Button text  |
+|status		|Array&lt;String&gt;	| Button status list|
 
-### 按钮状态说明
+### Button status description
 
-|状态		| Description      |
+|Status		| Description      |
 |--			|--	        |
-|"loading"	| 按钮文字前方增加loading动态提示 |
-|"disable"	| 禁用按钮，可与loading组合使用 |  
+|"loading"	| Add loading prompt before button text |
+|"disable"	| Disable button, can be used in combination with loading  |  
 
 **Example**
 ``` javascript
-    webviewDialog.setButtonStatus("确定", ["loading", "disable"]);
+    webviewDialog.setButtonStatus("Confirm", ["loading", "disable"]);
 ```
 
 ### onDialogClosed
 
-注册窗口关闭回调。
+Callback when the registration window is closed.
 
 |Name	|Type	|Description			|
 |--			|--			|--				|
-|callback	|Function		|当窗口显示后，用户关闭或调用close后，触发该回调，无参数|
+|callback	|Function		|When the window is displayed, the user closes or calls close event, the callback is triggered, no parameters.
 
 ### Returns
 
 |Type	|Description			|
 |--			|--				|
-|[Disposable](/ExtensionDocs/Api/other/Disposable)	| Disposable对象	|
+|[Disposable](/ExtensionDocs/Api/other/Disposable)	| Disposable object	|

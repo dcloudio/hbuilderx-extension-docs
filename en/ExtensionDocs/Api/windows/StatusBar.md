@@ -8,11 +8,11 @@ Set the status bar message at the bottom of HBuilderX
 
 |Name							|Type		|Description																																																															|
 |--								|--			|--																																																																				|
-|text							|String	|Message content																																																													|
-|hideAfterTimeout	|Number	|[Optional] How long to hide automatically, the unit is ms, the default value is 0: do not hide automatically	|
+|text							|String	|The message to show																																																													|
+|hideAfterTimeout	|Number	|[Optional] Timeout in milliseconds after which the message will be disposed.	|
 |level						|String	|[Optional] Message level, the values are ['warn','info','error'], default value:'info'																										|
 
-#### Return Values
+#### Returns
 
 |Type																							|Description																			|
 |--																								|--																								|

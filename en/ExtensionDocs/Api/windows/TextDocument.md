@@ -1,57 +1,57 @@
 # TextDocument
-Document file opened by the editor
+Represents a text document, such as a source file. Text documents have lines and knowledge about an underlying resource like a file.
 
 ## Attributes List
 
 |Name	|Type																												|Description																																										|
 |--							|--																													|--																																															|
-|fileName				|String																											|File Name																																											|
-|isDirty				|Boolean																										|Is it a modified status																																									|
-|isUntitled			|Boolean																										|Whether it is an untitled file																																							|
-|lineCount			|Number																											|Total number of document lines																																											|
-|uri						|[Uri](/ExtensionDocs/Api/other/Uri)												|The uri of the document, if it is a local file, the local file path can be obtained through uri.fsPath																		|
-|languageId			|String																											|Programming language Id，for example 'javascript','html' etc，see full id list [Here](/ExtensionDocs/Api/other/languageId)	|
+|fileName				|String																											|The file system path of the associated resource. 																																											|
+|isDirty				|Boolean																										|true if there are unpersisted changes.																																									|
+|isUntitled			|Boolean																										|Is this document representing an untitled file which has never been saved yet.																																							|
+|lineCount			|Number																											|The number of lines in this document.|
+|uri						|[Uri](/ExtensionDocs/Api/other/Uri)												|The associated uri for this document.|
+|languageId			|String																											|The identifier of the language associated with this document，for example 'javascript','html' etc，see full id list [Here](/ExtensionDocs/Api/other/languageId)	|
 |workspaceFolder|[WorkspaceFolder](/ExtensionDocs/Api/other/WorkspaceFolder)|Which project object the document belongs to																																			|
 
 ## getText
-Get the text in the specified area
+Get the text of this document.
 
 |Name	|Type		|Description													|
 |--			|--				|--														|
-|range		|[Range](#Range)|[Optional] Text area, if this parameter is not passed, the content of the entire document is obtained	|
+|range		|[Range](#Range)|[Optional] Include only the text included by the range.	|
 
-**Return Values**
+**Returns**
 
 |Type	|Description		|
 |--			|--			|
-|String		|Text string	|
+|String		|The text inside the provided range or the entire text.	|
 
 
 ## lineAt
-Get the line information of the specified line number
+Returns a text line denoted by the line number. 
 
 |Name	|Type	|Description			|
 |--			|--			|--				|
-|lineno		|Number		|Line number, starting from 0	|
+|lineno		|Number		|A line number in [0, lineCount).	|
 
-**Return Values**
+**Returns**
 
 |Type						|Description		|
 |--										|--			|
-| Promise&lt;[TextLine](#TextLine)&gt;	|Text line objec	|
+| Promise&lt;[TextLine](#TextLine)&gt;	|A line|
 
 ## lineFromPosition
-Get the line where the cursor is based on the cursor position.。
+Returns a text line denoted by the position.
 
 |Name	|Type	|Description		|
 |--			|--			|--			|
-|pos		|Number		|Cursor Position	|
+|pos		|Number		|A position	|
 
-**Return Values**
+**Returns**
 
 |Type						|Description		|
 |--										|--			|
-|Promise&lt;[TextLine](#TextLine)&gt;	|Text line object	|
+|Promise&lt;[TextLine](#TextLine)&gt;	|A line	|
 
 
 ## Range
@@ -78,7 +78,7 @@ A line in the document
 ## TextEdit
 Document editing
 
-### 属性列表
+### Attributes List
 
 |Name	|Type			|Description			|
 |--		|--					|--				|
@@ -94,7 +94,7 @@ Document editing
 |range		|[Range](#Range)	|The area to be modified	|
 |newText	|String				|New content to insert	|
 
-#### Return Valus
+#### Returns
 
 |Type	|Description	|
 |--			|--		|

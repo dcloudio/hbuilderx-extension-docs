@@ -1,8 +1,8 @@
 # commands
 
-commands is the second-level module object, used to process the logic related to `command`.
+A command is a function with a unique identifier. The function is sometimes also called command handler.
 
-`Command` contains 2 parts: unique ID and custom function, which can be registered through registerCommand or registerTextEditorCommand.
+`Command` contains 2 parts: unique ID and custom function. Commands can be added to the editor using the registerCommand and registerTextEditorCommand functions.
 
 ## Declare command
 
@@ -32,7 +32,7 @@ commands is the second-level module object, used to process the logic related to
 }
 ```
 
-2. Register the command in the activation callback (`activate`) of the extension
+2. Register the command in the activation callback (`activate`) of the extension. This is a sample that registers a command handler and adds an entry for that command to the palette. First register a command handler with the identifier.
 
 ``` javascript
     hx.commands.registerCommand('extension.firstExtension',()=>{
@@ -64,12 +64,12 @@ Execute the `command` with the specified id. In addition to the `commands` exten
 
 |Parameter	    |Type	    |Description			|
 |--			|--			|--				|
-|command	|String		| The id of the command to be executed|
+|command	|String		| Identifier of the command to execute.|
 
 ##### Returns
 |Type	|Description		|
 |--			|--			|
-|Promise	|Promise Object|
+|Promise	|
 
 
 ##### Example
@@ -82,19 +82,19 @@ hx.commands.executeCommand('workbench.action.closeAllEditors')
 
 ## registerCommand
 
-Register a `command` with a specified id and associate a custom function
+Registers a command that can be invoked via a keyboard shortcut, a menu item, an action, or directly.
 
-##### Parameter
+##### Parameters
 
 |Parameter	|Type	|Description					|
 |--			|--			|--						|
-|commandId	|String		|`command`id				|
-|handler	|Function	|The function to be executed when the command is triggered	|
+|commandId	|String		|A unique identifier for the command.				|
+|handler	|Function	|A command handler function.	|
 
 ##### Returns
 |Type					|Description																									|
 |--							|--																										|
-|[Disposable](/ExtensionDocs/Api/other/Disposable)	|The destroyer of this `command` can place the object in the context.subscriptions array of the extension. When the extension is uninstalled, the `command` will be automatically cancelled.	|
+|[Disposable](/ExtensionDocs/Api/other/Disposable)	|Disposable which unregisters this command on disposal.	|
 
 
 ##### Example

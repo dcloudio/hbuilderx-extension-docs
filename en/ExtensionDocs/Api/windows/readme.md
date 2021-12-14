@@ -1,1 +1,1 @@
-window二级模块对象，用于处理主窗口相关的逻辑。
+Namespace for dealing with the current window of the editor. That is visible and active editors, as well as, UI elements to show messages, selections, and asking for user input. Window is a secondary module object, used to process logic related to the main window.
