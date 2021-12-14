@@ -8,7 +8,7 @@ Get a workspace configuration object.
 
 |Name	|Type	|Description			|
 |--			|--			|--				|
-|section	|String		|Configuration  name	|
+|section	|String		| 	A dot-separated identifier.	|
 
 **Returns**
 
@@ -67,7 +67,7 @@ let fontSize = config.get("fontSize");
 
 |Type	|Description	|
 |--			|--		|
-|Promise&lt;void&gt;	|Promise	|
+|Promise&lt;void&gt;	|	|
 
 **Example**
 ``` javascript
