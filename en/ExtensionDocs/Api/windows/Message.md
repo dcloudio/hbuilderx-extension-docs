@@ -43,7 +43,7 @@ resultPromise.then((result)=>{
 #### Returns
 |Type				|Description									|
 |--						|--										|
-|Promise&lt;String&gt;	|A promise that resolves to the selected item.	|
+|Promise&lt;String&gt;	|	|
 
 #### Example
 ``` javascript
@@ -66,7 +66,7 @@ hx.window.showInformationMessage('Learn More <a href="http://www.dcloud.io">Refe
 #### Returns
 |Type				|Description									|
 |--						|--										|
-|Promise&lt;String&gt;	|A promise that resolves to the selected item.	|
+|Promise&lt;String&gt;	||
 
 #### Example
 ``` javascript
