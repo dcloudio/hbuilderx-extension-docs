@@ -25,7 +25,7 @@ Represents an editor that is attached to a document.
 
 |Type	|Description	|
 |--			|--		|
-|Promise&lt;void&gt;	|A promise that resolves with a value indicating if the edits could be applied.	|
+|Promise&lt;void&gt;	|	|
 
 **Example**
 
@@ -59,7 +59,7 @@ Represents an editor that is attached to a document.
 
 |Type	|Description	|
 |--			|--		|
-|Promise&lt;void&gt;	|A promise that resolves with a value indicating if set selection could be applied.	|
+|Promise&lt;void&gt;	|	|
 
 **Example**
 
@@ -87,7 +87,7 @@ editor.then((editor)=>{
 
 |Type	|Description	|
 |--			|--		|
-|Promise&lt;void&gt;	|A promise that resolves with a value indicating if set selection could be applied.	|
+|Promise&lt;void&gt;	|	|
 
 **Example**
 
@@ -144,7 +144,7 @@ The project object to which the document file belongs									|
 
 |Type						|Description		|
 |--										|--			|
-| Promise&lt;[TextLine](#TextLine)&gt;	|	A line.	|
+| Promise&lt;[TextLine](#TextLine)&gt;	|		|
 
 ### lineFromPosition
 
@@ -158,7 +158,7 @@ The project object to which the document file belongs									|
 
 |Type						|Description		|
 |--										|--			|
-|Promise&lt;[TextLine](#TextLine)&gt;	|A line.	|
+|Promise&lt;[TextLine](#TextLine)&gt;	|	|
 
 
 ## TextEdit
