@@ -1,8 +1,10 @@
 # applyEdit
 
-create, delete, and rename resources as defined by the given workspace edit. 
+Make changes to one or many resources or create, delete, and rename resources as defined by the given workspace edit.
 
-The uri of the modified document and the TextEdit operation object to be modified should be set in the WorkspaceEdit object.
+All changes of a workspace edit are applied in the same order in which they have been added. If multiple textual inserts are made at the same position, these strings appear in the resulting text in the order the 'inserts' were made, unless that are interleaved with resource edits. Invalid sequences like 'delete file a' -> 'insert text in file a' cause failure of the operation.
+
+When applying a workspace edit that consists only of text edits an 'all-or-nothing'-strategy is used. A workspace edit with resource creations or deletions aborts the operation, e.g. consecutive edits will not be attempted, when a single edit fails.
 
 ## Introduce
 
@@ -16,7 +18,7 @@ The uri of the modified document and the TextEdit operation object to be modifie
 
 |Type	|Description	|
 |--			|--		|
-|Promise&lt;void&gt;	|Promise	|
+|Promise&lt;void&gt;	|	|
 
 **Example**
 ``` javascript
@@ -47,14 +49,14 @@ Use the applyEdit-function to apply a workspace edit.
 
 |Name	|Type							|Description			|
 |--			|--									|--				|
-|uri		|String或Uri						|A resource identifier.		|
+|uri		|String or Uri						|		|
 |edits		|Array&lt;[TextEdit](#TextEdit)&gt;	|An array of text edits.	|
 
 **Returns**
 
 |Type	|Description	|
 |--			|--		|
-|Promise&lt;void&gt;	|Promise	|
+|Promise&lt;void&gt;	|	|
 
 **Example**
 ``` javascript
@@ -74,8 +76,8 @@ Use the applyEdit-function to apply a workspace edit.
 
 |Attribute name	|Type			|Description			|
 |--		|--					|--				|
-|range	|[Range](#Range)	|A range.	|
-|newText|String				|A string.	|
+|range	|[Range](#Range)	|The range this edit applies to.	|
+|newText|String				|The string this edit will insert.|
 
 #### replace **static**
 
@@ -94,11 +96,11 @@ Use the applyEdit-function to apply a workspace edit.
 
 ## Range
 
-Create a new range from two positions. If start is not before or equal to end, the values will be swapped.
+A range represents an ordered pair of two positions. It is guaranteed that start.isBeforeOrEqual(end)
 
 **Attribute list**
 
 |Attribute name	|Type	|Description		|
 |--		|--			|--			|
-|start	|Number		|A position.	|
-|end	|Number		|A position.	|
+|start	|Number		|The start position. It is before or equal to end.	|
+|end	|Number		|The end position. It is after or equal to start.	|
