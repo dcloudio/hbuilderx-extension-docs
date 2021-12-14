@@ -46,7 +46,7 @@ Creates a new output channel with the given name.
 
 |Type	|Description	|
 |--			|--		|
-|Promise&lt;void&gt;	|Promise	|
+|Promise&lt;void&gt;	|	|
 
 **Example**
 
@@ -68,7 +68,7 @@ No.
 
 |Type	|Description	|
 |--			|--		|
-|Promise&lt;void&gt;	|Promise	|
+|Promise&lt;void&gt;	|	|
 
 **Example**
 ``` javascript
