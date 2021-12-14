@@ -13,7 +13,7 @@ Shows a selection list allowing multiple selections.
 
 |Type		|Description									|
 |--						|--										|
-|Promise&lt;[QuickPickItem](#QuickPickItem)&gt;	|A promise that resolves to the selected items or undefined.|
+|Promise&lt;[QuickPickItem](#QuickPickItem)&gt;	||
 
 #### Example
 
