@@ -10,13 +10,13 @@
 [前端網頁託管功能詳情](https://uniapp.dcloud.io/uniCloud/hosting)
 
 
-### cli 注意事項
+### CLI注意事項@note
 
 - 僅支持阿里雲, 不支持騰訊雲。
 - 所有操作，均需要HBuilderX處於登錄狀態
 - uniCloud前端網頁託管功能，需要處於開通狀態。[如何開通前端網頁託管？](https://uniapp.dcloud.io/uniCloud/hosting?id=%e5%bc%80%e9%80%9a)
 
-### 上傳項目或文件
+### 上傳項目或文件@upload
 
 ```shell
 cli hosting deploy [--prj 項目名稱] --space 雲空間名稱或id --provider 服務商代號 [--source 指定項目下源目錄] [--prefix 指定雲空間目錄前綴]
@@ -45,7 +45,7 @@ cli hosting deploy --provider aliyun --space spacename --prj test-project --pref
 
 ```
 
-### 列舉雲空間下的文件及文件夾
+### 列舉雲空間下的文件及文件夾@list
 
 ```shell
 cli hosting list --space 雲空間名稱或id --provider 服務商代號  [--prefix 指定雲空間目錄前綴]
@@ -62,7 +62,7 @@ cli hosting list  --provider aliyun --space spacename
 cli hosting list  --provider aliyun --space spacename --prefix /img/
 ```
 
-### 刪除雲空間下的文件及文件夾
+### 刪除雲空間下的文件及文件夾@delete
 
 ```shell
 cli hosting delete --space 雲空間名稱或id --provider 服務商代號 --path 雲空間文件或文件夾路徑，文件夾須以/結尾
