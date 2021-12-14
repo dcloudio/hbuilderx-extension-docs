@@ -52,7 +52,7 @@ A uri handler is responsible for handling system-wide uris.
 
 |Name	|Type	|Description																		|
 |--			|--			|--																			|
-|uri		|Uri		|The uri of the scheme request, eg：hbuilderx://requestExtension/extensionId?foo=bar	|
+|uri		|Uri		|A universal resource identifier representing either a file on disk or another resource, eg：hbuilderx://requestExtension/extensionId?foo=bar	|
 
 **Returns**
 No
