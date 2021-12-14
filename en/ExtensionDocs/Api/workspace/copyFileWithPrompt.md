@@ -1,6 +1,6 @@
 # copyFileWithPrompt
 
-> Supported from HBuilderX 2.9.12+ version
+> Supported from HBuilderX 2.9.12+ 
 
 Copy the specified file or folder to the target folder
 
@@ -8,19 +8,19 @@ Copy the specified file or folder to the target folder
 
 |Name	|Type													|Description			|
 |--			|--															|--				|
-|options	|[CopyFileWithPromptOptions](#CopyFileWithPromptOptions)    |文件拷贝参数	|
+|options	|[CopyFileWithPromptOptions](#CopyFileWithPromptOptions)    |File copy parameters	|
 
 #### Returns
 
 |Type		|Description		|
 |--						|--			|
-|Promise&lt;String&gt;	|操作结果	|
+|Promise&lt;String&gt;	|	|
 
-文件拷贝返回值说明:
+Returns:
 
 |code	|Description									|
 |--		|--										|
-|-1		|failed								|
+|-1		|Failed								|
 |0		|Successful								|
 |1		|Operation canceled								|
 
@@ -30,8 +30,8 @@ Copy the specified file or folder to the target folder
  let result = hx.workspace.copyFileWithPrompt({
      src:hx.Uri.file('D:/test01'),
      dest:hx.Uri.file('E:/test01'),
-     rootPromptTips:'目标文件已存在',
-     filePromptTips:'目标文件已存在',
+     rootPromptTips:'Target file already exists',
+     filePromptTips:'Target file already exists',
      filter:function(params){
  	    console.log(params)
  		return 0;
@@ -47,15 +47,15 @@ Copy the specified file or folder to the target folder
 
 #### CopyFileWithPromptOptions
 
-> 文件拷贝配置
+> File copy configuration
 
 **Attribute list**
 
 |Attribute name		|Type	|Description						|
 |--			|--			|--							|
-|src		|[Uri](/ExtensionDocs/Api/other/Uri)		|拷贝文件源地址，地址是绝对路径|
-|dest		|[Uri](/ExtensionDocs/Api/other/Uri)	|拷贝文件目标地址，地址是绝对路径并且是目录|
-|rootPromptTips	|String		|目标文件一级目录存在时提示语|
-|filePromptTips	|String |目标文件一级目录下文件存在时提示语 |
-|filter	|Function([Uri](/ExtensionDocs/Api/other/Uri)) | 当前正在操作的文件回调 |
-|errorHandler	|Function([Uri](/ExtensionDocs/Api/other/Uri))	|操作错误的文件回调, 返回0 取消操作  返回 1  重试  返回 2 跳过 |
+|src		|[Uri](/ExtensionDocs/Api/other/Uri)		|The source address of the copied file, the address is an absolute path|
+|dest		|[Uri](/ExtensionDocs/Api/other/Uri)	|The destination address of the copied file, the address is an absolute path and a directory|
+|rootPromptTips	|String		|root directory prompt|
+|filePromptTips	|String |Target file prompt |
+|filter	|Function([Uri](/ExtensionDocs/Api/other/Uri)) | callback uri |
+|errorHandler	|Function([Uri](/ExtensionDocs/Api/other/Uri))	|error callback handler, 0: cancel, 1: retry, 2: skip |
