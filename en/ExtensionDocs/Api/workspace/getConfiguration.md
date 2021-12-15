@@ -67,7 +67,7 @@ let fontSize = config.get("fontSize");
 
 |Type	|Description	|
 |--			|--		|
-|Promise&lt;void&gt;	|	|
+|Promise&lt;void&gt;	|Promise	|
 
 **Example**
 ``` javascript
