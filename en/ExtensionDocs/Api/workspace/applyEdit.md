@@ -18,7 +18,7 @@ When applying a workspace edit that consists only of text edits an 'all-or-nothi
 
 |Type	|Description	|
 |--			|--		|
-|Promise&lt;void&gt;	|	|
+|Promise&lt;void&gt;	|Promise	|
 
 **Example**
 ``` javascript
@@ -56,7 +56,7 @@ Use the applyEdit-function to apply a workspace edit.
 
 |Type	|Description	|
 |--			|--		|
-|Promise&lt;void&gt;	|	|
+|Promise&lt;void&gt;	|Promise	|
 
 **Example**
 ``` javascript
