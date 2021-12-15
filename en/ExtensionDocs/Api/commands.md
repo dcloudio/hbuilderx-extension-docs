@@ -69,7 +69,7 @@ Execute the `command` with the specified id. In addition to the `commands` exten
 ##### Returns
 |Type	|Description		|
 |--			|--			|
-|Promise	|
+|Promise	| Promise Object |
 
 
 ##### Example

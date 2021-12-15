@@ -1,18 +1,18 @@
 # getWorkspaceFolder
 
->Supported from HBuilderX 2.7.12+ version
+>Supported from HBuilderX 2.7.12+
 
-Get the project where a file is located.
+Returns the workspace folder that contains a given uri.
 
 #### Parameter
 |Name	|Type	|Description					|
 |--			|--			|--						|
-|uri		|String or Uri|File absolute path or file Uri|
+|uri		|String or Uri||
 
 #### Returns
 |Type												|Description					|
 |--																|--						|
-|Promise&lt;[WorkspaceFolder](/ExtensionDocs/Api/other/WorkspaceFolder)&gt;|The project where the file is located.	|
+|Promise&lt;[WorkspaceFolder](/ExtensionDocs/Api/other/WorkspaceFolder)&gt;||
 
 #### Example
 ``` javascript

@@ -53,7 +53,7 @@ provider.onDidChangeCustomDocument.fire(new CustomDocumentEditEvent(document));
 ##### Parameter
 |Name	    |Type	    |Description			|
 |--			|--			|--				|
-|uri	|String		|Uri of the document to open. (File:///C:/abc/test.txt) |
+|uri	|String		||
 
 ##### Returns
 |Type	|Description		|
@@ -87,7 +87,7 @@ provider.onDidChangeCustomDocument.fire(new CustomDocumentEditEvent(document));
 
 |Type	|Description		|
 |--			|--			|
-|Promise&lt;boolean&gt; or boolean	|Promise signaling that saving has completed.|
+|Promise&lt;boolean&gt; or boolean	||
 
 ### saveCustomDocumentAs
 
@@ -104,7 +104,7 @@ provider.onDidChangeCustomDocument.fire(new CustomDocumentEditEvent(document));
 
 |Type	|Description		|
 |--			|--			|
-|Promise&lt;boolean&gt; or boolean	|Promise signaling that saving has completed|
+|Promise&lt;boolean&gt; or boolean	||
 
 ### CustomDocumentEditEvent
 Event triggered by extensions to signal to the editor that an edit has occurred on an CustomDocument.

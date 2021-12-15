@@ -87,7 +87,7 @@ editor.then((editor)=>{
 
 |Type	|Description	|
 |--			|--		|
-|Promise&lt;void&gt;	|Promise.	|
+|Promise&lt;void&gt;	|Promise	|
 
 **Example**
 
@@ -144,7 +144,7 @@ The project object to which the document file belongs									|
 
 |Type						|Description		|
 |--										|--			|
-| Promise&lt;[TextLine](#TextLine)&gt;	|	A line.	|
+| Promise&lt;[TextLine](#TextLine)&gt;	|A Line		|
 
 ### lineFromPosition
 
@@ -158,7 +158,7 @@ The project object to which the document file belongs									|
 
 |Type						|Description		|
 |--										|--			|
-|Promise&lt;[TextLine](#TextLine)&gt;	|A line.	|
+|Promise&lt;[TextLine](#TextLine)&gt;	|A Line	|
 
 
 ## TextEdit

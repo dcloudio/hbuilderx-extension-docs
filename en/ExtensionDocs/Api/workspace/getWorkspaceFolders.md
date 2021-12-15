@@ -1,6 +1,6 @@
 # getWorkspaceFolders
 
-> Supported from HBuilderX 2.7.12+ version
+> Supported from HBuilderX 2.7.12+
 
 Get all project objects under the project explorer (not including closed projects)
 
@@ -11,7 +11,7 @@ No
 #### Returns
 |Type												|Description					|
 |--																|--						|
-|Promise&lt;Array&lt;[WorkspaceFolder](/ExtensionDocs/Api/other/WorkspaceFolder)&gt;&gt;|All projects under the project manager	|
+|Promise&lt;Array&lt;[WorkspaceFolder](/ExtensionDocs/Api/other/WorkspaceFolder)&gt;&gt;|	|
 
 #### Example
 ``` javascript
@@ -24,7 +24,7 @@ No
 
 #### WorkspaceFolder
 
-The project directory under the workspace, each project in the project manager on the left represents a WorkspaceFolder
+A workspace folder is one of potentially many roots opened by the editor. All workspace folders are equal which means there is no notion of an active or primary workspace folder.
 
 **Attribute list**
 

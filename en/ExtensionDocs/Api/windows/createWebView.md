@@ -129,7 +129,7 @@ Displays html content, similarly to an iframe.
 
 |Name	|Type	|Description		|
 |--			|--																	|--			|
-|localResource	|[Uri](/ExtensionDocs/Api/other/Uri)	|universal resource identifier |
+|localResource	|[Uri](/ExtensionDocs/Api/other/Uri)	|Universal resource identifier |
 
 **Returns**
 
