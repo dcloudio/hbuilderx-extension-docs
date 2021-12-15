@@ -38,7 +38,7 @@ Returns a text line denoted by the line number.
 
 |Type						|Description		|
 |--										|--			|
-| Promise&lt;[TextLine](#TextLine)&gt;	||
+| Promise&lt;[TextLine](#TextLine)&gt;	|A line|
 
 ## lineFromPosition
 Returns a text line denoted by the position.
@@ -51,7 +51,7 @@ Returns a text line denoted by the position.
 
 |Type						|Description		|
 |--										|--			|
-|Promise&lt;[TextLine](#TextLine)&gt;	|	|
+|Promise&lt;[TextLine](#TextLine)&gt;	|A line	|
 
 
 ## Range
