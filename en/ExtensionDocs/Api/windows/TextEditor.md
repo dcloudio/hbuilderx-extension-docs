@@ -25,7 +25,7 @@ Represents an editor that is attached to a document.
 
 |Type	|Description	|
 |--			|--		|
-|Promise&lt;void&gt;	|	|
+|Promise&lt;void&gt;	|Promise	|
 
 **Example**
 
@@ -59,7 +59,7 @@ Represents an editor that is attached to a document.
 
 |Type	|Description	|
 |--			|--		|
-|Promise&lt;void&gt;	|	|
+|Promise&lt;void&gt;	|Promise	|
 
 **Example**
 
@@ -87,7 +87,7 @@ editor.then((editor)=>{
 
 |Type	|Description	|
 |--			|--		|
-|Promise&lt;void&gt;	|	|
+|Promise&lt;void&gt;	|Promise	|
 
 **Example**
 
@@ -144,7 +144,7 @@ The project object to which the document file belongs									|
 
 |Type						|Description		|
 |--										|--			|
-| Promise&lt;[TextLine](#TextLine)&gt;	|		|
+| Promise&lt;[TextLine](#TextLine)&gt;	|A Line		|
 
 ### lineFromPosition
 
@@ -158,7 +158,7 @@ The project object to which the document file belongs									|
 
 |Type						|Description		|
 |--										|--			|
-|Promise&lt;[TextLine](#TextLine)&gt;	|	|
+|Promise&lt;[TextLine](#TextLine)&gt;	|A Line	|
 
 
 ## TextEdit
