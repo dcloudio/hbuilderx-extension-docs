@@ -1,3 +1,28 @@
+function getLang() {
+    // 获取浏览器语言
+    var lan = (navigator.systemLanguage || navigator.language).toLowerCase();
+    try {
+        if (lan.substr(0, 2) == 'zh') {
+            lan = "zh-cn";
+        } else {
+            lan = "en";
+        };
+    } catch (e) {
+        lan = "zh-cn";
+    };
+
+    var user_set_language = getCookie("user_set_language");
+    if (["en", "zh-cn", "zh-hant"].includes(user_set_language)) {
+        lan = user_set_language;
+    };
+
+    // 以防万一，获取的语言没有相应的目录
+    if (!["en", "zh-cn", "zh-hant"].includes(lan)) {
+        lan = 'zh-cn';
+    };
+    return lan;
+};
+
 (function () {
 
     /**

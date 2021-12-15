@@ -1,4 +1,4 @@
-# 跳转/转到定义
+# 跳转/转到定义@goto
 
 <!--
 keyword:goto,go-to,转到定义,跳转
@@ -16,17 +16,17 @@ HBuilderX拥有强大的跳转功能，如下:
 - 转到定义到分栏
 - .....
 
-### 上一个光标位置
+### 上一个光标位置@goto-previous-location
 
 在HBuilderX中，`Alt+Left` (MacOSX: `ctrl + -`)、点击工具栏上的`<`, 即可回到上一个光标位置。
 
-### 转到行
+### 转到行@goto-line
 
 转到行快捷键：`ctrl + G`
 
 <img src="/static/snapshots/tutorial/goto_line.jpg" style="zoom: 50%;border:1px solid #eee;border-radius: 25px;" />
 
-### 跳转到指定行列
+### 跳转到指定行列@goto-line-column
 
 > 仅支持HBuilderX 2.8.10+
 
@@ -44,7 +44,7 @@ HBuilderX拥有强大的跳转功能，如下:
 
 注意：文件，需要是绝对路径
 
-### 转到定义
+### 转到定义@goto-definition
 
 转到定义是非常常用的功能，普通编辑器不长于此，只能猜单词跳转。
 
@@ -56,7 +56,7 @@ HBuilderX有强大的语法分析引擎，可以准确的跳转定义位置。
 
 > 备注：支持切换【Ctrl+鼠标左键】或【Alt+鼠标左键】进行转到定义 （菜单【选择】，最后一个菜单）
 
-### 转到定义到分栏
+### 转到定义到分栏@goto-definition-to-column
 
 而HBuilderX还有一个特色是`转到定义到分栏`，`ctrl+alt+左键`，可以把一个定义处的代码打开在另一侧，方便共同查看
 

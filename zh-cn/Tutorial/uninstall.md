@@ -4,13 +4,13 @@
 keyword: uninstall,卸载
 -->
 
-## Windows卸载HBuilderX
+## Windows卸载HBuilderX@windows
 
 1. 删除数据目录和及注册表，进入HBuilderX安装目录，找到`reset.bat`，点击运行。此操作可以删除HBuilderX数据目录及注册表。
 2. 删除程序目录。windows, HBuilderX安装包是zip包，直接将解压的文件夹删除即可。
 3. 如桌面有HBuilderX快捷方式，直接删除桌面快捷方式即可
 
-## MacOSX删除HBuilderX
+## MacOSX删除HBuilderX@macosx
 
 #### 1. 删除应用程序
 

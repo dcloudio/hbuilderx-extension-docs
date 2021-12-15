@@ -1,11 +1,11 @@
-# cli 打包
+# cli 打包@pack
 
 > HBuilderX cli命令行工具, 僅適用於HBuilderX 3.1.5+版本
 
-### 前言
+## 基本使用@usage
 
 1. 首先, 需要啓動HBuilderX. (進入HBuilderX安裝目錄根目錄, 終端輸入`cli.exe open`)
-2. 編輯App打包配置文件(json文件), [App打包配置文件](/cli/README?id=cli打包配置文件)
+2. 編輯App打包配置文件(json文件), [App打包配置文件](/cli/pack?id=config)
 3. cli運行, 終端輸入
 ```shell
 cli pack --config 配置文件
@@ -29,7 +29,7 @@ localhost:MacOS hx$ ./cli pack --config /Users/hx/Documents/HBuilderProjects/測
     類型: iOS Appstore 下載地址: https://service.dcloud.net.cn/build/download/40c60580-7fea-11eb-af55-b9c5ccd8a1ee （注意該地址爲臨時下載地址，只能下載5次）當前應用 IDFA 已經開啓，在提交 AppStore 審覈時需要在後臺開啓 IDFA，[詳細操作查看](https://ask.dcloud.net.cn/article/36107)
 ```
 
-### 打包配置文件
+## 打包配置文件@config
 
 配置文件格式爲json,將下面內容保存在文件json文件，編碼爲utf-8，根據說明配置所需參數
 
@@ -85,14 +85,14 @@ localhost:MacOS hx$ ./cli pack --config /Users/hx/Documents/HBuilderProjects/測
 }
 ```
 
-### cli pack 參數
+## cli pack 參數@params
 
 > 以下參數選項, 均爲`cli pack`的選項.
 
 |參數名稱	    |描述	    |
 |--			|--			|
 |--help	|打包命令幫助		|
-|--config	|配置文件絕對路徑，配置文件配置，參考[配置文件](/cli/README?id=cli打包配置文件)	|
+|--config	|配置文件絕對路徑，配置文件配置，參考[配置文件](/cli/pack?id=config)	|
 |--project	|HBuilder X裏導入的項目名或絕對路徑		|
 |--platform	|配打包平臺,默認值android,取值有"android","ios"如果要打多個逗號隔開		|
 |--iscustom	|是否使用自定義基座 默認值false, true自定義基座 false自定義證書		|
@@ -118,11 +118,12 @@ localhost:MacOS hx$ ./cli pack --config /Users/hx/Documents/HBuilderProjects/測
 
 > 注 如果配置文件與配置參數都配置了相同參數，以命令行參數爲準
 
-### 命令行傳參示例
-
-**示例**
+## 命令行使用示例@example
 
 ```shell
+
+# 通过配置文件打包
+cli pack --config 配置文件
 
 # android打包： 項目名稱（apps）、傳統打包、包名（io.test)、打包證書（自有證書、別名：testalias、密碼123456）
 cli pack --project apps --platform android --safemode false --android.packagename io.test --android.androidpacktype 0 --android.certalias testalias --android.certfile /Users/hx/Desktop/cert/jdk13/test.key --android.certpassword 123456
@@ -130,3 +131,17 @@ cli pack --project apps --platform android --safemode false --android.packagenam
 # ios打包
 cli pack --project <projectname> --platform iOS --safemode false --iscustom true --ios.bundle <bundle> --ios.supporteddevice iPhone,iPad --ios.isprisonbreak false --ios.profile <profile> --ios.certfile <p12 file> --ios.certpassword <passwd>
 ```
+
+## 扩展@extend
+------
+
+#### 如何读取带有注释的manifest.json文件?@how-to-read-manifest
+
+**问题：** 有的用户希望打包前，动态修改`manifest.json`, 但是manifest.json带有注释，怎么办？
+
+**回答：** js或python都有可以读取带有注释JSON文件的`库`。
+
+|	语言|库	|
+|--	|--	|
+|	JavaScript| [strip-json-comments](https://www.npmjs.com/package/strip-json-comments)、[jsona](https://www.npmjs.com/package/jsona)	|
+|	Python | [commentjson](https://www.cnpython.com/pypi/commentjson)	|

@@ -1,6 +1,6 @@
 > `本文档仅适用于HBuilderX 2.7.12+版本`
 
-## 1. sftp/ftp插件简介
+## 1. sftp/ftp插件简介@about
 
 HBuilderX 2.7.12+版本，优化了SFTP/FTP插件
 

@@ -1,4 +1,4 @@
-# 跳轉/轉到定義
+# 跳轉/轉到定義@goto
 
 HBuilderX擁有強大的跳轉功能，如下:
 
@@ -12,17 +12,17 @@ HBuilderX擁有強大的跳轉功能，如下:
 - 轉到定義到分欄
 - .....
 
-### 上一個光標位置
+### 上一個光標位置@goto-previous-location
 
 在HBuilderX中，`Alt+Left` (MacOSX: `ctrl + -`)、點擊工具欄上的`<`, 即可回到上一個光標位置。
 
-### 轉到行
+### 轉到行@goto-line
 
 轉到行快捷鍵：`ctrl + G`
 
 <img src="/static/snapshots/tutorial/goto_line.jpg" style="zoom: 50%;border:1px solid #eee;border-radius: 25px;" />
 
-### 跳轉到指定行列
+### 跳轉到指定行列@goto-line-column
 
 > 僅支持HBuilderX 2.8.10+
 
@@ -40,7 +40,7 @@ HBuilderX擁有強大的跳轉功能，如下:
 
 注意：文件，需要是絕對路徑
 
-### 轉到定義
+### 轉到定義@goto-definition
 
 轉到定義是非常常用的功能，普通編輯器不長於此，只能猜單詞跳轉。
 
@@ -52,7 +52,7 @@ HBuilderX有強大的語法分析引擎，可以準確的跳轉定義位置。
 
 > 備註：支持切換【Ctrl+鼠標左鍵】或【Alt+鼠標左鍵】進行轉到定義 （菜單【選擇】，最後一個菜單）
 
-### 轉到定義到分欄
+### 轉到定義到分欄@goto-definition-to-column
 
 而HBuilderX還有一個特色是`轉到定義到分欄`，`ctrl+alt+左鍵`，可以把一個定義處的代碼打開在另一側，方便共同查看
 

@@ -1,12 +1,12 @@
 # Uninstall
 
-## Uninstall HBuilderX on Windows
+## Uninstall HBuilderX on Windows@windows
 
 1. Delete the data directory and registry. Enter the HBuilderX installation directory, find `reset.bat` and click it to run. This operation will delete the HBuilderX data directory and registry.
 2. Delete the program directory. HBuilderX installation package is a zip package, just delete the unzipped folder directly.
 3. If there is a HBuilderX shortcut on the desktop, just delete it.
 
-## Uninstall HBuilderX on MacOSX
+## Uninstall HBuilderX on MacOSX@macosx
 
 #### 1. Delete application
 

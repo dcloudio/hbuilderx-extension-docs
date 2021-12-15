@@ -1,4 +1,4 @@
-# 查找替换
+# 查找替换@find-replace
 
 <!--
 keyword:查找,替换,find,replace
@@ -8,7 +8,7 @@ keyword:查找,替换,find,replace
 - 查找替换字符串（按文件、按项目、按目录），且支持正则
 - 查找索引符号
 
-## 快速查找文件
+## 快速查找文件@find-files
 
 `ctrl+p (MacOSX: ⌘P)`，可以定位到搜索框，输入文件名，快速打开任何文件。 
 
@@ -20,20 +20,20 @@ keyword:查找,替换,find,replace
 
 <img src="/static/snapshots/tutorial/find/find_file_2.jpg" style="zoom: 48%;border-radius: 24px;border:1px solid #eee;"/>
 
-## 查找索引符号
+## 查找索引符号@find-symbol
 
 在当前文件，按下`Ctrl + Shift + O`, 可以查找索引符号。
 
 <img src="/static/snapshots/tutorial/find/find_symbol.jpg" style="zoom: 48%;border-radius: 24px;border:1px solid #eee;"/>
 
-## 查找字符串
+## 查找字符串@find-string
 
 - 范围：字符串查找，支持`按当前文件`、`按目录`、`按左侧选中`、`按当前项目`、`按所有项目`进行搜索查找。
 - 功能：字符串查找，支持`整词匹配`、`正则匹配`、`大小写匹配`，且支持`排除`特定目录
 
 <img src="/static/snapshots/tutorial/find/find_str.jpg" style="zoom: 45%;border-radius: 24px;border:1px solid #eee;"/>
 
-## 区域内搜索
+## 区域内搜索@find-in-selection
 
 > 仅支持HBuilderX 3.1.15+版本
 

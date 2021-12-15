@@ -1,4 +1,4 @@
-# 快捷键
+# 快捷键@keybindings
 
 HBuilderX, 可以让您直接从键盘执行大多数任务。
 
@@ -34,6 +34,6 @@ HBuilderX，所有键盘快捷键都可以通过`keybindings.json`文件进行�
 
 注意：MacoSX系统，ctrl对应的是command
 
-## HBuilderX Command列表
+## HBuilderX Command列表@commands
 
 [HBuilderX Command命令列表](Tutorial/Other/command)

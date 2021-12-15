@@ -1,11 +1,11 @@
-# Install Simulator
+# Install Simulator@Simulator
 
 > The Android simulator can be installed on MacOSX and Windows; the iOS simulator can only be installed on MacOSX.
 
 - [Install iOS Simulator](/Tutorial/App/installSimulator?id=ios模拟器)
 - [Install Android Simulator](/Tutorial/App/installSimulator?id=android模拟器)
 
-## iOS Simulator
+## iOS Simulator@ios
 
 On MacOSX，please install [xcode](https://developer.apple.com/xcode/) first before install iOS simulator; or search for xcode in the App store to complete the installation.
 
@@ -17,7 +17,7 @@ As in the above window, click [Locations], click [Command Line Tools]
 
 <img src="/static/snapshots/tutorial/macosx/xcodeCommandLineTools.jpg"  style="border: 1px solid #eee; zoom:45%;border-radius: 25px;"/>
 
-## Run the app on the iOS simulator
+## Run the app on the iOS simulator@run-app-android-emulator
 
 In the project manager, select the project and click the run icon in the toolbar, as shown in the figure below:
 
@@ -27,7 +27,7 @@ The effect of running the app project to the iOS simulator is as follows:
 
 <img src="/static/snapshots/app/app_ios_simulator_run.jpg"  style="border: 1px solid #eee; zoom:40%;border-radius: 25px;"/>
 
-## Android Simulator
+## Android Simulator@run-app-ios-simulator
 
 There are many Android simulator on the market, please search one and install by yourself.
 
@@ -37,7 +37,7 @@ The android studio simulator is shown below:
 
 <img src="/static/snapshots/tutorial/macosx/androidSimulator.jpg"  style="border: 1px solid #eee; zoom:45%;border-radius: 25px;"/>
 
-## Run the app on the Android simulator
+## Run the app on the Android simulator@run-app-android-emulator
 
 After the Android simulator is started, HBuilderX will recognize it as an Android phone with the name `emulator-xxxx`, where xxxx is the id of the emulator as shown below:
 

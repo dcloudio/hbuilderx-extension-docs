@@ -1,4 +1,8 @@
-# MacOSX安装HBuilderX
+# MacOSX安装HBuilderX@install
+
+<!--
+keyword:安装,安装HBuilderX,下载
+-->
 
 ## 下载@download
 

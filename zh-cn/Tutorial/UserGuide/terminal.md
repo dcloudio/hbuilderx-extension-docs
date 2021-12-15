@@ -1,4 +1,8 @@
-# 终端
+# 终端@terminal
+
+<!--
+keyword: 终端,内置终端,命令行工具,terminal,cmd
+-->
 
 ## 安装内置终端
 

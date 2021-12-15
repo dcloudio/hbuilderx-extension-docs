@@ -1,4 +1,4 @@
-## eslint-vue简介
+## eslint-vue简介@about
 
 <!--
 keyword: 语法校验,语法检查,eslint

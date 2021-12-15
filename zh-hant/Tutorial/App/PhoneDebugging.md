@@ -1,4 +1,4 @@
-## 前言
+## 前言@foreword
 
 > 首先保證`iTunes`或`Android手機助手`（如360手機助手）可以正常連接手機。
 
@@ -20,7 +20,7 @@
 
 下面把各種常見FAQ列出，大家可按圖索驥。
 
-## 1. 沒有運行到手機的菜單
+## 1. 沒有運行到手機的菜單@no_menu
 ---
 > 真機運行只能運行App項目，選中App項目或將焦點放在將要運行的App項目的文件編輯器上
 
@@ -28,7 +28,7 @@ HBuilderX支持web項目和app項目，項目前面是有圖標的，W表示web�
 
 HBuilderX支持項目類型較多，只有`uni-app`、`5+app`、`wap2app`可以真機運行。他們都會在項目根目錄下有個`manifest.json`文件（uni-cli項目會在src目錄下有manifest.json）。
 
-## 2. 檢查手機設置
+## 2. 檢查手機設置@check
 ---
 特別注意：Windows連接Android手機，一定要確保電腦已安裝相應的手機驅動。
 
@@ -38,17 +38,17 @@ HBuilderX支持項目類型較多，只有`uni-app`、`5+app`、`wap2app`可以�
 4. Android5.0及以上系統，不要使用訪客模式。這種模式下無法成功運行。
 5. 部分手機如小米，有usb安裝應用的權限設置，需在手機上允許通過usb安裝應用。不同rom的界面不一樣，請自行百度你的手機打開usb安裝應用的方式。
 
-## 3. Mac 連接手機/模擬器說明
+## 3. Mac 連接手機/模擬器說明@macosx
 ---
 分Android和iOS手機分別列出排查方式：
 
-### 3.1 Mac: iOS真機
+### 3.1 Mac: iOS真機@mac-iphone
 
 1. 確認手機已通過數據線連接電腦
 2. 確認iTunes能正常連接手機
 3. 如手機屏幕彈出需信任本計算機的詢問，請同意該授權
 
-### 3.2 Mac: iOS模擬器
+### 3.2 Mac: iOS模擬器@mac-iOS-Simulator
 
 1. Xcode必須安裝在應用程序（Application）中
 2. 首先確認Xcode（版本必須是6.0及以上版本）已安裝並能正常啓動模擬器
@@ -56,7 +56,7 @@ HBuilderX支持項目類型較多，只有`uni-app`、`5+app`、`wap2app`可以�
 
 <img src="/static/snapshots/tutorial/ios_simulator.png" />
 
-### 3.2 Mac: 連接Android手機
+### 3.2 Mac: 連接Android手機@mac-android
 
 1. 關於本機(指Mac系統的關於本機，非手機) --> 系統報告 -> usb  -> 你所連接的device --> 廠商ID或者供應商ID(Vendor ID)
 2. 在終端執行如下命令：echo xxxxxx >> ~/.android/adb_usb.ini （“xxxxxx”爲廠商ID或者供應商ID(Vendor ID)，有些系統下echo命令並不能正確寫入文件，可在~/.android/目錄下修改或新建adb_usb.ini添加xxxxxx）
@@ -67,9 +67,9 @@ HBuilderX支持項目類型較多，只有`uni-app`、`5+app`、`wap2app`可以�
 7. 在adbs目錄下運行`./adb kill-server`重試。
 8. 重啓電腦重試。
 
-## 4. Windows 連接手機/模擬器說明
+## 4. Windows 連接手機/模擬器說明@windows
 ---
-### 4.1 Windows: 連接Android手機
+### 4.1 Windows: 連接Android手機@windows-android
 
 #### 4.1.1 驅動：
 
@@ -122,7 +122,7 @@ HBuilderX支持項目類型較多，只有`uni-app`、`5+app`、`wap2app`可以�
 - HBuilderX的adb目錄位置：plugins/launcher/tools/adbs目錄（MAC下爲`/Applications/HBuilderX-Alpha.app/Contents/HBuilderX/plugins/launcher/tools/adbs`目錄）
 替換版本前，將默認版本的adb.exe備份下。然後把1.0.31版的adb.exe拷貝出來替換主目錄下的exe。
 
-### 4.2 Windows: 連接iOS手機
+### 4.2 Windows: 連接iOS手機@windows-ios
 
 1. 確認手機已通過數據線連接電腦
 2. 確認已安裝iTunes，若未安裝點擊[itunes歷史版本下載地址](https://mydown.yesky.com/pcsoft/33491427/versions/), 請下載12.9.4.102之前的版本
@@ -146,7 +146,7 @@ iTunes12.1起更改了接口，會造成無法連接：
   ①、HBuilderX菜單：工具 - 插件安裝，打開插件安裝界面，選擇【iOS連接插件】（HBuilderX叫做真機運行插件）並安裝，安裝完並重啓HBuilderX，嘗試是否解決；
   ②、安裝最新版本的iTools，重啓HBuilderX。
 
-## 5. 其它問題
+## 5. 其它問題@other
 ---
 #### Q1: 能檢測到手機，但處於置灰狀態無法點擊
 

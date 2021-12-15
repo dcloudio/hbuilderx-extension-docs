@@ -1,10 +1,10 @@
-## User Interface
+## User Interface@userinterface
 
 Like other editors, HBuilderX take a common user interface and layout. The project explorer is displayed on the left and the content of the file is displayed on the right.
 
 <img src="/static/snapshots/tutorial/userinterface/HBuilderX_en.png" style="zoom:40%;border-radius: 25px;border: 1px solid #eee;" />
 
-## Basic Layout
+## Basic Layout@basic-layout
 
 The UI is divided into areas:
 
@@ -16,7 +16,7 @@ The UI is divided into areas:
 
 Each time you start HBuilderX, it opens up in the same state it was in when you last closed it.
 
-## Minimap
+## Minimap@minimap
 
 A Minimap (code outline) gives you a high-level overview of your source code, which is useful for quick navigation and code understanding.
 
@@ -28,7 +28,7 @@ Notes：
 - You can right-click on the far right side of the editor to close or open the mini map.
 - [Settings - Editor], supports to change the pixel width of the mini map, the default value is 100
 
-## Outline View
+## Outline View@outline
 
 The outline on the left is a powerful tool for navigating large documents.
 
@@ -38,7 +38,7 @@ Click the outline icon in the bottom status bar to open the outline view. The sh
 
 <img src="/static/snapshots/tutorial/userinterface/outline_en.png" style="zoom:45%;border: 1px solid #eee; border-radius: 20px;" />
 
-## Built-in Explorer
+## Built-in Explorer@Built-in-Explorer
 
 > Here is just a brief introduction to the built-in resource manager, [Details](Tutorial/UserGuide/built-in-explorer)
 
@@ -52,7 +52,7 @@ Compared with the resource manager that comes with OS, HBuilderX resource manage
 
 <img src="/static/snapshots/tutorial/explorer/explorer_1_en.gif" style="zoom:78%; border: 1px solid #eee;" />
 
-## editor layout
+## editor layout@editor-layout
 
 By default, editor groups are laid out in vertical columns.
 
@@ -62,7 +62,7 @@ Top Menu "view -> layout", There is a set of predefined editor layouts。
 
 <img src="/static/snapshots/tutorial/userinterface/layout_en.png" style="zoom:45%;border: 1px solid #eee; border-radius: 20px;" />
 
-## Single Window
+## Single Window@single-window
 
 Single Project window: It is the project explorer, only one project is displayed。
 
