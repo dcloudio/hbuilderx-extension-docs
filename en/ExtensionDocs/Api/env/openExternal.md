@@ -6,13 +6,13 @@ Opens a link externally using the default application. Depending on the used sch
 
 |parameter name	|Type	|Description			|
 |--			|--			|--				|
-|uri		|String		|	|
+|uri		|String		| External link address	|
 
 #### Returns
 
 |Type				|Description				|
 |--						|--					|
-|Promise&lt;Boolean&gt;	|	|
+|Promise&lt;Boolean&gt;	|A promise indicating if open was successful.	|
 
 #### Example
 ``` javascript
