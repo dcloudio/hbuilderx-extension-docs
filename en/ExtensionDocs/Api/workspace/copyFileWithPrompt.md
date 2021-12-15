@@ -14,7 +14,7 @@ Copy the specified file or folder to the target folder
 
 |Type		|Description		|
 |--						|--			|
-|Promise&lt;String&gt;	|	|
+|Promise&lt;String&gt;	|Result (failed or successful or cancelled)	|
 
 Returns:
 
@@ -22,7 +22,7 @@ Returns:
 |--		|--										|
 |-1		|Failed								|
 |0		|Successful								|
-|1		|Operation canceled								|
+|1		|Operation cancelled								|
 
 
 #### Example
