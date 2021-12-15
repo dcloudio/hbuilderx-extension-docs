@@ -10,7 +10,7 @@ No parameters
 
 |Type				|Description									|
 |--						|--										|
-|Promise&lt;[TextEditor](/ExtensionDocs/Api/windows/TextEditor)&gt;	||
+|Promise&lt;[TextEditor](/ExtensionDocs/Api/windows/TextEditor)&gt;	|Return to the currently active editor|
 
 #### Example
 
