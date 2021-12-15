@@ -1,6 +1,6 @@
 # onDidChangeWorkspaceFolders
 
-> Supported from HBuilderX 2.7.10+ version
+> Supported from HBuilderX 2.7.10+
 
 An event that is emitted when a workspace folder is added or removed.
 
@@ -33,7 +33,7 @@ An event that is emitted when a workspace folder is added or removed.
 
 ## WorkspaceFoldersChangeEvent
 
-> An event that is emitted when a workspace folder is added or removed.
+> An event describing a change to the set of workspace folders.
 
 **Attribute list**
 
