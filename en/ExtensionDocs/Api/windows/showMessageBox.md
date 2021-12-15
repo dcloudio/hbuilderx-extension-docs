@@ -13,7 +13,7 @@ Show a dialog box for selection in the window
 
 |Type		|Description									|
 |--						|--										|
-|Promise&lt;String&gt;	|	|
+|Promise&lt;String&gt;	|A promise that resolves to the selected resources or undefined.	|
 
 
 #### Dialog properties
