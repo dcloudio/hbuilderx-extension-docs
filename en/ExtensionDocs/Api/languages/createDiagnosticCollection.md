@@ -61,7 +61,7 @@ Create a diagnostics collection that can be used to display wavy lines in the er
 
 |Type	|Description	|
 |--			|--		|
-|Promise&lt;void&gt;	|	|
+|Promise&lt;void&gt;	|Promise	|
 
 ##### Example
 
