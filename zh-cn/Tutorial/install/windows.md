@@ -19,7 +19,7 @@ HBuilderX，Windows为zip包，解压后才能使用。
 
 <img src="/static/snapshots/tutorial/install_windows.png" />
 
-### 错误的打开方式@@wrong-approach
+### 错误的打开方式@wrong-approach
 
 1. 直接双击，在压缩包中，打开`HBuilderX.exe`是错误的。
 2. 从压缩包中，把`HBuilderX.exe`拖到桌面也是错误的。
