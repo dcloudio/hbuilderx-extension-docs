@@ -1,5 +1,8 @@
-# TextEditor
-文本编辑器对象
+# TextEditor - 文本编辑器对象 @TextEditor
+------
+
+TextEditor：文本编辑器对象，为API [hx.window.getActiveTextEditor()](/ExtensionDocs/Api/windows/getActiveTextEditor) 返回值的详细说明文档。
+
 
 ## TextEditor
 
@@ -101,7 +104,7 @@ editorPromise.then((editor)=>{
 ```
 
 ## TextDocument
-
+----- 
 > 编辑器打开的文档文件
 
 ### 属性列表
@@ -130,6 +133,18 @@ editorPromise.then((editor)=>{
 |--			|--			|
 |String		|文本字符串	|
 
+**示例**
+```js
+let activeEditor = hx.window.getActiveTextEditor();
+activeEditor.then(function(editor) {
+  // 获取指定区域内的文本
+  let text = editor.document.getText({
+    start: 3755, 
+    end: 3802
+  });
+  console.log(text);
+});
+```
 
 ### lineAt
 
@@ -145,6 +160,18 @@ editorPromise.then((editor)=>{
 |--										|--			|
 | Promise&lt;[TextLine](#TextLine)&gt;	|文本行对象	|
 
+**示例**
+```js
+let activeEditor = hx.window.getActiveTextEditor();
+activeEditor.then(function(editor) {
+  // 行号是从0开始
+  let linePromise = editor.document.lineAt(2);
+  linePromise.then((line)=>{
+    console.log("TextLine is:", line.text);
+  });
+});
+```
+
 ### lineFromPosition
 
 > 根据光标位置获取光标所在行。
@@ -159,10 +186,19 @@ editorPromise.then((editor)=>{
 |--										|--			|
 |Promise&lt;[TextLine](#TextLine)&gt;	|文本行对象	|
 
-
+**示例**
+```js
+let activeEditor = hx.window.getActiveTextEditor();
+activeEditor.then(function(editor) {
+    let linePromise = editor.document.lineFromPosition(editor.selection.active);
+    linePromise.then((line)=>{
+        console.log("Line info:", line.text, "开始位置：", line.start, "结束位置：", line.end);
+    });
+});
+```
 
 ## TextEdit
-
+----- 
 TextEdit: 文档编辑
 
 ### TextEdit 属性列表
@@ -200,7 +236,7 @@ Range: 文本区域
 
 ## TextLine
 
-TextLine: 文档中的某一行
+TextLine: 文档中的某一行， 为[editor.document.lineAt](/ExtensionDocs/Api/windows/TextEditor?id=lineat)、[editor.document.lineFromPosition](/ExtensionDocs/Api/windows/TextEditor?id=linefromposition) 返回值。
 
 **属性列表**
 

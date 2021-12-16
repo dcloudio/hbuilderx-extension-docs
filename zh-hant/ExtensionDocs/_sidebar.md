@@ -7,7 +7,7 @@
     * [狀態欄消息](/ExtensionDocs/Api/windows/StatusBar.md)
     * [showMessageBox](/ExtensionDocs/Api/windows/showMessageBox.md)
     * [showQuickPick](/ExtensionDocs/Api/windows/showQuickPick.md)
-    * [getactivetexteditor](/ExtensionDocs/Api/windows/getActiveTextEditor.md)
+    * [getActiveTextEditor](/ExtensionDocs/Api/windows/getActiveTextEditor.md)
     * [showInputBox](/ExtensionDocs/Api/windows/showInputBox.md)
     * [createOutputChannel](/ExtensionDocs/Api/windows/createOutputChannel.md)
     * [createTreeView](/ExtensionDocs/Api/windows/createTreeView.md)

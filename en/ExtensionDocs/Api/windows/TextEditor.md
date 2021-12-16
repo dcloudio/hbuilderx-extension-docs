@@ -1,5 +1,10 @@
 # TextEditor
+
+------
 Represents an editor that is attached to a document.
+
+For apis [hx. Window. GetActiveTextEditor ()] (/ ExtensionDocs/API/Windows/getActiveTextEditor) return values.
+
 
 ## TextEditor
 
@@ -131,6 +136,17 @@ The project object to which the document file belongs									|
 |--			|--			|
 |String		|The text inside the provided range or the entire text.	|
 
+**Example**
+```js
+let activeEditor = hx.window.getActiveTextEditor();
+activeEditor.then(function(editor) {
+  let text = editor.document.getText({
+    start: 3755, 
+    end: 3802
+  });
+  console.log(text);
+});
+```
 
 ### lineAt
 
@@ -146,6 +162,18 @@ The project object to which the document file belongs									|
 |--										|--			|
 | Promise&lt;[TextLine](#TextLine)&gt;	|A Line		|
 
+**Example**
+```js
+let activeEditor = hx.window.getActiveTextEditor();
+activeEditor.then(function(editor) {
+  // The row numbers start at 0
+  let linePromise = editor.document.lineAt(2);
+  linePromise.then((line)=>{
+    console.log("TextLine is:", line.text);
+  });
+});
+```
+
 ### lineFromPosition
 
 > Returns a text line denoted by the position. 
@@ -160,6 +188,16 @@ The project object to which the document file belongs									|
 |--										|--			|
 |Promise&lt;[TextLine](#TextLine)&gt;	|A Line	|
 
+**Example**
+```js
+let activeEditor = hx.window.getActiveTextEditor();
+activeEditor.then(function(editor) {
+    let linePromise = editor.document.lineFromPosition(editor.selection.active);
+    linePromise.then((line)=>{
+        console.log("Line info:", line.text, "start：", line.start, "end：", line.end);
+    });
+});
+```
 
 ## TextEdit
 
