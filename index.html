@@ -18,7 +18,7 @@
 
     <body>
         <div id="app">Please wait...</div>
-        <script src="/static/js/footnavbar.js?v=20211216" type="text/javascript" charset="utf-8"></script>
+        <script src="/static/js/footnavbar.js" type="text/javascript" charset="utf-8"></script>
         <script>
             // 获取浏览器语言
             var lan = getLang()
@@ -40,16 +40,6 @@
             };
             console.log('欢迎使用HBuilderX');
             console.log('------- HBuilderX文档 语言设置 -------', basePath, lan);
-
-            // 设置底部导航
-            let FootLeftNavBar, FootRightNavBar,CompanyInformation = '';
-            try{
-                FootLeftNavBar = initFootLeftNavBar(lan);
-                FootRightNavBar = initFootRightNavBar(lan);
-                CompanyInformation = getCompanyInformation(lan);
-                CertInfomation = getCertInfomation(lan);
-            }catch(e){};
-
             // docsify config start
             window.$docsify = {
                 alias: alias,
@@ -100,18 +90,28 @@
                                 `<a href="https://github.com/dcloudio/hbuilderx-extension-docs/tree/master/en" target="_blank">在 Github 上翻译页面！</a>` +
                                 `
                                 <div id="footNavBox">
-                                    <div class="footNav">
-                                        <div id="footNavClassify">${FootLeftNavBar}</div>
-                                        <div id="aboutusBox">${FootRightNavBar}</div>
-                                    </div>
-                                    <div class="hbLogo"></div>
-                                    <div class="companyBox">
-                                        ${CompanyInformation}
-                                    </div>
-                                    <div class="beianBox">
-                                        ${CertInfomation}
-                                    </div>
+                                	    <div class="footNav">
+                                  <div id="footNavClassify">${initFootLeftNavBar()}</div>
+                                	      <div id="aboutusBox">${initFootRightNavBar()}</div>
+                                	    </div>
+                                	    <div class="hbLogo"></div>
+                                <div class="companyBox">
+                                	<span class="companyInfo">DCloud 即数字天堂（北京）网络技术有限公司是 </span>
+                                	<div style="display: inline;margin-left:5px;" class="companyInfo">
+                                		<a href="//www.w3.org/" target="_blank" class="w3c"> W3C </a>成员及
+                                		<a href="//www.html5plus.org/" target="_blank" class="html5">HTML5中国产业联盟 </a>发起单位
+                                	</div>
                                 </div>
+                                <div class="beianBox">
+                                  <a id="domain" class="beian" href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">${changeDomain()}</a>
+                                  <div class="domainImgBox">
+                                    <img class="domainImg" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-f184e7c3-1912-41b2-b81f-435d1b37c7b4/769929a3-65eb-4d11-815d-84f88197a152.png">
+                                    <a class="beian" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802035340" target="_blank">京公网安备：11010802035340号</a>
+                                  </div>
+                                  
+                                  <span class="anbaoInfo">国家信息安全等级保护三级，证书编号：11010813802-20001</span>
+                                </div>
+                                	  </div>
                                 `;
                         });
                     }
@@ -125,6 +125,9 @@
               try {
                   if (lan.substr(0, 2) == 'zh') {
                       lan = "zh-cn";
+                      // if (!["zh", "zh_cn", "zh-cn", "zh-hans"].includes(lan)) {
+                      //     lan = "zh-hant";
+                      // };
                   } else {
                       lan = "en";
                   };
