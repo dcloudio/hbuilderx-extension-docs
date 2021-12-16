@@ -13,10 +13,12 @@
         <link rel="shortcut icon" type="image/x-icon" href="//hx.dcloud.net.cn/static/favicon/favicon.png">
         <link rel="stylesheet" href="/static/vue.css">
         <link rel="stylesheet" href="/static/index.css?v=20211203">
+        <link rel="stylesheet" type="text/css" href="/static/css/footnavbar.css" />
     </head>
 
     <body>
         <div id="app">Please wait...</div>
+        <script src="/static/js/footnavbar.js" type="text/javascript" charset="utf-8"></script>
         <script>
             // 获取浏览器语言
             var lan = getLang()
@@ -85,7 +87,32 @@
                             return html + '<hr align=center color=#987cb9 size=1>发现错误？想参与编辑？<a href=' +
                                 url + ' target=_blank> 在 GitHub 上编辑此页面！</a>' +
                                 '<br/><br/><span>HBuilderX插件开发文档尚未翻译，欢迎参与贡献。<span>' +
-                                `<a href="https://github.com/dcloudio/hbuilderx-extension-docs/tree/master/en" target="_blank">在 Github 上翻译页面！</a>`;
+                                `<a href="https://github.com/dcloudio/hbuilderx-extension-docs/tree/master/en" target="_blank">在 Github 上翻译页面！</a>` +
+                                `
+                                <div id="footNavBox">
+                                	    <div class="footNav">
+                                  <div id="footNavClassify">${initFootLeftNavBar()}</div>
+                                	      <div id="aboutusBox">${initFootRightNavBar()}</div>
+                                	    </div>
+                                	    <div class="hbLogo"></div>
+                                <div class="companyBox">
+                                	<span class="companyInfo">DCloud 即数字天堂（北京）网络技术有限公司是 </span>
+                                	<div style="display: inline;margin-left:5px;" class="companyInfo">
+                                		<a href="//www.w3.org/" target="_blank" class="w3c"> W3C </a>成员及
+                                		<a href="//www.html5plus.org/" target="_blank" class="html5">HTML5中国产业联盟 </a>发起单位
+                                	</div>
+                                </div>
+                                <div class="beianBox">
+                                  <a id="domain" class="beian" href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">${changeDomain()}</a>
+                                  <div class="domainImgBox">
+                                    <img class="domainImg" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-f184e7c3-1912-41b2-b81f-435d1b37c7b4/769929a3-65eb-4d11-815d-84f88197a152.png">
+                                    <a class="beian" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802035340" target="_blank">京公网安备：11010802035340号</a>
+                                  </div>
+                                  
+                                  <span class="anbaoInfo">国家信息安全等级保护三级，证书编号：11010813802-20001</span>
+                                </div>
+                                	  </div>
+                                `;
                         });
                     }
                 ]

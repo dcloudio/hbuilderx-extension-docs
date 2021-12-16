@@ -1,0 +1,308 @@
+
+/* 通用底部导航栏---移动端 */
+@media screen and (max-width:750px) {
+	#footNavClassify {
+	  width:120px;
+	}
+  #aboutusBox {
+	  width: 250px;
+    max-height: 650px;
+  }
+	.navLine{
+	  width:80%;
+	}
+  .footNavItem {
+    margin-right: 10px;
+  } 
+  .companyBox{
+    flex-direction: column;
+     align-items: center;
+  }
+  .anbaoInfo{
+    width: 330px;
+    text-align: center;
+    padding-bottom: 30px;
+  }
+  .companyInfo, .anbaoInfo {
+    margin-left: 0px;
+  }
+  .beianBox {
+    flex-direction: column;
+  }
+  .beian{
+    margin: 5px 0;
+  }
+  .domainImgBox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .hbLogo{
+    margin: 40px 0 20px 0;
+  }
+  .navItemDetail {
+    width: 100px;
+    margin-right: 0px;
+  }
+
+  .navItemDetailBox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  #moreInfo {
+    flex-direction: column;
+    margin: 20px 20px 0 20px;
+  }
+}
+
+/* 通用底部导航栏---ipad */
+@media screen and (min-width:750px) and (max-width:1200px) {
+  #footNavClassify {
+    width:160px;
+  }
+  .footNav {
+    margin:30px 10px;
+  }
+  #aboutusBox {
+    max-height:460px;
+	 width: 650px;
+  }
+  .footNavItem {
+	  width: 200px;
+    margin-right:10px;
+  }
+  .navLine{
+    width:70%;
+  }
+  .beianBox {
+    flex-direction: column;
+  }
+  .beian{
+    margin: 10px 0;
+  }
+  .domainImgBox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .companyInfo, .anbaoInfo {
+    margin-left:0px;
+  }
+  .anbaoInfo{
+    text-align: center;
+    padding-bottom: 30px;
+  }
+  .footNav {
+    margin: 0 20px;
+  }
+
+  .navItemDetail {
+    width: 140px;
+    margin-right: 25px;
+  }
+
+  /* .footNavItem {
+    width: 100%;
+  } */
+  .hbLogo{
+    margin: 50px 0 30px 0;
+  }
+  #moreInfo {
+    flex-direction: column;
+    margin: 20px 20px 0 20px;
+  }
+}
+
+/* 通用底部导航栏---pc*/
+@media screen and (min-width:1200px) {
+  #footNavClassify {
+    width: 300px;
+    margin-right: 30px;
+  }
+  #footNavBox {
+    padding-bottom: 45px;
+  }
+  .footNav {
+    margin:30px 10px;
+  }
+  .footNavItem {
+    margin-right:50px;
+  }
+  .navLine{
+    width:100%;
+  }
+  .navItemDetailBox {
+    max-height: 285px;
+  }
+  #aboutusBox {
+		width: 800px;
+		max-height: 370px;
+  }
+  .companyInfo, .anbaoInfo {
+    margin-left: 20px;
+  }
+  .beianBox {
+    flex-direction: row;
+  }
+  .beian{
+    margin:10px 0;
+  }
+  .hbLogo{
+    margin: 50px 0 30px 0;
+  }
+  .navItemDetail {
+    width: 135px;
+  }
+
+  #moreInfo {
+    flex-direction: row;
+    margin: 5px 20px 0 20px;
+  }
+}
+
+/* 通用底部导航栏---公共*/
+#footNavBox {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  background: #FBFBFB;
+  box-shadow: rgb(0 0 0 / 6%) 0px -20px 15px -15px;
+  /* border: red solid 1px; */
+}
+
+
+.footNav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#footNavClassify {
+   /* border: green solid 1px; */
+}
+
+#aboutusBox {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.aboutItemDetailBox {
+  display: flex;
+  flex-direction: column;
+  max-height: 300px;
+  flex-wrap: wrap;
+}
+
+.navItemDetailBox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+
+.footNavItem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+.navLine{
+  height:1px;
+  background: #E1E1E1;
+  margin-bottom: 15px;
+}
+.navItemTitle {
+  display: flex;
+  width: 100px;
+  height: 35px;
+  line-height: 35px;
+  font-size: 16px;
+  font-family: SourceHanSansCN-Regular serif;
+  font-weight: bold;
+  color: #414141;
+}
+
+.navItemDetail {
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  color: #3C3C3C !important;
+  text-align: left;
+  margin-bottom:12px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  font-family: SourceHanSansCN-Regular serif;
+  
+}
+
+.navItemDetail:hover {
+  color: #42b983 !important;
+  font-weight:600;
+  transition: all 0.3s;
+}
+
+.hbLogo{
+  display: inline-block;
+  width: 160px;
+  height: 25px;
+  background: url('https://bjetxgzv.cdn.bspapp.com/VKCEYUGU-dc-site/d141de00-607f-11eb-8a36-ebb87efcf8c0.svg') no-repeat center;
+}
+.companyBox{
+  display: flex;
+  justify-content: center;
+}
+
+.companyInfo, .anbaoInfo {
+  font-size: 14px;
+  color: #565656!important;
+  font-family: SourceHanSansCN-Regular serif;
+}
+#footNavBox .w3c{
+  text-decoration: none;
+  color: #007aff!important;
+  font-weight: 800!important;
+}
+#footNavBox .html5{
+  text-decoration: none;
+  color: #fb6f18!important;
+  font-weight: 800!important;
+}
+.domainImgBox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+.beianBox {
+  display: flex;
+  align-items: center;
+}
+
+.domainImg {
+  width: 20px;
+  height: 20px;
+  margin-left: 20px;
+  margin-right: 5px;
+}
+
+.beian {
+  font-size: 14px;
+  text-decoration: none;
+  color: #007aff !important;
+  cursor: pointer;
+}
+
+.beian:hover {
+  color: #333333 !important;
+  transition: all 0.3s;
+}
