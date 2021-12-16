@@ -2,9 +2,9 @@
 
 An event that is emitted when a text document will be saved to disk.
 
-注意该事件是同步调用,会阻塞用户界面,为了避免长时间阻塞界面，目前设置了超时机制，超时时间为2s。
+Note: This event is a synchronous call and will block the UI. In order to avoid blocking the UI for a long time, a timeout mechanism is set and the timeout period is 2s.
 
-> 注意你在该事件回调中执行的逻辑不应该占用太长的时间，如果超时将会出现一些不可预测的问题。
+> Note that the logic you execute in the event callback should not take too long. If it times out, there will be some unpredictable problems.
 
 ## Introduce
 
@@ -18,7 +18,7 @@ An event that is emitted when a text document will be saved to disk.
 
 |Type	|Description				|
 |--			|--					|
-|[Disposable](/ExtensionDocs/Api/other/Disposable)	|该事件回调的销毁器，可将该对象放置到插件的context.subscriptions数组内，插件卸载时，将会自动注销该`事件回调`	|
+|[Disposable](/ExtensionDocs/Api/other/Disposable)	|The destroyer of the event callback can place the object in the context.subscriptions array of the extension. When the extension is uninstalled, the event callback will be automatically cancelled.	|
 
 **Example**
 

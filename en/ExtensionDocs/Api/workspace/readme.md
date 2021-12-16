@@ -1,3 +1,3 @@
 # workspace
 
-workspace二级模块对象，用于处理和工作空间以及文档事件有关的逻辑
+Workspace is a secondary module object, used to process the logic related to the workspace and document events。

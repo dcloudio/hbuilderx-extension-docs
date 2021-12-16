@@ -7,12 +7,12 @@ Returns the workspace folder that contains a given uri.
 #### Parameter
 |Name	|Type	|Description					|
 |--			|--			|--						|
-|uri		|String or Uri||
+|uri		|String or Uri|File absolute path or file Uri|
 
 #### Returns
 |Type												|Description					|
 |--																|--						|
-|Promise&lt;[WorkspaceFolder](/ExtensionDocs/Api/other/WorkspaceFolder)&gt;||
+|Promise&lt;[WorkspaceFolder](/ExtensionDocs/Api/other/WorkspaceFolder)&gt;|The project where the file is located.|
 
 #### Example
 ``` javascript

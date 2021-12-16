@@ -1,6 +1,6 @@
 # onDidChangeWorkspaceFolders
 
-> Supported from HBuilderX 2.7.10+ version
+> Supported from HBuilderX 2.7.10+
 
 An event that is emitted when a workspace folder is added or removed.
 
@@ -16,7 +16,7 @@ An event that is emitted when a workspace folder is added or removed.
 
 |Type	|Description				|
 |--			|--					|
-|[Disposable](/ExtensionDocs/Api/other/Disposable)	|该事件回调的销毁器，可将该对象放置到插件的context.subscriptions数组内，插件卸载时，将会自动注销该`事件回调`	|
+|[Disposable](/ExtensionDocs/Api/other/Disposable)	|The destroyer of the event callback can place the object in the context.subscriptions array of the extension. When the extension is uninstalled, the event callback will be automatically cancelled.	|
 
 **Example**
 
@@ -33,7 +33,7 @@ An event that is emitted when a workspace folder is added or removed.
 
 ## WorkspaceFoldersChangeEvent
 
-> An event that is emitted when a workspace folder is added or removed.
+> An event describing a change to the set of workspace folders.
 
 **Attribute list**
 

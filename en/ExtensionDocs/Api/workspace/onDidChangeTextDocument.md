@@ -1,6 +1,6 @@
 # onDidChangeTextDocument
 
-An event that is emitted when a text document is changed.
+An event that is emitted when a text document is changed. This usually happens when the contents changes but also when other things like the dirty-state changes.
 
 ## Introduce
 
@@ -14,7 +14,7 @@ An event that is emitted when a text document is changed.
 
 |Type	|Description				|
 |--			|--					|
-|[Disposable](/ExtensionDocs/Api/other/Disposable)	|该事件回调的销毁器，可将该对象放置到插件的context.subscriptions数组内，插件卸载时，将会自动注销该`事件回调`	|
+|[Disposable](/ExtensionDocs/Api/other/Disposable)	|The destroyer of the event callback can place the object in the context.subscriptions array of the extension. When the extension is uninstalled, the event callback will be automatically cancelled.	|
 
 **Example**
 ``` javascript
@@ -26,7 +26,7 @@ An event that is emitted when a text document is changed.
 
 ## TextDocumentChangeEvent
 
-An event that is emitted when a text document is changed.
+An event describing a transactional document change.
 
 **Attribute list**
 

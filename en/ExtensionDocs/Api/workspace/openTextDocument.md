@@ -1,12 +1,12 @@
 # openTextDocument
 
-Open a document file through the specified uri.
+Open a document file through the specified uri or file path.
 
 #### Parameter
 
 |Name	|Type			|Description		|
 |--			|--					|--			|
-|uri		|String or [Uri](/ExtensionDocs/Api/other/Uri)| File Path	|
+|uri		|String or [Uri](/ExtensionDocs/Api/other/Uri)| File Path or identifies the resource to open.	|
 
 #### Returns
 |Type								|Description			|

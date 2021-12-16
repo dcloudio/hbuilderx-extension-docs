@@ -11,7 +11,7 @@ No
 #### Returns
 |Type												|Description					|
 |--																|--						|
-|Promise&lt;Array&lt;[WorkspaceFolder](/ExtensionDocs/Api/other/WorkspaceFolder)&gt;&gt;|	|
+|Promise&lt;Array&lt;[WorkspaceFolder](/ExtensionDocs/Api/other/WorkspaceFolder)&gt;&gt;|All projects under the project manager	|
 
 #### Example
 ``` javascript

@@ -120,7 +120,7 @@ Reveal the view in the UI.
 
 |Type	|Description		|
 |--			|--			|
-|Promise&lt;Object&gt;	||
+|Promise&lt;Object&gt;	|Promise Object, Object structure：{"code":2, "message":"Built-in browser not exist."}|
 
 **Error Codes**
 
