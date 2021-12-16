@@ -225,6 +225,21 @@ TextEdit: A text edit represents edits that should be applied to a document.
 |--			|--		|
 |[TextEdit](#TextEdit)|	A new text edit object.|
 
+**Example**
+```js
+let activeEditor = hx.window.getActiveTextEditor();
+activeEditor.then(function(editor) {
+    let selection = editor.selection;
+    let word = editor.document.getText(selection);
+    editor.edit(editBuilder => {
+        // Converts the currently selected content from lowercase to uppercase
+        let toUpperCase = word.toUpperCase();
+        editBuilder.replace(selection, toUpperCase);
+    });
+});
+```
+
+
 ## Range
 
 Range: A range represents an ordered pair of two positions. 

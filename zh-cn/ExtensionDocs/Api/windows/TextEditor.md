@@ -223,6 +223,20 @@ TextEdit: 文档编辑
 |--			|--		|
 |[TextEdit](#TextEdit)|	文档编辑对象|
 
+**示例**
+```js
+let activeEditor = hx.window.getActiveTextEditor();
+activeEditor.then(function(editor) {
+    let selection = editor.selection;
+    let word = editor.document.getText(selection);
+    editor.edit(editBuilder => {
+        // 把当前选中的内容由小写转换大写
+        let toUpperCase = word.toUpperCase();
+        editBuilder.replace(selection, toUpperCase);
+    });
+});
+```
+
 ## Range
 
 Range: 文本区域
