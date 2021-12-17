@@ -376,7 +376,7 @@ As shown below:
 - `menubar/run` : `Run` menu
     * 0_foot
 
-对应的位置在菜单的末尾。
+The corresponding position is at the end of the menu.
 
 - `menubar/publish` : `Publish` menu
     * 0_foot
@@ -422,7 +422,7 @@ The when expression is used to dynamically determine whether a certain condition
 |`==`	|euqal	|`langId == 'javascript'`									|
 |`!=`	|not equal	|`langId != 'html'`								|
 |`&&`	|and	|`explorerResourceCount == 1 && explorerResourceIsFolder`	|
-|<code>&#124;&#124;</code>|或者	|<code>explorerResourceIsFolder &#124;&#124; explorerResourceIsWorkspaceFolder</code>|
+|<code>&#124;&#124;</code>|Or	|<code>explorerResourceIsFolder &#124;&#124; explorerResourceIsWorkspaceFolder</code>|
 |`!`	|No	    |`!explorerResourceIsFolder`|
 |`=~`	|Regular expression    |`workspaceFolderRelativePath  =~ /^package.json/`|
 
