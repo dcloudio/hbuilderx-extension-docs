@@ -1,22 +1,25 @@
-扩展点是通过在插件`package.json`文件中`contributes`节点下定义的一些JSON格式的配置项。以下是目前HBuilderX支持的扩展点列表：
+Contribution Points are a set of JSON declarations that you make in the contributes field of the package.json Extension Manifest. The following is a list of extension points currently supported by HBuilderX:
 
 ## configuration
-configuration扩展点，会将扩展的配置项注册到HBuilderX的全局可视化配置里`设置`-`插件配置`。
+The configuration extension point will register the extended configuration items in the global visualization configuration of HBuilderX `Settings`-`Plugins`.
 
-### configuration属性列表
+### configuration attributes list
 
 #### title
-每个插件扩展的配置是分配到同一组下的，title指的是该组的名称，一般写的是插件名称。
+The configuration of each extension is assigned to the same group. The title is the name of the group and usually the name of the extension.
+
+#### title
+The configuration of each extension is assigned to the same group. The title refers to the name of the group, and usually the name of the extension.
 
 #### properties
-properties内配置的是一个jsonobject对象，该对象的key代表着要扩展的配置项id，value是一个符合[JSON Schema](https://json-schema.org/understanding-json-schema/reference/index.html)规范的jsonobject，目前支持的字段包括：
+The configuration in the properties is a jsonobject object, the key of the object represents the id of the configuration item to be extended, and the value is a conformity to [JSON Schema](https://json-schema.org/understanding-json-schema/reference/index .html) canonical jsonobject, currently supported fields include:
 
-- type 类型。支持的类型包括：string、boolean、number。
-- description 描述
-- default 默认值
-- enum  可选值，目前只有type为string或number时可用
+- type: string or boolean or number
+- description
+- default
+- enum Optional value, only string or number
 
-### configuration示例
+### configuration exmpale
 ```json
     "contributes": {
         "configuration":{
@@ -25,25 +28,25 @@ properties内配置的是一个jsonobject对象，该对象的key代表着要扩
                 "eslint-js.autoFixOnSave":{
                     "type":"boolean",
                     "default":true,
-                    "description":"保存时自动修复"
+                    "description":"Automatically fix when saving"
                 },
                 "eslint-js.validateOnDocumentChanged":{
                     "type":"boolean",
                     "default":false,
-                    "description":"启用实时校验"
+                    "description":"Enable real-time verification"
                 }
             }
         }
     }
 ```
-效果图如下：
+As follows：
 
 <img src="/static/snapshots/plugins_setting.jpg" style="zoom:50%" />
 
 
 ## commands
-commands扩展点用于声明一个`命令`，`命令`可以通过`menus`扩展点和菜单关联到一起
-> 注意：当一个`命令`将要执行时，将会触发一个`onCommand:${commandId}`的[activationEvent](/ExtensionDocs/activation_event.md)用于激活监听该`命令`的插件
+Contribute the UI for a command consisting of a title and (optionally) an icon, category, and enabled state. Presentation of contributed commands depends on the containing menu. 
+> Note: When a command is invoked, it will emit an activationEvent `onCommand:${commandId}`.
 
 #### Example
 ```json
@@ -59,25 +62,25 @@ commands扩展点用于声明一个`命令`，`命令`可以通过`menus`扩展�
 
 ## keybindings
 
-> keybindings扩展点, 仅对HBuilderX 3.1.22+版本生效。
+> Supported from HBuilderX 3.1.22+
 
-keybindings扩展点用于声明快捷键绑定.
+Contribute a key binding rule defining what command should be invoked when the user presses a key combination.
 
 #### Example
 
 ```json
 "keybindings":[
     {
-        "command":"extension.firstExtension",    // command为您开发的插件中的command
-        "key":"Ctrl+Shift+C",                    // key为要绑定的快捷键
-        "when":"",                               // when表达式用来动态的判断某个条件是否满足，强烈建议设置此项。
-        "macosx":"command+Shift+C"               // MacOSX系统的快捷键；如不设置此项，MacOSX系统，会将key中的ctrl转为command
+        "command":"extension.firstExtension", 
+        "key":"Ctrl+Shift+C",
+        "when":"", 
+        "macosx":"command+Shift+C"
     }
 ]
 ```
 
 ## snippets
-snippets扩展点可以扩展指定编程语言的代码块，可扩展的编程语言Id列表见[这里](/ExtensionDocs/Api/other/languageId)。扩展示例代码如下：
+Contribute snippets for a specific language, See [here] for the list of extensible programming language Id (/ExtensionDocs/Api/other/languageId). The extended sample code is as follows:
 
 ```json
     "contributes": {
@@ -97,23 +100,23 @@ snippets扩展点可以扩展指定编程语言的代码块，可扩展的编程
 
 ### Attribute list
 
-|Attribute name		|Type	|是否必须	|Description																																		|
+|Attribute name		|Type	|Required	|Description																																		|
 |--				|--			|--			|--																																			|
-|project		|String		|否			|是否只在指定的项目类型下生效，目前的可取值为"Web","App","Wap2App","uni-app";如果要支持多项目类型可以通过逗号分隔，例如："Web,uni-app,App"	|
-|language		|String		|是			|编程语言ID，用于限定只在指定的语言下生效，语言Id的列表参见[这里](/ExtensionDocs/Api/other/languageId)									|
-|path|String		|是			|要扩展的代码块列表文件路径，文件内容格式见下面|
+|project		|String		|No			|Whether it takes effect only under the specified item type, the current options are "Web","App","Wap2App","uni-app";If you want to support multiple project types, you can separate them by commas, for example: "Web,uni-app,App"	|
+|language		|String		|Yes			|Programming language ID, which is used to limit the effect only in the specified language. For the list of language IDs, please refer to [here](/ExtensionDocs/Api/other/languageId)									|
+|path|String		|Yes			|The file path of the code block list to be expanded, the format of the file content is shown below|
 
-### 代码块格式
-每个配置项的说明如下表：
+### Snippets format
+The description of each configuration item is as follows:
 
 |Name|Description|
 |--	|--	|
-|`key`|代码块显示名称，显示在代码助手列表中的名字，以下例子中"console.log"就是一个key。|
-|prefix|代码块的触发字符，就是敲什么字母匹配这个代码块。|
-|body|代码块的内容。内容中有如下特殊格式：<br />$1 表示代码块输入后光标的所在位置。如需要多光标，就在多个地方配置$1,如该位置有预置数据，则写法是${1:foo1}，多选项即下拉候选列表使用${1:foo1/foo2/foo3}；<br />$2 表示代码块输入后再次按tab后光标的切换位置tabstops（代码块展开后按tab可以跳到下一个tabstop；<br />$0 代表代码块输入后最终光标的所在位置（也可以按回车直接跳过去）。<br />双引号使用\"转义，换行使用多个数组表示，每个行一个数组，用双引号包围，并用逗号分隔，缩进需要用\t表示，不能直接输入缩进！|
-|triggerAssist	|为true表示该代码块输入到文档后立即在第一个tabstop上触发代码提示，拉出代码助手，默认为false。|
+|`key`|Snippet name, this name will be displayed in the code assistant list. For example, "console.log" is a key.|
+|prefix|Trigger character of snippet|
+|body|The content of the snippet.|
+|triggerAssist	|True means that the code prompt is triggered on the first tabtop and display code assistant immediately after the snippet is entered into the document. The default is false.|
 
-### 代码块示例
+### Example
 ```json
 // ./snippets/javascript.json
 {
