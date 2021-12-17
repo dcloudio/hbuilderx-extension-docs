@@ -295,8 +295,8 @@ The secondary menu is implemented by setting the group to %menuId%@1, %menuId%@2
 
 ### group
 
-每个弹出菜单内的group都不一样，下面列出所有的弹出菜单下可用的group。
-> 注意：想要将扩展菜单放到弹出菜单的最后，可以将group设置成`0_foot`
+The group in each pop-up menu is different, and all the groups available under the pop-up menu are listed below.
+> Note: To put the extended menu at the end of the pop-up menu, you can set the group to `0_foot`
 
 - `editor/context`
     * copy
@@ -305,11 +305,11 @@ The secondary menu is implemented by setting the group to %menuId%@1, %menuId%@2
     * assist
     * z_commands
 
-对应的位置如下图所示：
+As shown below:
 
 <img src = "/static/snapshots/Plug-in-development/group/editor_context.jpg" style="zoom:50%" />
 
-- `explorer/context` ：项目管理器右键菜单
+- `explorer/context`: Project manager right-click menu
     * new
     * openInExplorer
     * nature
@@ -317,32 +317,32 @@ The secondary menu is implemented by setting the group to %menuId%@1, %menuId%@2
     * rename
     * z_commands
 
-对应的位置如下图所示：
+As shown below:
 
 <img src = "/static/snapshots/Plug-in-development/group/explorer_context.jpg" style="zoom:50%" />
 
-- `menubar/file` : 顶部菜单的`文件`菜单
+- `menubar/file` : `File` menu
     * new
     * tab
     * save
     * openInExplorer
 
-对应的位置如下图所示：
+As shown below:
 
 <img src = "/static/snapshots/Plug-in-development/group/menubar_file.jpg" style="zoom:50%" />
 
-- `menubar/edit` : 顶部菜单的`编辑`菜单
+- `menubar/edit` : `Edit` menu
     * undo
     * copy
     * format
     * line
     * delete
 
-对应的位置如下图所示：
+As shown below:
 
 <img src = "/static/snapshots/Plug-in-development/group/edit.jpg" style="zoom:50%" />
 
-- `menubar/select` : 顶部菜单的`选择`菜单
+- `menubar/select` : `Select` menu
     * selectAll
     * area
     * word
@@ -351,39 +351,39 @@ The secondary menu is implemented by setting the group to %menuId%@1, %menuId%@2
     * 0_cursor
     * 1_cursor
 
-对应的位置如下图所示：
+As shown below:
 
 <img src = "/static/snapshots/Plug-in-development/group/select.jpg" style="zoom:50%" />
 
-- `menubar/find` : 顶部菜单的`查找`菜单
+- `menubar/find` : `Find` menu
     * findFile
     * findWord
     * findSymbol
 
-对应的位置如下图所示：
+As shown below:
 
 <img src = "/static/snapshots/Plug-in-development/group/find.jpg" style="zoom:50%" />
 
-- `menubar/goto` : 顶部菜单的`跳转`菜单
+- `menubar/goto` : `Goto` menu
     * system_goto
     * line_goto
     * define_goto
 
-对应的位置如下图所示：
+As shown below:
 
 <img src = "/static/snapshots/Plug-in-development/group/goto.jpg" style="zoom:50%" />
 
-- `menubar/run` : 顶部菜单的`运行`菜单
+- `menubar/run` : `Run` menu
     * 0_foot
 
 对应的位置在菜单的末尾。
 
-- `menubar/publish` : 顶部菜单的`发行`菜单
+- `menubar/publish` : `Publish` menu
     * 0_foot
 
 对应的位置在菜单的末尾。
 
-- `menubar/view` : 顶部菜单的`视图`菜单
+- `menubar/view` : `View` menu
     * min_window
     * focus_editor
     * show_lineno
@@ -391,25 +391,25 @@ The secondary menu is implemented by setting the group to %menuId%@1, %menuId%@2
     * scroll
     * plus_font
 
-对应的位置如下图所示：
+As shown below:
 
 <img src = "/static/snapshots/Plug-in-development/group/view.jpg" style="zoom:50%" />
 
-- `menubar/tool` : 顶部菜单的`工具`菜单
+- `menubar/tool` : `Tool` menu
     * shortcuts
     * snippets
     * ext_settings
 
-对应的位置如下图所示：
+As shown below:
 
 <img src = "/static/snapshots/Plug-in-development/group/tool.jpg" style="zoom:50%" />
 
-- `menubar/help` : 顶部菜单的`帮助`菜单
+- `menubar/help` : `Help` menu
     * documents
     * checkupdate
     * license
 
-对应的位置如下图所示：
+As shown below:
 
 <img src = "/static/snapshots/Plug-in-development/group/help.jpg" style="zoom:50%" />
 
