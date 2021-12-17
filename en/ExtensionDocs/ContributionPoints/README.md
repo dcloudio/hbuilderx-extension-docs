@@ -381,7 +381,7 @@ As shown below:
 - `menubar/publish` : `Publish` menu
     * 0_foot
 
-对应的位置在菜单的末尾。
+The corresponding position is at the end of the menu.
 
 - `menubar/view` : `View` menu
     * min_window
@@ -415,47 +415,46 @@ As shown below:
 
 
 ### when
-when表达式用来动态的判断某个条件是否满足(即表达式的运算结果是`true`或者`false`)，目前用于控制一个菜单是否显示。目前支持的表达式运算符如下：
+The when expression is used to dynamically determine whether a certain condition is satisfied (that is, the result of the expression is `true` or `false`). It is currently used to control whether a menu is displayed. The currently supported expression operators are as follows:
 
-|操作符	|Description	|例子														|
+|Operator	|Description	|Example														|
 |--		|--		|--															|
-|`==`	|相等	|`langId == 'javascript'`									|
-|`!=`	|不相等	|`langId != 'html'`								|
-|`&&`	|并且	|`explorerResourceCount == 1 && explorerResourceIsFolder`	|
+|`==`	|euqal	|`langId == 'javascript'`									|
+|`!=`	|not equal	|`langId != 'html'`								|
+|`&&`	|and	|`explorerResourceCount == 1 && explorerResourceIsFolder`	|
 |<code>&#124;&#124;</code>|或者	|<code>explorerResourceIsFolder &#124;&#124; explorerResourceIsWorkspaceFolder</code>|
-|`!`	|非	    |`!explorerResourceIsFolder`|
-|`=~`	|正则运算	    |`workspaceFolderRelativePath  =~ /^package.json/`|
+|`!`	|No	    |`!explorerResourceIsFolder`|
+|`=~`	|Regular expression    |`workspaceFolderRelativePath  =~ /^package.json/`|
 
-目前HBuilderX内置变量列表如下：
+The current HBuilderX built-in variable list is as follows:
 
-|变量名														|类型		|Description																																																			|
+|Variable Name														|Type		|Description																																																			|
 |--																|--			|--																																																				|
-|workspaceFolderRelativePath			|String	|相对于项目的相对路径，举例： pages/user/user.vue																													|
-|workspaceRelativePath						|String	|相对于项目的相对路径（加上项目名称），举例： HelloUniapp/pages/user/user.vue															|
-|workspaceFolder.type							|String	|项目类型，可取值：UniApp_Vue,Web,App,Wap2App,Extension,Unkown																						|
-|explorerResourceCount						|Number	|项目管理器选中的资源数量																																									|
-|explorerResourceIsFolder					|Boolean|项目管理器选中的资源是否全是目录																																					|
-|explorerResourceIsWorkspaceFolder|Boolean|项目管理器选中的资源是否全是项目根目录																																		|
-|isSVN														|Boolean|是否是SVN仓库下的文件																																										|
-|isGit														|Boolean|是否是Git仓库下的文件																																										|
-|activeEditor.file.exists					|Boolean|当前激活的编辑器打开的文件是否存在																																				|
-|activeEditor.file.isProjectFile	|Boolean|当前激活的编辑器打开的文件是否是左侧项目管理器下的文件																										|
-|activeEditor.readonly						|Boolean|当前激活的编辑器是否是只读																																								|
-|editorTextFocus									|Boolean|当前激活的编辑器是否有焦点																																								|
-|langId														|String	|当前激活的编辑器打开的文档的编程语言id，完整语言Id列表参见[这里](/ExtensionDocs/Api/other/languageId)|
-|viewItem													|String	|通过`views`扩展的视图中当前选择的item的contextValue																											|
-|config.*													|Any		|获取某个配置项的值,例子： `config.editor.fontSize`																												|
-|isMac														|Boolean|当前电脑操作系统是否是MacOSX（仅对HBuilderX3.2.22+版本生效）																							|
-|isWindows												|Boolean|当前电脑操作系统是否是Windows（仅对HBuilderX3.2.22+版本生效）																						|
-|editorHasSelection								|Boolean|当前激活的编辑器是否有选中的内容 （仅对HBuilderX3.2.22+版本生效）																				|
+|workspaceFolderRelativePath			|String	|The relative path relative to the project, for example: pages/user/user.vue																													|
+|workspaceRelativePath						|String	|The relative path relative to the project (plus the project name), for example: HelloUniapp/pages/user/user.vue															|
+|workspaceFolder.type							|String	|Item type, options values: UniApp_Vue,Web,App,Wap2App,Extension,Unkown																						|
+|explorerResourceCount						|Number	|The number of resources selected by the project explorer																																									|
+|explorerResourceIsFolder					|Boolean|Whether the resources selected by the project explorer are all directories																																					|
+|explorerResourceIsWorkspaceFolder|Boolean|Whether the resources selected by the project explorer are all the project root directory																																		|
+|isSVN														|Boolean|Is it a file in the SVN																																										|
+|isGit														|Boolean|Is it a file under the Git repository																																										|
+|activeEditor.file.exists					|Boolean|Whether the file opened by the currently active editor exists																																				|
+|activeEditor.file.isProjectFile	|Boolean|Whether the file opened by the currently active editor is the file under the project explorer on the left																										|
+|activeEditor.readonly						|Boolean|Whether the currently active editor is read-only																																								|
+|editorTextFocus									|Boolean|Whether the currently active editor has focus																																								|
+|langId														|String	|The programming language id of the document opened by the currently active editor, see [here] for the complete language id list(/ExtensionDocs/Api/other/languageId)|
+|viewItem													|String	|The contextValue of the currently selected item in the view expanded by `views`																											|
+|config.*													|Any		|Get the value of a configuration item, example: `config.editor.fontSize`																												|
+|isMac														|Boolean|Whether the current computer operating system is MacOSX (Supported from HBuilderX3.2.22+)																							|
+|isWindows												|Boolean|Whether the current computer operating system is MacOSX (Supported from HBuilderX3.2.22+)																			|
+|editorHasSelection								|Boolean|Whether the currently activated editor has selected content (Supported from HBuilderX3.2.22+)																				|
 
 ## customEditors
+The customEditors contribution point is how your extension tells HBuilderX about the custom editors that it provides. For example, HBuilderX needs to know what types of files your custom editor works with as well as how to identify your custom editor in any UI.
 
-插件可以通过该扩展点扩展多个不同类型的自定义编辑器，自定义编辑器可以设置文件匹配模式，用户通过项目管理器打开的文件匹配到某一类型时，在编辑器区域创建webview视图，关联打开的文件。
+Complete reference for the process of extending a custom editor [How to extend a custom editor? ](/ExtensionTutorial/customeditor)
 
-完整的扩展自定义编辑器流程参考[如何扩展一个自定义编辑器？](/ExtensionTutorial/customeditor)
-
-#### 扩展点示例如下：
+#### For example:
 ```json
  "contributes": {
 		"customEditors": [{
@@ -470,16 +469,16 @@ when表达式用来动态的判断某个条件是否满足(即表达式的运算
 	}
 ```
 
-#### 属性列表
-|Attribute name		|Type	|是否必须	|Description	|
+#### Attributes List
+|Attribute name		|Type	|Required	|Description	|
 |--	            |--			|--		|--		 |
-|viewType		|String		|是		|自定义编辑器类型，`全局唯一` |
-|displayName	|String		|否		|显示名称（暂时未用）	|
-|selector		|Array&lt;[EditorSelctor](#EditorSelctor)&gt;	|是		|匹配模板，指定一个或多个匹配模板，匹配成功的文件会与该类型自定义编辑器关联|
-|priority       |String		|否		|优先级（暂时未用）|
+|viewType		|String		|Yes		|Custom editor type, `globally unique |
+|displayName	|String		|No		|Display name（unused）	|
+|selector		|Array&lt;[EditorSelctor](#EditorSelctor)&gt;	|Yes		|Matching template, specify one or more matching templates, the files that match successfully will be associated with the custom editor of this type|
+|priority       |String		|No		|Priority (unused)）|
 
 
 #### EditorSelctor
-|Attribute name	|Type	|是否必须	|Description   |
+|Attribute name	|Type	|Required|Description   |
 |--			|--			|--			|--     |
-|fileNamePattern    |String	    |是 |文件名匹配，支持通配符|
+|fileNamePattern    |String	    |Yes |File name matching, supports wildcards|
