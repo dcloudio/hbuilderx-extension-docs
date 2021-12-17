@@ -134,13 +134,13 @@ The description of each configuration item is as follows:
 
 
 ## viewsContainers
-在窗体左侧区域扩展一个和项目管理器同级的tab项，完整的扩展视图流程参考[如何注册一个新的视图？](/ExtensionTutorial/views)
+Contribute a view container into which Custom views can be contributed. The complete extended view process reference [How to register a new view? ](/ExtensionTutorial/views)
 
 #### Attribute list
-|Attribute name	|Type												|是否必须	|Description															|
+|Attribute name	|Type												|Required	|Description															|
 |--			|--														|--			|--																|
-|activitybar|Array&lt;[ViewsContainerDef](#ViewsContainerDef)&gt;	|不是			|定义扩展的视图容器列表，可在菜单`视图`-`显示扩展视图`中查看打开|
-|rightside|Array&lt;[ViewsContainerDef](#ViewsContainerDef)&gt;	|不是|定义扩展的视图容器列表，可在菜单`视图`-`显示扩展视图`中查看打开|
+|activitybar|Array&lt;[ViewsContainerDef](#ViewsContainerDef)&gt;	|No			|Define the extended view container list, which can be viewed and opened in the menu `View`-`Show Extended View`|
+|rightside|Array&lt;[ViewsContainerDef](#ViewsContainerDef)&gt;	|No|Define the extended view container list, which can be viewed and opened in the menu `View`-`Show Extended View`|
 
 #### Example
 ```json
@@ -166,27 +166,26 @@ The description of each configuration item is as follows:
 ```
 
 #### ViewsContainerDef
-|Attribute name	|Type	|是否必须	|Description								|
+|Attribute name	|Type	|Required	|Description								|
 |--			|--			|--			|--									|
-|id			|String		|是			|扩展的视图容器(viewContainers)的id	|
-|title		|String		|是			|显示在tab标签上的标题				|
+|id			|String		|Yes			|The id of the extended view container (viewContainers)	|
+|title		|String		|Yes			|Title displayed on the tab label				|
 
 ## views
 
-扩展新的视图，扩展的view必须和`viewsContainers`内定义的视图容器绑定以后才能生效。
+Extend the new view, you must specify an identifier and name for the view.
 
-目前支持TreeView和WebView，并且一个视图容器（viewsContainers）仅支持绑定一个视图（view）。
+TreeView and WebView are supported, and a view container (viewsContainers) only supports binding one view (view).
 
-在该扩展点声明后，需要通过API：[window.createTreeView](/ExtensionDocs/Api/windows/createTreeView)或者[window.createWebView](/ExtensionDocs/Api/windows/createWebView)实现。完整的扩展视图流程参考[如何注册一个新的视图？](/ExtensionTutorial/views)
+After the extension point is declared, you need to pass the API to:[window.createTreeView](/ExtensionDocs/Api/windows/createTreeView) or [window.createWebView](/ExtensionDocs/Api/windows/createWebView). The complete extended view process reference [How to register a new view? ](/ExtensionTutorial/views)
 
-### TreeView 示例
+### TreeView Example
 ```json
-    //NOTE：package.json不支持注释，以下代码使用时需要将注释删掉
+    //NOTE：package.json are not supported comments, you need to delete the comments when using the following code
    "contributes": {
        "views": {
-           //绑定的视图容器（viewContainers）的Id，目前一个视图容器仅支持绑定一个视图（view）
            "demoview": [{
-               //该id需要和window.createTreeView中的viewId参数一致
+               //The id needs to be consistent with the viewId parameter in window.createTreeView
                "id": "extensions.treedemo",
                "name": "DemoView"
            }]
@@ -194,8 +193,8 @@ The description of each configuration item is as follows:
     }
 ```
 
-### WebView 示例
-`从HBuilderX 2.8.1及以上版本开始支持`
+### WebView Example
+`Supported from HBuilderX 2.8.1+`
 
 ```json
  "contributes": {
@@ -210,7 +209,7 @@ The description of each configuration item is as follows:
         "views": {
             "containerId":[
                 {
-                    //该id需要和window.createWebView中的viewId参数一致
+                    //The id needs to be consistent with the viewId parameter in window.createTreeView
                     "id":"viewId",
                     "title":"Custom View Title"
                 }
@@ -222,13 +221,13 @@ The description of each configuration item is as follows:
 
 ## menus
 
-menus扩展点会关联一个`命令`到相应的菜单项里面，当菜单触发时将会执行对应的`命令。
+Contribute a menu item for a command to the editor or Explorer. The menu item definition contains the command that should be invoked when selected and the condition under which the item should show.
 
-menus节点下配置的对象内的key指的是要注册到哪个弹出菜单里面，目前支持的key值列表如下：
+The key in the object configured under the menus node refers to which pop-up menu to register to. The currently supported key value list is as follows:
 
 - `editor/context` ：Editor right-click menu
 - `explorer/context` ：Project Explorer right-click menu
-- `view/item/context` ：通过`views`扩展点扩展的`视图`的右键菜单（`从HBuilderX 2.7.12及以上版本开始支持`）
+- `view/item/context` ：Right-click menu of `View` extended by `views` extension point（`Supported from HBuilderX 2.7.12+`）
 - `menubar/file` : The `File` menu of the top menu
 - `menubar/edit` : The `Edit` menu of the top menu
 - `menubar/select` : The `Select` menu of the top menu
@@ -242,16 +241,16 @@ menus节点下配置的对象内的key指的是要注册到哪个弹出菜单里
 
 ### Menus Attribute list
 
-|Attribute name		|Type	|是否必须	|Description																						|
+|Attribute name		|Type	|Required	|Description																						|
 |--				|--			|--			|--																							|
-|id				|String		|否			|菜单项的Id，如何要配置二级菜单，则需要该属性												|
-|command		|String		|否			|菜单项关联的`命令`Id																		|
-|title			|String		|否			|菜单项的名称，如果没有配置，将采用`命令`的title											|
-|[group](#group)|String		|是			|菜单项要注册的位置,查看目前支持的[group列表](#group)。注意该属性必须写，不写视为无效菜单扩展	|
-|[when](#when)	|String		|否			|控制菜单项是否显示的逻辑表达式,[表达式说明](#when)											|
-|checked	    |String		|否			|`从HBuilderX 2.7.6及以上版本开始支持` <br/>控制菜单项是否处于checked的逻辑表达式,表达式语法和[when](#when)表达式一致										|
+|id				|String		|No			|The Id of the menu item, how to configure the secondary menu, you need this attribute												|
+|command		|String		|No			|The `Command`Id associated with the menu item																	|
+|title			|String		|No			|The name of the menu item, if it is not configured, the title of the `command` will be used											|
+|[group](#group)|String		|Yes			|For the location of the menu item to be registered, check the currently supported [group list](#group). Note that this attribute must be written, if it is not written, it will be regarded as an invalid menu extension	|
+|[when](#when)	|String		|No			|The logical expression that controls whether the menu item is displayed, [Expression Description](#when)											|
+|checked	    |String		|No			|`Supported from HBuilderX 2.7.6+` <br/>Control whether the menu item is in the checked logical expression, the expression syntax is consistent with the [when](#when) expression									|
 
-> 当属性title和command都为空时，将被识别为分割线。
+> When the attributes title and command are both empty, it will be recognized as a dividing line.
 
 ### Example
 ```json
@@ -272,16 +271,16 @@ menus节点下配置的对象内的key指的是要注册到哪个弹出菜单里
     }
 ```
 
-### 注册二级菜单
+### Register secondary menu
 
-二级菜单通过将group设置为%menuId%@1、%menuId%@2的方式来实现，其中menuId指的是菜单扩展中的id字段。代码示例如下:
+The secondary menu is implemented by setting the group to %menuId%@1, %menuId%@2, where menuId refers to the id field in the menu extension. The code example is as follows:
 ```json
    "contributes": {
        "menus": {
          "editor/context": [
            {
              "id":"foo",
-             "title": "带子菜单的菜单",
+             "title": "Menu with submenu",
              "group": "z_commands",
            },
            {
