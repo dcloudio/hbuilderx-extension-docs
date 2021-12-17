@@ -1,22 +1,25 @@
-扩展点是通过在插件`package.json`文件中`contributes`节点下定义的一些JSON格式的配置项。以下是目前HBuilderX支持的扩展点列表：
+Contribution Points are a set of JSON declarations that you make in the contributes field of the package.json Extension Manifest. The following is a list of extension points currently supported by HBuilderX:
 
 ## configuration
-configuration扩展点，会将扩展的配置项注册到HBuilderX的全局可视化配置里`设置`-`插件配置`。
+The configuration extension point will register the extended configuration items in the global visualization configuration of HBuilderX `Settings`-`Plugins`.
 
-### configuration属性列表
+### configuration attributes list
 
 #### title
-每个插件扩展的配置是分配到同一组下的，title指的是该组的名称，一般写的是插件名称。
+The configuration of each extension is assigned to the same group. The title is the name of the group and usually the name of the extension.
+
+#### title
+The configuration of each extension is assigned to the same group. The title refers to the name of the group, and usually the name of the extension.
 
 #### properties
-properties内配置的是一个jsonobject对象，该对象的key代表着要扩展的配置项id，value是一个符合[JSON Schema](https://json-schema.org/understanding-json-schema/reference/index.html)规范的jsonobject，目前支持的字段包括：
+The configuration in the properties is a jsonobject object, the key of the object represents the id of the configuration item to be extended, and the value is a conformity to [JSON Schema](https://json-schema.org/understanding-json-schema/reference/index .html) canonical jsonobject, currently supported fields include:
 
-- type 类型。支持的类型包括：string、boolean、number。
-- description 描述
-- default 默认值
-- enum  可选值，目前只有type为string或number时可用
+- type: string or boolean or number
+- description
+- default
+- enum Optional value, only string or number
 
-### configuration示例
+### configuration exmpale
 ```json
     "contributes": {
         "configuration":{
@@ -25,25 +28,25 @@ properties内配置的是一个jsonobject对象，该对象的key代表着要扩
                 "eslint-js.autoFixOnSave":{
                     "type":"boolean",
                     "default":true,
-                    "description":"保存时自动修复"
+                    "description":"Automatically fix when saving"
                 },
                 "eslint-js.validateOnDocumentChanged":{
                     "type":"boolean",
                     "default":false,
-                    "description":"启用实时校验"
+                    "description":"Enable real-time verification"
                 }
             }
         }
     }
 ```
-效果图如下：
+As follows：
 
 <img src="/static/snapshots/plugins_setting.jpg" style="zoom:50%" />
 
 
 ## commands
-commands扩展点用于声明一个`命令`，`命令`可以通过`menus`扩展点和菜单关联到一起
-> 注意：当一个`命令`将要执行时，将会触发一个`onCommand:${commandId}`的[activationEvent](/ExtensionDocs/activation_event.md)用于激活监听该`命令`的插件
+Contribute the UI for a command consisting of a title and (optionally) an icon, category, and enabled state. Presentation of contributed commands depends on the containing menu. 
+> Note: When a command is invoked, it will emit an activationEvent `onCommand:${commandId}`.
 
 #### Example
 ```json
@@ -59,25 +62,25 @@ commands扩展点用于声明一个`命令`，`命令`可以通过`menus`扩展�
 
 ## keybindings
 
-> keybindings扩展点, 仅对HBuilderX 3.1.22+版本生效。
+> Supported from HBuilderX 3.1.22+
 
-keybindings扩展点用于声明快捷键绑定.
+Contribute a key binding rule defining what command should be invoked when the user presses a key combination.
 
 #### Example
 
 ```json
 "keybindings":[
     {
-        "command":"extension.firstExtension",    // command为您开发的插件中的command
-        "key":"Ctrl+Shift+C",                    // key为要绑定的快捷键
-        "when":"",                               // when表达式用来动态的判断某个条件是否满足，强烈建议设置此项。
-        "macosx":"command+Shift+C"               // MacOSX系统的快捷键；如不设置此项，MacOSX系统，会将key中的ctrl转为command
+        "command":"extension.firstExtension", 
+        "key":"Ctrl+Shift+C",
+        "when":"", 
+        "macosx":"command+Shift+C"
     }
 ]
 ```
 
 ## snippets
-snippets扩展点可以扩展指定编程语言的代码块，可扩展的编程语言Id列表见[这里](/ExtensionDocs/Api/other/languageId)。扩展示例代码如下：
+Contribute snippets for a specific language, See [here] for the list of extensible programming language Id (/ExtensionDocs/Api/other/languageId). The extended sample code is as follows:
 
 ```json
     "contributes": {
@@ -97,23 +100,23 @@ snippets扩展点可以扩展指定编程语言的代码块，可扩展的编程
 
 ### Attribute list
 
-|Attribute name		|Type	|是否必须	|Description																																		|
+|Attribute name		|Type	|Required	|Description																																		|
 |--				|--			|--			|--																																			|
-|project		|String		|否			|是否只在指定的项目类型下生效，目前的可取值为"Web","App","Wap2App","uni-app";如果要支持多项目类型可以通过逗号分隔，例如："Web,uni-app,App"	|
-|language		|String		|是			|编程语言ID，用于限定只在指定的语言下生效，语言Id的列表参见[这里](/ExtensionDocs/Api/other/languageId)									|
-|path|String		|是			|要扩展的代码块列表文件路径，文件内容格式见下面|
+|project		|String		|No			|Whether it takes effect only under the specified item type, the current options are "Web","App","Wap2App","uni-app";If you want to support multiple project types, you can separate them by commas, for example: "Web,uni-app,App"	|
+|language		|String		|Yes			|Programming language ID, which is used to limit the effect only in the specified language. For the list of language IDs, please refer to [here](/ExtensionDocs/Api/other/languageId)									|
+|path|String		|Yes			|The file path of the code block list to be expanded, the format of the file content is shown below|
 
-### 代码块格式
-每个配置项的说明如下表：
+### Snippets format
+The description of each configuration item is as follows:
 
 |Name|Description|
 |--	|--	|
-|`key`|代码块显示名称，显示在代码助手列表中的名字，以下例子中"console.log"就是一个key。|
-|prefix|代码块的触发字符，就是敲什么字母匹配这个代码块。|
-|body|代码块的内容。内容中有如下特殊格式：<br />$1 表示代码块输入后光标的所在位置。如需要多光标，就在多个地方配置$1,如该位置有预置数据，则写法是${1:foo1}，多选项即下拉候选列表使用${1:foo1/foo2/foo3}；<br />$2 表示代码块输入后再次按tab后光标的切换位置tabstops（代码块展开后按tab可以跳到下一个tabstop；<br />$0 代表代码块输入后最终光标的所在位置（也可以按回车直接跳过去）。<br />双引号使用\"转义，换行使用多个数组表示，每个行一个数组，用双引号包围，并用逗号分隔，缩进需要用\t表示，不能直接输入缩进！|
-|triggerAssist	|为true表示该代码块输入到文档后立即在第一个tabstop上触发代码提示，拉出代码助手，默认为false。|
+|`key`|Snippet name, this name will be displayed in the code assistant list. For example, "console.log" is a key.|
+|prefix|Trigger character of snippet|
+|body|The content of the snippet.|
+|triggerAssist	|True means that the code prompt is triggered on the first tabtop and display code assistant immediately after the snippet is entered into the document. The default is false.|
 
-### 代码块示例
+### Example
 ```json
 // ./snippets/javascript.json
 {
@@ -131,13 +134,13 @@ snippets扩展点可以扩展指定编程语言的代码块，可扩展的编程
 
 
 ## viewsContainers
-在窗体左侧区域扩展一个和项目管理器同级的tab项，完整的扩展视图流程参考[如何注册一个新的视图？](/ExtensionTutorial/views)
+Contribute a view container into which Custom views can be contributed. The complete extended view process reference [How to register a new view? ](/ExtensionTutorial/views)
 
 #### Attribute list
-|Attribute name	|Type												|是否必须	|Description															|
+|Attribute name	|Type												|Required	|Description															|
 |--			|--														|--			|--																|
-|activitybar|Array&lt;[ViewsContainerDef](#ViewsContainerDef)&gt;	|不是			|定义扩展的视图容器列表，可在菜单`视图`-`显示扩展视图`中查看打开|
-|rightside|Array&lt;[ViewsContainerDef](#ViewsContainerDef)&gt;	|不是|定义扩展的视图容器列表，可在菜单`视图`-`显示扩展视图`中查看打开|
+|activitybar|Array&lt;[ViewsContainerDef](#ViewsContainerDef)&gt;	|No			|Define the extended view container list, which can be viewed and opened in the menu `View`-`Show Extended View`|
+|rightside|Array&lt;[ViewsContainerDef](#ViewsContainerDef)&gt;	|No|Define the extended view container list, which can be viewed and opened in the menu `View`-`Show Extended View`|
 
 #### Example
 ```json
@@ -163,27 +166,26 @@ snippets扩展点可以扩展指定编程语言的代码块，可扩展的编程
 ```
 
 #### ViewsContainerDef
-|Attribute name	|Type	|是否必须	|Description								|
+|Attribute name	|Type	|Required	|Description								|
 |--			|--			|--			|--									|
-|id			|String		|是			|扩展的视图容器(viewContainers)的id	|
-|title		|String		|是			|显示在tab标签上的标题				|
+|id			|String		|Yes			|The id of the extended view container (viewContainers)	|
+|title		|String		|Yes			|Title displayed on the tab label				|
 
 ## views
 
-扩展新的视图，扩展的view必须和`viewsContainers`内定义的视图容器绑定以后才能生效。
+Extend the new view, you must specify an identifier and name for the view.
 
-目前支持TreeView和WebView，并且一个视图容器（viewsContainers）仅支持绑定一个视图（view）。
+TreeView and WebView are supported, and a view container (viewsContainers) only supports binding one view (view).
 
-在该扩展点声明后，需要通过API：[window.createTreeView](/ExtensionDocs/Api/windows/createTreeView)或者[window.createWebView](/ExtensionDocs/Api/windows/createWebView)实现。完整的扩展视图流程参考[如何注册一个新的视图？](/ExtensionTutorial/views)
+After the extension point is declared, you need to pass the API to:[window.createTreeView](/ExtensionDocs/Api/windows/createTreeView) or [window.createWebView](/ExtensionDocs/Api/windows/createWebView). The complete extended view process reference [How to register a new view? ](/ExtensionTutorial/views)
 
-### TreeView 示例
+### TreeView Example
 ```json
-    //NOTE：package.json不支持注释，以下代码使用时需要将注释删掉
+    //NOTE：package.json are not supported comments, you need to delete the comments when using the following code
    "contributes": {
        "views": {
-           //绑定的视图容器（viewContainers）的Id，目前一个视图容器仅支持绑定一个视图（view）
            "demoview": [{
-               //该id需要和window.createTreeView中的viewId参数一致
+               //The id needs to be consistent with the viewId parameter in window.createTreeView
                "id": "extensions.treedemo",
                "name": "DemoView"
            }]
@@ -191,8 +193,8 @@ snippets扩展点可以扩展指定编程语言的代码块，可扩展的编程
     }
 ```
 
-### WebView 示例
-`从HBuilderX 2.8.1及以上版本开始支持`
+### WebView Example
+`Supported from HBuilderX 2.8.1+`
 
 ```json
  "contributes": {
@@ -207,7 +209,7 @@ snippets扩展点可以扩展指定编程语言的代码块，可扩展的编程
         "views": {
             "containerId":[
                 {
-                    //该id需要和window.createWebView中的viewId参数一致
+                    //The id needs to be consistent with the viewId parameter in window.createTreeView
                     "id":"viewId",
                     "title":"Custom View Title"
                 }
@@ -219,13 +221,13 @@ snippets扩展点可以扩展指定编程语言的代码块，可扩展的编程
 
 ## menus
 
-menus扩展点会关联一个`命令`到相应的菜单项里面，当菜单触发时将会执行对应的`命令。
+Contribute a menu item for a command to the editor or Explorer. The menu item definition contains the command that should be invoked when selected and the condition under which the item should show.
 
-menus节点下配置的对象内的key指的是要注册到哪个弹出菜单里面，目前支持的key值列表如下：
+The key in the object configured under the menus node refers to which pop-up menu to register to. The currently supported key value list is as follows:
 
 - `editor/context` ：Editor right-click menu
 - `explorer/context` ：Project Explorer right-click menu
-- `view/item/context` ：通过`views`扩展点扩展的`视图`的右键菜单（`从HBuilderX 2.7.12及以上版本开始支持`）
+- `view/item/context` ：Right-click menu of `View` extended by `views` extension point（`Supported from HBuilderX 2.7.12+`）
 - `menubar/file` : The `File` menu of the top menu
 - `menubar/edit` : The `Edit` menu of the top menu
 - `menubar/select` : The `Select` menu of the top menu
@@ -239,16 +241,16 @@ menus节点下配置的对象内的key指的是要注册到哪个弹出菜单里
 
 ### Menus Attribute list
 
-|Attribute name		|Type	|是否必须	|Description																						|
+|Attribute name		|Type	|Required	|Description																						|
 |--				|--			|--			|--																							|
-|id				|String		|否			|菜单项的Id，如何要配置二级菜单，则需要该属性												|
-|command		|String		|否			|菜单项关联的`命令`Id																		|
-|title			|String		|否			|菜单项的名称，如果没有配置，将采用`命令`的title											|
-|[group](#group)|String		|是			|菜单项要注册的位置,查看目前支持的[group列表](#group)。注意该属性必须写，不写视为无效菜单扩展	|
-|[when](#when)	|String		|否			|控制菜单项是否显示的逻辑表达式,[表达式说明](#when)											|
-|checked	    |String		|否			|`从HBuilderX 2.7.6及以上版本开始支持` <br/>控制菜单项是否处于checked的逻辑表达式,表达式语法和[when](#when)表达式一致										|
+|id				|String		|No			|The Id of the menu item, how to configure the secondary menu, you need this attribute												|
+|command		|String		|No			|The `Command`Id associated with the menu item																	|
+|title			|String		|No			|The name of the menu item, if it is not configured, the title of the `command` will be used											|
+|[group](#group)|String		|Yes			|For the location of the menu item to be registered, check the currently supported [group list](#group). Note that this attribute must be written, if it is not written, it will be regarded as an invalid menu extension	|
+|[when](#when)	|String		|No			|The logical expression that controls whether the menu item is displayed, [Expression Description](#when)											|
+|checked	    |String		|No			|`Supported from HBuilderX 2.7.6+` <br/>Control whether the menu item is in the checked logical expression, the expression syntax is consistent with the [when](#when) expression									|
 
-> 当属性title和command都为空时，将被识别为分割线。
+> When the attributes title and command are both empty, it will be recognized as a dividing line.
 
 ### Example
 ```json
@@ -269,16 +271,16 @@ menus节点下配置的对象内的key指的是要注册到哪个弹出菜单里
     }
 ```
 
-### 注册二级菜单
+### Register secondary menu
 
-二级菜单通过将group设置为%menuId%@1、%menuId%@2的方式来实现，其中menuId指的是菜单扩展中的id字段。代码示例如下:
+The secondary menu is implemented by setting the group to %menuId%@1, %menuId%@2, where menuId refers to the id field in the menu extension. The code example is as follows:
 ```json
    "contributes": {
        "menus": {
          "editor/context": [
            {
              "id":"foo",
-             "title": "带子菜单的菜单",
+             "title": "Menu with submenu",
              "group": "z_commands",
            },
            {
@@ -293,8 +295,8 @@ menus节点下配置的对象内的key指的是要注册到哪个弹出菜单里
 
 ### group
 
-每个弹出菜单内的group都不一样，下面列出所有的弹出菜单下可用的group。
-> 注意：想要将扩展菜单放到弹出菜单的最后，可以将group设置成`0_foot`
+The group in each pop-up menu is different, and all the groups available under the pop-up menu are listed below.
+> Note: To put the extended menu at the end of the pop-up menu, you can set the group to `0_foot`
 
 - `editor/context`
     * copy
@@ -303,11 +305,11 @@ menus节点下配置的对象内的key指的是要注册到哪个弹出菜单里
     * assist
     * z_commands
 
-对应的位置如下图所示：
+As shown below:
 
 <img src = "/static/snapshots/Plug-in-development/group/editor_context.jpg" style="zoom:50%" />
 
-- `explorer/context` ：项目管理器右键菜单
+- `explorer/context`: Project manager right-click menu
     * new
     * openInExplorer
     * nature
@@ -315,32 +317,32 @@ menus节点下配置的对象内的key指的是要注册到哪个弹出菜单里
     * rename
     * z_commands
 
-对应的位置如下图所示：
+As shown below:
 
 <img src = "/static/snapshots/Plug-in-development/group/explorer_context.jpg" style="zoom:50%" />
 
-- `menubar/file` : 顶部菜单的`文件`菜单
+- `menubar/file` : `File` menu
     * new
     * tab
     * save
     * openInExplorer
 
-对应的位置如下图所示：
+As shown below:
 
 <img src = "/static/snapshots/Plug-in-development/group/menubar_file.jpg" style="zoom:50%" />
 
-- `menubar/edit` : 顶部菜单的`编辑`菜单
+- `menubar/edit` : `Edit` menu
     * undo
     * copy
     * format
     * line
     * delete
 
-对应的位置如下图所示：
+As shown below:
 
 <img src = "/static/snapshots/Plug-in-development/group/edit.jpg" style="zoom:50%" />
 
-- `menubar/select` : 顶部菜单的`选择`菜单
+- `menubar/select` : `Select` menu
     * selectAll
     * area
     * word
@@ -349,39 +351,39 @@ menus节点下配置的对象内的key指的是要注册到哪个弹出菜单里
     * 0_cursor
     * 1_cursor
 
-对应的位置如下图所示：
+As shown below:
 
 <img src = "/static/snapshots/Plug-in-development/group/select.jpg" style="zoom:50%" />
 
-- `menubar/find` : 顶部菜单的`查找`菜单
+- `menubar/find` : `Find` menu
     * findFile
     * findWord
     * findSymbol
 
-对应的位置如下图所示：
+As shown below:
 
 <img src = "/static/snapshots/Plug-in-development/group/find.jpg" style="zoom:50%" />
 
-- `menubar/goto` : 顶部菜单的`跳转`菜单
+- `menubar/goto` : `Goto` menu
     * system_goto
     * line_goto
     * define_goto
 
-对应的位置如下图所示：
+As shown below:
 
 <img src = "/static/snapshots/Plug-in-development/group/goto.jpg" style="zoom:50%" />
 
-- `menubar/run` : 顶部菜单的`运行`菜单
+- `menubar/run` : `Run` menu
     * 0_foot
 
-对应的位置在菜单的末尾。
+The corresponding position is at the end of the menu.
 
-- `menubar/publish` : 顶部菜单的`发行`菜单
+- `menubar/publish` : `Publish` menu
     * 0_foot
 
-对应的位置在菜单的末尾。
+The corresponding position is at the end of the menu.
 
-- `menubar/view` : 顶部菜单的`视图`菜单
+- `menubar/view` : `View` menu
     * min_window
     * focus_editor
     * show_lineno
@@ -389,71 +391,70 @@ menus节点下配置的对象内的key指的是要注册到哪个弹出菜单里
     * scroll
     * plus_font
 
-对应的位置如下图所示：
+As shown below:
 
 <img src = "/static/snapshots/Plug-in-development/group/view.jpg" style="zoom:50%" />
 
-- `menubar/tool` : 顶部菜单的`工具`菜单
+- `menubar/tool` : `Tool` menu
     * shortcuts
     * snippets
     * ext_settings
 
-对应的位置如下图所示：
+As shown below:
 
 <img src = "/static/snapshots/Plug-in-development/group/tool.jpg" style="zoom:50%" />
 
-- `menubar/help` : 顶部菜单的`帮助`菜单
+- `menubar/help` : `Help` menu
     * documents
     * checkupdate
     * license
 
-对应的位置如下图所示：
+As shown below:
 
 <img src = "/static/snapshots/Plug-in-development/group/help.jpg" style="zoom:50%" />
 
 
 ### when
-when表达式用来动态的判断某个条件是否满足(即表达式的运算结果是`true`或者`false`)，目前用于控制一个菜单是否显示。目前支持的表达式运算符如下：
+The when expression is used to dynamically determine whether a certain condition is satisfied (that is, the result of the expression is `true` or `false`). It is currently used to control whether a menu is displayed. The currently supported expression operators are as follows:
 
-|操作符	|Description	|例子														|
+|Operator	|Description	|Example														|
 |--		|--		|--															|
-|`==`	|相等	|`langId == 'javascript'`									|
-|`!=`	|不相等	|`langId != 'html'`								|
-|`&&`	|并且	|`explorerResourceCount == 1 && explorerResourceIsFolder`	|
-|<code>&#124;&#124;</code>|或者	|<code>explorerResourceIsFolder &#124;&#124; explorerResourceIsWorkspaceFolder</code>|
-|`!`	|非	    |`!explorerResourceIsFolder`|
-|`=~`	|正则运算	    |`workspaceFolderRelativePath  =~ /^package.json/`|
+|`==`	|euqal	|`langId == 'javascript'`									|
+|`!=`	|not equal	|`langId != 'html'`								|
+|`&&`	|and	|`explorerResourceCount == 1 && explorerResourceIsFolder`	|
+|<code>&#124;&#124;</code>|Or	|<code>explorerResourceIsFolder &#124;&#124; explorerResourceIsWorkspaceFolder</code>|
+|`!`	|No	    |`!explorerResourceIsFolder`|
+|`=~`	|Regular expression    |`workspaceFolderRelativePath  =~ /^package.json/`|
 
-目前HBuilderX内置变量列表如下：
+The current HBuilderX built-in variable list is as follows:
 
-|变量名														|类型		|Description																																																			|
+|Variable Name														|Type		|Description																																																			|
 |--																|--			|--																																																				|
-|workspaceFolderRelativePath			|String	|相对于项目的相对路径，举例： pages/user/user.vue																													|
-|workspaceRelativePath						|String	|相对于项目的相对路径（加上项目名称），举例： HelloUniapp/pages/user/user.vue															|
-|workspaceFolder.type							|String	|项目类型，可取值：UniApp_Vue,Web,App,Wap2App,Extension,Unkown																						|
-|explorerResourceCount						|Number	|项目管理器选中的资源数量																																									|
-|explorerResourceIsFolder					|Boolean|项目管理器选中的资源是否全是目录																																					|
-|explorerResourceIsWorkspaceFolder|Boolean|项目管理器选中的资源是否全是项目根目录																																		|
-|isSVN														|Boolean|是否是SVN仓库下的文件																																										|
-|isGit														|Boolean|是否是Git仓库下的文件																																										|
-|activeEditor.file.exists					|Boolean|当前激活的编辑器打开的文件是否存在																																				|
-|activeEditor.file.isProjectFile	|Boolean|当前激活的编辑器打开的文件是否是左侧项目管理器下的文件																										|
-|activeEditor.readonly						|Boolean|当前激活的编辑器是否是只读																																								|
-|editorTextFocus									|Boolean|当前激活的编辑器是否有焦点																																								|
-|langId														|String	|当前激活的编辑器打开的文档的编程语言id，完整语言Id列表参见[这里](/ExtensionDocs/Api/other/languageId)|
-|viewItem													|String	|通过`views`扩展的视图中当前选择的item的contextValue																											|
-|config.*													|Any		|获取某个配置项的值,例子： `config.editor.fontSize`																												|
-|isMac														|Boolean|当前电脑操作系统是否是MacOSX（仅对HBuilderX3.2.22+版本生效）																							|
-|isWindows												|Boolean|当前电脑操作系统是否是Windows（仅对HBuilderX3.2.22+版本生效）																						|
-|editorHasSelection								|Boolean|当前激活的编辑器是否有选中的内容 （仅对HBuilderX3.2.22+版本生效）																				|
+|workspaceFolderRelativePath			|String	|The relative path relative to the project, for example: pages/user/user.vue																													|
+|workspaceRelativePath						|String	|The relative path relative to the project (plus the project name), for example: HelloUniapp/pages/user/user.vue															|
+|workspaceFolder.type							|String	|Item type, options values: UniApp_Vue,Web,App,Wap2App,Extension,Unkown																						|
+|explorerResourceCount						|Number	|The number of resources selected by the project explorer																																									|
+|explorerResourceIsFolder					|Boolean|Whether the resources selected by the project explorer are all directories																																					|
+|explorerResourceIsWorkspaceFolder|Boolean|Whether the resources selected by the project explorer are all the project root directory																																		|
+|isSVN														|Boolean|Is it a file in the SVN																																										|
+|isGit														|Boolean|Is it a file under the Git repository																																										|
+|activeEditor.file.exists					|Boolean|Whether the file opened by the currently active editor exists																																				|
+|activeEditor.file.isProjectFile	|Boolean|Whether the file opened by the currently active editor is the file under the project explorer on the left																										|
+|activeEditor.readonly						|Boolean|Whether the currently active editor is read-only																																								|
+|editorTextFocus									|Boolean|Whether the currently active editor has focus																																								|
+|langId														|String	|The programming language id of the document opened by the currently active editor, see [here] for the complete language id list(/ExtensionDocs/Api/other/languageId)|
+|viewItem													|String	|The contextValue of the currently selected item in the view expanded by `views`																											|
+|config.*													|Any		|Get the value of a configuration item, example: `config.editor.fontSize`																												|
+|isMac														|Boolean|Whether the current computer operating system is MacOSX (Supported from HBuilderX3.2.22+)																							|
+|isWindows												|Boolean|Whether the current computer operating system is MacOSX (Supported from HBuilderX3.2.22+)																			|
+|editorHasSelection								|Boolean|Whether the currently activated editor has selected content (Supported from HBuilderX3.2.22+)																				|
 
 ## customEditors
+The customEditors contribution point is how your extension tells HBuilderX about the custom editors that it provides. For example, HBuilderX needs to know what types of files your custom editor works with as well as how to identify your custom editor in any UI.
 
-插件可以通过该扩展点扩展多个不同类型的自定义编辑器，自定义编辑器可以设置文件匹配模式，用户通过项目管理器打开的文件匹配到某一类型时，在编辑器区域创建webview视图，关联打开的文件。
+Complete reference for the process of extending a custom editor [How to extend a custom editor? ](/ExtensionTutorial/customeditor)
 
-完整的扩展自定义编辑器流程参考[如何扩展一个自定义编辑器？](/ExtensionTutorial/customeditor)
-
-#### 扩展点示例如下：
+#### For example:
 ```json
  "contributes": {
 		"customEditors": [{
@@ -468,16 +469,16 @@ when表达式用来动态的判断某个条件是否满足(即表达式的运算
 	}
 ```
 
-#### 属性列表
-|Attribute name		|Type	|是否必须	|Description	|
+#### Attributes List
+|Attribute name		|Type	|Required	|Description	|
 |--	            |--			|--		|--		 |
-|viewType		|String		|是		|自定义编辑器类型，`全局唯一` |
-|displayName	|String		|否		|显示名称（暂时未用）	|
-|selector		|Array&lt;[EditorSelctor](#EditorSelctor)&gt;	|是		|匹配模板，指定一个或多个匹配模板，匹配成功的文件会与该类型自定义编辑器关联|
-|priority       |String		|否		|优先级（暂时未用）|
+|viewType		|String		|Yes		|Custom editor type, `globally unique |
+|displayName	|String		|No		|Display name（unused）	|
+|selector		|Array&lt;[EditorSelctor](#EditorSelctor)&gt;	|Yes		|Matching template, specify one or more matching templates, the files that match successfully will be associated with the custom editor of this type|
+|priority       |String		|No		|Priority (unused)）|
 
 
 #### EditorSelctor
-|Attribute name	|Type	|是否必须	|Description   |
+|Attribute name	|Type	|Required|Description   |
 |--			|--			|--			|--     |
-|fileNamePattern    |String	    |是 |文件名匹配，支持通配符|
+|fileNamePattern    |String	    |Yes |File name matching, supports wildcards|
