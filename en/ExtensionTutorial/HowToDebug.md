@@ -1,22 +1,22 @@
-# 如何调试插件？
+# How to debug the extension?
 
-> HBuilderX 3.2.11+, 支持调试插件。
+> HBuilderX 3.2.11+, supports debugging extensions.
 
-## 开启调试
+## Start debugging
 
-左侧视图，选中要调试的插件，点击工具栏运行图标，即可打开运行调试列表。
+In the left view, select the extension to be debugged, and click the run icon in the toolbar to open the run debug list.
 
 <img src="/static/snapshots/Plug-in-development/debug/start_debug.png" class="hd-img" />
 
-点击【调试插件】，即可打开[调试视图](#DebugView)
+Click [Debug Extension] to open [Debug View](#DebugView)
 
-## 关于node-debug插件
+## About node-debug extension
 
-HBuilderX插件开发依赖node-debug插件，如果调试时，弹窗提示安装【node-debug】插件，请务必点击安装，否则无法调试插件。
+HBuilderX extension development relies on the node-debug extension. If the pop-up window prompts to install the [node-debug] extension during debugging, be sure to click install, otherwise the extension cannot be debugged.
 
 <img src="/static/snapshots/Plug-in-development/debug/node-debug.png" class="hd-img" />
 
-## 添加/删除断点
+## d
 
 打开要调试的文件，在行号上，鼠标右击。
 
