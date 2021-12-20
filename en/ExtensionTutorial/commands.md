@@ -1,6 +1,6 @@
-`命令`指的是在插件中注册的自定义function,`命令`触发时将调用该function。注册一个新的`命令`分为2个步骤：
+`Command` refers to the custom function registered in the extension, which will be called when the `command` is triggered. Registering a new `command` is divided into 2 steps:
 
-1 . 在package.json中通过`commands`配置扩展点声明该`命令`，相关代码如下：
+1 . Declare the `command` through the `commands` configuration  point in package.json, the relevant code is as follows:
 
 ```json
     "contributes": {
@@ -11,7 +11,7 @@
     }
 ```
 
-2 . 在插件激活的时候通过API hx.commands.registerCommand或者hx.commands.registerTextEditorCommand来实现上面声明的`命令`，注意`命令标识`一定要一致。相关代码如下：
+2 . When the extensionssds is activated, use the API hx.commands.registerCommand or hx.commands.registerTextEditorCommand to implement the `command` declared above. Note that the `command ID` must be consistent. The relevant code is as follows:
 
 ```javascript
     let disposable = hx.commands.registerCommand('extension.helloWorld', () => {
