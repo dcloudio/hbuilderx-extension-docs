@@ -21,14 +21,14 @@
         <script src="/static/js/footnavbar.js?v=20211216" type="text/javascript" charset="utf-8"></script>
         <script>
             // 获取浏览器语言
-            var lan = getLang()
+            var lan = getLang();
             // 设置title
             if (lan.substr(0, 2) != 'zh') {
-                document.getElementsByTagName("title")[0].innerText = 'HBuilderX Doc';
+                document.getElementsByTagName('title')[0].innerText = 'HBuilderX Doc';
             };
 
             // var Search = lan.includes('zh') ? "搜索" : "Search";
-            var Search = "Search";
+            var Search = 'Search';
 
             var basePath = `/${lan}/`;
             var loadSidebar = true;
@@ -92,12 +92,12 @@
                                     '<hr align=center color=#987cb9 size=1>Found mistake? Want to participate in editing?<a href=' +
                                     url + ' target=_blank> Edit this page on GitHub</a>' +
                                     '<br/><br/><span>HBuilderX plug-in development document, not translated into English, welcome to contribute. <span>' +
-                                    `<a href="https://github.com/dcloudio/hbuilderx-extension-docs/tree/master/en" target="_blank">Translate this document on github</a>`;
+                                    '<a href="https://github.com/dcloudio/hbuilderx-extension-docs/tree/master/en" target="_blank">Translate this document on github</a>';
                             };
                             return html + '<hr align=center color=#987cb9 size=1>发现错误？想参与编辑？<a href=' +
                                 url + ' target=_blank> 在 GitHub 上编辑此页面！</a>' +
                                 '<br/><br/><span>HBuilderX插件开发文档尚未翻译，欢迎参与贡献。<span>' +
-                                `<a href="https://github.com/dcloudio/hbuilderx-extension-docs/tree/master/en" target="_blank">在 Github 上翻译页面！</a>` +
+                                '<a href="https://github.com/dcloudio/hbuilderx-extension-docs/tree/master/en" target="_blank">在 Github 上翻译页面！</a>' +
                                 `
                                 <div id="footNavBox">
                                     <div class="footNav">
@@ -124,30 +124,30 @@
 
               try {
                   if (lan.substr(0, 2) == 'zh') {
-                      lan = "zh-cn";
+                      lan = 'zh-cn';
                   } else {
-                      lan = "en";
+                      lan = 'en';
                   };
               } catch (e) {
-                  lan = "zh-cn";
+                  lan = 'zh-cn';
               };
 
-              var user_set_language = getCookie("user_set_language");
-              if (["en", "zh-cn", "zh-hant"].includes(user_set_language)) {
+              var user_set_language = getCookie('user_set_language');
+              if (['en', 'zh-cn', 'zh-hant'].includes(user_set_language)) {
                   lan = user_set_language;
               };
 
               // 以防万一，获取的语言没有相应的目录
-              if (!["en", "zh-cn", "zh-hant"].includes(lan)) {
+              if (!['en', 'zh-cn', 'zh-hant'].includes(lan)) {
                   lan = 'zh-cn';
               };
-              return lan
+              return lan;
             }
 
             // 切换语言
             function setLang(param) {
                 lan = param;
-                setCookie("user_set_language", param);
+                setCookie('user_set_language', param);
                 location.reload();
             };
 
@@ -156,12 +156,12 @@
                 var Days = 365;
                 var exp = new Date();
                 exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000);
-                document.cookie = name + "=" + escape(value) + ";expires=" + exp.toGMTString();
+                document.cookie = name + '=' + escape(value) + ';expires=' + exp.toGMTString();
             };
 
             //获取指定名称的cookie的值
             function getCookie(name) {
-                let arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+                let arr, reg = new RegExp('(^| )' + name + '=([^;]*)(;|$)');
                 if (arr = document.cookie.match(reg)) {
                     return unescape(arr[2]);
                 } else {
@@ -170,7 +170,7 @@
             };
         </script>
         <script src="/static/docsify.js?v=20211206"></script>
-        <script src="/static/search.js?v=20211203"></script>
+        <script src="/static/search.js?v=20211221"></script>
         <script src="/static/preview.min.js?v=1586316635415"></script>
         <script src="/static/emoji.js"></script>
         <script src="/static/external-script.js"></script>
