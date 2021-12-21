@@ -692,7 +692,15 @@
             $searchLinkPanel.innerHTML = searchTargetHtml
         }
 
-        $searchResultListPanel.innerHTML = html || ("<p class=\"empty\"></p>");
+        let empty_text = "<p class=\"empty\">没有结果</p>";
+        try{
+            let browser_lang = getCookie('user_set_language');
+            if (browser_lang.substr(0, 2) != 'zh') {
+                empty_text = "<p class=\"empty\">No Result.</p>";
+            };
+        }catch(e){};
+
+        $searchResultListPanel.innerHTML = html || (empty_text);
         !isMobile && $main.classList.add('hide');
         vm.config.searchPlugin.searching = true;
     }
