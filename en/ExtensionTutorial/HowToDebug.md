@@ -6,7 +6,7 @@
 
 In the left view, select the extension to be debugged, and click the run icon in the toolbar to open the run debug list.
 
-<img src="/static/snapshots/Plug-in-development/debug/start_debug.png" class="hd-img" />
+<img src="/static/snapshots/Plug-in-development/debug/start_debug_en.png" class="hd-img" />
 
 Click [Debug Extension] to open [Debug View](#DebugView)
 
@@ -14,13 +14,13 @@ Click [Debug Extension] to open [Debug View](#DebugView)
 
 HBuilderX extension development relies on the node-debug extension. If the pop-up window prompts to install the [node-debug] extension during debugging, be sure to click install, otherwise the extension cannot be debugged.
 
-<img src="/static/snapshots/Plug-in-development/debug/node-debug.png" class="hd-img" />
+<img src="/static/snapshots/Plug-in-development/debug/node-debug_en.png" class="hd-img" />
 
 ## Breakpoints
 
 Open the file to be debugged, and right-click on the line number.
 
-<img src="/static/snapshots/Plug-in-development/debug/add_breakpoint.png" class="hd-img" />
+<img src="/static/snapshots/Plug-in-development/debug/add_breakpoint_en.png" class="hd-img" />
 
 ## Debug View @DebugView
 
@@ -33,7 +33,7 @@ After start debugging, you can see the debugging view in the left view of HBuild
 - Call stack
 - breakpoints（including `delete`/`start`/`disable` breakpoint）
 
-<img src="/static/snapshots/Plug-in-development/debug/debug_view.png" class="hd-img" />
+<img src="/static/snapshots/Plug-in-development/debug/debug_view_en.png" class="hd-img" />
 
 ## Debug Actions @DebugActions
 
@@ -48,7 +48,7 @@ After start debugging, you can see the debugging view in the left view of HBuild
 
 Continue (F8)：After clicking, run until the next breakpoint.
 
-<img src="/static/snapshots/Plug-in-development/debug/continue.png" class="hd-img" />
+<img src="/static/snapshots/Plug-in-development/debug/continue_en.png" class="hd-img" />
 
 ## Data check and view variables
 
@@ -56,11 +56,11 @@ Continue (F8)：After clicking, run until the next breakpoint.
 
 In the [Variable Window], select the variable and right-click the menu to add the variable to the watch window.
 
-<img src="/static/snapshots/Plug-in-development/debug/add_to_monitor.png" class="hd-img" />
+<img src="/static/snapshots/Plug-in-development/debug/add_to_monitor_en.png" class="hd-img" />
 
 ### Hover show
 
 During breakpoint debugging, hover the mouse over the variable to be viewed to open the hover window.
 
-<img src="/static/snapshots/Plug-in-development/debug/hovering_window.png" class="hd-img" />
+<img src="/static/snapshots/Plug-in-development/debug/hovering_window_en.png" class="hd-img" />
 

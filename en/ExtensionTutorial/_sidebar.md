@@ -11,6 +11,7 @@
     * [How to register View](/ExtensionTutorial/views.md)
     * [How to extend custom editor](/ExtensionTutorial/customeditor.md)
     * [How to fit the theme](/ExtensionTutorial/fitTheme.md)
+    * [How to Debug](/ExtensionTutorial/HowToDebug.md)
 * Extension Publish
     * [HowToPublish](/ExtensionTutorial/HowToPublish.md)
 <div class="contact-box">
