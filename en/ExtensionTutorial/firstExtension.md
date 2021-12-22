@@ -17,7 +17,7 @@ In HBuilderX, Click the `New` button on the toolbar or the shortcut key `ctrl+n`
 
 <img src="/static/snapshots/Plug-in-development/start_run_extension_en.png" style="zoom:45%;border: 1px solid #eee;border-radius: 5px;" />
 
-The effect diagram of the extended operation is as follows:
+The display results are as follows:
 
 <img src="/static/snapshots/Plug-in-development/show_run_extension_en.jpg" style="zoom:45%;border: 1px solid #eee;border-radius: 20px;" />
 
