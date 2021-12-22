@@ -22,7 +22,7 @@
 
 - Extension inherits from CustomEditorProvider
 
-HBuilderX uses WebViewPanel as the view of the custom editor. The usage of [WebViewPanel](/ExtensionDocs/Api/windows/createWebView?id=webviewpanel) can also refer to [View Extension](/ExtensionTutorial/views.md#WebView) Example.
+  HBuilderX uses WebViewPanel as the view of the custom editor. The usage of [WebViewPanel](/ExtensionDocs/Api/windows/createWebView?id=webviewpanel) can also refer to [View Extension](/ExtensionTutorial/views.md#WebView) Example.
     
 ```javascript
 var hx = require("hbuilderx");
@@ -67,7 +67,7 @@ class CatCustomEditorProvider extends CustomEditorProvider{
 
 - Register the custom editor of the above extension through API: [window.registerCustomEditorProvider](/ExtensionDocs/Api/windows/registerCustomEditorProvider) when the extension is activated
 
-Custom editor provides new extension activation event[onCustomEditor](/ExtensionDocs/activation_event.md#onCustomEditor)
+Custom editor provides new extension activation event [onCustomEditor](/ExtensionDocs/activation_event.md#onCustomEditor)
 
 ```json
 // package.json declare the type of custom editor that can activate the extension
