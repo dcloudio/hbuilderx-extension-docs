@@ -17,7 +17,7 @@ In addition, you can add `cli` to `environment variables`, so that you can call 
 
 [Env Variables](/cli/env)
 
-#### Help
+#### Cli Help
 
 > To use the help command, you need to start HBuilderX first.
 
@@ -38,7 +38,7 @@ cli ver
 # Start HBuilderX
 cli open
 
-# Shutdown HBuilderX
+# Quit HBuilderX
 cli app quit
 ```
 
