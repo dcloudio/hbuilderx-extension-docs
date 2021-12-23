@@ -1,21 +1,21 @@
 # cli project
 
-> HBuilderX cli命令行工具, 仅适用于HBuilderX 3.1.5+版本
+> Supported from HBuilderX 3.1.5+
 
-#### 列举所有项目列表
+#### List all projects
 
 ```shell
 cli project list
 ```
 
-#### 打开项目
+#### Open project
 
 ```shell
-cli project open --path 项目路径
+cli project open --path the path of project
 ```
 
-#### 关闭项目
+#### Close project
 
 ```shell
-cli project close --path 项目路径
+cli project close --path the path of project
 ```
