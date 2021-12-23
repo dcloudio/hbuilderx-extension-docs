@@ -102,7 +102,7 @@ module.exports = {
 
 > The expanded `View` can be opened via the menu `View`-`Show Plug-in View`
 
-#### Screenshot Image
+#### Screenshot
 
 <img src="/static/snapshots/Plug-in-development/webview.png" style="zoom:50%" />
 
@@ -134,7 +134,7 @@ Extend a new TreeView `view` (view) through the following 2 steps:
     }
 ```
 
-- Activate the extension with API:<a href="/ExtensionDocs/Api/windows/createTreeView" target="_blank">window.createTreeView</a> to implement the expanded `view`
+- Activate the extension with API: <a href="/ExtensionDocs/Api/windows/createTreeView" target="_blank">window.createTreeView</a> to implement the expanded `view`
 
 ``` javascript
 // extension.js
@@ -214,7 +214,7 @@ module.exports = {
 
 > The expanded `View` can be opened via the menu `View`-`Show Plug-in View`
 
-#### Screenshot Image
+#### Screenshot
 
 <img src="/static/snapshots/Plug-in-development/view@2x.png" style="zoom:50%;border: 1px solid #eee; border-radius: 10px;" />
 
