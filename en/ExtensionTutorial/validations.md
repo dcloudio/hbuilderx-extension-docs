@@ -1,9 +1,9 @@
-对文件进行验证有3种触发方式：
-1. 通过点击注册的某个菜单触发验证
-2. 监听文档修改事件实时验证
-3. 监听文档保存事件验证
+There are 3 ways to trigger file verification:
+1. Trigger verification by clicking on a registered menu
+2. Validation when monitoring document modification event
+3. Validation when listening document saving event
 
-将验证的错误列表发送到HBuilderX进行显示的代码如下：
+The following code that sends the error result of the verification to HBuilderX:
 ```javascript
 let editorPromise = hx.window.getActiveTextEditor();
 editorPromise.then((editor)=>{
