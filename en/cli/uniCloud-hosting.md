@@ -5,8 +5,7 @@ The front-end web hosting is based on the ability of uniCloud to provide develop
 - Faster: Without going through the web server, the pages and resources are directly uploaded to the CDN, which can be accessed nearby, and the speed is faster.
 - Safer: There are no vulnerabilities in the various operating systems and web servers of traditional servers, so there is no need to think about patching every day. A service that will never be defeated without fear of DDoS attacks.
 - More worry-free: no need to buy virtual machines, install operating systems, configure web servers, handle load balancing, handle large concurrency, handle DDoS attacks... You don’t have to worry about anything, just upload the page files you write
-- 更便宜：uniCloud由DCloud联合阿里云和腾讯云推出，其中阿里云版本完全免费。 
-Cheaper: uniCloud is launched by DCloud in conjunction with Alibaba Cloud and Tencent Cloud, and the Alibaba Cloud version is completely free.
+- Cheaper: uniCloud is launched by DCloud in conjunction with Alibaba Cloud and Tencent Cloud, and the Alibaba Cloud version is completely free.
 
 [Details of front-end web hosting](https://uniapp.dcloud.io/uniCloud/hosting)
 
