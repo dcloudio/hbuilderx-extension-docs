@@ -92,7 +92,7 @@ The configuration file format is json, save the following content in a json file
 |name	    |description	    |
 |--			|--			|
 |--help	|pack command help	|
-|--config	|The absolute path of the configuration file. Configuration file , refer to [Configuration File](/cli/pack?id=config)	|
+|--config	|The absolute path of the configuration file. Configuration file refer to [Configuration File](/cli/pack?id=config)	|
 |--project	|Imported project name or absolute path in HBuilder X		|
 |--platform	|Packaging platform, the default value is android, the options is "android", "ios". Separate multiple platforms with commas.		|
 |--iscustom	|Whether to use a custom dock. The default value is false, true: custom dock, false: custom certificate	|
@@ -138,7 +138,7 @@ cli pack --project <projectname> --platform iOS --safemode false --iscustom true
 
 #### How to read the annotated manifest.json file?@how-to-read-manifest
 
-**Questions:** Some users want to dynamically modify the `manifest.json` before packaging, but the manifest.json has comments, what should I do?
+**Questions:** Some users want to dynamically modify the `manifest.json` before packaging, but the manifest.json has comments, what should we do?
 
 **Answer:** Both js or python have `libraries` that can read commented JSON files
 
