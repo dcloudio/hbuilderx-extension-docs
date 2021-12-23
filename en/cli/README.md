@@ -15,7 +15,7 @@ Special Note: All the command examples in this article use cli instead of cli.ex
 
 In addition, you can add `cli` to `environment variables`, so that you can call cli anytime and anywhere, without having to enter the absolute path of cli.
 
-[Env Variables](/cli/env)
+[Environment Variables](/cli/env)
 
 #### Cli Help
 
