@@ -19,11 +19,11 @@ localhost:MacOS hx$ ./cli pack --config /Users/hx/Documents/HBuilderProjects/tes
 16:42:38.689 Compiling packaged resources...
 16:42:43.570 Compress and package resources...
 16:42:43.678 Send a packaging request to the cloud...
-16:42:45.518 Project pca [__UNI__EB87FB4] packaging status: Time: 2021-03-08 16:42:45    Type: iOS Appstore    		in the queue    The current application IDFA has been turned on, and IDFA needs to be turned on in the background when submitting the AppStore for review. [Details](https://ask.dcloud.net.cn/article/36107) Time: 2021-03-08 16:42:45    Type: Android self-signed certificate     	in the queue    
+16:42:45.518 Project pca [__UNI__EB87FB4] packaging status: Time: 2021-03-08 16:42:45    Type: iOS Appstore    		in the queue    The current application IDFA has been turned on, and IDFA needs to be turned on in the background when submitting the AppStore for review. [Details](https://ask.dcloud.net.cn/article/36107) Time: 2021-03-08 16:42:45    Type: Android custom certificate     	in the queue    
 After successful packaging, the download link will be automatically returned. For enquiries about the packaging process, please click the menu issue-view cloud packaging status. There is a long queue for packing during peak hours on Friday evening, so please wait patiently. If it is for third-party SDK debugging, please use a custom debugging dock (menu run-mobile phone or simulator-make custom debugging dock), do not repeatedly package.
 16:42:45.529 Project pca [__UNI__EB87FB4] packaging status: Time: 2021-03-08 16:42:45    Type: iOS Appstore    in the queue    The current application IDFA has been turned on, and IDFA needs to be turned on in the background when submitting the AppStore for review, [Details](https://ask.dcloud.net.cn/article/36107)
 16:43:42.881 Project pca [__UNI__EB87FB4] Successfully packaged:
-    Type: Android self-signed certificate Download Link: https://service.dcloud.net.cn/build/download/40dc5910-7fea-11eb-b149-2bda895b13a3 （Note: this address is a temporary download address and can only be downloaded 5 times）
+    Type: Android custom certificate Download Link: https://service.dcloud.net.cn/build/download/40dc5910-7fea-11eb-b149-2bda895b13a3 （Note: this address is a temporary download address and can only be downloaded 5 times）
 16:43:48.232 Project pca [__UNI__EB87FB4] packaging status: Time: 2021-03-08 16:42:45    Type: iOS Appstore    Cloud Packing    The current application IDFA has been turned on, and IDFA needs to be turned on in the background when submitting the AppStore for review, [Details] (https://ask.dcloud.net.cn/article/36107)
 16:44:46.579 Project pca [__UNI__EB87FB4] Successfully packaged:
     Type: iOS Appstore Download Link: https://service.dcloud.net.cn/build/download/40c60580-7fea-11eb-af55-b9c5ccd8a1ee （Note: this address is a temporary download address and can only be downloaded 5 times）The current application IDFA has been turned on, and IDFA needs to be turned on in the background when submitting the AppStore for review, [Details](https://ask.dcloud.net.cn/article/36107)
@@ -31,57 +31,56 @@ After successful packaging, the download link will be automatically returned. Fo
 
 ## Pack configuration file@config
 
-配置文件格式为json,将下面内容保存在文件json文件，编码为utf-8，根据说明配置所需参数 
-The configuration file format is json, save the following content in json file, encoded as utf-8, configure the required parameters according to the instructions
+The configuration file format is json, save the following content in a json file with utf-8 encoding, and configure the required parameters according to the instructions
 
 ```json
 {
-    //项目名字或项目绝对路径
+    //Project name or project absolute path
     "project": "test-pack",
-    //打包平台 默认值android  值有"android","ios" 如果要打多个逗号隔开打包平台
+    //package platform default is android  value have "android","ios" separate the packaging platform with multiple commas
     "platform":"ios,android",
-    //是否使用自定义基座 默认值false  true自定义基座 false自定义证书
+    //Whether to use a custom dock. The default value is false. True is custom dock, and false is custom certificate.
     "iscustom": false,
-    //打包方式是否为安心打包默认值false,true安心打包,false传统打包
+    //Whether the packaging method is safe packing, the default value is false, true is safe packing, false is traditional packing.
     "safemode": false,
-    //android打包参数
+    //android package parameters
     "android": {
-      //安卓包名
+      //package name
       "packagename":"com.test.android",
-      //安卓打包类型 默认值0 0 使用自有证书 1 使用公共证书 2 使用老版证书
+      //pack type default is 0. 0:custom certificate, 1: public certificate, 2: old certificate.
       "androidpacktype":"1",
-      //安卓使用自有证书自有打包证书参数
-      //安卓打包证书别名,自有证书打包填写的参数
+      //Android uses its custom certificate to package
+      //Android packaging certificate alias
       "certalias":"",
-      //安卓打包证书文件路径,自有证书打包填写的参数
+      //Android packaging certificate file path
       "certfile":"",
-      //安卓打包证书密码,自有证书打包填写的参数
+      //Android packaging certificate password
       "certpassword":"",
-      //安卓平台要打的渠道包 取值有"google","yyb","360","huawei","xiaomi","oppo","vivo"，如果要打多个逗号隔开
+      //The channel package, options have "google","yyb","360","huawei","xiaomi","oppo","vivo", use commas to separate multiple platforms.
       "channels":""
       },
-    //ios打包参数
+    //ios package parameters
     "ios": {
        //ios appid
        "bundle":"com.test.ios",
-       //ios打包支持的设备类型 默认值iPhone 值有"iPhone","iPad" 如果要打多个逗号隔开打包平台
+       //Device types supported by ios packaging. The default value of iPhone. Options have "iPhone", "iPad". use commas to separate multiple platforms.
        "supporteddevice":"iPhone,iPad",
-       //iOS使用自定义证书打包的profile文件路径
+       //The path of the profile file which packaged with a custom certificate
        "profile":"",
-       //iOS使用自定义证书打包的p12文件路径
+       //p12 file path which packaged with custom certificate
        "certfile":"",
-       //iOS使用自定义证书打包的证书密码
+       //certificate password which packaged with a custom certificate
        "certpassword":"123"
      },
-    //是否混淆 true混淆 false关闭
+    //Whether to confuse, true: confuse, false: close.
     "isconfusion":false,
-    //开屏广告 true打开 false关闭
+    //Whether to display open-screen ads,true: on, false: off.
     "splashads":false,
-    //悬浮红包广告true打开 false关闭
+    //Whether to display redpack ads, true: open, false: close.
     "rpads":false,
-    //push广告 true打开 false关闭
+    //Whether to display push ads, true: open, false: close.
     "pushads":false,
-    //加入换量联盟 true加入 false不加入
+    //Whether to join the exchange alliance, true: yes, false: no.
     "exchange":false
 }
 ```
