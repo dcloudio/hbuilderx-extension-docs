@@ -1,52 +1,52 @@
-## 了解视图
+## Understanding the view
 
-HBuilderX支持创建完全自定义的、可以间接和nodejs通信的特殊网页，即视图。
+HBuilderX supports customized and special web pages: Views, which can communicate with nodejs.
 
-使用视图可以构建复杂的、支持本地文件操作的用户界面。
+Use the view to build a complex UI that supports local file operations.
 
-设计糟糕的视图也很容易让人感觉不舒适，不能让人家一看就觉得你这是一张网页，`好看`、跟`HBuilderX风格统一`的UI也很重要。
+It's very important to design a perfect UI.
 
 
-[扩展一个新的 WebView](#WebView)
+[Extend a new WebView](#WebView)
 
-[扩展一个新的 TreeView](#TreeView)
+[Extend a new TreeView](#TreeView)
 
 ## WebView
 
-`从HBuilderX 2.8.1及以上版本开始支持`
+`Supported from HBuilderX 2.8.1+`
 
-扩展一个新的 WebView `视图`（view）通过以下2个步骤：
+Extend a new WebView `view` (view) with the following 2 steps:
 
-- 通过 <a href="/ExtensionDocs/ContributionPoints/README?id=viewscontainers" target="_blank">viewContainers</a> 和 <a href="/ExtensionDocs/ContributionPoints/README?id=views" target="_blank">views</a>配置扩展点声明要扩展的`视图`
+- Through <a href="/ExtensionDocs/ContributionPoints/README?id=viewscontainers" target="_blank">viewContainers</a> and <a href="/ExtensionDocs/ContributionPoints/README?id=views" target="_blank">views</a> to configure and declare the `view`.
 
 
 ``` json
 //package.json；
-//...NOTE：package.json不支持注释，以下代码使用时需要将注释删掉
+//...NOTE：Package.json does not support comments, you need to delete the comments when using the following code
      "contributes": {
          "viewsContainers": {            
              "rightside": [{
                  "id": "WebViewcontainerId",
-                 "title": "webview 展示"
+                 "title": "webview - display"
              }]
          },
          "views": {            
              "WebViewcontainerId": [{
                  "id": "extension.WebView",
-                 "title": "webview - 展示"
+                 "title": "webview - display"
              }]
          },
          ...
     }
 ```
 
-- 在插件激活时通过API：<a href="/ExtensionDocs/Api/windows/createWebView" target="_blank">window.createWebView</a>实现上面扩展的`视图`
+- Activate the extension with API: <a href="/ExtensionDocs/Api/windows/createWebView" target="_blank">window.createWebView</a> to implement the expanded `view`
 
 ``` javascript
 const hx = require('hbuilderx');
 
 /**
- * @description 显示webview
+ * @description display webview
  */
 function showWebView(webviewPanel) {
     let webview = webviewPanel.webView;
@@ -70,7 +70,7 @@ function showWebView(webviewPanel) {
                 <img src="https://download1.dcloud.net.cn/uploads/images/hbuilderx/hx_desc@1x.png" style="position: absolute;bottom: 0;left: 0;right: 0;width: 100%;margin: auto;">
             </div>
             <script>
-                //    以下两种写法等同
+                //The following two methods are equivalent
                 hbuilderx.onDidReceiveMessage((msg) => {});
                 window.addEventListener("message", (msg) => {});
                 hbuiderx.postMessage({
@@ -81,12 +81,12 @@ function showWebView(webviewPanel) {
         </body>
       `;
      
-    // 插件发送消息(可以被JSON化的数据)到webview
+    //The extension sends messages (data that can be JSONized) to the webview
     webview.postMessage({
         command: "test"
     });
     
-    // 插件接收webview发送的消息(可以被JSON化的数据)
+    //The extension receives messages sent by webview (data that can be JSONized)
     webview.onDidReceiveMessage((msg) => {
         if (msg.command == 'alert') {
             hx.window.showInformationMessage(msg.text);
@@ -100,23 +100,23 @@ module.exports = {
 }
 ```
 
-> 扩展后的`视图`可通过菜单`视图`-`显示扩展视图`打开
+> The expanded `View` can be opened via the menu `View`-`Show Plug-in View`
 
-#### 效果图
+#### Screenshot
 
 <img src="/static/snapshots/Plug-in-development/webview.png" style="zoom:50%" />
 
 ## TreeView
-`从HBuilderX 2.7.12及以上版本开始支持`
+`Supported from 从HBuilderX 2.7.12+`
 
-扩展一个新的 TreeView `视图`（view）通过以下2个步骤：
+Extend a new TreeView `view` (view) through the following 2 steps:
 
-- 通过 <a href="/ExtensionDocs/ContributionPoints/README?id=viewscontainers" target="_blank">viewContainers</a> 和 <a href="/ExtensionDocs/ContributionPoints/README?id=views" target="_blank">views</a>配置扩展点声明要扩展的`视图`
+- Through <a href="/ExtensionDocs/ContributionPoints/README?id=viewscontainers" target="_blank">viewContainers</a> and <a href="/ExtensionDocs/ContributionPoints/README?id=views" target="_blank">views</a> to configure and declare the `view`.
 
 
 ``` json
 //package.json；
-//...NOTE：package.json不支持注释，以下代码使用时需要将注释删掉
+//...NOTE：Package.json does not support comments, you need to delete the comments when using the following code
     "contributes": {
         "viewsContainers": {
             "activitybar": [{
@@ -126,7 +126,7 @@ module.exports = {
         },
         "views": {
             "demoview": [{
-                //该id需要和window.createTreeView中的viewId参数一致
+                //The id needs to be consistent with the viewId parameter in window.createTreeView
                 "id": "extensions.treedemo",
                 "name": "DemoView"
             }]
@@ -134,7 +134,7 @@ module.exports = {
     }
 ```
 
-- 在插件激活时通过API：<a href="/ExtensionDocs/Api/windows/createTreeView" target="_blank">window.createTreeView</a>实现上面扩展的`视图`
+- Activate the extension with API: <a href="/ExtensionDocs/Api/windows/createTreeView" target="_blank">window.createTreeView</a> to implement the expanded `view`
 
 ``` javascript
 // extension.js
@@ -168,7 +168,7 @@ class DemoTreeDataProvider extends hx.TreeDataProvider{
         }
     }
 }
-//该方法将在插件激活的时候调用
+//This method will be called when the extension is activated
 function activate(context) {
     let demoData = [
         {
@@ -195,14 +195,14 @@ function activate(context) {
         }
     ]
     hx.commands.registerCommand("extension.helloWorld",function(param){
-        hx.window.showInformationMessage("选中了TreeItem:" + param[0]);
+        hx.window.showInformationMessage("Select TreeItem:" + param[0]);
     });
     hx.window.createTreeView("extensions.treedemo", {
         showCollapseAll: true,
         treeDataProvider: new DemoTreeDataProvider(demoData)
     });
 }
-//该方法将在插件禁用的时候调用（目前是在插件卸载的时候触发）
+//This method will be called when the extension is disabled (currently it is triggered when the extension is uninstalled
 function deactivate() {
 
 }
@@ -212,9 +212,9 @@ module.exports = {
 }
 ```
 
-> 扩展后的`视图`可通过菜单`视图`-`显示扩展视图`打开
+> The expanded `View` can be opened via the menu `View`-`Show Plug-in View`
 
-#### 效果图
+#### Screenshot
 
 <img src="/static/snapshots/Plug-in-development/view@2x.png" style="zoom:50%;border: 1px solid #eee; border-radius: 10px;" />
 
