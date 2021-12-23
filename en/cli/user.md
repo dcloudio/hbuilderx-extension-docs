@@ -1,25 +1,25 @@
-# 用户操作
+# User Operation
 
-> HBuilderX cli命令行工具, 仅适用于HBuilderX 3.1.5+版本
+> Supported from HBuilderX 3.1.5+
 
-#### 获取HBuilderX当前登录的用户信息
+#### Get the user information currently logged in HBuilderX 
 
 ```shell
 cli user info
 ```
 
-#### 在HBuilderX中，登录某个账号
+#### Log in HBuilderX
 
-如果登录成功，则返回`0:user login:OK`
+If the login is successful, it will return `0:user login:OK`
 
 ```shell
-cli user login --username <用户名>  --password <密码>
+cli user login --username <username>  --password <password>
 ```
 
 
-#### 退出HBuilderX登录账号
+#### Logout HBuilderX
 
-如果退出成功，则返回`0:user logout:OK`
+If the logout is successful, it will return `0:user logout:OK`
 
 ```shell
 cli user logout
