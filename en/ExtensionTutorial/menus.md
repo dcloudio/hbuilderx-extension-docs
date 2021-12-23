@@ -1,4 +1,4 @@
-`菜单`扩展是通过`配置扩展点`来注册的，一般要关联一个`命令`。扩展方式是在package.json中`contributes`节点下增加`menus`扩展点。相关代码如下：
+Adding `menu` extension will add a `menus` section and associate a `command`. The method is to add the `menus` sub-node under the `contributes` node in package.json. The code is as follows:
 ```json
     "contributes": {
 		"menus": {
@@ -16,4 +16,4 @@
 	}
 ```
 
-> `菜单`扩展点详细的说明请参考这里[menus](/ExtensionDocs/ContributionPoints/README.md#menus)
+> For details, please refer to here [menus](/ExtensionDocs/ContributionPoints/README.md#menus)
