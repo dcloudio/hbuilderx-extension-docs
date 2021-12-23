@@ -1,18 +1,18 @@
-#### 如何扩展一个自定义编辑器？
+#### How to extend a custom editor?
 
-`从HBuilderX 2.9.2及以上版本开始支持`
+`Supported from HBuilderX 2.9.2+`
 
-- 通过 [customEditors](/ExtensionDocs/ContributionPoints/README.md#customEditors) 配置扩展点，声明需要注册的自定义编辑器。
+- Configure contribution points through [customEditors] (/ExtensionDocs/ContributionPoints/README.md#customEditors) and declare custom editors that need to be registered.
 
 ```json
 //package.json；
-//...NOTE：package.json不支持注释，以下代码使用时需要将注释删掉
+//...NOTE：Package.json does not support comments, you need to delete the comments when using the following codes.
     "contributes": {
         "customEditors": [{
-            "viewType": "catEdit.catScratch",   // 自定义编辑器类型id
+            "viewType": "catEdit.catScratch",   // Custom editor type id
             "displayName": "Cat Scratch",
             "selector": [{
-                "fileNamePattern": "*.cscratch" // 文件名匹配模式
+                "fileNamePattern": "*.cscratch" // File name matching pattern
             }],
             "priority": "default"
         },
@@ -20,19 +20,19 @@
     }
 ```
 
-- 插件代码继承CustomEditorProvider等
+- Extension inherits from CustomEditorProvider
 
-    HBuilderX使用WebViewPanel来作为自定义编辑器的视图，[WebViewPanel](/ExtensionDocs/Api/windows/createWebView?id=webviewpanel)的用法也可以参考[视图扩展](/ExtensionTutorial/views.md#WebView)中部分示例。
+  HBuilderX uses WebViewPanel as the view of the custom editor. The usage of [WebViewPanel](/ExtensionDocs/Api/windows/createWebView?id=webviewpanel) can also refer to [View Extension](/ExtensionTutorial/views.md#WebView) Example.
     
 ```javascript
 var hx = require("hbuilderx");
 
-// 引入主要的类
+// Call Classes
 let CustomDocument = hx.CustomEditor.CustomDocument;
 let CustomEditorProvider = hx.CustomEditor.CustomEditorProvider;
 let CustomDocumentEditEvent = hx.CustomEditor.CustomDocumentEditEvent;
 
-// 继承CustomDocument
+// Inherits CustomDocument
 class CatCustomDocument extends CustomDocument {
     constructor(uri) {
         super(uri)
@@ -42,50 +42,50 @@ class CatCustomDocument extends CustomDocument {
     }
 }
 
-// 继承CustomEditorProvider，实现必要的方法
+// Inherit CustomEditorProvider to implement some methods
 class CatCustomEditorProvider extends CustomEditorProvider{
     constructor(context){
         super()
     }
     openCustomDocument(uri){
-        // 创建CustomDocument
+        // create CustomDocument
         return Promise.resolve(new CatCustomDocument(uri));
     }
     resolveCustomEditor(document, webViewPanel){
-        // 关联CustomDocument与WebViewPanel
+        // link CustomDocument and WebViewPanel
     }
     saveCustomDocument(document) {
-        // 保存document
+        // save document
         return true;
     }
     saveCustomDocumentAs(document, destination) {
-        // document另存为至destination
+        // document save to destination
         return true;
     }
 }
 ```
 
-- 在插件激活时通过API：[window.registerCustomEditorProvider](/ExtensionDocs/Api/windows/registerCustomEditorProvider)注册上面扩展的自定义编辑器
+- Register the custom editor of the above extension through API: [window.registerCustomEditorProvider](/ExtensionDocs/Api/windows/registerCustomEditorProvider) when the extension is activated
 
-自定义编辑器提供了新的插件激活事件[onCustomEditor](/ExtensionDocs/activation_event.md#onCustomEditor)
+Custom editor provides new extension activation event [onCustomEditor](/ExtensionDocs/activation_event.md#onCustomEditor)
 
 ```json
-// package.json 申明可以激活插件的自定义编辑器类型
+// package.json declare the type of custom editor that can activate the extension
 "activationEvents": [
     "onCustomEditor:catEdit.catScratch"
 ]
 ```
 
 ```javascript
-// 插件激活入口, 通常是extension.js文件
+// extension.js is activation entry
 function activate(context) {
     hx.window.registerCustomEditorProvider("catEdit.catScratch", new CatCustomEditorProvider());
 }
 ```
 
-- 其他
+- Others
 
 ```javascript
-// 在合适的位置向HBuilderX发送文档变动事件，编辑器标签卡变为dirty状态
+// Send a document change event to HBuilderX, and the editor tab becomes dirty status
 provider.onDidChangeCustomDocument.fire(new CustomDocumentEditEvent(document));
 ```

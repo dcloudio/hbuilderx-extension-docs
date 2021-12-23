@@ -1,25 +1,28 @@
+
+This document will show you how to build an extension step by step.
+
 ## Create Extension
 
 In HBuilderX, Click the `New` button on the toolbar or the shortcut key `ctrl+n` to open the new menu and select `Project`.
 
-> Note: The plug-in name can only use English letters and numbers, and spaces are not supported
+> Note: The extension name can only use English letters and numbers, and spaces are not supported
 
 <img src="/static/snapshots/Plug-in-development/create_extension_en.png" style="zoom:45%;border: 1px solid #eee;border-radius: 5px;" />
 
 ## Run Extension
 
-1. After creating the plug-in project, select the project or open a file under the project
+1. After creating the extension project, select the project or open a file under the project
 2. Click the `Run` button on the toolbar or the shortcut key `ctrl+r` to open the run menu
-3. Select `Run This Extension: xxx` to open a new HBuilderX form, and this new form will automatically load the plugin.
+3. Select `Run This Extension: xxx` to open a new HBuilderX form, and this new form will automatically load the extension.
 
 <img src="/static/snapshots/Plug-in-development/start_run_extension_en.png" style="zoom:45%;border: 1px solid #eee;border-radius: 5px;" />
 
-The effect diagram of the plug-in operation is as follows:
+The display results are as follows:
 
 <img src="/static/snapshots/Plug-in-development/show_run_extension_en.jpg" style="zoom:45%;border: 1px solid #eee;border-radius: 20px;" />
 
 
-Plug-in extension development template example, register a `Hello World` menu on the right-click menu of the code editor.
+Extension development template example, register a `Hello World` menu on the right-click menu of the code editor.
 
 <img src="/static/snapshots/Plug-in-development/extension_en_1.png" style="zoom:45%;border: 1px solid #eee;border-radius: 20px;" />
 
@@ -27,7 +30,7 @@ Plug-in extension development template example, register a `Hello World` menu on
 
 <img src="/static/snapshots/Plug-in-development/extension_en_2.jpg" style="zoom:45%;border: 1px solid #eee;border-radius: 20px;" />
 
-> Note: After modifying the plug-in code, you need to re-run the extension.
+> Note: After modifying the extension code, you need to re-run the extension.
 
 ## Log
 
@@ -35,11 +38,11 @@ The running extension will print the log in the console of the old Window.
 
 You can use APIs such as `console.log` and `console.error` to print information to the debugging console of the old Window.
 
-## extension description
+## Extension description
 
 #### package.json
 
-`package.json` must exist in every extension, contains extension information and `configuration extension points`.
+`package.json` must exist in every extension, contains extension information and `configuration contribution points`.
 
 The following is the package.json code description of the sample extension.
 
@@ -87,14 +90,14 @@ The following is the package.json code description of the sample extension.
 
 #### extension entry file
 
-The plug-in entry file in this example is `extension.js`, and the plug-in entry file must have the exports`activate` method, which is called when the plug-in is activated.
+The extension entry file in this example is `extension.js`, and the extension entry file must have the exports `activate` method, which is called when the extension is activated.
 
 ```javascript
 var hx = require("hbuilderx");
 
 function activate(context) {
 	let disposable = hx.commands.registerCommand('extension.helloWorld', () => {
-		hx.window.showInformationMessage('你好，这是我的第一个插件扩展。');
+		hx.window.showInformationMessage('Hello，this is my first extension。');
 		console.log("Hello My First HBuilderX Extension.");
 	});
 	context.subscriptions.push(disposable)

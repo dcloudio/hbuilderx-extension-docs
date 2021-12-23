@@ -1,24 +1,24 @@
-# 如何适配主题
+# How to unify the theme style
 
-> 本文适用于webview、自定义编辑器
+> This article applies to webview, custom editor
 
-HBuilderX支持创建视图、自定义编辑器，来构建用户界面。
+HBuilderX supports creating views and custom editors to build user interfaces.
 
-如何创建一个`好看`、`风格统一`的UI？
+How to create a perfect theme?
 
-## 获取HBuilderX主题数据
+## Get theme data of HBuilderX
 
-下面的js代码(可以保存为js文件)，主要用来获取如下数据：
+The following javascript code (can be saved as a js file) is used to obtain the following data:
 
-- 设置中的主题、以及用户自定义的主题颜色
-- 编辑器字体
-- 编辑器字体大小
+- Themes in settings and user-defined theme colors
+- Editor font
+- Editor font size
 
 ```js
 const hx = require('hbuilderx');
 
 /**
- * @description 判断是否是object
+ * @description Is an object?
  * @param {Object} object
  */
 function isObj(object){
@@ -26,17 +26,17 @@ function isObj(object){
 };
 
 /**
- * @description 获取跟主题相匹配的颜色
- *   - fontFamily           字体
- *   - fontSize             字号
- *   - background           背景色
- *   - fontColor            字体颜色
- *   - liHoverBackground    li类元素，悬停背景色
- *   - inputBgColor         输入框背景色
- *   - inputLineColor       输入框线条颜色
- *   - lineColor            其它线条颜色
- *   - scrollbarColor       滚动条颜色
- * @param {String} area - HBuilderX区域，当area=undefinded，返回编辑器区域的背景色；当area=siderBar时，返回项目管理器背景色
+ * @description Get the color matching the theme
+ *   - fontFamily           
+ *   - fontSize             
+ *   - background           
+ *   - fontColor           
+ *   - liHoverBackground    
+ *   - inputBgColor         
+ *   - inputLineColor       
+ *   - lineColor           
+ *   - scrollbarColor  
+ * @param {String} area - In the HBuilderX, when area=undefinded, it returns the background color of the editor area; when area=siderBar, it returns the background color of the project manager
  * @return {Object}
  */
 function getHBuilderXThemeData(area) {
@@ -52,24 +52,24 @@ function getHBuilderXThemeData(area) {
     let colorScheme = config.get('editor.colorScheme');
     let colorcustomColorsizations = config.get('workbench.colorCustomizations');
 
-    // 获取HBuilderX编辑器字体大小
+    // Get editor font size
     let fontSize = config.get('editor.fontSize');
     if (fontSize == undefined) {
         fontSize = 14;
     };
 
-    // 获取HBuilderX编辑器字体
+    // Get editor font family
     let fontFamily = config.get("editor.fontFamily");
     if (fontFamily) {
         fontFamily = "Monaco"
     };
 
-    // 获取当前主题
+    // Get current color theme
     if (colorScheme == undefined) {
         colorScheme = 'Default';
     };
 
-    // 处理用户自定义的颜色
+    // Get custom color
     let customColors = {};
     try{
         customColors = colorcustomColorsizations[`[${colorScheme}]`];
@@ -78,7 +78,7 @@ function getHBuilderXThemeData(area) {
         };
     }catch(e){};
 
-    // 根据参数，返回编辑器、或项目管理器背景色
+    // According to the parameters, return to the editor or project manager background color
     let viewBackgroundOptionName = area == 'siderBar' ? 'sideBar.background' : 'editor.background';
     let viewFontOptionName = area == 'siderBar' ? 'list.foreground' : undefined;
     let viewLiHoverBgOptionName = area == 'siderBar' ? 'list.hoverBackground' : 'list.hoverBackground';
@@ -144,12 +144,12 @@ module.exports = {
 
 ```
 
-## 监听主题切换
+## Monitor theme setting
 
-监听设置项`editor.colorScheme`、`editor.fontSize`、`editor.fontFamily`，当值改变后，发送消息（含主题数据）到视图。
+HBuilder will notify the view when it finds that the values of `editor.colorScheme`, `editor.fontSize`, and `editor.fontFamily` have changed.
 
 ```js
-// 引用上面的js代码
+//Call above javascript code
 let configurationChangeDisplose = hx.workspace.onDidChangeConfiguration(function(event){
     if(event.affectsConfiguration("editor.colorScheme") || event.affectsConfiguration("editor.fontSize") || event.affectsConfiguration("editor.fontFamily") ){
         let ThemeColorData = getHBuilderXThemeData();
