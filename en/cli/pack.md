@@ -56,14 +56,14 @@ The configuration file format is json, save the following content in a json file
       "certfile":"",
       //Android packaging certificate password
       "certpassword":"",
-      //The channel package, options have "google","yyb","360","huawei","xiaomi","oppo","vivo", use commas to separate multiple platforms.
+      //The package channel, the options have "google","yyb","360","huawei","xiaomi","oppo","vivo", separate multiple platforms with commas.
       "channels":""
       },
     //ios package parameters
     "ios": {
        //ios appid
        "bundle":"com.test.ios",
-       //Device types supported by ios packaging. The default value of iPhone. Options have "iPhone", "iPad". use commas to separate multiple platforms.
+       //Device types supported by ios packaging. The default value of iPhone. The options have "iPhone", "iPad". Separate multiple platforms with commas.
        "supporteddevice":"iPhone,iPad",
        //The path of the profile file which packaged with a custom certificate
        "profile":"",
@@ -85,63 +85,64 @@ The configuration file format is json, save the following content in a json file
 }
 ```
 
-## cli pack 参数@params
+## cli pack parameters@params
 
-> 以下参数选项, 均为`cli pack`的选项.
+> The following parameters are options of `cli pack`.
 
-|参数名称	    |描述	    |
+|name	    |description	    |
 |--			|--			|
-|--help	|打包命令帮助		|
-|--config	|配置文件绝对路径，配置文件配置，参考[配置文件](/cli/pack?id=config)	|
-|--project	|HBuilder X里导入的项目名或绝对路径		|
-|--platform	|配打包平台,默认值android,取值有"android","ios"如果要打多个逗号隔开		|
-|--iscustom	|是否使用自定义基座 默认值false, true自定义基座 false自定义证书		|
-|--safemode	|打包方式是否为安心打包,默认值false,true安心打包,false传统打包		|
-|--isconfusion	|配置文件绝对路径，配置文件配置，参考configure.json		|
-|--isconfusion  | 是否对配置的js/nvue文件进行原生混淆，true打开 false关闭|
-|--splashads	|开屏广告,默认值false, true打开 false关闭		|
-|--rpads	|悬浮红包广告,默认值false, true打开 false关闭		|
-|--pushads	|push广告,默认值false, true打开 false关闭		|
-|--exchange	|加入换量联盟,默认值false, true加入 false不加入		|
-|--android.packagename	|安卓包名，打安卓包填写		|
-|--android.androidpacktype	|安卓打包类型 默认值0,0 使用自有证书 1 使用公共证书 2 使用DCloud老版证书	|
-|--android.certalias	|安卓打包证书别名,自有证书打包填写的参数		|
-|--android.certfile	|安卓打包证书文件路径,自有证书打包填写的参数		|
-|--android.certpassword	|安卓打包证书密码,自有证书打包填写的参数		|
-|--android.channels	|安卓平台要打的渠道包,取值有"google","yyb","360","huawei","xiaomi","oppo","vivo"，如果要打多个逗号隔开		|
-|--ios.bundle	|iOS appid 打ios包填写		|
-|--ios.supporteddevice	|iOS打包支持的设备类型,默认值iPhone 值有"iPhone","iPad" 如果要打多个逗号隔开打包平台		|
-|--ios.isprisonbreak	|iOS打包是否打越狱包,true打越狱包,false正式包。HBuilderX 3.2.3+版本起，不再支持构建越狱包。		|
-|--ios.profile	|iOS使用自定义证书打包的profile文件路径		|
-|--ios.certfile	|iOS使用自定义证书打包的p12文件路径		|
-|--ios.certpassword 	|iOS使用自定义证书打包的证书密码		|
+|--help	|pack command help	|
+|--config	|The absolute path of the configuration file. Configuration file , refer to [Configuration File](/cli/pack?id=config)	|
+|--project	|Imported project name or absolute path in HBuilder X		|
+|--platform	|Packaging platform, the default value is android, the options is "android", "ios". Separate multiple platforms with commas.		|
+|--iscustom	|Whether to use a custom dock. The default value is false, true: custom dock, false: custom certificate	|
+|--safemode	|Whether the packaging method is safe packaging, the default value is false, true: safe packaging, false: traditional packaging		|
+|--isconfusion	|The absolute path of the configuration file, configuration file refer to configure.json		|
+|--isconfusion  | Whether to natively obfuscate the configured js/nvue files, true: turned on, false: turned off|
+|--splashads	|Whether to display the open-screen ads, the default value is false, true: turned on, false: turned off		|
+|--rpads	|Whether to display the redpack ads, the default value is false, true: turned on, false: turned off	|
+|--pushads	|Whether to display push ads, the default value is false, true: turned on, false: turned off		|
+|--exchange	|Whether to join the exchange alliance, the default value is false, true:yes, false:no		|
+|--android.packagename	|android package name		|
+|--android.androidpacktype	|pack type, default is 0. 0:custom certificate, 1: public certificate, 2: Dcloud old certificate.	|
+|--android.certalias	|Android packaging certificate alias		|
+|--android.certfile	|Android packaging certificate file path		|
+|--android.certpassword	|Android packaging certificate password		|
+|--android.channels	|The package channel, the options have "google","yyb","360","huawei","xiaomi","oppo","vivo", separate multiple platforms with commas.		|
+|--ios.bundle	|iOS appid app id		|
+|--ios.supporteddevice	|Device types supported by ios packaging. The default value of iPhone. The options have "iPhone", "iPad". Separate multiple platforms with commas.		|
+|--ios.isprisonbreak	|Whether iOS packaging is a jailbreak package, true is a jailbreak package, and false is an official package. Starting from HBuilderX 3.2.3+, the jailbreak package is no longer supported.		|
+|--ios.profile	|The path of the profile file which packaged with a custom certificate		|
+|--ios.certfile	|p12 file path which packaged with custom certificate		|
+|--ios.certpassword 	|certificate password which packaged with a custom certificate		|
 
-> 注 如果配置文件与配置参数都配置了相同参数，以命令行参数为准
+>Note: If the configuration file and configuration parameters are configured with the same parameters, the command line parameters shall prevail.
 
-## 命令行使用示例@example
+## Command line example@example
 
 ```shell
 
-# 通过配置文件打包
-cli pack --config 配置文件
+# Package via configuration file
+cli pack --config configuration file
 
-# android打包： 项目名称（apps）、传统打包、包名（io.test)、打包证书（自有证书、别名：testalias、密码123456）
+# android pack： 
+Project name (apps), traditional packaging, package name (io.test), packaging certificate (own certificate, alias: testalias, password 123456)
 cli pack --project apps --platform android --safemode false --android.packagename io.test --android.androidpacktype 0 --android.certalias testalias --android.certfile /Users/hx/Desktop/cert/jdk13/test.key --android.certpassword 123456
 
-# ios打包
+# ios pack
 cli pack --project <projectname> --platform iOS --safemode false --iscustom true --ios.bundle <bundle> --ios.supporteddevice iPhone,iPad --ios.isprisonbreak false --ios.profile <profile> --ios.certfile <p12 file> --ios.certpassword <passwd>
 ```
 
-## 扩展@extend
+## Extension@extend
 ------
 
-#### 如何读取带有注释的manifest.json文件?@how-to-read-manifest
+#### How to read the annotated manifest.json file?@how-to-read-manifest
 
-**问题：** 有的用户希望打包前，动态修改`manifest.json`, 但是manifest.json带有注释，怎么办？
+**Questions:** Some users want to dynamically modify the `manifest.json` before packaging, but the manifest.json has comments, what should I do?
 
-**回答：** js或python都有可以读取带有注释JSON文件的`库`。
+**Answer:** Both js or python have `libraries` that can read commented JSON files
 
-|	语言|库	|
+|	Lanague|Library	|
 |--	|--	|
 |	JavaScript| [strip-json-comments](https://www.npmjs.com/package/strip-json-comments)、[jsona](https://www.npmjs.com/package/jsona)	|
 |	Python | [commentjson](https://www.cnpython.com/pypi/commentjson)	|
