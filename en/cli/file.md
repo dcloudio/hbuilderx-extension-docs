@@ -1,19 +1,19 @@
-# cli 文件操作
+# cli file operation
 
-> 仅适用于HBuilderX 3.1.11+版本
+> Supported from HBuilderX 3.1.11+
 
-#### 命令语法
+#### Command
 
 ```shell
 cli open --file <file-name>
 ```
 
-#### 示例
+#### Example
 
 ```shell
-# 打开指定路径文件
+# Open the specified path file
 cli open --file /Users/apple/package.json
 
-# 打开指定路径文件，并跳转到指定行列
+# Open the specified path file, and jump to the specified line
 cli open --file /Users/apple/package.json:2:2
 ```
