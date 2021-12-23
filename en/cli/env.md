@@ -1,42 +1,42 @@
-# cli 配置环境变量
+# cli environment variables
 
-您可以将`cli`加入到`环境变量`，这样您就可以在任意目录、任意终端上，随时随地调用cli， 而无需通过输入cli绝对路径的方式来使用它。
+In addition, you can add cli to environment variables, so that you can call cli anytime and anywhere, without having to enter the absolute path of cli.
 
 ## MacOSX
 
-下面的示例，均以`HBuilderX正式版`安装路径为例，如使用alpha cli，替换相关路径即可。
+The following examples use the installation path of the official version of HBuilderX as an example. If you use alpha cli, please replace the path.
 
-修改前，请先确定您的shell类型。
+Before modifying, please confirm your shell type.
 
-如何查看shell类型，打开终端，输入`echo $SHELL`
+How to check the shell type, open the terminal and enter `echo $SHELL`
 
-### 方法1：添加环境变量
+### Method 1: Add Environment Variables
 
-> **警告：** 修改环境变量时，请**`慎重`** **`仔细`**，如果没有经验，不建议修改环境变量。
+> **Warning：** When modifying environment variables, please **`Caution`** **`Careful`**. If you have no experience, don't do it.
 
-如果您的shell是`bash`，进入终端，编辑环境变量文件`~/.bash_profile`, 输入如下内容
+If your shell is `bash`, enter the terminal, edit the environment variable file `~/.bash_profile`, enter the following
 
-如果您的shell是`zsh`，进入终端，编辑环境变量文件`~/.zprofile`，输入如下内容
+If your shell is `zsh`, enter the terminal, edit the environment variable file `~/.zprofile`, and enter the following
 
 ```shell
 export HX_HOME=/Applications/HBuilderX.app/Contents/MacOS/
 export PATH=$HX_HOME:$PATH:.
 ```
 
-### 方法2：创建别名
+### Method 2: Create Alias
 
-打开终端，根据shell类型，执行如下命令：
+Open the terminal and execute the following commands according to the shell type:
 ```shell
-# shell类型：bash
+# shell type: bash
 echo "alias cli='/Applications/HBuilderX.app/Contents/MacOS/cli'" >> ~/.bashrc && source ~/.bashrc
 
-# shell类型：zsh
+# shell type:zsh
 echo "alias cli='/Applications/HBuilderX.app/Contents/MacOS/cli'" >> ~/.zshrc && source ~/.zshrc
 ```
 
-### 方法3：创建软连接
+### Method 3：Create link
 
-打开终端，执行如下命令：
+Open the terminal and execute the following command:
 ```shell
 ln -s /Applications/HBuilderX.app/Contents/MacOS/cli /usr/local/bin/cli
 ```
@@ -44,8 +44,8 @@ ln -s /Applications/HBuilderX.app/Contents/MacOS/cli /usr/local/bin/cli
 
 ## Windows
 
-1. 复制HBuilderX安装目录路径（即HBuilderX.exe程序所在位置的上级目录）
-2. 右键 This PC(此电脑) -> Properties（属性） -> Advanced system settings（高级系统设置） -> Environment Variables（环境变量）
-3. 【用户变量】，点击【编辑】，找到path，输入HBuilderX路径。
+1. Copy the path of the HBuilderX installation directory (the parent directory of the location where the HBuilderX.exe program is located)
+2. Right click on Computers -> Properties -> Advanced system settings -> Environment Variables
+3. [User Variables], click [Edit], find path, and enter the HBuilderX path.
 
 <img src="/static/snapshots/cli/cli_env.png"/>
