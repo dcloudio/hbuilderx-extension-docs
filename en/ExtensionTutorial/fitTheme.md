@@ -4,7 +4,7 @@
 
 HBuilderX supports creating views and custom editors to build user interfaces.
 
-How to create a beautiful and unified theme?
+How to create a perfect theme?
 
 ## Get theme data of HBuilderX
 
