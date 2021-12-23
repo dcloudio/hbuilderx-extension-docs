@@ -1,8 +1,8 @@
-对文档进行修改前，首先要拿到文档关联的编辑器，获取编辑器的方式有2种：
+Before modifying the document, you must first get the editor associated with the document. There are two ways to obtain the editor:
 
-1 . 通过hx.window.getActiveTextEditor()
+1 . hx.window.getActiveTextEditor()
 
-代码如下：
+code show as below:
 ```javascript
     let editorPromise = hx.window.getActiveTextEditor();
     editorPromise.then((editor)=>{
@@ -17,9 +17,9 @@
     });
 ```
 
-2 . 通过编辑器`命令`,hx.commands.registerTextEditorCommand('id',(editor)=>{});
+2 . Through the editor `command`,hx.commands.registerTextEditorCommand('id',(editor)=>{});
 
-代码如下：
+code show as below:
 ```javascript
 hx.commands.registerTextEditorCommand('extension.reverseSelectWord',(editor)=>{
     let document = editor.document;
@@ -32,4 +32,4 @@ hx.commands.registerTextEditorCommand('extension.reverseSelectWord',(editor)=>{
     });
 });
 ```
-> 完整的代码示例可以在这里找到[文档编辑](#)
+> The example can be found here [Document Edit](#)
