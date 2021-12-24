@@ -1,54 +1,54 @@
-> HBuilderX cli命令行工具, 仅适用于HBuilderX 3.1.5+版本
+> HBuilderX cli command line tool, supported from HBuilderX 3.1.5+
 
-开发者可以通过cli命令行指示HBuilderX进行启动、打包、登录等操作。
+The developers can execute startup, package, log-in and other operations through the cli command line of HBuilderX.
 
-#### cli程序
+#### cli
 
-命令行工具所在位置:
+The path of the command line tool:
 
-- Windows: HBuilderX安装目录根目录, `cli.exe`
+- Windows: HBuilderX installation directory, `cli.exe`
 - MacOSX
-    - 正式版 `/Applications/HBuilderX.app/Contents/MacOS/cli`
-    - Alpha版 `/Applications/HBuilderX-Alpha.app/Contents/MacOS/cli`
+    - Official Version `/Applications/HBuilderX.app/Contents/MacOS/cli`
+    - Alpha Version `/Applications/HBuilderX-Alpha.app/Contents/MacOS/cli`
 
-特别注意：本文所有命令示例，均以cli代替cli.exe，请根据不同操作系统，实际应用。
+Special Note: All the command examples in this article use cli instead of cli.exe. Please refer to different operating systems and actual applications.
 
-此外，您可以将`cli`加入到`环境变量`，这样您就可以在任意目录、任意终端上，随时随地调用cli， 而无需通过输入cli绝对路径的方式来使用它。
+In addition, you can add `cli` to `environment variables`, so that you can call cli anytime and anywhere, without having to enter the absolute path of cli.
 
-[配置环境变量](/cli/env)
+[Environment Variables](/cli/env)
 
-#### 查看帮助文档
+#### Cli Help
 
-> 查看帮助文档，需要先启动HBuilderX。
+> To use the help command, you need to start HBuilderX first.
 
 ```shell
 cli --help
 cli help
 ```
 
-#### 查看cli版本号
+#### Cli Version
 
 ```shell
 cli ver
 ```
 
-#### 启动/关闭HBuilderX
+#### Start/Quit HBuilderX
 
 ```shell
-# 启动HBuilderX程序
+# Start HBuilderX
 cli open
 
-# 关闭HBuilderX程序
+# Quit HBuilderX
 cli app quit
 ```
 
-#### 更多命令
+#### More commands
 
-|cli命令												|详情													|
+|cli command												|Details													|
 |--															|--														|
-|用户账号操作，登录、退出等			|[详情](/cli/user)						|
-|文件操作，打开文件并跳转指定行列				|[详情](/cli/file)					|
-|项目操作，导入、关闭项目				|[详情](/cli/project)					|
-|app打包												|[详情](/cli/pack)						|
-|uniCLoud操作，比如云函数上传等	|[详情](/cli/uniCloud)				|
-|uniCloud 前端网页托管					|[详情](/cli/uniCloud-hosting)|
+|User account, login, logout			|[Details](/cli/user)						|
+|File operation, open the file and jump to the specified line and column				|[Details](/cli/file)					|
+|Project operations, import and close projects				|[Details](/cli/project)					|
+|app package												|[Details](/cli/pack)						|
+|uniCLoud operation, for example upload to uniCloud	|[Details](/cli/uniCloud)				|
+|uniCloud webpage hosting					|[Details](/cli/uniCloud-hosting)|
