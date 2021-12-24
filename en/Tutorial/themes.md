@@ -1,5 +1,5 @@
-## Select Color Theme
-
+## Select Color Theme@theme
+-------
 1. In HBuilderX, you can click on the top menu [Tool - Color Theme] to your favorite color theme.
 2. HBuilderX has 3 built-in themes, `Default` `Monokai` `Atom one Dark`.
 
@@ -12,13 +12,14 @@ The settings of the current color theme stored in the user settings ([Settings] 
 ```
 
 
-## Custom theme
+## Custom theme@custom
+-------
 
 > Supported from HBuilderX 1.8.8+
 
-The settings of the current color theme stored in `settings.json` file. You can customize the color theme by overriding related settings. The method is as follows:
+The settings of the current color theme stored in `settings.json` file. You can customize the color theme by overriding related settings. 
 
-#### Custom Window Theme
+### Custom Window Theme@custom-window
 
 In settings.json file of source view, you can customize the theme color you like by overriding the "workbench.colorCustomizations" field. [Custom theme parameters](/Tutorial/Other/themes_param)
 
@@ -39,17 +40,17 @@ In settings.json file of source view, you can customize the theme color you like
 }
 ```
 
-## Custom editor code color
+### Custom editor code color@custom-editor-code-style
 
 > Custom editor code color function, supported from HBuilderX 3.1.19+;
 
-### Which code areas can be customized?
+#### - Which code areas can be customized?
 
 Custom code color supports setting different colors for code snippets, such as `comment`, `string`, `keyword`, `variable`, and `tag`, etc.
 
 Currently supported languages include: `JavaScript(ES6+)`、`HTML(ES6+)`、`Vue`、`CSS`、`Less`、`SCSS`、`Stylus`、`Typescript`、`Markdown`、`JSON`。
 
-### How to customize？
+#### - How to customize?@how-to-custom
 
 In settings.json file of source view, you can customize the theme color you like by overriding the "editor.tokenColorCustomizations" field.
 
@@ -87,7 +88,7 @@ Example:
 
 Complete code color list：[Custom code color parameters](/Tutorial/Other/themes_code.md)
 
-### Custom code color assist function
+#### - Custom code color assist function@auxiliary
 
 Please follow our steps to customize code color:
 
@@ -102,7 +103,8 @@ Please follow our steps to customize code color:
 
 Notes: Now, you can customize the theme based on the 3 built-in themes `Default`, `Monokai` and `Atom One Dark` by overriding the theme settings, but you cannot create new themes.
 
-## File Icon Theme
+## File Icon Theme@file-icon
+-------
 
 Menu [Tools] [File Icon Theme], you can choose the file icon theme.
 
