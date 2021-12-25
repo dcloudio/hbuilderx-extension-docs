@@ -1,13 +1,13 @@
-# uniCloud cli 云开发@uniCloud
+# uniCloud cli uniCloud@uniCloud
 
-> uniCloud cli仅支持HBuilderX 3.1.9+
+> Supported from HBuilderX 3.1.9+
 
-## 列举资源信息@list
+## List@list
 
-#### 命令语法
+#### command
 
 ```shell
-cli cloud functions --list 资源类型代号 --prj 项目名称或序号 --provider 云服务商代号 --unimod uni_module模块名称 [--cloud]
+cli cloud functions --list Resource type code --prj project name or id --provider Cloud service provider code --unimod uni_module module name [--cloud]
 ```
 
 说明：
