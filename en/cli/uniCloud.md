@@ -34,7 +34,7 @@ cli cloud functions --list space --prj myproject --provider aliyun
 cli cloud functions --list cloudfunction --prj myproject --provider aliyun --cloud 
 ```
 
-## Upload Resources@upload
+## Upload@upload
 
 #### command
 
@@ -42,7 +42,7 @@ cli cloud functions --list cloudfunction --prj myproject --provider aliyun --clo
 cli cloud functions --upload resource type code --prj project name or serial number --provider Cloud service provider code --name resource name --unimod uni_module module name [--force]
 ```
 
-**Note**：当使用cli云开发方式操作时，上传下载默认使用`强制跳过`的方式，即如果目标已经存在同名资源，操作时将`自动跳过` When using the cli cloud development method to operate, upload and download use the `force skip` method by default, that is, if the target already has a resource with the same name, it will be `auto skipped` during operation.
+**Note**: When using the cli cloud development method, upload and download use the `force skip` method by default. Ff the target already has a resource with the same name, it will be `auto skipped` during operation.
 
 Instruction:
 
