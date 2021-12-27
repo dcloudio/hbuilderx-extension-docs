@@ -45,7 +45,7 @@
     * [安心打包使用指南](/Tutorial/App/SafePack.md)
     * [iOS安心打包證書安裝](/Tutorial/App/iosSafePack.md)
     * [前端網頁託管](/Tutorial/App/hosting.md)
-    * [uni-app H5 Chrome調試](/Tutorial/debug/h5-debug.md)
+ <!--   * [uni-app H5 Chrome調試](/Tutorial/debug/h5-debug.md) -->
   <!--  * [Chrome調試 5+ Android應用](Tutorial/App/use-chrome-to-debug-android-apps.md) -->
 * 版本控制
     * [Git 介紹](/Tutorial/SourceControl/Git/README.md)
