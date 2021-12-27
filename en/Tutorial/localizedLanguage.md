@@ -1,34 +1,34 @@
-# HBuilderX本地化语言包
+# HBuilderX Localized Language
 
-HBuilderX 3.2.9+，支持本地语言扩展。
+Supported from HBuilderX 3.2.9+
 
-您可以切换HBuilderX为自己喜欢的语言，目前支持`英语`、`中文繁体`。
+You can switch language between `English` and `Chinese Traditional`.
 
-当然，您也可以`自己制作`语言包，比如日语、韩语、法语。
+You can also `make your own` languages, such as Japanese, Korean, and French.
 
-## 切换语言
+## Switch Language
 
-首次启动HBuilderX，HBuilderX会展示跟您`操作系统语言一致`的语言；比如您的操作系统是英语，HBuilderX则会显示英语。
+When you start HBuilderX for the first time, HBuilderX will display the language consistent with your `operating system language`; for example, if your operating system is English, HBuilderX will display English.
 
-您也可以手动切换语言，点击HBuilderX顶部菜单【工具 - Appearance Language】。
+You can manually switch the language, click on the top menu of HBuilderX [Tools-Appearance Language].
 
-<img src="/static/snapshots/tutorial/settings/switch_language-en.png" style="zoom: 50%;border-radius: 10px;" />
+<img src="/static/snapshots/tutorial/settings/switch_language.png" style="zoom: 50%;border-radius: 10px;" />
 
-## 安装其它语言包
+## Install Other Languages
 
-您也可以在[HBuilderX插件市场](https://ext.dcloud.net.cn/?cat1=1&cat2=12&orderBy=UpdatedDate)，下载其它语言包。
+You can also download other languages from [HBuilderX Plug-in Market](https://ext.dcloud.net.cn/?cat1=1&cat2=12&orderBy=UpdatedDate).
 
 <img src="/static/snapshots/tutorial/settings/download_language_pack.png" style="zoom: 40%;border-radius: 10px;border: 1px solid #eee;" />
 
-## 贡献翻译
+## Contribute Translation
 
-如果您想给HBuilderX的项目贡献一份力量，请提交 PR 到本仓库，我们在通过检查审核后把修改后的内容合并到语言包中。
+If you want to contribute to the HBuilderX project, please submit a pull request to this repository, and we will merge the revised content into the language package after inspection and review.
 
-- 中文的修改内容将随安装包一起发布，通常下一个安装包内将包含此次修改的内容
-- 其他语言的修改内容将根据特定时机发布到对应的语言包插件中
+- The Chinese content will be released together with the installation package, usually the next installation package will contain the modified content.
+- Other language packs​will be published to the related language pack according to specific time.
 
-## 制作HBuilderX语言包
+## Make HBuilderX language pack
 
-如果您没有找到本地化的语言包，建议您自己或联合身边志同道合的朋友，开发一份本地化的语言包。
+If you do not find a localized language pack, I suggest you develop a localized language pack by yourself or with other developers.
 
 Github: [HBuilderX Language Packs](https://github.com/dcloudio/hbuilderx-language-packs)
