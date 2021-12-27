@@ -1,71 +1,71 @@
-# uni-app H5 Chrome調試@h5-debug
+# uni-app H5 Chrome调试@h5-debug
 
-> HBuilderX 3.3.4+版本，uni-app 運行h5，支持Chrome調試
+> HBuilderX 3.3.4+版本，uni-app 运行h5，支持Chrome调试
 
-## 簡介@introduction
+## 简介@introduction
 
-- 目前，uni-app 僅支持運行到`chrome`、`內置瀏覽器`進行調試。支持uni-app和uni-app cli項目。
-- 調試需要本機安裝chrome瀏覽器
-- 調試支持的文件類型：`vue`文件、`nvue`文件、`ts`文件、`js`文件，請勿在vue文件template、style節點添加斷點。
+- 目前，uni-app 仅支持运行到`chrome`、`内置浏览器`进行调试。支持uni-app和uni-app cli项目。
+- 调试需要本机安装chrome浏览器
+- 调试支持的文件类型：`vue`文件、`nvue`文件、`ts`文件、`js`文件，请勿在vue文件template、style节点添加断点。
 
 <img src="/static/snapshots/app/h5-debug/overview.png" class="hd-img" />
 
-## 開啓調試@start-debug
+## 开启调试@start-debug
 
-項目管理器，選中任意uni-app項目，運行到Chrome。控制檯右上角，點擊紅色的debug圖標，即可打開調試。如下圖：
+项目管理器，选中任意uni-app项目，运行到Chrome。控制台右上角，点击红色的debug图标，即可打开调试。如下图：
 
 <img src="/static/snapshots/app/h5-debug/open-debug.png" class="hd-img" />
 
-uni-app H5調試，依賴`chrome-debug`插件，彈窗提示安裝【node-debug】插件，請務必點擊安裝，否則無法調試插件。如下圖：
+uni-app H5调试，依赖`chrome-debug`插件，弹窗提示安装【node-debug】插件，请务必点击安装，否则无法调试插件。如下图：
 
 <img src="/static/snapshots/app/h5-debug/install-chrome-debug.png" class="hd-img" />
 
-## 添加/刪除斷點@add-breakpoint
+## 添加/删除断点@add-breakpoint
 
-打開要調試的文件，在行號上，鼠標右擊。
+打开要调试的文件，在行号上，鼠标右击。
 
 <img src="/static/snapshots/app/h5-debug/add_breakpoint.png" class="hd-img" />
 
-備註：調試支持的文件類型：`vue`文件、`nvue`文件、`ts`文件、`js`文件，請勿在vue文件template節點添加斷點。
+备注：调试支持的文件类型：`vue`文件、`nvue`文件、`ts`文件、`js`文件，请勿在vue文件template节点添加断点。
 
-## 調試視圖@DebugView
+## 调试视图@DebugView
 
-開啓調試後，即可在HBuilderX左側視圖，看到調試視圖，具體如下：
+开启调试后，即可在HBuilderX左侧视图，看到调试视图，具体如下：
 
-**調試視圖分爲5部分：**
-- [調試工具欄](#DebugActions)
-- 變量窗口 (`複製值`、`複製表達式`、`添加到監視`)
-- 監視窗口（包含`添加`/`編輯`/`刪除`表達式，以及`複製值`）
-- 調用堆棧窗口
-- 斷點窗口（包含`刪除`/`啓用`/`禁用`斷點）
+**调试视图分为5部分：**
+- [调试工具栏](#DebugActions)
+- 变量窗口 (`复制值`、`复制表达式`、`添加到监视`)
+- 监视窗口（包含`添加`/`编辑`/`删除`表达式，以及`复制值`）
+- 调用堆栈窗口
+- 断点窗口（包含`删除`/`启用`/`禁用`断点）
 
 <img src="/static/snapshots/app/h5-debug/debug_view.png" class="hd-img" />
 
-## 調試操作@DebugActions
+## 调试操作@DebugActions
 
 <img src="/static/snapshots/app/h5-debug/debug_toolbar.png" class="hd-img" />
 
-- [繼續](#Continue) `F8`
+- [继续](#Continue) `F8`
 - 下一步 `F10`
-- 進入 `F11`
+- 进入 `F11`
 - 返回 `Shift+F11`
 
-### 繼續@Continue
+### 继续@Continue
 
-繼續(F8)：點擊後，運行直到下一個斷點。
+继续(F8)：点击后，运行直到下一个断点。
 
 <img src="/static/snapshots/app/h5-debug/continue.png" class="hd-img" />
 
-## 數據檢查和查看變量@data
+## 数据检查和查看变量@data
 
-### 添加到監視@add-to-watch
+### 添加到监视@add-to-watch
 
-在【變量窗口】，選中變量，右鍵菜單，即可將變量添加到監視窗口。
+在【变量窗口】，选中变量，右键菜单，即可将变量添加到监视窗口。
 
 <img src="/static/snapshots/app/h5-debug/add_to_monitor.png" class="hd-img" />
 
-### 懸停顯示@hover
+### 悬停显示@hover
 
-斷點調試過程中，將鼠標懸停在要查看的變量上，即可打開懸停窗口。
+断点调试过程中，将鼠标悬停在要查看的变量上，即可打开悬停窗口。
 
 <img src="/static/snapshots/app/h5-debug/hovering_window.png" class="hd-img" />
