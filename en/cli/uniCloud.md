@@ -1,171 +1,172 @@
-# uniCloud cli 云开发@uniCloud
+# uniCloud cli uniCloud@uniCloud
 
-> uniCloud cli仅支持HBuilderX 3.1.9+
+> Supported from HBuilderX 3.1.9+
 
-## 列举资源信息@list
+## List@list
 
-#### 命令语法
+#### command
 
 ```shell
-cli cloud functions --list 资源类型代号 --prj 项目名称或序号 --provider 云服务商代号 --unimod uni_module模块名称 [--cloud]
+cli cloud functions --list Resource type code --prj project name or id --provider Cloud service provider code --unimod uni_module module name [--cloud]
 ```
 
-说明：
+Instruction:
 
-- 资源类型代号为 `cloudfunction`、`common`、`db`、`vf`、`action` 或 `space` 其中之一
-	- `cloudfunction` 指云函数
-	- `common` 指云函数的公共模块
-	- `db` 指数据集合Schema
-	- `vf` 指数据库校验函数
-	- `action` 指数据库触发条件
-	- `space` 指云空间
-- 项目名称或序号为cli命令 project list中列举的项目名称或序号
-- 云服务商代号为aliyun(指阿里云)或tcb(指腾讯云)
-- uni_module模块名称在无需要时可以不输入--unimod参数
-- cloud 参数代表列举的是云端的资源，如果没有这个参数则列举的是本地项目相关的内容
+- Resource type code: `cloudfunction`、`common`、`db`、`vf`、One of `action` or `space`
+	- `cloudfunction` : the cloud functions
+	- `common` :the public module of cloud functions
+	- `db` :the data collection schema
+	- `vf` :the database verification function
+	- `action` :the database trigger condition
+	- `space` :the cloud space
+- The project name or serial number of cli command in project list
+- The cloud service provider code: aliyun(Alibaba Cloud) or tcb(Tencent Cloud)
+- The uni_module module name can be omitted when it is not needed unimod parameter.
+- The cloud parameter represents the list of resources in the cloud, if there is no such parameter, the list is related to the local project.
 
-#### 示例
+#### Examples
 
 ```shell
-# 列举与项目myproject 相关的阿里云服务空间
+# List the Alibaba Cloud service spaces related to the project myproject
 cli cloud functions --list space --prj myproject --provider aliyun
 
-# 列举项目myproject阿里云空间目前的云函数
+# List the current cloud functions of the project myproject
 cli cloud functions --list cloudfunction --prj myproject --provider aliyun --cloud 
 ```
 
-## 上传资源@upload
+## Upload@upload
 
-#### 命令语法
+#### command
 
 ```shell
-cli cloud functions --upload 资源类型代号 --prj 项目名称或序号 --provider 云服务商代号 --name 资源名称 --unimod uni_module模块名称 [--force]
+cli cloud functions --upload resource type code --prj project name or serial number --provider Cloud service provider code --name resource name --unimod uni_module module name [--force]
 ```
 
-**注意**：当使用cli云开发方式操作时，上传下载默认使用`强制跳过`的方式，即如果目标已经存在同名资源，操作时将`自动跳过`
+**Note**: When using the cli cloud development method, upload and download use the `force skip` method by default. Ff the target already has a resource with the same name, it will be `auto skipped` during operation.
 
-说明：
+Instruction:
 
-- 资源类型代号为 `cloudfunction`、`common`、`db`、`vf`、`action` 或 `all` 其中之一
-	- `cloudfunction`: 指云函数
-	- `common`: 指云函数的公共模块
-	- `db`: 指数据集合Schema
-	- `vf`: 指数据库校验函数
-	- `action`:  指数据库触发条件
-	- `all`: 指上传所有云函数、公共模块及actions,此时无需输入--unimod参数
-- 项目名称或序号为cli命令 project list中列举的项目名称或序号
-- 云服务商代号为aliyun(指阿里云)或tcb(指腾讯云)
-- 资源名称，当上传资源为云函数时资源名称为云函数的目录名，当上传资源为数据集合Schema时资源名称为文件名(如:xxxx.schema.json),如此类推 
-- uni_module模块名称在无需要时可以不输入--unimod参数
-- force参数代表强制*覆盖*无提示
+- Resource type code: `cloudfunction`、`common`、`db`、`vf`、One of `action` or `all`
+	- `cloudfunction` : the cloud functions
+	- `common` :the public module of cloud functions
+	- `db` :the data collection schema
+	- `vf` :the database verification function
+	- `action` :the database trigger condition
+	- `all`: All cloud functions, public modules and actions, no need to enter the --unimod parameter
+- The project name or serial number of cli command in project list
+- The cloud service provider code: aliyun(Alibaba Cloud) or tcb(Tencent Cloud)
+- Resource name, when the uploaded resource is a cloud function, the resource name is the directory name of the cloud function. When the uploaded resource is a data collection schema, the resource name is the file name (such as xxxx.schema.json)
+- The uni_module module name can be omitted when it is not needed unimod parameter.
+- The force parameter represents mandatory * cover * no prompt
 
-#### 示例
+#### Examples
 
-> 示例项目名称：hello-uniapp 云服务商：aliyun
+> Name：hello-uniapp Cloud Service Provider: aliyun
 
 ```shell
-# 上传所有云函数、公共模块及actions
+# Upload all cloud functions, public modules and actions
 cli cloud functions --upload all --prj hello-uniapp --provider aliyun
 
-# 上传云函数add
+# Upload cloud function add
 cli cloud functions --upload cloudfunction --prj hello-uniapp --provider aliyun --name add
 
-# 上传uni_modules下云函数add 
-cli cloud functions --upload cloudfunction --prj hello-uniapp --provider aliyun --name add --unimod <uni_modules名称>
+# Upload the cloud function add under uni_modules 
+cli cloud functions --upload cloudfunction --prj hello-uniapp --provider aliyun --name add --unimod <uni_modules name>
 
-# 上传公共模块hello-common
+# Upload public modules hello-common
 cli cloud functions --upload common --prj hello-uniapp --provider aliyun --name hello-common
 
-# 上传uni-clientDB-actions目录下的action文件，比如test.js
+# Upload the action file in the uni-clientDB-actions directory, such as test.js
 cli cloud functions --upload action --prj hello-uniapp --provider aliyun --name test.js
 
-# 上传database目录下的book.schema.json文件
+# Upload the book.schema.json file in the database directory
 cli cloud functions --upload db --prj hello-uniapp --provider aliyun --name book.schema.json
 
-# 上传database/validateFunction目录下的扩展校验函数v.js文件
+# Upload the extended validation function v.js file in the database/validateFunction directory
 cli cloud functions --upload vf --prj hello-uniapp --provider aliyun --name v.js
 ```
 
-## 下载资源@download
+## Download@download
 
-#### 命令语法
+#### command
 
 ```shell
-cli cloud functions --download 资源类型代号 --prj 项目名称或序号 --provider 云服务商代号 --name 资源名称 --unimod uni_module模块名称 [--force]
+cli cloud functions --download resource type code --prj project name or serial number --provider cloud service provider --name resouce name --unimod uni_module module name [--force]
 ```
 
-**注意**：当使用cli云开发方式操作时，上传下载默认使用`强制跳过`的方式，即如果目标已经存在同名资源，操作时将`自动跳过`
+**Note**: When using the cli cloud development method, upload and download use the `force skip` method by default. If the target already has a resource with the same name, the operation will be `auto skip`.
 
-说明：
+Instruction:
 
-- 资源类型代号为 `cloudfunction`、`common`、`db`、`vf`、`action` 或 `all` 其中之一
-	- `cloudfunction`: 云函数
-	- `common`: 云函数的公共模块
-	- `db`: 数据集合Schema
-	- `vf`: 数据库校验函数
-	- `action`: 数据库触发条件
-	- `all`: 下载所有云函数、公共模块及actions,此时无需输入--unimod参数
-- 项目名称或序号为cli命令 project list中列举的项目名称或序号
-- 云服务商代号为`aliyun`(指阿里云)或`tcb`(指腾讯云)
-- 资源名称，当下载资源为云函数时资源名称为云函数的目录名，为数据集合Schema时资源名称为文件名(如:xxxx.schema.json),如此类推，action不支持按名称下载，不支持--name参数
-- uni_module模块名称在无需要时可以不输入--unimod参数
-- force参数代表强制*覆盖*无提示
+- Resource type code: `cloudfunction`、`common`、`db`、`vf`、One of `action` or `all`
+	- `cloudfunction` : the cloud functions
+	- `common` :the public module of cloud functions
+	- `db` :the data collection schema
+	- `vf` :the database verification function
+	- `action` :the database trigger condition
+	- `all`: All cloud functions, public modules and actions, no need to enter the --unimod parameter
+- The project name or serial number of cli command in project list
+- The cloud service provider code: aliyun(Alibaba Cloud) or tcb(Tencent Cloud)
+- Resource name. When the downloaded resource is a cloud function, the resource name is the directory name of the cloud function. When the resource is a data collection schema, the resource name is the file name (such as xxxx.schema.json). Action does not support downloading by name, not support --name paramete.
+- The uni_module module name can be omitted when it is not needed unimod parameter.
+- The force parameter represents mandatory * cover * no prompt
 
-#### 示例 
+#### Examples 
 
-> 示例项目名称：hello-uniapp 云服务商：aliyun
+> Name: hello-uniapp Cloud Service Provider: aliyun
 
 ```shell
-# 下载所有云函数、公共模块及actions
+# Download all cloud functions, public modules and actions
 cli cloud functions --download all --prj hello-uniapp --provider aliyun
 
-# 下载云函数add
+# Download cloud function add
 cli cloud functions --download cloudfunction --prj hello-uniapp --provider aliyun --name add
 
-# 下载uni_modules下云函数add 
-cli cloud functions --download cloudfunction --prj hello-uniapp --provider aliyun --name add --unimod <uni_modules名称>
+# Download the cloud function add uni_modules
+cli cloud functions --download cloudfunction --prj hello-uniapp --provider aliyun --name add --unimod <uni_modules name>
 
-# 下载公共模块hello-common
+# Download public modules hello-common
 cli cloud functions --download common --prj hello-uniapp --provider aliyun --name hello-common
 
-# 下载uni-clientDB-actions目录下的action文件，比如test.js
+# Download the action file in the uni-clientDB-actions directory, such as test.js
 cli cloud functions --download action --prj hello-uniapp --provider aliyun --name test.js
 
-# 下载database目录下的book.schema.json文件
+# Download the book.schema.json file in the database directory
 cli cloud functions --download db --prj hello-uniapp --provider aliyun --name book.schema.json
 
-# 下载database/validateFunction目录下的扩展校验函数v.js文件
+# Download the extended validation function v.js file in the database/validateFunction directory
 cli cloud functions --download vf --prj hello-uniapp --provider aliyun --name v.js
 ```
 
-## 初始化数据库@initdatabase
+## Initialize database@initdatabase
 
-#### 命令语法
+#### command
 
 ```shell
-cli cloud functions --prj 项目名称或序号 --provider 云服务商代号 --initdatabase
+cli cloud functions --prj project name or serial number --provider cloud service provider code --initdatabase
 ```
 
-#### 示例
+#### Examples
 
-> 示例项目名称：hello-uniapp 云服务商：aliyun
+> Name: hello-uniapp Cloud service provider: aliyun
 
 ```shell
 cli cloud functions --prj hello-uniapp --provider aliyun --initdatabase
 ```
 
-## 指定云空间@assignspace
+## Assigned cloud space@assignspace
 
-#### 命令语法
+#### command
 
 ```shell
-cli cloud functions --prj 项目名称或序号 --provider 云服务商代号 --assignspace 空间名称id或序号
+cli cloud functions --prj project name or serial number --provider cloud service provider code --assignspace space id or serial number
 ```
-#### 示例
+#### Examples
 
-> 示例项目名称：hello-uniapp 云服务商：aliyun 空间序号：1 （该序号来自cloud functions --list space 命令）
-> 空间id：99999999-9999-9999-9999-999999999999 （该id来自cloud functions --list space 命令）
-> 空间名称：myspace（该名称来自cloud functions --list space 命令）
+> Name:hello-uniapp Cloud service provider: aliyun Space serial number:1 （
+The serial number comes from the cloud functions --list space command）
+> space id: 99999999-9999-9999-9999-999999999999 （The id comes from the cloud functions --list space command）
+> space name: myspace（The name comes from the cloud functions --list space command）
 
 ```shell
 cli cloud functions --prj hello-uniapp --provider aliyun --assignspace 1
