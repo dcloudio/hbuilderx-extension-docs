@@ -4,7 +4,7 @@ Supported from HBuilderX 3.2.9+
 
 You can switch language between `English` and `Chinese Traditional`.
 
-You can also `make your own` languages, such as Japanese, Korean, and French.
+You can also `make your own` language packs, such as Japanese, Korean, and French.
 
 ## Switch Language
 
@@ -16,7 +16,7 @@ You can manually switch the language, click on the top menu of HBuilderX [Tools-
 
 ## Install Other Languages
 
-You can also download other languages from [HBuilderX Plug-in Market](https://ext.dcloud.net.cn/?cat1=1&cat2=12&orderBy=UpdatedDate).
+You can also download other language packs from [HBuilderX Plug-in Market](https://ext.dcloud.net.cn/?cat1=1&cat2=12&orderBy=UpdatedDate).
 
 <img src="/static/snapshots/tutorial/settings/download_language_pack.png" style="zoom: 40%;border-radius: 10px;border: 1px solid #eee;" />
 
