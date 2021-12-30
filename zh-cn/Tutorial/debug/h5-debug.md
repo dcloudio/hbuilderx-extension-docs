@@ -1,6 +1,6 @@
 # uni-app H5 Chrome调试@h5-debug
 
-> HBuilderX 3.3.4+版本，uni-app 运行h5，支持Chrome调试
+> HBuilderX 3.3.6+版本，uni-app 运行h5，支持Chrome调试
 
 ## 简介@introduction
 
