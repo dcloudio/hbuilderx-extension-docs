@@ -84,7 +84,7 @@ HBuilderX支持项目类型较多，只有`uni-app`、`5+app`、`wap2app`可以�
 
 #### 4.1.2 其它注意事项：
   1. 如果在启动HBuilderX后才安装驱动连接上手机，可能需要重启HBuilderX。
-  2. 使用管理员权限运行HBuilder。
+  2. 使用`管理员权限`运行HBuilderX。
   3. 关闭WebView调试模式，重启HBuilderX重试。
   4. 如果其他软件可以连接手机，而HBuilderX无法检测到手机，可能是其他软件独占了Google的ADB服务通道。
   5. Android的`ADB服务`已经被大量软件滥用，除了各种手机助手自带adb，其他如QQ、搜狗输入法、暴风影音、酷狗音乐、阿里旺旺等众多软件都自带`adb`。有些工具的`adb`版本低且独占手机通道，就会导致HBuilderX无法连接手机。
@@ -128,13 +128,13 @@ HBuilderX支持项目类型较多，只有`uni-app`、`5+app`、`wap2app`可以�
 ### 4.2 Windows: 连接iOS手机@windows-ios
 
 1. 确认手机已通过数据线连接电脑
-2. 确认已安装iTunes，若未安装点击[itunes历史版本下载地址](https://mydown.yesky.com/pcsoft/33491427/versions/), 请下载12.9.4.102之前的版本
-3. 确认iTunes能正常连接手机
-4. 如手机屏幕弹出需信任本计算机的询问，请同意该授权
-5. 如果是第一次安装完itunes，建议重新启动HBuilderX
-6. 如果以上方案都无法解决，有可能是因为本地库与iTunes带的库冲突了，一般是iTunes库目录（32位系统目录为：C:\Program Files\Common Files\Apple\Apple Application Support，64位系统目录为：C:\Program Files (x86)\Common Files\Apple\Apple Application Support）下的dll文件和系统库目录（32位系统目录为：C:\WINDOWS\system32，64位系统目录为：C:\Windows\SysWOW64）下的dll重名，可将iTunes库目录下的同名dll文件拷贝到系统库目录下，或者将系统目录下的同名dll文件重命名或删除，然后再重启HBuilder或者重试真机运行
-7. 有可能是iTunes安装时依赖库丢失，尝试重装iTunes解决问题 
-8. iTools提供了一个修复驱动的工具和教程，可以参考[http://bbs.itools.cn/thread-129390-1-1.html](http://bbs.itools.cn/thread-129390-1-1.html)
+2. 确认已安装iTunes，并且iTunes能正常连接手机，若未安装点击[itunes历史版本下载地址](https://mydown.yesky.com/pcsoft/33491427/versions/), 请下载12.9.4.102之前的版本
+3. 如手机屏幕弹出需信任本计算机的询问，请`同意`该授权
+4. 如果是第一次安装完itunes，建议重新启动HBuilderX
+5. 如果以上方案都无法解决，有可能是因为本地库与iTunes带的库冲突了，一般是iTunes库目录（32位系统目录为：C:\Program Files\Common Files\Apple\Apple Application Support，64位系统目录为：C:\Program Files (x86)\Common Files\Apple\Apple Application Support）下的dll文件和系统库目录（32位系统目录为：C:\WINDOWS\system32，64位系统目录为：C:\Windows\SysWOW64）下的dll重名，可将iTunes库目录下的同名dll文件拷贝到系统库目录下，或者将系统目录下的同名dll文件重命名或删除，然后再重启HBuilder或者重试真机运行
+6. 有可能是iTunes安装时依赖库丢失，尝试重装iTunes解决问题 
+7. iTools提供了一个修复驱动的工具和教程，可以参考[http://bbs.itools.cn/thread-129390-1-1.html](http://bbs.itools.cn/thread-129390-1-1.html)
+8. 重装iTunes之前，请`卸载干净`iTunes。如何卸载，请自行百度。
 
 **注意1：**
 
