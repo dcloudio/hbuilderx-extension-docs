@@ -30,4 +30,4 @@ Download a Zip archive, extract it and run exe file from there.
 ### Falsely Reported as a Malicious File@security
 
 1. HBuilderX must pass security tests and malware checks before releasing a new version.
-2. If HBuilder.exe is missing, please check your anti-virus software and set HBuilderX folder as a trusted direcotry.
+2. If HBuilder.exe is missing, please check your anti-virus software and set HBuilderX folder as a trusted directory.
