@@ -16,7 +16,7 @@
 * User Guide
     * [Skill](/Tutorial/UserGuide/skill.md)
     * [Goto](/Tutorial/UserGuide/goto.md)
-    * [Find / Repleace](/Tutorial/UserGuide/find.md)
+    * [Find / Replace](/Tutorial/UserGuide/find.md)
     * [Fold](/Tutorial/UserGuide/fold.md)
     * [Format](/Tutorial/UserGuide/format.md)
     * [Validate](/Tutorial/UserGuide/SyntaxCheck.md)
