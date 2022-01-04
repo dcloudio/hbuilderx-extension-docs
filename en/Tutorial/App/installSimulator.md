@@ -2,8 +2,8 @@
 
 > The Android simulator can be installed on MacOSX and Windows; the iOS simulator can only be installed on MacOSX.
 
-- [Install iOS Simulator](/Tutorial/App/installSimulator?id=ios模拟器)
-- [Install Android Simulator](/Tutorial/App/installSimulator?id=android模拟器)
+- [Install iOS Simulator](/Tutorial/App/installSimulator?id=ios)
+- [Install Android Simulator](/Tutorial/App/installSimulator?id=android)
 
 ## iOS Simulator@ios
 

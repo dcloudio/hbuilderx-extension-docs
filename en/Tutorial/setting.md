@@ -13,8 +13,8 @@ To open the settings, please do the following:
 
 Settings page include 5 tabs：
 
-- Commonly Used：[Details](/Tutorial/setting?id=常用配置)
-- Editor: [Details](/Tutorial/setting?id=编辑器配置)
+- Commonly Used：[Details](/Tutorial/setting?id=CommonlyUsed)
+- Editor: [Details](/Tutorial/setting?id=Editor)
 - Run：Mobile phone/emulator running configuration and browser running configuration
 - Plugins：Installed plug-in extension configuration
 - Source View：json file, Include the above customized configuration
