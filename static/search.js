@@ -465,6 +465,7 @@
         return matchingResults
     }
 
+    var initCounter = 0
     function init$1(config, vm) {
         helper = Docsify;
 
@@ -476,25 +477,27 @@
 
         if (isExpired || indexLocale !== siteLocale) {
             INDEXS = {};
-        } else if (!isAuto) {
-            initSearch(config, vm)
-            return
         }
 
         var paths = isAuto ? getAllPaths(vm.router) : config.paths;
         var len = paths.length;
         var count = 0;
+        var initMark = ++initCounter
 
         function loaded() {
-            if (count === len) {
-                saveData(config.maxAge);
-                initSearch(config, vm)
+            count++
+            if (count !== len) {
+                return
             }
+            if (initMark !== initCounter) {
+                return
+            }
+            saveData(config.maxAge);
+            initSearch(config, vm)
         }
 
         paths.forEach(function (path) {
             if (INDEXS[path]) {
-                count++
                 loaded()
                 return
             }
@@ -502,11 +505,9 @@
                 .get(vm.router.getFile(path), false, vm.config.requestHeaders)
                 .then(function (result) {
                     INDEXS[path] = genIndex(path, result, vm.router, config.depth);
-                    count++
                     loaded()
                 }, function (err) {
                     console.error(err)
-                    count++
                     loaded()
                 })
         });
