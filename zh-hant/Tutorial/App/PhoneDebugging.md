@@ -124,14 +124,26 @@ HBuilderX支持項目類型較多，只有`uni-app`、`5+app`、`wap2app`可以�
 
 ### 4.2 Windows: 連接iOS手機@windows-ios
 
-1. 確認手機已通過數據線連接電腦
-2. 確認已安裝iTunes，若未安裝點擊[itunes歷史版本下載地址](https://mydown.yesky.com/pcsoft/33491427/versions/), 請下載12.9.4.102之前的版本
-3. 確認iTunes能正常連接手機
-4. 如手機屏幕彈出需信任本計算機的詢問，請同意該授權
-5. 如果是第一次安裝完itunes，建議重新啓動HBuilderX
-6. 如果以上方案都無法解決，有可能是因爲本地庫與iTunes帶的庫衝突了，一般是iTunes庫目錄（32位系統目錄爲：C:\Program Files\Common Files\Apple\Apple Application Support，64位系統目錄爲：C:\Program Files (x86)\Common Files\Apple\Apple Application Support）下的dll文件和系統庫目錄（32位系統目錄爲：C:\WINDOWS\system32，64位系統目錄爲：C:\Windows\SysWOW64）下的dll重名，可將iTunes庫目錄下的同名dll文件拷貝到系統庫目錄下，或者將系統目錄下的同名dll文件重命名或刪除，然後再重啓HBuilder或者重試真機運行
-7. 有可能是iTunes安裝時依賴庫丟失，嘗試重裝iTunes解決問題 
-8. iTools提供了一個修復驅動的工具和教程，可以參考[http://bbs.itools.cn/thread-129390-1-1.html](http://bbs.itools.cn/thread-129390-1-1.html)
+#### 4.2.1 iTunes下載說明@windows-download-itunes
+
+[Windows 32位 itunes下載地址](https://mydown.yesky.com/pcsoft/445423/versions/)
+
+[Windows 64位 itunes下載地址](https://mydown.yesky.com/pcsoft/33491427/versions/)
+
+- 建議從如上地址下載iTunes；如果是第一次安裝完itunes，建議重新啓動電腦
+- itunes請勿從微軟應用商店下載；
+- 如果您的電腦是`64位`, 且HBuilderX的版本低於3.4.0，請下載`12.9.4.102`之前的iTunes.
+- 如果您的電腦是`32位`，請下載`12.9.4.102`之前的iTunes.
+
+**特別注意**：`如手機屏幕彈出需信任本計算機的詢問，請同意該授權`
+
+#### 4.2.2 疑難排查@windows-itunes-question
+
+1. itunes安裝完成後，請確認itunes可以正常連接手機。
+2. 如果以上方案都無法解決，有可能是因爲本地庫與iTunes帶的庫衝突了，一般是iTunes庫目錄（32位系統目錄爲：C:\Program Files\Common Files\Apple\Apple Application Support，64位系統目錄爲：C:\Program Files (x86)\Common Files\Apple\Apple Application Support）下的dll文件和系統庫目錄（32位系統目錄爲：C:\WINDOWS\system32，64位系統目錄爲：C:\Windows\SysWOW64）下的dll重名，可將iTunes庫目錄下的同名dll文件拷貝到系統庫目錄下，或者將系統目錄下的同名dll文件重命名或刪除，然後再重啓HBuilder或者重試真機運行
+3. 有可能是iTunes安裝時依賴庫丟失，嘗試重裝iTunes解決問題 
+4. iTools提供了一個修復驅動的工具和教程，可以參考[http://bbs.itools.cn/thread-129390-1-1.html](http://bbs.itools.cn/thread-129390-1-1.html)
+5. 重裝iTunes之前，請`卸載乾淨`iTunes。如何卸載，請自行百度。
 
 **注意1：**
 

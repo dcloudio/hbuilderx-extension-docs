@@ -127,27 +127,27 @@ HBuilderX支持项目类型较多，只有`uni-app`、`5+app`、`wap2app`可以�
 
 ### 4.2 Windows: 连接iOS手机@windows-ios
 
-1. 确认手机已通过数据线连接电脑
-2. 确认已安装iTunes，并且iTunes能正常连接手机，若未安装点击[itunes历史版本下载地址](https://mydown.yesky.com/pcsoft/33491427/versions/), 请下载12.9.4.102之前的版本
-3. 如手机屏幕弹出需信任本计算机的询问，请`同意`该授权
-4. 如果是第一次安装完itunes，建议重新启动HBuilderX
-5. 如果以上方案都无法解决，有可能是因为本地库与iTunes带的库冲突了，一般是iTunes库目录（32位系统目录为：C:\Program Files\Common Files\Apple\Apple Application Support，64位系统目录为：C:\Program Files (x86)\Common Files\Apple\Apple Application Support）下的dll文件和系统库目录（32位系统目录为：C:\WINDOWS\system32，64位系统目录为：C:\Windows\SysWOW64）下的dll重名，可将iTunes库目录下的同名dll文件拷贝到系统库目录下，或者将系统目录下的同名dll文件重命名或删除，然后再重启HBuilder或者重试真机运行
-6. 有可能是iTunes安装时依赖库丢失，尝试重装iTunes解决问题 
-7. iTools提供了一个修复驱动的工具和教程，可以参考[http://bbs.itools.cn/thread-129390-1-1.html](http://bbs.itools.cn/thread-129390-1-1.html)
-8. 重装iTunes之前，请`卸载干净`iTunes。如何卸载，请自行百度。
+#### 4.2.1 iTunes下载说明@windows-download-itunes
 
-**注意1：**
+[Windows 32位 itunes下载地址](https://mydown.yesky.com/pcsoft/445423/versions/)
 
-itunes `12.10.9.3`版本，连接`ios 14+`的iphone手机，可能存在问题。
+[Windows 64位 itunes下载地址](https://mydown.yesky.com/pcsoft/33491427/versions/)
 
-如无法连接，请下载itunes历史版本。 [itunes历史版本下载地址](https://mydown.yesky.com/pcsoft/33491427/versions/)
+- 建议从如上地址下载iTunes；如果是第一次安装完itunes，建议重新启动电脑
+- itunes请勿从微软应用商店下载；
+- 如果您的电脑是`64位`, 且HBuilderX的版本低于3.4.0，请下载`12.9.4.102`之前的iTunes.
+- 如果您的电脑是`32位`，请下载`12.9.4.102`之前的iTunes.
 
+**特别注意**：`如手机屏幕弹出需信任本计算机的询问，请同意该授权`
 
-**注意2：**
+#### 4.2.2 疑难排查@windows-itunes-question
 
-iTunes12.1起更改了接口，会造成无法连接：
-  ①、HBuilderX菜单：工具 - 插件安装，打开插件安装界面，选择【iOS连接插件】（HBuilderX叫做真机运行插件）并安装，安装完并重启HBuilderX，尝试是否解决；
-  ②、安装最新版本的iTools，重启HBuilderX。
+1. itunes安装完成后，请确认itunes可以正常连接手机。
+2. 如果以上方案都无法解决，有可能是因为本地库与iTunes带的库冲突了，一般是iTunes库目录（32位系统目录为：C:\Program Files\Common Files\Apple\Apple Application Support，64位系统目录为：C:\Program Files (x86)\Common Files\Apple\Apple Application Support）下的dll文件和系统库目录（32位系统目录为：C:\WINDOWS\system32，64位系统目录为：C:\Windows\SysWOW64）下的dll重名，可将iTunes库目录下的同名dll文件拷贝到系统库目录下，或者将系统目录下的同名dll文件重命名或删除，然后再重启HBuilder或者重试真机运行
+3. 有可能是iTunes安装时依赖库丢失，尝试重装iTunes解决问题 
+4. iTools提供了一个修复驱动的工具和教程，可以参考[http://bbs.itools.cn/thread-129390-1-1.html](http://bbs.itools.cn/thread-129390-1-1.html)
+5. 重装iTunes之前，请`卸载干净`iTunes。如何卸载，请自行百度。
+
 
 ## 5. 其它问题@other
 ---
