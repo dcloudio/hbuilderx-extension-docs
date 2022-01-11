@@ -6,6 +6,8 @@
     * [打包](/cli/pack.md)
     * [uniCloud](/cli/uniCloud.md)
     * [前端网页托管](/cli/uniCloud-hosting.md)
+    * [uni-app发行 - 微信小程序](cli/publish-mp-weixin.md)
+    * [uni-app发行 - H5](cli/publish-h5.md)
 * 扩展
     * [配置环境变量](/cli/env.md)
 <div class="contact-box">
