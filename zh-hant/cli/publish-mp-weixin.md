@@ -19,7 +19,7 @@ cli publish --platform mp-weixin --project 項目名稱 --upload true --appid �
 |--platform		|必填，發行平臺(MP-WEIXIN)					|
 |--project		|必填，項目名稱								|
 |--appid		|必填，微信小程序appid						|
-|--behavior		|發行爲混合包,只有vue3項目並且值爲true時生效|
+|--behavior		|發行爲混合包, 示例：--behavior xxx|
 |--upload		|打包後是否上傳到微信平臺,只有值爲true時生效|
 |--description	|上傳的小程序描述							|
 |--privatekey	|微信代碼上傳密鑰文件 [詳情](#uploadPrivateKey)				|
