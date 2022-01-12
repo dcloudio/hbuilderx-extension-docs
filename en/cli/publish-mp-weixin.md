@@ -23,7 +23,7 @@ cli publish --platform mp-weixin --project 项目名称 --upload true --appid �
 |--upload		|打包后是否上传到微信平台,只有值为true时生效|
 |--description	|上传的小程序描述							|
 |--privatekey	|微信代码上传密钥文件 [详情](#uploadPrivateKey)				|
-|--version		|上传小程序的版本号							|
+|--version		|上传小程序的版本号；选填。如果不填写，则会读取manifest.json中的版本号							|
 
 
 ## 小程序代码上传密钥@uploadPrivateKey

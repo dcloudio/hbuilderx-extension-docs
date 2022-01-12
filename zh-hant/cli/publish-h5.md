@@ -25,6 +25,8 @@ cli publish --platform h5 --project 項目名稱 --webHosting true --provider al
 |--provider		|uniCloud 服務商代號(當前僅支持aliyun,不填寫默認爲aliyun),不支持騰訊雲	|
 |--spaceId		|uniCloud 雲空間id												|
 
+注意事项：使用CLI命令，上传文件到前端网页托管，如果云端已存在此文件，会使用本地文件覆盖云端的文件。
+
 # 拓展@expand
 
 - [前端網頁託管功能詳情](https://uniapp.dcloud.io/uniCloud/hosting)
