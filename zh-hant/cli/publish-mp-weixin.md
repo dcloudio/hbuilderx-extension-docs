@@ -30,6 +30,8 @@ cli publish --platform mp-weixin --project 項目名稱 --upload true --appid �
 
 > HBuilderX 發行微信小程序，需要提供微信小程序代碼上傳密鑰
 
+通过微信小程序CI，使用上传密钥上传代码，无需打开微信开发者工具，一键完成微信小程序代码的上传、预览等操作。
+
 如何獲取微信小程序代碼上傳密鑰？
 
 打開微信公衆平臺 [官網](https://mp.weixin.qq.com/), 掃碼登錄，左側菜單【開發 -> 開發管理】，點擊tab【開發設置】，如下圖：
