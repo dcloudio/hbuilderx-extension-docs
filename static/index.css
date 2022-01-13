@@ -981,30 +981,8 @@ only screen and (min-resolution: 2dppx) {
     padding: 0 0 11px 0;
 }
 
-.sidebar li {
-    margin: 6px 0;
-}
-
-.app-sub-sidebar li,
-.sidebar-nav-li ul li {
-    margin: 0;
-}
-
-.sidebar li>a {
-    padding-left: 26px;
-}
-
-.sidebar ul li ul {
-    padding-left: 26px;
-}
-
-.sidebar-nav-li ul ul.app-sub-sidebar,
-.sidebar-nav-li ul.app-sub-sidebar ul.children {
+.sidebar ul {
     padding-left: 15px;
-}
-
-.sidebar-nav-li li a {
-    padding: 0 15px;
 }
 
 .sidebar ul li a:hover {
@@ -1031,7 +1009,6 @@ only screen and (min-resolution: 2dppx) {
     display: block;
     height: 30px;
     line-height: 30px;
-    padding-left: 30px;
     position: relative;
     cursor: pointer;
 }
@@ -1043,7 +1020,7 @@ only screen and (min-resolution: 2dppx) {
 .sidebar-nav-li .chapter:before {
     position: absolute;
     top: 10px;
-    left: 16px;
+    left: -16px;
     content: "\e581";
     font-family: 'uniicons';
     font-style: normal;
