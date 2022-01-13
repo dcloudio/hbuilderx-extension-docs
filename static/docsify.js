@@ -3574,7 +3574,10 @@ function getLang() {
             on(
                 body,
                 'click',
-                function (_) {
+                function (event) {
+                    if (event.srcElement.classList.contains('chapter')) {
+                        return
+                    }
                     return body.classList.contains('close') && toggle();
                 }
             );

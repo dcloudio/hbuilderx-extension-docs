@@ -466,6 +466,7 @@
     }
 
     var initCounter = 0
+    var isFirstSearchInit = true
     function init$1(config, vm) {
         helper = Docsify;
 
@@ -493,7 +494,12 @@
                 return
             }
             saveData(config.maxAge);
-            initSearch(config, vm)
+            if (!isMobile) {
+                initSearch(config, vm)
+            } else if (isFirstSearchInit) {
+                initSearch(config, vm)
+                isFirstSearchInit = false
+            }
         }
 
         paths.forEach(function (path) {
@@ -694,12 +700,12 @@
         }
 
         let empty_text = "<p class=\"empty\">没有结果</p>";
-        try{
+        try {
             let browser_lang = getCookie('user_set_language');
             if (browser_lang.substr(0, 2) != 'zh') {
                 empty_text = "<p class=\"empty\">No Result.</p>";
             };
-        }catch(e){};
+        } catch (e) { };
 
         $searchResultListPanel.innerHTML = html || (empty_text);
         !isMobile && $main.classList.add('hide');
