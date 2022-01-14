@@ -18,7 +18,7 @@ cli publish --platform h5 --project 項目名稱 --webHosting true --provider al
 |--				|--																		|
 |--platform		|必填，發行平臺(MP-WEIXIN)												|
 |--project		|必填，項目名稱															|
-|--ssr			|ssr發行，值爲 ture 時使用，默認爲 false(項目使用vue3時配置此項才生效)	|
+|--ssr			|ssr發行，值爲 true 時使用，默認爲 false(項目使用vue3時配置此項才生效)	|
 |--webDomain	|網站域名(發行類型爲H5時可配置此項)										|
 |--webTitle		|網站標題(發行類型爲H5時可配置此項，不指定默認爲項目名稱)				|
 |--webHosting	|前端網頁託管，值爲 true 時使用，默認爲 false							|
