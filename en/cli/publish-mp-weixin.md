@@ -4,7 +4,7 @@
 
 通过此种方式，可在命令行或其它CI工具中，完成微信小程序代码的上传、预览等操作。
 
-## 命令语法@cmd
+## CLI命令语法@cmd
 
 ```shell
 # 仅编译uni-app项目到微信小程序，不发行
@@ -28,16 +28,18 @@ cli publish --platform mp-weixin --project 项目名称 --upload true --appid �
 
 ## 小程序代码上传密钥@uploadPrivateKey
 
+> HBuilderX 3.3.7+, uni-app 发行到微信小程序，支持自动上传代码到微信平台，无需再通过微信开发者工具上传发行。[详情](/Tutorial/App/uni-app-publish-mp-weixin)
+> 
 > HBuilderX 发行微信小程序，需要提供微信小程序代码上传密钥
 
 通过微信小程序CI，使用上传密钥上传代码，无需打开微信开发者工具，一键完成微信小程序代码的上传、预览等操作。
 
-如何获取微信小程序代码上传密钥？
+**如何获取微信小程序代码上传密钥？**
 
 打开微信公众平台 [官网](https://mp.weixin.qq.com/), 扫码登录，左侧菜单【开发 -> 开发管理】，点击tab【开发设置】，如下图：
 
 <img src="/static/snapshots/cli/wechat-uploadPrivateKey.png" class="hd-img" />
 
-下载密钥文件：
+**下载密钥文件：**
 
 <img src="/static/snapshots/cli/wechat-downloadkeyFile.png" class="hd-img"/>
