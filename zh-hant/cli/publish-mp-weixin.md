@@ -43,3 +43,7 @@ cli publish --platform mp-weixin --project 項目名稱 --upload true --appid �
 **下載密鑰文件：**
 
 <img src="/static/snapshots/cli/wechat-downloadkeyFile.png" class="hd-img"/>
+
+**特别注意:** 
+1. 请正确填写`微信小程序appid`和`privatekey`
+2. 如果开启了`IP白名单`，请确保微信平台已配置 IP 白名单

@@ -25,7 +25,6 @@ cli publish --platform mp-weixin --project 项目名称 --upload true --appid �
 |--privatekey	|微信代码上传密钥文件 [详情](#uploadPrivateKey)				|
 |--version		|上传小程序的版本号；选填。如果不填写，则会读取manifest.json中的版本号|
 
-
 ## 小程序代码上传密钥@uploadPrivateKey
 
 > HBuilderX 3.3.7+, uni-app 发行到微信小程序，支持自动上传代码到微信平台，无需再通过微信开发者工具上传发行。[详情](/Tutorial/App/uni-app-publish-mp-weixin)
@@ -43,3 +42,8 @@ cli publish --platform mp-weixin --project 项目名称 --upload true --appid �
 **下载密钥文件：**
 
 <img src="/static/snapshots/cli/wechat-downloadkeyFile.png" class="hd-img"/>
+
+## 注意事项
+
+1. 请正确填写`微信小程序appid`和`privatekey`
+2. 如果开启了`IP白名单`，请确保微信平台已配置 IP 白名单
