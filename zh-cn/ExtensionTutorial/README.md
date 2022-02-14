@@ -5,10 +5,12 @@ keyword:插件扩展,插件开发,插件API,Extension
 
 HBuilderX 2.7+版本起，开放了插件扩展机制。开发者可以通过`JavaScript`语言编写HBuilderX的插件，自定义和增强HBuilderX，打造更趁手的利器。
 
+你可以开发自用的插件，也可以发布到DCloud的插件市场。插件市场的地址：[https://ext.dcloud.net.cn/?cat1=1&type=UpdatedDate](https://ext.dcloud.net.cn/?cat1=1&type=UpdatedDate)
+
 ### 插件扩展能做什么？
 HBuilderX的插件是基于nodejs的，所有nodejs api都可以使用，如文件操作、调用其他node命令。
 
-除此之外，HBuilderX提供了大量的js API（与vscode兼容），可以定制很多HBuilderX的功能和界面，比如
+除此之外，HBuilderX扩展了大量的js API（与vscode兼容），可以定制很多HBuilderX的功能和界面，比如
 
 - 添加新的`菜单`
 - 添加新的`命令`及快捷键
