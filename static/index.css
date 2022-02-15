@@ -393,8 +393,7 @@ body[data-page="/platform.md"] h4 {
 }
 
 .search p.aw-text {
-    -webkit-margin-before: 0;
-    -webkit-margin-after: 0;
+    margin: 0;
     display: inline-flex;
 }
 
