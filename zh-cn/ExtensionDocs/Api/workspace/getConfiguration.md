@@ -11,6 +11,7 @@
 |section	|String		|配置项分类名称	|
 
 **返回值**
+
 |返回类型						|描述		|
 |--								|--			|
 |[Configuration](/ExtensionDocs/Api/workspace/onDidChangeConfiguration?id=configurationchangeevent)|返回配置	|
