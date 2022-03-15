@@ -24,4 +24,4 @@ cli publish --platform APP --type wgt --project 項目名稱 --path 導出路徑
 | --project  | 必填，項目名稱                                       |
 | --name     | 導出名稱(不指定默認為：AppID.wgt)                    |
 | --path     | 導出路徑(不指定默認為：項目根路徑/unpackage/release) |
-| --confuse  | [true                                                |
+| --confuse  | [true|false] 对配置的js/nvue文件进行原生混淆(默认为：false)   |
