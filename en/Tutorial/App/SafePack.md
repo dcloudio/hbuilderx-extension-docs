@@ -37,11 +37,11 @@ Most of the packages do not change the native part (mainly manifest.json), only 
 ## How to use safe packing
 No additional operations are required for the new version of HBuilderX cloud packaging. By default, "Package with peace of mind" is checked, as shown in the following figure:
 
-<img src="https://dcloud-img.oss-cn-hangzhou.aliyuncs.com/client/ask/pkg/sp.png" style="zoom: 80%;" /> 
+<img src="/static/snapshots/app/pack/pack_app_safe.png" class="hd-img" />
 
 If the "Anxin Packing" plugin is not installed, the following prompt box will pop up, click "Install" to continue
 
-![](https://dcloud-img.oss-cn-hangzhou.aliyuncs.com/client/ask/pkg/sp_plugin.png)
+<img src="/static/snapshots/app/pack/pack_app_safe_box.png" class="hd-img" />
 
 After the plug-in is installed, you need to click the "Package" button to submit the package again
 
@@ -69,7 +69,7 @@ If this directory is emptied, the first packaging logic will be executed next ti
 ** Question：** Some users reported that on Windows, the console prompts that Android Anxin has been successfully packaged. Enter the corresponding directory (unpackage/release/apk), and the apk file cannot be found in the directory.(unpackage/release/apk)
 ** Reason** ：unpackage/release/apk directory，no write permission, failed to move the apk file。
 
-** Solution：** 
+** Solution：**
 1. Set unpackage/release/apk write permission
 2. Restart computer
 
@@ -113,9 +113,9 @@ In the error log, the following log appears：
 ```
 [Info] Error occurred during initialization of VM
 [Info] Could not reserve enough space for 1048576KB object heap
-[Error] Result：Failed.    Reason: 
+[Error] Result：Failed.    Reason:
 ```
-** Solution：** 
+** Solution：**
 1. Find the app-safe-pack.ini file in the app-safe-pack directory
 2. Modify -Xmx1024M in the file content to -Xmx512M
 3. Resubmit

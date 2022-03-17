@@ -41,11 +41,11 @@ DCloud云端服务器虽然不会保存开发者应用代码和证书等信息�
 ## 使用安心打包
 新版本HBuilderX云端打包时无需额外操作，默认会勾选“安心打包”，如下图所示：
 
-<img src="https://dcloud-img.oss-cn-hangzhou.aliyuncs.com/client/ask/pkg/sp.png" style="zoom: 80%;" /> 
+<img src="/static/snapshots/app/pack/pack_app_safe.png" class="hd-img" />
 
 如果没有安装安心打包插件，会弹出以下提示框，点击“安装”继续
 
-![](https://dcloud-img.oss-cn-hangzhou.aliyuncs.com/client/ask/pkg/sp_plugin.png)
+<img src="/static/snapshots/app/pack/pack_app_safe_box.png" class="hd-img" />
 
 插件安装完成后需重新点击“打包”按钮提交打包
 
@@ -73,7 +73,7 @@ DCloud云端服务器虽然不会保存开发者应用代码和证书等信息�
 ** 问题：** 某些用户反馈，windows电脑，控制台提示Android安心打包成功，进入相应目录(unpackage/release/apk)，目录下找不到apk文件
 ** 原因** ：unpackage/release/apk目录，没有写入权限，移动apk文件失败了。
 
-** 解决方法：** 
+** 解决方法：**
 1. 赋予unpackage/release/apk目录写入权限
 2. 重启电脑试试
 
@@ -115,9 +115,9 @@ DCloud云端服务器虽然不会保存开发者应用代码和证书等信息�
 ```
 [Info] Error occurred during initialization of VM
 [Info] Could not reserve enough space for 1048576KB object heap
-[Error] 制作结果：Failed.    Reason: 
+[Error] 制作结果：Failed.    Reason:
 ```
-** 解决方法：** 
+** 解决方法：**
 1. 找到安心打包插件(app-safe-pack)目录下app-safe-pack.ini文件
 2. 将文件内容里-Xmx1024M修改为-Xmx512M
 3. 重新提交打包

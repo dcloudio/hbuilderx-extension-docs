@@ -95,7 +95,7 @@ The steps for web hosting to configure your own domain are as follows:
 1. Login[uniCloud Console](https://unicloud.dcloud.net.cn/)。
 2. Open "Web Hosting" page, select [Basic Configuration], click [Add Domain] to add new domain name, as shown below:
 
-<img src="https://dcloud-img.oss-cn-hangzhou.aliyuncs.com/uni-app/uniCloud/uniCloud-hosting-domain-add.jpg " style="border: 1px solid #eee; zoom: 80%;" />
+<img src="/static/snapshots/tutorial/unicloud/unicloud_add_domain.png" class="hd-img" />
 
 3. The system will automatically assign a CNAME domain. The CNAME cannot be asscessed directly and you have to add CNAME configuration at the domain name service provider (DNS). After the configuration takes effect, the new domain name can be used.
 

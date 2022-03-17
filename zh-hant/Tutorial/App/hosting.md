@@ -95,7 +95,7 @@ DCloud爲開發者提供了網站發佈、App發佈等功能，`前端網頁託�
 1. 登錄[uniCloud控制檯](https://unicloud.dcloud.net.cn/)。
 2. 進入前端網頁託管頁面，選擇【基礎設置】，單擊【添加域名】，進行域名添加，如下圖所示：
 
-<img src="https://dcloud-img.oss-cn-hangzhou.aliyuncs.com/uni-app/uniCloud/uniCloud-hosting-domain-add.jpg " style="border: 1px solid #eee; zoom: 80%;" />
+<img src="/static/snapshots/tutorial/unicloud/unicloud_add_domain.png" class="hd-img" />
 
 3. 添加後，系統會自動分配一個 CNAME 域名，CNAME 域名不能直接訪問，您需要在域名服務提供商處完成 CNAME 配置（將添加的域名CNAME到此域名），配置生效後，新域名即可使用。
 
