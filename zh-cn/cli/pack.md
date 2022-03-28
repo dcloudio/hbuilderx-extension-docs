@@ -97,7 +97,6 @@ localhost:MacOS hx$ ./cli pack --config /Users/hx/Documents/HBuilderProjects/测
 |--platform	|配打包平台,默认值android,取值有"android","ios"如果要打多个逗号隔开		|
 |--iscustom	|是否使用自定义基座 默认值false, true自定义基座 false自定义证书		|
 |--safemode	|打包方式是否为安心打包,默认值false,true安心打包,false传统打包		|
-|--isconfusion	|配置文件绝对路径，配置文件配置，参考configure.json		|
 |--isconfusion  | 是否对配置的js/nvue文件进行原生混淆，true打开 false关闭|
 |--splashads	|开屏广告,默认值false, true打开 false关闭		|
 |--rpads	|悬浮红包广告,默认值false, true打开 false关闭		|

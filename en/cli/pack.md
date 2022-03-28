@@ -97,7 +97,6 @@ The configuration file format is json, save the following content in a json file
 |--platform	|Packaging platform, the default value is android, the options is "android", "ios". Separate multiple platforms with commas.		|
 |--iscustom	|Whether to use a custom dock. The default value is false, true: custom dock, false: custom certificate	|
 |--safemode	|Whether the packaging method is safe packaging, the default value is false, true: safe packaging, false: traditional packaging		|
-|--isconfusion	|The absolute path of the configuration file, configuration file refer to configure.json		|
 |--isconfusion  | Whether to natively obfuscate the configured js/nvue files, true: turned on, false: turned off|
 |--splashads	|Whether to display the open-screen ads, the default value is false, true: turned on, false: turned off		|
 |--rpads	|Whether to display the redpack ads, the default value is false, true: turned on, false: turned off	|
