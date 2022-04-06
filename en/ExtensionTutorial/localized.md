@@ -17,7 +17,8 @@ HBuilderX优先查找`插件扩展中的对应的翻译文件`，然后再查找
 
 **特别说明：**
 
-本文仅适用于package.json中的键值。
+- 本文仅适用于package.json中的键值。
+- `语言id`，必须规范。请参考：[语言id列表](https://github.com/dcloudio/hbuilderx-language-packs/blob/main/docs/localizations.md)
 
 ## 插件扩展package.json
 
