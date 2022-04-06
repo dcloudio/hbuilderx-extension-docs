@@ -5,6 +5,7 @@
     * [其他插件示例](/ExtensionTutorial/Others.md)
 * 開發指南
     * [插件說明](/ExtensionTutorial/extension.md)
+    * [插件本地化](ExtensionTutorial/localized.md)
     * [如何註冊`命令`](/ExtensionTutorial/commands.md)
     * [如何註冊`菜單`](/ExtensionTutorial/menus.md)
     * [如何編輯文檔](/ExtensionTutorial/texteditor.md)
