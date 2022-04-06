@@ -7,13 +7,17 @@ HBuilderX优先查找`插件扩展中的对应的翻译文件`，然后再查找
 
 大多数情况下，个人开发的插件，可能无需集成到HBuilderX语言包中，如有需要，请联系HBuilderX官方。
 
-插件扩展的目录结构：
+**插件扩展的目录结构：**
 ```shell
 插件目录 /
     package.json
     package.nls.json			主语言翻译键值对应数据
     package.nls.[语言id].json	特定语言翻译键值对应关系
 ```
+
+**特别说明：**
+
+本文仅适用于package.json中的键值。
 
 ## 插件扩展package.json
 
