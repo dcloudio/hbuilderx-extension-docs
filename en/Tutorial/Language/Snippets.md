@@ -70,9 +70,9 @@ Custom snippets are in the configuration json file. The following is configurati
 	"scope": "source.js"
 }
 }
-```  
-    
-### Snippets format description
+```
+
+#### Snippets format description
 
 HBuilderX uses json to define the snippet format, which is compatible with vscode's snippets, that is, the custom snippet configured in vscode can be copied to HBuilderX for use.
 
@@ -97,10 +97,18 @@ Remark：
 3. **The indentation is indicated by `\t`, you cannot enter the indentation or spaces! **
 
 
-### Attention
-  
+#### Attention
+
 1. Each snippet uses `key` as the primary key, and multiple snippets are separated by `commas`.
 2. You will receive a warning message if the json format is wrong.
+
+## 自定义项目代码块
+
+> HBuilderX 3.4.8+版本起，支持自定义项目代码块。
+
+HBuilderX，顶部菜单【工具 代码块设置 自定义项目代码块】。创建的代码块文件，会出现在项目根目录下的`.hbuilderx`目录下。
+
+<img src="/static/snapshots/tutorial/language/project_snippets.png" class="hd-img"/>
 
 ## Datetime variable
 
@@ -109,23 +117,23 @@ Remark：
 Click the menu [Tools - Snippets settings - javascript snippets], and enter the following:
 
 ```
-{  
-    "method-annotation": {  
-        "prefix": "anno",  
-        "body": [  
-            "/**",  
-            " * Method description",  
-            " * author: author name",  
-            " * description: ",  
-            " * @param $1",  
-            " * @return $2",  
-            " * @createTime: $DATE_TIME",  
-            " */"  
-        ],  
-        "triggerAssist": false,  
-        "description": "method annotation"  
-    }  
-} 
+{
+    "method-annotation": {
+        "prefix": "anno",
+        "body": [
+            "/**",
+            " * Method description",
+            " * author: author name",
+            " * description: ",
+            " * @param $1",
+            " * @return $2",
+            " * @createTime: $DATE_TIME",
+            " */"
+        ],
+        "triggerAssist": false,
+        "description": "method annotation"
+    }
+}
 ```
 
 <img src="/static/snapshots/tutorial/Snippets_time.gif" style="zoom: 80%; border: 1px solid #eee;border-radius: 10px;" />
