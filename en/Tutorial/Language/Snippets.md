@@ -102,7 +102,7 @@ Remark：
 1. Each snippet uses `key` as the primary key, and multiple snippets are separated by `commas`.
 2. You will receive a warning message if the json format is wrong.
 
-## 自定义项目代码块
+## 自定义项目代码块@projectSnippets
 
 > HBuilderX 3.4.8+版本起，支持自定义项目代码块。
 
