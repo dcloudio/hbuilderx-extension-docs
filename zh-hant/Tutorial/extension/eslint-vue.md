@@ -156,7 +156,7 @@ module.exports = {
         'plugin:vue/recommended'
     ],
 	parserOptions: {
-		'ecmaVersion': 2018,
+		'ecmaVersion': "latest",
 		'sourceType': 'module',
 		'ecmaFeatures': {
 			'jsx': true
@@ -167,7 +167,7 @@ module.exports = {
         "no-alert": 0,
         "no-multi-spaces": "error", // 禁止多個空格 
         "semi": [2, "always"] ,// 自動補充分號
-       "quotes": ["error", "single"] // 使用單引號
+        "quotes": ["error", "single"] // 使用單引號
     }
 }
 ```

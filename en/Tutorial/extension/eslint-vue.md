@@ -156,7 +156,7 @@ module.exports = {
         'plugin:vue/recommended'
     ],
 	parserOptions: {
-		'ecmaVersion': 2018,
+		'ecmaVersion': "latest",
 		'sourceType': 'module',
 		'ecmaFeatures': {
 			'jsx': true
