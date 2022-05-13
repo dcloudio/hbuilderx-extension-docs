@@ -4,19 +4,19 @@
 
 本插件支持调试或运行nodejs项目，也可以自定义运行或调试`js`单文件或者`js`项目，结合`webpack`或者`tsc`也可以调试`ts`。
 
-## 1.普通调试-js运行当前文件:
+## 1.普通调试-js运行当前文件
 
 打开js文件: ①运行菜单 -> ②使用node运行当前文件
 
 <img src="/static/snapshots/node_development/1.jpg" />
 
-## 2.普通调试-js调试当前文件:
+## 2.普通调试-js调试当前文件
 
 打开js文件: ①双击行号打断点 -> ②运行菜单 -> ③使用node调试当前文件
 
 <img src="/static/snapshots/node_development/1.jpg" />
 
-## 3.自定义运行调试-js项目调试:
+## 3.自定义运行调试-js项目调试
 
 打开js项目: ①运行菜单 -> ②自定义node运行
 
@@ -24,7 +24,7 @@
 
 <img src="/static/snapshots/node_development/1.jpg" />
 
-#### 3.1 launcher.json
+### 3.1 launcher.json
 
 launch.json中目前支持的变量 `${workspaceFolder}` 指当前项目的根目录
 
@@ -52,7 +52,7 @@ launch.json中目前支持的变量 `${workspaceFolder}` 指当前项目的根�
 	 }
    ```
 
-#### 3.2 express脚手架项目配置
+### 3.2 express脚手架项目配置
 
 express脚手架项目配置(使用[express生成器](https://www.expressjs.com.cn/starter/generator.html)生成):
    ```json
@@ -70,7 +70,7 @@ express脚手架项目配置(使用[express生成器](https://www.expressjs.com.
    }
    ```
 
-#### 3.3 webpack-js项目配置
+### 3.3 webpack-js项目配置
 
 webpack-js项目配置
 
@@ -130,7 +130,7 @@ webpack-js项目配置
 
   `value`: 可以使用`${workspaceFolder}`
 
-#### 3.4 webpack-ts项目配置:
+### 3.4 webpack-ts项目配置
 
 webpack.dev.config.js
 
