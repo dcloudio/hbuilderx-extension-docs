@@ -14,6 +14,7 @@
     * [如何擴展一個`自定義編輯器`](/ExtensionTutorial/customeditor.md)
     * [如何適配主題](/ExtensionTutorial/fitTheme.md)
     * [如何調試插件](/ExtensionTutorial/HowToDebug.md)
+    * [如何创建语言语法高亮支持插件](/ExtensionTutorial/language_grammars.md)
 * 插件發佈
     * [如何發佈插件](/ExtensionTutorial/HowToPublish.md)
 <div class="contact-box">

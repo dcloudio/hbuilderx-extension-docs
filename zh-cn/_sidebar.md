@@ -39,7 +39,7 @@
     * [Emmet](/Tutorial/Language/emmet.md)
     * [JSON](/Tutorial/Language/json.md)
     * [MarkDown](/Tutorial/Language/markdown.md)
-    * [Node程序开发](/Tutorial/extension/node-development.md)
+    * [语言语法高亮](/Tutorial/Language/language_grammars.md)
 * App开发
     * [真机运行常见问题](/Tutorial/App/PhoneDebugging.md)
     * [安装配置模拟器](/Tutorial/App/installSimulator.md)
@@ -66,6 +66,7 @@
     * [Scss/Sass](/Tutorial/extension/sass.md)
     * [FTP/SFTP](/Tutorial/extension/ftp.md)
     * [MarkDown一键分享](/Tutorial/extension/markdown_share.md)
+    * [Node程序开发](/Tutorial/extension/node-development.md)
 * 参考/其它
     * [自定义字体](/Tutorial/settings/font.md)
     * [px自动转upx](/Tutorial/settings/px-upx)
