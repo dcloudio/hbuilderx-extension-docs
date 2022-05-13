@@ -1,4 +1,8 @@
 # node-development使用手册
+
+## 调试或运行nodejs项目
+   可以自定义运行或调试`js`单文件或者`js`项目，结合`webpack`或者`tsc`也可以调试`ts`。
+
 ### 1.普通调试-js运行当前文件:
    打开js文件: ①运行菜单 -> ②使用node运行当前文件
    
@@ -106,9 +110,68 @@
       "version": "0.1"
   }
   ```
-  sourceMapPathOverrides: 键值对<br />
+  `sourceMapPathOverrides`: 键值对<br />
   `key`: 对应source-map中的sources字段(如下图:)
   
  <img src="/static/snapshots/node_development/3.jpg" />
  
   `value`: 可以使用`${workspaceFolder}`
+  
+  ---
+   webpack-ts项目配置:
+   
+   webpack.dev.config.js
+   ```json
+   const path = require('path');
+   
+   module.exports = {
+		entry: {
+			index: './index.ts'
+		},
+		mode: "development",
+		devtool: "source-map",
+		target: 'node',
+		resolve: {
+			extensions: ['.ts'] // 文件扩展名为.ts
+		},
+		module: {
+			rules: [
+			  { test: /\.ts$/, use: 'ts-loader' } // 需要安装ts-loader
+			]
+		},
+		node: {
+			__filename: false,
+			__dirname: false
+		},
+		output: {
+			filename: '[name].js',
+			path: path.join(__dirname, 'dist')
+		}
+   }
+   ```
+   webpack-ts运行和调试配置:
+   ```json
+   {
+       "configurations": [
+           {
+               "mode": "debug",
+               "name": "自定义调试文件",
+               "outFiles": [
+                   "${workspaceFolder}/dist/**/*.js"
+               ],
+               "program": "${workspaceFolder}/dist/index.js",
+               "request": "attach",
+               "skipFiles": [
+                   "<node_internals>/**/*.js"
+               ],
+               "sourceMap": true,
+               "sourceMapPathOverrides": {
+   				"webpack://webpack/*": "${workspaceFolder}/*" // 这里是以`webpack://`开头+生成的source-map文件中的sources字段部分。
+               },
+               "type": "node"
+           }
+       ],
+       "version": "0.1"
+   }
+   ```
+  
