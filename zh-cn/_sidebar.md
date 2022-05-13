@@ -39,6 +39,7 @@
     * [Emmet](/Tutorial/Language/emmet.md)
     * [JSON](/Tutorial/Language/json.md)
     * [MarkDown](/Tutorial/Language/markdown.md)
+    * [Node程序开发](/Tutorial/extension/node-development.md)
 * App开发
     * [真机运行常见问题](/Tutorial/App/PhoneDebugging.md)
     * [安装配置模拟器](/Tutorial/App/installSimulator.md)
@@ -130,4 +131,3 @@
     </div>
   </div>
 </div>
-
