@@ -1,6 +1,6 @@
 # node-development使用手册
 
-> 本插件适用于HBuilderX 3.4.10+版本
+> HBuilderX 3.4.10版本起支持
 
 本插件支持调试或运行nodejs项目，也可以自定义运行或调试`js`单文件或者`js`项目，结合`webpack`或者`tsc`也可以调试`ts`。
 
