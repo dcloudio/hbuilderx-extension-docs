@@ -193,3 +193,22 @@ webpack.dev.config.js
        "version": "0.1"
    }
    ```
+---
+tsc调试ts项目：
+
+项目根下添加[tsconfig.json](https://www.tslang.cn/docs/handbook/tsconfig-json.html)文件
+```json
+{
+	 "compilerOptions": {
+	    "module": "commonjs",
+		"noImplicitAny": true,
+		"removeComments": true,
+		"sourceMap": true, //这里一定要开启，自定义的launch.json中的sourceMap也需要开启
+		"outDir": "./dist"
+	}
+}
+```
+** 要安装全局目录下的typescript(`npm i -g typescript`)
+
+打开项目的终端，在终端中输入`tsc -w` 就可以进行项目开发
+
