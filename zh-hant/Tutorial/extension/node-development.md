@@ -6,9 +6,7 @@
 
 ## 安装node-development插件
 
-HBuilderx, 顶部菜单【工具 - 插件安装】，安装新插件。
-
-<img src="/static/snapshots/node_development/install_node_development.jpg" class="hd-img" />
+HBuilderx, 顶部菜单【工具 - 插件安装】，安装新插件，找到Node插件，点击安装
 
 ## 普通调试-js运行当前文件
 
