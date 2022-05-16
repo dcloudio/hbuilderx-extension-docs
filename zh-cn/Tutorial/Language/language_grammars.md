@@ -14,7 +14,7 @@
 
 <img src="/static/snapshots/language_grammars/4.jpg" class="hd-img"/>
 
-从插件市场获取插件
+从插件市场获取插件，目前支持的[编程语言列表](#list)
 
 <img src="/static/snapshots/language_grammars/3.jpg" class="hd-img"/>
 
@@ -23,6 +23,12 @@
 <img src="/static/snapshots/language_grammars/5.jpg" class="hd-img"/>
 
 等待安装完成, 重新点击语言标签, 选择插件安装好的语言即可
+
+## 语言语法高亮插件列表@list
+
+HBuilderX 3.4.10+, 语言语法高亮迁移到插件市场，列表如下：
+
+ActionScript, Ada, ASM, ASP, AutoIt, Batch, C, Clojure, CMake, Cobol, CoffeeScript, C#, Dart, Diff, D, Docker, Ejs, Fortran, F#, Go, Groovy, Handlebars, HLSL, INI, Inno, Java, Julia, LaTeX, Lisp, Log, Lua, Matlab, Objective-C, Pascal, Perl, PowerShell, Pug, Python, Razor, R, Ruby, Rust, Scheme, ShaderLab, SmallTalk, SQL, Swift, Tcl, VB, VeriLog, Vhdl, WXML, Yaml
 
 
 ## 创建语言语法高亮支持插件

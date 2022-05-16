@@ -193,8 +193,8 @@ webpack.dev.config.js
        "version": "0.1"
    }
    ```
----
-tsc调试ts项目：
+
+### tsc调试ts项目
 
 项目根下添加[tsconfig.json](https://www.tslang.cn/docs/handbook/tsconfig-json.html)文件
 ```json

@@ -193,8 +193,8 @@ webpack.dev.config.js
        "version": "0.1"
    }
    ```
----
-tsc调试ts项目：
+
+### tsc调试ts项目
 
 项目根下添加[tsconfig.json](https://www.tslang.cn/docs/handbook/tsconfig-json.html)文件
 ```json
@@ -211,4 +211,3 @@ tsc调试ts项目：
 ** 要安装全局目录下的typescript(`npm i -g typescript`)
 
 打开项目的终端，在终端中输入`tsc -w` 就可以进行项目开发
-
