@@ -9,8 +9,9 @@ keyword: 真机运行常见故障排查指南,无法连接Android手机,无法�
 
 **特别注意**：
 - `iOS13真机运行，需要升级至HBuilderX 2.2.5+以上版本。`
-- itunes `12.10.9.3`版本，连接`ios 14+`的iphone手机，可能存在问题；请下载12.9.4.102之前的版本 
+- itunes `12.10.9.3`版本，连接`ios 14+`的iphone手机，可能存在问题；请下载12.9.4.102之前的版本
 - Android 11部分手机真机运行文件同步失败的问题，HBuilderX 3.1.19已解决此问题，请升级HBuilderX 到3.1.19+版本。
+- HBuilderX，【设置 - 运行设置】，自定义过adb路径。如有自定义，请检查adb路径是否有效。如不确定，请清除。然后重启HBuilderX
 
 出现问题手机分析清楚问题在哪个环节。
 从在HBuilder/HBuilderX菜单里点真机运行，程序会执行如下几个步骤：
@@ -23,7 +24,7 @@ keyword: 真机运行常见故障排查指南,无法连接Android手机,无法�
 
 下面把各种常见FAQ列出，大家可按图索骥。
 
-## 1. 没有运行到手机的菜单@no_menu
+## 1. 没有运行到手机的菜单@noMenu
 ---
 > 真机运行只能运行App项目，选中App项目或将焦点放在将要运行的App项目的文件编辑器上
 
@@ -82,16 +83,21 @@ HBuilderX支持项目类型较多，只有`uni-app`、`5+app`、`wap2app`可以�
   1. 安装`驱动精灵`类程序，通过它们来安装驱动
   2. 装驱动比较好的方式是使用各种手机助手，比如`360、腾讯的各种手机助手`，如果有问题，尝试升级助手的版本。
 
-#### 4.1.2 其它注意事项：
-  1. 如果在启动HBuilderX后才安装驱动连接上手机，可能需要重启HBuilderX。
-  2. 使用`管理员权限`运行HBuilderX。
-  3. 关闭WebView调试模式，重启HBuilderX重试。
-  4. 如果其他软件可以连接手机，而HBuilderX无法检测到手机，可能是其他软件独占了Google的ADB服务通道。
-  5. Android的`ADB服务`已经被大量软件滥用，除了各种手机助手自带adb，其他如QQ、搜狗输入法、暴风影音、酷狗音乐、阿里旺旺等众多软件都自带`adb`。有些工具的`adb`版本低且独占手机通道，就会导致HBuilderX无法连接手机。
-  6. 在任务管理器中找到`adb.exe`相关进程（包括`kadb.exe`等），在任务管理中右键该进程，打开文件位置，查看该进程是什么软件启动的。
-  7. 禁止这些软件监听手机插入（一般在该软件的设置中）、禁止自动启动。
-  8. 有些软件结束adb进程后又会自动启动，所以得将`adb.exe`文件重命名一下，实在不行卸载了这些流氓软件。
-  9. 关闭所有手机助手及进程里各种`adb.exe`（包括`kadb.exe`等），再试。
+#### 4.1.2 注意事项：
+
+- Windows Android: 如果是华为手机，下列各种方法都尝试后还不行，请安装[华为手机助手](https://consumer.huawei.com/cn/support/content/zh-cn00731203/?ivk_sa=1024320u)
+- HBuilderX，【设置 - 运行设置】，是否自定义过adb路径。如有自定义，请检查adb路径是否有效。如不确定，清除掉试试。然后重启HBuilderX
+- 关闭HBuilderX，打开任务管理器，看下是否存在adb进程，如存在，请杀死所有adb进程
+
+1. 如果在启动HBuilderX后才安装驱动连接上手机，可能需要重启HBuilderX。
+2. 使用`管理员权限`运行HBuilderX。
+3. 关闭WebView调试模式，重启HBuilderX重试。
+4. 如果其他软件可以连接手机，而HBuilderX无法检测到手机，可能是其他软件独占了Google的ADB服务通道。
+5. Android的`ADB服务`已经被大量软件滥用，除了各种手机助手自带adb，其他如QQ、搜狗输入法、暴风影音、酷狗音乐、阿里旺旺等众多软件都自带`adb`。有些工具的`adb`版本低且独占手机通道，就会导致HBuilderX无法连接手机。
+6. 在任务管理器中找到`adb.exe`相关进程（包括`kadb.exe`等），在任务管理中右键该进程，打开文件位置，查看该进程是什么软件启动的。
+7. 禁止这些软件监听手机插入（一般在该软件的设置中）、禁止自动启动。
+8. 有些软件结束adb进程后又会自动启动，所以得将`adb.exe`文件重命名一下，实在不行卸载了这些流氓软件。
+9. 关闭所有手机助手及进程里各种`adb.exe`（包括`kadb.exe`等），再试。
 
 #### 4.1.3 adb占用问题
 
@@ -99,11 +105,11 @@ HBuilderX支持项目类型较多，只有`uni-app`、`5+app`、`wap2app`可以�
 1. 打开命令行窗口
 2. 确认adb的启动进程：
   寻找端口是`5037`的`tcp连接`，在命令行中输入：`netstat -ano | findstr 5037`
-  
+
   在输出结果中找到类似下面的一行：
   TCP    127.0.0.1:5037         0.0.0.0:0              **LISTENING**       **5816**
   *如果内容为空，可能是没有程序在占用adb端口。*
-  
+
   或者使用 netstat -ano | findstr 5037>d:/1.txt 输出到文件中查找。
   根据查询结果确认端口为5037的连接被那个进程占用，结果中显示的“5816”表示占用adb端口的进程PID。
 
@@ -144,7 +150,7 @@ HBuilderX支持项目类型较多，只有`uni-app`、`5+app`、`wap2app`可以�
 
 1. itunes安装完成后，请确认itunes可以正常连接手机。
 2. 如果以上方案都无法解决，有可能是因为本地库与iTunes带的库冲突了，一般是iTunes库目录（32位系统目录为：C:\Program Files\Common Files\Apple\Apple Application Support，64位系统目录为：C:\Program Files (x86)\Common Files\Apple\Apple Application Support）下的dll文件和系统库目录（32位系统目录为：C:\WINDOWS\system32，64位系统目录为：C:\Windows\SysWOW64）下的dll重名，可将iTunes库目录下的同名dll文件拷贝到系统库目录下，或者将系统目录下的同名dll文件重命名或删除，然后再重启HBuilder或者重试真机运行
-3. 有可能是iTunes安装时依赖库丢失，尝试重装iTunes解决问题 
+3. 有可能是iTunes安装时依赖库丢失，尝试重装iTunes解决问题
 4. iTools提供了一个修复驱动的工具和教程，可以参考[http://bbs.itools.cn/thread-129390-1-1.html](http://bbs.itools.cn/thread-129390-1-1.html)
 5. 重装iTunes之前，请`卸载干净`iTunes。如何卸载，请自行百度。
 
@@ -171,7 +177,7 @@ HBuilderX支持项目类型较多，只有`uni-app`、`5+app`、`wap2app`可以�
 #### Q4: Android手机真机运行提示应用安装成功，但是其实手机上并没有HBuilder应用
 
 1. 确认USB调试模式是否打开。如果未打开，请打开USB调试模式重新运行真机调试。
-2. 如果HBuilder已经检测到手机，可能存在与手机助手冲突的情况，请关闭所有的手机助手重新运行真机调试。 
+2. 如果HBuilder已经检测到手机，可能存在与手机助手冲突的情况，请关闭所有的手机助手重新运行真机调试。
 3. 利用手机助手手动安装android_base.apk到手机上，然后重新运行真机调试。
 
 #### Q5: Android真机联调报文件操作Permission denied
@@ -239,6 +245,3 @@ iTunes支持wifi同步，如果iOS设备启动了wifi同步，电脑端的iTunes
 #### Q14: 如何通过wifi真机运行，不插数据线？
 
 参考[http://ask.dcloud.net.cn/article/565](http://ask.dcloud.net.cn/article/565)
-
-
-
