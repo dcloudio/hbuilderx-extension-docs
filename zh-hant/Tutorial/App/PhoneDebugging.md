@@ -157,6 +157,12 @@ itunes `12.10.9.3`版本，連接`ios 14+`的iphone手機，可能存在問題�
 iTunes12.1起更改了接口，會造成無法連接：
   ①、HBuilderX菜單：工具 - 插件安裝，打開插件安裝界面，選擇【iOS連接插件】（HBuilderX叫做真機運行插件）並安裝，安裝完並重啓HBuilderX，嘗試是否解決；
   ②、安裝最新版本的iTools，重啓HBuilderX。
+  
+#### 4.2.3 itunes无法检测到手机
+
+itunes无法检测到手机，itunes弹窗提示：`iTunes 在您的电脑上检测到不兼容的蓝牙软件，可能无法正常运行`。
+
+请禁用或更新某些蓝牙驱动。或参考[Apple 论坛解决方案](https://discussionschinese.apple.com/thread/140142495?page=2)
 
 ## 5. 其它問題@other
 ---

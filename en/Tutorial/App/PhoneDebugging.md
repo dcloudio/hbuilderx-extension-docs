@@ -99,18 +99,18 @@ If you can't find who is occupied, you can also use the following methods to det
 1. Open Terminals
 2. Confirm the startup process of adb:
 Find the `tcp connection` whose port is `5037`, and enter in the command line: `netstat -ano | findstr 5037`
-    
+
 Find a line similar to the following in the output:
-  
+
   TCP    127.0.0.1:5037         0.0.0.0:0              **LISTENING**       **5816**
   *If the content is empty, there may be no program occupying the adb port.*
-  
+
   Or use netstat -ano | findstr 5037>d:/1.txt to output to the file for search.
   According to the query result, it is confirmed that the connection with port 5037 is occupied by that process. The “5816” displayed in the result indicates the PID of the process occupying the adb port.
 
 3. The specific process can be found according to the PID of the process.
 
-  
+
 Enter in the command line：`tasklist | findstr 5816`
   Find a line similar to the following in the output:
   ```shell
@@ -136,12 +136,12 @@ Please backup adb.exe of default version before replace it. Then copy adb.exe of
 5. If it is the first time to install itunes, it is recommended to restart HBuilderX.
 6. If none of the above solutions can be solved, it may be because the local library conflicts with the library brought by iTunes. Usually the dll file of the iTunes library directory has same name with the dll file of system library. You can copy the dll file with the same name in the iTunes library directory to the system library directory, or rename or delete the dll file with the same name in the system directory, and then restart HBuilder or retry on the real device.
 (
-32-bit system - iTune direcotry path: C:\Program Files\Common Files\Apple\Apple Application Support; 
+32-bit system - iTune direcotry path: C:\Program Files\Common Files\Apple\Apple Application Support;
 32-bit system - System library directory path: C:\WINDOWS\system32;
-64-bit system - iTune direcotry path: C:\Program Files (x86)\Common Files\Apple\Apple Application Support; 
+64-bit system - iTune direcotry path: C:\Program Files (x86)\Common Files\Apple\Apple Application Support;
 64-bit system - System library directory path: C:\WINDOWS\SysWOW64;
 )
-11. It is possible that the dependent library was lost when iTunes was installed. Try to reinstall iTunes to solve the problem. 
+11. It is possible that the dependent library was lost when iTunes was installed. Try to reinstall iTunes to solve the problem.
 12. iTools provides a tool and tutorial to repair the driver, you can refer to [http://bbs.itools.cn/thread-129390-1-1.html](http://bbs.itools.cn/thread-129390-1-1.html)
 
 **Note 1：**
@@ -158,6 +158,13 @@ Since iTunes 12.1, the interface has been changed, which will cause the connecti
   ①、HBuilderX menu：[Tools] - [Plug-in Installation]，Open the "Plugin Install" window, select [iOS connection plugin] (HBuilderX is called the real device running plugin) and install it. After installation, restart HBuilderX, and try to solve it;
   ②、Install the latest version of iTools and restart HBuilderX.
 
+#### 4.2.3 ITunes can't detect the phone
+
+ITunes can't detect the phone，Pop-up prompts：`ITunes has detected incompatible Bluetooth software on your computer and may not function properly`.
+
+Please disable or update some Bluetooth drivers. [Apple Forum solution](https://discussionschinese.apple.com/thread/140142495?page=2)
+
+
 ## 5. Other questions@other
 ---
 #### Q1: The phone can be detected, but it is grayed out (disabled) and cannot be clicked
@@ -169,8 +176,8 @@ This situation usually occurs after the mobile phone is detected, and the connec
 1. Some Android roms such as Xiaomi have the permission to install apk by usb, which may be closed. You have to find the permission to install apk by usb in the settings of the phone manager, and then turn it on.
 
 2. When some Android phones install apk on usb, they will pop up warning message on the phone. The installation will fail due to timeout if you can not click it. Please pay attention to the display on the phone screen. The case is when the HBuilder console prompts `"Failed to install the HBuilder Base App, please manually install xxx\android_base.apk with mobile assistant."`.
-   
-3. The iOS will occasionally report an error. You need to manually install iPhone_base.ipa according to the prompts. The installation method recommends itools, and you can use itunes without itools. After installation, there will be a HBuilder application on the phone. 
+
+3. The iOS will occasionally report an error. You need to manually install iPhone_base.ipa according to the prompts. The installation method recommends itools, and you can use itunes without itools. After installation, there will be a HBuilder application on the phone.
 
 Then the project will be deployed to mobile phone after you click "run on real device". Then click HBuilder application manually, you will see the results of the project.
 
@@ -181,7 +188,7 @@ Refer to [http://ask.dcloud.net.cn/article/1336](http://ask.dcloud.net.cn/articl
 #### Q4: The Android phone prompts the application has been installed successfully, but there is no HBuilder application on the phone.
 
 1. Confirm whether the USB debugging mode is turned on. If it is not turned on, please turn on the USB debugging mode to re-run the real device debugging.
-2. If HBuilder has detected the mobile phone, there may be a conflict with the mobile assistant. Please close all mobile assistants and run the real-device debugging again. 
+2. If HBuilder has detected the mobile phone, there may be a conflict with the mobile assistant. Please close all mobile assistants and run the real-device debugging again.
 3. Use the phone assistant to manually install android_base.apk on the phone, and then re-run the real device debugging.
 
 #### Q5: Android real device debugging and report file operation "Permission denied"
@@ -246,6 +253,3 @@ The adaptation of other simulators can be searched in the forum.
 #### Q14: How to run through wifi without data cable?
 
 Refer to [http://ask.dcloud.net.cn/article/565](http://ask.dcloud.net.cn/article/565)
-
-
-
