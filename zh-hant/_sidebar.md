@@ -21,6 +21,7 @@
     * [折叠](Tutorial/UserGuide/fold.md)
     * [格式化](/Tutorial/UserGuide/format.md)
     * [語法校驗](/Tutorial/UserGuide/SyntaxCheck.md)
+    * [TS語法校驗](/Tutorial/UserGuide/tsSyntaxCheck.md)
     * [內置瀏覽器](/Tutorial/UserGuide/built-in-browser.md)
     * [內置資源管理器](/Tutorial/UserGuide/built-in-explorer.md)
     * [多窗體](/Tutorial/UserGuide/multi-window.md)
