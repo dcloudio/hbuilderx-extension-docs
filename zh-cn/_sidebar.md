@@ -49,7 +49,7 @@
     * [iOS安心打包证书安装](/Tutorial/App/iosSafePack.md)
     * [前端网页托管](/Tutorial/App/hosting.md)
 	* [uni-app发行到微信小程序](/Tutorial/App/uni-app-publish-mp-weixin.md)
-  <!--  * [uni-app H5 Chrome调试](/Tutorial/debug/h5-debug.md) -->
+    * [uni-app H5 Chrome调试](/Tutorial/debug/h5-debug.md)
   <!-- * [Chrome调试 5+ Android应用](Tutorial/App/use-chrome-to-debug-android-apps.md) -->
 * 版本控制
     * [Git 介绍](/Tutorial/SourceControl/Git/README.md)
