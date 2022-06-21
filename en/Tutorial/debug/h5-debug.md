@@ -8,6 +8,10 @@
 - 调试需要本机安装chrome浏览器
 - 调试支持的文件类型：`vue`文件、`nvue`文件、`ts`文件、`js`文件，请勿在vue文件template、style节点添加断点。
 
+**注意事项：**
+1. uni-app，某些生命周期方法内，添加断点，debug调试后，断点无法进入。
+2. uni-app Vue3项目，debug调试后，可能会在HBuilderX内打开一个虚拟目录的文件，如`/localhost:3000/src/pages/index/index.vue`。Debug调试视图，点击继续即可。
+
 <img src="/static/snapshots/app/h5-debug/overview.png" class="hd-img" />
 
 ## 开启调试@start-debug
