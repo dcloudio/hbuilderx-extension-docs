@@ -4,7 +4,7 @@
 
 ## 简介@introduction
 
-- 目前，uni-app 仅支持运行到`chrome`、`内置浏览器`进行调试。支持uni-app和uni-app cli项目。
+- 目前，uni-app 仅支持运行到`chrome`、`内置浏览器`进行调试；且仅支持Vue2
 - 调试需要本机安装chrome浏览器
 - 调试支持的文件类型：`vue`文件、`nvue`文件、`ts`文件、`js`文件，请勿在vue文件template、style节点添加断点。
 
