@@ -1,6 +1,6 @@
 # uni-app H5 Chrome調試@h5-debug
 
-> HBuilderX 3.3.6+版本，uni-app 運行h5，支持Chrome調試
+> HBuilderX 3.5.0版本，uni-app 運行h5，支持Chrome調試
 
 ## 簡介@introduction
 
@@ -16,9 +16,7 @@
 
 <img src="/static/snapshots/app/h5-debug/open-debug.png" class="hd-img" />
 
-uni-app H5調試，依賴`chrome-debug`插件，彈窗提示安裝【node-debug】插件，請務必點擊安裝，否則無法調試插件。如下圖：
-
-<img src="/static/snapshots/app/h5-debug/install-chrome-debug.png" class="hd-img" />
+uni-app H5调试，依赖debug插件，弹窗提示安装依赖插件，请务必点击安装，否则无法进行调试。
 
 ## 添加/刪除斷點@add-breakpoint
 
