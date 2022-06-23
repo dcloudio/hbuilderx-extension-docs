@@ -1,6 +1,6 @@
-# Chrome调试Android应用
+# Chrome调试H5+的Android应用
 
-> 注意本文档仅适用于 5+App应用。
+> 注意本文档仅适用于 5+App应用。uni-app调试另见[https://uniapp.dcloud.io/tutorial/run-and-debug.html](https://uniapp.dcloud.io/tutorial/run-and-debug.html)
 
 HBuilder对前端代码的调试方式有边改边看、真机运行、webkit remote debug真机调试3种。webkit remote debug其实是google、apple官方提供的服务，本文主要介绍google的chrome下如何调试Android手机上webview里运行的网页。
 *系列文章目录导航：*
