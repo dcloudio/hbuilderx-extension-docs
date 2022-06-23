@@ -1,12 +1,12 @@
-# uni-app H5 Chrome调试@h5-debug
+# uni-app web版调试@h5-debug
 
-> HBuilderX 3.5.0版本，uni-app 运行h5，支持Chrome调试
+> HBuilderX 3.5.0版本，uni-app 运行到 web 平台，可通过 Chrome debug 协议进行调试。
 
 ## 简介@introduction
 
-- 目前，uni-app 仅支持运行到`chrome`、`内置浏览器`进行调试
+- 支持运行到`chrome`、`内置浏览器`进行调试，目前其他浏览器无法调试。
 - 调试需要本机安装chrome浏览器
-- 调试支持的文件类型：`vue`文件、`nvue`文件、`ts`文件、`js`文件，请勿在vue文件template、style节点添加断点。
+- 调试支持的文件类型：`vue`文件、`nvue`文件、`ts`文件、`js`文件，断点只能打在js或ts代码中，请勿在vue文件template、style节点添加断点。
 
 **注意事项：**
 1. uni-app，某些生命周期方法内，添加断点，debug调试后，断点无法进入。
