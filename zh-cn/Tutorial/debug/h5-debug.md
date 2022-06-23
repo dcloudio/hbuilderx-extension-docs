@@ -1,6 +1,6 @@
 # uni-app web版调试@h5-debug
 
-> HBuilderX 3.5.0版本，uni-app 运行到 web 平台，可通过 Chrome debug 协议进行调试。
+> HBuilderX 3.5.0版本，uni-app 运行到 web 平台，可通过 chrome debug 协议进行调试。
 
 ## 简介@introduction
 
@@ -10,25 +10,23 @@
 
 **注意事项：**
 1. uni-app，某些生命周期方法内，添加断点，debug调试后，断点无法进入。
-2. uni-app Vue3项目，debug调试后，可能会在HBuilderX内打开一个虚拟目录的文件，如`/localhost:3000/src/pages/index/index.vue`。Debug调试视图，点击继续即可。
+2. uni-app Vue3项目，debug调试后，可能会在 HBuilderX 内打开一个虚拟目录的文件，如`/localhost:3000/src/pages/index/index.vue`。Debug调试视图，点击继续即可。
 
 <img src="/static/snapshots/app/h5-debug/overview.png" class="hd-img" />
 
 ## 开启调试@start-debug
 
-项目管理器，选中任意uni-app项目，运行到Chrome。控制台右上角，点击红色的debug图标，即可打开调试。如下图：
+项目管理器，选中任意 uni-app项目，运行到Chrome。控制台右上角，点击debug图标（红色虫子），即可打开调试。如下图：
 
 <img src="/static/snapshots/app/h5-debug/open-debug.png" class="hd-img" />
 
-uni-app H5调试，依赖debug插件，弹窗提示安装依赖插件，请务必点击安装，否则无法进行调试。
+uni-app web调试，依赖debug插件，弹窗提示安装依赖插件，请务必点击安装，否则无法进行调试。
 
 ## 添加/删除断点@add-breakpoint
 
-打开要调试的文件，在行号上，鼠标右击。
+打开要调试的文件，在js或ts代码行号上，鼠标右击或双击添加断点。
 
 <img src="/static/snapshots/app/h5-debug/add_breakpoint.png" class="hd-img" />
-
-备注：调试支持的文件类型：`vue`文件、`nvue`文件、`ts`文件、`js`文件，请勿在vue文件template节点添加断点。
 
 ## 调试视图@DebugView
 
