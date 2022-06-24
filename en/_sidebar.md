@@ -44,7 +44,6 @@
     * [Android Custom Channel Packages](/Tutorial/App/AndroidChannel.md)
     * [Safe Packing](/Tutorial/App/SafePack.md)
     * [iOS Safe Packing For Certificate](/Tutorial/App/iosSafePack.md)
-    * [web hosting](/Tutorial/App/hosting.md)
     <!-- * [Chrome调试 5+ Android应用](Tutorial/App/use-chrome-to-debug-android-apps.md) -->
 * Version Control
     * [Git Introduce](/Tutorial/SourceControl/Git/README.md)
