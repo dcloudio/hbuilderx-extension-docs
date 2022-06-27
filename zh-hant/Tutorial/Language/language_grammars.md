@@ -26,9 +26,14 @@
 
 ## 语言语法高亮插件列表@list
 
-HBuilderX 3.4.10+, 语言语法高亮迁移到插件市场，列表如下：
+**HBuilderX 3.4.10+, 语言语法高亮迁移到插件市场，列表如下：**
 
 ActionScript, Ada, ASM, ASP, AutoIt, Batch, C, Clojure, CMake, Cobol, CoffeeScript, C#, Dart, Diff, D, Docker, Ejs, Fortran, F#, Go, Groovy, Handlebars, HLSL, INI, Inno, Java, Julia, LaTeX, Lisp, Log, Lua, Matlab, Objective-C, Pascal, Perl, PowerShell, Pug, Python, Razor, R, Ruby, Rust, Scheme, ShaderLab, SmallTalk, SQL, Swift, Tcl, VB, VeriLog, Vhdl, WXML, Yaml
+
+
+**HX内置语言无法进行修改, 内置语言列表如下:**
+
+CSS, HTML, JavaScript, JSON, Less, Markdown, PHP, SCSS, Stylus, Text, TypeScript, Vue, XML
 
 ## 创建语言语法高亮支持插件
 
