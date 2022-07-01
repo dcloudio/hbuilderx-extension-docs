@@ -12,7 +12,7 @@ The front-end web hosting is based on the ability of uniCloud to provide develop
 
 ### CLI note@note
 
-- Only supports Alibaba Cloud, not Tencent Cloud.
+- HBuilderX 3.4.18 and earlier versions only support Alibaba Cloud; HBuilderX 3.5.1-alpha and later support Tencent Cloud..
 - All operations require HBuilderX to be logged in
 - The uniCloud front-end web hosting needs to be activated. [How to register front-end web hosting? ](https://uniapp.dcloud.io/uniCloud/hosting?id=%e5%bc%80%e9%80%9a)
 

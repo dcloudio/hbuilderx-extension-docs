@@ -12,7 +12,7 @@
 
 ### CLI注意事项@note
 
-- 仅支持阿里云, 不支持腾讯云。
+- HBuilderX 3.4.18及之前的版本仅支持阿里云；HBuilderX 3.5.1-alpha起，支持腾讯云。
 - 所有操作，均需要HBuilderX处于登录状态
 - uniCloud前端网页托管功能，需要处于开通状态。[如何开通前端网页托管？](https://uniapp.dcloud.io/uniCloud/hosting?id=%e5%bc%80%e9%80%9a)
 
