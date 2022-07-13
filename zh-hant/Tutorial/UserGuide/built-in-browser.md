@@ -10,7 +10,7 @@ HBuilderX，內置瀏覽器，支持邊改邊預覽。
 - 支持web項目、vue項目、uni-app項目、5+項目在內置瀏覽器預覽
 - ......
 
-### 查找代碼中對應的DOM節點、高亮瀏覽器內對應元素
+### 查找代碼中對應的DOM節點、高亮瀏覽器內對應元素@find-dom-nodes
 
 > 僅支持HBuilderX 2.6.10+版本
 
@@ -20,3 +20,9 @@ HBuilderX，內置瀏覽器，支持邊改邊預覽。
 **示例**
 
 <img src="/static/snapshots/tutorial/browser_1.gif" style="zoom: 90%;border:1px solid #eee;" />
+
+### 控制檯log跳轉到指定源碼位置@log-jumps-to-source-location
+
+web、uni-app、5+App項目，控制檯日誌，點擊後可以跳轉到源碼指定位置。
+
+<img src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-f184e7c3-1912-41b2-b81f-435d1b37c7b4/997dd3b4-6b39-45b7-abdf-559c6759e6f0.jpg" class="hd-img" />
