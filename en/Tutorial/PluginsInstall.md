@@ -78,7 +78,7 @@ open /Applications/HBuilderX-Alpha.app/Contents/HBuilderX/plugins/
 解决方法：
 - 尝试重新安装此插件
 - windows电脑：关闭HBuilderX，HBuilderX.exe右键菜单【以管理员身份运行】
-- 根据日志，找插件zip包，手动将zip包解压到HBuilderX.exe 同级`plugins`目录下
+- 进入HBuilderX安装目录，在update/plugins目录下，找到插件zip包，手动将zip包解压到HBuilderX.exe 同级`plugins`目录下。
 
 ### 03: 本地目录权限问题
 

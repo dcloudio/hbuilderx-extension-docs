@@ -76,12 +76,16 @@ open /Applications/HBuilderX-Alpha.app/Contents/HBuilderX/plugins/
 [info] move result: false
 ```
 
+在HBuilderX 3.5.2-alpha+版本，您可能會看到如下彈窗：
+
+<img src="/static/snapshots/plugins/plugin-install-fail-message-box.jpg" class="hd-img" />
+
 這些信息代表，插件下載後，拷貝到指定目錄失敗了。
 
 解決方法：
 - 嘗試重新安裝此插件
 - windows電腦：關閉HBuilderX，HBuilderX.exe右鍵菜單【以管理員身份運行】
-- 根據日誌，找插件zip包，手動將zip包解壓到HBuilderX.exe 同級`plugins`目錄下。
+- 進入HBuilderX安裝目錄，在update/plugins目錄下，找到插件zip包，手動將zip包解壓到HBuilderX.exe 同級`plugins`目錄下。
 
 ### 03: 本地目錄權限問題
 
