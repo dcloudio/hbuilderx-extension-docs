@@ -67,6 +67,12 @@ For more information: [MarkDown One-Key Sharing Instructions](https://ask.dcloud
 
 [markdown sharing](/Tutorial/extension/markdown_share)
 
+## file anchor go to definition@goto_definition
+
+HBuilderX 3.5.2，Markdown supports `[]()` filename + anchor go to definition, and supports `@` aliases。
+
+<img src="/static/snapshots/tutorial/markdown/file_goto_definition.png" class="hd-img" />
+
 ## Onedrive Sync
 
 # Onedrive

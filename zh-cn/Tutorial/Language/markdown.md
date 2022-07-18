@@ -65,6 +65,13 @@ markdown一键分享，顾名思义是在HBuilderX中写好的markdown文档，�
 
 [markdown一键分享](/Tutorial/extension/markdown_share)
 
+## 锚点转到定义@goto_definition
+
+HBuilderX 3.5.2起，Markdown支持`[]()`文件名+锚点转到定义, 且支持`@`别名。
+
+<img src="/static/snapshots/tutorial/markdown/file_goto_definition.png" class="hd-img" />
+
+
 ## 云同步笔记的技巧
 
 #### 云同步工具
