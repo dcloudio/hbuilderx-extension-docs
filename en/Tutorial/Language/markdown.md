@@ -67,7 +67,7 @@ For more information: [MarkDown One-Key Sharing Instructions](https://ask.dcloud
 
 [markdown sharing](/Tutorial/extension/markdown_share)
 
-## file anchor go to definition@goto_definition
+## file anchor go to definition@goto-definition
 
 HBuilderX 3.5.2，Markdown supports `[]()` filename + anchor go to definition, and supports `@` aliases。
 

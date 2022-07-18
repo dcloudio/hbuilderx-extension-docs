@@ -65,7 +65,7 @@ markdown一鍵分享，顧名思義是在HBuilderX中寫好的markdown文檔，�
 
 [markdown一鍵分享](/Tutorial/extension/markdown_share)
 
-## 錨點轉到定義@goto_definition
+## 錨點轉到定義@goto-definition
 
 HBuilderX 3.5.2起，Markdown支持`[]()`文件名+錨點轉到定義, 且支持`@`別名。
 
