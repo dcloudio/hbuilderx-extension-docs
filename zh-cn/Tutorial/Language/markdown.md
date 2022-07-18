@@ -46,6 +46,8 @@ windows快捷键: `Alt+w`; MacOSX快捷键：`Ctrl+w`
 
 <img src="/static/snapshots/tutorial/markdown/markdown_outline.jpg" style="zoom: 45%;border-radius: 20px;border: 1px solid #eee;"/>
 
+还可以通过`Ctrl+Shift+o`的快捷大纲功能来搜索标题，当标题较多时，可以更快的找到所需的标题
+
 ## 实用的任务列表
 
 任务列表非常实用，管理待办、已办非常便利。
@@ -65,12 +67,35 @@ markdown一键分享，顾名思义是在HBuilderX中写好的markdown文档，�
 
 [markdown一键分享](/Tutorial/extension/markdown_share)
 
-## 锚点转到定义@goto-definition
+## 跨文件跳转到标题@goto-definition
 
-HBuilderX 3.5.2起，Markdown支持`[]()`文件名+锚点转到定义, 且支持`@`别名。
+当编辑较多markdown文档时，有多文件互相跳转和引用的需求。
+可以通过`[详见](a.md)`的方式来跳转到文件`a.md`中。
 
+除了简单的文件跳转，HBuilderX 3.5.2起，还支持跳转到#标题，并且支持章节的`@`别名。
+
+以下图为例，假使你正在编辑的文档为`1.md`，同目录下还有一个md文件叫`todo.md`，其中有一个一级标题`# web`，那么按下图写法，按下alt+鼠标左键就可以跳转到`todo.md`文件的标题`web`的位置。
 <img src="/static/snapshots/tutorial/markdown/file_goto_definition.png" class="hd-img" />
 
+HBuilderX的跳转标题策略是可以不区分多级标题的。`todo.md`有个二级标题`## web2`，则可以写为`[详见](todo.md#web2)`，也可以写为`[详见](todo.md##web2)`
+
+当一篇文章内有多个的标题名称一样时，可以通过@别名的方式来区别。
+
+比如todo.md的内容如下，有2个`web2`：
+```
+# web
+## web2
+# web2
+```
+
+如何区分这2个`web2`呢？此时可以给标题起别名
+```
+# web
+## web2@web2a
+# web2@web2b
+```
+
+那么引用处写成`[详见](todo.md#web2a)`，就可以准确跳转到二级标题web2的位置了。
 
 ## 云同步笔记的技巧
 
