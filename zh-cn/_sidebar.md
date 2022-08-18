@@ -109,9 +109,9 @@
     <img src="/static/icon/qq.png" width="20" height="20" />
     <div class="contact-smg contact-qq">
       <div>官方QQ交流群</div>
-      <div>群15：793046085 &nbsp;<a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=vjmkPrMiTXhv2QLm0pBwY4gdWBpRA8cw&jump_from=webapi">点此加入</a></div>
-      <div>群14：750929504 &nbsp;<a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=b-4dxcNc29PQ09NJXf-RKZienjxJqTKg&jump_from=webap">点此加入</a></div>
-      <div>群13：1029243934（2000人已满）</div>
+      <div>群15：793046085（2000人已满）</div>
+      <div>群14：750929504（2000人已满）</div>
+      <div>群13：1029243934 <a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=ih4Udw36cdbANPIeGiRTWuMrOWRD7-2U&jump_from=webapi">点此加入</a></div>
       <div>群12：1051711389（1000人已满）</div>
       <div>群11：1051710376（2000人已满）</div>
       <div>群9：824581834 &nbsp;<a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=EPF0sdsPuYCr3NAQqRAQfSeR5nJoL9MK&jump_from=webapi">点此加入</a></div>
