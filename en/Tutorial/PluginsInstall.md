@@ -47,68 +47,68 @@ open /Applications/HBuilderX.app/Contents/HBuilderX/plugins/
 open /Applications/HBuilderX-Alpha.app/Contents/HBuilderX/plugins/
 ```
 
-## 插件安装失败问题汇总@install-Fail
+## FAQs on Plugins Install Failed @install-Fail
 
-最近，小部分用户遇到`插件安装`失败的问题，如下:
+Recently, a part of our users have been getting problems with `plugins install`, e.g.
 
 <img src="/static/snapshots/plugins/plugin_install_fail.png" class="hd-img" />
 
-插件安装失败时，点击顶部菜单【帮助】【查看运行日志】，即可看到相关错误，根据相关错误解决问题。
+When failed on install plugins, click on the window menu 【Help - View Running Logs】 to find out the related errors, according them to get a deal.
 
-备注：HBuilderX插件在服务器都是zip包，先下载到本地update目录，下载成功后，会自动解压拷贝到HBuilderX.exe 同级`plugins`目录下。
+Notes: All plugins were saved as zip packages on the server, it will download to the local directory `update` firstly, then it will automatically unpack to a folder named `plugins` which is at the same level with HBuilderX.exe if download succeed.
 
-### Q1: 网络问题导致插件下载失败
+### Q1: Network Issues
 
-- 可能您所在的城市，所用宽带，访问HBuilderX更新服务器失败。
-- 电脑开了全局代理，无法连接HBuilderX更新服务器。
-- 打开操作系统命令行工具，输入`ping update.liuyingyong.cn`，检查网路是否畅通。
-- 电脑换个其它网络试试，比如连接手机4G/5G热点
+- Maybe it is the network or the area was restricted, that caused it not able to connecting with the HBuilderX Updating Server。
+- Maybe it is not be able to connecting with the HBuilderX Updating Server by the computer's global network proxy is on.
+- Try to ping with `ping update.liuyingyong.cn` with your cli to check if the network connection is working.
+- Try to switch the network connecting method, maybe by 4G/5G hotspots on smartphone.
 
-### Q2: move fail
+### Q2: Move Failed
 
-在日志中，您可能会看到如下日志:
+You might see the beneath logs written in your log history:
 
 ```
 [info] try move "xxxxx" to "xxxx"
 [info] move result: false
 ```
 
-这些信息代表，插件下载后，拷贝到指定目录失败了。
+These are showing, copying to the target folder has been failed after the download has been done.
 
-解决方法：
-- 尝试重新安装此插件
-- windows电脑：关闭HBuilderX，HBuilderX.exe右键菜单【以管理员身份运行】
-- 进入HBuilderX安装目录，在update/plugins目录下，找到插件zip包，手动将zip包解压到HBuilderX.exe 同级`plugins`目录下。
+Solutions：
+- Try to uninstall and reinstall the plugin.
+- Windows OS： Close the HBuilderX then restart HBuilderX.exe with right mouse-click on 【Run as Administrator】.
+- Enter the folder which HBuilderX was installed in, then enter `update/plugins`, search for the zip pack of the plugin, unzip this package under the `plugins` dir which in the same directory as HBuilderX.exe.
 
-### 03: 本地目录权限问题
+### 03: Permission Problems of Local Directories
 
-HBuilderX 插件解压移动到指定目录，需要权限，如果没有权限，插件就会下载、或移动失败。
+With appropriate permissions, your click will moving your unpacked HBuilderX plugins to the target directory automatically. But it may fail if without a suitable permission configuration when downloading or processing during the operation.
 
-### Q4: 解压失败
+### Q4: Unzip Failed
 
-在日志中，您可能会看到如下日志:
+You might see the beneath logs written in your log history:
 ```
 [info] Unpack plugin "xxxx"
 [info] unzip "xxxx" failed
 ```
-这些信息代表，插件下载后，解压失败了。
+These are showing, unzipping has been failed after the download has been done.
 
-可能的原因：
-- 解压到指定目录时，没有权限。
-- zip包被加密，需要解密后才能解压。某些公司对从网络下载的带有可执行程序的zip包，自动加密了。遇到此种文件，请先解密，然后手动将zip解压到plugins目录下。
+Possible reasons：
+- No permission to unzipping to the target directory.
+- Encrypted package needs to decrypt before unzipping. As for some security reason, some companies are applying strategies, to encrypting on zip packages which includes executable files. The encrypted package needs to be decrypted firstly, then unzipped it to the plugins directory.
 
-### Q5: 磁盘空间不够
+### Q5: No More Storage on the Disk
 
-HBuilderX所在的磁盘，空间不够，导致插件安装失败。遇到此种情况，请检查磁盘。
+The storage of the disk which HBuilderX was installed in was short. Make sure to check the disk first.
 
-### Q6: MD5值校验不通过
+### Q6: Failed on MD5 check
 
-HBuilderX会校验下载的zip插件的md5值，只有md5值一致时，才会安装。防止插件被篡改。
+HBuilderX will check md5 signiture of downloaded zipped plugins. To resist some malicial modifies, it will install only if the consistent of the signitures has been assured.
 
-如果遇到md5值问题，请联系HBuilderX官方人员。
+If this happenes to you, please make sure you get in touch with offical staffs from HBuilderX.
 
 ## Node-Plugin-Questions
 
-Some node plugins, such as `sass` and `less`, are successfully installed, but HBuilderX prompts that the installation failed when the project is running.
+Some node plugins, such as `sass` and `less`, were successfully installed, but HBuilderX prompts that the installation failed when the project is running.
 
 Possible reason: `node_modules` installation failed. Enter the plugins directory of HBuilderX and manually execute command `npm install --save`.
