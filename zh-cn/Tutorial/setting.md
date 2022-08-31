@@ -6,7 +6,7 @@
 
 要想打开设置，请使用以下菜单命令:
 
-- Windows: 顶部菜单【工具】-> 【设置】(快捷键: `ctrl` + `alt` + `,`)
+- Windows: 顶部菜单【工具】-> 【设置】(快捷键: `ctrl` + `,`)
 - MacOSX: 顶部菜单【HBuilderX】-> 【偏好设置】(快捷键: `command` + `,`)
 
 <img src="/static/snapshots/tutorial/settings.png" style="zoom:90%" />
