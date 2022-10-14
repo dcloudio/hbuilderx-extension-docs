@@ -210,3 +210,29 @@ webpack.dev.config.js
 
 打开项目的终端，在终端中输入`tsc -w` 就可以进行项目开发
 
+###  attach功能@attach
+
+> HBuilderX 3.6.7+，新增 Debug attch功能
+
+launch.json文件，增加`attach`配置，内容如下
+
+```json
+  {
+      "configurations": [
+          {
+              "mode": "attach", // 模式设置为attach
+              "name": "attach to server",
+              "port": 8080, // 端口号
+              "cwd": "${workspaceFolder}", // 工作区,支持变量${workspaceFolder}
+              "request": "attach",
+              "skipFiles": [
+                  "<node_internals>/**/*.js"
+              ],
+              "sourceMap": true,
+
+              "type": "node"
+          }
+      ],
+      "version": "0.1"
+  }
+```
