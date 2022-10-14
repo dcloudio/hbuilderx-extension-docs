@@ -6,7 +6,7 @@
 
 ## 安装node-development插件
 
-HBuilderx, 顶部菜单【工具 - 插件安装】，安装新插件，找到Node插件，点击安装
+HBuilderx, 顶部菜单【工具 - 插件安装】，安装新插件，找到Node插件，点击安装。
 
 ## 普通调试-js运行当前文件
 
@@ -28,7 +28,7 @@ HBuilderx, 顶部菜单【工具 - 插件安装】，安装新插件，找到Nod
 
 <img src="/static/snapshots/node_development/1.jpg" />
 
-### launcher.json
+### launch.json
 
 launch.json中目前支持的变量 `${workspaceFolder}` 指当前项目的根目录
 
@@ -38,16 +38,15 @@ launch.json中目前支持的变量 `${workspaceFolder}` 指当前项目的根�
 	         {
 	             "mode": "debug", // 运行模式
 	             "name": "自定义调试文件", //运行菜单的名称(需要唯一)
-	             "outFiles": [ // 如果是构建工具构建的，需要使用, 指明输出路径
+	             "outFiles": [ // 如果启用了源映射，这些glob模式将指定生成的JavaScript文件。如果模式以开头！文件被排除在外。如果未指定，则生成的代码应与其源位于同一目录中
 	                 "${workspaceFolder}/dist/**/*.js"
 	             ],
 	             "program": "${workspaceFolder}/dist/app.js", //程序运行的入口文件(编译后的)
-	             "request": "attach", //请求方式: 固定attach
-	             "skipFiles": [ // 调试跳过文件
+	             "skipFiles": [ // 调试时要跳过的文件或文件夹名称数组或路径globs
 	                 "<node_internals>/**/*.js"
 	             ],
 	             "sourceMap": false, // 是否启用sourceMap
-	             "sourceMapPathOverrides": { // sourceMap位置
+	             "sourceMapPathOverrides": { // 一组映射，用于将sourceMap文件的位置从源映射中的内容重写到它们在磁盘上的位置。
 	             },
 	             "type": "node" // 类型:node(固定)
 	         }
@@ -55,6 +54,20 @@ launch.json中目前支持的变量 `${workspaceFolder}` 指当前项目的根�
 	     "version": "0.1"// 版本号
 	 }
    ```
+launch.json中`configurations`配置项说明:
+
+|  字段名   | 类型  | 描述 |
+|  ----  | ----  | ---- |
+| mode  | 'run' 、 'debug' 、 'attach' | 'debug':调试; <br> 'run': 运行; <br> 'attach': 附加启动的nodejs进程进行调试。 |
+| name  | String | 运行菜单的名称(需要唯一) |
+| outFiles  | Array<String> | 如果启用了sourceMap，这些glob模式将指定生成的JavaScript文件。如果模式以!开头文件被排除在外。如果未指定，则生成的代码应与其源位于同一目录中。 |
+| program  | String | 程序运行的入口,'run'和'debug'模式需要。 |
+| skipFiles  | Array<String> | 调试时要跳过的文件或文件夹名称数组或路径globs。 |
+| sourceMap  | Boolean | 是否启用sourceMap。 |
+| sourceMapPathOverrides  | Object | 一组映射，用于将sourceMap文件的位置从源映射中的内容重写到它们在磁盘上的位置。 |
+| type  | 'node' | 自定义launch类型, 固定传入'node'。 |
+| port  | Number | 要附加到的调试端口, mode为'attach'必传。 |
+| cwd  | String | 正在调试的程序的工作目录的绝对路径, 可以使用`${workspaceFolder}`变量, mode为'attach'时必传。|
 
 ### express脚手架项目配置
 
@@ -192,7 +205,7 @@ webpack.dev.config.js
    }
    ```
 
-### tsc调试ts项目
+###  tsc调试ts项目
 
 项目根下添加[tsconfig.json](https://www.tslang.cn/docs/handbook/tsconfig-json.html)文件
 ```json
@@ -212,7 +225,7 @@ webpack.dev.config.js
 
 ###  attach功能@attach
 
-> HBuilderX 3.6.7+，新增 Debug attch功能
+HBuilderX 3.6.7+，Node调试 支持附加(attach)到已经启动的node进程上断点调试。
 
 launch.json文件，增加`attach`配置，内容如下
 
@@ -222,14 +235,13 @@ launch.json文件，增加`attach`配置，内容如下
           {
               "mode": "attach", // 模式设置为attach
               "name": "attach to server",
-              "port": 8080, // 端口号
-              "cwd": "${workspaceFolder}", // 工作区,支持变量${workspaceFolder}
+              "port": 8080, // 要附加到的调试端口
+              "cwd": "${workspaceFolder}", // 正在调试的程序的工作目录的绝对路径, 可以使用`${workspaceFolder}`变量
               "request": "attach",
               "skipFiles": [
                   "<node_internals>/**/*.js"
               ],
               "sourceMap": true,
-
               "type": "node"
           }
       ],
