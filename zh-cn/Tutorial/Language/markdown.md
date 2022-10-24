@@ -4,6 +4,7 @@ HBuilderX对md提供了强大支持，是有史以来最强大、最简洁、最
 **推荐在那里实际体验**
 
 ## 强大的Emmet支持、及快捷键支持
+------
 
 - 标题:  敲`h2+Tab`即可生成二级标题
 - 图片: `img`后敲`Tab`
@@ -18,12 +19,14 @@ HBuilderX对md提供了强大支持，是有史以来最强大、最简洁、最
 - 注释：快捷键`Ctrl+/`快速插入注释
 
 ## 强大的智能粘贴
+------
 
 - 图片: 支持智能粘贴，粘贴剪切板里的图形时会自动保存为本md文档的附件
 - 链接: 支持智能粘贴，粘贴URL会自动变成超链接格式，粘贴本地文件进来也会自动创建引用链接
 - 表格: 支持从excel、wps、word、number的表格中复制粘贴表格进来
 
 ## 强大的智能双击
+------
 
 - 标题: 双击`#号`可选中整个标题段落
 - 有序列表: `双击`前面的数字，可重新对数字排序，修正序号错误
@@ -33,13 +36,14 @@ HBuilderX对md提供了强大支持，是有史以来最强大、最简洁、最
 - 图片: `双击`语法区开头，即`!`左侧，选中包含定义符的整段文字
 
 ## 强大的整理功能
+------
 
 - 表格：支持`Ctrl+K`可以自动整理表格格式
 
 <img src="/static/snapshots/tutorial/markdown/markdown_table_format.gif" style="border: 1px solid #eee;"/>
 
 ## 直观的文档结构图
-
+------
 HBuilderX Markdown文件，也支持显示文档结构图（大纲视图）。
 
 windows快捷键: `Alt+w`; MacOSX快捷键：`Ctrl+w`
@@ -55,8 +59,16 @@ windows快捷键: `Alt+w`; MacOSX快捷键：`Ctrl+w`
 - [ ] 任务列表-未完成任务 `快捷键：Ctrl+Alt+[`
 - [x] 任务列表-已完成任务 `快捷键：Ctrl+Alt+]`
 
-## markdown一键分享
+## 路径提示@PathHints
+------
 
+HBuilderX 3.6.8+，MarkDown支持文件路径提示，比如提示图片路径，如下图：
+
+<img src="/static/snapshots/tutorial/markdown/md_path_hints.png" class="hd-img" />
+
+
+## markdown一键分享
+------
 使用markdown也有一个重要的问题，那就是图片的存储，markdown文件要用到图片时必须是一个链接，在不使用图床的情况下，编辑上传图片太麻烦。
 
 HBuilderX 2.8.8,  推出了 MarkDown一键分享功能。使用uniCloud作为图床 什么是[uniCloud](https://uniapp.dcloud.io/uniCloud/README)，可靠、安全、简单易用、免费。
@@ -97,7 +109,129 @@ HBuilderX的跳转标题策略是可以不区分多级标题的。`todo.md`有�
 
 那么引用处写成`[详见](todo.md#web2a)`，就可以准确跳转到二级标题web2的位置了。
 
+## Mermaid流程图@Mermaid
+------
+
+> HBuilderX 3.6.8+，MarkDown支持Mermaid 流程图，并支持在内置浏览器预览。
+
+Markdown 的原生语法不支持绘制图形，但通过 Mermaid 扩展，我们可以将一些格式化的文字渲染成我们需要的图形。比如 “流程图”。
+
+下文将介绍如何通过 Mermaid 绘制「流程图」。
+
+流程图由几何图形节点及连接线组成。几何图形节点是流程图内的各元素的载体，通常用形状来区分其属性，例如圆形代表开始或结束、菱形代表判断等。连接线用于描述几何图形节点之间的联系，可能是有向线段，也可能是无向线段等。
+
+在 Markdown 中添加 Mermaid 图形，需要声明 Mermaid 类型的代码块，代码如下：
+
+<img src="/static/snapshots/tutorial/markdown/md_Mermaid_sytax.png" class="hd-img" />
+
+### 基本语法
+
+基本的流程图包含：流程图布局方向、几何图形和连接线三个部分组成。
+
+**流程图布局方向**
+
+|标志	|方向	|
+|--	|--	|
+|TB	|top bottom - 从上到下|
+|BT	|bottom top - 从下到上|
+|RL	|right left - 从右到左|
+|LR	|left right - 从左到右|
+|TD	|等同于 TB|
+
+**连接线**
+
+不同种类的连接线可以表示不同类型的关系，例如，无方向的连接线可用来表示相关性、有方向的连接线可以表示数据流向或者节点间的依赖关系；用实线表示强关联、用虚线表示弱关联等待。[](#示例3)
+
+### 示例1： 基本的横向流程图
+
+```mermaid
+graph LR
+    1[方形] --> 2(圆角) --> 3((圆形)) --> 4>非对称] --> 5{菱形} --> 6{{六角形}} --> 7[/平行四边形--右倾/] --> 8[\平行四边形--左倾\] --> 9[/梯形--正向\]  --> 10[\梯形--反向/]
+```
+
+<img src="/static/snapshots/tutorial/markdown/md-Mermaid_flow_basic.jpg" class="hd-img" />
+
+### 示例2：基本的竖向流程图
+
+```mermaid
+graph TD
+    开始 --> 结束
+```
+
+<img src="/static/snapshots/tutorial/markdown/md-Mermaid_flow_td.jpg" class="hd-img" />
+
+### 示例3：分组图
+
+```mermaid
+graph TB
+    c1-->a2
+    subgraph 第一组
+    a1-->a2
+    end
+    subgraph 第二组
+    b1-->b2
+    end
+    subgraph 第三组
+    c1-->c2
+    end
+```
+
+<img src="/static/snapshots/tutorial/markdown/md-Mermaid_flow_subgraph.jpg" class="hd-img" />
+
+### 示例4：冒泡排序流程图
+
+```mermaid
+graph LR
+    执行1[i = 1]
+  执行2[j = 0]
+  执行3[i ++]
+  执行4["a = arr[j], b = arr[j + 1]"]
+  执行5[交换 a, b]
+  执行6[j ++]
+    判断1["i < n"]
+    判断2["j < n - i"]
+  判断3["a > b"]
+  开始 --> 执行1
+  执行1 --> 判断1
+  判断1 --Y--> 执行2
+  执行2 --> 判断2
+  判断2 --Y--> 执行4
+  判断2 --N--> 执行3
+  执行3 --> 判断1
+  执行4 --> 判断3
+  判断3 --N--> 判断2
+  判断3 --Y--> 执行5
+  执行5 --> 执行6
+  执行6 --> 判断2
+  判断1 --N--> 结束
+```
+
+<img src="/static/snapshots/tutorial/markdown/md-Mermaid_flow_if.jpg" class="hd-img" />
+
+
+### 示例5：连接线语法
+
+基本的连接线语法：
+
+```mermaid
+graph LR
+    A-->B
+```
+
+<img src="/static/snapshots/tutorial/markdown/md-Mermaid_flow_line_basic.jpg" class="hd-img" />
+
+带文字的连接线线语法：
+
+```mermaid
+graph LR
+    A ==> B == 带文字连接线 ==> C
+```
+
+<img src="/static/snapshots/tutorial/markdown/md-Mermaid_flow_line_basic_2.jpg" class="hd-img" />
+
+
 ## 云同步笔记的技巧
+------
 
 #### 云同步工具
 
