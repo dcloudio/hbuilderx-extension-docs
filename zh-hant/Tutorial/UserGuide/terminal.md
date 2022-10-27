@@ -24,3 +24,7 @@ HBuilderX支持通過多種方式打開終端：
 > HBuilderX 3.2.10+, 支持點擊終端終端的url，在瀏覽器打開
 
 <img src="/static/snapshots/tutorial/terminal/terminal_url.png" style="zoom: 50%; border: 1px solid #eee; border-radius: 10px;"/>
+
+## 问题
+
+- windows电脑，如果您遇到终端空白的问题，请参考[ASK帖子](https://ask.dcloud.net.cn/question/78518)

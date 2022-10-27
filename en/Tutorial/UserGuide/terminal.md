@@ -24,3 +24,7 @@ HBuilderX supports multiple ways to open the terminal:
 > HBuilderX 3.2.10+, supports clicking the url of the terminal and opening it in the browser
 
 <img src="/static/snapshots/tutorial/terminal/terminal_url_en.png" style="zoom: 50%; border: 1px solid #eee; border-radius: 10px;"/>
+
+## 问题
+
+- windows电脑，如果您遇到终端空白的问题，请参考[ASK帖子](https://ask.dcloud.net.cn/question/78518)
