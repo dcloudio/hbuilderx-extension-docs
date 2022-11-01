@@ -81,18 +81,15 @@ For more information: [MarkDown One-Key Sharing Instructions](https://ask.dcloud
 
 [markdown sharing](/Tutorial/extension/markdown_share)
 
-<<<<<<< HEAD
 ## file anchor go to definition@goto-definition
 
 HBuilderX 3.5.2，Markdown supports `[]()` filename + anchor go to definition, and supports `@` aliases。
 
 <img src="/static/snapshots/tutorial/markdown/file_goto_definition.png" class="hd-img" />
 
-## Onedrive Sync
-=======
+
 ## Mermaid流程图@Mermaid
 ------
->>>>>>> b6cd955 (update markdown.md for 3.6.8-alpha)
 
 > HBuilderX 3.6.8+，MarkDown支持Mermaid 流程图，并支持在内置浏览器预览。
 
@@ -214,8 +211,6 @@ graph LR
 
 ## Onedrive Sync
 ------
-
-### Onedrive
 
 Firstly, recommend a cloud synchronisaion tool - microsoft onedrive https://skydrive.live.com/
 

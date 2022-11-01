@@ -62,7 +62,7 @@ windows快捷键: `Alt+w`; MacOSX快捷键：`Ctrl+w`
 ## 路径提示@PathHints
 ------
 
-HBuilderX 3.6.8+，MarkDown支持文件路径提示，比如提示图片路径，如下图：
+HBuilderX 3.6.9+，MarkDown支持文件路径提示，比如提示图片路径，如下图：
 
 <img src="/static/snapshots/tutorial/markdown/md_path_hints.png" class="hd-img" />
 
