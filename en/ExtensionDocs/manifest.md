@@ -49,3 +49,12 @@ The meaning of each field is listed below:
 }
 
 ```
+
+
+### 备注
+
+插件根目录package.json，存在很多字段，一些字段并未对开发者开放。
+
+近期，某些插件package.json，配置了一些HBuilderX未开放的字段，比如`"__private": true`, 此字段表示此插件属于HBuilderX`内置插件`，不会显示在HBuilderX菜单【设置 - 插件配置】中。
+
+**所有开发者开发的插件，都应该显示在HBuilderX菜单【设置 - 插件配置】中，允许用户自行卸载。**

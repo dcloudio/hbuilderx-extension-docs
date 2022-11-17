@@ -40,9 +40,9 @@
     * [Uri](/ExtensionDocs/Api/other/Uri.md)
     * [WorkspaceFolder](/ExtensionDocs/Api/other/WorkspaceFolder.md)
     * [languageId](/ExtensionDocs/Api/other/languageId.md)
-* [擴展點](/ExtensionDocs/ContributionPoints/README.md) 
-* [插件激活機制](/ExtensionDocs/activation_event.md) 
-* [插件規範](/ExtensionDocs/manifest.md) 
+* [插件激活機制](/ExtensionDocs/activation_event.md)
+* [插件規範](/ExtensionDocs/manifest.md)
+* [擴展點](/ExtensionDocs/ContributionPoints/README.md)
 <div class="contact-box">
   <a href="https://www.dcloud.io/hbuilderx.html" target="_blank" class="contact-item">
     <img src="/static/favicon/favicon.png" width="20" height="21">
@@ -72,4 +72,3 @@
     </div>
   </div>
 </div>
-

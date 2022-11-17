@@ -35,14 +35,14 @@
     * [authorize](/ExtensionDocs/Api/env/authorize.md)
     * [Clipboard](/ExtensionDocs/Api/env/Clipboard.md)
     * [openExternal](/ExtensionDocs/Api/env/openExternal.md)
-* other
+* 其它
     * [Disposable](/ExtensionDocs/Api/other/Disposable.md)
     * [Uri](/ExtensionDocs/Api/other/Uri.md)
     * [WorkspaceFolder](/ExtensionDocs/Api/other/WorkspaceFolder.md)
     * [languageId](/ExtensionDocs/Api/other/languageId.md)
-* [扩展点](/ExtensionDocs/ContributionPoints/README.md) 
-* [插件激活机制](/ExtensionDocs/activation_event.md) 
-* [插件规范](/ExtensionDocs/manifest.md) 
+* [插件激活机制](/ExtensionDocs/activation_event.md)
+* [插件规范](/ExtensionDocs/manifest.md)
+* [扩展点](/ExtensionDocs/ContributionPoints/README.md)
 <div class="contact-box">
   <a href="https://www.dcloud.io/hbuilderx.html" target="_blank" class="contact-item">
     <img src="/static/favicon/favicon.png" width="20" height="21">
@@ -72,4 +72,3 @@
     </div>
   </div>
 </div>
-
