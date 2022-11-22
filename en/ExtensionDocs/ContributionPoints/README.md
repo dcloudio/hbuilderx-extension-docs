@@ -1,17 +1,18 @@
 Contribution Points are a set of JSON declarations that you make in the contributes field of the package.json Extension Manifest. The following is a list of extension points currently supported by HBuilderX:
 
 ## configuration
+--------
+
 The configuration extension point will register the extended configuration items in the global visualization configuration of HBuilderX `Settings`-`Plugins`.
 
-### configuration attributes list
+#### configuration attributes list
 
-#### title
+**- title**
+
 The configuration of each extension is assigned to the same group. The title is the name of the group and usually the name of the extension.
 
-#### title
-The configuration of each extension is assigned to the same group. The title refers to the name of the group, and usually the name of the extension.
+**- properties**
 
-#### properties
 The configuration in the properties is a jsonobject object, the key of the object represents the id of the configuration item to be extended, and the value is a conformity to [JSON Schema](https://json-schema.org/understanding-json-schema/reference/index .html) canonical jsonobject, currently supported fields include:
 
 - type: string or boolean or number
@@ -19,7 +20,7 @@ The configuration in the properties is a jsonobject object, the key of the objec
 - default
 - enum Optional value, only string or number
 
-### configuration exmpale
+#### configuration exmpale
 ```json
     "contributes": {
         "configuration":{
@@ -45,10 +46,12 @@ As follows：
 
 
 ## commands
-Contribute the UI for a command consisting of a title and (optionally) an icon, category, and enabled state. Presentation of contributed commands depends on the containing menu. 
+--------
+
+Contribute the UI for a command consisting of a title and (optionally) an icon, category, and enabled state. Presentation of contributed commands depends on the containing menu.
 > Note: When a command is invoked, it will emit an activationEvent `onCommand:${commandId}`.
 
-#### Example
+##### Example
 ```json
     "contributes": {
         "commands": [
@@ -61,25 +64,28 @@ Contribute the UI for a command consisting of a title and (optionally) an icon, 
 ```
 
 ## keybindings
+--------
 
 > Supported from HBuilderX 3.1.22+
 
 Contribute a key binding rule defining what command should be invoked when the user presses a key combination.
 
-#### Example
+##### Example
 
 ```json
 "keybindings":[
     {
-        "command":"extension.firstExtension", 
+        "command":"extension.firstExtension",
         "key":"Ctrl+Shift+C",
-        "when":"", 
+        "when":"",
         "macosx":"command+Shift+C"
     }
 ]
 ```
 
 ## snippets
+--------
+
 Contribute snippets for a specific language, See [here] for the list of extensible programming language Id (/ExtensionDocs/Api/other/languageId). The extended sample code is as follows:
 
 ```json
@@ -98,7 +104,7 @@ Contribute snippets for a specific language, See [here] for the list of extensib
     }
 ```
 
-### Attribute list
+#### Attribute list
 
 |Attribute name		|Type	|Required	|Description																																		|
 |--				|--			|--			|--																																			|
@@ -106,7 +112,7 @@ Contribute snippets for a specific language, See [here] for the list of extensib
 |language		|String		|Yes			|Programming language ID, which is used to limit the effect only in the specified language. For the list of language IDs, please refer to [here](/ExtensionDocs/Api/other/languageId)									|
 |path|String		|Yes			|The file path of the code block list to be expanded, the format of the file content is shown below|
 
-### Snippets format
+#### Snippets format
 The description of each configuration item is as follows:
 
 |Name|Description|
@@ -116,7 +122,7 @@ The description of each configuration item is as follows:
 |body|The content of the snippet.|
 |triggerAssist	|True means that the code prompt is triggered on the first tabtop and display code assistant immediately after the snippet is entered into the document. The default is false.|
 
-### Example
+#### Example
 ```json
 // ./snippets/javascript.json
 {
@@ -134,6 +140,8 @@ The description of each configuration item is as follows:
 
 
 ## viewsContainers
+--------
+
 Contribute a view container into which Custom views can be contributed. The complete extended view process reference [How to register a new view? ](/ExtensionTutorial/views)
 
 #### Attribute list
@@ -172,6 +180,7 @@ Contribute a view container into which Custom views can be contributed. The comp
 |title		|String		|Yes			|Title displayed on the tab label				|
 
 ## views
+--------
 
 Extend the new view, you must specify an identifier and name for the view.
 
@@ -179,7 +188,7 @@ TreeView and WebView are supported, and a view container (viewsContainers) only 
 
 After the extension point is declared, you need to pass the API to:[window.createTreeView](/ExtensionDocs/Api/windows/createTreeView) or [window.createWebView](/ExtensionDocs/Api/windows/createWebView). The complete extended view process reference [How to register a new view? ](/ExtensionTutorial/views)
 
-### TreeView Example
+#### TreeView Example
 ```json
     //NOTE：package.json are not supported comments, you need to delete the comments when using the following code
    "contributes": {
@@ -193,7 +202,8 @@ After the extension point is declared, you need to pass the API to:[window.creat
     }
 ```
 
-### WebView Example
+#### WebView Example
+
 `Supported from HBuilderX 2.8.1+`
 
 ```json
@@ -220,6 +230,7 @@ After the extension point is declared, you need to pass the API to:[window.creat
 ```
 
 ## menus
+--------
 
 Contribute a menu item for a command to the editor or Explorer. The menu item definition contains the command that should be invoked when selected and the condition under which the item should show.
 
@@ -252,7 +263,8 @@ The key in the object configured under the menus node refers to which pop-up men
 
 > When the attributes title and command are both empty, it will be recognized as a dividing line.
 
-### Example
+**Example**
+
 ```json
    "contributes": {
        "menus": {
@@ -450,6 +462,8 @@ The current HBuilderX built-in variable list is as follows:
 |editorHasSelection								|Boolean|Whether the currently activated editor has selected content (Supported from HBuilderX3.2.22+)																				|
 
 ## customEditors
+--------
+
 The customEditors contribution point is how your extension tells HBuilderX about the custom editors that it provides. For example, HBuilderX needs to know what types of files your custom editor works with as well as how to identify your custom editor in any UI.
 
 Complete reference for the process of extending a custom editor [How to extend a custom editor? ](/ExtensionTutorial/customeditor)

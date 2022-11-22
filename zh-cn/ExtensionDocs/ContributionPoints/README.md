@@ -1,14 +1,18 @@
 扩展点是通过在插件`package.json`文件中`contributes`节点下定义的一些JSON格式的配置项。以下是目前HBuilderX支持的扩展点列表：
 
 ## configuration
+--------
+
 configuration扩展点，会将扩展的配置项注册到HBuilderX的全局可视化配置里`设置`-`插件配置`。
 
-### configuration属性列表
+#### configuration属性列表:
 
-#### title
+**- title**
+
 每个插件扩展的配置是分配到同一组下的，title指的是该组的名称，一般写的是插件名称。
 
-#### properties
+**- properties**
+
 properties内配置的是一个jsonobject对象，该对象的key代表着要扩展的配置项id，value是一个符合[JSON Schema](https://json-schema.org/understanding-json-schema/reference/index.html)规范的jsonobject，目前支持的字段包括：
 
 - type 类型。支持的类型包括：string、boolean、number。
@@ -16,7 +20,7 @@ properties内配置的是一个jsonobject对象，该对象的key代表着要扩
 - default 默认值
 - enum  可选值，目前只有type为string或number时可用
 
-### configuration示例
+#### configuration示例:
 ```json
     "contributes": {
         "configuration":{
@@ -38,14 +42,16 @@ properties内配置的是一个jsonobject对象，该对象的key代表着要扩
 ```
 效果图如下：
 
-<img src="/static/snapshots/plugins_setting.jpg" style="zoom:50%" />
+<img src="/static/snapshots/plugins_setting.jpg" style="zoom:45%" />
 
 
 ## commands
+--------
+
 commands扩展点用于声明一个`命令`，`命令`可以通过`menus`扩展点和菜单关联到一起
 > 注意：当一个`命令`将要执行时，将会触发一个`onCommand:${commandId}`的[activationEvent](/ExtensionDocs/activation_event.md)用于激活监听该`命令`的插件
 
-#### 示例
+##### 示例:
 ```json
     "contributes": {
         "commands": [
@@ -58,12 +64,13 @@ commands扩展点用于声明一个`命令`，`命令`可以通过`menus`扩展�
 ```
 
 ## keybindings
+--------
 
 > keybindings扩展点, 仅对HBuilderX 3.1.22+版本生效。
 
 keybindings扩展点用于声明快捷键绑定.
 
-#### 示例
+##### 示例:
 
 ```json
 "keybindings":[
@@ -77,6 +84,8 @@ keybindings扩展点用于声明快捷键绑定.
 ```
 
 ## snippets
+--------
+
 snippets扩展点可以扩展指定编程语言的代码块，可扩展的编程语言Id列表见[这里](/ExtensionDocs/Api/other/languageId)。扩展示例代码如下：
 
 ```json
@@ -95,7 +104,7 @@ snippets扩展点可以扩展指定编程语言的代码块，可扩展的编程
     }
 ```
 
-### 属性列表
+#### 属性列表
 
 |属性名称		|属性类型	|是否必须	|描述																																		|
 |--				|--			|--			|--																																			|
@@ -103,7 +112,7 @@ snippets扩展点可以扩展指定编程语言的代码块，可扩展的编程
 |language		|String		|是			|编程语言ID，用于限定只在指定的语言下生效，语言Id的列表参见[这里](/ExtensionDocs/Api/other/languageId)									|
 |path|String		|是			|要扩展的代码块列表文件路径，文件内容格式见下面|
 
-### 代码块格式
+#### 代码块格式
 每个配置项的说明如下表：
 
 |名称|描述|
@@ -113,7 +122,7 @@ snippets扩展点可以扩展指定编程语言的代码块，可扩展的编程
 |body|代码块的内容。内容中有如下特殊格式：<br />$1 表示代码块输入后光标的所在位置。如需要多光标，就在多个地方配置$1,如该位置有预置数据，则写法是${1:foo1}，多选项即下拉候选列表使用${1:foo1/foo2/foo3}；<br />$2 表示代码块输入后再次按tab后光标的切换位置tabstops（代码块展开后按tab可以跳到下一个tabstop；<br />$0 代表代码块输入后最终光标的所在位置（也可以按回车直接跳过去）。<br />双引号使用\"转义，换行使用多个数组表示，每个行一个数组，用双引号包围，并用逗号分隔，缩进需要用\t表示，不能直接输入缩进！|
 |triggerAssist	|为true表示该代码块输入到文档后立即在第一个tabstop上触发代码提示，拉出代码助手，默认为false。|
 
-### 代码块示例
+#### 代码块示例
 ```json
 // ./snippets/javascript.json
 {
@@ -131,6 +140,8 @@ snippets扩展点可以扩展指定编程语言的代码块，可扩展的编程
 
 
 ## viewsContainers
+--------
+
 在窗体左侧区域扩展一个和项目管理器同级的tab项，完整的扩展视图流程参考[如何注册一个新的视图？](/ExtensionTutorial/views)
 
 #### 属性列表
@@ -169,6 +180,7 @@ snippets扩展点可以扩展指定编程语言的代码块，可扩展的编程
 |title		|String		|是			|显示在tab标签上的标题				|
 
 ## views
+--------
 
 扩展新的视图，扩展的view必须和`viewsContainers`内定义的视图容器绑定以后才能生效。
 
@@ -176,7 +188,8 @@ snippets扩展点可以扩展指定编程语言的代码块，可扩展的编程
 
 在该扩展点声明后，需要通过API：[window.createTreeView](/ExtensionDocs/Api/windows/createTreeView)或者[window.createWebView](/ExtensionDocs/Api/windows/createWebView)实现。完整的扩展视图流程参考[如何注册一个新的视图？](/ExtensionTutorial/views)
 
-### TreeView 示例
+#### TreeView 示例
+
 ```json
     //NOTE：package.json不支持注释，以下代码使用时需要将注释删掉
    "contributes": {
@@ -191,7 +204,8 @@ snippets扩展点可以扩展指定编程语言的代码块，可扩展的编程
     }
 ```
 
-### WebView 示例
+#### WebView 示例
+
 `从HBuilderX 2.8.1及以上版本开始支持`
 
 ```json
@@ -218,24 +232,11 @@ snippets扩展点可以扩展指定编程语言的代码块，可扩展的编程
 ```
 
 ## menus
+--------
 
 menus扩展点会关联一个`命令`到相应的菜单项里面，当菜单触发时将会执行对应的`命令。
 
-menus节点下配置的对象内的key指的是要注册到哪个弹出菜单里面，目前支持的key值列表如下：
-
-- `editor/context` ：编辑器右键菜单
-- `explorer/context` ：项目管理器右键菜单
-- `view/item/context` ：通过`views`扩展点扩展的`视图`的右键菜单（`从HBuilderX 2.7.12及以上版本开始支持`）
-- `menubar/file` : 顶部菜单的`文件`菜单
-- `menubar/edit` : 顶部菜单的`编辑`菜单
-- `menubar/select` : 顶部菜单的`选择`菜单
-- `menubar/find` : 顶部菜单的`查找`菜单
-- `menubar/goto` : 顶部菜单的`跳转`菜单
-- `menubar/run` : 顶部菜单的`运行`菜单
-- `menubar/publish` : 顶部菜单的`发行`菜单
-- `menubar/view` : 顶部菜单的`视图`菜单
-- `menubar/tool` : 顶部菜单的`工具`菜单
-- `menubar/help` : 顶部菜单的`帮助`菜单
+menus节点下配置的对象内的key指的是要注册到哪个**`弹出菜单`**里面，[详情参考](#group)
 
 ### menus属性列表
 
@@ -250,7 +251,8 @@ menus节点下配置的对象内的key指的是要注册到哪个弹出菜单里
 
 > 当属性title和command都为空时，将被识别为分割线。
 
-### 示例
+**示例**
+
 ```json
    "contributes": {
        "menus": {
@@ -294,125 +296,150 @@ menus节点下配置的对象内的key指的是要注册到哪个弹出菜单里
 ### group
 
 每个弹出菜单内的group都不一样，下面列出所有的弹出菜单下可用的group。
+
+|grop	|说明	|
+|--	|--	|
+|[editor/context](#editorContext)	|编辑器右键菜单[详情](#editorContext)	|
+|[explorer/context](#explorerContext)	|项目管理器右键菜单 [详情](#explorerContext)	|
+|view/item/context	|通过`views`扩展点扩展的`视图`的右键菜单, 仅支持HBuilderX 2.7.12及以上版本	|
+|[menubar/file](#menubarFile)	|顶部菜单的`文件`菜单 [详情](#menubarFile)	|
+|[menubar/edit](#menubarEdit)	|顶部菜单的`编辑`菜单 [详情](#menubarEdit)	|
+|[menubar/select](#menubarSelect)	|顶部菜单的`选择`菜单 [详情](#menubarSelect)	|
+|[menubar/find](#menubarFind)	|顶部菜单的`查找`菜单 [详情](#menubarFind)	|
+|[menubar/goto](#menubarGoto)	|顶部菜单的`跳转`菜单 [详情](#menubarGoto)	|
+|[menubar/run](#menubarRun)	|顶部菜单的`运行`菜单 [详情](#menubarRun)	|
+|[menubar/publish](#menubarPublish)	|顶部菜单的`发行`菜单 [详情](#menubarPublish)	|
+|[menubar/view](#menubarView)	|顶部菜单的`视图`菜单 [详情](#menubarView)	|
+|[menubar/tool](#menubarTool)	|顶部菜单的`工具`菜单 [详情](#menubarTool)	|
+|[menubar/help](#menubarHelp)	|顶部菜单的`帮助`菜单 [详情](#menubarHelp)	|
+
 > 注意：想要将扩展菜单放到弹出菜单的最后，可以将group设置成`0_foot`
 
-- `editor/context`
-    * copy
-    * goto
-    * copyPath
-    * assist
-    * z_commands
+#### - editor/context@editorContext
+
+* copy
+* goto
+* copyPath
+* assist
+* z_commands
 
 对应的位置如下图所示：
 
-<img src = "/static/snapshots/Plug-in-development/group/editor_context.jpg" style="zoom:50%" />
+<img src = "/static/snapshots/Plug-in-development/group/editor_context.jpg" style="zoom:45%" />
 
-- `explorer/context` ：项目管理器右键菜单
-    * new
-    * openInExplorer
-    * nature
-    * cutcopy
-    * rename
-    * z_commands
+#### - explorer/context: 项目管理器右键菜单@explorerContext
 
-对应的位置如下图所示：
-
-<img src = "/static/snapshots/Plug-in-development/group/explorer_context.jpg" style="zoom:50%" />
-
-- `menubar/file` : 顶部菜单的`文件`菜单
-    * new
-    * tab
-    * save
-    * openInExplorer
+* new
+* openInExplorer
+* nature
+* cutcopy
+* rename
+* z_commands
 
 对应的位置如下图所示：
 
-<img src = "/static/snapshots/Plug-in-development/group/menubar_file.jpg" style="zoom:50%" />
+<img src = "/static/snapshots/Plug-in-development/group/explorer_context.jpg" style="zoom:45%" />
 
-- `menubar/edit` : 顶部菜单的`编辑`菜单
-    * undo
-    * copy
-    * format
-    * line
-    * delete
+#### - menubar/file: 顶部菜单的文件菜单@menubarFile
 
-对应的位置如下图所示：
-
-<img src = "/static/snapshots/Plug-in-development/group/edit.jpg" style="zoom:50%" />
-
-- `menubar/select` : 顶部菜单的`选择`菜单
-    * selectAll
-    * area
-    * word
-    * line
-    * colum
-    * 0_cursor
-    * 1_cursor
+* new
+* tab
+* save
+* openInExplorer
 
 对应的位置如下图所示：
 
-<img src = "/static/snapshots/Plug-in-development/group/select.jpg" style="zoom:50%" />
+<img src = "/static/snapshots/Plug-in-development/group/menubar_file.jpg" style="zoom:45%" />
 
-- `menubar/find` : 顶部菜单的`查找`菜单
-    * findFile
-    * findWord
-    * findSymbol
+#### - menubar/edit: 顶部菜单的编辑菜单@menubarEdit
 
-对应的位置如下图所示：
-
-<img src = "/static/snapshots/Plug-in-development/group/find.jpg" style="zoom:50%" />
-
-- `menubar/goto` : 顶部菜单的`跳转`菜单
-    * system_goto
-    * line_goto
-    * define_goto
+* undo
+* copy
+* format
+* line
+* delete
 
 对应的位置如下图所示：
 
-<img src = "/static/snapshots/Plug-in-development/group/goto.jpg" style="zoom:50%" />
+<img src = "/static/snapshots/Plug-in-development/group/edit.jpg" style="zoom:45%" />
 
-- `menubar/run` : 顶部菜单的`运行`菜单
-    * 0_foot
+#### - menubar/select: 顶部菜单的选择菜单@menubarSelect
 
-对应的位置在菜单的末尾。
-
-- `menubar/publish` : 顶部菜单的`发行`菜单
-    * 0_foot
-
-对应的位置在菜单的末尾。
-
-- `menubar/view` : 顶部菜单的`视图`菜单
-    * min_window
-    * focus_editor
-    * show_lineno
-    * view_split
-    * scroll
-    * plus_font
+* selectAll
+* area
+* word
+* line
+* colum
+* 0_cursor
+* 1_cursor
 
 对应的位置如下图所示：
 
-<img src = "/static/snapshots/Plug-in-development/group/view.jpg" style="zoom:50%" />
+<img src = "/static/snapshots/Plug-in-development/group/select.jpg" style="zoom:45%" />
 
-- `menubar/tool` : 顶部菜单的`工具`菜单
-    * shortcuts
-    * snippets
-    * ext_settings
+#### - menubar/find: 顶部菜单的查找菜单@menubarFind
 
-对应的位置如下图所示：
-
-<img src = "/static/snapshots/Plug-in-development/group/tool.jpg" style="zoom:50%" />
-
-- `menubar/help` : 顶部菜单的`帮助`菜单
-    * documents
-    * checkupdate
-    * license
+* findFile
+* findWord
+* findSymbol
 
 对应的位置如下图所示：
 
-<img src = "/static/snapshots/Plug-in-development/group/help.jpg" style="zoom:50%" />
+<img src = "/static/snapshots/Plug-in-development/group/find.jpg" style="zoom:45%" />
+
+#### - menubar/goto: 顶部菜单的跳转菜单@menubarGoto
+
+* system_goto
+* line_goto
+* define_goto
+
+对应的位置如下图所示：
+
+<img src = "/static/snapshots/Plug-in-development/group/goto.jpg" style="zoom:45%" />
+
+#### - menubar/run: 顶部菜单的运行菜单@menubarRun
+
+0_foot , 对应的位置在菜单的末尾。
+
+#### - menubar/publish: 顶部菜单的发行菜单@menubarPublish
+
+0_foot，对应的位置在菜单的末尾。
+
+#### - menubar/view: 顶部菜单的视图菜单@menubarView
+
+* min_window
+* focus_editor
+* show_lineno
+* view_split
+* scroll
+* plus_font
+
+对应的位置如下图所示：
+
+<img src = "/static/snapshots/Plug-in-development/group/view.jpg" style="zoom:45%" />
+
+#### - menubar/tool: 顶部菜单的工具菜单@menubarTool
+
+* shortcuts
+* snippets
+* ext_settings
+
+对应的位置如下图所示：
+
+<img src = "/static/snapshots/Plug-in-development/group/tool.jpg" style="zoom:45%" />
+
+#### - menubar/help: 顶部菜单的帮助菜单@menubarHelp
+
+* documents
+* checkupdate
+* license
+
+对应的位置如下图所示：
+
+<img src = "/static/snapshots/Plug-in-development/group/help.jpg" style="zoom:45%" />
 
 
-### when
+### when表达式
 when表达式用来动态的判断某个条件是否满足(即表达式的运算结果是`true`或者`false`)，目前用于控制一个菜单是否显示。目前支持的表达式运算符如下：
 
 |操作符	|描述	|例子														|
@@ -448,6 +475,7 @@ when表达式用来动态的判断某个条件是否满足(即表达式的运算
 |editorHasSelection								|Boolean|当前激活的编辑器是否有选中的内容 （仅对HBuilderX3.2.22+版本生效）																				|
 
 ## customEditors
+--------
 
 插件可以通过该扩展点扩展多个不同类型的自定义编辑器，自定义编辑器可以设置文件匹配模式，用户通过项目管理器打开的文件匹配到某一类型时，在编辑器区域创建webview视图，关联打开的文件。
 
