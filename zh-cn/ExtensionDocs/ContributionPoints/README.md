@@ -63,7 +63,7 @@ commands扩展点用于声明一个`命令`，`命令`可以通过`menus`扩展�
     }
 ```
 
-## keybindings
+## keybindings快捷键@keybindings
 --------
 
 > keybindings扩展点, 仅对HBuilderX 3.1.22+版本生效。
