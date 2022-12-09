@@ -103,6 +103,12 @@ Markdown 的原生语法不支持绘制图形，但通过 mermaid 扩展，我�
 
 <img src="/static/snapshots/tutorial/markdown/md_Mermaid_sytax.png" class="hd-img" />
 
+**HBuilderX内，mermaid图，内置浏览器预览效果：**
+
+<img src="https://f184e7c3-1912-41b2-b81f-435d1b37c7b4.cdn.bspapp.com/VKCEYUGU-f184e7c3-1912-41b2-b81f-435d1b37c7b4/2adef01d-0265-4916-bbfd-e3f3c5bf4e6a.jpg" class="hd-img" />
+
+> **本文档仅介绍了mermaid基本的语法，更多mermaid语法请参考 [mermaid官方文档](https://mermaid-js.github.io/mermaid/#/)**
+
 ### 基本语法
 
 基本的流程图包含：流程图布局方向、几何图形和连接线三个部分组成。
@@ -208,6 +214,20 @@ graph LR
 
 <img src="/static/snapshots/tutorial/markdown/md-Mermaid_flow_line_basic_2.jpg" class="hd-img" />
 
+### 示例6: sequenceDiagram
+
+基本语法如下:
+
+```mermaid
+sequenceDiagram
+    Alice->>John: Hello John, how are you?
+    John-->>Alice: Great!
+    Alice-)John: See you later!
+```
+
+<img src="https://f184e7c3-1912-41b2-b81f-435d1b37c7b4.cdn.bspapp.com/VKCEYUGU-f184e7c3-1912-41b2-b81f-435d1b37c7b4/54446bed-0e66-4621-85b5-dc2e587c0344.jpg" class="hd-img" />
+
+**备注：**[查看更多sequenceDiagram语法](https://mermaid-js.github.io/mermaid/#/sequenceDiagram)
 
 ## Onedrive Sync
 ------
