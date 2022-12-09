@@ -112,15 +112,15 @@ HBuilderX的跳轉標題策略是可以不區分多級標題的。`todo.md`有�
 ## Mermaid流程圖@Mermaid
 ------
 
-> HBuilderX 3.6.8+，MarkDown支持Mermaid 流程圖，並支持在內置浏覽器預覽。
+> HBuilderX 3.6.8+，MarkDown支持 mermaid 流程圖，並支持在內置浏覽器預覽。
 
-Markdown 的原生語法不支持繪制圖形，但通過 Mermaid 擴展，我們可以將壹些格式化的文字渲染成我們需要的圖形。比如 “流程圖”。
+Markdown 的原生語法不支持繪制圖形，但通過 mermaid 擴展，我們可以將壹些格式化的文字渲染成我們需要的圖形。比如 “流程圖”。
 
-下文將介紹如何通過 Mermaid 繪制「流程圖」。
+下文將介紹如何通過 mermaid 繪制「流程圖」。
 
 流程圖由幾何圖形節點及連接線組成。幾何圖形節點是流程圖內的各元素的載體，通常用形狀來區分其屬性，例如圓形代表開始或結束、菱形代表判斷等。連接線用于描述幾何圖形節點之間的聯系，可能是有向線段，也可能是無向線段等。
 
-在 Markdown 中添加 Mermaid 圖形，需要聲明 Mermaid 類型的代碼塊，代碼如下：
+在 Markdown 中添加 mermaid 圖形，需要聲明 mermaid 類型的代碼塊，代碼如下：
 
 <img src="/static/snapshots/tutorial/markdown/md_Mermaid_sytax.png" class="hd-img" />
 
