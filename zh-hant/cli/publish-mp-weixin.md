@@ -6,24 +6,32 @@
 
 ## CLI命令語法@cmd
 
+
+|參數			|說明																	|
+|--				|--																		|
+|--platform		|必填，發行平臺(MP-WEIXIN)												|
+|--project		|必填，項目名稱															|
+|--appid		|必填，微信小程序appid													|
+|--subPackage	|發行為混合包, 示例：--subPackage xxx									|
+|--upload		|打包後是否上傳到微信平臺,只有值為true時生效							|
+|--description	|上傳的小程序描述														|
+|--privatekey	|微信代碼上傳密鑰文件 [詳情](#uploadPrivateKey)							|
+|--version		|上傳小程序的版本號；選填。如果不填寫，則會讀取manifest.json中的版本號	|
+|--sourceMap    |[true|false] 生成SourceMap,值為 true 時生效，默認為 false					|
+|--robot		|指定微信ci機器人編號（取值範圍：1 ~ 30），默認為 1						|
+
+註意：`--robot`參數，僅支持HBuilderX 3.6.16+版本。同時需要升級 [微信小程序上傳CI插件](https://ext.dcloud.net.cn/plugin?id=7199)
+
+
 ```shell
 # 僅編譯uni-app項目到微信小程序，不發行
 cli publish --platform mp-weixin --project 項目名稱
 
-# 編譯uni-app項目到微信小程序，併發行小程序到微信平臺
-cli publish --platform mp-weixin --project 項目名稱 --upload true --appid 小程序appid --description 發佈描述 --version 發佈版本 --privatekey 小程序上傳密鑰文件
-```
+# 編譯uni-app項目到微信小程序，並發行小程序到微信平臺
+cli publish --platform mp-weixin --project 項目名稱 --upload true --appid 小程序appid --description 發布描述 --version 發布版本 --privatekey 小程序上傳密鑰文件
 
-|參數			|說明										|
-|--				|--											|
-|--platform		|必填，發行平臺(MP-WEIXIN)					|
-|--project		|必填，項目名稱								|
-|--appid		|必填，微信小程序appid						|
-|--subPackage	|發行爲混合包, 示例：--subPackage xxx|
-|--upload		|打包後是否上傳到微信平臺,只有值爲true時生效|
-|--description	|上傳的小程序描述							|
-|--privatekey	|微信代碼上傳密鑰文件 [詳情](#uploadPrivateKey)				|
-|--version		|上傳小程序的版本號；选填。如果不填写，则会读取manifest.json中的版本号							|
+cli publish --platform mp-weixin --project 項目名稱 --upload true --appid 小程序appid --description 發布描述 --version 發布版本 --privatekey 小程序上傳密鑰文件  --robot 2
+```
 
 
 ## 小程序代碼上傳密鑰@uploadPrivateKey
