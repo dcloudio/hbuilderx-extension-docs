@@ -20,7 +20,7 @@
 |--sourceMap    |[true|false] 生成SourceMap,值為 true 時生效，默認為 false					|
 |--robot		|指定微信ci機器人編號（取值範圍：1 ~ 30），默認為 1						|
 
-註意：`--robot`參數，僅支持HBuilderX 3.6.16+版本。同時需要升級 [微信小程序上傳CI插件](https://ext.dcloud.net.cn/plugin?id=7199)
+註意：`--robot`參數，僅支持HBuilderX 3.6.17+版本。同時需要升級 [微信小程序上傳CI插件](https://ext.dcloud.net.cn/plugin?id=7199)
 
 
 ```shell
