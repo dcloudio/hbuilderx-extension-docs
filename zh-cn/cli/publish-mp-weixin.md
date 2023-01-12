@@ -16,10 +16,10 @@
 |--description	|上传的小程序描述														|
 |--privatekey	|微信代码上传密钥文件 [详情](#uploadPrivateKey)							|
 |--version		|上传小程序的版本号；选填。如果不填写，则会读取manifest.json中的版本号	|
-|--sourceMap    |[true|false] 生成SourceMap,值为 true 时生效，默认为 false					|
+|--sourceMap    |生成SourceMap,值为 true 时生效，默认为 false				|
 |--robot		|指定微信ci机器人编号（取值范围：1 ~ 30），默认为 1						|
 
-注意：`--robot`参数，仅支持HBuilderX 3.6.17+版本。同时需要升级 [微信小程序上传CI插件](https://ext.dcloud.net.cn/plugin?id=7199)
+注意：`--robot`参数，仅支持HBuilderX 3.6.18+版本。同时需要升级 [微信小程序上传CI插件](https://ext.dcloud.net.cn/plugin?id=7199)
 
 
 ```shell
