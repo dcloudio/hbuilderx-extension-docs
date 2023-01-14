@@ -4,7 +4,7 @@ uni-app 使用 upx 作为默认尺寸单位， upx 是相对于基准宽度的�
 但如果设计稿不是750px，那换算单位可头疼了。
 莫急，能让计算机算的，不会让人算。
   
-1. 在HBuilderX 【设置】【编辑器设置】中进行配置  
+1. 在HBuilderX 【设置】【语言服务配置】中进行配置  
 
 <img src="/static/snapshots/tutorial/upx_1.png" style="zoom: 80%;" />
 
