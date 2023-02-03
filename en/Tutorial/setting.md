@@ -22,6 +22,7 @@ Settings page include 5 tabs：
 ## Commonly Used
 
 - The Editor Font Size
+- The Project Explorer Font Size [Details](#project-explorer-font-size)
 - Editing Fonts，[Details](/Tutorial/settings/font)
 - Tab Size
 - Insert Spaces when Pressing Tab
@@ -33,6 +34,14 @@ Settings page include 5 tabs：
 - Local History[Details](/Tutorial/UserGuide/LocalHistory)
 - Expand/Collapse of Directory when Single Click (turn on is single click, turn off is double click)
 - Open Built-in Resource Explorer when Single Click on the Directory (Open internal resource manager with single click or double click)
+
+#### Project Explorer Font Size@project-explorer-font-size
+
+> 仅支持HBuilderX 3.7.1+
+
+菜单【设置 - 常用配置 - 项目管理器字体大小】，可以调整左侧视图文字大小。
+
+<img src="https://web-assets.dcloud.net.cn/hbuilderx-doc/setting-left-view-fontsize.jpg" class="hd-img" />
 
 #### Update Settings
 

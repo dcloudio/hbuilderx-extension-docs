@@ -20,6 +20,7 @@
 ## 常用配置
 
 - 編輯器字體大小
+- 项目管理器字體大小 [详情](#project-explorer-font-size)
 - 編輯字體，[詳情](/Tutorial/settings/font)
 - 製表符長度
 - 空格代替製表符
@@ -31,6 +32,14 @@
 - 本地歷史記錄，[詳情](/Tutorial/UserGuide/LocalHistory)
 - 項目管理器打擊展開/摺疊目錄，關閉此項則是雙擊展開/摺疊目錄
 - 項目管理器點擊目錄時打開內部資源管理器
+
+#### 项目管理器字體大小@project-explorer-font-size
+
+> 仅支持HBuilderX 3.7.1+
+
+菜单【设置 - 常用配置 - 项目管理器字體大小】，可以调整左侧视图字體大小。
+
+<img src="https://web-assets.dcloud.net.cn/hbuilderx-doc/setting-left-view-fontsize.jpg" class="hd-img" />
 
 #### 更新設置
 
