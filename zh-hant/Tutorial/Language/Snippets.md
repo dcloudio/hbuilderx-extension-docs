@@ -145,6 +145,10 @@ HBuilderX，顶部菜单【工具 代码块设置 自定义项目代码块】。
 
 目前HBuilderX，内置了js和ts的部分包围代码块，如需更多包围代码块，需要自定义进行配置。
 
+如下Gif，在编辑器选中要操作的代码，按下`Ctrl + Alt + T`(MacOSX快捷键：`Command + Alt + T`)，则会打开代码块包围功能。
+
+当然，您也可以点击HBuilderX顶部菜单【编辑 - 包围 - 代码块包围】
+
 ![](https://web-assets.dcloud.net.cn/hbuilderx-doc/code-block-surround.gif)
 
 #### 如何自定义包围代码块？
