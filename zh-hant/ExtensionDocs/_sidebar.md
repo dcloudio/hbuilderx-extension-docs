@@ -30,6 +30,8 @@
     * [onDidSaveTextDocument](/ExtensionDocs/Api/workspace/onDidSaveTextDocument.md)
     * [onDidOpenTextDocument](/ExtensionDocs/Api/workspace/onDidOpenTextDocument.md)
     * [onWillSaveTextDocument](/ExtensionDocs/Api/workspace/onWillSaveTextDocument.md)
+* util
+    * [JSON操作](/ExtensionDocs/Api/util/json.md)
 * env
     * [env屬性列表](/ExtensionDocs/Api/env/readme.md)
     * [authorize](/ExtensionDocs/Api/env/authorize.md)

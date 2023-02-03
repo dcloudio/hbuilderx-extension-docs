@@ -30,6 +30,8 @@
     * [onDidSaveTextDocument](/ExtensionDocs/Api/workspace/onDidSaveTextDocument.md)
     * [onDidOpenTextDocument](/ExtensionDocs/Api/workspace/onDidOpenTextDocument.md)
     * [onWillSaveTextDocument](/ExtensionDocs/Api/workspace/onWillSaveTextDocument.md)
+* util
+    * [JSON](/ExtensionDocs/Api/util/json.md)
 * env
     * [env Attribute List](/ExtensionDocs/Api/env/readme.md)
     * [authorize](/ExtensionDocs/Api/env/authorize.md)

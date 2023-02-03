@@ -138,3 +138,31 @@ HBuilderX，顶部菜单【工具 代码块设置 自定义项目代码块】。
 ```
 
 <img src="/static/snapshots/tutorial/Snippets_time.gif" style="zoom: 80%; border: 1px solid #eee;border-radius: 10px;" />
+
+## 自定义包围代码块@surround
+
+> HBuilderX 3.7.1-alpha，新增自定义包围代码块功能。
+
+目前HBuilderX，内置了js和ts的部分包围代码块，如需更多包围代码块，需要自定义进行配置。
+
+![](https://web-assets.dcloud.net.cn/hbuilderx-doc/code-block-surround.gif)
+
+#### 如何自定义包围代码块？
+
+![](https://web-assets.dcloud.net.cn/hbuilderx-doc/code-block-surround-example.gif)
+
+如下示例，`$SELECTION` 表示选中的区域。
+
+其它配置项，[参考](#代码块配置格式说明)
+
+```json
+{
+	"div_bao": {
+		"body": [
+			"<div>$SELECTION</div>"
+		],
+		"prefix": "div_bao",
+		"scope": "text.html.basic"
+	}
+}
+```
