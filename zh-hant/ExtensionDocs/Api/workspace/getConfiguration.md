@@ -14,7 +14,7 @@
 
 |返回類型						|描述		|
 |--								|--			|
-|[Configuration](/ExtensionDocs/Api/workspace/onDidChangeConfiguration?id=configurationchangeevent)|返回配置	|
+|Configuration|返回配置	|
 
 **示例**
 

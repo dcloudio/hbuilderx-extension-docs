@@ -14,7 +14,7 @@ Get a workspace configuration object.
 
 |Type				|Description		|
 |--								|--			|
-|[Configuration](/ExtensionDocs/Api/workspace/onDidChangeConfiguration?id=configurationchangeevent)|The full configuration or a subset.	|
+|Configuration|The full configuration or a subset.	|
 
 **Example**
 
