@@ -72,6 +72,8 @@ Custom snippets are in the configuration json file. The following is configurati
 }
 ```
 
+备注：HBuilderX 3.7.1+，支持代码块包围功能。[更多](#自定义包围代码块)
+
 #### Snippets format description
 
 HBuilderX uses json to define the snippet format, which is compatible with vscode's snippets, that is, the custom snippet configured in vscode can be copied to HBuilderX for use.
