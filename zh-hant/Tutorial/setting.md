@@ -35,7 +35,7 @@
 
 #### 项目管理器字體大小@project-explorer-font-size
 
-> 仅支持HBuilderX 3.7.1+
+> 需HBuilderX 3.7.1+
 
 菜单【设置 - 常用配置 - 项目管理器字體大小】，可以调整左侧视图字體大小。
 
