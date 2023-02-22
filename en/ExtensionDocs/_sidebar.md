@@ -10,6 +10,7 @@
     * [getActiveTextEditor](/ExtensionDocs/Api/windows/getActiveTextEditor.md)
     * [showInputBox](/ExtensionDocs/Api/windows/showInputBox.md)
     * [createOutputChannel](/ExtensionDocs/Api/windows/createOutputChannel.md)
+    * [showFormDialog](/ExtensionDocs/Api/windows/showFormDialog.md)
     * [createTreeView](/ExtensionDocs/Api/windows/createTreeView.md)
     * [createWebView](/ExtensionDocs/Api/windows/createWebView.md)
     * [createWebViewDialog](/ExtensionDocs/Api/windows/createWebViewDialog.md)
