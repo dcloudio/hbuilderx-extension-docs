@@ -309,7 +309,7 @@ or
 | type     | String | button         |
 | name     | String | 控件的唯一标识 |
 | text     | String | 按钮显示文本   |
-| size     | String | 设置按钮大小等级, 可选值为small、mid、big、large   |
+| size     | String | 设置按钮大小等级, 可选值为small、normal、large。默认为normal   |
 
 - 普通单选按钮(radioButton)
 
