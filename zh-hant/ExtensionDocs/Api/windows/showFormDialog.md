@@ -42,11 +42,38 @@ hx.window.showFormDialog({
         };
         return true;
     },
+    onOpened: function() { },
     onChanged: function(field, value) { }
 }).then((res) => {
     console.log("返回结果：", JSON.stringify(res));
 });
 ```
+
+**主窗口数据格式**
+
+|       参数名称       |     类型      |                      描述                      |
+| :------------------: | :-----------: | :--------------------------------------------: |
+|        title         |    String     |                   窗口主标题                   |
+|       subtitle       |    String     |                   窗口副标题                   |
+|        footer        |    String     |                  窗口底部文本                  |
+|     hideSubTitle     |    Boolean    |     隐藏副标题(未设置 subtitle 时自动隐藏)     |
+|    hideErrorLabel    |    Boolean    |                  隐藏错误提示                  |
+| hideFooterSeparator  |    Boolean    |                 隐藏底部分隔符                 |
+|      hideFooter      |    Boolean    |                隐藏底部所有控件                |
+|        width         |    Number     |        窗口宽度, 可不设置, 默认值为 640        |
+|        height        |    Number     |        窗口高度, 可不设置, 默认值为 480        |
+|   submitButtonText   |    String     |                 提交或上传按钮                 |
+|   acceptButtonText   |    String     |                 提交或上传按钮                 |
+|   cancelButtonText   |    String     |                    取消按钮                    |
+|   rejectButtonText   |    String     |                    取消按钮                    |
+|      formItems       | Array&lt;Object&gt; |                 窗口中的子控件                 |
+| subtitleLinkAutoOpen |    Boolean    |    设置副标题是否自动打开链接（默认为true）    |
+|  footerLinkAutoOpen  |    Boolean    |   设置底部文本是否自动打开链接（默认为true）   |
+|  errorLinkAutoOpen   |    Boolean    | 设置错误提示标签是否自动打开链接（默认为true） |
+| validate| | 此方法用于校验输入，比如校验输入框是否为空 |
+| onChanged| | 此方法用于更新控件 |
+| onOpened| | 此方法用于窗口UI加载完成后，去加载某些数据 |
+
 
 ## 控件
 -----------------------
@@ -167,18 +194,20 @@ or
 
 列表控件, 生成一组可选择的列表
 
-|    参数名称		|     类型			|                   描述					|
-| :-------------:	| :-----------:		| :---------------------------------------:	|
-|      type			|    String			|                   list					|
-|      name			|    String			|              控件的唯一标识				|
-|      title		|    String			| 列表外部存在一个 group, 这是 group 的标题	|
-| columnStretches	|     Array			|           列表各个列的宽度比例			|
-|      items		| Array&lt;Object&gt;		|             列表的全部行数据				|
-| columns(items)	| Array&lt;Object&gt;		|              列表一行的数据				|
-| label(columns)	|    String			|        在某行中, 表格第 N 列的数据		|
-| value(columns)	|      int			|               选择的列表项				|
-| refreshable		|      boolean		|               是否可刷新					|
-| search			|      SearchOption	|               搜索设置					|
+|    参数名称		| 类型					|描述										|
+| :-------------:	| :-----------:			| :----------------------------------:		|
+|      type			|    String				| list										|
+|      name			|    String				| 控件的唯一标识							|
+|      title		|    String				| 列表外部存在一个 group, 这是 group 的标题	|
+| columnStretches	|     Array				| 列表各个列的宽度比例						|
+|      items		| Array&lt;Object&gt;	| 列表的全部行数据							|
+| columns(items)	| Array&lt;Object&gt;	| 列表一行的数据							|
+| label(columns)	|    String				| 在某行中, 表格第 N 列的数据				|
+| multiSelection	|      boolean			| 是否允许多选								|
+| value(columns)	|      int或Array		| 选择的列表项，如value:0，value:[0,1,2,3]	|
+| refreshable		|      boolean			| 是否可刷新								|
+| searchable		|      boolean			| 搜索设置									|
+| searchColumns		| Array					| 要搜索的行列, 示例："searchColumns":[1,2]	|
 
 ```json
 {
@@ -200,7 +229,10 @@ or
       ]
     }
   ],
-  "value": 0
+  "value": 0,
+  "multiSelection": false,
+  "searchable": true,
+  "searchColumns":[1,2]
 }
 ```
 
@@ -427,6 +459,7 @@ function showFormDialog() {
             };
             return true;
         },
+        onOpened: function() {},
         onChanged: function(field, value) {
             if (field == "projectType") {
                 let updateData = getUIData(value);
