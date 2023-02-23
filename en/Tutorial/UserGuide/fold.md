@@ -23,3 +23,11 @@ As shown in the figure below, right-click in the `line number` area to see the o
 For example, when editing the source code of this markdown document, you can press `Alt+Shift+o` to fold all other paragraphs and focus on the writing of the current paragraph.
 
 <img src="/static/snapshots/tutorial/fold/markdown_fold_en.png" class="hd-img" />
+
+## 代码折叠时显示最后一行
+
+<img src="https://web-assets.dcloud.net.cn/hbuilderx-doc/fold_showLastLineWhenFolded.jpeg" class="hd-img "/>
+
+下图为设置前后对比效果：
+
+<img src="https://web-assets.dcloud.net.cn/hbuilderx-doc/fold_diff.jpg" class="hd-img "/>

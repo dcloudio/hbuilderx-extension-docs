@@ -27,3 +27,11 @@ keyword:折叠展开,fold
 比如在本markdown文档源码编辑时，按下`Alt+Shift+o`就可以把其他段落都折叠起来，专注于当前段落的编写。
 
 <img src="/static/snapshots/tutorial/fold/fold.png" style="border: 1px solid #eee; zoom: 48%;"/>
+
+## 代码折叠时显示最后一行
+
+<img src="https://web-assets.dcloud.net.cn/hbuilderx-doc/fold_showLastLineWhenFolded.jpeg" class="hd-img "/>
+
+下图为设置前后对比效果：
+
+<img src="https://web-assets.dcloud.net.cn/hbuilderx-doc/fold_diff.jpg" class="hd-img "/>
