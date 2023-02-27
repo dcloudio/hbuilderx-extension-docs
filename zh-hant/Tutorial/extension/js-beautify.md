@@ -6,6 +6,8 @@ HBuilderX 3.7.6+, 内置format插件(即js-beautify)，支持项目下格式化�
 
 <img src="https://web-assets.dcloud.net.cn/hbuilderx-doc/jsbeautifyrc-setting.jpg" class="hd-img" />
 
+备注：如上截图，【打开文件.jsbeautifyrc进行配置】，如果您曾在此配置过规则，新版`js-beautify`格式化会使用旧的格式化配置文件。如需使用最新`.jsbeautifyrc`配置文件，请删除此文件，再次进入，会重新生成。
+
 ## 如何在项目下配置.jsbeautifyrc
 
 在项目下，新建`.jsbeautifyrc`文件，配置相关格式化规则即可。
@@ -43,5 +45,37 @@ HBuilderX 3.7.6+, 内置format插件(即js-beautify)，支持项目下格式化�
     "keep_array_indentation": false,    //保持数组缩进
     "unescape_strings": false,          //使用xNN符号编码解码可显示的字符
     "wrap_line_length": 120
+}
+```
+
+## js-beautify支持配置ts格式化规则
+
+HBuilderX 3.7.6+，js-beautify支持配置ts格式化规则。具体如下所示:
+
+```json
+{
+    "typescript": {
+        "convert_tabs_to_spaces":true,
+        "indent_multi_line_object_literal_beginning_on_blank_line": true,
+        "insert_space_after_comma_delimiter": true,
+        "insert_space_after_constructor": false,
+        "insert_space_after_function_keyword_for_anonymous_functions": true,
+        "insert_space_after_keywords_in_control_flow_statements": true,
+        "insert_space_after_opening_and_before_closing_empty_braces": true,
+        "insert_space_after_opening_and_before_closing_jsx_expression_braces": false,
+        "insert_space_after_opening_and_before_closing_nonempty_braces": true,
+        "insert_space_after_opening_and_before_closing_nonempty_brackets": false,
+        "insert_space_after_opening_and_before_closing_nonempty_parenthesis": false,
+        "insert_space_after_opening_and_before_closing_template_string_braces": false,
+        "insert_space_after_semicolon_in_for_statements": true,
+        "insert_space_after_type_assertion": false,
+        "insert_space_before_and_after_binary_operators": true,
+        "insert_space_before_function_parenthesis": false,
+        "insert_space_before_type_annotation": true,
+        "place_open_brace_on_new_line_for_control_blocks": false,
+        "place_open_brace_on_new_line_for_functions": false,
+        "semicolons": "ignore",
+        "trim_trailing_whitespace": true
+    }
 }
 ```
