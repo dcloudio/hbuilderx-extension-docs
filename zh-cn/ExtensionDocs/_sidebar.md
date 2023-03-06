@@ -45,7 +45,7 @@
     * [languageId](/ExtensionDocs/Api/other/languageId.md)
 * [插件激活机制](/ExtensionDocs/activation_event.md)
 * [插件规范](/ExtensionDocs/manifest.md)
-* [扩展点](/ExtensionDocs/ContributionPoints/README.md)
+* [package.json扩展点](/ExtensionDocs/ContributionPoints/README.md)
 <div class="contact-box">
   <a href="https://www.dcloud.io/hbuilderx.html" target="_blank" class="contact-item">
     <img src="/static/favicon/favicon.png" width="20" height="21">
