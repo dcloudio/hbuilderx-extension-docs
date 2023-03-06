@@ -10,7 +10,9 @@ keyword:syntax,语法检查
 
 一个好的校验工具可以确保一个项目遵循编码规范。
 
-HBuilderX 包含4款语法校验插件，htmlhint, stylelint, eslint-plugin-vue, eslint-js。主要用于校验html,css/less/sass/scss,vue, javascript
+HBuilderX 3.6.2+, 内置的语言服务插件，支持对js和ts进行语法校验，[查看](#builtInCheck)。
+
+当然您也可以安装其它语法校验插件，比如：htmlhint, stylelint, eslint-plugin-vue, eslint-js。
 
 
 ## 语法校验插件
@@ -26,6 +28,7 @@ HBuilderX，代码语法校验，需要安装相应插件。
 |js				|eslint-js			|[下载地址](https://ext.dcloud.net.cn/plugin?name=eslint-js)			|[文档教程](/Tutorial/extension/eslint-js)			|
 |vue			|eslint-vue			|[下载地址](https://ext.dcloud.net.cn/plugin?name=eslint-vue)			|[文档教程](/Tutorial/extension/eslint-vue)			|
 
+
 **注意：**
 - scss文件，如果代码使用`@-rules`指令，stylelint校验提示`at-rule-no-unknown`，请配置`@`相关的规则。[stylelint@规则参考](http://stylelint.cn/user-guide/rules/#at-rule)
 
@@ -40,3 +43,11 @@ HBuilderX，代码语法校验，需要安装相应插件。
 比如有2个错误（如下图），可以按`F4`切换到不同的错误处，画有红波浪线（如下图），鼠标移到红波浪线上会显示具体的错误信息。（如下图示例）
 
 <img src="/static/snapshots/started_tutorial/plugins-syntax-check-01.png" style="zoom: 90%;border:1px solid #eee;border-radius: 5px;" />
+
+## 如何开启和关闭HBuilderX内置的js和ts语法校验？@builtInCheck
+
+> 此功能仅适用于HBuilderX 3.6.2+
+
+HBuilderX菜单【设置】【语言服务配置】，可以开启或关闭js、ts语法校验。具体如下图：
+
+<img src="https://web-assets.dcloud.net.cn/hbuilderx-doc/hx_settings_sytax_check.jpg" class="hd-img" />

@@ -6,8 +6,9 @@ A good validator can save your time to find bugs.
 
 A good validator can ensure that the coding follows the standard.
 
-HBuilderX includes 4 syntax validation plugins, `htmlhint`, `stylelint`,` eslint-plugin-vue`, `eslint-js`. These plugins are mainly used to html, css/less/sass/scss, vue, javascript.
+HBuilderX 3.6.2+, 内置的语言服务插件，支持对js和ts进行语法校验，[查看](#builtInCheck)。
 
+当然您也可以安装其它语法校验插件，比如：htmlhint, stylelint, eslint-plugin-vue, eslint-js。
 
 ## Syntax Validation Plugins
 
@@ -36,3 +37,11 @@ The summary of syntax validation will be displayed on the `Status Bar`.
 You can press "F4" to switch between multiple errors. Each error is accompanied by a red wavy line. When you move your mouse over the red wavy line, an error message will be displayed.
 
 <img src="/static/snapshots/started_tutorial/plugins-syntax-check-01_en.png" style="zoom: 90%;border:1px solid #eee;border-radius: 5px;" />
+
+## 如何开启和关闭HBuilderX内置的js和ts语法校验？@builtInCheck
+
+> 此功能仅适用于HBuilderX 3.6.2+
+
+HBuilderX菜单【设置】【语言服务配置】，可以开启或关闭js、ts语法校验。具体如下图：
+
+<img src="https://web-assets.dcloud.net.cn/hbuilderx-doc/hx_settings_sytax_check.jpg" class="hd-img" />
