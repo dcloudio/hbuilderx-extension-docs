@@ -24,10 +24,10 @@
 
 
 ```shell
-# 僅編譯uni-app項目到微信小程序，不發行
+# 僅編譯uni-app項目到微信小程序
 cli publish --platform mp-weixin --project 項目名稱
 
-# 編譯uni-app項目到微信小程序，並發行小程序到微信平臺
+# 編譯uni-app項目到微信小程序，並上传發行小程序到微信平臺
 cli publish --platform mp-weixin --project 項目名稱 --upload true --appid 小程序appid --description 發布描述 --version 發布版本 --privatekey 小程序上傳密鑰文件
 
 cli publish --platform mp-weixin --project 項目名稱 --upload true --appid 小程序appid --description 發布描述 --version 發布版本 --privatekey 小程序上傳密鑰文件  --robot 2
