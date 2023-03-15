@@ -1,12 +1,12 @@
 # 多文件字符搜索
 
-> HBuilderX 3.7.3，重构了多文件字符搜索。
+> HBuilderX 3.7.8，重构了多文件字符搜索。
 
-HBuilderX 3.7.3，多文件字符搜索，从`工具栏`改为在`HBuilderX左侧视图`实现。
+HBuilderX 3.7.8，多文件字符搜索，从`工具栏`改为在`HBuilderX左侧视图`实现。
 
 HBuilderX项目管理器，选中某个项目，右键菜单【字符搜索】，即可进入多文件字符搜索视图。
 
-<img src="https://web-assets.dcloud.net.cn/hbuilderx-doc/node-search-gif.gif" style="border-radius: 15px; border: 1px solid #eee; zoom: 40%;" />
+<img src="https://web-assets.dcloud.net.cn/hbuilderx-doc/node-search-use-gif.gif" style="border-radius: 15px; border: 1px solid #eee; zoom: 40%;" />
 
 ## 搜索视图
 
@@ -20,7 +20,7 @@ HBuilderX项目管理器，选中某个项目，右键菜单【字符搜索】�
 - 排除的文件：多文件字符搜索，默认不搜索`.git,.cvs,.svn,node_modules,unpackage`目录
 - 搜索结果展示
 
-<img src="https://web-assets.dcloud.net.cn/hbuilderx-doc/search_view.png" style="border-radius: 15px; border: 1px solid #eee; zoom: 60%;"/>
+<img src="https://web-assets.dcloud.net.cn/hbuilderx-doc/node-search-view.jpg" style="border-radius: 15px; border: 1px solid #eee; zoom: 60%;"/>
 
 ## 正则匹配
 
@@ -57,4 +57,4 @@ HBuilderX项目管理器，选中某个项目，右键菜单【字符搜索】�
 
 **示例:**
 
-<img src="https://web-assets.dcloud.net.cn/hbuilderx-doc/search_reg.jpg" style="border-radius: 15px; border: 1px solid #eee; zoom: 60%;" />
+<img src="https://web-assets.dcloud.net.cn/hbuilderx-doc/node-search-reg.jpg" style="border-radius: 15px; border: 1px solid #eee; zoom: 60%;" />
