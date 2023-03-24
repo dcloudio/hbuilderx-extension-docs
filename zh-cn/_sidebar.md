@@ -62,6 +62,7 @@
     * [validate-stylelint](/Tutorial/extension/validate-stylelint.md)
     * [eslint-js](/Tutorial/extension/eslint-js.md)
     * [eslint-vue](/Tutorial/extension/eslint-vue.md)
+    * [js-beautify](/Tutorial/extension/js-beautify.md)
     * [prettier](/Tutorial/extension/prettier.md)
     * [Scss/Sass](/Tutorial/extension/sass.md)
     * [FTP/SFTP](/Tutorial/extension/ftp.md)

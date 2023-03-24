@@ -17,7 +17,7 @@ HBuilderX，格式化快捷键, win：`ctrl + K`； mac: `command + K`
 
 | 插件名称         | 对应插件配置中的名称    | 是否内置         | 可格式化的文件                             |  插件市场 | 插件教程 |
 | ---------------- | ----------------------- | ---------------- | ------------------------------------------ |-------------|-------------|
-| js-beautify      | format                  | 内置插件        | vue、html、js、css、json                   |   | |
+| js-beautify      | format                  | 内置插件        | vue、html、js、css、json                   |   | [文档](/Tutorial/extension/js-beautify)|
 | prettier         | format-prettier         | 非内置，需要下载 | less、sass、vue、stylus(vue内嵌)、ts、yaml | [下载地址](https://ext.dcloud.net.cn/plugin?id=2025)| [文档](/Tutorial/extension/prettier) |
 | stylus-supremacy | format-stylus-supremacy | 非内置，需要下载 | 格式化单独stylus文件                       | [下载地址](https://ext.dcloud.net.cn/plugin?id=2039) |  [文档](https://ext.dcloud.net.cn/plugin?id=2039) |
 

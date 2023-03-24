@@ -10,6 +10,8 @@ HBuilderX 3.7.6+, 内置format插件(即js-beautify)，支持项目下格式化�
 
 ## 如何在项目下配置.jsbeautifyrc
 
+> HBuilderX 3.7.6+起生效
+
 在项目下，新建`.jsbeautifyrc`文件，配置相关格式化规则即可。
 
 <img src="https://web-assets.dcloud.net.cn/hbuilderx-doc/jsbeautifyrc-file.jpg" class="hd-img" />

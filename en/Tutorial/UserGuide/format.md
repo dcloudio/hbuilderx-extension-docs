@@ -15,7 +15,7 @@ HBuilderX, officially maintained formatting plugins are as follows:
 
 | Name         | DisplayName    | Whether built-in         | Supported file types                             |  marketplace | Plugin tutorial |
 | ---------------- | ----------------------- | ---------------- | ------------------------------------------ |-------------|-------------|
-| js-beautify      | format                  | Built-in        | vue、html、js、css、json                   |   | |
+| js-beautify      | format                  | Built-in        | vue、html、js、css、json                   |   | [Docs](/Tutorial/extension/js-beautify)|
 | prettier         | format-prettier         | Not built-in, need to download | less、sass、vue、stylus(vue embedded)、ts、yaml | [Download](https://ext.dcloud.net.cn/plugin?id=2025)| [Docs](/Tutorial/extension/prettier) |
 | stylus-supremacy | format-stylus-supremacy | Not built-in, need to download | stylus                     | [Download](https://ext.dcloud.net.cn/plugin?id=2039) |  [Docs](https://ext.dcloud.net.cn/plugin?id=2039) |
 
@@ -61,7 +61,7 @@ Click the menu [Tools] [Custom Keybingdings], in [User Settings], copy the follo
 ### Whether to support automatic formatting when saving a file?
 
 How to realize automatic formatting when saving a file?
- 
+
 Answer: Not supported.
 
 1. Normal web projects `do not support` automatic formatting while saving a file.

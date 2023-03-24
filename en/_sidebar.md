@@ -57,6 +57,7 @@
     * [eslint-js](/Tutorial/extension/eslint-js.md)
     * [eslint-vue](/Tutorial/extension/eslint-vue.md)
     * [sass](/Tutorial/extension/sass.md)
+    * [js-beautify](/Tutorial/extension/js-beautify.md)
     * [Formator Prettier](/Tutorial/extension/prettier.md)
     * [FTP/SFTP](/Tutorial/extension/ftp.md)
     * [MarkDown Share](/Tutorial/extension/markdown_share.md)
