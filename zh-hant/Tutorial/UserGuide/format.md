@@ -64,3 +64,13 @@ HBuilderX，格式化快捷鍵, win：`ctrl + K`； mac: `command + K`
 2. vue-cli項目，可通過配置`eslint`，通過`eslint自動校驗修復`的功能，來實現相同的效果。
 
 例如：保存時，去除分號等。
+
+### 格式化插件選擇@switch
+
+HBuilderX 3.7+版本，當你安裝`prettier`插件，對vue或ts文件進行格式化時，會出現以下窗口讓你選擇格式化插件。
+
+<img src="https://web-assets.dcloud.net.cn/hbuilderx-doc/format_prompt.jpg" class="hd-img" />
+
+如上彈窗選擇並設置默認之後，想使用其它格式化插件，需要在HBuilderX【設置 - 源碼視圖】，找到`defaultFomat.`開頭的元素，將其刪除即可。
+
+<img src="https://web-assets.dcloud.net.cn/hbuilderx-doc/format_clear.jpg" class="hd-img" />

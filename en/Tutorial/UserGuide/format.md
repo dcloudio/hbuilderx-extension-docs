@@ -66,3 +66,13 @@ Answer: Not supported.
 
 1. Normal web projects `do not support` automatic formatting while saving a file.
 2. For the vue-cli project, the same effect can be achieved by configuring `eslint` and using the function of `eslint automatic verification and repair`. For example, remove semicolon when saving the file.
+
+### Choose a formatting plugin
+
+For HBuilderX version 3.7+, when you install the `prettier` plug-in and format the vue or ts file, the following window will appear for you to select the formatting plug-in.
+
+<img src="https://web-assets.dcloud.net.cn/hbuilderx-doc/format_prompt.jpg" class="hd-img" />
+
+After selecting and setting the default in the above pop-up window, if you want to use other formatting plug-ins, you need to find the element starting with `defaultFomat.` in HBuilderX [Settings - Source View], and delete it.
+
+<img src="https://web-assets.dcloud.net.cn/hbuilderx-doc/format_clear.jpg" class="hd-img" />
