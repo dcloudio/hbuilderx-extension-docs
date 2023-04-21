@@ -59,9 +59,13 @@ HBuilderX项目管理器，选中某个项目，右键菜单【字符搜索】�
 
 <img src="https://web-assets.dcloud.net.cn/hbuilderx-doc/node-search-reg.jpg" style="border-radius: 15px; border: 1px solid #eee; zoom: 60%;" />
 
-## 刷新/取消和帮助工具
-<img src="https://web-assets.dcloud.net.cn/hbuilderx-doc/node-search-top-icon.png" style="border-radius: 15px; border: 1px solid #eee; zoom: 60%;" />
+## 重新搜索和停止搜索
+<img src="https://web-assets.dcloud.net.cn/hbuilderx-doc/node-search-top-refresh.png" style="border-radius: 15px; border: 1px solid #eee; zoom: 60%;" />
+点击按钮就当前输入的内容进行重新搜索
 
-- 刷新：以当前输入的内容重新搜索
-- 取消：中断当前的搜索，不再增加搜索结果
-- 帮助：在浏览器中显示多文件搜索的帮助(本网页)
+<img src="https://web-assets.dcloud.net.cn/hbuilderx-doc/node-search-top-stop.png" style="border-radius: 15px; border: 1px solid #eee; zoom: 60%;" />
+当处于搜索过程中时,重新搜索按钮将变为停止搜索按钮
+点击按钮停止当前搜索
+
+
+
