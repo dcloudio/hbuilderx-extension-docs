@@ -18,6 +18,7 @@
     * [高效极客技巧](/Tutorial/UserGuide/skill.md)
     * [跳轉/轉到定義](/Tutorial/UserGuide/goto.md)
     * [查找/替換](/Tutorial/UserGuide/find.md)
+    * [多文件字符搜索](/Tutorial/UserGuide/node-multi-file-search)
     * [折叠](Tutorial/UserGuide/fold.md)
     * [格式化](/Tutorial/UserGuide/format.md)
     * [語法校驗](/Tutorial/UserGuide/SyntaxCheck.md)
