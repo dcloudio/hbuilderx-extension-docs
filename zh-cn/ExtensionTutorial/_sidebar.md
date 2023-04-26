@@ -7,6 +7,7 @@
     * [插件说明](/ExtensionTutorial/extension.md)
     * [插件国际化](ExtensionTutorial/localized.md)
     * [如何注册`命令`](/ExtensionTutorial/commands.md)
+    * [如何注册插件CLI命令](/ExtensionTutorial/cli.md)
     * [如何注册`菜单`](/ExtensionTutorial/menus.md)
     * [如何编辑文档](/ExtensionTutorial/texteditor.md)
     * [如何写一个`校验器`](/ExtensionTutorial/validations.md)
