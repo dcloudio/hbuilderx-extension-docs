@@ -25,6 +25,12 @@ HBuilderX支持通过多种方式打开终端：
 
 <img src="/static/snapshots/tutorial/terminal/terminal_url.png" style="zoom: 50%; border: 1px solid #eee; border-radius: 10px;"/>
 
+## 自定义终端@customTerminal
+
+Windows，如果您希望切换终端为`bash`或`powershell`. 操作方法如下：
+
+<img src="https://web-assets.dcloud.net.cn/hbuilderx-doc/windows_custom_termial.png" />
+
 ## 问题
 
 - windows电脑，如果您遇到终端空白的问题，请参考[ASK帖子](https://ask.dcloud.net.cn/question/78518)

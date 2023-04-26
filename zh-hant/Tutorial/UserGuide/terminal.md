@@ -19,12 +19,18 @@ HBuilderX支持通過多種方式打開終端：
 - 底部狀態欄，點擊終端圖標
 - 快捷鍵方式：Windows (Alt+C); MacOSX (Ctrl+Shift+C)
 
-## 終端URL點擊跳轉到瀏覽器@open-links 
+## 終端URL點擊跳轉到瀏覽器@open-links
 
 > HBuilderX 3.2.10+, 支持點擊終端終端的url，在瀏覽器打開
 
 <img src="/static/snapshots/tutorial/terminal/terminal_url.png" style="zoom: 50%; border: 1px solid #eee; border-radius: 10px;"/>
 
-## 问题
+## 自定義終端@customTerminal
 
-- windows电脑，如果您遇到终端空白的问题，请参考[ASK帖子](https://ask.dcloud.net.cn/question/78518)
+Windows，如果您希望切換終端為`bash`或`powershell`. 操作方法如下：
+
+<img src="https://web-assets.dcloud.net.cn/hbuilderx-doc/windows_custom_termial.png" />
+
+## 問題
+
+- windows電腦，如果您遇到終端空白的問題，請參考[ASK帖子](https://ask.dcloud.net.cn/question/78518)

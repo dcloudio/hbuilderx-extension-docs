@@ -25,6 +25,12 @@ HBuilderX supports multiple ways to open the terminal:
 
 <img src="/static/snapshots/tutorial/terminal/terminal_url_en.png" style="zoom: 50%; border: 1px solid #eee; border-radius: 10px;"/>
 
-## 问题
+## custom terminal
 
-- windows电脑，如果您遇到终端空白的问题，请参考[ASK帖子](https://ask.dcloud.net.cn/question/78518)
+Windows, if you want to customize the terminal as `bash` or `powershell`. The operation method is as follows:
+
+<img src="https://web-assets.dcloud.net.cn/hbuilderx-doc/windows_custom_termial.png" />
+
+## Question
+
+- Windows, if you encounter the problem of blank terminal, please refer to [ASK post](https://ask.dcloud.net.cn/question/78518)
