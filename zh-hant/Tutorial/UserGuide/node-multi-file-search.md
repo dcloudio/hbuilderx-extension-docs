@@ -58,3 +58,14 @@ HBuilderX项目管理器，选中某个项目，右键菜单【字符搜索】�
 **示例:**
 
 <img src="https://web-assets.dcloud.net.cn/hbuilderx-doc/node-search-reg.jpg" style="border-radius: 15px; border: 1px solid #eee; zoom: 60%;" />
+
+## 重新搜索和停止搜索
+
+如下所示：点击按钮就当前输入的内容进行重新搜索
+
+<img src="https://web-assets.dcloud.net.cn/hbuilderx-doc/node-search-top-refresh.png" style="border-radius: 15px; border: 1px solid #eee; zoom: 60%;" />
+
+
+如下所示：当处于搜索过程中时,重新搜索按钮将变为停止搜索按钮；点击按钮停止当前搜索
+
+<img src="https://web-assets.dcloud.net.cn/hbuilderx-doc/node-search-top-stop.png" style="border-radius: 15px; border: 1px solid #eee; zoom: 60%;" />
