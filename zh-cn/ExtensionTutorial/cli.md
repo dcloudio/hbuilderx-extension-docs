@@ -77,6 +77,11 @@ module.exports = {
 }
 ```
 
+**说明：**
+
+* args.type的值域：string，boolean，enum，file
+* enum示例:  a | b | c
+
 ## 如何在命令行使用？
 
 打开操作系统终端或命令行工具，进入HBuilderX安装目录，找到cli程序。
