@@ -64,6 +64,7 @@
     * [eslint-vue](/Tutorial/extension/eslint-vue.md)
     * [js-beautify](/Tutorial/extension/js-beautify.md)
     * [prettier](/Tutorial/extension/prettier.md)
+    * [prettier 1.0.6](/Tutorial/extension/prettier-1.0.6.md)
     * [Scss/Sass](/Tutorial/extension/sass.md)
     * [FTP/SFTP](/Tutorial/extension/ftp.md)
     * [MarkDown一鍵分享](/Tutorial/extension/markdown_share.md)

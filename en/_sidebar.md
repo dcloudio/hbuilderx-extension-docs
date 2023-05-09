@@ -60,6 +60,7 @@
     * [sass](/Tutorial/extension/sass.md)
     * [js-beautify](/Tutorial/extension/js-beautify.md)
     * [Formator Prettier](/Tutorial/extension/prettier.md)
+    * [Formator Prettier 1.0.6](/Tutorial/extension/prettier-1.0.6.md)
     * [FTP/SFTP](/Tutorial/extension/ftp.md)
     * [MarkDown Share](/Tutorial/extension/markdown_share.md)
 * Other
