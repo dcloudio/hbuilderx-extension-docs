@@ -19,3 +19,20 @@ MacOSX，某些系统，访问`Document`、`DownLoad`、`Desktop`等目录，需
 方法2：如下图，打开操作系统设置 -> 安全性和隐私 -> 隐私 -> 文件和文件夹，找到HBuilderX，然后勾选。
 
 <img src="/static/snapshots/tutorial/other/mac_privacy.jpg" class="hd-img" style="border-radius: 25px;"/>
+
+方法3：
+
+HBuilderX 正式版:先关闭HBuilderX 正式版, 然后在命令行中输入并回车:
+```shell
+tccutil reset All io.dcloud.HBuilderX
+```
+
+HBuilderX Alpha版:先关闭HBuilderX Alpha版, 然后在命令行中输入并回车:
+```shell
+tccutil reset All io.dcloud.HBuilderXAlpha
+```
+再次打开HBuilder是将会可能会弹出系统询问框,此时请点击允许进行授权
+
+<img src="/static/snapshots/tutorial/other/mac_privacy_ask.jpg" class="hd-img" style="border-radius: 25px;"/>
+
+方法3适用于 macOS 13.0.1 以前版本
