@@ -1,21 +1,47 @@
-# MacOSX HBuilderX项目管理器项目点击没有反应的解决方案@Privacy
+#MacOSX HBuilderX Project Manager no responding when clicking Solution @ Privacy
 
-## 问题@question
+##Question
 
-近期，有些用户升级后，出现HBuilderX项目管理器项目点击`没有反应`、`无法展开文件列表`的问题。
+Recently, some users have encountered issues with the HBuilderX project manager project clicking 'not responding' and 'unable to expand the file list' after upgrading.
 
-## 原因@reason
+##Reason
 
-MacOSX，某些系统，访问`Document`、`DownLoad`、`Desktop`等目录，需要授权后才能访问。
+MacOSX, some systems require authorization to access directories such as' Document ',' DownLoad ', and' Desktop '.
 
-备注：当操作系统弹窗，询问是否运行HBuilderX访问某些文件夹时，请务必点击允许。
+Note: When the operating system pops up and asks whether to run HBuilderX to access certain folders, be sure to click Allow.
 
-<img src="/static/snapshots/tutorial/other/mac_privacy_ask.jpg" class="hd-img" style="border-radius: 25px;"/>
+<img src="/static/snapshots/tutorial/other/mac_privacy_ask. jpg" class="hd img" style="border radius: 25px;"/>
 
-## 解决方案@solution
+##Solution @ solution
 
-方法1：HBuilderX，项目管理，选中项目，右键菜单【移除项目】，然后重新将项目拖入到HBuilderX
+Method 1: HBuilderX, Project Management, select the project, right-click on the menu [Remove Project], and then drag the project back into HBuilderX
 
-方法2：如下图，打开操作系统设置 -> 安全性和隐私 -> 隐私 -> 文件和文件夹，找到HBuilderX，然后勾选。
+Method 2: As shown in the following figure, open Operating System Settings ->Security and Privacy ->Privacy ->Files and folders, locate HBuilderX, and then check it.
 
-<img src="/static/snapshots/tutorial/other/mac_privacy.jpg" class="hd-img" style="border-radius: 25px;"/>
+<img src="/static/snapshots/tutorial/other/mac_privacy. jpg" class="hd img" style="border radius: 25px;"/>
+
+Method 3:
+
+HBuilderX official version: Close HBuilderX official version first, input following command and then enter on the command line:
+
+```Shell
+
+Tccutil reset All io.dcloud.HBuilderX
+
+```
+
+
+
+HBuilderX Alpha version: First close the HBuilderX Alpha version, input following command and then enter on the command line:
+
+```Shell
+
+Tccutil reset All io.dcloud.HBuilderXAlpha
+
+```
+
+Opening HBuilder again may cause a system inquiry box to pop up. At this time, please click Allow to authorize
+
+<img src="/static/snapshots/tutorial/other/mac_privacy_ask. jpg" class="hd img" style="border radius: 25px;"/>
+
+Method 3 is applicable to macOS versions before 13.0.1
