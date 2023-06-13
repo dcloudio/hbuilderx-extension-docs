@@ -6,6 +6,9 @@
     * [package](/cli/pack.md)
     * [uniCloud](/cli/uniCloud.md)
     * [hosting](/cli/uniCloud-hosting.md)
+    * [uni-app publish - WeChat](cli/publish-mp-weixin.md)
+    * [uni-app publish - Alipay](cli/publish-mp-alipay.md)
+    * [uni-app publish - H5](cli/publish-h5.md)
 * extension
     * [Environment Vairables](/cli/env.md)
 <div class="contact-box">
