@@ -40,11 +40,11 @@ cli publish --platform mp-alipay --project 項目名稱 --upload true --appid �
 
 打開支付寶開放平臺 [開發工具密鑰](https://open.alipay.com/develop/manage/tool-key), 掃碼登錄，左側菜單【開發工具密鑰】, 點擊,生成身份密鑰，如下圖：
 
-<img src="/static/snapshots/cli/aplipay-createPrivateKey.png" class="hd-img" />
+<img src="https://web-assets.dcloud.net.cn/hbuilderx-doc/cli/alipay-createPrivateKey.png" class="hd-img" />
 
 **下載開發工具密鑰：**
 
-<img src="/static/snapshots/cli/aplipay-downloadkeyFile.png" class="hd-img"/>
+<img src="https://web-assets.dcloud.net.cn/hbuilderx-doc/cli/alipay-downloadkeyFile.png" class="hd-img"/>
 
 ## 註意事項
 
