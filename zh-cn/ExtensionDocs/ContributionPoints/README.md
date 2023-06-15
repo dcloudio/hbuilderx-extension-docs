@@ -509,3 +509,31 @@ when表达式用来动态的判断某个条件是否满足(即表达式的运算
 |属性名称	|属性类型	|是否必须	|描述   |
 |--			|--			|--			|--     |
 |fileNamePattern    |String	    |是 |文件名匹配，支持通配符|
+
+## icons
+--------
+
+icons扩展点用于声明一个从图标（最好是SVG）和图标字体创建自己的图标主题
+
+|属性名称		|属性类型	|描述																									|
+|--				|--			|--																										|
+|iconPath		|String		|使用svg/png时：图像的路径。																			|
+|fontCharacter	|String		|使用字形字体时：要使用的字体中的字符。																	|
+|fontColor		|String		|使用字形时字体：用于字形的颜色。																		|
+|fontSize		|String		|使用字体时：字体大小。默认情况下，将使用字体规范中指定的大小。应该是父字体大小的相对大小（例如150%）。	|
+|fontId			|String		|使用字体时：字体的id。如果未指定，将选取字体指定部分中指定的第一个字体									|
+
+##### 示例:
+```json
+    "contributes": {
+		"icons": {
+			"loading": {
+				"description": "Loading Icon",
+				"default": {
+					"fontPath": "./icon.ttf",
+					"fontCharacter": "\\eb19"
+				}
+			}
+		}
+    }
+```

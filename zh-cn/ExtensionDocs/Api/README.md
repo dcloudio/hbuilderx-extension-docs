@@ -4,10 +4,11 @@ const hx = require('hbuilderx')
 ```
 以下列出目前可用的API列表
 
-|插件API	|详情	|
-|--	|--	|
-|commands	|commands二级模块对象，用于处理和`命令`相关的逻辑[详情](/ExtensionDocs/Api/commands)	|
-|hx.languages.createDiagnosticCollection()	|创建一个问题列表，可用于文档校验时在文档出错区域显示波浪线标识问题[详情](/ExtensionDocs/Api/languages/createDiagnosticCollection)		|
+|插件API											|详情																																|
+|--													|--																																	|
+|commands											|commands二级模块对象，用于处理和`命令`相关的逻辑[详情](/ExtensionDocs/Api/commands)												|
+|hx.languages.createDiagnosticCollection()			|创建一个问题列表，可用于文档校验时在文档出错区域显示波浪线标识问题[详情](/ExtensionDocs/Api/languages/createDiagnosticCollection)	|
+|hx.languages.registerInlineCompletionItemProvider()|注册行内代码提示程序[详情](/ExtensionDocs/Api/languages/registerInlineCompletionItemProvider)										|
 
 #### api:windows
 |插件API									|详情																											|
@@ -28,6 +29,7 @@ const hx = require('hbuilderx')
 |hx.window.showView()						|切换指定viewId的WebView控件视图[详情](/ExtensionDocs/Api/windows/showView)										|
 |hx.window.registerUriHandler()				|注册一个依赖hbuilderx协议的自定义网络请求处理器(schema)[详情](/ExtensionDocs/Api/windows/registerUriHandler)	|
 |hx.window.registerCustomEditorProvider()	|注册自定义编辑器[详情](/ExtensionDocs/Api/windows/registerCustomEditorProvider)								|
+|hx.window.createStatusBarItem()			|创建一个状态栏元素[详情](/ExtensionDocs/Api/windows/createStatusBarItem)										|
 
 #### api:workspace
 |插件API									|详情																										|

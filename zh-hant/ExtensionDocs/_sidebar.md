@@ -2,6 +2,7 @@
 * [commands](/ExtensionDocs/Api/commands.md)
 * Language
     * [創建問題列表](/ExtensionDocs/Api/languages/createDiagnosticCollection.md)
+    * [registerInlineCompletionItemProvider](/ExtensionDocs/Api/languages/registerInlineCompletionItemProvider.md)
 * Window
     * [窗口右下角通知框](/ExtensionDocs/Api/windows/Message.md)
     * [狀態欄消息](/ExtensionDocs/Api/windows/StatusBar.md)
@@ -18,6 +19,7 @@
     * [registerUriHandler](/ExtensionDocs/Api/windows/registerUriHandler.md)
     * [registerCustomEditorProvider](/ExtensionDocs/Api/windows/registerCustomEditorProvider.md)
     * [TextEditor](/ExtensionDocs/Api/windows/TextEditor.md)
+    * [createStatusBarItem](/ExtensionDocs/Api/windows/createStatusBarItem.md)
 * workspace
     * [applyEdit](/ExtensionDocs/Api/workspace/applyEdit.md)
     * [copyFileWithPrompt](/ExtensionDocs/Api/workspace/copyFileWithPrompt.md)
@@ -40,6 +42,12 @@
     * [openExternal](/ExtensionDocs/Api/env/openExternal.md)
 * other
     * [Disposable](/ExtensionDocs/Api/other/Disposable.md)
+    * [Command](/ExtensionDocs/Api/other/Command.md)
+    * [Range](/ExtensionDocs/Api/other/Range.md)
+    * [CancellationToken](/ExtensionDocs/Api/other/CancellationToken.md)
+    * [Position](/ExtensionDocs/Api/other/Position.md)
+    * [TextDocument](/ExtensionDocs/Api/other/TextDocument.md)
+    * [DocumentSelector](/ExtensionDocs/Api/other/DocumentSelector.md)
     * [Uri](/ExtensionDocs/Api/other/Uri.md)
     * [WorkspaceFolder](/ExtensionDocs/Api/other/WorkspaceFolder.md)
     * [languageId](/ExtensionDocs/Api/other/languageId.md)

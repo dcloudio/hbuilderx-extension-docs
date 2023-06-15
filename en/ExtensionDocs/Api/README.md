@@ -9,7 +9,8 @@ This page lists all available HBuilderX APIs.
 |API	|Details	|
 |--	|--	|
 |commands	|a command is a function with a unique identifier. [Details](/ExtensionDocs/Api/commands)	|
-|hx.languages.createDiagnosticCollection()	|Create a diagnostics collection that can be used to display wavy lines in the error area of ​the document to identify the details of the problem during document verification. [Details](/ExtensionDocs/Api/languages/createDiagnosticCollection)		|
+|hx.languages.createDiagnosticCollection()			|Create a diagnostics collection that can be used to display wavy lines in the error area of ​the document to identify the details of the problem during document verification. [Details](/ExtensionDocs/Api/languages/createDiagnosticCollection)	|
+|hx.languages.registerInlineCompletionItemProvider()|注册行内代码提示程序[详情](/ExtensionDocs/Api/languages/registerInlineCompletionItemProvider)																																						|
 
 #### api:windows
 |API									|Description																											|
@@ -30,6 +31,7 @@ This page lists all available HBuilderX APIs.
 |hx.window.showView()						|Switch the WebViews by the specified viewId. [Details](/ExtensionDocs/Api/windows/showView)										|
 |hx.window.registerUriHandler()				|Register a custom network request handler that relies on the hbuilderx protoco. [Details](/ExtensionDocs/Api/windows/registerUriHandler)	|
 |hx.window.registerCustomEditorProvider()	|Register a custom editor. [Details](/ExtensionDocs/Api/windows/registerCustomEditorProvider)								|
+|hx.window.createStatusBarItem()			|创建一个状态栏元素[详情](/ExtensionDocs/Api/windows/createStatusBarItem)										|
 
 #### api:workspace
 |API									|Description																										|
