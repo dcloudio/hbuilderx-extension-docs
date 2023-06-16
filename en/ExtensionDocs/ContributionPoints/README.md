@@ -497,7 +497,7 @@ Complete reference for the process of extending a custom editor [How to extend a
 |--			|--			|--			|--     |
 |fileNamePattern    |String	    |Yes |File name matching, supports wildcards|
 
-## icons
+### icons
 --------
 
 icons扩展点用于声明一个从图标（最好是SVG）和图标字体创建自己的图标主题

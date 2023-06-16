@@ -32,17 +32,17 @@
 
 **属性列表**
 
-|属性名			|属性类型									|描述																									|
-|--				|--											|--																										|
-|alignment		|[StatusBarAlignment](#StatusBarAlignment)	|状态栏元素对其方式																						|
-|backgroundColor|String										|状态栏元素的背景色。																					|
-|color			|String										|状态栏元素的前景色。																					|
-|command		|String										|要在单击时运行的命令或命令的标识符。命令必须是已注册的。												|
-|id				|String										|状态栏元素标识。																						|
-|name			|String										|状态栏元素名称。																						|
-|priority		|Number										|状态栏元素优先级。值越高，表示元素应显示得越靠左。														|
-|text			|String										|状态栏元素要显示的文本。文本可以包含像$(icon-name)图标，需要在提前在package.json#contributes/icons配置	|
-|tooltip		|String										|将鼠标悬停在状态栏元素上时的工具提示文本。																|
+|属性名			|属性类型									|描述																																						|
+|--				|--											|--																																							|
+|alignment		|[StatusBarAlignment](#StatusBarAlignment)	|状态栏元素对其方式																																			|
+|backgroundColor|String										|状态栏元素的背景色。																																		|
+|color			|String										|状态栏元素的前景色。																																		|
+|command		|String										|要在单击时运行的命令或命令的标识符。命令必须是已注册的。																									|
+|id				|String										|状态栏元素标识。																																			|
+|name			|String										|状态栏元素名称。																																			|
+|priority		|Number										|状态栏元素优先级。值越高，表示元素应显示得越靠左。																											|
+|text			|String										|状态栏元素要显示的文本。文本可以包含像$(icon-name)图标，需要在提前在[package.json#contributes/icons](/ExtensionDocs/ContributionPoints/README.md#icons)配置|
+|tooltip		|String										|将鼠标悬停在状态栏元素上时的工具提示文本。																													|
 
 **方法列表**
 
