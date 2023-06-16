@@ -32,11 +32,19 @@ provideInlineCompletionItems
 |context	|[InlineCompletionContext](#InlineCompletionContext)			|附加信息的上下文对象。	|
 |token		|[CancellationToken](/ExtensionDocs/Api/other/CancellationToken)|取消令牌。				|
 
+
 ###### 返回值
 
 |返回类型										|描述						|
 |--												|--							|
-|[InlineCompletionItem[]](#InlineCompletionItem)|行内代码提示程序返回的数据	|
+|[InlineCompletionList](#InlineCompletionList)	|行内代码提示程序返回的数据	|
+
+
+#### InlineCompletionList
+
+|属性名称	|属性类型										|描述							|
+|--			|--												|--								|
+|items		|[InlineCompletionItem[]](#InlineCompletionItem)|行内虚拟文本要展示的文本数组。	|
 
 
 #### InlineCompletionContext
@@ -59,40 +67,24 @@ provideInlineCompletionItems
 ##### 示例
 
 ``` javascript
-function activate(context : any) {
-    const inlineProvider = (document,position,context,token) => {
-        // 根据document和position确定上下文。
-        // 传递给语言分析工具，获取返回值
-        // 将返回值格式化成插件所需格式后返回。
-        return [
-            {
-               insertText:'insertText' ,
-               trackingId:1
-               command = {
-               	command: 'commandId',
-               	title: 'commandTitle',
-               	arguments: ['args1','args2'],
-               }
-            },
-            {
-               insertText:'insertText2' ,
-               trackingId:2
-               command = {
-               	command: 'commandId',
-               	title: 'commandTitle',
-               	arguments: ['args1','args2'],
-               }
-            }
-        ]
+const inlineProvider = (document, position, context, token) => {
+    // 根据document和position确定上下文。
+    // 传递给语言分析工具，获取返回值
+    // 将返回值格式化成插件所需格式后返回。
+    return {
+        items: [{
+            insertText: 'insertText'
+        }]
     }
-    const disposable = hx.languages.registerInlineCompletionItemProvider(
-			[
-				{ language: 'javascript' }
-			],
-			{ provideInlineCompletionItems: inlineProvider },
-		),
-	context.subscriptions.push(disposable)
 }
+const disposable = hx.languages.registerInlineCompletionItemProvider(
+    [{
+        language: 'javascript'
+    }], {
+        provideInlineCompletionItems: inlineProvider
+    },
+)
+context.subscriptions.push(disposable)
 ```
 
 
