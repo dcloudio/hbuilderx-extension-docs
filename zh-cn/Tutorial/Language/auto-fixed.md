@@ -2,7 +2,7 @@
 
 > 仅适用于HBuilderX 3.8.10+版本
 
-本功能需要开启内置的js或ts语法校验，当检测到代码中存在错误，在错误处悬浮或者通过快捷键`ctrl+alt+.`（macOS:`cmd+alt+.`）可以在编辑器中快速查询可用的修复建议。
+本功能需要开启内置的js或ts语法校验（[如何开启](https://hx.dcloud.net.cn/Tutorial/UserGuide/SyntaxCheck?id=builtincheck)），当检测到代码中存在错误，在错误处悬浮或者通过快捷键`ctrl+alt+.`（macOS:`cmd+alt+.`）可以在编辑器中快速查询可用的修复建议。
 
 ### 支持范围
 
