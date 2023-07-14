@@ -11,20 +11,16 @@
 ### 如何使用
 
 1. 將鼠標懸浮在錯誤的代碼位置
-
-![](https://web-assets.dcloud.net.cn/hbuilderx-doc/hls/hls_auto_fixed_01.png)
+  ![](https://web-assets.dcloud.net.cn/hbuilderx-doc/hls/hls_auto_fixed_01.png)
 
 2. 點擊自動修復
-
-![](https://web-assets.dcloud.net.cn/hbuilderx-doc/hls/hls_auto_fixed_02.png)
+  ![](https://web-assets.dcloud.net.cn/hbuilderx-doc/hls/hls_auto_fixed_02.png)
 
 3. 選擇需要修復的操作
-
-![](https://web-assets.dcloud.net.cn/hbuilderx-doc/hls/hls_auto_fixed_04.png)
+  ![](https://web-assets.dcloud.net.cn/hbuilderx-doc/hls/hls_auto_fixed_04.png)
 
 4. 完成自動修復
-
-![](https://web-assets.dcloud.net.cn/hbuilderx-doc/hls/hls_auto_fixed_05.png)
+  ![](https://web-assets.dcloud.net.cn/hbuilderx-doc/hls/hls_auto_fixed_05.png)
 
 ### 註意
 

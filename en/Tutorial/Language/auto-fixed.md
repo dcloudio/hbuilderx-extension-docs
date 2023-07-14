@@ -11,24 +11,20 @@
 ### 如何使用
 
 1. 将鼠标悬浮在错误的代码位置
-
-![](https://web-assets.dcloud.net.cn/hbuilderx-doc/hls/hls_auto_fixed_01.png)
+  ![](https://web-assets.dcloud.net.cn/hbuilderx-doc/hls/hls_auto_fixed_01.png)
 
 2. 点击自动修复
-
-![](https://web-assets.dcloud.net.cn/hbuilderx-doc/hls/hls_auto_fixed_02.png)
+  ![](https://web-assets.dcloud.net.cn/hbuilderx-doc/hls/hls_auto_fixed_02.png)
 
 3. 选择需要修复的操作
-
-![](https://web-assets.dcloud.net.cn/hbuilderx-doc/hls/hls_auto_fixed_04.png)
+  ![](https://web-assets.dcloud.net.cn/hbuilderx-doc/hls/hls_auto_fixed_04.png)
 
 4. 完成自动修复
-
-![](https://web-assets.dcloud.net.cn/hbuilderx-doc/hls/hls_auto_fixed_05.png)
+  ![](https://web-assets.dcloud.net.cn/hbuilderx-doc/hls/hls_auto_fixed_05.png)
 
 ### 注意
 
-- 并不是所有的错误都能自动修复
+注意事项：并不是所有的错误都能自动修复
 
-![](https://web-assets.dcloud.net.cn/hbuilderx-doc/hls/hls_auto_fixed_06.png)
+  ![](https://web-assets.dcloud.net.cn/hbuilderx-doc/hls/hls_auto_fixed_06.png)
 
