@@ -20,7 +20,7 @@
 
 3. 选择需要修复的操作
 
-![](https://web-assets.dcloud.net.cn/hbuilderx-doc/hls/hls_auto_fixed_03.png)
+![](https://web-assets.dcloud.net.cn/hbuilderx-doc/hls/hls_auto_fixed_04.png)
 
 4. 完成自动修复
 
