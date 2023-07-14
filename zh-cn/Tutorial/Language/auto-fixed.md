@@ -24,11 +24,11 @@
 
 4. 完成自动修复
 
-![](https://web-assets.dcloud.net.cn/hbuilderx-doc/hls/hls_auto_fixed_04.png)
+![](https://web-assets.dcloud.net.cn/hbuilderx-doc/hls/hls_auto_fixed_05.png)
 
 ### 注意
 
 - 并不是所有的错误都能自动修复
 
-![](https://web-assets.dcloud.net.cn/hbuilderx-doc/hls/hls_auto_fixed_05.png)
+![](https://web-assets.dcloud.net.cn/hbuilderx-doc/hls/hls_auto_fixed_06.png)
 
