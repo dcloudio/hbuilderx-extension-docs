@@ -39,6 +39,8 @@
     * [Vue Doc](/Tutorial/Language/vuedoc.md)
     * [JSON](/Tutorial/Language/json.md)
     * [MarkDown](/Tutorial/Language/markdown.md)
+    * [Language Grammars](/Tutorial/Language/language_grammars.md)
+    * [JS、TS AutoFixed Error](/Tutorial/Language/auto-fixed.md)
 * App
     * [Phone Debugging](/Tutorial/App/PhoneDebugging.md)
     * [Install Simulator](/Tutorial/App/installSimulator.md)

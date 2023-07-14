@@ -41,6 +41,7 @@
     * [JSON](/Tutorial/Language/json.md)
     * [MarkDown](/Tutorial/Language/markdown.md)
     * [语言语法高亮](/Tutorial/Language/language_grammars.md)
+    * [JS、TS错误校验自动修复](/Tutorial/Language/auto-fixed.md)
 * App開發
     * [真機運行常見問題](/Tutorial/App/PhoneDebugging.md)
     * [安裝配置模擬器](/Tutorial/App/installSimulator.md)
