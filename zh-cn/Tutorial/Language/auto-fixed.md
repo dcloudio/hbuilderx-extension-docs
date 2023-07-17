@@ -10,16 +10,16 @@
 
 ### 如何使用
 
-1. 将鼠标悬浮在错误的代码位置
+#### 1. 将鼠标悬浮在错误的代码位置
   ![](https://web-assets.dcloud.net.cn/hbuilderx-doc/hls/hls_auto_fixed_01.png)
 
-2. 点击自动修复
+#### 2. 点击自动修复
   ![](https://web-assets.dcloud.net.cn/hbuilderx-doc/hls/hls_auto_fixed_02.png)
 
-3. 选择需要修复的操作
+#### 3. 选择需要修复的操作
   ![](https://web-assets.dcloud.net.cn/hbuilderx-doc/hls/hls_auto_fixed_04.png)
 
-4. 完成自动修复
+#### 4.完成自动修复
   ![](https://web-assets.dcloud.net.cn/hbuilderx-doc/hls/hls_auto_fixed_05.png)
 
 ### 注意
