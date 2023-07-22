@@ -247,7 +247,7 @@ menus节点下配置的对象内的key指的是要注册到哪个**`弹出菜单
 |title			|String		|否			|菜单项的名称，如果没有配置，将采用`命令`的title											|
 |[group](#group)|String		|是			|菜单项要注册的位置,查看目前支持的[group列表](#group)。注意该属性必须写，不写视为无效菜单扩展	|
 |[when](#when%e8%a1%a8%e8%be%be%e5%bc%8f)	|String		|否			|控制菜单项是否显示的逻辑表达式,[表达式说明](#when%e8%a1%a8%e8%be%be%e5%bc%8f)											|
-|checked	    |String		|否			|`从HBuilderX 2.7.6及以上版本开始支持` <br/>控制菜单项是否处于checked的逻辑表达式,表达式语法和[when](#when)表达式一致										|
+|checked	    |String		|否			|`从HBuilderX 2.7.6及以上版本开始支持` <br/>控制菜单项是否处于checked的逻辑表达式,表达式语法和[when](#when%e8%a1%a8%e8%be%be%e5%bc%8f)表达式一致										|
 
 > 当属性title和command都为空时，将被识别为分割线。
 
