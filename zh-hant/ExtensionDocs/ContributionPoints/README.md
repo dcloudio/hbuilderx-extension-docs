@@ -246,7 +246,7 @@ menus節點下配置的對象內的key指的是要註冊到哪個**`彈出菜單
 |command		|String		|否			|菜單項關聯的`命令`Id																		|
 |title			|String		|否			|菜單項的名稱，如果沒有配置，將采用`命令`的title											|
 |[group](#group)|String		|是			|菜單項要註冊的位置,查看目前支持的[group列表](#group)。註意該屬性必須寫，不寫視為無效菜單擴展	|
-|[when](#when)	|String		|否			|控制菜單項是否顯示的邏輯表達式,[表達式說明](#when)											|
+|[when](#when%e8%a1%a8%e9%81%94%e5%bc%8f)	|String		|否			|控制菜單項是否顯示的邏輯表達式,[表達式說明](#when%e8%a1%a8%e9%81%94%e5%bc%8f)											|
 |checked	    |String		|否			|`從HBuilderX 2.7.6及以上版本開始支持` <br/>控制菜單項是否處於checked的邏輯表達式,表達式語法和[when](#when)表達式壹致										|
 
 > 當屬性title和command都為空時，將被識別為分割線。
