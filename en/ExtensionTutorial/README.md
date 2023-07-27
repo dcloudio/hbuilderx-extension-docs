@@ -18,7 +18,7 @@ Here are some examples of what you can achieve with the Extension API:
 - Check the document
 - Print logs on the console, operate status bar messages, pop up various prompt boxes and selection boxes
 
-> Note: The plug-in runs in a separate `plug-in process`. The `plug-in process` is a node.js process that uses inter-process rpc communication and HBuilderX for interface calls. Therefore, the plug-in can use all the apis of node itself. The currently integrated node version is: v12.22.1.
+> Note: The plug-in runs in a separate `plug-in process`. The `plug-in process` is a node.js process that uses inter-process rpc communication and HBuilderX for interface calls. Therefore, the plug-in can use all the apis of node itself. The currently integrated node version is: v16.17.0.
 
 ### How to build extensions?
 
