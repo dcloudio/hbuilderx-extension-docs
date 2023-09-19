@@ -8,53 +8,84 @@
 
 什么是组件？组件是可复用的 Vue 实例，且带有一个名字。
 
-### 语法
+### 支持的标签
 
-主要用在`script`部分，需要写在`export default上面`
-```
-/**
-* 这里是一个组件描述，会在提示标签的时候显示
-* @description 这里也是一个组件描述
-* @tutorial https://uniapp.dcloud.io/api/media/image?id=chooseimage
-* @property {String} type = [button|input|...值域] 这里是属性描述
-* @event {Function} tap 这是是事件描述 
-* @example 这里是示例代码
-*/
-```
-其中@property和@event内`{` `}`中间的是类型，event的类型必须是**Function**。
+**主要用在`script`部分，需要写在`export default`上面**
+
+| 标签        | 用法                                                                    | 说明                                                                                                 |
+| :---------- | :---------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------- |
+| description | @description 这是一个描述信息                                           | 一个组件描述。                                                                                       |
+| tutorial    | @tutorial <https://www.baidu.com>                                       | 用于引用其他文档或教程。                                                                             |
+| property    | @property {type} name                                                   | 用于描述组件的属性。                                                                                 |
+| value       | @value 描述属性能够使用的值                                             | 值域，用于限定属性能够使用的值。它紧跟在property后面使用。                                           |
+| event       | @event {(e:MouseEvent)=>void} 事件名称 </br> @event {Function} 事件名称 | 用于提示事件说明。 有两种使用方式, 可写死Function, 也可以写箭头函数。                                |
+| example     | @example \<Pagination @total="50" @close="">\</Pagination>              | 用于提供示例代码。它可以包含一段代码片段，用于演示如何使用注释的代码。可以多行，支持 markdown 语法。 |
+| uniPlatform | @uniPlatform {"web": {"uniVer": "3.6.2+", "unixVer": "x" }}             | 仅用于提供uniapp兼容性信息。 `uniPlatform`需要参考详细规范。**`3.9.0+版本后支持`**                   |
 
 ### 示例
 
-
 ```javascript
-<script>
-  /**
-   * 翻页组件
-   * @description 翻页组件
-   * @tutorial http://www.baidu.com
-   * @property {Number} total 翻页数据总数
-   * @property {String} size = [big|small] 组件大小
-   * @event {Function} close 关闭事件
-   * @example <Pagination @total="50" @close=""></Pagination>
-   */
-  export default {
+
+/**
+ * 翻页组件
+ * @description 翻页组件
+ * @tutorial http://www.baidu.com
+ * @property {Number} total 翻页数据总数
+ * @property {String} size  组件大小
+ * @value big 大
+ * @value small 小
+ * @event {(e:MouseEvent)=>void} open 事件名称
+ * @event {Function} close 关闭事件
+ * @example <Pagination @total="50" @close=""></Pagination>
+ * @uniPlatform {
+ *   "app": {
+ *     "android": {
+ *       "osVer": "8.0",
+ *       "uniVer": "3.7.0",
+ *       "unixVer": "3.9.0"
+ *     },
+ *     "ios": {
+ *       "osVer": "8.0",
+ *       "uniVer": "3.7.0",
+ *       "unixVer": "3.9.0"
+ *     }
+ *   },
+ *   "mp": {
+ *     "weixin": {
+ *       "hostVer": "8.0",
+ *       "uniVer": "3.7.0",
+ *       "unixVer": "x"
+ *     },
+ *     "kuaishou": {
+ *       "hostVer": "8.0",
+ *       "uniVer": "3.7.0",
+ *       "unixVer": "x"
+ *     }
+ *   },
+ *   "web": {
+ *     "uniVer": "3.6.2+",
+ *     "unixVer": "x"
+ *   }
+ * }
+ */
+export default {
     props: {
-      "total": Number,
-      "size": String
+        total: Number,
+        size: String,
     },
-    data () {
-      return {
-        pageSize: 10,
-        pageNumber: 0
-      }
+    data() {
+        return {
+            pageSize: 10,
+            pageNumber: 0,
+        };
     },
     methods: {
-      handleChange(data, event) {
-        this.$emit('PsPn', this.pageSize, this.pageNumber)
-      }
-    }
-  }
-</script>
+        handleChange(data, event) {
+            this.$emit('PsPn', this.pageSize, this.pageNumber);
+        },
+    },
+};
+
 ```
 
 **组件提示，效果如下：**
