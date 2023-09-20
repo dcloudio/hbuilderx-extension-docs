@@ -15,11 +15,11 @@
 | 标签        | 用法                                                                    | 说明                                                                                                 |
 | :---------- | :---------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------- |
 | description | @description 这是一个描述信息                                           | 一个组件描述。                                                                                       |
-| tutorial    | @tutorial <https://www.baidu.com>                                       | 用于引用其他文档或教程。                                                                             |
+| tutorial    | @tutorial <https://www.dcloud.io>                                       | 用于引用其他文档或教程。                                                                             |
 | property    | @property {type} name                                                   | 用于描述组件的属性。                                                                                 |
 | value       | @value 描述属性能够使用的值                                             | 值域，用于限定属性能够使用的值。它紧跟在property后面使用。                                           |
 | event       | @event {(e:MouseEvent)=>void} 事件名称 </br> @event {Function} 事件名称 | 用于提示事件说明。 有两种使用方式, 可写死Function, 也可以写箭头函数。                                |
-| example     | @example \<Pagination @total="50" @close="">\</Pagination>              | 用于提供示例代码。它可以包含一段代码片段，用于演示如何使用注释的代码。可以多行，支持 markdown 语法。 |
+| example     | @example `<Pagination @total="50" @close=""></Pagination>`              | 用于提供示例代码。它可以包含一段代码片段，用于演示如何使用注释的代码。可以多行，支持 markdown 语法。 |
 | uniPlatform | @uniPlatform {"web": {"uniVer": "3.6.2+", "unixVer": "x" }}             | 仅用于提供uniapp兼容性信息。 `uniPlatform`需要参考详细规范。**`3.9.0+版本后支持`**                   |
 
 ### 示例
