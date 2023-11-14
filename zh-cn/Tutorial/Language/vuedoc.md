@@ -105,4 +105,12 @@ export default {
 <img src="/static/snapshots/tutorial/vuedoc_4.png" />
 
 
+### 特殊值域string@spec-types
+在vue Doc中也可以使用特殊值域string，用于限定属性能够使用的值。它紧跟在property后面使用。
+```javascript
+/**
+ * @property {IDString} id
+ */
+```
 
+详情请参考 [特殊值域string](https://uniapp.dcloud.net.cn/uts/data-type.html#ide-string)

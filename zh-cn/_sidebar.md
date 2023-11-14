@@ -38,6 +38,7 @@
     * [vue](/Tutorial/Language/vue.md)
     * [vue3](/Tutorial/Language/vue-next.md)
     * [vue doc](/Tutorial/Language/vuedoc.md)
+    * [js doc](/Tutorial/Language/jsdoc.md)
     * [Emmet](/Tutorial/Language/emmet.md)
     * [JSON](/Tutorial/Language/json.md)
     * [MarkDown](/Tutorial/Language/markdown.md)
