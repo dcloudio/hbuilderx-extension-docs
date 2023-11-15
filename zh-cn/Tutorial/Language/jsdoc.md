@@ -425,7 +425,7 @@ rFunc('id').getElementsByClassName('classA');
 
 
 ### 特殊值域string@spec-types
-在vue Doc中也可以使用特殊值域string，用于限定属性能够使用的值。它紧跟在property后面使用。
+在js Doc中也可以使用特殊值域string，用于限定属性能够使用的值。它紧跟在property后面使用。
 ```javascript
 /**
  * @property {IDString} id
