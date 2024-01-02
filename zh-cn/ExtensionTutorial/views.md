@@ -24,13 +24,13 @@ HBuilderX支持创建完全自定义的、可以间接和nodejs通信的特殊�
 //package.json；
 //...NOTE：package.json不支持注释，以下代码使用时需要将注释删掉
      "contributes": {
-         "viewsContainers": {            
+         "viewsContainers": {
              "rightside": [{
                  "id": "WebViewcontainerId",
                  "title": "webview 展示"
              }]
          },
-         "views": {            
+         "views": {
              "WebViewcontainerId": [{
                  "id": "extension.WebView",
                  "title": "webview - 展示"
@@ -50,9 +50,9 @@ const hx = require('hbuilderx');
  */
 function showWebView(webviewPanel) {
     let webview = webviewPanel.webView;
-    
+
     var background = '';
-    
+
     let config = hx.workspace.getConfiguration();
     let colorScheme = config.get('editor.colorScheme');
     if (colorScheme == 'Monokai') {
@@ -62,7 +62,7 @@ function showWebView(webviewPanel) {
     } else {
         background = 'rgb(255,250,232)'
     };
-    
+
     webview.html =
         `
         <body style="background-color:${background};border:1px solid ${background};">
@@ -73,19 +73,20 @@ function showWebView(webviewPanel) {
                 //    以下两种写法等同
                 hbuilderx.onDidReceiveMessage((msg) => {});
                 window.addEventListener("message", (msg) => {});
-                hbuiderx.postMessage({
+
+                hbuilderx.postMessage({
                     command: 'alert',
                     text: 'HelloWorld'
                 });
             </script>
         </body>
       `;
-     
+
     // 插件发送消息(可以被JSON化的数据)到webview
     webview.postMessage({
         command: "test"
     });
-    
+
     // 插件接收webview发送的消息(可以被JSON化的数据)
     webview.onDidReceiveMessage((msg) => {
         if (msg.command == 'alert') {

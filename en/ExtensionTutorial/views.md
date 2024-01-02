@@ -24,13 +24,13 @@ Extend a new WebView `view` (view) with the following 2 steps:
 //package.json；
 //...NOTE：Package.json does not support comments, you need to delete the comments when using the following code
      "contributes": {
-         "viewsContainers": {            
+         "viewsContainers": {
              "rightside": [{
                  "id": "WebViewcontainerId",
                  "title": "webview - display"
              }]
          },
-         "views": {            
+         "views": {
              "WebViewcontainerId": [{
                  "id": "extension.WebView",
                  "title": "webview - display"
@@ -50,9 +50,9 @@ const hx = require('hbuilderx');
  */
 function showWebView(webviewPanel) {
     let webview = webviewPanel.webView;
-    
+
     var background = '';
-    
+
     let config = hx.workspace.getConfiguration();
     let colorScheme = config.get('editor.colorScheme');
     if (colorScheme == 'Monokai') {
@@ -62,7 +62,7 @@ function showWebView(webviewPanel) {
     } else {
         background = 'rgb(255,250,232)'
     };
-    
+
     webview.html =
         `
         <body style="background-color:${background};border:1px solid ${background};">
@@ -73,19 +73,20 @@ function showWebView(webviewPanel) {
                 //The following two methods are equivalent
                 hbuilderx.onDidReceiveMessage((msg) => {});
                 window.addEventListener("message", (msg) => {});
-                hbuiderx.postMessage({
+
+                hbuilderx.postMessage({
                     command: 'alert',
                     text: 'HelloWorld'
                 });
             </script>
         </body>
       `;
-     
+
     //The extension sends messages (data that can be JSONized) to the webview
     webview.postMessage({
         command: "test"
     });
-    
+
     //The extension receives messages sent by webview (data that can be JSONized)
     webview.onDidReceiveMessage((msg) => {
         if (msg.command == 'alert') {
