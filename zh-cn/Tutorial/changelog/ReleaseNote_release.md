@@ -47,6 +47,9 @@
 * 优化 App真机运行 Android 自定义基座，在版本号相同但安装时间不同时，不会覆盖安装的Bug
 * 修复 App真机运行 Android 通过局域网连接的设备，运行时报不支持反向代理的Bug [详情](https://ask.dcloud.net.cn/question/181431)
 
+## 3.96.2023110403
+* 修复 Windows 在电脑扩展屏幕上，某些情况下登录窗口不可见的Bug
+
 ## 3.95.2023102806
 * 修复 3.94引出的 uniCloud 初始化向导操作异常的Bug
 
@@ -173,6 +176,11 @@
 ## 3.7.10.20230425
 * 无
 
+## 3.7.9.20230324
+* 修复 语言服务 因Vue域名变更，导致代码助手中帮助文档URL跳转后显示404的Bug
+* 修复 js-beautify格式化插件，缩进设置成`tab`时，ts文件格式化导致注释内的缩进不对的Bug
+* 修复 3.7.8引出的 uniCloud schema.json文件，右键菜单点击下载DB Schema，HBuilderX闪退的Bug
+
 ## 3.7.8.20230323
 * 新增 内置格式化插件 支持使用项目下.jsbeautifyrc配置文件 [详情](https://hx.dcloud.net.cn/Tutorial/extension/js-beautify)
 * 修复 内置格式化插件 Vue文件ts代码不支持格式化的Bug
@@ -218,4 +226,4 @@
 * 优化 原生App-云打包 Android打包 打包窗口不再显示`使用DCloud老版证书`（2022年11月30日以后创建的应用及以前未使用过老版本证书的应用不能再使用DCloud老版证书）
 
 ## 历史更新日志
-[https://update.dcloud.net.cn/hbuilderx/changelog/ReleaseNote_release_archive_2022.html](https://update.dcloud.net.cn/hbuilderx/changelog/ReleaseNote_release_archive_2022.html)
+[已归档日志](/Tutorial/changelog/ReleaseNote_release_archive.md)

@@ -286,4 +286,4 @@
 * 优化 原生App-云打包 Android打包 打包窗口不再显示`使用DCloud老版证书`（2022年11月30日以后创建的应用及以前未使用过老版本证书的应用不能再使用DCloud老版证书）
 
 ## 历史更新日志
-[https://update.dcloud.net.cn/hbuilderx/changelog/ReleaseNote_alpha_archive_2022.html](https://update.dcloud.net.cn/hbuilderx/changelog/ReleaseNote_alpha_archive_2022.html)
+[已归档日志](/Tutorial/changelog/ReleaseNote_alpha_archive.md)

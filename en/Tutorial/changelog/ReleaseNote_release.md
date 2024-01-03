@@ -47,6 +47,11 @@
 * Mobile App Playground: Optimize the Android custom runtime, the version number is the same but the installation time is different, will not cover the installation Bug
 * Mobile App Playground: Fixed a Bug where Android devices connected through the LAN did not support reverse proxy when running Times [Details](https://ask.dcloud.net.cn/question/181431)
 
+## 3.96.2023110403
+* Fixed the bug that the login window is not visible in some cases on the computer extension screen of Windows.
+
+## 3.95.2023102806
+
 ## 3.94.2023102613
 * Added uni-app-x, no longer using js and webview, compiled into a pure native App, currently only supports Android. [Details](https://uniapp.dcloud.net.cn/uni-app-x/)
 * Added HBuilderX version upgrade to support differential updates and improve update speed
@@ -162,10 +167,10 @@
 * Added uniCloud Aliyun, the front-end web page hosts a custom domain name, and automatically refreshes the CDN after uploading files.
 
 ## 3.7.11.20230427
-* 无
+* Fixed some minor issues
 
 ## 3.7.10.20230425
-* 无
+* Fixed some minor issues
 
 ## 3.7.9.20230324
 * Language Server: Fixed the bug that 404 is displayed after the URL of the help document in the code assistant is redirected due to the change of the Vue domain name
@@ -208,12 +213,9 @@
 * uni-app: Fixed the bug that when uni-app runs to Chrome, it opens a new Chrome instance every time it runs.
 
 ## 3.6.18.20230117
-* 无
+* Fixed some minor issues
 
 ## 3.6.17.20230112
 * Fixed HBuilderX green soft theme, select the terminal text, the bug that the selected color is not displayed.
 * Optimize one-click sharing of Markdown, css and js resources required by the webpage, and upload them to uniCloud web page hosting.
 * Fixed the bug that the uni-app runs to the iOS simulator, and the uni debugging is turned on. After opening, the window shows a blank bug
-
-## ReleaseNote
-[https://update.dcloud.net.cn/hbuilderx/changelog/ReleaseNote_release_archive_en_2022.html](https://update.dcloud.net.cn/hbuilderx/changelog/ReleaseNote_release_archive_en_2022.html)

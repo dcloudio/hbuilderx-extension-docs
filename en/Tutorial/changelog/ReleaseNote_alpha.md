@@ -119,6 +119,8 @@
 * Added conditional compilation support for the "static" directory in uni-app projects for "app" and "web" directories. [Details](https://uniapp.dcloud.net.cn/tutorial/platform.html#static)
 * Added conditional compilation support for uni-app projects, providing "uniVersion" to distinguish compiler versions. [Details](https://uniapp.dcloud.net.cn/tutorial/platform.html#uniVersion)
 
+## 3.8.11.20230719-alpha
+
 ## 3.8.10.20230714-alpha
 * Language Server: JS, TS supports automatic repair of error checking
 * Language Server: Fixed the bug that this in the Vue arrow function cannot access the vue instance
@@ -178,7 +180,7 @@
 * Language Server: Fixed Vue file SCSS, in some cases, !default and !global have no prompt Bug
 
 ## 3.8.1.20230428-alpha
-* 无
+* Fixed some minor issues
 
 ## 3.8.0.20230425-alpha
 * Optimize the application icon of HBuilder Alpha version to supplement the α corner mark in the lower right corner.
@@ -265,7 +267,7 @@
 * uni-app: uts plug-in run to Android support debug debugging [Details](https://uniapp.dcloud.net.cn/tutorial/debug/uni-uts-debug.html)
 
 ## 3.6.17.20230111-alpha
-* 无
+* Fixed some minor issues
 
 ## 3.6.16.20230109-alpha
 * Language Server: Fixed the bug that the uni-app Vue file cannot be prompted for conditional compilation in the script tag [Details](https://ask.dcloud.net.cn/question/159783)
@@ -274,6 +276,3 @@
 * Fixed the bug that uni-app Vue3 runs to the browser, the browser Devtools console, and the log path shows errors.
 * Fixed the bug that the uni-app runs to the iOS simulator, and the uni debugging is turned on. After opening, the window shows a blank bug
 * Fixed the bug that in some cases, the .hbuilderx/launch.json file in the project root directory repeatedly writes data and reads and writes frequently, causing the editor to freeze
-
-## ReleaseNote
-[https://update.dcloud.net.cn/hbuilderx/changelog/ReleaseNote_alpha_archive_en_2022.html](https://update.dcloud.net.cn/hbuilderx/changelog/ReleaseNote_alpha_archive_en_2022.html)
