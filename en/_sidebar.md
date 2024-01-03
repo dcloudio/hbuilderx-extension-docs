@@ -84,6 +84,9 @@
     <!-- * [云函数上传ContentAccessDenied错误](/Tutorial/Questions/win10-defender-contentaccessdenied.md) -->
 * [Crash Reporter](/Tutorial/CrashReporter.md)
 * [LICENSE](/license.md)
+* ChangeLog
+    * [Release](/Tutorial/changelog/ReleaseNote_release.md)
+    * [Alpha](Tutorial/changelog/ReleaseNote_alpha.md)
 <div class="contact-box">
   <a href="https://www.dcloud.io/hbuilderx.html" target="_blank" class="contact-item">
     <img src="/static/favicon/favicon.png" width="20" height="21">

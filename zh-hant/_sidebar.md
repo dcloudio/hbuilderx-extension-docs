@@ -90,6 +90,9 @@
 * [崩潰報告](/Tutorial/CrashReporter.md)
 * [歷史版本](/Tutorial/HistoryVersion.md)
 * [LICENSE](/license.md)
+* 更新日志
+    * [正式版](/Tutorial/changelog/ReleaseNote_release.md)
+    * [Alpha版](Tutorial/changelog/ReleaseNote_alpha.md)
 <div class="contact-box">
   <a href="https://www.dcloud.io/hbuilderx.html" target="_blank" class="contact-item">
     <img src="/static/favicon/favicon.png" width="20" height="21">
