@@ -1,6 +1,6 @@
 # Git Blame
 
-HBuilderX 4.0+ 支持 Git Blame 功能，该功能无需依赖 TortoiseGit，在安装 Git 插件后默认开启。
+HBuilderX 4.0+ 支持 Git Blame 功能，在安装 Git 插件后默认开启，Git插件调用的是`外部Git工具`，因此需要安装[Git](https://git-scm.com/)的命令行工具。
 
 Git Blame 功能提供了便捷的方式，让用户能够快速查看 Git 项目中某一行代码的最后一次提交时间、作者、邮箱以及提交信息，同时还可以进行版本对比。
 ### 基本用法

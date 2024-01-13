@@ -1,6 +1,6 @@
 # Git Blame
 
-HBuilderX 4.0+ supports the Git Blame feature, which does not rely on TortoiseGit and is enabled by default after installing the Git plugin.
+HBuilderX 4.0+ supports Git Blame feature, which is enabled by default after installing the Git plugin. The Git plugin utilizes the external Git tool, so it requires the installation of the command line tool for [Git](https://git-scm.com/).
 
 The Git Blame feature provides a convenient way for users to quickly view the last commit information of a specific line of code in a Git project, including the commit time, author, email, and commit message. It also allows for version comparison.
 ### Basic Usage
