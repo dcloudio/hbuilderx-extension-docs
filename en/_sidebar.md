@@ -54,6 +54,7 @@
     * [Git MacOSX](/Tutorial/SourceControl/Git/MacOSX.md)
     * [SVN Windows](/Tutorial/SourceControl/SVN/Windows.md)
     * [SVN MacOSX](/Tutorial/SourceControl/SVN/MacOSX.md)
+    * [Git Blame](/Tutorial/SourceControl/Git/git_blame.md)
 * Extension
     * [validate-html](/Tutorial/extension/validate-html.md)
     * [validate-stylelint](/Tutorial/extension/validate-stylelint.md)
