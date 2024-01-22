@@ -41,6 +41,7 @@
     * [MarkDown](/Tutorial/Language/markdown.md)
     * [Language Grammars](/Tutorial/Language/language_grammars.md)
     * [JS、TS AutoFixed Error](/Tutorial/Language/auto-fixed.md)
+    * [uni-app-x Multi-platform code completion and syntax checking](/Tutorial/Language/language_service_target_support.md)
 * App
     * [Phone Debugging](/Tutorial/App/PhoneDebugging.md)
     * [Install Simulator](/Tutorial/App/installSimulator.md)
