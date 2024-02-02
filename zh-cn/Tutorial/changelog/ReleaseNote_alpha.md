@@ -1,3 +1,17 @@
+## 4.01.2024020211-alpha
+* 调整 Git插件 将Git Blame 查看当前行git日志功能，抽离为单独插件，支持从插件市场下载 [详情](https://ext.dcloud.net.cn/plugin?id=16568)
+* 修复 语言服务 `uni-app x` uts代码import过多的Android平台库时导致性能下降的Bug
+* 修复 语言服务 `uni-app x` main.uts中定义的globalProperties属性，在其他uvue页面无法提示的Bug
+* 修复 语言服务 `uni-app x` import 导入uvue文件时，路径无法转到定义的Bug
+* 修复 语言服务 打开多个html文件时，切换到上一个html，未修改的情况下，变量悬浮、转到定义等可能不对的Bug
+* 修复 语言服务 uni_modules utssdk下不提示uni api的Bug
+* 修复 语言服务 uniCloud 云函数和云对象开发时，代码提示越来越慢的Bug
+* 修复 4.0版引出的 插件API 自定义webview视图 hbuilderx对象报undefined的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=670)
+* 修复 4.0版引出的 uni_modules插件 上传到插件市场，打开界面一直loading的Bug
+* 修复 4.0版引出的 schema2code插件 右键触发Schema2Code菜单，打开界面一直loading的Bug
+* 修复 uni-app (x) HBuilderX刚启动，立即点击运行，有概率误报`uniapp-extension`插件被篡改的Bug
+* 修复 uni-app (x) 在编辑器中打开图片文件后，点击预览导致HBuilderX崩溃的Bug
+
 ## 4.0.2024012711-alpha
 * 新增 语言服务 uni-app x 支持多平台代码提示和语法校验，并可按平台切换语言服务 [详情](https://hx.dcloud.net.cn/Tutorial/Language/language_service_target_support)
 * 新增 语言服务 uni ext api 支持interface.uts规范 [详情](https://uniapp.dcloud.net.cn/api/extapi.html#%E5%A6%82%E4%BD%95%E5%BC%80%E5%8F%91uni-ext-api)
