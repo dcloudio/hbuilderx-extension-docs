@@ -83,6 +83,7 @@
     * [HBuilderX的快捷键理念](/Tutorial/Other/keybindings_idea.md)
     * [HBuilderX如何保护程序员的身心健康](/Tutorial/Other/health.md)
     * [HBuilderX被误报木马病毒说明](/Tutorial/Security.md)
+    * [HBuilderX工具使用的域名列表](/Tutorial/Other/hx_domain_list.md)
 * 常见问题
     * [Windows 启动问题排查指南](/Tutorial/Questions/WindowsStart.md)
     * [插件安装失败解决方案](/Tutorial/faq/pluginInstall.md)

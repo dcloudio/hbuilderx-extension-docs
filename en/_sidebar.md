@@ -76,6 +76,7 @@
     * [keybindings Idea](/Tutorial/Other/keybindings_idea.md)
     * [Health](/Tutorial/Other/health.md)
     * [Security](/Tutorial/Security.md)
+    * [HBuilderX Domain List](/Tutorial/Other/hx_domain_list.md)
 * FAQ
     * [HBuilderX Windows startup troubleshooting guide](/Tutorial/Questions/WindowsStart.md)
     * [plug-in installation failure solution](/Tutorial/faq/pluginInstall.md)
