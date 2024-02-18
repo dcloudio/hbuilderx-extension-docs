@@ -9,7 +9,7 @@
 - [update.liuyingyong.cn](http://update.liuyingyong.cn)
 - [download.dcloud.net.cn](http://download.dcloud.net.cn)
 
-> 备注：某些插件需要从npm下载, 相关域名： https://www.npmjs.com、https://npmmirror.com/等npm相关域名
+> 备注：某些插件或项目模板安装，需要从npm下载, 相关域名： npmjs.com、npmmirror.com
 
 ### 插件市场相关
 
