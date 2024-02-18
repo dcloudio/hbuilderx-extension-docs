@@ -14,6 +14,7 @@
 ### 插件市场相关
 
 - [ext.dcloud.net.cn](https://ext.dcloud.net.cn)
+- [ext.liuyingyong.cn](https://ext.liuyingyong.cn)
 
 ### 文档相关
 
@@ -25,7 +26,21 @@
 - [ide.liuyingyong.cn](https://ide.liuyingyong.cn)
 - [ide.dcloud.net.cn](https://ide.dcloud.net.cn)
 
+### CDN
+
+- *.qnqcdn.net
+
 ### 其它
 
 - [stream.dcloud.net.cn](https://stream.dcloud.net.cn)
 - [ide.dcloud.io](https://ide.dcloud.io)
+- [upload.liuyingyong.cn](https://upload.liuyingyong.cn)
+- [issues.dcloud.net.cn](https://issues.dcloud.net.cn)
+
+### 特别注意
+
+相关业务域名可能会进行调整，建议将以下主域名或泛域名全部加入白名单：
+
+- dcloud.net.cn 或 *.dcloud.net.cn
+- dcloud.io 或 *.dcloud.io
+- liuyingyong.cn 或 *.liuyingyong.cn
