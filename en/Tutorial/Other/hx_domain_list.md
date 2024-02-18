@@ -21,7 +21,7 @@
 ### 打包相关
 
 - [ide.liuyingyong.cn](https://ide.liuyingyong.cn)
-
+- [ide.dcloud.net.cn](https://ide.dcloud.net.cn)
 
 ### 其它
 
