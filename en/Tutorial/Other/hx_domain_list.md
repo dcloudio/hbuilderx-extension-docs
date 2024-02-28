@@ -36,6 +36,9 @@
 - [ide.dcloud.io](https://ide.dcloud.io)
 - [upload.liuyingyong.cn](https://upload.liuyingyong.cn)
 - [issues.dcloud.net.cn](https://issues.dcloud.net.cn)
+- [app.liuyingyong.cn](https://app.liuyingyong.cn)
+- [user.liuyingyong.cn](https://user.liuyingyong.cn)
+- [log.liuyingyong.cn](https://log.liuyingyong.cn)
 
 ### 特别注意
 
