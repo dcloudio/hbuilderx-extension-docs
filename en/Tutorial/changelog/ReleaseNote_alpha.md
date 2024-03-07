@@ -1,3 +1,20 @@
+## 4.02.2024030621-alpha
+* Language Server: Fixed the bug of importing vue type error when using vue3+ts in uni-app project [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=720)
+* Language Server: Fixed the bug where the pinia module search error caused false alarms when using ts in the uni-app project [Details](https://ask.dcloud.net.cn/question/185148)
+*  Language Server: Fixed uts Android, automatically fix the bug that when there are multiple import package options, the import result of selecting an option other than the first one is incorrect.
+* Fixed a bug that caused memory leaks when part of the memory was not recycled properly when the editor was opened or closed.
+* Fixed a bug where a certain position may be lost when returning to the previous cursor position when quickly going to the definition continuously.
+* Fixed the bug that may cause the interface to become unresponsive in a weak network environment when creating a new project
+* Fixed the bug that the preview interface cannot disappear when the folded line in the code folding preview is at the last line of the screen
+* Fixed the bug that the Prettier plug-in does not recognize the embedded uts code when formatting uvue [Details](https://ext.dcloud.net.cn/plugin?id=2025)
+* Fixed a bug in the MacOSX project manager & built-in resource management that uses shortcut keys to rename file names. When entering the editing state, triggering the shortcut keys again will not automatically commit the changes. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=795)
+* Fixed the bug that the Html preview sub-menu item `Save and automatically refresh the browser` is not displayed in the run menu [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=721)
+* Fixed the bug of 404 reported when previewing html files when the project directory name contains the character '.'
+* Added uts plug-in uts Android plug-in development, supporting Gradle 8.x [Details](https://uniapp.dcloud.net.cn/tutorial/run/uts-development-android.html#%E9%85%8D%E7%BD%AE-gradle-jdk)
+* Adjust uni-app (x) to run on the web, adjust the console log output format
+* Adjust uni-app x to run on Android, adjust console log output format
+* Fixed uni-app x, project contains uts plugin, run to custom base, Bug in running error when `Clean build cache` is checked [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=781)
+
 ## 4.01.2024020211-alpha
 * Adjust the Git plug-in and separate the Git Blame function into a separate plug-in, which can be downloaded from the plug-in market.[Details](https://ext.dcloud.net.cn/plugin?id=16568)
 * Language Server: Fixed the bug that causes performance degradation when uni-app x uts code imports too many Android platform libraries
@@ -6,7 +23,7 @@
 * Language Server: Fixed the bug that when opening multiple html files, switching to the previous html, variables floating, going to definition, etc. may not be correct if it is not modified.
 * Language Server: Fixed the bug that uni api is not prompted under uni_modules utssdk
 * Language Server: Fixed the bug that caused the code prompts to become slower and slower when developing uniCloud cloud functions and cloud objects.
-* Fixed the bug of hbuilderx object reporting undefined in plug-in API custom webview view introduced in version 4.0 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=670)
+* Fixed the bug of hbuilderx object reporting undefined in plug-in API custom webview view introduced in version 4.0 [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=670)
 * Fixed the bug caused by version 4.0, when the uni_modules plug-in is uploaded to the plug-in market and the interface keeps loading when opening it
 * Fixed the bug introduced in version 4.0 that the schema2code plug-in right-clicked to trigger the Schema2Code menu and the interface kept loading when opening it.
 * Fixed the bug that uni-app (x) HBuilderX may falsely report that the `uniapp-extension` plug-in has been tampered with when it is started and click Run immediately.
