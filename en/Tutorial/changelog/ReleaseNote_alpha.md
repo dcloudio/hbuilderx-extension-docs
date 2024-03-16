@@ -1,7 +1,18 @@
+## 4.04.2024031519-alpha
+* Fixed the issue where when uni-app is released to the web and tree-shaking optimization is turned on, it prompts that the compilation is successful but there is no file. [Details](https://ask.dcloud.net.cn/question/187418)
+* Plug-in: New im-notifier plug-in Receive new message notifications from uni-im and prompt users [Details](https://ext.dcloud.net.cn/plugin?name=im-notifier)
+
+## 4.03.2024031101-alpha
+* Language Server: UTS plugin, Auto-importing packages without a newline after the first line when no other import nodes exist in the current file.
+* Language Server: uts syntax check, When the function parameter type is `UTSJSONObject`, when calling the function and using a literal object to pass parameters, a false positive type mismatch bug occurs
+* Language Server: uts syntax check `instanceof` does not allow the type defined by type to be used as a value.
+* Mobile App Playground: Fixed uni-app, after the iOS standard base is signed, it will not be automatically deleted during the next upgrade, causing the re-signed base that runs after the upgrade to be a bug in the previous version
+* Mobile App Playground: Fixed the bug of uni-app x custom debugging base. After upgrading HBuilderX, the base version mismatch was not prompted.
+
 ## 4.02.2024030621-alpha
 * Language Server: Fixed the bug of importing vue type error when using vue3+ts in uni-app project [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=720)
 * Language Server: Fixed the bug where the pinia module search error caused false alarms when using ts in the uni-app project [Details](https://ask.dcloud.net.cn/question/185148)
-*  Language Server: Fixed uts Android, automatically fix the bug that when there are multiple import package options, the import result of selecting an option other than the first one is incorrect.
+* Language Server: Fixed uts Android, automatically fix the bug that when there are multiple import package options, the import result of selecting an option other than the first one is incorrect.
 * Fixed a bug that caused memory leaks when part of the memory was not recycled properly when the editor was opened or closed.
 * Fixed a bug where a certain position may be lost when returning to the previous cursor position when quickly going to the definition continuously.
 * Fixed the bug that may cause the interface to become unresponsive in a weak network environment when creating a new project
