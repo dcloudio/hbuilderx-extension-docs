@@ -1,3 +1,6 @@
+## 4.05.2024032021-alpha
+* 无
+
 ## 4.04.2024031519-alpha
 * 修复 uni-app 发行到web，开启摇树优化的情况下，提示编译成功，但是没有文件的Bug [详情](https://ask.dcloud.net.cn/question/187418)
 * 新增 消息通知插件 在ide的右下角接收 [uni-im](https://im.dcloud.net.cn) 的消息通知（需下载插件） [详情](https://ext.dcloud.net.cn/plugin?name=im-notifier)

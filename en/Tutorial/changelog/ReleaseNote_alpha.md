@@ -1,3 +1,6 @@
+## 4.05.2024032021-alpha
+* Fixed some minor issues
+
 ## 4.04.2024031519-alpha
 * Fixed the issue where when uni-app is released to the web and tree-shaking optimization is turned on, it prompts that the compilation is successful but there is no file. [Details](https://ask.dcloud.net.cn/question/187418)
 * Plug-in: New im-notifier plug-in Receive new message notifications from uni-im and prompt users [Details](https://ext.dcloud.net.cn/plugin?name=im-notifier)
