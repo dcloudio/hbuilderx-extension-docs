@@ -1,3 +1,6 @@
+## 4.06.2024032403-alpha
+* Fixed some minor issues
+
 ## 4.05.2024032021-alpha
 * Fixed some minor issues
 
