@@ -1,8 +1,8 @@
 # Git Blame
 
-HBuilderX 4.0+ 支援 Git Blame 功能，在安裝 Git 插件後預設開啟, Git插件調用的是`外部Git工具`，因此需要安裝[Git](https://git-scm.com/)的命令行工具。
+Git Blame插件在HBuilderX 4.01及更高版本中受支持[點此處安裝](https://ext.dcloud.net.cn/plugin?id=16568)。該插件依賴Git插件，Git插件調用`外部Git工具`，因此需要安裝[Git](https://git-scm.com/)的命令行工具。
 
-Git Blame 功能提供了方便的方式，讓用戶能夠快速查看 Git 專案中某一行程式碼的最後一次提交時間、作者、郵箱以及提交訊息，同時還可以進行版本對比。
+Git Blame插件使用戶能夠快速查看Git項目中特定行代碼的最後提交時間、作者、郵箱和提交信息，並且還可以進行版本對比。
 ### 基本用法
 游標置於編輯器的某一行，該行最後一次提交的訊息將自動顯示在該行行尾處。
 <div>

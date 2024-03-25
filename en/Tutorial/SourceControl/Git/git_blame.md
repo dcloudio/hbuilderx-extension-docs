@@ -1,8 +1,8 @@
 # Git Blame
 
-HBuilderX 4.0+ supports Git Blame feature, which is enabled by default after installing the Git plugin. The Git plugin utilizes the external Git tool, so it requires the installation of the command line tool for [Git](https://git-scm.com/).
+The Git Blame plugin is supported in HBuilderX 4.01 and above ([click here to install](https://ext.dcloud.net.cn/plugin?id=16568)). This plugin depends on the Git plugin, which calls external Git tools, so it requires the installation of the command-line tools for [Git](https://git-scm.com/).
 
-The Git Blame feature provides a convenient way for users to quickly view the last commit information of a specific line of code in a Git project, including the commit time, author, email, and commit message. It also allows for version comparison.
+The Git Blame plugin allows users to quickly view the last commit time, author, email, and commit message of a specific line of code in a Git project, and also allows for version comparison.
 ### Basic Usage
 Place the cursor on a line in the editor, and the last commit information for that line will be automatically displayed at the end of the line.
 <div>
