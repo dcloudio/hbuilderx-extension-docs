@@ -1,14 +1,3 @@
-## 4.07.2024032807-alpha
-## HBuilder
-* 修复 语言服务 uts插件web平台下不提示uts基础api的Bug
-* 修复 uni-app 真机运行 模拟器支持多cpu架构时，运行标准基座误报不支持的Bug [详情](https://ask.dcloud.net.cn/question/186863)
-* 修复 uni-app 内置浏览器打开时，切换文件导致未运行的项目自动运行的Bug [详情](https://ask.dcloud.net.cn/question/188432)
-* 修复 uni-app cli项目 发行目录提示是web实际打包到h5的Bug [详情](https://ask.dcloud.net.cn/question/188468)
-* 修复 uni-app 运行到web package.json自定义运行到内置浏览器不生效的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1084)
-
-## 4.06.2024032403-alpha
-* 无
-
 ## 4.05.2024032021-alpha
 * 无
 
