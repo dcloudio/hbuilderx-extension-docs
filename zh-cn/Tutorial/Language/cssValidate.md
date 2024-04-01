@@ -7,7 +7,7 @@
   <img src="https://web-ext-storage.dcloud.net.cn/hx/uniappxlint/csslint-zh.png" style="border:1px solid #eee; border-radius: 5px;"/>
 </div>
 
-### vue文件语法检查
+### uvue文件语法检查
 <div>
   <img src="https://web-ext-storage.dcloud.net.cn/hx/uniappxlint/css-vue-lint-zh.png" style="border:1px solid #eee; border-radius: 5px;"/>
 </div>

@@ -1,8 +1,8 @@
-# uni-app-x vue label syntax check
+# uni-app-x uvue label syntax check
 
-> HbuilderX 4.11+, support uniapp-x project vue tag syntax check
+> HbuilderX 4.11+, support uniapp-x project uvue tag syntax check
 
-### vue file syntax check
+### uvue file syntax check
 <div>
 <img src="https://web-ext-storage.dcloud.net.cn/hx/uniappxlint/vuelint-en.png" style="border:1px solid #eee;  border-radius: 5px;" />
 </div>

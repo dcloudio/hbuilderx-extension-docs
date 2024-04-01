@@ -1,8 +1,8 @@
-# uni-app-x vue標簽語法校驗
+# uni-app-x uvue標簽語法校驗
 
-> HbuilderX 4.11+起，支持uniapp-x項目vue標簽語法校驗
+> HbuilderX 4.11+起，支持uniapp-x項目uvue標簽語法校驗
 
-### vue文件語法檢查
+### uvue文件語法檢查
 <div>
   <img src="https://web-ext-storage.dcloud.net.cn/hx/uniappxlint/vuelint-zh.png" style="border:1px solid #eee; border-radius: 5px;"/>
 </div>
