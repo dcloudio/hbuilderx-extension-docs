@@ -1,9 +1,7 @@
 ## 4.08.2024040123
-## HBuilder
 * 修复 uni-app cli项目 vue3使用vite情况下无法运行的Bug [详情](https://ask.dcloud.net.cn/question/188578)
 
 ## 4.07.2024032720
-## HBuilder
 * 修复 语言服务 uts插件web平台下不提示uts基础api的Bug
 * 修复 uni-app 真机运行 模拟器支持多cpu架构时，运行标准基座误报不支持的Bug [详情](https://ask.dcloud.net.cn/question/186863)
 * 修复 uni-app 内置浏览器打开时，切换文件导致未运行的项目自动运行的Bug [详情](https://ask.dcloud.net.cn/question/188432)
