@@ -4,12 +4,12 @@
 
 ### 单独css文件语法检查
 <div>
-  <img src="https://web-ext-storage.dcloud.net.cn/hx/uniappxlint/csslint-zh.png" style="border:1px solid #eee; border-radius: 5px;"/>
+  <img src="https://web-ext-storage.dcloud.net.cn/hx/uniappxlint/csslint-zh1.png" style="border:1px solid #eee; border-radius: 5px;"/>
 </div>
 
 ### uvue文件语法检查
 <div>
-  <img src="https://web-ext-storage.dcloud.net.cn/hx/uniappxlint/css-vue-lint-zh.png" style="border:1px solid #eee; border-radius: 5px;"/>
+  <img src="https://web-ext-storage.dcloud.net.cn/hx/uniappxlint/css-vue-lint-zh1.png" style="border:1px solid #eee; border-radius: 5px;"/>
 </div>
 
 ### 设置入口

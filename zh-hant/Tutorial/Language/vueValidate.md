@@ -4,7 +4,7 @@
 
 ### uvue文件語法檢查
 <div>
-  <img src="https://web-ext-storage.dcloud.net.cn/hx/uniappxlint/vuelint-zh.png" style="border:1px solid #eee; border-radius: 5px;"/>
+  <img src="https://web-ext-storage.dcloud.net.cn/hx/uniappxlint/vuelint-zh1.png" style="border:1px solid #eee; border-radius: 5px;"/>
 </div>
 
 ### 設置入口
