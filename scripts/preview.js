@@ -28,4 +28,4 @@ http.createServer(function (req, res) {
 		res.end(data);
 	});
 }).listen(3000);
-console.log("服务在3000启动");
+console.log("server run in http://localhost:3000");

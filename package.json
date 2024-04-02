@@ -13,6 +13,7 @@
     },
     "scripts": {
         "serve": "node ./scripts/preview.js",
+        "watch": "nodemon ./scripts/preview.js",
         "dev": "node service",
         "start": "pm2 start service.js --name hbuilderx-extension-docs",
         "mini": "node ./scripts/compress.js"
