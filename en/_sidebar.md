@@ -43,7 +43,7 @@
     * [JS、TS AutoFixed Error](/Tutorial/Language/auto-fixed.md)
     * [uni-app-x Multi-platform code completion and syntax checking](/Tutorial/Language/language_service_target_support.md)
     * [uni-app-x css syntax checking](/Tutorial/Language/cssValidate.md)
-    * [uni-app-x vue tag syntax checking](/Tutorial/Language/vueValidate.md)
+    * [uni-app-x uvue tag syntax checking](/Tutorial/Language/vueValidate.md)
 * App
     * [Phone Debugging](/Tutorial/App/PhoneDebugging.md)
     * [Install Simulator](/Tutorial/App/installSimulator.md)

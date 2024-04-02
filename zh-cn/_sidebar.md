@@ -46,7 +46,7 @@
     * [JS、TS错误校验自动修复](/Tutorial/Language/auto-fixed.md)
     * [uni-app-x 多平台代码提示和语法校验](/Tutorial/Language/language_service_target_support.md)
     * [uni-app-x css语法校验](/Tutorial/Language/cssValidate.md)
-    * [uni-app-x vue标签语法校验](/Tutorial/Language/vueValidate.md)
+    * [uni-app-x uvue标签语法校验](/Tutorial/Language/vueValidate.md)
 * App开发
     * [真机运行常见问题](/Tutorial/App/PhoneDebugging.md)
     * [安装配置模拟器](/Tutorial/App/installSimulator.md)
