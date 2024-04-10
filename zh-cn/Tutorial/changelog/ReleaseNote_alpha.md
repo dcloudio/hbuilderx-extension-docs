@@ -1,3 +1,11 @@
+## 4.12.2024041009-alpha
+* 新增 Bug反馈插件 uni-app x分类，支持Web和iOS平台，并且允许多选
+* 调整 语言服务 内置vue框架的d.ts版本从3.2.26升级到3.4.21
+* 修复 语言服务 uvue标签语法校验 误报v-slot和v-bind不识别的Bug
+* 修复 某些情况下，编辑器右键`查找引用`可能导致HBuilderX闪退的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1246)
+* 修复 未保存的标签卡，在非激活状态下，退出重开HBuilderX后，修改内容未正确还原的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1317)
+* 修复 编辑器悬浮提示，提示信息内的链接颜色在深色主题下看不清的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1094)
+
 ## 4.11.2024040401-alpha
 * 新增 语言服务 uni-app x 支持 css 语法校验 [详情](https://hx.dcloud.net.cn/Tutorial/Language/cssValidate)
 * 新增 语言服务 uni-app x 支持 uvue 标签语法校验 [详情](https://hx.dcloud.net.cn/Tutorial/Language/vueValidate)
