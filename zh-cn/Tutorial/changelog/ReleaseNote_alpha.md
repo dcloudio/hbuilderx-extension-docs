@@ -1,3 +1,22 @@
+## 4.13.2024042321-alpha
+* 调整 内置node版本由v16.17.0升级到v18.20.0
+* 调整 macOS 最低支持版本调整为10.15
+* 修复 关闭所有标签卡，在标签卡比较多的情况下，会导致UI卡顿的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1348)
+* 修复 文本搜索 在搜索区已经显示的情况下，快捷键触发替换，不能自动显示替换区的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1207)
+* 修复 单项目窗口 无打开文件时，`ctrl+tab` 无法触发视图切换的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1365)
+* 新增 语言服务 非uts插件开发环境下引用iOS平台原生相关模块会报警
+* 新增 语言服务 uni-app x typeof运算符返回值支持平台特有类型 [详情](https://doc.dcloud.net.cn/uni-app-x/uts/operator.html#typeof)
+* 调整 语言服务 uts插件iOS平台语言服务在windows版本的HBuilderX下不再生效
+* 修复 语言服务 导入自定义uvue组件无法识别的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1397)
+* 修复 语言服务 uts语法校验误报错："undefined无法赋值给类型null"的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1461)
+* 修复 语言服务 uts语法校验误报错："number类型无法赋值给number字面量类型"的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1460)
+* 修复 语言服务 scss出现语法错误时，某些情况下无法正常提示的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1466)
+* 新增 uni-app x 真机运行 iOS平台增加清理构建缓存功能，缓存目录为unpackage/cache/.app-ios [详情](https://doc.dcloud.net.cn/uni-app-x/compiler/#cache)
+* 调整 uni-app x 真机运行 Android平台构建缓存目录unpackage/cache/.kotlin调整为unpackage/cache/.app-android
+* 新增 uni-app (x) 发行到app，iOS图标配置只能为1024*1024像素
+* 修复 3.94版引出的 Webview调试控制台 点击调试链接后，无法加载调试等待页面的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1511)
+* 修复 4.11版引出的 uni-app x 发行到app，不能正常显示打包错误的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1588)
+
 ## 4.12.2024041009-alpha
 * 新增 Bug反馈插件 uni-app x分类，支持Web和iOS平台，并且允许多选
 * 调整 语言服务 内置vue框架的d.ts版本从3.2.26升级到3.4.21

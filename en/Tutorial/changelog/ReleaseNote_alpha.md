@@ -1,5 +1,23 @@
+## 4.13.2024042321-alpha
+* Adjust the built-in node version to be upgraded from v16.17.0 to v18.20.0
+* Adjust the minimum supported version of macOS to 10.15
+* Fixed the bug that closing all tabs will cause UI lag when there are too many tabs [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=1348)
+* Fixed the bug that when text search is already displayed in the search area, shortcut keys trigger replacement and the replacement area cannot be automatically displayed [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=1207 )
+* Fixed the bug that `ctrl+tab` cannot trigger view switching when there is no open file in the single project window [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=1365)
+* Language Server: Added uni-app x typeof operator return value to support platform-specific types [Details](https://doc.dcloud.net.cn/uni-app-x/uts/operator.html#typeof)
+* Language Server: Added new language service. An error warning will appear when referencing iOS platform-related modules in a non-uts plug-in development environment.
+* Language Server: Adjust the language service. The uts plug-in iOS platform language service no longer takes effect under the windows version of HBuilderX.
+* Language Server: Fixed the bug that the language service cannot be recognized when importing custom uvue components [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=1397)
+* Language Server: Fixed the bug of language service uts syntax verification error: "undefined cannot be assigned to type null" [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=1461)
+* Language Server: Fixed the bug of language service uts syntax verification error: "number type cannot be assigned to number literal type" [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=1460)
+* Language Server: Fixed the bug that when a syntax error occurs in the language service scss, the prompt cannot be displayed normally in some cases [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=1466)
+* Added uni-app x running on iOS platform added the function of clearing build cache. The cache directory is unpackage/cache/.app-ios
+* Adjust the Android platform build cache directory unpackage/cache/.kotlin to unpackage/cache/.app-android when uni-app
+* Added uni-app (x) to publish to app, iOS icon configuration can only be 1024*1024 pixels
+* Fixed the bug that the Webview debugging console introduced in version 3.94 could not load the debugging waiting page after clicking the debugging link [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=1511)
+* Fixed the bug that when uni-app x introduced in version 4.11 is released to the app, the packaging error cannot be displayed normally [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=1588)
+
 ## 4.12.2024041009-alpha
-## HBuilder
 * Added bug feedback plug-in uni-app x classification, supports web and iOS platform, and allows multiple selections
 * Language Server: Adjust the language service and upgrade the d.ts version of the built-in vue framework from 3.2.26 to 3.4.21
 * Language Server: Fixed language service uvue tag syntax verification bug that falsely reports that v-slot and v-bind are not recognized
