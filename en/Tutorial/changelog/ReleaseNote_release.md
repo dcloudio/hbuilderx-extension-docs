@@ -1,3 +1,78 @@
+## 4.08.2024040127
+
+## 4.07.2024032720
+* Fixed the bug that when uni-app is run on a real machine and the simulator supports multi-cpu architecture, the standard base falsely reports that it is not supported [Details](https://ask.dcloud.net.cn/question/186863)
+* Fixed the bug that when the built-in browser of uni-app is opened, switching files causes unrunning projects to run automatically [Details](https://ask.dcloud.net.cn/question/188432)
+* Fixed the bug that the release directory prompt of the uni-app cli project is that the web is actually packaged into h5 [Details](https://ask.dcloud.net.cn/question/188468)
+* Fixed the bug that the custom running of uni-app to web package.json does not take effect when running to the built-in browser [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=1084)
+
+## 4.06.2024032513
+* Language Server: Added uni-app x to support multi-platform code prompts and grammar verification, and can switch language services by platform [Details](https://hx.dcloud.net.cn/Tutorial/Language/language_service_target_support)
+* Language Server: Added uni ext api, supporting interface.uts specification [Details](https://uniapp.dcloud.net.cn/api/extapi.html#%E5%A6%82%E4%BD%95%E5%BC%80%E5%8F%91uni-ext-api)
+* Language Server: Upgrade the built-in typescript library from `4.5.5` to `5.2.2`
+* Language Server: Fixed the bug of $ appearing in tag code completion when opening a file in a shared directory [Details](https://ask.dcloud.net.cn/question/182857)
+* Language Server: Fix: In some cases, css cannot be transferred to the defined bug [Details](https://ask.dcloud.net.cn/question/184780)
+* Language Server: Fix the bug that pages.json, path prompts incorrect page path [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=466)
+* Language Server: Fix the bug that caused the file to be occupied and unable to be renamed after displaying the reference results after searching for references.
+* Language Server: Fixed the bug that causes performance degradation when uni-app x uts code imports too many Android platform libraries
+* Language Server: Fixed the bug that the globalProperties attribute defined in uni-app x main.uts cannot be prompted in other uvue pages
+* Language Server: Fixed the bug that when uni-app x import imports uvue files, the path cannot go to the defined bug
+* Language Server: Fixed the bug that when opening multiple html files, switching to the previous html, variables floating, going to definition, etc. may not be correct if it is not modified.
+* Language Server: Fixed the bug that uni api is not prompted under uni_modules utssdk
+* Language Server: Fixed the bug that caused the code prompts to become slower and slower when developing uniCloud cloud functions and cloud objects.
+* Language Server: Fixed the bug of importing vue type error when using vue3+ts in uni-app project [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=720)
+* Language Server: Fixed the bug where the pinia module search error caused false alarms when using ts in the uni-app project [Details](https://ask.dcloud.net.cn/question/185148)
+* Language Server: Fixed uts Android, automatically fix the bug that when there are multiple import package options, the import result of selecting an option other than the first one is incorrect.
+* Language Server: UTS plugin, Auto-importing packages without a newline after the first line when no other import nodes exist in the current file.
+* Language Server: uts syntax check, When the function parameter type is `UTSJSONObject`, when calling the function and using a literal object to pass parameters, a false positive type mismatch bug occurs
+* Language Server: uts syntax check `instanceof` does not allow the type defined by type to be used as a value.
+* Added Git-blame plug-in to display git log at the end of the code line, which needs to be downloaded from the plug-in market. [Details](https://ext.dcloud.net.cn/plugin?id=16568) [Details](https://hx.dcloud.net.cn/Tutorial/SourceControl/Git/git_blame)
+* Plug-in: New im-notifier plug-in Receive new message notifications from uni-im and prompt users [Details](https://ext.dcloud.net.cn/plugin?name=im-notifier)
+* Plug-in: Adjust the bug reporting plug-in. The HBuilder running logs, uni-app console logs, etc. that are checked when reporting bugs are uploaded to be visible only to administrators.
+* Plug-in: Optimize the bug reporting plug-in. After submitting a bug, click the details to jump to the issues system to support automatic login.
+* Plug-in: Repair bug reporting plug-in macOSX cannot paste pictures when reporting bugs [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=372)
+* Fixed AI virtual row style exception when switching themes. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=360)
+* Optimize network error prompts in HBuilderX login interface
+* Added support for system associated icons for windows uts and uvue files
+* Fixed the bug that prompts HBuilderX to prevent shutdown when Windows computer is shut down
+* Fixed the bug that when a menu pops up in a certain window in MacOSX multi-window situation, and then the mouse clicks on another window, the focus state and activated window are incorrect.
+* Fixed a bug in the MacOSX project manager & built-in resource management that uses shortcut keys to rename file names. When entering the editing state, triggering the shortcut keys again will not automatically commit the changes. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=795)
+* Fixed a bug that caused memory leaks when part of the memory was not recycled properly when the editor was opened or closed.
+* Fixed a bug where a certain position may be lost when returning to the previous cursor position when quickly going to the definition continuously.
+* Fixed the bug that may cause the interface to become unresponsive in a weak network environment when creating a new project
+* Fixed the bug that the preview interface cannot disappear when the folded line in the code folding preview is at the last line of the screen
+* Fixed the bug that the Prettier plug-in does not recognize the embedded uts code when formatting uvue [Details](https://ext.dcloud.net.cn/plugin?id=2025)
+* Fixed the bug that when the console file link is clicked to jump to the editor, if the target line is collapsed, it will not automatically expand.
+* Fixed the bug of incorrect coloring of jsdoc @tag under vue file script.
+* MarkDown: Fixed a bug that caused the preview to fail when the markdown preview file name contained a + sign or other special symbols. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=463)
+* MarkDown: Fixed a bug in markdown preview that caused the preview to fail if the file name was modified after previewing. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=369)
+* MarkDown: Fixed the bug that markdown preview cannot be parsed and rendered normally when embedded html code [Details](https://ask.dcloud.net.cn/question/184421)
+* Html preview: Fixed the bug in html preview where external html files cannot be run into the browser [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=411)
+* Html preview: Fixed the bug that the reference to relative path resources in html preview does not take effect
+* Html preview: Fixed the bug that the built-in browser log cannot be output to the console when the html file path of the html preview contains Chinese characters.
+* Html preview: Fixed the bug that the Html preview sub-menu item `Save and automatically refresh the browser` is not displayed in the run menu [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=721)
+* Html preview: Fixed the bug of 404 reported when previewing html files when the project directory name contains the character '.'
+* Fixed a bug that may cause the interface to freeze when the plug-in process crashes abnormally
+* Fixed a bug in the plug-in API that uses font icon extension plug-ins. After installation and use, the plug-in cannot be uninstalled due to font occupation.
+* Fixed the bug that the plug-in API window.getActiveTextEditor does not return when there is no open tab card.
+* Fixed the bug of running multiple html to chrome and modifying one of them, causing the rest of html pages to refresh. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=313)
+* Fixed the bug that caused 5+ projects to disappear when running the menu bar until the browser entrance disappears [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=447)
+* uni-app: Adjust the uni-app running unpackage compilation directory and change the `h5` directory name to `web`
+* uni-app: Fixed the bug that uni-app runs and runs to Alipay applet and custom run does not take effect [Details](https://ask.dcloud.net.cn/question/183790)
+* uni-app: Fixed the bug that causes HBuilderX memory usage to increase in some cases when running uni-app [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=438)
+* uni-app: Fixed the bug that the uni-app(-x) pages.json file, uts file, menu `Edit`-`Comment`-`Conditional Compilation` function does not take effect
+* uni-app: Added uts plug-in for uni-app x project to support debugging [Details](https://uniapp.dcloud.net.cn/tutorial/debug/uni-uts-debug.html)
+* Fixed the bug that uni-app (x) HBuilderX may falsely report that the `uniapp-extension` plug-in has been tampered with when it is started and click Run immediately.
+* Fixed a bug in uni-app (x) that caused HBuilderX to crash when clicking preview after opening an image file in the editor.
+* Adjust uni-app (x) to run on the web, adjust the console log output format
+* Adjust uni-app x to run on Android, adjust console log output format
+* Fixed uni-app x, project contains uts plugin, run to custom base, Bug in running error when `Clean build cache` is checked [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=781)
+* Mobile App Playground: Fixed uni-app, after the iOS standard base is signed, it will not be automatically deleted during the next upgrade, causing the re-signed base that runs after the upgrade to be a bug in the previous version
+* Mobile App Playground: Fixed the bug of uni-app x custom debugging base. After upgrading HBuilderX, the base version mismatch was not prompted.
+* Added uts plug-in uts Android plug-in development, supporting Gradle 8.x [Details](https://uniapp.dcloud.net.cn/tutorial/run/uts-development-android.html#%E9%85%8D%E7%BD%AE-gradle-jdk)
+* uni-app: Fixed the bug that the format of manifest.json is incorrect when copying permissions to the Android permission configuration interface [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=370)
+* uni-app: Fixed the bug that when the plug-in market imports a project and the project only supports vue2, the vue3 button on the import interface can still be clicked.
+
 ## 3.99.2023122611
 * Added bug feedback function, currently supports reporting bugs for HBuilder and uni-app x. (The entrance is in the menu Help-Report a bug, and the blue button in the upper right corner of the App running console.)
 * Fixed the bug that the built-in browser, previewing html files and markdown files, failed to preview in some cases [Details](https://ask.dcloud.net.cn/question/182604)
@@ -78,144 +153,3 @@
 * Mobile App Playground: Fixed the bug in 5+ projects that when modifying js, css, pictures and other files, the pages that reference these resources will not be automatically refreshed.
 * uni_modules: Fixed the bug that the uni_modules plug-in upload plug-in does not have uni-app x related categories
 * uni_modules: Fixed the bug that caused HBuilderX to crash when the ${} special mark appeared in the update log when uploading the uni_modules plug-in to the plug-in market.
-
-## 3.8.12.20230817
-* Added Git plug-in In the address bar in the toolbar, add a Git branch name to the left of the project name, and you can easily perform Git-related operations after clicking 
-* Language Server: JS, TS supports automatic repair of error checking
-* Language Server: Added support to type `/**` on the ts method to automatically extract method parameter information to tsdoc
-* Language Server: Fixed the bug that the text in the floating frame does not support copying by `ctrl + c`
-* Language Server: Fixed the bug that the editor floating frame occasionally floats to other application windows
-* Language Server: Typing `@` in the TS file block comment does not prompt the bug of the comment label
-* Language Server: Enter `@` in the JS block comment of the vue file to prompt the comment label, and replace the bug with incorrect content after pressing Enter
-* Language Server: Fixed the bug that there is no code hint in the vue/nvue file tag event
-* Language Server: Fixed the bug that this in the Vue arrow function cannot access the vue instance
-* Language Server: Fixed the bug that Vue API description internationalization fails
-* Language Server: In some cases, the file code in the uniCloud directory prompts a slow bug
-* Language Server: After the js syntax check is enabled, the js error in the vue file is incorrect Bug
-* Language Server: Fixed the bug that the uni-app project cannot recognize the pinia module
-* Language Server: Fixed the bug that the built-in module `(eg: @dcloudio/uni-app)` will not be prompted when the module name of the uni-app project is prompted
-* Language Server: Fixed the bug that the occasional outline of vue and html files does not take effect
-* Language Server: Fixed the html file, some template syntax may cause the bug that the code cannot be prompted
-* Fixed code assistant, the bug that the next page button is still not grayed out when the list cannot be turned to the next page in some cases
-* Language Server: Fixed the bug that in some cases, after HBuilderX exits, some node processes cannot exit correctly with 100% CPU
-* Fixed multi-file search After specifying the search range, switching the editor tab causes the bug that the search range changes
-* Fixed single-line comments, when the cursor is at the beginning of the line, the bug that the anti-comment does not take effect
-* Fixed the bug that when the uni-app is running on a real machine, unplug the phone and plug it in again, re-running will cause repeated console logs and multiple compilation processes
-* Fixed the bug that the `Restart Application` button in the console toolbar does not take effect after being clicked in some cases when the uni-app is running on a real machine
-
-## 3.8.7.20230703
-* Added support for `Ctrl + Tab` to quickly switch between views(macOS:shortcut `Alt + Tab`).
-* Added automatic filling of `clogvar` code block with the nearest variable.
-* Added support for code folding in the code block region of Markdown editor.
-* Added support for automatic uploading of uni-app Alipay releases. [Details](https://hx.dcloud.net.cn/cli/publish-mp-alipay)
-* Fixed language service caused slow HTML tag and attribute suggestions in certain cases.
-* Fixed language service caused high CPU usage in certain cases.
-* Fixed language service global class and ID definitions were not able to navigate to local definitions. [Details](https://ask.dcloud.net.cn/question/170668)
-* Fixed language service paths starting with @/ in Vue files were unable to navigate to their definitions.
-* Fixed language service TypeScript files in Vue CLI projects were incorrectly reported as errors.
-* Fixed triggering comment with `Ctrl + / `on multiple lines would also comment the last line if the cursor was at the beginning of the line.
-* Fixed inserting a blank line above with `Ctrl + Shift + Enter` would result in incorrect indentation in certain cases.
-* Fixed the console log where shortcuts like `Shift + Up` or `Shift + Down` couldn't be used to select text.
-* Fixed multi-file character search where the highlighting in the editor was not cleared after clicking "Reset".
-* Fixed the bug that HBuilderX crashed during the multi-file character search in some cases
-* Improved multi-file character search by increasing the display area for search results on small screens.
-* Fixed multi-file character search where the input for include/exclude directories was not taken into account when clicking the "Search" button.
-* Fixed the built-in browser where occasional crashes occurred when switching between preview and closing multiple times.
-* Fixed switching the left-side view (such as the project explorer) while having multiple running consoles would cause misalignment of the buttons at the top of the console.
-* Added plugin API `languages.registerInlineCompletionItemProvider` to support inline code completion. [Details](https://hx.dcloud.net.cn/ExtensionDocs/Api/languages/registerInlineCompletionItemProvider)
-* Added plugin API `window.createStatusbarItem` to create a status bar item. [Details](https://hx.dcloud.net.cn/ExtensionDocs/Api/windows/createStatusBarItem) 
-* Optimized the performance of the plugin API `console.appendLine` for logging.
-
-## 3.8.4.20230531
-* Fixed the bug caused by 3.8.3 when the computer is connected to an external monitor and the multi-file character search function is activated, and the bug of switching to other screens [Details](https://ask.dcloud.net.cn/question/170787)
-* Language Server: Fixed the bug that the class cannot be prompted for Vue files in some cases
-* Language Server: Fixed In some cases, the language service is abnormal, prompting the bug of `The TypeScript language service died unexpectedly 5 times in the last 5 Minutes.`
-* Language Server: Fixed the bug that in some cases, Node process takes up 100% of the CPU
-
-## 3.8.3.20230526
-* 【Important】Windows 64-bit system, HBuilderX built-in Node adjusted to 64-bit Node.exe.
-* Optimize the multi-file character search from the toolbar to the left view of HBuilderX [Details](https://hx.dcloud.net.cn/Tutorial/UserGuide/node-multi-file-search).
-* Optimize the left view of HBuilderX. The drop-down menu in the upper right corner of the top supports switching views of project manager, multi-file character search, debugging, etc.
-* Language Server: Added "Find references" which codes the file is referenced by (right click on the file [File Find Reference]).
-* Language Server: Added Vue and Html files to support ID and Class lookup references.
-* Language Server: Added uni-app project component to support finding references.
-* Language Server: Added Html file to introduce Vue.js support code Vue code prompt.
-* Language Server: Optimize javascript/typescript function overload hints.
-* Language Server: Fixed the bug that the prompt ratio of px to upx/rpx is set, and the code assistant prompts that the custom ratio does not take effect.
-* Language Server: Fixed the js file. In some cases, require cannot prompt the bug of other js file paths.
-* Language Server: Fixed the sorting rules of the code assistant, and fix the bug that the first item of typing unic under the uni-app project is not uniCloud.
-* Language Server: Fixed the uni-app project, in some cases, the project does not exist in the uni_module directory, and the bug that the language service reports an error.
-* Language Server: Fixed the bug that the path prompt at the beginning of uni-app/, the input completion item in the middle is incorrect.
-* Language Server: Fixed the bug that the uts plug-in Android system API part of the type inheritance relationship error leads to the bug of syntax verification error.
-* Language Server: Fixed the bug that some types of uts plug-in iOS are missing default constructors, which causes syntax verification errors.
-* Language Server: Fixed the bug that the uts plug-in iOS String type method is incomplete and the syntax verification error is reported.
-* Language Server: Fixed the bug that the template tag of the Vue file cannot prompt lang.
-* Language Server: Fixed the bug that the template tag of the Vue file, when the lang attribute is empty, the html tag cannot prompt.
-* Language Server: Fixed Vue file SCSS @ syntax, in some cases, the bug that the @ symbol replaces the wrong position after the code assistant enters.
-* Language Server: Fixed Vue file SCSS, in some cases, !default and !global have no prompt Bug.
-* Fixed Bug that cannot format files above 1M.
-* Fixed formatting Format plug-in, when there is an indentation on the first line of the js file, the formatting will cause the indentation to be indented according to the first line as a whole Bug
-* Fixed In some cases, when the project manager is always associated with the editor, opening a file under the sub-project or the parent project will cause the bug that the project manager scrolls incorrectly
-* Optimize Alt+Tab to switch tabs, list item icons and project manager icons are consistent.
-* Added MacOSX, App project, support to choose custom base to run to iOS Simulator [Details](https://uniapp.dcloud.net.cn/tutorial/run/run-custom-base-ios-simulator.html)
-* Fixed the bug that when the uni-app project runs and downloads the compiler plug-in, in some cases, the console does not prompt to re-run.
-* Added uni-app to support multiple projects to run to WeChat developer tools at the same time.
-* Adjust the uts project, run it to the iOS simulator, the console shields the uts debugging entry, and does not support the uts debugging of the iOS simulator.
-* Adjust uts project, uts Android development extension, increase gradle version limit, only support version 7.6.1 and below.
-* Fixed uni-app when the project contains uts authorized version of the plug-in, submitting the bug that the server failed to make a custom debugging base.
-* 【Important】Adjust the uni-app manifest.json and package window, delete the entrance of the interactive game (Cash Out Cat), this advertising business will be officially offline on May 31.
-* Added uniCloud Aliyun, the front-end web page hosts a custom domain name, and automatically refreshes the CDN after uploading files.
-
-## 3.7.11.20230427
-* Fixed some minor issues
-
-## 3.7.10.20230425
-* Fixed some minor issues
-
-## 3.7.9.20230324
-* Language Server: Fixed the bug that 404 is displayed after the URL of the help document in the code assistant is redirected due to the change of the Vue domain name
-* Fixed the bug that HBuilderX crashes when you right-click the schema.json file in 3.7.8 to download DB Schema
-* Fixed js-beautify formatting plug-in, when the indentation is set to `tab`, the ts file formatting causes the bug that the indentation in the comment is wrong
-* Fixed the bug caused by 3.7.8, some low-version MacOSX operating systems, no iOS mobile phone detected
-
-## 3.7.8.20230323
-* Added a built-in formatting plug-in, which supports the use of the .jsbeautifyrc configuration file under the project [Details](https://hx.dcloud.net.cn/Tutorial/extension/js-beautify)
-* Fixed the bug that the built-in formatting plug-in does not support formatting the ts code in the Vue file.
-* Language Server: Fixed Vue file `this.xxx = ...`, xxx cannot go to the defined bug.
-* Language Server: Fixed the uni-app cli ts project, after using pnpm to install the module, opening the vue file under the project causes the language service to crash.
-* Fixed the bug that the language service ts file in some cases, the ts grammar check does not take effect
-* Optimize settings, language service configuration, enable code assistant, after modifying configuration items, it will take effect without restarting HBuilderX
-* Fixed Enable .editorconfig support, when configuring `insert_final_newline`, accidentally touch the bug of the code assistant when saving
-* Fixed Enable .editorconfig support, if the last line of the Vue file does not wrap, the bug that the file content will be wrong when saving
-* Fixed MacOSX, run the App to iOS, the device selection window, in some cases, the bug that the iOS device is repeatedly displayed
-* Added uni-app uts plug-in to run to iOS to support debugging (requires MacOSX) [Details](https://uniapp.dcloud.net.cn/tutorial/debug/uni-uts-debug-ios.html)
-
-## 3.7.3.20230223
-* Add code block surround, wrap code blocks such as if outside the selection area (menu Edit->Surround->Code block surround, shortcut key win: `Ctrl+Alt+T`, mac: `Command+Alt+T`). [Details](https://hx.dcloud.net.cn/Tutorial/Language/Snippets?id=surround)
-* Added project manager, font size adjustment (menu settings-> Commonly Used). [Details](https://hx.dcloud.net.cn/Tutorial/setting?id=project-explorer-font-size)
-* Language Server: Fixed Vue3-ts project, the bug that the image src attribute reports an error [Details](https://ask.dcloud.net.cn/question/162064)
-* Language Server: Fixed uni-app main.js, the Vue variable or method defined by Vue.prototype.xxx, in the vue file, `this.` cannot prompt Bug. [Details](https://ask.dcloud.net.cn/question/147190)
-* Language Server: Fixed the Vue file, when there are only script and style nodes, but no template node, the document structure diagram shows a blank bug.
-* Fixed the bug that multiple lines of content will be copied when copying or cutting when multiple cursors are on the same line.
-* Fixed the bug that it may not be possible to go to the definition when it takes a long time to go to the definition.
-* Fixed the bug that HBuilderX cannot be started due to abnormal editor theme configuration in some cases.
-* Fixed the bug that blank characters cannot be highlighted in the Markdown code area.
-* Fixed the bug that Markdown copied table data from WPS and pasted it as a Markdown table syntax conversion error.
-* Fixed the bug that the editor will not automatically scroll to the original cursor position when you press the esc key to find symbol in Editor.
-* Fixed the setting interface and manifest.json interface, clicking the blank area on the right side of the text on the check box control will also cause the bug to be selected/cancelled.
-* uniCloud: Fixed the bug that the upload and run operation fails when there are Chinese files in the cloud function directory of uniCloud cloud function.
-* Mobile App Playground: MacOSX run the project to the real iOS device, and automatically start the App (MacOSX needs to install Xcode that matches the iOS mobile phone system) [Details](https://uniapp.dcloud.net.cn/tutorial/run/run-app.html#ios-app-automatically-open)
-* Mobile App Playground: Added Windows operating system, iOS standard base, supports signing with Apple certificate, after signing, it can run standard base to iOS real device [Details](https://uniapp.dcloud.net.cn/tutorial/run/ios-apple-certificate-signature.html)
-* Mobile App Playground: Added Windows device selection window, custom dock and standard dock support switching with & shortcut keys.
-* uni-app: Added WeChat Build, automatically uploaded to the WeChat platform, and supports the configuration of WeChat ci robot numbers. [Details](https://uniapp.dcloud.net.cn/tutorial/build/publish-mp-weixin-cli.html)
-* uni-app: uts plug-in run to Android support debug debugging. [Details](https://uniapp.dcloud.net.cn/tutorial/debug/uni-uts-debug.html)
-* uni-app: Optimize uts plugin, iOS compilation, improve compilation speed.
-* uni-app: Fixed the bug that when uni-app runs to Chrome, it opens a new Chrome instance every time it runs.
-
-## 3.6.18.20230117
-* Fixed some minor issues
-
-## 3.6.17.20230112
-* Fixed HBuilderX green soft theme, select the terminal text, the bug that the selected color is not displayed.
-* Optimize one-click sharing of Markdown, css and js resources required by the webpage, and upload them to uniCloud web page hosting.
-* Fixed the bug that the uni-app runs to the iOS simulator, and the uni debugging is turned on. After opening, the window shows a blank bug
