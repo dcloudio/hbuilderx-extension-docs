@@ -1,3 +1,10 @@
+## 4.14.2024042905-alpha
+* 修复 某些情况下，关闭修改状态下的文件，弹框保存崩溃的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1648)
+* 修复 当HBuilderX安装目录的上级目录存在package.json、package-lock.json、node_modules时，会导致某些插件安装失败的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1649)
+* 修复 语言服务 windows平台在uni-app x项目中选择语法提示和校验平台某些情况下不生效的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1653)
+* 修复 App云打包 uni-app项目，提交打包后一直卡在40%的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1630)
+* 修复 4.13版引出的 `uni_modules` 插件包含 `uni_modules.config.json` 脚本时上传失败的Bug
+
 ## 4.13.2024042321-alpha
 * 调整 内置node版本由v16.17.0升级到v18.20.0
 * 调整 macOS 最低支持版本调整为10.15

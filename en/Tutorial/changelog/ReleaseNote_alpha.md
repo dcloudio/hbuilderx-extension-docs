@@ -1,3 +1,10 @@
+## 4.14.2024042905-alpha
+* Fixed In some cases, when closing a modified file, the pop-up box will crash when saving.  [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=1648)
+* Fixed a bug that would cause some plug-in installations to fail when package.json, package-lock.json, and node_modules exist in the upper-level directory of the HBuilderX installation directory. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=1649)
+* Language Server: Fixed a Bug in windows platform where the selection of syntax hints in uni-app x projects and the validation platform did not take effect in some cases [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=1653)
+* Fixed the App cloud packaging uni-app project, the bug is always stuck at 40% after submitting the package [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=1630)
+* Fixed the bug of upload failure when the `uni_modules` plug-in introduced in version 4.13 contains the uni_modules.config.json script
+
 ## 4.13.2024042321-alpha
 * Adjust the built-in node version to be upgraded from v16.17.0 to v18.20.0
 * Adjust the minimum supported version of macOS to 10.15
