@@ -1,4 +1,8 @@
-## 4.14.2024043008
+## 4.15.2024050802
+* Language Server: Fixed the bug that when an absolute path in the form of "@/" is used in the uni-app project, there is no code prompt and syntax verification error. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=1590)
+* Fixed the uni-app x manifest.json Android startup interface setting. When the splash image is a relative path, the image resource is lost after submitting the cloud package [Details](https://issues.dcloud.net.cn/pages/issues/ detail?id=1814)
+
+## 4.14.2024043013
 * Adjust the built-in node version to be upgraded from v16.17.0 to v18.20.0
 * Adjust the minimum supported version of macOS to 10.15
 * Language Server: Added new language service uni-app x to support css syntax verification [Details](https://hx.dcloud.net.cn/Tutorial/Language/cssValidate)

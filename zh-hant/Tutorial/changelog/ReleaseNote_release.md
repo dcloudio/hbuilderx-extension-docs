@@ -1,22 +1,23 @@
-## 4.14.2024043008
+## 4.15.2024050802
+* 修复 语言服务 uni-app项目中使用"@/"形式的绝对路径时，没有代码提示和语法校验报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1590)
+* 修复 uni-app x manifest.json Android启动界面设置，当splash图为相对路径时提交云端打包后图片资源丢失的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1814)
+
+## 4.14.2024043013
 * 调整 内置node版本由v16.17.0升级到v18.20.0
 * 调整 macOS 最低支持版本调整为10.15
-* 新增 语言服务 uni-app x 支持 css 语法校验 [详情](https://hx.dcloud.net.cn/Tutorial/Language/cssValidate)
-* 新增 语言服务 uni-app x 支持 uvue 标签语法校验 [详情](https://hx.dcloud.net.cn/Tutorial/Language/vueValidate)
+* 调整 语言服务 内置vue框架的d.ts版本从3.2.26升级到3.4.21
+* 修复 语言服务 scss出现语法错误时，某些情况下无法正常提示的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1466)
 * 新增 语言服务 uts插件 iOS平台支持提示使用的三方Framework的api（仅Mac版支持)
 * 调整 语言服务 uts插件 iOS平台语言服务在windows版本的HBuilderX下不再生效
 * 修复 语言服务 uts 语法校验 泛型定义时使用内部类误报错的Bug
 * 修复 语言服务 uts 语法校验 特殊值域string和string类型的变量相互赋值时误报错的Bug
-* 修复 语言服务 uts语法校验误报错："undefined无法赋值给类型null"的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1461)
-* 修复 语言服务 uts语法校验误报错："number类型无法赋值给number字面量类型"的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1460)
-* 修复 语言服务 uni-app x 平台校验错误提示时，平台错误顺序和设置平台时的顺序不一致的Bug
-* 调整 语言服务 内置vue框架的d.ts版本从3.2.26升级到3.4.21
-* 修复 语言服务 uvue标签语法校验 误报v-slot和v-bind不识别的Bug
-* 新增 语言服务 非uts插件开发环境下引用iOS平台原生相关模块会报警
-* 新增 语言服务 uni-app x typeof运算符返回值支持平台特有类型 [详情](https://doc.dcloud.net.cn/uni-app-x/uts/operator.html#typeof)
-* 修复 语言服务 导入自定义uvue组件无法识别的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1397)
-* 修复 语言服务 scss出现语法错误时，某些情况下无法正常提示的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1466)
-* 修复 语言服务 windows平台在uni-app x项目中选择语法提示和校验平台某些情况下不生效的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1653)
+* 修复 语言服务 uts 语法校验误报错："undefined无法赋值给类型null"的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1461)
+* 修复 语言服务 uts 语法校验误报错："number类型无法赋值给number字面量类型"的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1460)
+* 修复 语言服务 uts typeof运算符返回值支持平台特有类型 [详情](https://doc.dcloud.net.cn/uni-app-x/uts/operator.html#typeof)
+* 新增 语言服务 uni-app x 支持 uvue 标签语法校验 [详情](https://hx.dcloud.net.cn/Tutorial/Language/vueValidate)
+* 新增 语言服务 uni-app x 支持 css 语法校验 [详情](https://hx.dcloud.net.cn/Tutorial/Language/cssValidate)
+* 修复 语言服务 uni-app x 校验错误提示时，平台错误顺序和设置平台时的顺序不一致的Bug
+* 修复 语言服务 uni-app x windows平台选择语法提示和校验平台某些情况下不生效的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1653)
 * 修复 windows 切换免打扰模式 F11快捷键在默认快捷键方案下不生效的Bug
 * 修复 vue文件 `{{}}`后面无法输入中文符号的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=924)
 * 修复 向上插入空行 当光标在第一行时，插入内容不正确的Bug
@@ -32,9 +33,7 @@
 * 修复 当HBuilderX安装目录的上级目录存在package.json、package-lock.json、node_modules时，会导致某些插件安装失败的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1649)
 * 新增 Bug反馈插件 uni-app x分类，支持Web和iOS平台，并且允许多选
 * 修复 uni-app 打印多个 object 类型参数时，点击超链接都会跳转到最后一个[详情](https://issues.dcloud.net.cn/pages/issues/detail?id=890)
-* 新增 uni-app x 真机运行 iOS平台增加清理构建缓存功能，缓存目录为unpackage/cache/.app-ios [详情](https://doc.dcloud.net.cn/uni-app-x/compiler/#cache)
 * 调整 uni-app x 真机运行 Android平台构建缓存目录unpackage/cache/.kotlin调整为unpackage/cache/.app-android
-* 新增 uni-app (x) 发行到app，iOS图标配置只能为1024*1024像素
 * 修复 App云打包 uni-app项目，提交打包后一直卡在40%的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1630)
 
 ## 4.08.2024040127
