@@ -1,3 +1,8 @@
+## 4.17.2024051110-alpha
+* 修复 语言服务 uni-app项目中使用"@/"形式引用包名缺省"index.ts"或"index.js"时，没有代码提示和语法校验报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1934)
+* 修复 uni-app x 真机运行 iOS模拟器修改uts插件后重签基座控制台没有运行日志的Bug[详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1963)
+* 修复 uni-app (x) 某些情况下，UTS插件Android debug无法使用的Bug
+
 ## 4.16.2024051009-alpha
 * 修复 语言服务 uni-app项目中使用"@/"形式的绝对路径时，没有代码提示和语法校验报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1590)
 * 修复 语言服务 文件删除后，该文件中定义的符号信息在某些情况下仍旧提示的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1564)
@@ -67,10 +72,10 @@
 * 修复 uni-app 运行到web package.json自定义运行到内置浏览器不生效的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1084)
 
 ## 4.06.2024032403-alpha
-* 无
+* 修复 4.05版引出的 从插件市场导入项目模版，误提示项目模版无效的Bug
 
 ## 4.05.2024032021-alpha
-* 无
+* 修复 4.0版引出的 uni-app (x) 项目运行 刚启动HBuilderX时立即运行有概率误报`uniapp-extension`插件被篡改的Bug
 
 ## 4.04.2024031519-alpha
 * 修复 uni-app 发行到web，开启摇树优化的情况下，提示编译成功，但是没有文件的Bug [详情](https://ask.dcloud.net.cn/question/187418)
@@ -160,7 +165,7 @@
 * 修复 Windows 某些情况下地址栏无法使用快捷键复制的Bug [详情](https://ask.dcloud.net.cn/question/180472)
 * 修复 MacOSX 某些情况下内置浏览器devtools里面的文字无法使用快捷键复制的Bug [详情](https://ask.dcloud.net.cn/question/181819)
 * 修复 多文件搜索 鼠标双击搜索结果项，输入焦点没有自动设置到打开的编辑器内的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=309)
-* 修复 .editorconfig 配置`insert_final_newline`、`trim_trailing_whitespace`在保存文件时没有生效的Bug [详情](https://ask.dcloud.net.cn/question/165790) 
+* 修复 .editorconfig 配置`insert_final_newline`、`trim_trailing_whitespace`在保存文件时没有生效的Bug [详情](https://ask.dcloud.net.cn/question/165790)
 * 新增 语言服务 uni-app x uts自动修复 支持number类型和kotlin的数字类型互相转换
 * 新增 语言服务 uni-app x uts类型检查 支持函数类型校验 [详情](https://doc.dcloud.net.cn/uni-app-x/uts/function.html#%E5%87%BD%E6%95%B0%E7%B1%BB%E5%9E%8B)
 * 新增 语言服务 uni-app x uts类型检查 检查算法由结构校验调整为名称校验 [详情](https://doc.dcloud.net.cn/uni-app-x/uts/type-compatibility.html)

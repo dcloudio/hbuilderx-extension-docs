@@ -1,3 +1,8 @@
+## 4.17.2024051110-alpha
+* Language Server: Fixed the bug that when the "@/" form is used to reference the default package name "index.ts" or "index.js" in the language service uni-app project, there is no code prompt and syntax verification error. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=1934)
+* Fixed the bug that there is no running log in uni-app x, real machine, iOS simulator after modifying uts plug-in and re-signing the base console [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=1963)
+* Fixed the bug that the UTS plug-in Android debug cannot be used
+
 ## 4.16.2024051009-alpha
 * Language Server: Fixed the bug that when an absolute path in the form of "@/" is used in the uni-app project, there is no code prompt and syntax verification error. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=1590)
 * Language Server: Fixed the bug of duplicate search results in uni-app x project under certain circumstances [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=1904)
@@ -68,10 +73,10 @@
 * Fixed the bug that the custom running of uni-app to web package.json does not take effect when running to the built-in browser [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=1084)
 
 ## 4.06.2024032403-alpha
-* Fixed some minor issues
+* Fixed the bug caused by version 4.05 when importing project templates from the plug-in market and incorrectly prompting that the project template is invalid
 
 ## 4.05.2024032021-alpha
-* Fixed some minor issues
+* Fixed the bug that the uni-app (x) project may falsely report that the `uniapp-extension` plug-in has been tampered with when HBuilderX is first started.
 
 ## 4.04.2024031519-alpha
 * Fixed the issue where when uni-app is released to the web and tree-shaking optimization is turned on, it prompts that the compilation is successful but there is no file. [Details](https://ask.dcloud.net.cn/question/187418)
@@ -160,7 +165,7 @@
 * Fixed a bug in Windows where, in some cases, the address bar could not use shortcut keys to copy addresses. [Details](https://ask.dcloud.net.cn/question/180472)
 * Fixed the bug that in some cases on MacOSX, text in the built-in browser devtools cannot be copied using shortcut keys [Details](https://ask.dcloud.net.cn/question/181819)
 * Fixed multi-file search, double-click the search result item, the input focus is not automatically set to the bug in the open editor [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=309)
-* Fixed the bug that the .editorconfig configuration `insert_final_newline` and `trim_trailing_whitespace` did not take effect when saving the file [Details](https://ask.dcloud.net.cn/question/165790) 
+* Fixed the bug that the .editorconfig configuration `insert_final_newline` and `trim_trailing_whitespace` did not take effect when saving the file [Details](https://ask.dcloud.net.cn/question/165790)
 * Language Server: Added uni-app x, uts automatic repair, support conversion between number type and kotlin number type
 * Language Server: Added uni-app x, uts type checking, support function type checking [Details](https://uniapp.dcloud.net.cn/uni-app-x/uts/function.html#%E5%87%BD%E6%95%B0%E7%B1%BB%E5%9E%8B)
 * Language Server: Added uni-app x, uts type checking, and adjusted the checking algorithm from structure verification to name verification [Details](https://uniapp.dcloud.net.cn/uni-app-x/uts/type-compatibility.html)
