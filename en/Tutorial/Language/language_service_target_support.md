@@ -8,6 +8,8 @@ Since **`4.0+`**, the uni-app x project supports switching language service by d
 
 - APP-ANDROID
 
+- APP-IOS
+
 - WEB
 
 ## Supported file types
@@ -40,15 +42,12 @@ Translated with www.DeepL.com/Translator (free version)
 
 - Select the target platform in the pop-up window
 
-![](https://web-ext-storage.dcloud.net.cn/hx/language-service-target-support/2.jpg)
+![](https://web-ext-storage.dcloud.net.cn/hx/systax_1.jpg)
 
-- Platform supports multiple choice
+- Platform supports single choice only
 
-*Note: Selecting multiple platforms will cause HBuilderX to load multiple sets of language services, which will affect HBuilderX's memory consumption and running speed. If you only develop one platform, you should uncheck the other platforms.*
+- `APP-ANDROID` platforms enabled by default
 
-- All platforms enabled by default
-
-*Tip: In the code area within the non-conditional compilation, code hints will prompt multiple platform-specific hints, and syntax checks will appear as the result of multiple platform checks.*
 
 ## Rules for the scope of language services
 
@@ -88,31 +87,13 @@ You can prompt for `DOM API` and `UNI API` in `WEB` conditional compilation.
 
 ### Unconditionally compiled code areas
 
-In the non-conditionally compiled code area, code hints and syntax checks will be based on the platform selected (all is selected by default).
-
-*Note: In the case of multi-platform validation, writing code specific to one platform may result in an error in the syntax checking of other platforms.*
-
-*Example:*
-
-All code hints for selecting a platform will take effect
-
-![](https://web-ext-storage.dcloud.net.cn/hx/language-service-target-support/6.jpg)
-
-![](https://web-ext-storage.dcloud.net.cn/hx/language-service-target-support/7.jpg)
-
-![](https://web-ext-storage.dcloud.net.cn/hx/language-service-target-support/8.jpg)
-
-All syntax checks for the selected platform take effect
-
-![](https://web-ext-storage.dcloud.net.cn/hx/language-service-target-support/9.jpg)
-
-![](https://web-ext-storage.dcloud.net.cn/hx/language-service-target-support/10.jpg)
+In the non-conditionally compiled code area, code hints and syntax checks will be based on the platform selected.
 
 ## Conditional compilation support for `pages.json`
 
 > pages.json条件编译，见[详情](https://uniapp.dcloud.net.cn/tutorial/platform.html#pages-json-%E7%9A%84%E6%9D%A1%E4%BB%B6%E7%BC%96%E8%AF%91)
 
-In `pages.json`, pages written in conditional compilation are only served with the language of the platform for which the conditional compilation is intended, even if the project chooses a multi-platform language service
+In `pages.json`, pages written in conditional compilation are only served with the language of the platform for which the conditional compilation is intended
 
 *Example:*
 
@@ -142,7 +123,7 @@ In the `pages.json` file, write xxx.uvue in the conditional compilation `WEB` bl
 }
 ```
 
-Then in the xxx.uvue file, only the language services related to the `web` platform will be provided, the language services for the `Android` platform will not take effect
+Then in the xxx.uvue file, only the language services related to the 'WEB' platform will be provided, and the language services of other platforms will not take effect. If the project does not check the 'WEB' platform, the entire file will have no language services
 ```vue
 // xxx.uvue
 

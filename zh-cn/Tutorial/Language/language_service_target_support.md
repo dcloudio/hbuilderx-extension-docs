@@ -8,6 +8,8 @@
 
 - APP-ANDROID
 
+- APP-IOS
+
 - WEB
 
 ## 支持的文件类型
@@ -38,19 +40,14 @@
 
 - 在弹出的窗口中选择目标平台
 
-![](https://web-ext-storage.dcloud.net.cn/hx/language-service-target-support/2.jpg)
+![](https://web-ext-storage.dcloud.net.cn/hx/systax_1.jpg)
 
-- 平台支持多选
+- 平台仅支持单选
 
-*注意：选择多个平台，会导致HBuilderX加载多套语言服务，影响HBuilderX的内存占用和运行速度。如果只开发一个平台，应去掉其他平台的勾选。*
+- 默认开启平台：APP-ANDROID
 
-- 默认开启全平台
-
-*提示：在非条件编译内的代码区域，代码提示会提示出多个平台专用提示，语法校验会出现多个平台校验的结果*
 
 ## 语言服务生效范围的规则
-
-默认情况下，我们不知道您的代码将要编译到哪个平台，我们视做全平台编译，也就是所有平台的语言服务都会生效
 
 ### 条件编译代码区域
 
@@ -86,31 +83,13 @@
 
 ### 非条件编译代码区域
 
-在非条件编译代码区域里，代码提示、语法校验则会以选择的平台为准（默认选择全部）
-
-*注意：在多平台生效的情况下，写某一平台特定的代码，其它平台的语法校验可能会报错*
-
-*例如：*
-
-所有选择平台的代码提示都会生效
-
-![](https://web-ext-storage.dcloud.net.cn/hx/language-service-target-support/6.jpg)
-
-![](https://web-ext-storage.dcloud.net.cn/hx/language-service-target-support/7.jpg)
-
-![](https://web-ext-storage.dcloud.net.cn/hx/language-service-target-support/8.jpg)
-
-所有选择平台的语法校验都会生效
-
-![](https://web-ext-storage.dcloud.net.cn/hx/language-service-target-support/9.jpg)
-
-![](https://web-ext-storage.dcloud.net.cn/hx/language-service-target-support/10.jpg)
+在非条件编译代码区域里，代码提示、语法校验则会以选择的平台为准（默认选择：APP-ANDROID）
 
 ## `pages.json`的条件编译支持
 
 > pages.json条件编译，见[详情](https://uniapp.dcloud.net.cn/tutorial/platform.html#pages-json-%E7%9A%84%E6%9D%A1%E4%BB%B6%E7%BC%96%E8%AF%91)
 
-在`pages.json`中，写在条件编译中的页面，仅为其提供条件编译对应平台的语言服务，即使该项目选择了多平台的语言服务
+在`pages.json`中，写在条件编译中的页面，仅为其提供条件编译对应平台的语言服务
 
 *例如：*
 
@@ -140,7 +119,7 @@
 }
 ```
 
-那么在xxx.uvue文件中，将只会提供`web`平台相关的语言服务，`Android`平台的语言服务则不会生效
+那么在xxx.uvue文件中，将只会提供`WEB`平台相关的语言服务，其它平台的语言服务则不会生效，如果项目没有勾选`WEB`平台，则整个文件将没有语言服务
 ```vue
 // xxx.uvue
 

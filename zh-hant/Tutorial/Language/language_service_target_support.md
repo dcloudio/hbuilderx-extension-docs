@@ -8,6 +8,8 @@
 
 - APP-ANDROID
 
+- APP-IOS
+
 - WEB
 
 ## 支持的文件類型
@@ -38,15 +40,12 @@
 
 - 在彈出的窗口中選擇目標平臺
 
-![](https://web-ext-storage.dcloud.net.cn/hx/language-service-target-support/2.jpg)
+![](https://web-ext-storage.dcloud.net.cn/hx/systax_1.jpg)
 
-- 平臺支持多選
+- 平臺僅支持單選
 
-*註意：選擇多個平臺，會導致HBuilderX加載多套語言服務，影響HBuilderX的內存占用和運行速度。如果只開發一個平臺，應去掉其他平臺的勾選。*
+- 默認開啟平臺：APP-ANDROID
 
-- 默認開啟全平臺
-
-*提示：在非條件編譯內的代碼區域，代碼提示會提示出多個平臺專用提示，語法校驗會出現多個平臺校驗的結果*
 
 ## 語言服務生效範圍的規則
 
@@ -86,31 +85,13 @@
 
 ### 非條件編譯代碼區域
 
-在非條件編譯代碼區域裏，代碼提示、語法校驗則會以選擇的平臺為準（默認選擇全部）
-
-*註意：在多平臺生效的情況下，寫某一平臺特定的代碼，其它平臺的語法校驗可能會報錯*
-
-*例如：*
-
-所有選擇平臺的代碼提示都會生效
-
-![](https://web-ext-storage.dcloud.net.cn/hx/language-service-target-support/6.jpg)
-
-![](https://web-ext-storage.dcloud.net.cn/hx/language-service-target-support/7.jpg)
-
-![](https://web-ext-storage.dcloud.net.cn/hx/language-service-target-support/8.jpg)
-
-所有選擇平臺的語法校驗都會生效
-
-![](https://web-ext-storage.dcloud.net.cn/hx/language-service-target-support/9.jpg)
-
-![](https://web-ext-storage.dcloud.net.cn/hx/language-service-target-support/10.jpg)
+在非條件編譯代碼區域裏，代碼提示、語法校驗則會以選擇的平臺為準（默認選擇：APP-ANDROID）
 
 ## `pages.json`的條件編譯支持
 
 > pages.json條件編譯，見[詳情](https://uniapp.dcloud.net.cn/tutorial/platform.html#pages-json-%E7%9A%84%E6%9D%A1%E4%BB%B6%E7%BC%96%E8%AF%91)
 
-在`pages.json`中，寫在條件編譯中的頁面，僅為其提供條件編譯對應平臺的語言服務，即使該項目選擇了多平臺的語言服務
+在`pages.json`中，寫在條件編譯中的頁面，僅為其提供條件編譯對應平臺的語言服務
 
 *例如：*
 
@@ -140,7 +121,7 @@
 }
 ```
 
-那麽在xxx.uvue文件中，將只會提供`web`平臺相關的語言服務，`Android`平臺的語言服務則不會生效
+那麼在xxx.uvue文件中，將只會提供`WEB`平臺相關的語言服務，其它平臺的語言服務則不會生效，如果項目沒有勾選`WEB`平臺，則整個文件將沒有語言服務
 ```vue
 // xxx.uvue
 
