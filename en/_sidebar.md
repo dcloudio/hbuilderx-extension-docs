@@ -44,6 +44,7 @@
     * [uni-app-x Multi-platform code completion and syntax checking](/Tutorial/Language/language_service_target_support.md)
     * [uni-app-x css syntax checking](/Tutorial/Language/cssValidate.md)
     * [uni-app-x uvue tag syntax checking](/Tutorial/Language/vueValidate.md)
+    * [Language services status panel](/Tutorial/Language/lsStatus.md)
 * App
     * [Phone Debugging](/Tutorial/App/PhoneDebugging.md)
     * [Install Simulator](/Tutorial/App/installSimulator.md)

@@ -45,6 +45,7 @@
     * [uni-app-x 多平臺代碼提示和語法校驗](/Tutorial/Language/language_service_target_support.md)
     * [uni-app-x css語法校驗](/Tutorial/Language/cssValidate.md)
     * [uni-app-x uvue標簽語法校驗](/Tutorial/Language/vueValidate.md)
+    * [語言服務狀態面板](/Tutorial/Language/lsStatus.md)
 * App開發
     * [真機運行常見問題](/Tutorial/App/PhoneDebugging.md)
     * [安裝配置模擬器](/Tutorial/App/installSimulator.md)
