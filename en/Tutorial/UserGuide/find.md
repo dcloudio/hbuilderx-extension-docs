@@ -4,6 +4,26 @@
 - Find and replace strings (by file, by project, by directory), and support regular expression
 - Find symbol
 
+## Regular expression grouping and back-reference@replace-group-by-regexp
+The capture group of a regular expression is numbered by calculating the opening parentheses from left to right. For example, there are four subgroups in '(A)(B(C))':
+
+|groupNumber|groupContent|
+|--	        |--	        |
+|0			|(A)(B(C))	|
+|1			|(A)		|
+|2			|(B(C))		|
+|3			|(C)		|
+
+Back-reference:In replacement expressions we can use the number of the group to refer to the text content captured by the lookup expression (instead of the RE).
+
+HX backreferences use backslashes \ and numbers, as shown in the following example:
+```
+Search expression(Find):([A-Za-z\s]+)@(\w+\.io)
+Substitution expression(Replace)：email:(\1)@163.com\3
+Before replacement:unicloud@dcloud.io
+After replacement:email:(unicloud)@163.com\3
+```
+
 ## Find files@find-files
 
 `ctrl+p (MacOSX: ⌘P)`, You can navigate to the search box, enter the file name, and quickly open any file.
