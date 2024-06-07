@@ -1,3 +1,7 @@
+## 4.19.2024060704-alpha
+* 修复 语言服务 markdown的代码区域没有css提示的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=2230)
+* 修复 4.18版本引出的 HBuilderX底部状态栏，语言服务语法校验文本，在单窗体下点击无反应的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=2353)
+
 ## 4.18.2024060311-alpha
 * 新增 uni-app x 项目 生成本地打包原生Android资源 [详情](https://doc.dcloud.net.cn/uni-app-x/native/use/android.html)
 * 新增 uni-app x 真机运行 iOS平台（iOS17以下）uts插件断点调试 [详情](https://uniapp.dcloud.net.cn/tutorial/debug/uni-uts-debug-ios.html)
