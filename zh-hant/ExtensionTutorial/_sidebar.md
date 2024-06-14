@@ -25,11 +25,23 @@
       <div>HBuilderX官網</div>
     </div>
   </a>
+  <a href="https://ext.dcloud.net.cn/?cat1=1&cat2=11&orderBy=TotalDownload" target="_blank" class="contact-item">
+    <img src="/static/favicon/market.png" width="18" height="18">
+    <div class="contact-smg">
+      <div>HBuilderX插件市场</div>
+    </div>
+  </a>
   <a href="https://ask.dcloud.net.cn/explore/" target="_blank" class="contact-item">
     <img src="/static/icon/ask.png" width="20" height="21">
     <div class="contact-smg">
       <div>DCloud論壇</div>
     </div>
+  </a>
+  <a href="https://im.dcloud.net.cn/index.html#/?joinGroup=666bfd27b833754e698596aa" target="_blank" class="contact-item">
+      <img src="https://qiniu-web-assets.dcloud.net.cn/unidoc/zh/chat-icon-r.png" width="20" height="21">
+      <div class="contact-smg">
+          <div>HBuilderX插件开发uni-im交流群</div>
+      </div>
   </a>
   <div class="contact-item">
     <img src="/static/icon/qq.png" width="20" height="20" />
