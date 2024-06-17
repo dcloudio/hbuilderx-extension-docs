@@ -53,3 +53,29 @@ The bottom status bar changes as well
 <div>
 <img src="https://web-ext-storage.dcloud.net.cn/hx/lsstatus/en/7.png" style="border:1px solid #eee;   border-radius: 5px;"  />
 </div>
+
+4.Catch language service errors
+
+- Once an error occurs within the language service, the status of the status bar changes accordingly
+
+<div>
+<img src="https://web-ext-storage.dcloud.net.cn/hx/lsstatus/en/8.png" style="border:1px solid #eee;   border-radius: 5px;"  />
+</div>
+
+- Click the status bar text to view the detailed error message
+
+<div>
+<img src="https://web-ext-storage.dcloud.net.cn/hx/lsstatus/en/9.png" style="border:1px solid #eee;   border-radius: 5px;"  />
+</div>
+
+- Click the `Ignore` button to ignore this error and the status bar will return to normal
+
+<div>
+<img src="https://web-ext-storage.dcloud.net.cn/hx/lsstatus/en/10.png" style="border:1px solid #eee;   border-radius: 5px;"  />
+</div>
+
+- Click the `Report Bug` button, will jump to the bug submission page, the language service error content will be written into the repeat step, at this time you can improve other bug information, after the successful submission of the bug status bar will be restored to the normal state
+
+<div>
+<img src="https://web-ext-storage.dcloud.net.cn/hx/lsstatus/zh/12.png" style="border:1px solid #eee;   border-radius: 5px;"  />
+</div>

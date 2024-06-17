@@ -52,3 +52,29 @@
 <div>
 <img src="https://web-ext-storage.dcloud.net.cn/hx/lsstatus/zh/7.png" style="border:1px solid #eee;  border-radius: 5px;" />
 </div>
+
+4.捕獲語言服務錯誤
+
+- 一旦語言服務內部出錯了，狀態欄的狀態就會隨之變化
+
+<div>
+<img src="https://web-ext-storage.dcloud.net.cn/hx/lsstatus/zh/8.png" style="border:1px solid #eee;  border-radius: 5px;" />
+</div>
+
+- 點擊狀態欄文字可以查看詳細的錯誤信息
+
+<div>
+<img src="https://web-ext-storage.dcloud.net.cn/hx/lsstatus/zh/9.png" style="border:1px solid #eee;  border-radius: 5px;" />
+</div>
+
+- 點擊`忽略`按鈕表示忽略此錯誤，此時狀態欄會恢復到正常的狀態
+
+<div>
+<img src="https://web-ext-storage.dcloud.net.cn/hx/lsstatus/zh/10.png" style="border:1px solid #eee;  border-radius: 5px;" />
+</div>
+
+- 點擊`報Bug`按鈕，會跳轉到bug提交頁面，語言服務報錯內容會被寫入到復現步驟裏邊，此時您可以完善其他的bug信息，bug提交成功後狀態欄會恢復到正常的狀態
+
+<div>
+<img src="https://web-ext-storage.dcloud.net.cn/hx/lsstatus/zh/12.png" style="border:1px solid #eee;  border-radius: 5px;" />
+</div>
