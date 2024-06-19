@@ -1,3 +1,10 @@
+## 4.21.2024061818-alpha
+* 新增 语言服务 加密插件存在类型声明文件时，支持引用插件时代码提示
+* 新增 语言服务 出现严重错误时，状态栏提示及快捷报Bug功能
+* 修复 语言服务 某些情况下引用的文件路径与本地真实路径大小写不一致时偶发的语言服务报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=2468)
+* 修复 语言服务 uni-app (x) 页面中只有一个uni.的时候，不提示ext api的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=2503)
+* 修复 4.18版本引出的 markdown预览热更新失效的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=2467)
+
 ## 4.19.2024060704-alpha
 * 修复 语言服务 markdown的代码区域没有css提示的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=2230)
 * 修复 4.18版本引出的 HBuilderX底部状态栏，语言服务语法校验文本，在单窗体下点击无反应的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=2353)
@@ -5,7 +12,7 @@
 ## 4.18.2024060311-alpha
 * 新增 uni-app x 项目 生成本地打包原生Android资源 [详情](https://doc.dcloud.net.cn/uni-app-x/native/use/android.html)
 * 新增 uni-app x 真机运行 iOS平台（iOS17以下）uts插件断点调试 [详情](https://uniapp.dcloud.net.cn/tutorial/debug/uni-uts-debug-ios.html)
-* 新增 语言服务 在状态栏显示语言服务详情，方便了解状态和进行设置  [详情](https://hx.dcloud.net.cn/Tutorial/Language/lsStatus)
+* 新增 语言服务 在状态栏显示语言服务详情，方便了解状态和进行设置 [详情](https://hx.dcloud.net.cn/Tutorial/Language/lsStatus)
 * 调整 语言服务 uni-app x项目 默认关闭uts、uvue、css文件的语法校验，可通过语言服务状态栏打开
 * 优化 语言服务 uni-app x项目 代码提示和语法校验等功能的性能
 * 修复 语言服务 uni-app x项目 html没有标签提示的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1798)

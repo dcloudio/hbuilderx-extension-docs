@@ -1,3 +1,10 @@
+## 4.21.2024061818-alpha
+* Language Server: Added support for code prompts when referencing plugins when type declaration files exist for encryption plugins
+* Language Server: Added status bar prompts and quick bug reporting when serious errors occur
+* Language Server: Fixed a bug that caused occasional language service errors when the referenced file path was inconsistent with the local real path in some cases [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=2468)
+* Language Server: Fixed the bug that the ext api is not prompted when there is only one uni. in the uni-app page [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=2503)
+* Fixed the bug that caused markdown preview hot update failure in version 4.18 [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=2467)
+
 ## 4.19.2024060704-alpha
 * Language Server: Fixed the bug that there is no CSS hint in the markdown code area [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=2230)
 
