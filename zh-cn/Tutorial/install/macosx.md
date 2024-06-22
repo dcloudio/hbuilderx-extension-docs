@@ -1,4 +1,4 @@
-# MacOSX安装HBuilderX@install
+# MacOS安装HBuilderX@install
 
 <!--
 keyword:安装,安装HBuilderX,下载
@@ -14,7 +14,7 @@ HBuilderX下载地址: [下载地址](https://www.dcloud.io/hbuilderx.html)
 
 <img src="/static/snapshots/tutorial/install_mac.jpeg" />
 
-> MacOSX，软件必须安装到`/Applications`目录，如未安装到此目录，可能会出现插件安装失败、项目创建失败等问题。
+> MacOS，软件必须安装到`/Applications`目录，如未安装到此目录，可能会出现插件安装失败、项目创建失败等问题。
 
 如果启动遇到下列问题，请到【系统设置】中解决。
 
@@ -34,7 +34,7 @@ HBuilderX下载地址: [下载地址](https://www.dcloud.io/hbuilderx.html)
 
 ## 启动问题@question
 
-某些情况下，MacOSX HBuilderX无法启动，解决方法如下：
+某些情况下，MacOS HBuilderX无法启动，解决方法如下：
 
 - 重启电脑
 - 配置文件目录下的.lock文件问题 [解决方案](#deleteLockFile)
