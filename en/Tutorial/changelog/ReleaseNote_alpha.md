@@ -1,3 +1,7 @@
+## 4.22.2024062415-alpha
+* Language Server: Fixed the bug that an error message is reported when a literal object is assigned to the union type of UTSJSONObject and null in the language service uniapp x project [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=2584)
+* Fixed the bug that when checking the old version of DCloud certificate in the uni-app old project's safe packaging, the prompt "Custom base does not support safe packaging, please switch to normal packaging" is incorrect
+
 ## 4.21.2024061818-alpha
 * Language Server: Added support for code prompts when referencing plugins when type declaration files exist for encryption plugins
 * Language Server: Added status bar prompts and quick bug reporting when serious errors occur

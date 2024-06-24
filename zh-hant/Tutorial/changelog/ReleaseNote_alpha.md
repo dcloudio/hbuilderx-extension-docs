@@ -1,3 +1,7 @@
+## 4.22.2024062415-alpha
+* 修复 语言服务 uniapp x项目下使用字面量对象赋值给UTSJSONObject与null的联合类型时，误报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=2584)
+* 修复 uni-app老项目 安心打包勾选DCloud老版证书时，提示语`自定义基座不支持安心打包，请切换到普通打包`不正确的Bug
+
 ## 4.21.2024061818-alpha
 * 新增 语言服务 加密插件存在类型声明文件时，支持引用插件时代码提示
 * 新增 语言服务 出现严重错误时，状态栏提示及快捷报Bug功能
