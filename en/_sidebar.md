@@ -52,6 +52,7 @@
     * [Safe Packing](/Tutorial/App/SafePack.md)
     * [iOS Safe Packing For Certificate](/Tutorial/App/iosSafePack.md)
     <!-- * [Chrome调试 5+ Android应用](Tutorial/App/use-chrome-to-debug-android-apps.md) -->
+    * [SoftLink](/Tutorial/App/softLink.md)
 * Version Control
     * [Git Introduce](/Tutorial/SourceControl/Git/README.md)
     * [Git Windows](/Tutorial/SourceControl/Git/Windows.md)
@@ -113,4 +114,3 @@
     </div>
   </a>
 </div>
-

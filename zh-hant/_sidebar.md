@@ -55,6 +55,7 @@
     * [uni-app发行到微信小程序](/Tutorial/App/uni-app-publish-mp-weixin.md)
     * [uni-app H5 Chrome調試](/Tutorial/debug/h5-debug.md)
     * [Chrome調試 5+ Android應用](Tutorial/App/use-chrome-to-debug-android-apps.md)
+    * [通過軟鏈優化日常開發體驗](/Tutorial/App/softLink.md)
 * 版本控制
     * [Git 介紹](/Tutorial/SourceControl/Git/README.md)
     * [Git重大更新](/Tutorial/SourceControl/git.md)
