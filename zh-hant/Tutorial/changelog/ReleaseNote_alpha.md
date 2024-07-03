@@ -1,3 +1,9 @@
+## 4.23.2024070309-alpha
+* 修复 语言服务 4.18版本引出的 uniapp x项目使用对象字面量时，定义的对象没有UTSJSONObject类型提示的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=2781)
+* 修复 uni-app (x) 运行到iOS 控制台打印的日志不能跳转的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1288)
+* 修复 uni-app (x) 4.18版本引出的 发行/上传网站到服务器卡在开始打包的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=2713)
+* 优化 uni-app (x) 运行到iOS，uts插件中的日志在控制台中输出的格式
+
 ## 4.22.2024062415-alpha
 * 修复 语言服务 uniapp x项目下使用字面量对象赋值给UTSJSONObject与null的联合类型时，误报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=2584)
 * 修复 uni-app老项目 安心打包勾选DCloud老版证书时，提示语`自定义基座不支持安心打包，请切换到普通打包`不正确的Bug

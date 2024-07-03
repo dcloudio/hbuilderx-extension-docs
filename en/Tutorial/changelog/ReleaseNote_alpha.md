@@ -1,3 +1,9 @@
+## 4.23.2024070309-alpha
+* Language Server: Fixed the bug introduced in version 4.18, when the uniapp x project uses object literals, the defined objects do not have UTSJSONObject type hints [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=2781)
+* uni-app (x): Fixed the bug that the log printed to the iOS console cannot be redirected[Details](https://issues.dcloud.net.cn/pages/issues/detail?id=1288)
+* uni-app (x): Fixed the bug introduced in version 4.18, where the release/upload of the website to the server was stuck at the beginning of packaging [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=2713)
+* uni-app (x): Optimize the format of the log output in the console of the uts plugin when running on iOS
+
 ## 4.22.2024062415-alpha
 * Language Server: Fixed the bug that an error message is reported when a literal object is assigned to the union type of UTSJSONObject and null in the language service uniapp x project [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=2584)
 * Fixed the bug that when checking the old version of DCloud certificate in the uni-app old project's safe packaging, the prompt "Custom base does not support safe packaging, please switch to normal packaging" is incorrect
