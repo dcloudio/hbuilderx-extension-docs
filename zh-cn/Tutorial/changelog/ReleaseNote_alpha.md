@@ -1,120 +1,5 @@
-## 4.23.2024070309-alpha
-* 修复 语言服务 4.18版本引出的 uniapp x项目使用对象字面量时，定义的对象没有UTSJSONObject类型提示的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=2781)
-* 修复 uni-app (x) 运行到iOS 控制台打印的日志不能跳转的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1288)
-* 修复 uni-app (x) 4.18版本引出的 发行/上传网站到服务器卡在开始打包的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=2713)
-* 优化 uni-app (x) 运行到iOS，uts插件中的日志在控制台中输出的格式
-
-## 4.22.2024062415-alpha
-* 修复 语言服务 uniapp x项目下使用字面量对象赋值给UTSJSONObject与null的联合类型时，误报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=2584)
-* 修复 uni-app老项目 安心打包勾选DCloud老版证书时，提示语`自定义基座不支持安心打包，请切换到普通打包`不正确的Bug
-
-## 4.21.2024061818-alpha
-* 新增 语言服务 加密插件存在类型声明文件时，支持引用插件时代码提示
-* 新增 语言服务 出现严重错误时，状态栏提示及快捷报Bug功能
-* 修复 语言服务 某些情况下引用的文件路径与本地真实路径大小写不一致时偶发的语言服务报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=2468)
-* 修复 语言服务 uni-app (x) 页面中只有一个uni.的时候，不提示ext api的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=2503)
-* 修复 4.18版本引出的 markdown预览热更新失效的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=2467)
-
-## 4.19.2024060704-alpha
-* 修复 语言服务 markdown的代码区域没有css提示的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=2230)
-* 修复 4.18版本引出的 HBuilderX底部状态栏，语言服务语法校验文本，在单窗体下点击无反应的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=2353)
-
-## 4.18.2024060311-alpha
-* 新增 uni-app x 项目 生成本地打包原生Android资源 [详情](https://doc.dcloud.net.cn/uni-app-x/native/use/android.html)
-* 新增 uni-app x 真机运行 iOS平台（iOS17以下）uts插件断点调试 [详情](https://uniapp.dcloud.net.cn/tutorial/debug/uni-uts-debug-ios.html)
-* 新增 语言服务 在状态栏显示语言服务详情，方便了解状态和进行设置 [详情](https://hx.dcloud.net.cn/Tutorial/Language/lsStatus)
-* 调整 语言服务 uni-app x项目 默认关闭uts、uvue、css文件的语法校验，可通过语言服务状态栏打开
-* 优化 语言服务 uni-app x项目 代码提示和语法校验等功能的性能
-* 修复 语言服务 uni-app x项目 html没有标签提示的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1798)
-* 修复 语言服务 uni-app x项目 组件属性校验不支持识别大小驼峰写法的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=2056)
-* 修复 语言服务 uts有名类型赋值时，误报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=2050)
-* 修复 语言服务 uts插件web端引用包名报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=2051)
-* 修复 语言服务 scss和less使用嵌套写法误报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1451)
-* 修复 语言服务 在结束标签结尾位置没有代码提示的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1581)
-* 修复 语言服务 删除文件后，被删除文件中的内容在某些情况下依然有代码提示的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1564)
-* 修复 语言服务 某些情况下import的包名鼠标悬浮功能失效的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=2052)
-* 修复 html文件 运行到浏览器，修改该文件依赖的css和js时，不会自动刷新的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=2008)
-* 修复 项目管理器下，双击打开uts加密文件会导致不停启动HBuilderX的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1949)
-* 修复 项目下带package.json时，运行package.json下的scripts命令，导致HBuilderX崩溃的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1983)
-
-## 4.17.2024051110-alpha
-* 修复 语言服务 uni-app项目中使用"@/"形式引用包名缺省"index.ts"或"index.js"时，没有代码提示和语法校验报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1934)
-* 修复 uni-app x 真机运行 iOS模拟器修改uts插件后重签基座控制台没有运行日志的Bug[详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1963)
-* 修复 uni-app (x) 4.13 引出的，Node升级，导致UTS插件Android debug无法使用的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1979)
-
-## 4.16.2024051009-alpha
-* 修复 语言服务 uni-app项目中使用"@/"形式的绝对路径时，没有代码提示和语法校验报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1590)
-* 修复 语言服务 文件删除后，该文件中定义的符号信息在某些情况下仍旧提示的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1564)
-* 修复 语言服务 vue内置指令v-bind不提示已经存在的属性的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1637)
-* 优化 语言服务 uni ext api代码提示性能
-* 优化 语言服务 uni-app x项目 错误校验性能
-* 修复 语言服务 uni-app x项目 某些情况下，查找引用结果重复的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1904)
-* 修复 语言服务 uni-app x项目 pages.json文件中条件编译指定多平台时，语言服务只在单平台生效的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1905)
-* 修复 语言服务 uni-app x项目 instanceof关键字后面无法提示interface或type类型的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1906)
-* 修复 uni-app x项目 manifest.json Android启动界面设置，当splash图为相对路径时提交云端打包后图片资源丢失的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1814)
-* 修复 uni-app x项目 运行控制台，某些情况下输出的日志颜色错误的Bug
-
-## 4.14.2024042905-alpha
-* 修复 某些情况下，关闭修改状态下的文件，弹框保存崩溃的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1648)
-* 修复 当HBuilderX安装目录的上级目录存在package.json、package-lock.json、node_modules时，会导致某些插件安装失败的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1649)
-* 修复 语言服务 windows平台在uni-app x项目中选择语法提示和校验平台某些情况下不生效的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1653)
-* 修复 App云打包 uni-app项目，提交打包后一直卡在40%的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1630)
-* 修复 4.13版引出的 `uni_modules` 插件包含 `uni_modules.config.json` 脚本时上传失败的Bug
-
-## 4.13.2024042321-alpha
-* 调整 内置node版本由v16.17.0升级到v18.20.0
-* 调整 macOS 最低支持版本调整为10.15
-* 修复 关闭所有标签卡，在标签卡比较多的情况下，会导致UI卡顿的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1348)
-* 修复 文本搜索 在搜索区已经显示的情况下，快捷键触发替换，不能自动显示替换区的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1207)
-* 修复 单项目窗口 无打开文件时，`ctrl+tab` 无法触发视图切换的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1365)
-* 新增 语言服务 非uts插件开发环境下引用iOS平台原生相关模块会报警
-* 新增 语言服务 uni-app x typeof运算符返回值支持平台特有类型 [详情](https://doc.dcloud.net.cn/uni-app-x/uts/operator.html#typeof)
-* 调整 语言服务 uts插件iOS平台语言服务在windows版本的HBuilderX下不再生效
-* 修复 语言服务 导入自定义uvue组件无法识别的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1397)
-* 修复 语言服务 uts语法校验误报错："undefined无法赋值给类型null"的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1461)
-* 修复 语言服务 uts语法校验误报错："number类型无法赋值给number字面量类型"的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1460)
-* 修复 语言服务 scss出现语法错误时，某些情况下无法正常提示的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1466)
-* 新增 uni-app x 真机运行 iOS平台增加清理构建缓存功能，缓存目录为unpackage/cache/.app-ios [详情](https://doc.dcloud.net.cn/uni-app-x/compiler/#cache)
-* 调整 uni-app x 真机运行 Android平台构建缓存目录unpackage/cache/.kotlin调整为unpackage/cache/.app-android
-* 新增 uni-app (x) 发行到app，iOS图标配置只能为1024*1024像素
-* 修复 3.94版引出的 Webview调试控制台 点击调试链接后，无法加载调试等待页面的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1511)
-* 修复 4.11版引出的 uni-app x 发行到app，不能正常显示打包错误的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1588)
-
-## 4.12.2024041009-alpha
-* 新增 Bug反馈插件 uni-app x分类，支持Web和iOS平台，并且允许多选
-* 调整 语言服务 内置vue框架的d.ts版本从3.2.26升级到3.4.21
-* 修复 语言服务 uvue标签语法校验 误报v-slot和v-bind不识别的Bug
-* 修复 某些情况下，编辑器右键`查找引用`可能导致HBuilderX闪退的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1246)
-* 修复 未保存的标签卡，在非激活状态下，退出重开HBuilderX后，修改内容未正确还原的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1317)
-* 修复 编辑器悬浮提示，提示信息内的链接颜色在深色主题下看不清的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1094)
-
-## 4.11.2024040401-alpha
-* 新增 语言服务 uni-app x 支持 css 语法校验 [详情](https://hx.dcloud.net.cn/Tutorial/Language/cssValidate)
-* 新增 语言服务 uni-app x 支持 uvue 标签语法校验 [详情](https://hx.dcloud.net.cn/Tutorial/Language/vueValidate)
-* 新增 语言服务 uts插件 iOS平台支持提示使用的三方Framework的api（仅Mac版支持)
-* 修复 语言服务 uts 语法校验 泛型定义时使用内部类误报错的Bug
-* 修复 语言服务 uts 语法校验 特殊值域string和string类型的变量相互赋值时误报错的Bug
-* 修复 语言服务 uni-app x 平台校验错误提示时，平台错误顺序和设置平台时的顺序不一致的Bug
-* 修复 windows 切换免打扰模式 F11快捷键在默认快捷键方案下不生效的Bug
-* 修复 vue文件 `{{}}`后面无法输入中文符号的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=924)
-* 修复 向上插入空行 当光标在第一行时，插入内容不正确的Bug
-* 修复 转到定义到新打开的文件，当文件比较大时，有概率导致光标回退时位置回到文件开头的Bug
-* 修复 Prettier插件 当卸载重装插件后，如果格式化有冲突，弹框中会重复出现插件名称的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=849)
-* 修复 uni-app 打印多个 object 类型参数时，点击超链接都会跳转到最后一个[详情](https://issues.dcloud.net.cn/pages/issues/detail?id=890)
-* 修复 uni-app cli项目 vue3使用vite情况下无法运行的Bug [详情](https://ask.dcloud.net.cn/question/188578)
-
-## 4.07.2024032807-alpha
-* 修复 语言服务 uts插件web平台下不提示uts基础api的Bug
-* 修复 uni-app 真机运行 模拟器支持多cpu架构时，运行标准基座误报不支持的Bug [详情](https://ask.dcloud.net.cn/question/186863)
-* 修复 uni-app 内置浏览器打开时，切换文件导致未运行的项目自动运行的Bug [详情](https://ask.dcloud.net.cn/question/188432)
-* 修复 uni-app cli项目 发行目录提示是web实际打包到h5的Bug [详情](https://ask.dcloud.net.cn/question/188468)
-* 修复 uni-app 运行到web package.json自定义运行到内置浏览器不生效的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1084)
-
-## 4.06.2024032403-alpha
-* 修复 4.05版引出的 从插件市场导入项目模版，误提示项目模版无效的Bug
-
 ## 4.05.2024032021-alpha
-* 修复 4.0版引出的 uni-app (x) 项目运行 刚启动HBuilderX时立即运行有概率误报`uniapp-extension`插件被篡改的Bug
+* 无
 
 ## 4.04.2024031519-alpha
 * 修复 uni-app 发行到web，开启摇树优化的情况下，提示编译成功，但是没有文件的Bug [详情](https://ask.dcloud.net.cn/question/187418)
@@ -204,7 +89,7 @@
 * 修复 Windows 某些情况下地址栏无法使用快捷键复制的Bug [详情](https://ask.dcloud.net.cn/question/180472)
 * 修复 MacOSX 某些情况下内置浏览器devtools里面的文字无法使用快捷键复制的Bug [详情](https://ask.dcloud.net.cn/question/181819)
 * 修复 多文件搜索 鼠标双击搜索结果项，输入焦点没有自动设置到打开的编辑器内的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=309)
-* 修复 .editorconfig 配置`insert_final_newline`、`trim_trailing_whitespace`在保存文件时没有生效的Bug [详情](https://ask.dcloud.net.cn/question/165790)
+* 修复 .editorconfig 配置`insert_final_newline`、`trim_trailing_whitespace`在保存文件时没有生效的Bug [详情](https://ask.dcloud.net.cn/question/165790) 
 * 新增 语言服务 uni-app x uts自动修复 支持number类型和kotlin的数字类型互相转换
 * 新增 语言服务 uni-app x uts类型检查 支持函数类型校验 [详情](https://doc.dcloud.net.cn/uni-app-x/uts/function.html#%E5%87%BD%E6%95%B0%E7%B1%BB%E5%9E%8B)
 * 新增 语言服务 uni-app x uts类型检查 检查算法由结构校验调整为名称校验 [详情](https://doc.dcloud.net.cn/uni-app-x/uts/type-compatibility.html)
