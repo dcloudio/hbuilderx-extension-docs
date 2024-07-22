@@ -1,3 +1,6 @@
+## 4.24.2024072208
+* 无
+
 ## 4.23.2024070804
 * 新增 语言服务 在状态栏显示语言服务详情，方便了解状态和进行设置 [详情](https://hx.dcloud.net.cn/Tutorial/Language/lsStatus)
 * 新增 语言服务 出现严重错误时，状态栏提示及快捷报Bug功能
@@ -27,9 +30,9 @@
 * 新增 uni-app x 项目 生成本地打包原生Android资源 [详情](https://doc.dcloud.net.cn/uni-app-x/native/use/android.html)
 * 新增 uni-app x 真机运行 iOS平台（iOS17以下）uts插件断点调试 [详情](https://uniapp.dcloud.net.cn/tutorial/debug/uni-uts-debug-ios.html)
 * 修复 uni-app x 真机运行 iOS模拟器修改uts插件后重签基座控制台没有运行日志的Bug[详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1963)
+* 修复 uni-app x 运行控制台，某些情况下输出的日志颜色错误的Bug
 * 修复 uni-app (x) 4.13 引出的，Node升级，导致UTS插件Android debug无法使用的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1979)
-* 修复 uni-app x项目 运行控制台，某些情况下输出的日志颜色错误的Bug
-* 优化 uni-app (x) 运行到iOS，uts插件中的日志在控制台中输出的格式
+* 优化 uni-app (x) 运行到iOS uts插件中的日志在控制台中输出的格式
 * 修复 uni-app (x) 运行到iOS 控制台打印的日志不能跳转的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1288)
 * 修复 uni-app老项目 安心打包勾选DCloud老版证书时，提示语`自定义基座不支持安心打包，请切换到普通打包`不正确的Bug
 

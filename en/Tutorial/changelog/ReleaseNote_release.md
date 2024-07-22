@@ -1,3 +1,6 @@
+## 4.24.2024072208
+* Fixed some minor issues
+
 ## 4.23.2024070804
 * Language Server: Added support for displaying the language service status in the status bar, making it easier to modify the language service settings [Details](https://hx.dcloud.net.cn/Tutorial/Language/lsStatus)
 * Language Server: Added status bar prompt and quick bug reporting function when serious errors occur
