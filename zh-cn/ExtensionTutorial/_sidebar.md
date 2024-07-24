@@ -16,6 +16,7 @@
     * [如何适配主题](/ExtensionTutorial/fitTheme.md)
     * [如何调试插件](/ExtensionTutorial/HowToDebug.md)
     * [如何创建语言语法高亮支持插件](/ExtensionTutorial/language_grammars.md)
+    * [如何写一个AI插件](/ExtensionTutorial/AI.md)
 * 插件发布
     * [如何发布插件](/ExtensionTutorial/HowToPublish.md)
 <div class="contact-box">
