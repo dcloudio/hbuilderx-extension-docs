@@ -28,7 +28,10 @@
 
 ### CDN
 
+> 请注意：基本上所有的插件下载都走了CDN，务必将下列CDN域名加入白名单。
+
 - *.qnqcdn.net
+- *.hiecheimaetu.com
 
 ### 其它
 
