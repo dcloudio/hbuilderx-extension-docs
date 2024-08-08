@@ -88,6 +88,7 @@
     * [Built-in browser developer console whitespace solution](/Tutorial/faq/devtools.md)
     * [MacOSX Privacy](/Tutorial/Other/macPrivacy.md)
     * [User Login Failed](/Tutorial/Questions/LoginFailed.md)
+    * [Terminal Input Problem](/Tutorial/Questions/Terminal-input-problem.md)
     <!-- * [云函数上传ContentAccessDenied错误](/Tutorial/Questions/win10-defender-contentaccessdenied.md) -->
 * [Crash Reporter](/Tutorial/CrashReporter.md)
 * [LICENSE](/license.md)

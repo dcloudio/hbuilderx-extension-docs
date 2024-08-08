@@ -96,6 +96,7 @@
 	* [MacOSX项目管理器项目无法打开问题](/Tutorial/Other/macPrivacy.md)
     * [云函数上传ContentAccessDenied错误](/Tutorial/Questions/win10-defender-contentaccessdenied.md)
     * [登录失败问题](/Tutorial/Questions/LoginFailed.md)
+    * [终端空白及无法输入的问题](/Tutorial/Questions/Terminal-input-problem.md)
 * [崩溃报告](/Tutorial/CrashReporter.md)
 * [历史版本](/Tutorial/HistoryVersion.md)
 * [LICENSE](/license.md)

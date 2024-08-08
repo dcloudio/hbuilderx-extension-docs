@@ -94,6 +94,7 @@
     * [MacOSX項目管理器項目無法打開問題](/Tutorial/Other/macPrivacy.md)
     * [雲函數上傳ContentAccessDenied錯誤](/Tutorial/Questions/win10-defender-contentaccessdenied.md)
     * [登錄失敗問題](/Tutorial/Questions/LoginFailed.md)
+    * [终端空白及无法输入的问题](/Tutorial/Questions/Terminal-input-problem.md)
 * [崩潰報告](/Tutorial/CrashReporter.md)
 * [歷史版本](/Tutorial/HistoryVersion.md)
 * [LICENSE](/license.md)
