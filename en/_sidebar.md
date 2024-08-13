@@ -73,6 +73,7 @@
     * [HBuilderX Windows startup troubleshooting guide](/Tutorial/Questions/WindowsStart.md)
     * [plug-in installation failure solution](/Tutorial/faq/pluginInstall.md)
     * [Troubleshoot failure to startup language service](/Tutorial/Questions/StartLSFailed.md)
+    * [Node cannot start solution](/Tutorial/Questions/StartNodeFailed.md)
     * [Built-in browser developer console whitespace solution](/Tutorial/faq/devtools.md)
     <!-- * [云函数上传ContentAccessDenied错误](/Tutorial/Questions/win10-defender-contentaccessdenied.md) -->
 * [Crash Reporter](/Tutorial/CrashReporter.md)
