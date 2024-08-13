@@ -47,7 +47,7 @@ The configuration file format is json, save the following content in a json file
     "android": {
       //package name
       "packagename":"com.test.android",
-      //pack type default is 0. 0:custom certificate, 1: public certificate, 2: old certificate.
+      //pack type default is 0. 0:custom certificate, 1: public certificate, 2: old certificate, 3: Cloud certificate.
       "androidpacktype":"1",
       //Android uses its custom certificate to package
       //Android packaging certificate alias

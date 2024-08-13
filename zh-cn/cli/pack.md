@@ -47,7 +47,7 @@ localhost:MacOS hx$ ./cli pack --config /Users/hx/Documents/HBuilderProjects/测
     "android": {
       //安卓包名
       "packagename":"com.test.android",
-      //安卓打包类型 默认值0 0 使用自有证书 1 使用公共证书 2 使用老版证书
+      //安卓打包类型 默认值0 0 使用自有证书 1 使用公共证书 2 使用老版证书 3 使用云端证书
       "androidpacktype":"1",
       //安卓使用自有证书自有打包证书参数
       //安卓打包证书别名,自有证书打包填写的参数
