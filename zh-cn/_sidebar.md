@@ -92,6 +92,7 @@
     * [Windows 启动问题排查指南](/Tutorial/Questions/WindowsStart.md)
     * [插件安装失败解决方案](/Tutorial/faq/pluginInstall.md)
     * [语言服务启动失败解决方案](/Tutorial/Questions/StartLSFailed.md)
+    * [node无法启动解决方案](/Tutorial/Questions/StartNodeFailed.md)
     * [内置浏览器开发者控制台空白问题](/Tutorial/faq/devtools.md)
 	* [MacOSX项目管理器项目无法打开问题](/Tutorial/Other/macPrivacy.md)
     * [云函数上传ContentAccessDenied错误](/Tutorial/Questions/win10-defender-contentaccessdenied.md)

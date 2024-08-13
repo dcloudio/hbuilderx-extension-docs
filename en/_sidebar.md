@@ -85,6 +85,7 @@
     * [HBuilderX Windows startup troubleshooting guide](/Tutorial/Questions/WindowsStart.md)
     * [plug-in installation failure solution](/Tutorial/faq/pluginInstall.md)
     * [Troubleshoot failure to startup language service](/Tutorial/Questions/StartLSFailed.md)
+    * [Node cannot start solution](/Tutorial/Questions/StartNodeFailed.md)
     * [Built-in browser developer console whitespace solution](/Tutorial/faq/devtools.md)
     * [MacOSX Privacy](/Tutorial/Other/macPrivacy.md)
     * [User Login Failed](/Tutorial/Questions/LoginFailed.md)

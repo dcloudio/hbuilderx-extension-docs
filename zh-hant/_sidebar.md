@@ -90,6 +90,7 @@
     * [Windows 啓動問題排查指南](/Tutorial/Questions/WindowsStart.md)
     * [插件安裝失敗解決方案](/Tutorial/faq/pluginInstall.md)
     * [語言服務啓動失敗解決方案](/Tutorial/Questions/StartLSFailed.md)
+    * [node無法啟動解決方案](/Tutorial/Questions/StartNodeFailed.md)
     * [內置瀏覽器開發者控制檯空白問題](/Tutorial/faq/devtools.md)
     * [MacOSX項目管理器項目無法打開問題](/Tutorial/Other/macPrivacy.md)
     * [雲函數上傳ContentAccessDenied錯誤](/Tutorial/Questions/win10-defender-contentaccessdenied.md)
