@@ -40,11 +40,19 @@ Translated with www.DeepL.com/Translator (free version)
 
 ![](https://web-ext-storage.dcloud.net.cn/hx/language-service-target-support/1_new.jpg)
 
+### Way three
+
+Click the status bar notification
+
+![](https://web-ext-storage.dcloud.net.cn/hx/language_service_status_bar_message.png)
+
 - Select the target platform in the pop-up window
 
-![](https://web-ext-storage.dcloud.net.cn/hx/systax_1.jpg)
+![](https://web-ext-storage.dcloud.net.cn/hx/language_service_state_change_ui.png)
 
-- Platform supports single choice only
+- Platform supports multiple choice
+
+*Note: Selecting multiple platforms will cause HBuilderX to load multiple sets of language services, which will affect HBuilderX's memory consumption and running speed. If you only develop one platform, you should uncheck the other platforms.*
 
 - `APP-ANDROID` platforms enabled by default
 

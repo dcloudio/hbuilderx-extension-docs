@@ -38,11 +38,19 @@
 
 ![](https://web-ext-storage.dcloud.net.cn/hx/language-service-target-support/1_new.jpg)
 
+### 方式三
+
+點擊狀態列提示訊息
+
+![](https://web-ext-storage.dcloud.net.cn/hx/language_service_status_bar_message.png)
+
 - 在彈出的窗口中選擇目標平臺
 
-![](https://web-ext-storage.dcloud.net.cn/hx/systax_1.jpg)
+![](https://web-ext-storage.dcloud.net.cn/hx/language_service_state_change_ui.png)
 
-- 平臺僅支持單選
+- 平臺支持多選
+
+*註意：選擇多個平臺，會導致HBuilderX加載多套語言服務，影響HBuilderX的內存占用和運行速度。如果只開發一個平臺，應去掉其他平臺的勾選。*
 
 - 默認開啟平臺：APP-ANDROID
 
