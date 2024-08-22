@@ -1,6 +1,11 @@
+## 4.26.2024082213-alpha
+* 修复 4.0版本引发的h5-Extension插件不存在时，uni-app打包点击H5发行无反应的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=7071)
+* 修复 语言服务 3.5.3版本引发的 某些情况下, style属性选择器补全项提示不正确的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=7072)
+
 ## 4.25.2024081703-alpha
 * 优化 语言服务 代码提示速度
 * 优化 语言服务 vue文件中类型推导性能
+* 调整 语言服务 uni-app x项目语法提示和校验平台支持多选 [详情](https://hx.dcloud.net.cn/Tutorial/Language/language_service_target_support)
 * 优化 语言服务 uni-app x项目平台兼容性信息显示 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=2734)
 * 修复 语言服务 3.5.3版本引发的 vue标签提示在子标签作用域下仍然提示顶级标签的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=2419)
 * 修复 语言服务 3.5.3版本引发的 vue标签提示在text标签下提示出Emmet代码块的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1791)
@@ -18,6 +23,8 @@
 * 修复 语言服务 3.95版本引发的 特殊值域String, UPageURIString和ScriptImportURIString不生效的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=5822)
 * 修复 语言服务 3.6.5版本引发的 伪类:before提示项缺失的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=6745)
 * 修复 语言服务 4.11版本引发的 less和scss代码提示有两个重复项的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=6685)
+* 修复 语言服务 4.14版本引发的 uvue文件代码提示缺失的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=4886)
+* 修复 语言服务 4.14版本引发的 语言服务队列消息顺序出错, 导致tsserver服务报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=2581)
 * 修复 编辑器右下角切换语言模式时，中文输入法下导致HBuilderX崩溃的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=3729)
 * 修复 Markdown预览 目录层级比较深时，会导致部分图片不渲染的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=4122)
 * 调整 HBuilderX更新后，没有选择立即重启，在退出软件后，下次启动自动更新 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=4120)
@@ -30,6 +37,7 @@
 * 新增 uni-app 云打包 支持Android防重签 [详情](https://uniapp.dcloud.net.cn/tutorial/app-android-antiresigne.html)
 * 修复 uni-app 云打包 manifest.json中删除`ad`参数，打包时会重新加上`ad:{}`的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=5308&ask_id=194093)
 * 修复 uni-app 3.8.12引发的 运行到快应用联盟开发工具没有反应的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=5588&ask_id=190535)
+* 修复 前端网页托管 3.94版本引发的 web类型项目无法发布到前端网页托管的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=2901)
 
 ## 4.23.2024070309-alpha
 * 修复 语言服务 4.18版本引出的 uniapp x项目使用对象字面量时，定义的对象没有UTSJSONObject类型提示的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=2781)
