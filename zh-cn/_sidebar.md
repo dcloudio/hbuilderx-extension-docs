@@ -58,6 +58,7 @@
     * [uni-app H5 Chrome调试](/Tutorial/debug/h5-debug.md)
     * [Chrome调试 5+ Android应用](/Tutorial/App/use-chrome-to-debug-android-apps.md)
     * [通过软链优化日常开发体验](/Tutorial/App/softLink.md)
+    * [不受支持的Java版本](/Tutorial/App/notsupportJava.md)
 * 版本控制
     * [Git 介绍](/Tutorial/SourceControl/Git/README.md)
     * [Git重大更新](/Tutorial/SourceControl/git.md)
