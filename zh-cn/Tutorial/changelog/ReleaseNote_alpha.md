@@ -1,3 +1,11 @@
+## 4.27.2024091308-alpha
+* 【重要】调整 amazon-corretto插件 从11.0.14升级到17.0.12，Windows从32位升级到64位 [文档](https://hx.dcloud.net.cn/Tutorial/App/notsupportJava)
+* 修复 语言服务 4.08版本引发的 删除id和class在代码提示中依旧存在的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=7293)
+* 修复 语言服务 4.25版本引发的 uts插件报错：‘Could not find source file' 的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=8029)
+* 修复 语言服务 4.25版本引发的 uniapp x项目查找引用失效的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=8134)
+* 调整 uts插件 uts Android插件开发配置项到 【设置-运行配置】[文档](https://uniapp.dcloud.net.cn/tutorial/run/uts-development-android.html)
+* 修复 uni-app (x) 运行到App 重命名项目后，运行菜单点击没有反应的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=7700)
+
 ## 4.26.2024082213-alpha
 * 修复 4.0版本引发的h5-Extension插件不存在时，uni-app打包点击H5发行无反应的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=7071)
 * 修复 语言服务 3.5.3版本引发的 某些情况下, style属性选择器补全项提示不正确的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=7072)
@@ -35,6 +43,7 @@
 * 新增 支持通过软链接将多个uni-app (x)项目的页面、组件、API等目录链接到指定项目下 [详情](https://hx.dcloud.net.cn/Tutorial/App/softLink)
 * 新增 uni-app x 项目 生成本地打包原生iOS资源 [详情](https://doc.dcloud.net.cn/uni-app-x/native/use/ios.html)
 * 新增 uni-app 云打包 支持Android防重签 [详情](https://uniapp.dcloud.net.cn/tutorial/app-android-antiresigne.html)
+* 移除 5+App/wap2app/uni-app的manifest.json中的百度定位和百度地图配置
 * 修复 uni-app 云打包 manifest.json中删除`ad`参数，打包时会重新加上`ad:{}`的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=5308&ask_id=194093)
 * 修复 uni-app 3.8.12引发的 运行到快应用联盟开发工具没有反应的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=5588&ask_id=190535)
 * 修复 前端网页托管 3.94版本引发的 web类型项目无法发布到前端网页托管的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=2901)
