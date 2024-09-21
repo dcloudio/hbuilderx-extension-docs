@@ -1,3 +1,7 @@
+## 4.28.2024092105-alpha
+* 修复 鸿蒙的发行打包功能打出的包只有模板内容，没有应用代码的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=8998)
+* 修复 uni-app (x) 运行到iOS(18.0)模拟器 切换项目后App内容不更新的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=9027)
+
 ## 4.27.2024091308-alpha
 * 【重要】调整 amazon-corretto插件 从11.0.14升级到17.0.12，Windows从32位升级到64位 [文档](https://hx.dcloud.net.cn/Tutorial/App/notsupportJava)
 * 修复 语言服务 4.08版本引发的 删除id和class在代码提示中依旧存在的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=7293)
