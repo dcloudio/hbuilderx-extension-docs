@@ -19,6 +19,7 @@
 
 - *.qnqcdn.net
 - *.hiecheimaetu.com
+- *.iquaveizeeru.com
 
 ### 账户相关
 
