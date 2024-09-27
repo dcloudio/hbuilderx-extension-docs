@@ -1,5 +1,9 @@
 # Windows@Windows
 
+### OS System Requirements@win64
+
+Since the new Win64 version, HBuilderX will only support 64-bit operating systems and will no longer support 32-bit systems. Users on 32-bit systems will be prompted with a recommendation to upgrade when attempting future updates.
+
 ### DownLoad@download
 
 Download URL: [Download](https://www.dcloud.io/hbuilderx.html)
