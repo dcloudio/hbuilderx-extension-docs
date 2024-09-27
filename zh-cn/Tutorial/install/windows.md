@@ -4,6 +4,10 @@
 keyword:安装,安装HBuilderX,下载
 -->
 
+### 系统要求@win64
+
+HBuilderX自win64新版本起，将仅支持64位操作系统，不再对32位系统进行支持。在32位系统上进行后续升级将会弹出建议升级的提示。
+
 ### 下载@download
 
 HBuilderX下载地址: [下载地址](https://www.dcloud.io/hbuilderx.html)
