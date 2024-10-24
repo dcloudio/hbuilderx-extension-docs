@@ -1,3 +1,6 @@
+## 4.31.2024102414-alpha
+* 无
+
 ## 4.28.2024092105-alpha
 * 修复 鸿蒙的发行打包功能打出的包只有模板内容，没有应用代码的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=8998)
 * 修复 uni-app (x) 运行到iOS(18.0)模拟器 切换项目后App内容不更新的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=9027)
@@ -12,7 +15,7 @@
 
 ## 4.26.2024082213-alpha
 * 修复 4.0版本引发的h5-Extension插件不存在时，uni-app打包点击H5发行无反应的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=7071)
-* 修复 语言服务 3.5.3版本引发的 某些情况下, style属性选择器补全项提示不正确的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=7072)
+* 修复 语言服务 3.5.3版本引发的 某些情况下，style属性选择器补全项提示不正确的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=7072)
 
 ## 4.25.2024081703-alpha
 * 优化 语言服务 代码提示速度
@@ -250,142 +253,6 @@
 * 新增 uni-app x 项目的uts插件支持debug调试 [详情](https://uniapp.dcloud.net.cn/tutorial/debug/uni-uts-debug.html)
 * 修复 manifest.json 复制权限到Android权限配置界面时，格式不对的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=370)
 * 修复 插件市场导入项目，当项目仅支持vue2时，导入界面vue3按钮仍可以点击的Bug
-
-## 3.99.2023121601-alpha
-* 新增 报Bug 目前支持对 HBuilder 和 uni-app x 报Bug，方便提交日志和示例工程。入口在菜单帮助-报Bug，及App运行控制台的右上角蓝色虫子按钮
-* 修复 内置浏览器 预览html文件和markdown文件，某些情况下预览失败的Bug [详情](https://ask.dcloud.net.cn/question/182604)
-* 修复 windows 关闭HBuilderX过程中提示创建桌面快捷方式时UI卡住的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=310)
-* 修复 Windows 某些情况下地址栏无法使用快捷键复制的Bug [详情](https://ask.dcloud.net.cn/question/180472)
-* 修复 MacOSX 某些情况下内置浏览器devtools里面的文字无法使用快捷键复制的Bug [详情](https://ask.dcloud.net.cn/question/181819)
-* 修复 多文件搜索 鼠标双击搜索结果项，输入焦点没有自动设置到打开的编辑器内的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=309)
-* 修复 .editorconfig 配置`insert_final_newline`、`trim_trailing_whitespace`在保存文件时没有生效的Bug [详情](https://ask.dcloud.net.cn/question/165790)
-* 新增 语言服务 uni-app x uts自动修复 支持number类型和kotlin的数字类型互相转换
-* 新增 语言服务 uni-app x uts类型检查 支持函数类型校验 [详情](https://doc.dcloud.net.cn/uni-app-x/uts/function.html#%E5%87%BD%E6%95%B0%E7%B1%BB%E5%9E%8B)
-* 新增 语言服务 uni-app x uts类型检查 检查算法由结构校验调整为名称校验 [详情](https://doc.dcloud.net.cn/uni-app-x/uts/type-compatibility.html)
-* 调整 语言服务 uni-app x uvue文件代码提示不再提示 uni-app x 不支持的内置组件
-* 修复 语言服务 uni-app x uvue组件事件类型校验时，全局事件不生效的Bug
-* 修复 语言服务 某些情况下语言服务启动时崩溃的Bug [详情](https://ask.dcloud.net.cn/question/182739)
-* 修复 语言服务 less、scss文件代码提示时@rule某些情况下替换位置不对的Bug [详情](https://ask.dcloud.net.cn/question/182353)
-* 修复 语言服务 unicloud-db组件代码提示时不支持field嵌套语法的Bug
-* 修复 uni-app 运行到支付宝小程序，当pages.json因为条件编译存在重复key时运行失败的Bug [详情](https://ask.dcloud.net.cn/question/182610)
-* 修复 uni-app cli项目无法运行到支付宝小程序的Bug
-* 修复 uni-app MacOSX 运行到支付宝小程序，没有兼容老的支付宝小程序工具路径的Bug
-* 修复 App真机运行 Android 某些机型获取基座安装时间异常导致基座一直被重复安装的Bug [详情](https://ask.dcloud.net.cn/question/182690)
-* 修复 App真机运行 Android 运行到自定义调试基座后，再运行标准基座到iOS模拟器报安装调试基座失败的Bug[详情](https://ask.dcloud.net.cn/question/181703)
-* 优化 uni-app manifest.json的权限可视化界面，支持在自动选择权限外，手动控制添加和删除权限。无需再去AndroidManifest.xml中删除权限。
-* 修复 5+项目 工具栏运行菜单多出运行到Chrome等菜单项的Bug
-
-## 3.98.2023112011-alpha
-* 修复 在HBuilderX中打开的文件，被外部程序修改后，偶发不会自动刷新内容的Bug [详情](https://ask.dcloud.net.cn/question/181222)
-* 修复 MacOSX markdown预览 当文件比较大时，预览到内置浏览器渲染太慢的Bug
-* 修复 ts语言 `#ifdef`等条件编译代码没有高亮的Bug
-* 修复 语言服务 id无法转到定义的Bug
-* 修复 语言服务 id、class提示，没有按照文件引用关系排序的Bug
-* 修复 语言服务 windows 文件监听导致无法重命名和删除文件的Bug
-* 修复 语言服务 unicloud-db组件指定的DB Schema表没有属性时，v-slot:default的data类型推导错误的Bug
-* 修复 语言服务 uts插件 部分Android系统API不兼容kotlin的类型的Bug
-* 修复 语言服务 TailwindCSS插件，没有代码提示的Bug [详情](https://ask.dcloud.net.cn/question/181475)
-* 修复 语言服务 uni-app x 部分vue类型不正确导致语法报错的Bug
-* 新增 语言服务 uts类型校验错误提示支持国际化
-* 修复 3.97引出的，非uniCloud项目，运行后，仍打开了一个uniCloud控制台的Bug
-* 修复 安心打包 iOS 自定义调试基座打包时误提示uts付费插件不支持安心打包的Bug [详情](https://ask.dcloud.net.cn/question/181784)
-* 优化 App真机运行 Android 自定义基座，在版本号相同但安装时间不同时，不会覆盖安装的Bug
-* 修复 App真机运行 Android 通过局域网连接的设备，运行时报不支持反向代理的Bug [详情](https://ask.dcloud.net.cn/question/181431)
-
-## 3.97.2023110504-alpha
-* 修复 Windows 在电脑扩展屏幕上，某些情况下登录窗口不可见的Bug
-* 修复 3.94引出的，因插件路径调整，导致wap2app项目打包失败的Bug
-* 修复 语言服务 uts 系统库代码提示触发自动导包时，导入的路径不对的Bug
-* 修复 语言服务 uts 系统库自动修复导包时，导入的路径不对的Bug
-* 修复 语言服务 文件删除后 ，该文件中定义的class和id等索引在仍会在代码提示出现的Bug
-* 修复 语言服务 项目过大时，某些class不会提示的Bug
-* 调整 语言服务 类型校验时支持string或number类型赋值到对应的string或number字面量联合类型
-* 修复 语言服务 在调用函数使用字面量对象传入参数时，在{}内加双（单）引号提示属性，回车后补全不对的Bug
-* 新增 Markdown 预览支持编辑器和预览视图双向同步滚动
-* 新增 Markdown 在HBuilderX内打开的编辑器中复制代码粘贴到Markdown编辑器时，自动包裹对应语言的代码块
-* 修复 编辑器变量悬浮时，快速关闭编辑器可能导致崩溃的Bug
-* 新增 uni-app 运行到支付宝小程序时，支持自动打开项目并进入预览模式
-* 修复 3.94引出的 uniCloud 初始化向导操作异常的Bug
-* 修复 uniCloud 上传第一个云函数后，再次上传时没有反应的Bug
-* 修复 uniCloud 先本地运行云函数，再上传云函数时，上传日志不会输出到控制台的Bug
-
-## 3.94.2023102311-alpha
-* 修复 3.91-alpha引发的 切换主题时，单击文件打开，若该文件之前打开过，会导致主题没有正常切换的Bug
-* 修复 语言服务 uni-app x项目 uni.getElementById("") id参数不能提示和转到定义的Bug
-* 修复 语言服务 uni-app x项目 选项式API内部作用域下定义的变量，语法校验时误报未使用的Bug
-* 修复 语言服务 uni-app x项目 easycom组件后缀是uvue时，不能转到定义的Bug
-* 修复 语言服务 uni-app x项目 Element 和 ComponentPublicInterface 类型使用时报未定义的Bug
-* 修复 语言服务 3.91-alpha引出的，部分iOS系统库API缺失的Bug
-* 修复 语言服务 3.93-alpha引出的，uni-app项目 当pages.json有语法错误时，vue文件会误报错的Bug
-* 修复 App云打包 uni-app x项目，AndroidManifest.xml文件和nativeResources/android目录下的文件没有上传的Bug
-* 修复 App真机运行 uni-app x项目，某些情况下报`未查到基座位置undefined`的Bug
-
-## 3.93.2023101913-alpha
-* 修复 Markdown 表格格式化后，需要多次撤销才能还原的Bug
-* 修复 语言服务 引用uts插件不提示路径和无法对路径转到定义的Bug
-* 修复 语言服务 引用uts插件后不提示uts插件导出内容的Bug
-* 【重要】调整 App项目全系列调整为默认64位，即manifest.json的Android平台支持CPU类型默认值为`arm64-v8a`。如需32位需手动配置manifest打包后生效
-* 修复 App真机运行 3.91版本引发的项目下文件路径带特殊字符时，会导致文件同步失败的Bug
-* 修复 App真机运行 5+项目 修改js、css、图片等文件时，不会自动刷新引用这些资源的页面的Bug
-* 新增 uni-app x运行配置 支持设置kotlin编译器内存参数 (菜单【设置 - 运行设置】，uni-app x运行配置)
-* 修复 uni_modules插件 上传插件没有uni-app x相关分类的Bug
-
-## 3.92.2023101106-alpha
-* 修复 Markdown 图片悬浮预览时闪烁的Bug
-* 修复 .editorconfig 文件存在扩展的设置项时，误报格式错误的Bug
-* 修复 语言服务 uvue文件 选项式API props 误报错的Bug
-* 修复 语言服务 uni-app x 条件编译 提示重复和内容不对的Bug
-* 修复 uni_modules插件 上传到插件市场时，当更新日志中出现${}特殊标记时，引发HBuilderX崩溃的Bug
-* 修复 uni-app 新建页面 页面在pages.json插入时缩进以及换行符和当前编辑器设置不一致的Bug
-* 修复 uni-app manifest.json 点击某些元素时偶发崩溃的Bug
-
-## 3.91.2023092719-alpha
-* 【重要】新增 uni-app-x ，不再使用js和webview，编译为纯原生App，目前仅支持Android [详情](https://uniapp.dcloud.net.cn/uni-app-x/)
-* 新增 HBuilderX 版本升级 支持差量更新 提升更新速度
-* 调整 HBuilderX和uni-app的版本号改为数字 [详情](https://uniapp.dcloud.net.cn/tutorial/version.html)
-* 新增 HBuilderX 支持搜索设置项（快捷键: `Alt+Shift+,`)
-* 新增 项目管理器 鼠标拖拽移动文件 增加确认弹窗
-* 优化 大幅字符替换操作的性能
-* 优化 大文件 注释上千行代码操作性能
-* 修复 菜单【视图】来回切换控制台，再按下`Alt+Tab`，出现一个新的空白无title的控制台Bug
-* 修复 MacOSX 某些情况下，点击顶部视图或帮助菜单，HBuilderX出现崩溃的Bug
-* 修复 多文件字符搜索 首次激活搜索视图 搜索输入框没有自动置焦的Bug
-* 修复 格式化 vue/uvue文件template区域写条件编译时，格式化后条件编译缩进不对的Bug
-* 修复 格式化 TS文件选中区域格式化时，当选中区域小于一行时，格式化结果可能不对的Bug
-* 修复 某些情况下 HBuilderX plugin-manager Node进程无法退出的Bug
-* 修复 App真机运行 Android设备选择窗口，设备列表刷新慢的Bug
-* 修复 App真机运行 Android设备选择窗口，Windows下有时手机列表显示异常数据的Bug
-* 新增 uni-app manifest.json App模块配置，Facebook登录，增加配置项client_token
-* 修复 uni-app manifest.json App模块配置->定位->高德定位，只勾选Android，校验appkey_ios的Bug
-
-## 3.8.12.20230802-alpha
-* 修复 某些情况下HBuilderX退出后，部分node进程CPU100%无法正确退出的Bug
-* 修复 多文件搜索 指定搜索范围后，切换编辑器标签卡导致搜索范围改变的Bug
-* 修复 单行注释 光标在行首时，执行反注释不生效的Bug
-* 修复 语言服务 某些情况下uniCloud目录下的文件代码提示慢的Bug
-* 修复 语言服务 开启js语法校验后，vue文件内js报错不正确的Bug
-* 修复 语言服务 uni-app项目 无法识别pinia模块的Bug
-* 修复 语言服务 uni-app项目 模块名提示时不会提示内置模块（eg：@dcloudio/uni-app）的Bug
-* 修复 语言服务 vue、html文件 偶发大纲不生效的Bug
-* 修复 语言服务 html文件 部分模版语法可能导致代码无法提示的Bug
-* 修复 uni-app 真机运行时，拔掉手机后再插上，重新运行会导致控制台日志重复及编译进程多个的Bug
-* 修复 uni-app 真机运行 某些情况下运行控制台工具栏`重启应用`按钮点击后不生效的Bug
-
-## 3.8.11.20230719-alpha
-* 修复 语言服务 vue/nvue文件标签事件内没有代码提示的Bug
-* 优化 uni-app 运行到抖音小程序工具时，自动打开项目进入Lite模式
-
-## 3.8.10.20230714-alpha
-* 新增 语言服务 JS、TS支持错误校验自动修复 [详情](https://hx.dcloud.net.cn/Tutorial/Language/auto-fixed)
-* 修复 语言服务 Vue 箭头函数内this无法访问vue实例的Bug
-* 修复 语言服务 Vue API描述国际化失效的Bug
-* 修复 语言服务 悬浮框内文字不支持`ctrl + c`复制的Bug
-* 修复 语言服务 悬浮框偶发悬浮到其他应用窗口上的Bug
-* 修复 语言服务 TS文件块注释内敲`@`不提示注释标签的Bug
-* 修复 语言服务 vue文件JS块注释内敲`@`提示注释标签，回车后替换内容不对的Bug
-* 新增 支持在ts方法上敲`/**`自动提取方法参数信息到tsdoc上
-* 新增 Git插件 在工具栏内的地址栏里，项目名称左侧新增Git分支名称，点击后可以方便的进行Git相关操作
-* 修复 代码助手 某些情况下列表不能翻到下一页时下一页按钮仍然不置灰的Bug
 
 ## 历史更新日志
 [已归档的历史版本](/Tutorial/changelog/ReleaseNote_alpha_archive.md)
