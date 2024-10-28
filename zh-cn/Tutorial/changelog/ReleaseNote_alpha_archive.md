@@ -1,1893 +1,1258 @@
+## 3.99.2023121601-alpha
+### HBuilder
+* Added bug feedback function, currently supports reporting bugs for HBuilder and uni-app x. (The entrance is in the menu Help-Report a bug, and the blue button in the upper right corner of the App running console.)
+* Fixed the bug that the built-in browser, previewing html files and markdown files, failed to preview in some cases [Details](https://ask.dcloud.net.cn/question/182604)
+* Fixed a Bug in windows when closing HBuilderX that the UI was stuck when creating a desktop shortcut [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=310)
+* Fixed a bug in Windows where, in some cases, the address bar could not use shortcut keys to copy addresses. [Details](https://ask.dcloud.net.cn/question/180472)
+* Fixed the bug that in some cases on MacOSX, text in the built-in browser devtools cannot be copied using shortcut keys [Details](https://ask.dcloud.net.cn/question/181819)
+* Fixed multi-file search, double-click the search result item, the input focus is not automatically set to the bug in the open editor [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=309)
+* Fixed the bug that the .editorconfig configuration `insert_final_newline` and `trim_trailing_whitespace` did not take effect when saving the file [Details](https://ask.dcloud.net.cn/question/165790)
+* Language Server: Added uni-app x, uts automatic repair, support conversion between number type and kotlin number type
+* Language Server: Added uni-app x, uts type checking, support function type checking [Details](https://uniapp.dcloud.net.cn/uni-app-x/uts/function.html#%E5%87%BD%E6%95%B0%E7%B1%BB%E5%9E%8B)
+* Language Server: Added uni-app x, uts type checking, and adjusted the checking algorithm from structure verification to name verification [Details](https://uniapp.dcloud.net.cn/uni-app-x/uts/type-compatibility.html)
+* Language Server: Adjust uni-app x, uvue file code prompts to only prompt built-in components that support uni-app x.
+* Language Server: Fixed the bug that the global event does not take effect when verifying the event type of uni-app x and uvue components.
+* Language Server: Fixed a bug that caused the language service to crash when starting in some cases. [Details](https://ask.dcloud.net.cn/question/182739)
+* Language Server: Fixed the bug that the replacement position of @rule was incorrect in some cases when prompting the code of less and scss files. [Details](https://ask.dcloud.net.cn/question/182353)
+* Language Server: Fixed the bug that field nesting syntax is not supported when unicloud-db component code prompts
+* uni-app: Fixed a bug that caused the Alipay applet to fail when pages.json had duplicate keys due to conditional compilation. [Details](https://ask.dcloud.net.cn/question/182610)
+* uni-app: Fixed the bug that the uni-app cli project cannot run to the Alipay applet.
+* uni-app: Fixed the bug that MacOSX uni-app, when running to the Alipay applet, is not compatible with the tool path of the old Alipay applet.
+* Mobile App Playground: Fixed a bug that caused the dock to be installed repeatedly on some Android models due to incorrect installation time of the dock. [Details](https://ask.dcloud.net.cn/question/182690)
+* Mobile App Playground: Fixed the bug that after running Android to a custom debugging base and then running the standard base to the iOS simulator, a failure to install the debugging base was reported.[Details](https://ask.dcloud.net.cn/question/181703)
+* 5+ App: Fixed the bug that the toolbar run menu has more menu items such as run to Chrome
+* uni-app: Optimize the permission visual interface of manifest.json
+### uni-app plugin
+* Mini Program Fixed onError invalid in the Vue3 project script setup. [Details](https://github.com/dcloudio/uni-app/issues/4276)
+* Mini Program Fixed the bug that v-if is invalid when the slot content of the Vue3 project is a single root node. [Details](https://github.com/dcloudio/uni-app/issues/4486)
+* Lark Mini Program Fixed the bug that Vue3 project scope slot does not display content. [Details](https://ask.dcloud.net.cn/question/181927)
+* Alipay Mini Program Added component styleIsolation configuration, default value apply-shared. [Details](https://uniapp.dcloud.net.cn/collocation/manifest.html#mp-alipay)
+* WEB Fixed the bug that the properties of multi-root node components are lost after the Vue3 CLi project is packaged. [Details](https://ask.dcloud.net.cn/question/182569)
+* WEB Fixed the bug that the map component uses the fillColor and color properties of circles on the Gaode to set transparency invalidly. [Details](https://ask.dcloud.net.cn/question/159809)
+* App Fixed the bug of nvue page error when vite.config.js configures target as esnext. [Details](https://ask.dcloud.net.cn/question/183180)
+* WEB Added Vue3 project to support Baidu Maps. [Details](https://uniapp.dcloud.net.cn/collocation/manifest#h5sdkconfig)
+* WEB, App-Vue Added radio component to support backgroundColor, borderColor, activeBackgroundColor, activeBorderColor, iconColor attributes. [Details](https://uniapp.dcloud.net.cn/component/radio.html#radio)
+* WEB, App-Vue Added checkbox component to support backgroundColor, borderColor, activeBackgroundColor, activeBorderColor, iconColor attributes. [Details](https://uniapp.dcloud.net.cn/component/checkbox.html#checkbox)
+### uni-app x plugin
+* Added Vue support app.use register vue plugins [Details](https://uniapp.dcloud.net.cn/uni-app-x/vue/index.html#app-instance)
+* Added Vue app.config.globalProperties register global properties [Details](https://uniapp.dcloud.net.cn/uni-app-x/vue/index.html#app-instance)
+* Added Vue dynamic component [Details](https://uniapp.dcloud.net.cn/uni-app-x/vue/index.html#special-elements)
+* Added Vue provide/inject for component communication [Details](https://uniapp.dcloud.net.cn/uni-app-x/vue/index.html#composition-options)
+* Added Vue mixin [Details](https://uniapp.dcloud.net.cn/uni-app-x/vue/index.html#composition-options)
+* Added Vue v-html [Details](https://uniapp.dcloud.net.cn/uni-app-x/component/index.html#directives)
+* Added Vue v-once、v-memo、v-pre [Details](https://uniapp.dcloud.net.cn/uni-app-x/vue/index.html#directives)
+* Added Vue $forceUpdate [Details](https://uniapp.dcloud.net.cn/uni-app-x/vue/index.html#component-instance)
+* Added Vue support render function [Details](https://uniapp.dcloud.net.cn/uni-app-x/vue/index.html#rendering-options)
+* Added global variable globalData [Details](https://uniapp.dcloud.net.cn/uni-app-x/collocation/app.html#globaldata)
+* Added uni-cms client plugin uni-cms-article [Details](https://ext.dcloud.net.cn/plugin?id=11701)
+* Fixed the bug where calling the route API in the onLaunch lifecycle of the application was abnormal
+### uts plugin
+* Fixed a bug where multiple destructuring statements could lead to compilation errors. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=217)
+* Fixed a bug on the App-iOS platform where property override errors occurred when inheriting classes. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=207)
+* Fixed a bug on the App-Android platform where UTSJSONObject object-defined methods couldn't be accessed via indexing. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=234)
+* Fixed a bug on the App-Android platform where top-level variables, type attributes, class instance properties, and class static properties caused compilation errors when differentiated solely by the capitalization of the first letter. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=286)
+### uniCloud plugin
+* Added Qiniu cloud extend storage, better pricing and more flexible. [Details](https://uniapp.dcloud.net.cn/uniCloud/ext-storage/intro.html)
+* Added The uni-app-x project supports uniIdRouter. [Details](https://uniapp.dcloud.net.cn/uniCloud/uni-id/summary.html#uni-id-router)
+* Added Alipay Mini Program Cloud to support cloud function URL
+* Added Alipay Mini Program Cloud supports running JQL files.
+* Fixed the bug that Alipay Mini Program Cloud doc get is not compatible and the return value is null [Details](https://ask.dcloud.net.cn/question/182457)
+* Fix the bug of incorrect results when querying objects in the Alipay Mini Program Cloud database where and match
+* Fixed the bug where the failure reason is not displayed on the front end when uploading to Alipay Mini Program Cloud cloud storage fails.
+* Fixed the bug that when the project has multiple cloud vendors, the uploaded cloud function identifies the wrong cloud vendor.
+* Fixed the bug of "Upload Schema extension Js configuration" prompt "Please bind service space" in the right-click menu of database directory [Details](https://ask.dcloud.net.cn/question/182971)
+* Fix the bug that when creating Schema, the existence of init_data.json with a large amount of data will cause it to not be downloaded correctly
+* Fix the bug that uploading the uni-clientDB-actions file separately will overwrite the previously uploaded action [Details](https://ask.dcloud.net.cn/question/182598)
+* Fixed the bug that when uploading cloud functions, creating schema, uploading/downloading verification functions, if you select skip in the pop-up window if they exist, all bugs will be skipped
+* Fixed the bug in the initialization wizard deleting the db_init.json copy
+* Fix the bug that Alipay Mini Program Cloud uni.getTempFileURL API returns only the file name
+* Optimize the ability to switch service spaces of different cloud vendors when associating service spaces
+
+## 3.98.2023112011-alpha
+### HBuilder
+* Fixed an issue where files opened in HBuilderX would occasionally not automatically refresh their content after being modified by an external program. [Details](https://ask.dcloud.net.cn/question/181222)
+* Fixed a bug that caused MarkDown file rendering to be extremely slow on some MacOSX computers with built-in browsers
+* Fixed the bug that conditional compilation codes such as `#ifdef` in ts language are not highlighted
+* Language Server: Fixed the bug that the id cannot be transferred to the definition
+* Language Server: Fixed the bug that id and class prompts were not sorted according to file reference relationships
+* Language Server: Fixed a bug in windows file monitoring that prevented renaming and deleting files
+* Language Server: Fixed the bug that the data type of v-slot:default is deduced incorrectly when the DB Schema table specified by the unicloud-db component has no attributes.
+* Language Server: Fixed the bug that some Android system APIs in the uts plug-in are not compatible with kotlin
+* Language Server: Added uts type verification error prompt to support internationalization
+* Language Server: Fixed the bug in uni-app x where some vue types were incorrect causing syntax errors.
+* Fixed the bug of non-uniCloud projects introduced in 3.97. After running, a uniCloud console is still opened.
+* Fixed a Bug in 3.97 where a non-unicloud project would still open a uniCloud console after running.
+* Mobile App Playground: Optimize the Android custom runtime, the version number is the same but the installation time is different, will not cover the installation Bug
+* Mobile App Playground: Fixed a Bug where Android devices connected through the LAN did not support reverse proxy when running Times [Details](https://ask.dcloud.net.cn/question/181431)
+### uni-app plugin
+* Enhanced compile-time warnings for directories under `static` that are ignored for the current platform. [Details](https://uniapp.dcloud.net.cn/tutorial/platform.html#static)
+* Fixed this bug of when a project use the uni ext API and cloud packaging is selected for both Android and iOS, the installation package does not correctly include the uni ext API plugin. [Details](https://ask.dcloud.net.cn/question/181295)
+### uni-app x plugin
+* Added sticky-section component, support sectional sticky[Details](https://uniapp.dcloud.net.cn/uni-app-x/component/sticky.html#sticky-section)
+* Added uni-push API[Details](https://uniapp.dcloud.net.cn/uni-app-x/api/push.html)
+* Added When the CSS position attribute is absolute, the margin attribute supports auto value
+* Adjust uni.downloadFile API, the download directory adjust to uniDownloads directory at app's cache directory
+* Fixed the bug on App-Android platform, some events callback of video component have no attribute values[Details](https://ask.dcloud.net.cn/question/180748)
+* Fixed the bug on App-Android platform, the current attribute of swiper component may have no effect[Details](https://ask.dcloud.net.cn/question/181396)
+* Fixed a bug where text component nesting may flash back when reusing component list-item
+* Fixed a bug in the onLoad lifecycle call to uni.showLoading on the homepage caused by 3.97 that may crash
+* Fixed the bug where using easycom component types in non-uvue pages error. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=177)
+* Fix the bug that prevents the successful referencing of static resources from a non-static directory in the CSS code. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=231)
+* Optimized Improved the compilation speed for projects with a substantial amount of CSS code.
+### uts plugin
+* Optimized Asynchronous functions run in the same thread as the framework by default when used in uni-app x
+* Fixed the bug where the priority of bitwise operations was incorrect when used in combination.
+* Fixed the bug on App-Android Array join return value is inconsistent with web
+* Fixed the bug on the hooksClass related callbacks are repeatedly called when the custom dock is running on the real machine.
+* Fixed a Bug that may affect App listing review due to the underlying reliance on uni-getDeviceInfo to read IDFA code after using uts plug-in for App-iOS platform
+* Fixed the bug result of an operation involving Number may overflow as an integer
+* Fixed the bug divisor of the division operation in which Number participates cannot be 0
+### uniCloud plugin
+* Added Alipay Mini Program Cloud Initialization Wizard
+* Added uni-app-x now support alipay cloud as unicloud service provider
+* Optimization: When creating a new schema/new schemajs based on a template, if the template is composed of multiple files, the user will be prompted which files to create.
+* Optimization: When "Initializing Cloud Database", if a collection already exists in the cloud, a pop-up window will appear. The first collection in the pop-up window is not selected by default.
+* Fixed the problem that after opening the db_init.json file, right-clicking "Initialize Database" in the editing area cannot be initialized.
+* Fixed the issue where the uniCloud folder alias would not be updated after renaming the uniCloud folder
+* Fixed the issue where the uni_modules directory does not exist in the project directory when uploading public modules, resulting in failure to upload
+* Fixed The weixin mini program upload file to alipay cloud report an error
+* Fixed the issue that the return value of the Alipay Mini Program cloud database update operation did not return the updated parameter
+
+## 3.97.2023110504-alpha
+### HBuilder
+* Fixed the bug that the HBuilderX login window is not visible in some cases on the computer extension screen in Windows
+* Fixed a bug introduced in 3.94 that caused wap2app project packaging failure due to plug-in path adjustment.
+* Language Server: Fixed the bug that the imported path is incorrect when the uts system library code prompt triggers automatic package import.
+* Language Server: Fixed the bug that the imported path is incorrect when the uts system library automatically repairs and imports packages.
+* Language Server: Fixed the bug that after the file is deleted, the class and id code defined under the file will still be prompted.
+* Language Server: Fix css code prompts. When the project is too large, some classes will not prompt.
+* Language Server: Adjustment: Support string or number type assignment to the corresponding string or number literal union type during type verification.
+* Language Server: Fix the bug of `uni.request({ "url" })` when typing the url code prompt and pressing Enter to complete the error bug.
+* Markdown: Added Markdown preview to support simultaneous bidirectional scrolling of the editor and preview view
+* Markdown: Newly added: When copying code and pasting it into the Markdown editor in the editor opened in HBuilderX, the code block in the corresponding language will be automatically wrapped.
+* Fixed a bug that may cause a crash when quickly closing the editor when the editor variable is suspended
+* Added support for automatically opening the project and entering preview mode when uni-app is run into the Alipay applet.
+* Fixed the bug that the uniCloud initialization wizard cannot be used
+* Fixed the bug that after uniCloud uploaded the first cloud function, there was no response when uploading it again.
+* Fixed the bug that when uniCloud first runs the cloud function locally and then uploads the cloud function, the upload log will not be output to the console.
+### uni-app plugin
+* Fixed the bug where the target configuration in vite.config.js for Vue 3 projects was not affecting the renderjs. [Details](https://ask.dcloud.net.cn/question/180135)
+* Fixed a bug when using uts for development, upgrading and updating the wgt may result in errors. [Details](https://ask.dcloud.net.cn/question/180309)
+### uni-app x plugin
+* Added Some API support interceptors [Details](https://uniapp.dcloud.net.cn/uni-app-x/api/interceptor.html)
+* Added uni.setNavigationBarTitle [Details](https://uniapp.dcloud.net.cn/uni-app-x/api/set-navigation-bar-title.html)
+* Added support for image and video components to use static resources from non-static directories as src.
+* Added support for importing files with a .ts extension in uvue files, equivalent to .uts extension.
+* Fixed the dynamically created root node loses its class styles
+* Fixed wrapping the expression bound to v-model with parentheses results in a failure
+* Fixed using the class to customize the root node style of another custom component within a custom component does not take effect
+* Fixed a bug where changes made to UTSJSONObject defined in the data of uvue files did not trigger rendering.
+* Fixed a bug where rendering was incorrect when the uvue page file name matched an easycom component.
+### uts plugin
+* App-Android native component definitions in uni-app x projects support returning values for external methods.
+* Fixed a bug where on the App-Android and App-iOS platforms, if the same interface or class defined different properties, method calls would fail.
+* Fixed a bug where developing uts plugins in a uni-app project under Vue 2 might not point to the source code.
+* Fixed a bug related to bitwise assignment operators where the result was incorrect when the right-hand side was a complex expression.
+### uniCloud plugin
+* Added uniCloud now support alipay cloud as service provider
+* Split `db_init.json` into collections. Each collection is described by schema.json, index.json, and init_data.json files [Details](https://uniapp.dcloud.net.cn/uniCloud/hellodb.html#init-db)
+
+## 3.94.2023102311-alpha
+* Fixed the bug caused by 3.91-alpha. When switching themes, click on a file to open. If the file has been opened before, the theme will not switch normally.
+* Language Server: Fixed uni.getElementById(""), the parameter cannot be prompted and transferred to the definition bug
+* Language Server: Fixed the bug of unused variables being falsely reported during syntax verification in uvue files and optional API internal scopes.
+* Language Server: Fixed the easycom component label. If the component suffix is uvue, it cannot go to the defined bug.
+* Language Server: Fixed the undefined bug when using Element and ComponentPublicInterface types in uni-app x project.
+* Language Server: Fixed the language service and missing bugs in some iOS system library APIs
+* Language Server: Fixed the bug caused by 3.93-alpha in the uni-app project. When pages.json has a syntax error, the vue file will falsely report an error.
+* Fixed the bug of `undefined base location not found` reported when running uni-app x project on real machine in some cases
+### uni-app plugin
+* Fixed when there are multiple root nodes, uni.getElementById fails to retrieve
+
+## 3.93.2023101913-alpha
+### HBuilder
+* Fixed a bug that required multiple undoes to restore after formatting the Markdown table
+* Language Server: Fixed the bug of not prompting for path when referencing uts plug-in and being unable to define the path to the definition
+* Language Server: Fixed the bug of not prompting the uts plug-in to export content after referencing the uts plug-in.
+* Fixed a bug that caused the file synchronization to fail when the file path under the project contained special characters caused by version 3.91 of the App running on a real machine.
+* Fixed the bug in 5+ projects that when modifying js, css, pictures and other files, the pages that reference these resources will not be automatically refreshed.
+* Adjust uni-app manifest.json uni-app and 5+ projects Adjust Android platform support CPU type Default value is `arm64-v8a`
+* Added uni-app x project to support uniCloud debugging
+* Added uni-app x running configuration to support setting kotlin compiler memory parameters
+* Fixed the bug that the uni_modules plug-in upload plug-in does not have uni-app x related categories
+### uni-app plugin
+* Weixin Mini Program Fixed subscrip component attribute is invalid [Details](https://ask.dcloud.net.cn/question/178893)
+* Alipay Mini Program Fixed lottie component attribute is invalid [Details](https://github.com/dcloudio/uni-app/issues/4510)
+* TikTok Mini Program Fixed Vue2 project refs invalid in TikTok App 27.2.0 [Details](https://github.com/dcloudio/uni-app/pull/4555)
+* Optimize uni.getElementById Support generics
+* App-Android fixed uni-app-x project list-view component where the positions of some child nodes are abnormal in certain cases
+* Fixed when a ref-bound node is removed, the $refs data is not updated
+### App plugin (5+ App & uni-app)
+* Android Adjustment The default supported CPU type is arm64-v8a [Details](https://uniapp.dcloud.net.cn/tutorial/app-android-abifilters.html#default)
+### uts plugin
+* App-Android Updated await supports it with Promise [Details](https://uniapp.dcloud.net.cn/uts/operator.html#await)
+### uniCloud plugin
+* Update Aliyun The maximum timeout period for function excution has been adjusted from 60 seconds to 120 seconds
+
+## 3.92.2023101106-alpha
+### HBuilder
+* Fixed the bug of flickering in Markdown image floating preview
+* Fixed the bug of falsely reporting a format error when the .editorconfig file contains extended setting items.
+* Language Server: Fixed the bug of false reporting in uvue files and optional API props
+* Language Server: Fixed uni-app x, conditional compilation, duplicate prompts and incorrect content bugs
+* Fixed the bug that caused HBuilderX to crash when the ${} special mark appeared in the update log when uploading the uni_modules plug-in to the plug-in market.
+* Fixed the bug that when uni-app creates a new page, the indentation and line breaks of the page when inserted into pages.json are inconsistent with the current editor settings.
+* Fixed the bug of uni-app manifest.json crashing occasionally when clicking on certain elements
+### uni-app plugin
+* App Fixed Cloud packaging Storage related interface settings and content acquisition exceptions. [Details](https://github.com/dcloudio/uni-app/issues/4556)
+* App-Android fixed uni-app-x project onLoad lifecycle calls route API interaction exception.
+* App-Android fixed uni-app-x project calling uni.switchTab on a non-tabBar home page causes the application to crash.
+### App plugin (5+ App & uni-app)
+* Android Update the Google Analytics for Firebase SDK to 21.3.0; Update the Firebase Cloud Push SDK to 23.2.1
+### uniCloud plugin
+* Fixed Invoke uniCloud api report an error when running uni-app-x project on android 6.0
+
+## 3.91.2023092719-alpha
+### HBuilder
+* Added uni-app-x, no longer using js and webview, compiled into a pure native App, currently only supports Android. [Details](https://uniapp.dcloud.net.cn/uni-app-x/)
+* Added HBuilderX version upgrade to support differential updates and improve update speed
+* Added HBuilderX support for search setting items (shortcut key: `Alt+Shift+,`)
+* Fixed the bug of switching the console back and forth in the menu [View], and then pressing `Alt+Tab`, a new blank console without title will appear.
+* Added new project manager, mouse drag and drop to move files, added confirmation pop-up window
+* Optimize the performance of large character replacement operations
+* Optimize the operation performance of large files and comment thousands of lines of code
+* Fixed MacOSX In some cases, HBuilderX crashes when clicking on the top view or help menu
+* Fixed multi-file character search, activate the search view for the first time, the search input box does not automatically focus the bug
+* Fixed the bug of incorrect indentation of conditional compilation after formatting when writing conditional compilation in template area of vue/uvue file.
+* Fixed the bug that when formatting a TS file and selecting an area for formatting, the formatting result may be incorrect when the selected area is smaller than one line.
+* Fixed the bug that the HBuilderX plugin-manager Node process cannot exit under certain circumstances
+* Fixed the bug of slow device list refresh in the Android device selection window when the App is run on a real device
+* Fixed the bug in the Android device selection window when the App is running on a real device. Under Windows, the phone list sometimes displays abnormal data.
+* Added uni-app manifest.json App module configuration, Facebook login, added configuration item client_token
+* Fixed the bug in uni-app manifest.json, App module configuration->Positioning->Amap positioning, only check Android and verify appkey_ios
+### uni-app plugin
+* Added Conditional compilation provides universion to distinguish the compiler version. Can be used for plug-in to adapt to different versions of uni-app [Details](https://uniapp.dcloud.net.cn/tutorial/platform.html#uniVersion)
+* Added Conditional compilation static directory supports APP and Web sub -directory [Details](https://uniapp.dcloud.net.cn/tutorial/platform.html#static)
+* App-Android Fixed uni.downloadFile download wgt files may not have a file suffix [Details](https://ask.dcloud.net.cn/question/176447)
+* App-iOS Fixed When the app language is set to English, the nvue map component still displays Chinese [Details](https://ask.dcloud.net.cn/question/178833)
+### uts plugin
+* Fixed When the for loop contains complex Continue and Break, the execution is incorrect
+* Fixed Unable to access external definitions in the class definition of internal attributes and methods of the same name
+### App plugin (5+ App & uni-app)
+* Android Update Facebook Login SDK to version 16.1.3, resolve sign-in exceptions [Details](https://ask.dcloud.net.cn/question/175402)
+### uniCloud plugin
+* Added Some interfaces support calls in uni-app x projects [Details](https://uniapp.dcloud.net.cn/uni-app-x/unicloud/)
+
+## 3.8.12.20230802-alpha
+### HBuilder
+* Fixed the bug that in some cases, after HBuilderX exits, some node processes cannot exit correctly with 100% CPU
+* Fixed multi-file search After specifying the search range, switching the editor tab causes the bug that the search range changes
+* Fixed single-line comments, when the cursor is at the beginning of the line, the bug that the anti-comment does not take effect
+* Language Server: Fixed the bug that the code prompt of the file in the uniCloud directory is slow in some cases
+* Language Server: Fixed the bug that the js error in the vue file is incorrect after the js grammar check is turned on
+* Language Server: Fixed the bug that the uni-app project cannot recognize the pinia module
+* Language Server: Fixed the bug that the built-in module `(eg: @dcloudio/uni-app)` will not be prompted when the module name of the uni-app project is prompted
+* Language Server: Fixed the bug that the occasional outline of vue and html files does not take effect
+* Language Server: Fixed the html file, some template syntax may cause the bug that the code cannot be prompted
+* Fixed the bug that when the uni-app is running on a real machine, unplug the phone and plug it in again, re-running will cause repeated console logs and multiple compilation processes
+* Fixed the bug that the `Restart Application` button in the console toolbar does not take effect after being clicked in some cases when the uni-app is running on a real machine
+* Added conditional compilation support for the "static" directory in uni-app projects for "app" and "web" directories. [Details](https://uniapp.dcloud.net.cn/tutorial/platform.html#static)
+* Added conditional compilation support for uni-app projects, providing "uniVersion" to distinguish compiler versions. [Details](https://uniapp.dcloud.net.cn/tutorial/platform.html#uniVersion)
+### uni-app plugin
+* uts plugin App-Android Added support Promise [Details](https://uniapp.dcloud.net.cn/uts/buildin-object-api/promise.html)
+### uniCloud plugin
+* Adjust uni-ai The Baidu LLM api s adjusted to [wenxin workshop](https://cloud.baidu.com/doc/WENXINWORKSHOP/s/jlil56u11)
+* Added uni-map-common A common module for aggregating cloud capabilities from multiple map providers [Details](https://uniapp.dcloud.net.cn/uniCloud/uni-map-common.html)
+* Added unicloud-map The cloud integrated component is mainly used to display custom POIs in the database and render them on the map [Details](https://uniapp.dcloud.net.cn/uniCloud/unicloud-map.html)
+* Added unicloud-map Map management plugin, providing POI management, which can visually mark POIs on the management side [Details](https://uniapp.dcloud.net.cn/uniCloud/unicloud-map-admin.html)
+* Added unicloud-city-select City selection component, making it convenient for users to quickly select the components of the target city in the application [Details](https://uniapp.dcloud.net.cn/uniCloud/unicloud-city-select.html)
+### App plugin (5+ App & uni-app)
+* Android Adapts to support Android 14
+* Android Update the cloud packaging compileSdkVersion to 33
+
+## 3.8.11.20230719-alpha
+### HBuilder
+* Language Server: Fixed the bug that there is no code hint in the vue/nvue file tag event
+
+## 3.8.10.20230714-alpha
+### HBuilder
+* Language Server: JS, TS supports automatic repair of error checking
+* Language Server: Fixed the bug that this in the Vue arrow function cannot access the vue instance
+* Language Server: Fixed the bug that Vue API description internationalization fails
+* Language Server: Fixed the bug that the text in the floating frame does not support copying by `ctrl + c`
+* Added support to type `/**` on the ts method to automatically extract method parameter information to tsdoc
+* Fixed the bug that the editor floating frame occasionally floats to other application windows
+* Fixed code assistant, the bug that the next page button is still not grayed out when the list cannot be turned to the next page in some cases
+* Fixed uni-app manifest.json uncheck the Push module, the bug that the push code will still be compiled in when exporting wgt
+### uni-app plugin
+* App-iOS Fixed The tabBar styles are abnormal when using font icons [Details](https://ask.dcloud.net.cn/question/173375)
+* Douyin Added Support for running to specified pages
+### uniCloud plugin
+* Added The parameter of Aliyun timing triggered function is align with Tencent cloud function [Details](https://uniapp.dcloud.net.cn/uniCloud/trigger.html#trigger-param)
+* Added The _timing function of cloudobject add input parameters [Details](https://uniapp.dcloud.net.cn/uniCloud/trigger.html#cloudobject)
+* Added uni-ai supports calling the iFly spark model through the developer's own key [Details](https://uniapp.dcloud.net.cn/uniCloud/uni-ai.html#get-llm-manager)
+* Added Http request method uniCloud.request is available [Details](https://uniapp.dcloud.net.cn/uniCloud/cf-functions.html#unicloud-request)
+* Added Websocket client method uniCloud.connectSocket is available [Details](https://uniapp.dcloud.net.cn/uniCloud/cf-functions.html#websocket-client)
+### App plugin (5+ App & uni-app)
+* Android Fixed The default language of the permission denied prompt text on the QR code scanning interface is incorrect [Details](https://ask.dcloud.net.cn/question/174032)
+* iOS Fixed After update with wgt, installing the app without removing it cause white screen [Details](https://ask.dcloud.net.cn/question/163393)
+
+## 3.8.7.20230628-alpha
+### HBuilder
+* Fixed the bug that HBuilderX crashed during the multi-file character search in some cases
+### uni-app plugin
+* App Fixed The issue of calling `uni.getPushClientId` and getting the error `getPushClientId:fail init am error: no api impl found` when only enabling online push and not enabling offline push in the 3.8.5 update of uni-push2.0 [Details](https://ask.dcloud.net.cn/question/172659)
+* App-iOS Fixed The tabBar icon is distorted when the width and height are inconsistent [Details](https://ask.dcloud.net.cn/question/172418)
+### uniCloud plugin
+* Fixed jql The geoNear method returns incorrect results when it does not pass the query parameter [Details](https://ask.dcloud.net.cn/question/172404)
+* Added uni-ai The chatCompletion method supports optimizedMessage events to optimize the frequency of message triggering and reduce client stuttering [Details](https://uniapp.dcloud.net.cn/uniCloud/uni-ai.html#chat-completion-stream)
+### App plugin (5+ App & uni-app)
+* Android Optimize The plus.runtime.install function as an independent module, it's not included when the Google Play channel, solve the problem that the Google Play report DCloud SDK contains downloading or installing applications from unknown sources [Details](https://ask.dcloud.net.cn/question/172533)
+* Android Update the AndroidX library to version 1.1.0, solve the problem that the Google Play report androidx.fragment:fragment:1.0.0 SDK is obsolete
+* iOS Fixed setTitleNViewButtonStyle Styling title bar buttons may prevent them from displaying properly [Details](https://ask.dcloud.net.cn/question/172191)
+
+## 3.8.6.20230621-alpha
+### HBuilder
+* Fixed the bug caused by 3.8.5, the file find reference function fails
+### uni-app plugin
+* Fixed the issue of socket legitimate domain name errors in uni-push2.0 updated on 3.8.5
+
+## 3.8.5.20230616-alpha
+### HBuilder
+* Added support for `Ctrl + Tab` to quickly switch between views(macOS:shortcut `Alt + Tab`).
+* Added automatic filling of `clogvar` code block with the nearest variable.
+* Added support for code folding in the code block region of Markdown editor.
+* Added support for automatic uploading of uni-app Alipay releases. [Details](https://hx.dcloud.net.cn/cli/publish-mp-alipay)
+* Fixed language service caused slow HTML tag and attribute suggestions in certain cases.
+* Fixed language service caused high CPU usage in certain cases.
+* Fixed language service global class and ID definitions were not able to navigate to local definitions. [Details](https://ask.dcloud.net.cn/question/170668)
+* Fixed language service paths starting with @/ in Vue files were unable to navigate to their definitions.
+* Fixed language service TypeScript files in Vue CLI projects were incorrectly reported as errors.
+* Fixed triggering comment with `Ctrl + / `on multiple lines would also comment the last line if the cursor was at the beginning of the line.
+* Fixed inserting a blank line above with `Ctrl + Shift + Enter` would result in incorrect indentation in certain cases.
+* Fixed the console log where shortcuts like `Shift + Up` or `Shift + Down` couldn't be used to select text.
+* Fixed multi-file character search where the highlighting in the editor was not cleared after clicking "Reset".
+* Improved multi-file character search by increasing the display area for search results on small screens.
+* Fixed multi-file character search where the input for include/exclude directories was not taken into account when clicking the "Search" button.
+* Fixed the built-in browser where occasional crashes occurred when switching between preview and closing multiple times.
+* Fixed switching the left-side view (such as the project explorer) while having multiple running consoles would cause misalignment of the buttons at the top of the console.
+* Added plugin API `languages.registerInlineCompletionItemProvider` to support inline code completion. [Details](https://hx.dcloud.net.cn/ExtensionDocs/Api/languages/registerInlineCompletionItemProvider)
+* Added plugin API `window.createStatusbarItem` to create a status bar item. [Details](https://hx.dcloud.net.cn/ExtensionDocs/Api/windows/createStatusBarItem) 
+* Optimized the performance of the plugin API `console.appendLine` for logging.
+### uni-app plugin
+* App、Web Fixed Vue page textarea component height rendering exception [Details](https://ask.dcloud.net.cn/question/169380)
+* App Updated Vue2 project nvue file event compilation [Details](https://ask.dcloud.net.cn/question/170516)
+* App Fixed Text nodes in nvue files cannot use \n to wrap [Details](https://github.com/dcloudio/uni-app/issues/4215)
+* App Fixed Some prompts for fingerprint authentication do not support internationalization [Details](https://ask.dcloud.net.cn/question/168473	)
+* App Fixed The VideoContext method fails in some cases of the Vue3 project [Details](https://ask.dcloud.net.cn/question/168476)
+* App-iOS Fixed uni.setTabBarItem dynamically sets gif images not to take effect [Details](https://ask.dcloud.net.cn/question/171342)
+* App-iOS Fixed The nvue rich-text component may randomly appear on a white background when the text is rendered in a loop [Details](https://ask.dcloud.net.cn/question/171090)
+* App-iOS Fixed The nvue video component height is set rpx may cause Controls not to appear [Details](https://ask.dcloud.net.cn/question/171037)
+* Web Updated uni.showToast text wrapping style [Details](https://github.com/dcloudio/uni-app/pull/4373)
+* Web Fixed In some cases, the location selection interface displays abnormally [Details](https://ask.dcloud.net.cn/question/167071)
+* Web Fixed Gaode map address name is missing [Details](https://ask.dcloud.net.cn/question/171013)
+* Web Fixed darkmode configuration does not take effect [Details](https://github.com/dcloudio/uni-app/issues/4317)
+* Mini Program Fixed Event compilation errors in some cases of nested lists [Details](https://ask.dcloud.net.cn/question/171043)
+* Mini Program Fixed eventChannel disorder in some cases
+* Mini Program Fixed Custom attribute names cannot use name, value  [Details](https://github.com/dcloudio/uni-app/pull/4257)
+* Weixin Mini Program Fixed Report an error using requirePlugin [Details](https://github.com/dcloudio/uni-app/issues/4301)
+* Douyin Mini Program Added Support consume-card, pay-button, rate-button, member-button components [Details](https://ask.dcloud.net.cn/question/167927)
+* Douyin Mini Program Added showToast supports mask configuration [Details](https://ask.dcloud.net.cn/question/154332)
+* Web platform, mini-program platform, App platform online push: Fixed uni-push2.0, which used to cause high-frequency push calls, leading to insufficient client memory and causing the client to get stuck (for mini-program platform, you need to add a new socket legal domain wshzn.getui.net:5223 to the whitelist, [Details](https://uniapp.dcloud.net.cn/unipush-v2.html#useinmp))
+### uniCloud plugin
+* [Important] Added uni-ai support making calls through the uni-ai billing gateway [Details](https://uniapp.dcloud.net.cn/uniCloud/uni-ai.html#api)
+* Fixed The multi method of redis does not return results correctly when calling from local cloudfunction [Details](https://ask.dcloud.net.cn/question/171188)
+* Added Extension uni-cloud-push can be used in local cloudfunction
+* Optimized Aliyun The timeout period of invoke cloudfunction by cloudfunction is adjusted from 10 seconds to 60 seconds
+* Added Aliyun Cloud Storage support directory [Details](https://uniapp.dcloud.net.cn/uniCloud/storage.html#storage-dir)
+### App plugin (5+ App & uni-app)
+* Android Fixed The input box may be blocked when the soft keyboard pops up with version 3.8.4 [Details](https://ask.dcloud.net.cn/question/172135)
+* iOS Adjust allowsInlineMediaPlayback defaults to ture, allow videos to play in full screen [Details](https://uniapp.dcloud.net.cn/collocation/manifest-app.html#full-manifest)
+* iOS Adjust mediaPlaybackRequiresUserAction defaults to false, allows audio and video to control automatic playback through APIs [Details](https://uniapp.dcloud.net.cn/collocation/manifest-app.html#full-manifest)
+* iOS Fixed The orientation of the video may be incorrect [Details](https://ask.dcloud.net.cn/question/171484)
+
+## 3.8.4.20230602-alpha
+### HBuilder
+* Optimize the left view of HBuilderX. The drop-down menu in the upper right corner of the top supports switching views of project manager, multi-file character search, debugging, etc.
+* Optimize the HBuilderX multi-file character search view, optimize the stop function and UI on the top status bar.
+* Fixed the uni-app introduced in 3.8.0. When the project contains the uts authorized version plug-in, submitting the bug that the server fails to make a custom debugging base
+### uni-app plugin
+* App Fixed Vue2 project is not parsed accurately using the border-radius style in the nvue page style [Details](https://ask.dcloud.net.cn/question/168877)
+* App-Android Fixed Some devices may report `Uncaught SyntaxError: Invalid or unexpected token at __uniappview.html:2` error cause white screen [Details](https://ask.dcloud.net.cn/question/170588)
+* Mini Program Fixed Vue2 project compiles with errors when using global variables like JSON.stringify in templates [Details](https://ask.dcloud.net.cn/question/170722)
+### App plugin (5+ App & uni-app)
+* Android Fixed The input box focus switch may cause the page to display abnormally caused by version 3.8.3 [Details](https://ask.dcloud.net.cn/question/170689)
+
+## 3.8.3.20230523-alpha
+### HBuilder
+* Optimize the left view of HBuilderX. The drop-down menu in the upper right corner of the top supports switching views of project manager, multi-file character search, debugging, etc.
+* Optimize the HBuilderX multi-file character search view, optimize the stop function and UI on the top status bar.
+* Fixed the uni-app introduced in 3.8.0. When the project contains the uts authorized version plug-in, submitting the bug that the server fails to make a custom debugging base
+### uni-app plugin
+* App Platform Fixed the bug that clicked the error after configuring type="checkbox" on the nvue page switch component [Details](https://ask.dcloud.net.cn/question/168894)
+* uni-ad manages background page adjustments, adjusts the basic ads of the app, and enhances the classification concept of advertisements [Details](https://uniapp.dcloud.net.cn/uni-ad/release.html)
+* App, Web optimize navigationBarBackgroundColor, navigationBarTextStyle default [Details](https://uniapp.dcloud.net.cn/collocation/pages.html#globalstyle)
+### uniCloud plugin
+* Added uni-ai Support azure chatCompletion api [Details](https://uniapp.dcloud.net.cn/uniCloud/uni-ai.html#get-llm-manager)
+* Fixed jql Some requests execute slowly in some situation [Details](https://ask.dcloud.net.cn/question/170035)
+
+## 3.8.2.20230511-alpha
+### HBuilder
+* Fixed the bug that HBuilderX crashes in some cases when searching characters in multiple files.
+* Language Server: Fixed the bug that the code prompt of the nvue file introduced by 3.8.0, and the language service crashes
+* Language Server: Fixed the bug that the template tag of the Vue file cannot prompt lang
+* Language Server: Fixed the bug that the template tag of the Vue file, when the lang attribute is empty, the html tag cannot prompt
+* Language Server: Fixed Vue file SCSS @ syntax, in some cases, the bug that the @ symbol replaces the wrong position after the code assistant enters
+* Language Server: Fixed Vue file SCSS, in some cases, !default and !global have no prompt Bug
+### uniCloud plugin
+* Added uni-ai Add text to image api [Details](https://uniapp.dcloud.net.cn/uniCloud/uni-ai.html#ai-media)
+### App plugin (5+ App & uni-app)
+* Android Fixed The playground may fail to synchronize files [Details](https://ask.dcloud.net.cn/question/169374)
+* Android Fixed The prompt text for permission denied on the Scan Code page does not support internationalization [Details](https://ask.dcloud.net.cn/question/169217)
+
+## 3.8.1.20230428-alpha
+### uni-app plugin
+* App-Android Fixed The map component in the nvue page is not automatically destroyed in certain scenarios and may cause a black screen [Details](https://ask.dcloud.net.cn/question/168133)
+### uniCloud plugin
+* Fixed When using the vue3 project to publish to the web, uniCloud.SSEChannel's open method reported an error
+
+## 3.8.0.20230425-alpha
+### HBuilder
+* Optimize the application icon of HBuilder Alpha version to supplement the α corner mark in the lower right corner.
+* Language Server: Added Html file to introduce Vue.js support code Vue code prompt
+* Added project manager to add file search reference function (select the file, right-click menu [file search reference])
+* Language Server: Added Vue and Html files to support ID and Class lookup references
+* Language Server: Added uni-app project component to support finding references
+* Language Server: Fixed the code assistant sorting rules, the bug that the first item of typing unic under the uni-app project is not uniCloud
+* Language Server: Fixed the bug that the path prompt at the beginning of uni-app/, input completion items in the middle are incorrect
+* Language Server: Fixed the uts plug-in, the Android system API part type inheritance error caused the bug of syntax verification error
+* Fixed Bug that cannot format files above 1M
+* Fixed formatting Format plug-in, when there is an indentation on the first line of the js file, the formatting will cause the indentation to be indented according to the first line as a whole Bug
+* Fixed the bug that HBuilderX crashes when switching themes in some cases
+* Fixed In some cases, when the project manager is always associated with the editor, opening a file under the sub-project or the parent project will cause the bug that the project manager scrolls incorrectly
+* Optimize Alt+Tab to switch tabs, list item icons and project manager icons are consistent.
+* Fixed the bug that when the uni-app project runs and downloads the compiler plug-in, in some cases, the console does not prompt to re-run.
+### uni-app plugin
+* App-iOS Fixed uni.scanCode may cause the application to freeze after scanning the code [Details](https://ask.dcloud.net.cn/question/160090)
+### uniCloud
+* Added uni-ai response in stream format [Details](https://uniapp.dcloud.net.cn/uniCloud/uni-ai.html#chat-completion-stream)
+* Added Server sent event channel between cloudfunction and client [Details](https://uniapp.dcloud.net.cn/uniCloud/sse-channel.html)
+* Updated HBuilderX automatically pulls schemas and schema extension js with the same name in opendb when creating a schema or schema extension js from opendb
+
+## 3.7.13.20230411-alpha
+### HBuilder
+* Fixed the bug caused by 3.7.13, multi-file character search, under certain circumstances, the bug that HBuilderX crashes during the search process
+* Language Server: Fixed function overload prompts occasional crash bug
+* Fixed the bug that uts plugin, language service, some types of iOS missing default constructors lead to grammar verification errors.
+* Fixed the bug that uts plugin, language service, Incomplete methods of iOS String type lead to grammar verification error.
+* Added MacOSX, App project, support to choose custom base to run to iOS Simulator [Details](https://uniapp.dcloud.net.cn/tutorial/run/run-custom-base-ios-simulator.html)
+* Added uni-app to support multiple projects to run to WeChat developer tools at the same time.
+* Added uniCloud Aliyun, the front-end web page hosts a custom domain name, and automatically refreshes the CDN after uploading files.
+### uni-app plugin
+* Added uni.addInterceptor callback added the second parameter params [Details](https://ask.dcloud.net.cn/question/129195)
+* App Fixed Vue3 project picker-view component using v-if toggle error [Details](https://ask.dcloud.net.cn/question/166884)
+* App-Vue Fixed Vue3 project text component nest text component show abnormality [Details](https://github.com/dcloudio/uni-app/issues/4215)
+* Web Updated Cancel coordinate system conversion when using IP positioning [Details](https://github.com/dcloudio/uni-app/issues/4248)
+* Web Fixed Vue3 project input component uses v-model when input is out of focus too fast [Details](https://ask.dcloud.net.cn/question/166821)
+* Mini Program Fixed Vue2 project compiles invalidly with static directory condition when using high version CopyWebpackPlugin [Details](https://github.com/dcloudio/uni-app/issues/4181)
+### uniCloud plugin
+* [Important] Added uni-cloud-ai extension, provide AI conversation capabilities [Details](https://uniapp.dcloud.net.cn/uniCloud/uni-ai.html)
+* Updated The dynamic enum configured in schema removes the enumeration limit of only 500 entries when validating data
+* Added The primaryCollection parameter is added to the subtable read event in the trigger, and the value is the table name of the primary table in this contingency query
+### App plugin (5+ App & uni-app)
+* Android Fixed The advertisData field of BluetoothDeviceInfo may lose data [Details](https://ask.dcloud.net.cn/question/165119)
+* Android Fixed After the app switches languages, the restart may flash the screen [Details](https://ask.dcloud.net.cn/question/166730)
+* iOS Fixed Apple in-app payments are unresponsive after plus.runtime.restart
+
+## 3.7.12.20230331-alpha
+### HBuilder
+* Windows 64-bit system, HBuilderX built-in Node adjusted to 64-bit Node.exe.
+* Optimize the multi-file character search from the toolbar to the left view of HBuilderX [Details](https://hx.dcloud.net.cn/Tutorial/UserGuide/node-multi-file-search).
+* Language Server: Fixed the bug that the prompt ratio of px to upx/rpx is set, and the code assistant prompts that the custom ratio does not take effect
+* Language Server: Fixed the bug that 404 is displayed after the URL of the help document in the code assistant is redirected due to the change of the Vue domain name.
+* Language Server: Fixed the js file. In some cases, require cannot prompt the bug of other js file paths.
+* Language Server: Fixed the uni-app project, in some cases, the project does not exist in the uni_module directory, and the bug that the language service reports an error.
+* Fixed the bug that attach fails in some cases of Node debugging.
+* Fixed js-beautify formatting plug-in, when the indentation is set to `tab`, the ts file formatting causes the bug that the indentation in the comment is wrong
+* Fixed the bug that HBuilderX crashes when you right-click the schema.json file in 3.7.6 to download DB Schema.
+* Fixed the bug caused by 3.7.6, some low-version MacOSX operating systems, no iOS mobile phone detected.
+* Adjust the uts project, run it to the iOS simulator, the console shields the uts debugging entry, and does not support the uts debugging of the iOS simulator.
+* Adjust uts project, uts Android development extension, increase gradle version limit, only support version 7.6.1 and below.
+### uni-app plugin
+* App, Web Updated Socket connection onClose event information increases Code and Reason attributes
+* App Fixed Vue3 project uses pure NVue development to turn to the homepage when the heat load jumps to the homepage [Details](https://ask.dcloud.net.cn/question/164673)
+* App Fixed The new language of international configuration is not good [Details](https://ask.dcloud.net.cn/question/165884)
+* App Fixed Vue3 project nvue page configuration flex-direction default value invalid [Details](https://ask.dcloud.net.cn/question/165497)
+* App-Android Fixed The WebSocket closure with a code value of 1001 that is being listened to by uni.onSocketClose may not trigger the callback
+* App-Android Fixed The existence of special characters in nvue pages may cause crashes [Details](https://ask.dcloud.net.cn/question/166447)
+* App-Android Fixed The nvue pages may render abnormally when in App floating window mode [Details](https://ask.dcloud.net.cn/question/156014)
+* App-Android Fiexd Special characters in the text component of nvue pages will not be displayed [Details](https://ask.dcloud.net.cn/question/166014)
+* Web Fixed onError invalid in the Vue3 project script setup [Details](https://ask.dcloud.net.cn/question/164798)
+* Web Fixed Gaode navigation destination name display exception [Details](https://ask.dcloud.net.cn/question/165669)
+* Web Fixed Gaode no locate permission did not trigger fail callback [Details](https://ask.dcloud.net.cn/question/166298)
+* Web Fixed Gaode map callout layout exception [Details](https://github.com/dcloudio/uni-app/issues/4230)
+* Mini Program Updated Vue2 project adds slotMultipleInstance configuration to support scoped slot rendering of multiple instances [Details](https://github.com/dcloudio/uni-app/issues/3503)
+* Mini Program Updated Vue2 project v-for supports index parameter when traversing objects [Details](https://ask.dcloud.net.cn/question/163685)
+* Mini Program Fixed Vue2 project event expressions containing multiple function statements compiled invalid [Details](https://ask.dcloud.net.cn/question/147342)
+* Mini Program Fixed Vue3 project page style file is missing after compilation [Details](https://ask.dcloud.net.cn/question/163867)
+* Baidu Mini Program, Alipay Mini Program Added Support for running to specified pages
+* Weixin Mini Program Fixed Support for enterprise applets onNFCReadMessage life cycle [Details](https://ask.dcloud.net.cn/question/166024)
+* Weixin Mini Program Fixed Vue3 project mixed subcontracting part of the case of interface calls reported error [Details](https://github.com/dcloudio/uni-app/issues/4175)
+* Alipay Mini Program Fixed The component styleIsolation is configured to apply-shared by default.
+* Alipay Mini Program Fixed Vue3 project page - meta component foot-font-size attribute is invalid
+* ByteDance Mini Program Fixed Fix aweme-data component not rendering properly
+### App plugin (5+ App & uni-app)
+* Android Fixed In certain situations, the software keyboard may pop up and immediately collapse [Details](https://ask.dcloud.net.cn/question/161957)
+* Android Fixed plus.navigator.updateSplashscreen may not take effect [Details](https://ask.dcloud.net.cn/question/164023)
+* iOS Fixed Entering a video page that contains video playback controls interrupts music playback [Details](https://ask.dcloud.net.cn/question/165329)
+* iOS Fixed The navigation bar titleNView setting splitLine style may not display correctly [Details](https://ask.dcloud.net.cn/question/164906)
+
+## 3.7.7.20230316-alpha
+### HBuilder
+* Fixed the ts file exported by HBuilderX 3.7.6, select a specific area code for formatting, and the bug that the formatting operation fails
+* Fixed After .editconfig is enabled, if the last line of the Vue file does not wrap, the bug that the file content will be wrong when saving
+* Fixed the bug that the language service ts file in some cases, the ts grammar check does not take effect
+### uni-app plugin
+* Weixin Mini Program Fixed Some attributes of components such as share-element are invalid. [Details](https://ask.dcloud.net.cn/question/163926)
+* Alipay Mini Program Fixed Vue3 project page-meta component page-style attribute is invalid. [Details](https://ask.dcloud.net.cn/question/163563)
+* ByteDance Mini Program Fixed uni.chooseImage does not support sizeType configuration. [Details](https://ask.dcloud.net.cn/question/163986)
+* App-iOS Fixed The nvue page component may occasionally crash when setting the border style [Details](https://ask.dcloud.net.cn/question/164236)
+* App-iOS Fixed The nvue page loading component event does not fire properly [Details](https://ask.dcloud.net.cn/question/163143)
+### uniCloud plugin
+* Added The uni-cloud-s2s public module is added to solve the problem of mutual trust between the uniCloud and the traditional server [Details](https://uniapp.dcloud.net.cn/uniCloud/uni-cloud-s2s.html)
+* Fixed uniCloud HBuilderX plugin In some cases, modifying a JS file does not take effect in real time
+* Fixed uniCloud HBuilderX plugin In some cases, modifying dependencies of cloudfunction causes package.json content error [Details](https://ask.dcloud.net.cn/question/165273)
+* Updated Secure Network The WeChat Mini Program allows secure network handshake without calling the uni-id-co method [Details](https://uniapp.dcloud.net.cn/uniCloud/secure-network.html#mp-weixin-without-uni-id-pages)
+* Updated uniCloud HBuilderX plugin When you call a local cloudfunction, each project fixes 4 cloudfunction instances to a minimum of 2 instances and a maximum of 8 instances
+* Updated uniCloud HBuilderX plugin Call local cloudfunction stop waiting for instances to be idle when all instances are occupied, and directly reject the call request
+* Updated Aliyun The maximum timeout for client connection to cloudfunction is adjusted from 20 seconds to 40 seconds
+* Updated Aliyun The QPS limit of http trigger through default domain is adjusted from 100 to 1000
+* Updated Aliyun The limit for CDN refreshes for front-end web hosting has been adjusted from 3/h to 10/h
+* Fixed Aliyun The limit of collection number cannot be refreshed in real time after collection is removed
+* Fixed Aliyun Some transaction errors are not clearly reported
+### App plugin (5+ App & uni-app)
+* Android Fixed The readAsDataURL of plus.io.FileReader returns base64 characters containing line breaks [Details](https://ask.dcloud.net.cn/question/164955)
+* iOS Fixed The video controls setting to false does not hide the title bar when displayed in full screen [Details](https://ask.dcloud.net.cn/question/160712)
+
+## 3.7.6.20230227-alpha
+### HBuilder
+* Added a built-in formatting plug-in, which supports the use of the .jsbeautifyrc configuration file under the project [Details](https://hx.dcloud.net.cn/Tutorial/extension/js-beautify)
+* Fixed the bug that the built-in formatting plug-in does not support formatting the ts code in the Vue file.
+* Language Server: Fixed Vue file `this.xxx = ...`, xxx cannot go to the defined bug.
+* Language Server: Fixed the uni-app cli ts project, after using pnpm to install the module, opening the vue file under the project causes the language service to crash.
+* Optimize settings, language service configuration, enable code assistant, after modifying configuration items, it will take effect without restarting HBuilderX
+* Fixed Enable .editorconfig support, when configuring `insert_final_newline`, accidentally touch the bug of the code assistant when saving
+* Fixed MacOSX, run the App to iOS, the device selection window, in some cases, the bug that the iOS device is repeatedly displayed
+* Added uni-app uts plug-in to run to iOS to support debugging (requires MacOSX) [Details](https://uniapp.dcloud.net.cn/tutorial/debug/uni-uts-debug-ios.html)
+* Fixed the bug caused by 3.7.1, uni-app Vue3, run to the iOS simulator, after the modified file is saved, the iOS simulator will not automatically refresh the bug
+## uni-app plugin
+* Web、App Fixed NodesRef cannot get properties [Details](https://ask.dcloud.net.cn/question/163535)
+* Web Fixed The markertap event will be triggered when the Gaode map is zoomed [Details](https://ask.dcloud.net.cn/question/162763)
+* App Updated The video component supports the isLive property
+* App Fixed uni.uploadFile interface timeout configuration is invalid [Details](https://ask.dcloud.net.cn/question/163747)
+* App Fixed onPageScroll and onReachBottom are invalid when the Vue2 project uses the composition API [Details](https://ask.dcloud.net.cn/question/162503)
+* App-Android Fixed Using Secure Network may cause a crash on some devices
+* Mini Program Fixed In some cases of Vue2 projects, v-for nested v-model is invalid after compilation
+* JingDong Mini Program Added Support compiling Vue3 projects [Details](https://github.com/dcloudio/uni-app/pull/4023)
+* Weixin Mini Program Added Support Skyline gesture [Details](https://ask.dcloud.net.cn/question/162700)
+### uniCloud plugin
+* Added uni facial recognition verify. All-in-one financial-grade security in the cloud [Details](https://uniapp.dcloud.net.cn/uniCloud/frv/intro)
+* [Important] uni-id-pages adds real-name authentication function [Details](https://uniapp.dcloud.net.cn/uniCloud/uni-id-summary.html#frv)
+* [Important] Added uni-frv-external cloud-integrated template for non-uniCloud business to use the real-name authentication function [Details](https://uniapp.dcloud.net.cn/uniCloud/frv/dev.html#uni-frv-external)
+* Updated When the client SDK is developing and debugging, the time of connecting to the local network is adjusted from the connection when the application is started to the connection when the local SCF is accessed
+* Fixed The client sdk uniCloud.init and uniCloud.database methods still use the public beta endpoint by default when associating with the official version of aliyun space
+### App plugin (5+ App & uni-app)
+* Android Fixed tabbar page switching may be unexpected in dark mode [Details](https://ask.dcloud.net.cn/question/163416)
+* Android Fixed In Xiaomi Android 13 devices, selecting pictures from the album may be abnormal caused by version 3.7.1 [Details](https://ask.dcloud.net.cn/question/163903)
+
+## 3.7.2.20230217-alpha
+### HBuilder
+* Fixed the manifest.json interface, in some cases, check the check box, HBuilderX crashes the bug
+* Fixed the bug that the uni-app uts project runs to the mobile phone. In some cases, after re-running the project, the console debug button disappears.
+### uni-app plugin
+* App-Android Fixed uni.getSystemInfo may get the same deviedId value on some devices [Details](https://ask.dcloud.net.cn/question/163174)
+
+## 3.7.1.20230210-alpha
+### HBuilder
+* Add code block surround, wrap code blocks such as if outside the selection area. (menu Edit->Surround->Code block surround, shortcut key win: `Ctrl+Alt+T`, mac: `Command+Alt+T`)[Details](https://hx.dcloud.net.cn/Tutorial/Language/Snippets?id=surround)
+* Added project manager, font size adjustment (menu settings-> Commonly Used). [Details](https://hx.dcloud.net.cn/Tutorial/setting?id=project-explorer-font-size)
+* Fixed the bug that multiple lines of content will be copied when copying or cutting when multiple cursors are on the same line.
+* Language Server: Fixed Vue3-ts project, the bug that the image src attribute reports an error [Details](https://ask.dcloud.net.cn/question/162064)
+* Language Server: Fixed uni-app main.js, the Vue variable or method defined by Vue.prototype.xxx, in the vue file, `this.` cannot prompt Bug. [Details](https://ask.dcloud.net.cn/question/147190)
+* Fixed the bug that it may not be possible to go to the definition when it takes a long time to go to the definition.
+* Fixed the setting interface and manifest.json interface, clicking the blank area on the right side of the text on the check box control will also cause the bug to be selected/cancelled.
+* Fixed the bug caused by 3.7.0, 5+App and Wap2App projects, in some cases, the synchronization file fails.
+* Fixed the bug that when uni-app runs to Chrome, it opens a new Chrome instance every time it runs.
+* Added uni-app manifest.json, App module configuration, added real person authentication [Details](https://uniapp.dcloud.net.cn/uniCloud/frv.html)
+### uni-app plugin
+* App-Android Fixed The uni.sendSocketMessage introduced by the 3.6.16 upgrade fastjson cannot send ArrayBuffer data [Details](https://ask.dcloud.net.cn/question/161872)
+* App-Android Fixed The height of the cell component of the nvue page exceeds the height of the list itself, and the loadmore event is frequently fired [Details](https://ask.dcloud.net.cn/question/161972)
+* App-Android Fixed After the placeholder attribute of the input component of the nvue page is changed, the placeholder-style and placeholder-class properties are invalidated [Details](https://ask.dcloud.net.cn/question/161678)
+* App-Android Fixed The bubble displays abnormally when the marker of the nvue page map component sets the anchor [Details](https://ask.dcloud.net.cn/question/161180)
+* App-Android Fixed The cover-view is not displayed when the nvue page map component updates the marker [Details](https://ask.dcloud.net.cn/question/161998)
+### uniCloud plugin
+* Fixed Using array which contains negative value in parameter of where method report an error [Details](https://ask.dcloud.net.cn/question/161852)
+* Fixed Calling cloud object method without return value report an error [Details](https://ask.dcloud.net.cn/question/161852)
+* Updated Deprecate subCollection property of JQL triggr parameter, please use secondaryCollection instead [Details](https://uniapp.dcloud.net.cn/uniCloud/jql-schema-ext.html#trigger-param)
+* Added New JQL trigger timing "beforeReadAsSecondaryCollection" and "afterReadAsSecondaryCollection" [Details](https://uniapp.dcloud.net.cn/uniCloud/jql-schema-ext.html#trigger-timing)
+* Aliyun Fixed No error message was returned when deleting file encounter error
+* HBuilderX Plugin Fixed Using console.warn output message to console panel in cloud functions was not colored properly
+### App plugin (5+ App & uni-app)
+* Android Update PayPal SDK to version 0.8.8 to fix the bug that payment cannot be made normally [Details](https://ask.dcloud.net.cn/question/154976)
+* Android Fixed plus.downloader.clear cannot clear persistent storage downloads [Details](https://ask.dcloud.net.cn/question/162099)
+* iOS Fixed AudioPlayer seekTo does not support milliseconds to jump to the specified position
+
+## 3.7.0.20230118-alpha
+### HBuilder
+* Fixed the bug that HBuilderX cannot be started due to abnormal editor theme configuration in some cases.
+* Fixed the bug that blank characters cannot be highlighted in the Markdown code area.
+* Fixed the bug that Markdown copied table data from WPS and pasted it as a Markdown table syntax conversion error.
+* Fixed the bug that the editor will not automatically scroll to the original cursor position when you press the esc key to find symbol in Editor.
+* Language Server: Fixed the Vue file, when there are only script and style nodes, but no template node, the document structure diagram shows a blank bug.
+* uniCloud: Fixed the bug that the upload and run operation fails when there are Chinese files in the cloud function directory of uniCloud cloud function.
+* Mobile App Playground: MacOSX run the project to the real iOS device, and automatically start the App (MacOSX needs to install Xcode that matches the iOS mobile phone system) [Details](https://uniapp.dcloud.net.cn/tutorial/run/run-app.html#ios-app-automatically-open)
+* Mobile App Playground: Added Windows operating system, iOS standard base, supports signing with Apple certificate, after signing, it can run standard base to iOS real device [Details](https://uniapp.dcloud.net.cn/tutorial/run/ios-apple-certificate-signature.html)
+* Mobile App Playground: Added Windows device selection window, custom dock and standard dock support switching with & shortcut keys.
+* uni-app: Added WeChat Build, automatically uploaded to the WeChat platform, and supports the configuration of WeChat ci robot numbers. [Details](https://uniapp.dcloud.net.cn/tutorial/build/publish-mp-weixin-cli.html)
+* uni-app: uts plug-in run to Android support debug debugging [Details](https://uniapp.dcloud.net.cn/tutorial/debug/uni-uts-debug.html)
+### uni-app plugin
+* [Important] Added uts components. Native extensions can be developed using the uts language [Details](https://uniapp.dcloud.net.cn/plugin/uts-component.html)
+* Added uni-vue-devtools plugin. Easy to view, modify data and review custom components [Details](https://uniapp.dcloud.net.cn/tutorial/debug/uni-vue-devtools.html)
+* Web, App Added The page-meta component supports the scroll-top property
+* Web Fixed The Vue3 project scroll-view component slot introduced in version 3.6.16 renders abnormally in some cases [Details](https://ask.dcloud.net.cn/question/149557)
+* Web Fixed The show-progress attribute of the video component does not take effect [Details](https://github.com/dcloudio/uni-app/issues/3908)
+* Web Fixed When the input component type=digit, the placeholder is not displayed after clearing the input box [Details](https://ask.dcloud.net.cn/question/160726)
+* Web Fixed Vue3 project onNavigationBarSearchInputConfirmed not working [Details](https://ask.dcloud.net.cn/question/154740)
+* Web Fixed Vue3 project switching tabbar page does not trigger onTabItemTap
+* App Added [ext component] animation-view component [Details](https://uniapp.dcloud.net.cn/component/animation-view.html)
+* App Fixed When the native navigation bar type in the Vue3 project is transparent, the color of the custom buttons does not change when sliding to the top on the navigation bar [Details](https://ask.dcloud.net.cn/question/154074)
+* Weixin Mini Program Added pages.json supports configuring the entryPagePath property [Details](https://ask.dcloud.net.cn/question/126216)
+* Weixin Mini Program Fixed An error is reported when running the enterprise version of WeChat introduced by version 3.6.16
+* Weixin Mini Program Fixed Version 3.6.16 introduced Vue2 project partially in the scope slot access length property reported an error
+* Weixin Mini Program Fixed Incorrect return value when using uni.env in Vue2 project [Details](https://ask.dcloud.net.cn/question/159865)
+* Alipay Mini Program Fixed The DingTalk mini program uses uni.saveImageToPhotosAlbum to report an error [Details](https://ask.dcloud.net.cn/question/159183)
+* Alipay Mini Program Fixed The platform property returned by uni.getSystemInfo was incorrect in the simulator
+* QQ Mini Program Fixed The ended event of the video component of the Vue3 project does not trigger on the real machine [Details](https://ask.dcloud.net.cn/question/155602)
+### uniCloud plugin
+* Added Manage dependencies of schema extension [Details](https://uniapp.dcloud.net.cn/uniCloud/jql.html#deps-of-jql)
+* Added JQL Trigger method add new parameters [Details](https://uniapp.dcloud.net.cn/uniCloud/jql-schema-ext.html#trigger-param)
+### App plugin (5+ App & uni-app)
+* Android Fixed The system navigation bar button color is the same as the background color caused by version 3.6.17 [Details](https://ask.dcloud.net.cn/question/161501)
+* Android Fixed Picture selection on Android 13 devices prompts no permission [Details](https://ask.dcloud.net.cn/question/160879)
+* Android Fixed plus.io.FileReader's readAsDataURL reads data without splitting by slice position [Details](https://ask.dcloud.net.cn/question/160467)
+* Android Fixed The VideoPlayer fires the timeupdate event when the video is buffered
+
+## 3.6.17.20230111-alpha
+### uni-app plugin
+* App Fixed 3.6.16 The Vue3 project in the vue page in the inner style of the rpx rendering error [Details](https://ask.dcloud.net.cn/question/161256)
+* Weixin Mini Program Fixed 3.6.16 The VUE2 project part of the template uses multiple logical expressions in the template to run an error [Details](https://ask.dcloud.net.cn/question/161190)
+### App plugin (5+ App & uni-app)
+* Android Fixed After using the record module, the wgt upgrade prompt that the record module is not configured caused by version 3.6.11 [Details](https://ask.dcloud.net.cn/question/161167)
+* Android Fixed The immersive status bar fails on some devices caused by version 3.6.16 [Details](https://ask.dcloud.net.cn/question/161277)
+
+## 3.6.16.20230109-alpha
+### HBuilder
+* Language Server: Fixed the bug that the uni-app Vue file cannot be prompted for conditional compilation in the script tag [Details](https://ask.dcloud.net.cn/question/159783)
+* Fixed HBuilderX green soft theme, select the terminal text, the bug that the selected color is not displayed.
+* Optimize one-click sharing of Markdown, css and js resources required by the webpage, and upload them to uniCloud web page hosting.
+* Fixed the bug that uni-app Vue3 runs to the browser, the browser Devtools console, and the log path shows errors.
+* Fixed the bug that the uni-app runs to the iOS simulator, and the uni debugging is turned on. After opening, the window shows a blank bug
+* Fixed the bug that in some cases, the .hbuilderx/launch.json file in the project root directory repeatedly writes data and reads and writes frequently, causing the editor to freeze
+### uni-app plugin
+* App-Vue, Web Updated The input component supports the inputmode property [Details](https://uniapp.dcloud.net.cn/component/input.html#inputmode)
+* App Fixed The Vue3 project nvue page webview component onPostMessage event is invalid [Details](https://ask.dcloud.net.cn/question/158925)
+* App Fixed The Vue3 project image component uses base64 to display exceptions [Details](https://ask.dcloud.net.cn/question/158368)
+* App-Android Fixed The live-pusher component of the nvue page refuses the camera permission and then manually opens it. After returning to the application, the camera preview may not be called [Details](https://ask.dcloud.net.cn/question/158518)
+* App-iOS Fixed The ad-content-page component of the nvue page cannot be re-pulled after failing to pull the advertisement configuration
+* App-iOS Fixed After the nvue page map component uses a custom map style, switching satellite images is invalid [Details](https://ask.dcloud.net.cn/question/159316)
+* App-iOS Fixed Start the application with a white screen after using the simulator to enable debugging [Details](https://ask.dcloud.net.cn/question/160363)
+* Web Fixed, Mini Program Fixed Unstable Bug in uni-push2.0 [Details](https://ask.dcloud.net.cn/question/159690?item_id=224222&rf=false)
+* Web Fixed The input component enters a negative number to bring out the last result [Details](https://ask.dcloud.net.cn/question/159447)
+* Web Fixed Using uni.navigateTo eventChannel in Vue3 project will only be called once [Details](https://ask.dcloud.net.cn/question/155922)
+* Web Fixed Vue3 project scroll-view component scrolling frequently triggers view updates [Details](https://ask.dcloud.net.cn/question/149557)
+* Web Fixed The Vue3 project uses the picker component end attribute to read errors [Details](https://github.com/dcloudio/uni-app/issues/4075)
+* Web Fixed uni.setTabBarItem causes tab switching life cycle exception [Details](https://ask.dcloud.net.cn/question/160739)
+* Weixin Mini Program Fixed Array length changes cannot be observed in the Vue2 project template [Details](https://github.com/dcloudio/uni-app/issues/1827)
+* Alipay Mini Program Fixed Vue3 project use inline styles running error report [Details](https://ask.dcloud.net.cn/question/159362)
+### uniCloud plugin
+* JQL Fixed Trigger report an error when using setUser without permission parameter
+* JQL Fixed Add method report an error when using null in child object
+* JQL Added Add triggerContext parameter to share variable between before trigger and after trigger [Details](https://uniapp.dcloud.net.cn/uniCloud/jql-schema-ext.html#trigger-context)
+* Aliyun Updated Single file size limit was changed from 100MB to 5GB
+### App plugin (5+ App & uni-app)
+* Android Fixed Selecting files from system album may crash on some Harmony devices caused by version 3.6.12 [Details](https://ask.dcloud.net.cn/question/159556)
+* Android Fixed Setting the targetSdkVersion value greater than or equal to 30 causes the app to crash when using AMap [Details](https://ask.dcloud.net.cn/question/159801)
+* Android Fixed Multiple calls to createBLEConnection to connect to a Bluetooth device, failure to connect the device may also trigger a success callback [Details](https://ask.dcloud.net.cn/question/113070)
+* iOS Fixed The iconWidth/iconHeight property is disabled when plus.nativeUI.toast sets style to inline [Details](https://ask.dcloud.net.cn/question/160192)
+* iOS Fixed startBluetoothDevicesDiscovery Search for nearby Bluetooth devices returns data without an advertisData field [Details](https://ask.dcloud.net.cn/question/160178)
+
 ## 3.6.14.20221216-alpha
-* 修复 3.6.12版引出的 某些情况下，编辑器回车后，光标位置错误的Bug [详情](https://ask.dcloud.net.cn/question/159490)
-* 修复 3.6.9版引出的 某些情况下，项目根目录生成了一个1.text测试文件的Bug [详情](https://ask.dcloud.net.cn/question/159580)
-* 修复 3.6.7版引出的 html文件，运行到Chrome，启动了一个新的Chrome实例的Bug [详情](https://ask.dcloud.net.cn/question/159331)
-* 修复 uni-app Web平台开启或停止浏览器Debug调试，某些情况下，控制台按钮重复显示的Bug
+### HBuilder
+* Fixed the bug caused by HBuilderX 3.6.12 that in some cases, the cursor position is wrong after the editor is pressed.
+* Fixed the bug caused by HBuilderX 3.6.9 that in some cases, where the project root generated a 1.text test file.
+* Fixed the bug that the html file exported by HBuilderX 3.6.7 runs to Chrome and starts a new Chrome instance.
+* Fixed the bug that the uni-app web platform starts or stops browser Debugging, and in some cases, the console button is repeatedly displayed
+### uni-app plugin
+* App-Android Fixed After using the canvas module, the wgt upgrade prompt that the canvas module is not configured [Details](https://ask.dcloud.net.cn/question/159283)
+* Mini Program Fixed Version 3.6.11 introduces an error after using async/await to run [Details](https://ask.dcloud.net.cn/question/159413)
+### uniCloud plugin
+* JQL Added `userInfo` and `result` to trigger parameter [userInfo](https://uniapp.dcloud.net.cn/uniCloud/jql-schema-ext.html#user-info)、[result](https://uniapp.dcloud.net.cn/uniCloud/jql-schema-ext.html#result)
+* JQL Added `isEqualToJql` method to compare jql command [Details](https://uniapp.dcloud.net.cn/uniCloud/jql-schema-ext.html#is-equal-to-jql)
+* JQL Updated Ignore null value of complex type (file, array, object) field
+* HBuilderX Plugin Fixed Local cloud function server failed to start in some old operating systems [Details](https://ask.dcloud.net.cn/question/159343)
+* HBuilderX Plugin Fixed the bug caused by HBuilderX 3.6.12, the debugging and running of cloud functions, and the Bug that cannot be debugged by Debug breakpoint.
+* HBuilderX Plugin Fixed Aliyun business version cloud storage file is not visible in uniCloud web which was upload by local cloud function [Details](https://ask.dcloud.net.cn/question/159109)
 
 ## 3.6.12.20221207-alpha
-* 修复 3.6.11引出的 uts文件 无法显示大纲视图的Bug
-* 修复 3.6.11引出的 uts文件 右键菜单重排代码格式置灰的Bug
-* 优化 App真机运行 设备选择窗口，标准基座和自定义基座，显示基座信息
-* 优化 App真机运行 菜单【运行 - 运行到手机或模拟器】，移除菜单【运行基座选择】
-* 【uniCloud插件】
-+ 本地调试插件 修复 云函数调用云函数时，被调用云函数无返回值导致报错的Bug
+* Fixed the bug that the uts file cannot display the outline view
+* Fixed uts file, the bug that the right-click menu rearranges the code format is invalid
+* Mobile App Playground: Optimize the device selection window, standard base and custom base, display base information
+* Mobile App Playground: Optimize the menu [Run - Mobile App Playground], remove the menu [Select Playground]
+* [uniCloud plugin]
+  + HBuilderX Plugin Fixed The called function return noting causes error when call function by function
 
 ## 3.6.11.20221205-alpha
-* 新增 App真机运行 iOS设备选择窗口支持UDID显示和复制
-* 新增 App真机运行 MacOSX uts插件 支持编译运行iOS标准基座到iOS真机设备
-* 优化 App真机运行 iOS标准基座包体积，仅支持 arm64 架构。即不再支持iPhone 5S、iPad Air(mini2)以前的设备。此调整不影响打包和自定义基座。
-* 修复 App真机运行 设备选择窗口 刷新设备列表 底部radio被改变的Bug
-* 修复 App真机运行 uts插件 编译运行 某些情况下，Node进程没有结束的Bug
-* 新增 uts插件 支持新建uts文件和平台目录
-* 优化 uts插件 语言服务 提升代码提示速度，降低内存占用
-* 优化 uts插件 热刷新速度，支持编译缓存，未修改不编译
-* 修复 uts插件 语言服务 iOS平台 参数标签名称是关键字时报错的Bug
-* 修复 语言服务 uni-app pages.json usingComponents拼写错误的Bug [详情](https://ask.dcloud.net.cn/question/158601)
-* 修复 新建HBuilder窗口或者拖动标签卡创建新窗口，关闭该新窗口时会导致部分插件功能失效的Bug
-* 优化 uniCloud db_init.json 初始化云数据库 当数据库表过多时，初始化云数据库超时的Bug
-* 新增 App打包 控制台下载链接后的一键上传到uniCloud，支持上传到阿里云正式版云存储
-* 修复 uni_modules插件 某些异常 package.json 缺少分类无法提交插件市场的Bug
+* Mobile App Playground: Added uts plug-in for running iOS standard base to iOS device
+* Mobile App Playground: Added support for UDID display and replication in the iOS device selection window
+* Mobile App Playground: iOS standard base installation package size, only supports arm64 architecture
+* Mobile App Playground: Fixed the bug that the device selection window refreshes the device list and the radio at the bottom is changed
+* Mobile App Playground: Fixed the bug that the Node process does not end in some cases when compiling and running the uts plugin
+* uts plug-in: Added uts file Added conditional compilation, using //#ifdef APP-ANDROID and //#ifdef APP-IOS for platform conditional compilation
+* uts plug-in: support for creating uts files and platform directories
+* uts plug-in: Language service, improve code prompt speed, reduce memory usage
+* uts plug-in: Compile cache is supported, no modification will not compile
+* uts plug-in: Fixed language service, iOS platform, parameter tag name is the wrong keyword times Bug
+* Language Server: Fixed the bug that the uni-app pages.json usingComponents code hints the typo [Details](https://ask.dcloud.net.cn/question/158601)
+* HBuilderX: Fixed the bug that some plug-in functions will fail when closing the new HBuilder window or dragging the tab to create a new window.
+* uniCloud: Fixed db_init.json to initialize the cloud database. When there are too many database tables, the bug of initializing the cloud database timeout.
+* uniCloud: Added App packaging, console download link, one-click upload uniCloud, support to upload ipa or apk files to Aliyun official cloud storage.
+* Fixed uni_modules plugin publish failed without category
+* [uni-app plugin]
+  + App Updated uts plugin supports compile cache
+  + App Updated Vue2 project component.is support ComponentDefinition / ComponentConstructor [Details](https://ask.dcloud.net.cn/question/140044)
+  + App Fixed The position calculation of nvue page slider component is inaccurate in some cases [Details](https://ask.dcloud.net.cn/question/152714)
+  + Web Fixed The Vue3 project canvas component listens to the event and reports an error [Details](https://ask.dcloud.net.cn/question/158252)
+  + Mini Program Updated The vue3 project uses import to import resources in non-static directories. After generation, the name is added to the hash by default. [Details](https://github.com/dcloudio/uni-app/issues/4011)
+  + Weixin Mini Program Fixed Vue3 project v-for loop events may be messed up [Details](https://github.com/dcloudio/uni-app/issues/4015)
+  + Weixin Mini Program Fixed Vue3 project wxs hot update fails [Details](https://ask.dcloud.net.cn/question/158252)
+  + uni-im Full support for Vue3 [Details](https://uniapp.dcloud.net.cn/uniCloud/uni-im.html)
+* [uniCloud plugin]
+  + JQL Added Trigger is supported, which can be used to excute some logic before or after database operation. Using jql syntax in trigger is supported. [Details](https://uniapp.dcloud.net.cn/uniCloud/jql-schema-ext.html#trigger)
+  + JQL Fixed Using negative value as literal in where or permission cause error [Details](https://ask.dcloud.net.cn/question/157993)
+  + JQL Added Using jql syntax in schema.ext is supported [Details](https://uniapp.dcloud.net.cn/uniCloud/jql-schema-ext.html#using-jql-syntax)
+  + HBuilderX Plugin Fixed Action not found when call local clientDB or jql extension [Details](https://ask.dcloud.net.cn/question/157997)
+  + uniIdRouter Fixed Router api error in vue3 project [Details](https://ask.dcloud.net.cn/question/158015)
+  + uni-id-co Added password setting API [Details](https://uniapp.dcloud.net.cn/uniCloud/uni-id-pages.html#set-pwd)
+  + uni-id-co Added external system joint login API, which can create an account corresponding to uni-id for the external system, so that the account can use the system and functions that depend on uniId [Details](https://uniapp.dcloud.net.cn/uniCloud/uni-id-pages.html#external)
+  + uni-id-co Added authentication signature verification when HTTP requests [Details](https://uniapp.dcloud.net.cn/uniCloud/uni-id-pages.html#http-reqeust-auth)
+  + uni-id-co Added error code `uni-id-account-not-exists-in-current-app` when the matched user cannot login in the current app  [Error Code Details](https://uniapp.dcloud.net.cn/uniCloud/uni-id-summary.html#errcode)
+  + uni-id-co Fixed error that the user did not set the avatar when logging in on WeChat
+  + uni-id-co Fixed Unable to get uniIdToken from clientInfo
+  + uni-id-pages Added Jump to set password page configuration item `setPasswordAfterLogin` after login [详情](https://uniapp.dcloud.net.cn/uniCloud/uni-id-pages.html#set-pwd-after-login)
+  + uni-id-pages Added setting password page
+  + uni-id-pages Optimize toast error prompt time to 3 seconds
+  + uni-admin Optimize schema file naming convention of the bulk SMS function, change `batch-sms-template` `batch-sms-task` `batch-sms-result` to `opendb-sms-temlate` `opendb-sms-task` `opendb-sms-log` conforms to the opendb specification.
+* [App plugin (5+ App & uni-app)]
+  + Added Record, Camera, Barcode, Orientation modules [Details](https://uniapp.dcloud.net.cn/tutorial/app-modules.html#bcor)
+  + iOS Fixed Third-party login authorization does not trigger callback caused by version 3.6.10 [Details](https://ask.dcloud.net.cn/question/158380)
 
 ## 3.6.10.20221121-alpha
-* 修复 3.6.9引出的 uni-app CLI项目，当存在uts插件时，无法正常编译和运行的Bug
-* 修复 uni-app uts插件 语言服务 `import x from '@/uni_modules/'` uts插件路径提示错误的Bug
-* 修复 App真机运行 设备选择窗口 某些情况下，点击运行按钮，HBuilderX出现崩溃的Bug
-* 优化 uts插件 iOS平台 本地编译和真机运行速度
+* Fixed the bug that HBuilderX 3.6.9 cannot compile and run normally when the uni-app CLI project has uts plug-in
+* Fixed the uni-app uts plugin language service `import x from '@/uni_modules/'` uts plugin path error bug
+* Mobile App Playground: Fixed the bug that HBuilderX crashes when you click the Run button in some cases in the device selection window
+* Optimize uts plug-in iOS platform local compilation and real machine running speed
+* [uni-app plugin]
+  + App Fixed Vue2 project editing uts plugin code hot update invalid
+  + uni-im supports projects that are not uniCloud or based on uni-id-pages [Details](https://uniapp.dcloud.net.cn/uniCloud/uni-im.html)
+  + App Fixed Vue2 project nvue page does not support the uts plugin [Details](https://ask.dcloud.net.cn/question/157435)
+  + App Fixed Setting the statusBar color in darkmode is not normal
+  + App Fixed nvue homepage setting navigationBarTextStyle is invalid [Details](https://ask.dcloud.net.cn/question/150485)
+  + App Fixed that there is no text prompt for loading when uni.startSoterAuthentication (biometric identification) is wrong [Details](https://ask.dcloud.net.cn/question/157353)
+  + App-Android Fixed uni.request does not support head requests [Details](https://ask.dcloud.net.cn/question/136717)
+  + App-Android Fixed Getting focus cursor position may be incorrect when there are multiple input components in the page
+  + App-Android Fiexed The nvue live-pusher component cannot be previewed on Android11+ devices using mobile networks [Details](https://ask.dcloud.net.cn/question/156532)
+  + Web Fixed Vue3 project --window-top calculation error [Details](https://ask.dcloud.net.cn/question/157164)
+  + Web Fixed Vue3 project configuration global loading and error components are invalid [Details](https://ask.dcloud.net.cn/question/157122)
+  + Alipay Mini Program Fixed page-meta component root-font-size property invalid [Details](https://ask.dcloud.net.cn/question/157168)
+* [uniCloud plugin]
+  + [Important] Aliyun business version is avaliable [Details](https://ask.dcloud.net.cn/article/40144)
+  + JQL Added "geoNear" stage is supported [Details](https://uniapp.dcloud.net.cn/uniCloud/jql.html#geo-near)
+  + JQL Fixed Some legal jql requests falsely report permission errors
+* [App plugin (5+ App & uni-app)]
+  + Android Fixed Listen for the system dark mode theme switching event may be invalid [Details](https://ask.dcloud.net.cn/question/157497)
+  + Android Fixed Cloud package using your owned certificates may report an 'Invalid keystore format' error [Details](https://ask.dcloud.net.cn/question/157057)
+  + Android Fixed Cloud package fails when the package property value of AndroidManifest.xml is the same as the package name
+  + iOS Fixed plus.screen.lockOrientation/plus.screen.unlockOrientation invalid on iOS16 devices [Details](https://ask.dcloud.net.cn/question/155357)
+  + iOS Fixed Recording does not work when playing audio [Details](https://ask.dcloud.net.cn/question/157408)
+  + iOS Fixed Setting DarkMode to follow the system theme may not work
 
 ## 3.6.9.20221114-alpha
-* 【重要】App真机运行 iOS标准基座 支持使用Apple证书签名，签名后可运行标准基座到iOS真机设备（需mac电脑） [详情](https://uniapp.dcloud.net.cn/tutorial/run/ios-apple-certificate-signature.html)
-* 新增 MarkDown 支持 Mermaid图，包含流程图 [详情](https://hx.dcloud.net.cn/Tutorial/Language/markdown?id=mermaid)
-* 新增 MarkDown 文件和图片语法`![]()`、`[]()`中，支持提示文件路径 [详情](https://hx.dcloud.net.cn/Tutorial/Language/markdown?id=PathHints)
-* 新增 MarkDown 代码区 kotlin 、 uts 等语言支持代码高亮
-* 修复 代码助手 存在某些不支持的图片格式时，图片预览失效的Bug
-* 新增 uts插件 iOS平台 支持本地编译和真机运行，需要配置Xcode环境 [详情](https://uniapp.dcloud.net.cn/tutorial/run/uts-development-ios.html)
-* 新增 uts插件 Android平台 真机运行支持三方 Gradle 仓储 [详情](https://uniapp.dcloud.net.cn/tutorial/run/uts-development-android.html)
-* 优化 uts插件 语言服务 支持iOS系统API、Android系统API的代码提示
-* 优化 uts插件 语言服务 Android平台 完善R资源的代码提示
-* 优化 uts插件 语言服务 Android平台 支持免导入使用java.lang.*下的类
-* 修复 MacOSX 格式化ts文件，首行代码格式化后被添加空格的Bug
-* 修复 HBuilderX 非正常退出时，语言服务进程没有退出的Bug
-* 修复 windows 某些型号的电脑，HBuilderX 拖动内置浏览器边框后闪退的Bug
-* 修复 App真机运行 设备选择窗口，某些情况下，错误提示弹窗显示到设备选择窗口后面，导致HBuilderX无法进行任何操作的Bug
-* 修复 App真机运行 iOS离线SDK制作自定义基座，target不是HBuilder时，同步文件失败的Bug
+* Added MarkDown, support for Mermaid diagrams, such as flow charts [Details](https://hx.dcloud.net.cn/Tutorial/Language/markdown?id=mermaid)
+* Added MarkDown, code area, kotlin and uts with code highlighting support
+* Added MarkDown, `! []()` and `[]()` syntax, support prompt file path [Details](https://hx.dcloud.net.cn/Tutorial/Language/markdown?id=PathHints)
+* Language Server: Fixed a Bug where the image path prompt failed when an unsupported image format existed
+* Language Server: Fixed a Bug where space was added to the first line of formatted ts files for MacOSX
+* uts plug-in: Added iOS platform to support local compilation and real machine operation, need to configure Xcode environment. [Details](https://uniapp.dcloud.net.cn/tutorial/run/uts-development-ios.html)
+* uts plug-in: Added Android platform, real machine operation supports three-party Gradle repository. [Details](https://uniapp.dcloud.net.cn/tutorial/run/uts-development-android.html)
+* uts plug-in: Support code hints for iOS system API and Android system API.
+* uts plug-in: Android platform Improve code hints for R resources.
+* uts plug-in: Android platform supports import-free use of classes under java.lang.*
+* HBuilderX: Fixed a Bug where the language service process would not exit when HBuilderX exits abnormally
+* HBuilderX: Fixed a Bug that caused the built-in browser border to blink after dragging on some models of windows computers
+* Mobile App Playground: iOS standard base, support the use of Apple certificate signature, after signature can run the standard base to iOS real device [Details](https://uniapp.dcloud.net.cn/tutorial/run/ios-apple-certificate-signature.html)
+* Mobile App Playground: Fixed a Bug in the device selection window where HBuilderX was unable to perform any operations due to the error pop-up behind the device selection window in some cases
+* Mobile App Playground: Fixed a Bug where the iOS offline SDK failed to synchronize files when the target was not HBuilder
+* [uni-app plugin]
+  + App, Web Add Support DarkMode [Details](https://uniapp.dcloud.net.cn/tutorial/darkmode.html)
+  + App, Web Fixed Radio component disabled state style exception
+  + App Add nvue page MapContext supports setLocMarkerIcon method  [Details](https://uniapp.dcloud.net.cn/api/location/map.html#setLocMarkerIcon)
+  + App Fixed When Vue2 project uses composite API, onReady declaration cycle template ref is not bound
+  + App Fixed Vue3 project template ref will be proxied
+  + App Fixed Vue3 project setting the background color of the navigation bar to rgba is invalid [Details](https://ask.dcloud.net.cn/question/135111)
+  + App Fixed Vue3 project root node height: 100% is invalid [Details](https://ask.dcloud.net.cn/question/156564)
+  + App-iOS Fixed Vue3 project recording playback is invalid [Details](https://ask.dcloud.net.cn/question/155741)
+  + Weixin Mini Program Fixed The Vue3 project defines global constants for compilation injection in vite.config.js, resulting in errors for clients using uniCloud introduced by version 3.6.8
+  + Alipay Mini Program Fixed uni.showLoading prompts that the mask parameter is invalid [Details](https://ask.dcloud.net.cn/question/156944)
+  + Alipay Mini Program Fixed Vue3 project eventChannel communication failed [Details](https://github.com/dcloudio/uni-app/issues/3945)
+  + ByteDance Mini Program Updated component2 is enabled by default [Details](https://ask.dcloud.net.cn/question/156550)
+* [uniCloud plugin]
+  + [Important] Added uni-im cloud integrated, full platform, free, open source instant messaging system [Details](https://uniapp.dcloud.net.cn/uniCloud/uni-im.html)
+  + JQL Fixed Using add aggregate operator report an error [Details](https://ask.dcloud.net.cn/question/156261)
+  + JQL Fixed Using some reserved js keywords in where or field report an error
+  + JQL Fixed When querying a joined table with getTemp, an error bug is reported if the associated field of the main table is of array type in the schema but the actual data does not have this field
+  + Cloud Object Added Call cloud object with url support mulit segment path [Details](https://uniapp.dcloud.net.cn/uniCloud/http.html#request-co-url)
+  + HBuilderX Plugin Fixed The breakpoint entered the nodejs built-in module introduced by version 3.6.7
+  + Secure Network Upgrade Uniform error code specification [Details](https://uniapp.dcloud.net.cn/uniCloud/secure-network.html#err-code)
+  + uni-id-co Upgrade Using hmac-sha256 as password hash method [Details](https://uniapp.dcloud.net.cn/uniCloud/uni-id-summary.html#password-safe)
+  + uni-id-co Added Support custom password hash/encrypt method [Details](https://uniapp.dcloud.net.cn/uniCloud/uni-id-summary.html#custom-password-encrypt)
+  + uni-id-co Added Invoke uni-id-co using HTTP request [Details](https://uniapp.dcloud.net.cn/uniCloud/uni-id-pages.html#adapter-http)
+* [App plugin (5+ App & uni-app)]
+  + Added Stripe supports setting up billing information [Details](https://uniapp.dcloud.net.cn/tutorial/app-payment-stripe.html)
+  + iOS Fixed TitleNView setting the default navigation bar color can cause inconsistencies with the status bar color
+  + iOS Fixed setUIStyle setting dark mode may not work
 
 ## 3.6.8.20221027-alpha
-* 修复 App真机运行 打开Object类型的日志后，内容没有格式化的Bug
-* 修复 uni_modules 插件市场导入插件，运行缓慢超时导致提示`插件处理外部应用请求未能完成`的Bug
+* Mobile App Playground: Fixed, console, click on Object type log, after the editor is opened, the file content is not formatted bug
+* [uni-app plugin]
+  + Added Vue2 project Support for the use of composite APIs [Details](https://uniapp.dcloud.net.cn/tutorial/vue-composition-api.html)
+  + Fixed Some objects inaccessible after using TypeScript in the Vue3 project derived from version 3.6.7 [Details](https://github.com/dcloudio/uni-app/issues/3930)
+  + App, Web Added Location updates event [Details](https://uniapp.dcloud.net.cn/api/location/location-change.html)
+  + App Updated Vue3 project Set minUserAgentVersion to 49 [Details](https://uniapp.dcloud.net.cn/collocation/manifest.html#appwebview)
+  + App Fixed The nvue page global style of the Vue3 project is invalid from version 3.6.7 [Details](https://ask.dcloud.net.cn/question/155639)
+  + App Fixed Vue2 project Event exception caused by remove page root node [Details](https://ask.dcloud.net.cn/question/155057)
+  + App Fixed Vue2 project Updating data when the list does not use index as the key results in an event exception [Details](https://ask.dcloud.net.cn/question/155238)
+  + App-Android Fixed uni.getStorageSync may report a 'SyntaxError' error in some cases [Details](https://ask.dcloud.net.cn/question/154284)
+  + App-iOS Fixed The nvue page occasionally crashes when turning off or on the pull-down refresh on iOS16 devices
+  + Web Fixed Vue2 project Using the page selector in CSS media queries does not take effect
+  + Weixin Mini Program Added uni-AD rewarded video add secured callback [Details](https://uniapp.dcloud.net.cn/component/ad-weixin.html)
+  + Alipay Mini Program Added Supports monitoring keyboard height changes using uni.onKeyboardHeightChange [Details](https://uniapp.dcloud.net.cn/api/key.html#onkeyboardheightchange)
+  + Alipay Mini Program Fixed Events in the Mini Program component are triggered earlier and cannot be listened to in the Vue component
+* [uniCloud plugin]
+  + Added Secure Network, Added client verification to check client authenticity [Details](https://uniapp.dcloud.net.cn/uniCloud/secure-network.html#verify-client)
+  + Added HBuilderX Plugin, Add [OpenDB Check for Updates] to the right-click menu of schema file which starts with 'uni-'
+  + Added `uni-clear-temp-data` expired data and temporary file cleaning plugin [Details](https://ext.dcloud.net.cn/plugin?id=9826)
+  + Fixed HBuilderX Plugin, Local cloudfuntion calls the redis interface report an error when transferring large data [Details](https://ask.dcloud.net.cn/question/155804)
+  + Fixed uniIdRouter, Fix bug with incorrect uniIdRedirectUrl parameter when jumping using relative paths [Details](https://ask.dcloud.net.cn/question/155904)
+  + uni-id-co Upgrade password encryption algorithm, support hmac-sha256 encryption [Details](https://uniapp.dcloud.net.cn/uniCloud/uni-id-summary.html#password-safe)
+  + uni-id-co Added Developers can customize password encryption rules [Details](https://uniapp.dcloud.net.cn/uniCloud/uni-id-summary.html#custom-password-encrypt)
+  + uni-id-co Added support for migrating other system users to uni-id [Details](https://uniapp.dcloud.net.cn/uniCloud/uni-id-summary.html#move-users-to-uni-id)
+  + uni-id-co Support http requests [Details](https://uniapp.dcloud.net.cn/uniCloud/uni-id-pages.html#adapter-http)
+* [App plugin (5+ App & uni-app)]
+  + Android Fixed chooseVideo Using the camera to capture video may fail on Android 10 and above devices [Details](https://ask.dcloud.net.cn/question/155877)
+  + iOS Fixed When sharing to WeChat favorites, jump to the moments [Details](https://ask.dcloud.net.cn/question/155362)
 
 ## 3.6.7.20221018-alpha
-* 【重要】升级 HBuilderX 内置Node版本升级为16.17.0，内置npm版本升级为6.14.12
-* 优化 Git插件 git pull操作 状态栏消息增加查看日志功能 方便查看日志
-* 调整 设置 将语言服务相关的配置聚合到`语言服务配置`配置项中
-* 新增 Node调试 支持附加(attach)到已经启动的node进程上断点调试 [详情](https://hx.dcloud.net.cn/Tutorial/extension/node-development?id=attach)
-* 优化 Windows 当Node进程被安全软件拦截，导致语言服务等Node插件启动失败时，弹窗提示
-* 修复 代码助手 代码助手显示后，拖动到编辑器底部，任意光标位置回车后，中间代码丢失的Bug
-* 修复 代码助手 当快速输入代码块时，某些情况下，代码提示窗口右侧信息显示其它语言服务返回结果的Bug
-* 修复 代码助手 CSS class存在多个时，快速敲空格然后按左键，导致代码提示回车后替换位置错误的Bug
-* 修复 代码助手 CSS 大文件代码提示速度过慢的Bug
-* 修复 语法校验 uni-app项目(非CLI) 当项目下存在tsconfig.json时，某些情况下，语法校验误报的Bug
-* 修复 语法校验 JSON 文件末尾存在中文`，`时，报错波浪线不显示的Bug
-* 修复 转到定义 uni-app App.vue style引入多个文件, class转到定义只对最后一个文件生效的Bug [详情](https://ask.dcloud.net.cn/question/154824)
-* 修复 语言服务 某些情况下，语言服务频繁报错崩溃，HBuilderX窗口右下角频繁弹窗报错的Bug
-* 修复 内置浏览器 Windows 某些情况下，拖动内置浏览器，HBuilderX闪退的Bug
-* 修复 App真机运行 3.5.5引出的 uni-app 运行到iOS模拟器，修改nvue文件，无法同步修改的Bug
-* 修复 App真机运行 3.5.5引出的 5+app 运行到iOS 某些情况下，日志没有打印的Bug
-* 优化 uni-app 运行到Web 支持选择使用Chrome Debug、使用内置浏览器Debug（控制台点击虫子图标，可弹出选择菜单）
-* 修复 uni-app 运行到内置浏览器 某些情况下，Cookie不一致的Bug
-* 新增 uni-app manifest.json 可视化界面App模块配置 增加"安全网络" [详情](https://uniapp.dcloud.net.cn/uniCloud/secure-network.html)
-* 修复 uniCloud 前端网页托管 某些情况下，发布失败，仍然执行上传操作的Bug
-* 新增 uni_modules 支持配置模块的初始化脚本。可用于定时任务设置随机开始时间 [详情](https://uniapp.dcloud.net.cn/plugin/uni_modules.html#package-json)
-* 修复 uni-app 真机运行 uts Android版插件调用内置依赖库中的API时需要手动下载并添加到lib目录的Bug [详情](https://uniapp.dcloud.net.cn/plugin/uts-plugin.html#tempnotice)
+* Upgrade HBuilderX built-in Node version to 16.17.0 and built-in npm version to 6.14.12
+* Git plug-in: git pull operation, Git message status bar, added log view function
+* HBuilderX Settings: Aggregate language service-related configurations into the Language Service Configuration configuration item
+* Added Node debugging, which supports attaching breakpoint debugging to the already started node process
+* HBuilderX: Windows, pop-up prompts when the Node process is intercepted by security software, causing Node plug-ins such as language services to fail to start
+* Language Server: Fixed a bug where when there were multiple CSS classes, quickly typing a space and then pressing the left button, causing the code prompt to replace the wrong position after carriage return
+* Language Server: When entering a code block quickly, in some cases, the information on the right side of the code prompt window displays the bug of the results returned by other language services
+* Language Server: Fixed the bug that the CSS code prompt speed is too slow for large CSS files
+* Language Server: Fixed the bug of false positives in syntax verification in some cases when tsconfig.json exists in the uni-app project
+* Language Server: Fixed the bug that in some cases, the language service frequently reported errors and crashed, and the bug of frequent pop-up errors in the lower right corner of the HBuilderX window
+* Language Server: Fixed the bug that uni-app App.vue style introduced multiple files, and the class transfer definition only took effect on the last file
+* Built-in browser: Fix the bug that HBuilderX crashes when dragging the built-in browser on some Windows computers
+* Mobile App Playground: Fixed uni-app runs to the iOS simulator, modifies the nvue file, and cannot synchronize the modified bug
+* Mobile App Playground: Fixed 5+App runs to iOS, in some cases, the log does not print the bug
+* Added uni-app run to H5, debug, support to choose to use Chrome Debug, use the built-in browser to debug (click the bug icon in the console to pop up a selection menu)
+* Fixed uni-app run to the Built-In Browser, In some cases, the bug of inconsistent cookies
+* Added uni-app manifest.json, App module configuration, added "Secure Network"
+* Fixed uniCloud Web Page Hosting, In some cases, the release fails and still performs the upload operation Bug
+* Added uni_modules Supports configuration of module initialization scripts [Details](https://uniapp.dcloud.net.cn/plugin/uni_modules.html#package-json)
+* [uni-app plugin]
+  + [Important] Added uts iOS plugin [Details](https://uniapp.dcloud.net.cn/plugin/uts-plugin.html)
+  + [Important] Added `uni ext api`. Dipped the unusual API to the uni_modules plugin, but still use the uni. [Details](https://uniapp.dcloud.net.cn/api/extapi.html)
+  + [Important] App-Android Fix the bug that the deviceId property of getSystemInfo occasionally fails to obtain and multiple devices are repeatedly obtained (note the backward compatibility problem caused by this modification) [Details](https://uniapp.dcloud.net.cn/api/system/info.html)
+  + Vue3 project vite dependencies upgrade to the latest 3.1.8
+  + App, Web Added Support uni.getBatteryInfo [Details](https://uniapp.dcloud.net.cn/api/system/batteryInfo.html)
+  + App, Web Fixed Picker component date type cannot be used by the default year range [Details](https://ask.dcloud.net.cn/question/131332)
+  + App, Web Fixed that the decimal point cannot be input on the numeric keyboard in iOS 16 [Details](https://ask.dcloud.net.cn/question/154584)
+  + App, Web Fixed Editor component insertImage triggers input event does not have alt attributes [Details](https://ask.dcloud.net.cn/question/155163)
+  + App, Web Fixed Vue3 project Editor component reloaded can not get EditorContext [Details](https://ask.dcloud.net.cn/question/154702)
+  + App Added nvue page picker-view component adds mask-top-style, mask-bottom-style attributes [Details](https://uniapp.dcloud.net.cn/component/picker-view.html)
+  + App Updated Video component supports the title attribute [Details](https://uniapp.dcloud.net.cn/component/video.html)
+  + App Fixed hover-class attribute does not support multiple class [Details](https://ask.dcloud.net.cn/question/152506)
+  + App Fixed Vue3 project ust plug-in export default class does not take effect [Details](https://ask.dcloud.net.cn/question/154164)
+  + App Fixed Vue3 project v-for may rendering failure [Details](https://ask.dcloud.net.cn/question/154836)
+  + App Fixed Vue3 project tabbar.broderStyle custom color value invalid [Details](https://ask.dcloud.net.cn/question/150718)
+  + App Fixed Vue3 project nvue page switch component disabled attribute is invalid [Details](https://ask.dcloud.net.cn/question/154577)
+  + App-Android Fixed in version 3.5.5 that caused the input component to automatically get the focus may fail [Details](https://ask.dcloud.net.cn/question/153481)
+  + App-iOS Fixed nvue swiper component uses rpx may not slide properly to switch on some devices [Details](https://ask.dcloud.net.cn/question/149260)
+  + Web Updated uni.preViewImage adds switching and closing buttons on the PC
+  + Web Fixed Tabbar shows the duplicate Badge in some cases [Details](https://ask.dcloud.net.cn/question/153336)
+  + Web Fixed uni.openLocation navigation does not automatically obtain the current position [Details](https://ask.dcloud.net.cn/question/155066)
+  + Web Fixed Vue3 project titlenView's selection is not displayed when select is true [Details](https://ask.dcloud.net.cn/question/153179)
+  + Web Fixed Vue3 project enters tabbar repeatedly trigger onLoad event [Details](https://ask.dcloud.net.cn/question/154066)
+  + Web Fixed v-bind in the Vue3 project CSS does not take effect with rpx [Details](https://github.com/dcloudio/uni-app/issues/3884)
+  + Mini Program Fixed When changing the data, setdata calls abnormalities [Details](https://github.com/dcloudio/uni-app/issues/3787)
+  + Mini Program Fixed v-bind in the Vue3 project CSS does not take effect in the data in non-setup [Details](https://github.com/dcloudio/uni-app/issues/3887)
+  + Mini Program Fixed Vue3 project action domain slot nesting may render failed when used [Details](https://github.com/dcloudio/uni-app/issues/3886)
+  + Mini Program Fixed Vue3 project the static data rendering of the scoped slot is failed [Details](https://ask.dcloud.net.cn/question/153150)
+  + Mini Program Fixed Vue3 project static data rendering errors in the role of the field slot [Details](https://ask.dcloud.net.cn/question/155008)
+  + Mini Program Fixed The Vue3 project is issued to a mixed subcontract, and the page return may be reported to an error [Details](https://github.com/dcloudio/uni-app/issues/3923)
+  + Weixin Mini Program Fixed drag-related events of the Vue3 project in scroll-view do not trigger [Details](https://github.com/dcloudio/uni-app/issues/3921)
+  + Weixin Mini Program Fixed uni://form-field invalid in Vue3 project [Details](https://ask.dcloud.net.cn/question/155373)
+  + Baidu Mini Program Fixed uni.createIntersectionObServer cannot listen to multiple nodes [Details](https://github.com/dcloudio/uni-app/issues/3835)
+  + Baidu Mini Program Fixed Static resources in node_modules directory build error [Details](https://ask.dcloud.net.cn/question/154595)
+  + Baidu Mini Program Fixed OnInit lifetimes is not triggered [Details](https://ask.dcloud.net.cn/question/154352)
+  + Baidu Mini Program Fixed The Vue2 project uses usingSwanComponents to configure the event in the dynamic library component that cannot get parameters [Details](https://ask.dcloud.net.cn/question/155281)
+  + Baidu Mini Program Fixed Vue3 project cannot use dynamic library components normally [Details](https://github.com/dcloudio/uni-app/issues/3864)
+  + Alipay Mini Program Fixed After compiled into a mini program plug-in, uni.hideloading and other interfaces cannot be accessed [Details](https://github.com/dcloudio/uni-app/issues/2974)
+  + Alipay Mini Program Fixed page-container component is compiled as a custom component [Details](https://ask.dcloud.net.cn/question/154028)
+  + Alipay Mini Program Fixed invalid duration attribute in uni.showToast [Details](https://ask.dcloud.net.cn/question/147279)
+  + Alipay Mini Program Fixed The component without events in the plug-in report an error [Details](https://github.com/dcloudio/uni-app/pull/3903)
+  + QQ Mini Program Fixed Vue3 uni.createCanvasContext passing this returns an error [Details](https://ask.dcloud.net.cn/question/154223)
+  + ByteDance Mini Program Added Support the use of mini program plugins [Details](https://github.com/dcloudio/uni-app/issues/3917)
+  + ByteDance Mini Program Fixed Vue3 project uses mini program custom components that may report an error [Details](https://github.com/dcloudio/uni-app/issues/3915)
+  + Kuaishou Mini Program Added Pages support subPackages [Details](https://uniapp.dcloud.net.cn/collocation/pages.html#subpackages)
+  + Kuaishou Mini Program Update uni.requestPayment payment interface is compatible with calling ks.pay [Details](https://ask.dcloud.net.cn/question/152948)
+  + uni-statistics Fixed The bug of inaccurate deviceId acquisition method caused by version 3.4.9, resulting in inaccurate statistics of unistatistics 2.0 App-Android platform [details](https://ask.dcloud.net.cn/article/40097)
+* [uniCloud plugin]
+  + Added Secure network, For secure communication between clients and cloud functions and cloud objects [Details](https://uniapp.dcloud.net.cn/uniCloud/secure-network.html)
+  + Added uniCloud client sdk, Add uniCloud.databaseForJQL api to get database reference [Details](https://uniapp.dcloud.net.cn/uniCloud/clientdb.html#jssdk)
+  + Added uniCloud client sdk, uniCloud.importObject add options.parseSystemError to parse uncaught exception for auto ui [Details](https://uniapp.dcloud.net.cn/uniCloud/cloud-obj.html#auto-ui)
+  + Fixed UniCloud HBuilderX plugin, Require error is only reported once when connect to local cloud function
+  + uni-id-co Added support for WeChat authorized mobile phone number login method [Details](https://uniapp.dcloud.net.cn/uniCloud/uni-id-pages.html#login-by-weixin-mobile)
+  + uni-id-co Added Unbind third-party platform account [Details](https://uniapp.dcloud.net.cn/uniCloud/uni-id-pages.html#unbind-third-account)
+  + uni-id-co Added WeChat binding mobile phone number to support `code` binding via `getPhoneNumber` event callback [Details](https://uniapp.dcloud.net.cn/uniCloud/uni-id-pages.html#bind-mobile-by-mp-weixin)
+  + uni-admin Added bulk SMS function [Details](https://uniapp.dcloud.net.cn//uniCloud/admin.html#batch-sms)
+  + uni-admin Fixed a bug where some statistics of the uni-statistics App-Android platform were inaccurate
+  + uni-admin Fixed uni-statistics2 Bug where the week/month data is inaccurate
+* [App plugin (5+ App & uni-app)]
+  + Android Update the Paypal SDK to version 0.6.2, fixed the issue that setting targetSdkVersion to 31 packaging failed [Details](https://ask.dcloud.net.cn/question/154976)
+  + Android Fixed plus.device.uuid may be getting same unique identity on different devices
+  + Android Fixed App settings only support portrait when on some Android 8 devices may cause crash
+  + Android Fixed LivePusher may cause the app to crash in some scenarios [Details](https://ask.dcloud.net.cn/question/147593)
+  + Android Fixed The mute state of VideoPlayer may not work after switching video resources [Details](https://ask.dcloud.net.cn/question/153257)
+  + Android Fixed VideoPlayer may cause stuttering when destroyed [Details](https://ask.dcloud.net.cn/question/153483)
+  + Android Fixed VideoPlayer does not display the title bar in some cases
+  + Android Fixed App does not work properly on Android 4.4 devices caused by version 3.6.2 [Details](https://ask.dcloud.net.cn/question/153910)
+  + iOS Fixed VideoPlayer's title bar and progress bar style are incorrect [Details](https://ask.dcloud.net.cn/question/153945)
+  + iOS Fixed Uni native language plugin Hook does not have applicationWillEnterForeground/applicationDidEnterBackground event caused by version 3.6.0
 
 ## 3.6.3.20220919-alpha
-* 修复 3.6.1引出的 HBuilderX 关闭标签卡，某些情况下出现闪退的Bug [详情](https://ask.dcloud.net.cn/question/153398)
-* 修复 3.6.1引出的 Windows 内置浏览器 手机设备模式 无法选择元素的Bug
-* 修复 HBuilderX 代码提示过程中切换到其它程序，某些情况下，代码提示窗口会覆盖在其它程序上面的Bug
-* 修复 3.6.1引出的 语言服务 uni-app CLI项目 px转rpx失效的Bug [详情](https://ask.dcloud.net.cn/question/153384)
-* 修复 3.6.1引出的 控制台日志 某些类型的日志输出错误的Bug
-* 修复 uni-app 运行到iOS模拟器，控制台日志被截断或输出不全的Bug
-* 修复 uni-app 运行到Android模拟器，Windows上某些Android模拟器运行失败的Bug
-* 修复 uni-app 运行到Android，某些情况下，控制台提示编译成功后，没有反应的Bug
-* 修复 App安心打包 Android 新版支付宝SDK引出的，安心打包失败的Bug
+* Fixed the bug that the editor closes the tab, and crashes in some cases
+* Fixed the bug of Windows built-in browser, mobile device mode, unable to select elements
+* Fixed the bug that when switching to other programs during the HBuilderX code prompt process, the code prompt window would cover other programs in some cases
+* Language Server: Fixed the bug of invalid px to rpx in uni-app cli project
+* Fixed console log, some types of log output bugs
+* Fixed the bug that uni-app runs to the iOS simulator, the console log is truncated or the output is incomplete
+* Fixed the bug that uni-app runs to the Android emulator, and some Android emulators fail to run on Windows
+* Fixed the bug that when uni-app runs to Android, in some cases, the console prompts that the compilation is successful, but there is no response
+* Fixed the bug of App packaging failure caused by the new version of Alipay SDK for Android
+* [uni-app plugin]
+  + Mini Program Fixed onReady lifecycle fires twice [Details](https://ask.dcloud.net.cn/question/153422)
 
 ## 3.6.1.20220907-alpha
-* 修复 3.6.0引出的 Windows 内置浏览器 网络请求无法跨域的Bug [详情](https://ask.dcloud.net.cn/question/152510)
-* 修复 3.6.0引出的 Windows 内置浏览器 某些情况下，浏览器背景色错误的Bug [详情](https://ask.dcloud.net.cn/question/152647)
-* 修复 编辑器 关闭选项卡 某些情况下，没有记忆折叠状态的Bug
-* 修复 语言服务 JavaScript `Object.`不提示es6+新增方法的Bug
-* 修复 语言服务 uni-app pages.json文件, page字段路径提示回车后补全错误的Bug
-* 修复 语言服务 uni-app nvue文件 css class 转到定义失败的Bug [详情](https://ask.dcloud.net.cn/question/152522)
-* 修复 语言服务 uni-app nvue文件 script和style标签 无法提示lang属性的Bug
-* 修复 语言服务 Vue文件 stylus代码没有提示的Bug
-* 修复 语言服务 `import xxx from 'XXX.vue'` 当不带vue后缀，提示模块找不到，以及无法转到定义的Bug
-* 修复 语言服务 jsx和tsx文件 敲字符`.`时无法自动触发代码提示的Bug
-* 新增 语言服务 内置语法校验 支持warning级别
-* 修复 语言服务 启用JavaScript校验 在Vue文件 Script节点不生效的Bug
-* 修复 语言服务 html文件 关闭JavaScript校验功能配置后，错误红色波浪线仍然存在的Bug
-* 修复 语言服务 多行错误时，鼠标悬浮在非第一行，错误提示不显示的Bug
-* 修复 App-云打包 某些情况下 项目下单个静态资源文件过大(比如超过100M)时 无法提交打包的Bug
-* 修复 App-云打包 Windows 某些情况下，提交打包，HBuilderX出现闪退的Bug
-* 修复 uniCloud 云函数 当云函数依赖第三方库，上传并运行，执行失败的Bug
+* Fixed the bug caused by HBuilderX 3.6.0, Windows, built-in browser, and network requests cannot be cross-domain
+* Fixed the bug caused by HBuilderX 3.6.0, Windows, built-in browser, browser background color is wrong
+* Fixed Editor, Close Tab, in some cases, the bug of not remembering the folded state
+* Language Server: Fixed the bug of uni-app, pages.json, page field path prompting to complete the error after carriage return
+* Language Server: Fixed uni-app, nvue file, css class, goto definition failed bug
+* Language Server: Fixed the bug that uni-app, nvue files, script and style tags, could not prompt the lang attribute
+* Language Server: Fixed JavaScript `Object.` does not prompt the bug of es6+ new methods
+* Language Server: Fixed the bug that the stylus code in the Vue file has no prompts
+* Language Server: Fixed `import xxx from 'XXX.vue'` without the vue suffix, prompting that the module cannot be found, and cannot go to the defined bug
+* Language Server: Fixed the bug that the code prompt could not be automatically triggered when typing the character `.` in jsx and tsx files
+* Language Server: Added built-in syntax check to support warning level
+* Language Server: Fixed the bug that the `Script` node does not take effect in the Vue file when JavaScript verification is enabled
+* Language Server: Fixed the bug that the error red wavy line still exists after the JavaScript verification function configuration is disabled in the html file
+* Language Server: When there is a multi-line error, the mouse hovers over a non-first line, and the error message is not displayed.
+* Mobile App - Cloud packaging: Fixed the bug that when the static resource file under the project is too large (over 100M), the packaged bug cannot be submitted
+* Mobile App - Cloud packaging: Fixed the bug that HBuilderX crashed when submitting packaging in some cases on Windows
+* [uni-app plugin]
+  + App-Android Fixed uts plugin missing imported classes after compilation in some cases [Details](https://ask.dcloud.net.cn/question/152597)
+  + App-Android Fixed When the uts plugin uses a kotlin basic type (such as Int) when defining a type, a compilation error is reported
+  + App-Android Fixed uts plugin cloud package does not include AndroidManifest.xml
+  + App-Android Fixed bindingx may cause exceptions when executing evaluatecolor [Details](https://ask.dcloud.net.cn/question/151759)
+  + App-Android Fixed uni.reLaunch opens non-tabbar nvue pages may still show tabbar [Details](https://ask.dcloud.net.cn/question/143792)
+  + App-Android Fixed AutoNavi Maps not working properly when setting GooglePlay channel [Details](https://ask.dcloud.net.cn/question/152668)
+  + App-Android Fixed using the picker in nvue as homepage may cause the app to become unresponsive [Details](https://ask.dcloud.net.cn/question/151819)
+  + App-iOS Fixed Nvue Tabbar page uni.reLaunch could not triggered onUnload lifetimes [Details](https://ask.dcloud.net.cn/question/152738)
+  + Web Fixed Calling uni.setClipboardData will bring up the keyboard [Details](https://github.com/dcloudio/uni-app/issues/3569)
+  + Mini Program Fixed Updated The Mini Program component supports the use of kebab-case event names [Details](https://github.com/dcloudio/uni-app/issues/1802)
+  + Weixin Mini Program Fixed Calling triggerEvent in wxs cannot carry event parameters [Details](https://github.com/dcloudio/uni-app/issues/3829)
+* [App plugin (5+ App & uni-app)]
+  + Android Fixed Get the opposite width and height of a vertical video file with getVideoInfo [Details](https://ask.dcloud.net.cn/question/151205)
+  + Android Fixed Offset may appear when previewing images with previewImage [Details](https://ask.dcloud.net.cn/question/151966)
+  + iOS Fixed The uploadedSize value obtained by uploading a file using uploader is inaccurate
 
 ## 3.6.0.20220901-alpha
-* 【重要】新增 uts语法支持。使用ts开发原生 [详情](https://uniapp.dcloud.io/tutorial/syntax-uts.html)
-* 新增 查找引用功能。支持对js、ts变量方法点右键查找
-* 优化 Windows 内置浏览器 升级Cef版本到90.6.7
-* 新增 HBuilderX设置 插件配置 增加配置项 启用JavaScript校验、启用TypeScript校验
-* 新增 语言服务 vue、js内变量语法实时校验（js校验，需要在【设置 - 插件配置】中开启）
-* 新增 语言服务 vue3 `style module`支持代码提示
-* 新增 语言服务 vue2&3 `插槽`支持代码提示
-* 新增 语言服务 vue2&3 script 区域支持自动导包
-* 修复 语言服务 vuedoc 在 script setup 内不生效的bug
-* 修复 语言服务 vue3 在 script setup 内 import 的自定义组件，在 template 区域无法提示的Bug
-* 修复 语言服务 修改函数调用的名称时，会重复生成`()`的Bug
-* 修复 语言服务 特殊String 不支持 `if(idstr === '|')` 写法的Bug
-* 修复 语言服务 vue template 内变量悬浮不生效的Bug
-* 修复 语言服务 uniCloud.importObject()，云对象修改后，代码提示、悬浮不能实时生效的Bug
-* 优化 语言服务 uniCloud.importObject()，调用云对象上的方法时参数及返回值的代码提示
-* 修复 语言服务 遵循 vetur 规范的 framework包 安装卸载的时候不能实时生效的Bug
-* 修复 语言服务 html script 中引用其他文件的变量和函数悬浮不生效的Bug
-* 修复 语言服务 html script 中引用其他文件的函数时解析返回值和参数类型不正确的Bug
-* 修复 语言服务 底部状态栏框架语法库，移除时无法生效的Bug
-* 修复 语言服务 vue cli项目，vue script 区域无法识别项目下 tsconfig.json 的Bug
-* 修复 语言服务 修改写好的标签名称时，选择代码提示项后多补内容的Bug
-* 优化 语言服务 设置px转rem后，转换提示放到代码提示的第一项
-* 新增 标签卡 右键菜单 增加菜单 向左移动标签卡、向右移动标签卡
-* 修复 Windows HBuilderX未启动的情况下，导入插件市场插件，首次导入UI视图显示空白的Bug
-* 修复 多文件字符搜索 某些情况下，跳转位置错误的Bug
-* 修复 转到定义到另一个文件后，后退时，光标跳转到该文件开始，而不是转到定义前的位置的Bug
-* 新增 HBuilderX英文 发行 H5发行及小程序发行窗口 窗口UI文本国际化
-* 新增 新建项目 HBuilderX插件 增加国际化示例模板
-* 修复 uni-app manifest.json 应用名称国际化后，打包界面，应用名称显示%%的Bug
-* 调整 uni-app manifest.json 左侧“H5配置”改名为“Web配置”
+* Added UTS syntax support. Develop native using TypeScript [Details](https://en.uniapp.dcloud.io/tutorial/syntax-uts.html)
+* Added the function of finding references, currently only supports js and ts
+* Windows: Upgrade built-in browser, Upgrade Cef version to 90.6.7
+* HBuilderX settings, plugin configuration, add configuration items, Enable JavaScript Validation, Enable TypeScript Validation
+* Language Server: Added real-time verification of variable syntax in vue and js (js verification needs to be enabled in [Settings - Plugin Configuration])
+* Language Server: Added vue3 `style module` to support code hints
+* Language Server: Added vue2&3 `slot` to support code hints
+* Language Server: Added vue2&3 script area to support automatic package import
+* Language Server: Fixed the bug that vuedoc does not take effect in script setup
+* Language Server: Fixed The custom component of vue3 `script setup` import, the bug that cannot be prompted in the template area
+* Language Server: Fixed the bug that `()` will be repeatedly generated when modifying the name of the function call
+* Language Server: Fixed the bug that special String does not support `if(idstr === '|')`
+* Language Server: Fixed the bug that the variable suspension in the vue template area does not take effect
+* Language Server: Fixed `uniCloud.importObject()`, after the cloud object is modified, the code prompt and suspension cannot take effect in real time
+* Language Server: Optimized `uniCloud.importObject()`, code hints for parameters and return values ​​when calling methods on cloud objects
+* Language Server: Fixed the bug that the framework package of the vetur specification could not take effect in real time when it was installed and uninstalled
+* Language Server: Fixed the bug that the suspension of variables and functions referencing other files in the html script did not take effect
+* Language Server: Fixed the bug that the return value and parameter type are incorrect when parsing the function that references other files in the html script
+* Language Server: Fixed the bug that the frame syntax library of the status bar at the bottom of HBuilderX did not take effect when removed
+* Language Server: Fixed the vue-cli project, the script area in vue will not recognize the bug of tsconfig.json under the project
+* Language Server: Optimization After setting `px` to `rem`, the conversion prompt is placed in the first item of the code prompt
+* Added tabs Right-click menu Add menus Move tabs to the left, move tabs to the right
+* Windows: Fixed the bug that when HBuilderX is not started, when importing the plugin market plugin, the UI view of the first import shows a blank bug
+* Fixed the bug that the jump position is wrong in some cases of multi-file character search
+* Fixed the bug that when going back to another file, the cursor jumps to the beginning of the file instead of going to the position before the definition
+* Added new project, HBuilderX plugin, added internationalization example template
+* uni-app: Fixed manifest.json After the application name is internationalized, the packaging interface, the application name displays `%%`
+* uni-app: Adjust the H5 configuration on the left side of manifest.json to the Web configuration
+* [uni-app plugin]
+  + [Important] Added uts Android plugin [Details](https://uniapp.dcloud.net.cn/plugin/uts-plugin.html)
+  + App-iOS Fixed uni.openLocation bottom safe area adaptation problem [Details](https://ask.dcloud.net.cn/question/150074)
+  + App-iOS Fixed That uni.chooseLocation may cause the app to crash [Details](https://ask.dcloud.net.cn/question/152367)
+  + Web Added Support for configuring and using AutoNavi maps [Details](https://uniapp.dcloud.io/collocation/manifest?id=h5sdkconfigmaps)
+  + Alipay Mini Program Fixed Compiling error after configuring global Mini Program components [Details](https://github.com/dcloudio/uni-app/issues/3619)
+  + Alipay Mini Program Fixed Accessing $slots after enabling Mini Program Basic Library 2.0 configuration [Details](https://github.com/dcloudio/uni-app/issues/3529)
+  + ByteDance Mini Program Added vue2 project to support onUploadDouyinVideo lifetimes [Details](https://ask.dcloud.net.cn/question/151113)
+* [uniCloud plugin]
+  + Updated UniCloud HBuilderX plugin, Change parameter of running cloud object by HBuilderX [Details](https://uniapp.dcloud.net.cn/uniCloud/rundebug.html#run-obj-param)
+  + Fixed UniCloud HBuilderX plugin, Using push extension raise error which was triggered by HBuilderX 3.5.5
+  + Fixed UniCloud HBuilderX plugin, Error "SIGN_PARAM_INVALID" occured occasionally which was triggered by HBuilderX 3.5.5
+* [App plugin (5+ App & uni-app)]
+  + iOS Fixed submit to App Store Connect report warning 'ITMS-90078: Missing Push Notification Entitlement' without push module
 
 ## 3.5.5.20220825-alpha
-* 修复 3.5.4引出的 Windows HBuilderX Cli命令失效的Bug
-* 新增 App真机运行 设备选择窗口 增加选择基座功能
-* 修复 App真机运行 Windows 当项目路径存在中文，运行到 iOS设备，App页面显示异常的Bug
-* 修复 App真机运行 某些情况下，安装自定义基座失败的Bug
-* 修复 uni-app manifest.json uniPush字段 某些情况下变成 null 的Bug
+* Fixed the bug that the Windows HBuilderX Cli command is invalid
+* Added Mobile App Playground, Device selection window, added base selection function
+* Fixed Mobile App Playground, When the project path exists in Chinese and runs to an iOS device, the App page displays an abnormal bug
+* Fixed Mobile App Playground, a bug where custom base installation failed in some cases
+* Fixed uni-app manifest.json, a bug that the uniPush field becomes null in some cases
+* [uni-app plugin]
+  + Fixed Compile exception when project path contains parentheses. [Details](https://ask.dcloud.net.cn/question/150173)
+  + App Fixed Vue page cover-view component flex layout is invalid. [Details](https://ask.dcloud.net.cn/question/151697)
+  + App Fixed Vue3 project uni.getSystemInfo gets windowHeight value is inaccurate. [Details](https://ask.dcloud.net.cn/question/150862)
+  + App Fixed Vue3 project vue page map component shows error after updating center coordinates. [Details](https://ask.dcloud.net.cn/question/151438)
+  + App-Android Fixed uni.saveImageToPhotosAlbum saving network pictures may overwrite the last saved picture. [Details](https://ask.dcloud.net.cn/question/125357)
+  + App-Android Fixed Picker component focus acquisition exception. [Details](https://ask.dcloud.net.cn/question/150454)
+  + App-Android Fixed Nvue page map component customCallout setting image may cause application crash. [Details](https://ask.dcloud.net.cn/question/150166)
+  + App-iOS Fixed The values of bluetoothEnabled and locationEnabled obtained by uni.getSystemSetting are inaccurate.
+  + App-iOS Fixed The nvue page map component marker calls the moveAlong method without interrupting the previous animation. [Details](https://ask.dcloud.net.cn/question/151411)
+  + App-iOS Fixed The nvue page ad-content-page component may cause the app to crash in some scenarios. [Details](https://ask.dcloud.net.cn/question/151778)
+  + Web Fixed Vue3 project css environment variable --window-top calculation error. [Details](https://ask.dcloud.net.cn/question/150842)
+  + Web Fixed Vue3 project release mode showLoading icon size display error. [Details](https://ask.dcloud.net.cn/question/149819)
+  + Web Fixed custom-tab-bar component using uni.setTabBarItem to set visible is invalid. [Details](https://ask.dcloud.net.cn/question/132947)
+  + Mini Program Fixed v-model fails after complex expressions are used in v-for. [Details](https://github.com/dcloudio/uni-app/issues/3173)
+  + Alipay Mini Program, Baidu Mini Program, Kuaishou Mini Program, ByteDance Mini Program Updated Support automatic copying of ext.json files.
+  + Alipay Mini Program Updated The uni.saveImageToPhotosAlbum interface no longer uses the legacy saveImage interface.
+  + ByteDance Mini Program Fixed Component fails to render when repeatedly creating and destroying pages quickly.
+* [uniCloud plugin]
+  + Updated Aliyun Extend the timeout of database request from 3s to 5s
+  + Added Aliyun Implement eip with http proxy provided by aliyun [Details](https://uniapp.dcloud.net.cn/uniCloud/cf-functions.html#http-proxy-client)
+  + Added CloudFunction Add context.requestId to get current request id in cloudfunction [Details](https://uniapp.dcloud.net.cn/uniCloud/cf-functions.html#context)
+  + Added CloudObject Add this.getUniCloudRequestId() to get current request id in cloudobject [Details](https://uniapp.dcloud.net.cn/uniCloud/cloud-obj.html#get-request-id)
+  + Added CloudSdk Add uniCloud.getRequestList to get the list of request id being processed by current cloudfunction instance [Details](https://uniapp.dcloud.net.cn/uniCloud/cf-functions.html#get-request-list)
+  + Added CloudSdk Add uniCloud.getCloudInfos to get the list of cloud info being processed by current cloudfunction instance [Details](https://uniapp.dcloud.net.cn/uniCloud/cf-functions.html#get-cloud-infos)
+  + Added CloudSdk Add uniCloud.getClientInfos to get the list of client info being processed by current cloudfunction instance [Details](https://uniapp.dcloud.net.cn/uniCloud/cf-functions.html#get-cloud-infos)
+  + Fixed ClientSdk Using uniCloud object cause error when uniCloud space was not bound to project [Details](https://github.com/dcloudio/uni-app/issues/3758)
+  + Fixed JQL Multi parentKey in schema is unable to query with getTree [Details](https://ask.dcloud.net.cn/question/151834)
+  + Fixed UniCloudDebugger Extension is not loaded properly in some situation [Details](https://ask.dcloud.net.cn/question/150357)
+  + Fixed UniCloudDebugger Memory leak of dev server which cause slow responding
+  + Updated uniIdRouter It's able to intercept home page or launch page loading now
+  + Updated uni-id-co Password rule updated, password strength is configurable. [Details](https://uniapp.dcloud.net.cn/uniCloud/uni-id-summary.html#password-strength)
+  + Updated uni-id-co Save user openid into `wx_openid.${mp|h5|app|web}` and `wx_openid.${mp|h5|app|web}_${DCloudAppId}` of user record [Login by weixin](https://uniapp.dcloud.net.cn/uniCloud/uni-id-pages.html#login-by-weixin)、[Login by QQ](https://uniapp.dcloud.net.cn/uniCloud/uni-id-pages.html#login-by-qq)
+  + Updated uni-id-co Save user session_key, access_token with uni-open-bridge-common [Details](https://uniapp.dcloud.net.cn/uniCloud/uni-id-summary.html#save-user-token)
+  + Added uni-id-co Add beforeRegister hook to manipulate user record before register [Details](https://uniapp.dcloud.net.cn/uniCloud/uni-id-summary.html#before-register)
+  + Added uni-id-pages Support login by weixin official account web page and wechat's qrcode of web page [Details](https://uniapp.dcloud.net.cn/uniCloud/uni-id-pages.html#weixinlogin)
+  + Added uni-id-pages Support password strength (whether it must contain upper and lower case letters, numbers, special symbols and length) configuration [Details](https://uniapp.dcloud.net.cn/uniCloud/uni-id-pages.html#config)
+  + Added uni-id-pages Add global login success event: `uni-id-pages-login-success`, listen this event by [uni.$on](https://uniapp.dcloud.net.cn/api/window/communication.html#on)
+* [App plugin (5+ App & uni-app)]
+  + Android Update the version of QQ login and sharing SDK to 3.5.12, the version of Baidu positioning SDK to 9.3.5, and the version of Baidu map SDK to 7.5.3
+  + Android Fixed the payload field of vendor channel does not support non JSON strings in UniPush 2.0
+  + Android Fixed the option parameter setting when field of creating local message with plus.push.createMessage is invalid
+  + Android Fixed upgrade APK with plus.runtime.install may report null pointer
+  + iOS Fixed use baidu location module needs enable IDFA caused by version 3.5.0
+  + iOS Fixed the token value returned by univerify in the playground is incorrect caused by version 3.5.0
+  + iOS Fixed the display time of slow motion video when select it from album is not accurate [Details](https://ask.dcloud.net.cn/question/150531)
 
 ## 3.5.4.20220805-alpha
-* 【重要】优化 App真机运行 使用Node运行，不再依赖Java
-* 修复 调试视图 变量 Global节点 某些情况下，UI显示错乱的Bug
-* 修复 HBuilderX 保存文件 utf-8 格式文件无文件头标识字节 0xEFBBBF的Bug [详情](https://ask.dcloud.net.cn/question/112186)
+* Fixed the bug that debug view, variable, Global node, UI display disorder
+* Fixed the bug that HBuilderX saves files in utf-8 format without file header identification byte 0xEFBBBF
+* [uni-app plugin]
+  + App Updated The web-view for Vue2 project can use webviewStyles set more style. [Details](https://ask.dcloud.net.cn/question/149212)
+  + App Updated The web-view for Vue page can drawn outside of safe area by default. [Details](https://ask.dcloud.net.cn/question/149472)
+  + App-Android Fixed the bug that the overlapping coordinates of the nvue map marker points cannot be displayed [Details](https://ask.dcloud.net.cn/question/149665)
+  + App-Android Fixed the bug that the nvue map component does not take effect when the polyline and polygon data are cleared
+  + App-iOS Fixed the bug that uni.setTabBarItem dynamic update icon may not take effect [Details](https://ask.dcloud.net.cn/question/149955)
+  + App-iOS Fixed the bug that the nvue map component may not be loaded properly in multiple pages when use Google map moudle [Details](https://ask.dcloud.net.cn/question/150080)
+  + Web Updated The web-view component support props of fullscreen. [Details](https://uniapp.dcloud.net.cn/component/web-view.html)
+  + Web Fixed The touch envet stop and prevent for canvas component are invalid. [Details](https://ask.dcloud.net.cn/question/148195)
+  + Alipay Mini Program Fixed The project for Vue3 $slots is invalid. [Details](https://ask.dcloud.net.cn/question/150373)
+* [uniCloud plugin]
+  + Added IP anti-brushing for cloudfunction and clientDB [Details](https://uniapp.dcloud.net.cn/uniCloud/ip-filter.html)
+  + Fixed use uniCloud inside main.js cause error in some situation
+  + Fixed uni-admin vue3 The value of showLeftWindow is incorrect after uni.showLeftWindow was called [Details](https://ask.dcloud.net.cn/question/149618)
+  + Added uni-statistics2 Add config item to set the duration of periodic reporting of data [Details](https://uniapp.dcloud.net.cn/uni-stat-v2.html#report-time)
+* [App plugin (5+ App & uni-app)]
+  + iOS Fixed the bug of cloud packaging error when use baidu map or geolocation modules without check `use IDFA` caused by version 3.5.0
+  + iOS Fixed the bug of page fall back abnormally when app switches to the foreground and use splashscreen AD caused by version 3.5.3 [Details](https://ask.dcloud.net.cn/question/150053)
+  + iOS Fixed the bug of chosse iCloud picture display black screen when setting the crop attribute [Details](https://ask.dcloud.net.cn/question/149219)
 
 ## 3.5.3.20220727-alpha
-* 修复 操作系统环境变量 配置NODE_OPTIONS --openssl-legacy-provider后，HBuilderX启动时失去响应的Bug
-* 修复 未登录时点击菜单【发行 原生APP-查看云打包状态】闪退的Bug
-* 修复 Wap2App项目，提交打包，某些情况下，生成的App样式不正确的Bug
-* 修复 uniCloud项目 node_modules文件特别多时，运行项目，Node进程CPU占用率过高的Bug
+* Fixed the operating system environment variable, configuring `NODE_OPTIONS --openssl-legacy-provider`, HBuilderX loses response when it starts
 
 ## 3.5.2.20220719-alpha
-* 新增 语言服务 uni-app i18n国际化 pages.json和Vue页面 支持i18n代码提示、转到定义 [详情](https://uniapp.dcloud.io/tutorial/i18n.html#codeHints)
-* 修复 语言服务 await关键字补全 某些情况下，附带多余信息的Bug
-* 新增 Markdown 支持跨文件转到#标题或标题的@别名 [详情](https://hx.dcloud.net.cn/Tutorial/Language/markdown?id=goto-definition)
-* 优化 插件安装 提示插件安装失败时给出详细原因和解决指南
-* 调整 Git插件 pull操作 默认选项改为第四项，即git pull --rebase --autostash
-* 修复 3.5.1引出的 弹出快速选择窗口（如Git或语言选择）不响应esc和视图弹出层级错误的Bug
-* 修复 App安心打包 某些情况下，提交打包，提示大小超过40M的Bug
-* 修复 App manifest.json 一键生成iOS通用链接功能，不能自动生成`apple-app-site-association`文件的Bug [详情](https://ask.dcloud.net.cn/question/149006)
-* 新增 海外开发者可使用`HBuilderX国际区账号`进行云端打包 [详情](https://uniapp.dcloud.io/tutorial/internationalization.html)
+* Git plugin, pull operation, the default option is changed to the fourth item, namely git pull --rebase --autostash
+* Fixed the bug of plugin installation try move failed in some cases
 
 ## 3.5.1.20220707-alpha
-* 新增 HBuilderX uniCloud前端网页托管 支持腾讯云
-+ 入口1：选中web项目，点击菜单发行-上传网站到服务器
-+ 入口2：uni-app发布为H5时，勾选 直接部署到前端网页托管
-+ 入口3: HBuilderX CLI 部署和管理前端网页托管 [详情](https://hx.dcloud.net.cn/cli/uniCloud-hosting)
-* 新增 HBuilderX 状态栏 右下角补充升级图标及新版本红点提示
-* 修复 单项目窗体 编辑器 选择语言关联窗口位置偏移的Bug
-* 修复 代码块设置 自定义其它语言代码块 窗口列表出现两个JSON选项的Bug
-* 修复 自定义代码块 注释中$DATE_TIME显示日期错误的Bug
-* 修复 语言服务 CSS pointer-events缺少auto属性的Bug
-* 修复 语言服务 Vue {{}}view后按tab，编辑器右下角弹窗提示Failed to expand abbreviation的Bug
-* 修复 语言服务 uni-app项目，import x from ‘@/‘，`@/`开头的路径，某些情况下，转到定义失败的Bug
-* 修复 打开内置终端后，插件API hx.window.showQuickPick() 窗口无法滚动的Bug
-* 新增 uni-app 新建页面 增加 uni-id-pages 模板 [详情](https://ext.dcloud.net.cn/plugin?name=uni-id-pages)
+* Added HBuilderX status bar Upgrade added red dot prompt
+* Fixed the bug that the editor selects the language association window position offset
+* Fixed the bug that the plugin API hx.window.showQuickPick() window could not scroll after opening the terminal
+* Fixed some issues for language service
 
 ## 3.5.0.20220623-alpha
-* 新增 uni-app 运行到 Web 时支持 debug 调试 [详情](https://hx.dcloud.net.cn/Tutorial/debug/h5-debug)
-* 新增 TypeScript 实时语法校验 [详情](https://hx.dcloud.net.cn/Tutorial/UserGuide/tsSyntaxCheck)
-* 新增 语言服务 支持tailwindcss提示，需要安装tailwindcss插件 [详情](https://ext.dcloud.net.cn/plugin?id=8560)
-* 新增 MarkDown 代码区块的语言着色高亮，支持提示下载对应语言着色扩展插件
-* 修复 语言服务 React 某些情况下，<App />回车后补充了`()`的Bug
-* 修复 语言服务 React jsx文件 没有代码提示的Bug
-* 修复 首次打开文档并编辑，第一次撤销后光标位置不对的Bug
-* 修复 json文件 查找索引符号导致崩溃的Bug
-* 新增 uni-app pages_init机制，导入 uni-app 插件到项目下时，可合并新页面路由到项目的 pages.json 中 [详情](https://uniapp.dcloud.io/plugin/uni_modules.html#pages-init)
-* 新增 uni-app manifest.json 可视化界面基础配置 增加国际化语言配置 [详情](https://uniapp.dcloud.net.cn/tutorial/i18n.html#manifest)
-* 调整 uni-app manifest.json 可视化界面去除微信登录的 AppSecret 输入框，仍可在源码视图填写，但不推荐在前端暴露 AppSecret
-* 调整 uni-app manifest.json App常用其它配置，生成 iOS符号表文件，将配置项调整到原生App-云打包窗口
+* Added TypeScript support for syntax verification
+* Added MarkDown code block to support language coloring and highlighting, you need to download and add the corresponding language coloring extension plug-in
+* Fixed language service React jsx file no code hint bug
+* Fixed some minor issues
 
 ## 3.4.17.20220614-alpha
-* 修复 Windows 终端开启时，工具栏搜索分类，鼠标移动上去后，悬停列表自动消失的Bug [详情](https://ask.dcloud.net.cn/question/146695)
-* 修复 App 原生App-云打包 某些情况下，点击打包没有提交到云端打包的bug
-* 修复 uniCloud 前端网页托管 上传网站到服务器，非项目成员进行上传操作，编辑器闪退的Bug
+* Fixed the bug that plugin installation fails in some cases.
+* Fixed the bug that the hover list disappears automatically when Windows opens the terminal, searches for categories in the toolbar, and moves the mouse to it.
 
 ## 3.4.13.20220601-alpha
-* 新增 语言服务 JavaScript 支持document.getElementById、document.querySelector中id选择器的dom类型识别
-* 新增 语言服务 scss 支持提示`!global` `!default`
-* 修复 语言服务 CSS `{}`内，输入`mar`等，max-resolution等媒体查询出现在代码助手第一项的Bug
-* 修复 语言服务 JavaScript JQuery代码提示，某些情况下，在`$("")`内输入`#`，回车后，出现两个`#`的Bug
-* 修复 语言服务 Vue style节点，输入scoped后，自动补上了`=""`的Bug
-* 修复 语言服务 uni-app项目，scss嵌套语法，无法提示uni-app相关标签的Bug
-* 修复 语言服务 uni-app项目，import x from ‘@/‘，`@/`开头的路径，某些情况下，转到定义失败的Bug
-* 修复 语言服务 uni-app项目，pages.json 条件编译产生语法不对的情况时，导致vue下class没有提示的Bug
-* 修复 App 真机运行 某些情况下，查找不到Android设备的Bug
-* 修复 App 某些情况下，制作应用wgt包失败的Bug
-* 修复 3.4.10引出的 App打包 manifest.json选择云端原生插件，提交云端打包，用户本地配置的插件资源没有上传的Bug
+* Added language service JavaScript supports DOM type recognition of id selectors in Document. getElementById and Document. querySelector
+* Added language service SCSS support for prompt `!global` and `!default`
+* Fixed some issues for language service
 
 ## 3.4.12.20220523-alpha
-* 修复 3.4.10 引出的 项目管理器 项目名称后面没有显示Git分支信息的Bug [详情](https://ask.dcloud.net.cn/question/145569)
-* 修复 5+App、wap2App项目 制作应用wgt包失败的Bug
-* 【uniCloud插件】
+* Fixed a Bug where the left view project name does not show Git branch information
 
 ## 3.4.11.20220520-alpha
-* 优化 HBuilderX 启动速度
-* 修复 3.4.10引出的 欢迎页面 状态栏选择语言后出现崩溃的Bug
-* 修复 3.4.10引出的 php文件 代码没有着色的Bug
-* 新增 uniCloud 新建DB Schema 模板列表 支持搜索
+* HBuilderX improves startup speed
+* Fixed some minor issues
 
 ## 3.4.10.20220517-alpha
-* 新增 Node程序 支持运行和调试 [详情](https://hx.dcloud.net.cn/Tutorial/extension/node-development)
-* 新增 可自主扩展新语言的语法高亮，可开发或下载语言高亮插件 [详情](https://hx.dcloud.net.cn/Tutorial/Language/language_grammars)
-* 调整 部分内置的语言语法高亮迁移到插件市场 [详情](https://hx.dcloud.net.cn/Tutorial/Language/language_grammars?id=list)
-* 新增 语言服务 vue-cli项目 支持element-ui、bootstrap-vue等代码提示
-* 修复 语言服务 Emmet语言 某些情况下，按下tab，没有反应的Bug
-* 修复 语言服务 CSS 在同一行输入CSS代码，回车后，某些情况下，替换位置错误的Bug
-* 修复 语言服务 jsdoc代码块替换位置错误的Bug
-* 修复 插件安装窗口 已安装插件 某些情况下，版本号显示错误的Bug
-* 修复 多文件搜索 某些情况下，右侧栏显示的代码着色错误的Bug
-* 调整 App 原生App-云打包 java库改为openjdk
-* 优化 App MacOSX 运行到iOS模拟器的窗口增加搜索功能
+* Added support for running and debugging Node programs
+* Added syntax highlighting that can be independently extended for new languages, and language highlighting plug-ins can be developed or downloaded
+* Some of the built-in language syntax highlighting was migrated to the plug-in marketplace
+* Fixed multi-file search, the right side of the display code coloring error Bug
+* Fixed plug-in installation window, installed plug-in, version number display error Bug
+* Added language services, VUE-CLI projects, code hints support element-UI, bootstrap-vue, etc
+* Fixed Emmet syntax bug where pressing TAB did not respond correctly
+* Fixed language service, input CSS code in the same line, press Enter, replace the wrong position Bug
+* Fixed language service,jsdoc carriage return error Bug
 
 ## 3.4.9.20220508-alpha
-* 修复 语言服务 uni-app pages.json easycom节点配置错误时，uview-ui没有代码提示的Bug
+* Fixed some issues for language service
 
 ## 3.4.8.20220428-alpha
-* 新增 支持自定义项目级代码块（菜单【工具 代码块设置 自定义项目代码块】）[详情](https://hx.dcloud.net.cn/Tutorial/Language/Snippets?id=projectsnippets)
-* 修复 语言服务 vue3, template内，无法提示使用ref函数创建的对象数据的Bug
-* 修复 语言服务 html a标签 target属性，没有自动拉出代码候选项的Bug [详情](https://ask.dcloud.net.cn/question/143628)
-* 修复 语言服务 html 引用js后不提示js全局变量方法的Bug
-* 修复 语言服务 html 输入!+tab后，`<html lang="">`设置为en的Bug [详情](https://ask.dcloud.net.cn/question/143531)
-* 修复 语言服务 css属性 属性位置替换文本，替换内容错误的Bug
-* 修复 语言服务 Vue script节点，无法提示vue某些代码块的Bug
-* 修复 语言服务 Vue script节点，this.方法名，无法转到定义的Bug
-* 修复 语言服务 uni-app pages.json提示的文件路径不区分大小写的Bug
-* 修复 语言服务 uni-app easycom不规范的写法 导致css class无法提示的Bug [详情](https://ask.dcloud.net.cn/question/143800)
-* 修复 撤销、恢复撤销操作，光标位置跳转错误的Bug
-* 修复 项目运行过程中，在项目管理器关闭项目可能引发的编辑器闪退的bug
-* 修复 App安心打包 某些情况下提交打包失败的Bug
-* 修复 App真机运行 某些情况下因adb问题，查找模拟器设备失败的Bug
-* 新增 uniCloud 支持云对象本地运行和调试 [详情](https://uniapp.dcloud.net.cn/uniCloud/cloud-obj.html#run-local)
+* Added HBuilderX Support for custom project Snippets
+* Fixed some issues for language service
 
 ## 3.4.6.20220416-alpha
-* 修复 语言服务 uni-app，vue文件，class转到定义，无法转到在App.vue @import引入的公共css文件的Bug
-* 修复 语言服务 html文件，引用外部的css文件，当文件地址带有?时，css选择器无法转到定义的Bug
-* 修复 语言服务 vue3 API，defineProps、defineExpose，无法提示数据类型的Bug
-* 优化 语言服务 vue3，style节点，支持提示:deep、:global
-* 修复 语言服务 ts文件，无法提示代码块的Bug
-* 调整 markdown一键分享 生成的html文件 调整代码区代码着色
-* 修复 3.4.5引出的 当一个文件存在多种换行符时，eslint自动修复替换出错的Bug
-* 修复 3.4.0引出的 uni-app 运行 控制台右键菜单点击停止运行，不起作用的Bug
+* Fixed some issues for language service
+* Adjust Share to Weblink, adjust code area code coloring
 
 ## 3.4.5.20220408-alpha
-* 优化 语言服务 Vuex commit、dispatch，支持提示mutation、action中的方法
-* 修复 语言服务 vue-cli项目 vue文件 script和style标签，输入`lang=`，没有自动拉出相关候选项的Bug
-* 修复 语言服务 uni-app vue style节点 import引入文件，以@符号开头的路径，无法转到定义的Bug
-* 修复 代码悬浮提示 某些情况下，按下保存，代码悬浮窗口不停变化大小的Bug
-* 修复 json文件 引号内回车，自动补充逗号的Bug
-* 调整 markdown-share 一键分享 网页内容适配移动端
-* 修复 插件API hx.window.getActiveTextEditor replace方法 当同一个文件存在多种换行符时，文本内容替换错误的Bug
-* 修复 App真机运行 当HBuilderX语言为英文时，设备选择窗口，窗口内容显示中文的Bug
-* 优化 MacOSX App真机运行 运行到iOS模拟器，模拟器选择窗口，支持搜索
+* Fixed some issues for language service
 
 ## 3.4.4.20220403-alpha
-* 修复 语言服务 vue 使用this.访问data中定义的数据对象，this.xx. 没有根据数据类型，提示相应方法的Bug
-* 修复 语言服务 vue 模板语法`{{}}`内，使用js表达式，回车后没有自动补充`()`的Bug
-* 修复 语言服务 css 代码助手候选项 !important 重复显示的Bug
-* 修复 语言服务 uni-app vue 代码助手候选项 picker-view 重复显示的Bug
-* 修复 语言服务 uni-app pages.json 某些属性没有提示的Bug
-* 修复 语言服务 uni-app cli项目，uni.开头的api, 回车后`()`内没有补充`{}`的Bug
-* 修复 语言服务 uni-app vue3项目，`import {} from "@dcloudio/uni-app"`, `{}`内无法提示uni-app生命周期方法的Bug
-* 优化 语言服务 uni-app vue文件 import引入文件 支持提示以@符号开头的路径
-* 优化 语言服务 vue 支持提示ref和$refs关键字
-* 优化 代码悬浮提示 减少不要的悬浮提示
-* 修复 MacOSX 某些情况下，HBuilderX启动后，立即按下`command+w`关闭标签卡，编辑器闪退的Bug
-* 优化 App真机运行 运行到iOS模拟器，设备选择窗口，将上一次使用的模拟器放置在第一条
-* 优化 App真机运行 运行到iOS设备，运行失败时的控制台提示语
-* 优化 App真机运行 运行到Android，获取设备，对用户自定义adb路径，增加有效性检查
-* 修复 3.4.0引出的 apk、ipa文件，右键菜单，安装到手机，没有显示手机设备列表的Bug
-* 修复 3.4.0引出的 App真机运行 Windows 32系统，运行App项目到iOS、Android，无法查找到设备的Bug
-* 修复 3.4.0引出的 App真机运行 在【设置 - 运行设置】中，自定义的模拟器端口，没有生效的Bug
-* 修复 3.4.0引出的 App真机运行 Windows 运行App项目到夜神模拟器，真机运行过程中，模拟器设备断开连接的Bug
-* 修复 3.4.0引出的 App真机运行 adb connect连接Android真机，真机运行过程中，手机设备断开连接的Bug
-* 修复 3.4.0引出的 App真机运行 uni-app 运行到iOS/Android，设备选择窗口，某些情况下，一直显示正在获取的Bug
-* 修复 3.4.0引出的 App真机运行 MacOSX 运行项目到iOS模拟器，某些情况下，选择设备与实际运行设备不一致的Bug
-* 修复 uni-app 新建页面，输入已存在的页面名称，不勾选创建同名目录，旧文件被覆盖的Bug
+* Fixed some issues for language service
 
 ## 3.4.3.20220325-alpha
-* 新增 HBuilderX CLI uni-app 制作应用wgt包 [详情](https://hx.dcloud.net.cn/cli/publish-app-wgt)
-* 新增 HBuilderX CLI uni-app 生成本地打包App资源 [详情](https://hx.dcloud.net.cn/cli/publish-app-appResource)
-* 新增 代码悬浮提示 支持着色
-* 新增 语言服务 manifest.json settings.json支持代码提示
-* 优化 语言服务 javaScript 代码提示
-* 修复 语言服务 css变量 转到定义时，下划线绘制错误的Bug
-* 修复 语言服务 vue文件 `import ... from ...`，无法提示文件路径的Bug
-* 修复 语言服务 uni-app uni.navigateTo()等页面跳转到方法，url无法提示页面的Bug
-* 修复 语言服务 某些情况下，在图片上转到定义导致HBuilderX崩溃的Bug
-* 修复 分栏 某些情况下，打开同一份文档时，关掉第一个文档窗口崩溃的Bug
-* 调整 编辑器 vue文件 async类关键字颜色
-* 修复 原生App-云打包 项目过大时导致无法提交到云端打包的Bug
-* 优化 uni-app 发行 制作应用wgt包窗口样式
-* 优化 uniCloud 新建公共模块界面 支持选择模板
+* Fixed some minor issues
 
 ## 3.4.2.20220310-alpha
-* 修复 3.4.0引出的 打开失去焦点自动保存，多文件字符搜索，点击搜索结果后文件内容被覆盖的Bug [详情](https://ask.dcloud.net.cn/question/140782)
-* 修复 3.4.0引出的 Wap2App项目，无法提交打包的Bug [详情](https://ask.dcloud.net.cn/question/140700)
-* 修复 3.4.0引出的 Android真机运行 没有使用设置中用户自定义adb的Bug
-* 修复 代码格式化，撤销操作，光标位置错误的Bug [详情](https://ask.dcloud.net.cn/question/140970)
-* 修复 某些情况下，插件安装后，插件状态不对的Bug
-* 修复 App 安心打包 manifest.json 配置Google统计 安心打包没有提交相关文件的bug
-* 修复 语言服务 html行内标签, `=`后面存在空格时，无法正确提示CSS代码的Bug
-* 修复 语言服务 uni-app easycom 组件名称提示错误的Bug
-* 修复 语言服务 vue文件 hover 和 resolve 时提示内容缺失的Bug
-* 修复 语言服务 CSS代码提示 某些情况下，font-family提示错误的Bug
-* 修复 语言服务 CSS代码提示 rgb、rgba等函数补全错误的Bug
+* Fixed some minor issues
 
 ## 3.4.1.20220308-alpha
-* 修复 3.4.0引出的 uni-app 新建页面，修改pages.json内容，导致编辑器闪退的Bug [详情](https://ask.dcloud.net.cn/question/140732)
+* Fixed some minor issues
 
 ## 3.4.0.20220304-alpha
-* 【重要】调整 HBuilderX语言服务 由Java切换为Node，减少内存占用、增强语法提示
-* 新增 新建uni-app项目时直接选择Vue2或3的版本（后续可在manifest里调整）
-* 新增 文档保存时自动格式化，可通过【设置】-【编辑器配置】-【保存时自动格式化】开启
-* 【调整】 App真机运行 不再长期监听手机，运行时检测，减少资源消耗
-* 修复 文档格式化后，撤销时光标位置不对的Bug
-* 修复 某些情况，Git更新文件后，编辑器内文件不会自动刷新的Bug
-* 修复 查找索引符号 搜索后，HBuilderX闪退的Bug
-* 修复 某些情况，文档编辑后出现着色错乱的Bug
-* 修复 uni-app manifest.json中app-plus-compilerVersion未配置时发行和运行会弹出设置微信开发者工具对话框的Bug
-* 修复 uni-app manifest 生成通用链接时，协作者选择服务空间时获取不到自定义域名的Bug
-* 调整 安装HBuilderX核心插件时，由下载最新版插件调整为和当前HBuilderX版本匹配的插件
-* 优化 uni-app 运行菜单和发行小程序的界面样式
+* HBuilderX language service switched from Java to Node
+* Fixed a bug where files in the editor would not be automatically refreshed after Git updated files in some cases
 
 ## 3.3.12.20220222-alpha
-* 修复 HBuilderX CLI发行微信小程序，某些情况下，HBuilderX出现出现闪退的Bug [详情](https://ask.dcloud.net.cn/question/139189)
+* Fixed some minor issues
 
 ## 3.3.8.20220114-alpha
-* 修复 MacOSX 3.3.7-alpha引出的 uniCloud虚拟目录，点击后提示没有权限的Bug
+* Fixed some minor issues
 
 ## 3.3.7.20220112-alpha
-* 新增 HBuilderX CLI 支持发行uni-app到微信小程序 [详情](https://hx.dcloud.net.cn/cli/publish-mp-weixin)
-* 新增 HBuilderX CLI 支持发行uni-app到H5 [详情](https://hx.dcloud.net.cn/cli/publish-h5)
-* 修复 MacOSX 某些情况下，项目管理器项目无法展开的Bug
-* 调整 内置浏览器 地理位置设置 经纬度支持设置6位小数
-* 修复 App 真机运行 部分Windows电脑运行App到iOS15以上手机失败的Bug
-* 修复 App 真机运行 部分Android 11系统，同步文件失败的Bug
-* 修复 uni-app 安心打包 没有生成iOS符号表文件的Bug
-* 调整 uni-app 发行到微信小程序，支持自动上传代码到微信平台，无需再通过微信开发者工具上传发行 [详情](https://hx.dcloud.net.cn/Tutorial/App/uni-app-publish-mp-weixin)
+* Fixed some minor issues
 
 ## 3.3.6.20211231-alpha
-* 无
+* Fixed some minor issues
 
 ## 3.3.2.20211218-alpha
-* 无
+* Fixed some minor issues
 
 ## 3.3.1.20211214-alpha
-* 新增 新建项目 uni-app模板 支持扫码体验
-* 优化 新建项目 选择uniCloud非付费项目模板 创建完成后，自动拉起初始化向导
-* 修复 查找索引符号 鼠标点击搜索区域或者内置资源管理器地址栏时，编辑器出现崩溃的Bug
-* 修复 3.3.0 引出的 Windows HBuilderX最大化时，编辑器窗口界面渲染异常的Bug
-* 修复 某些情况下，打开内置浏览器，再进行文件搜索引起的文件列表窗口渲染异常的Bug
-* 修复 MacOSX 当HBuilderX安装路径带有空格时，运行项目到iOS模拟器失败的Bug
-* 新增 原生App-云打包 打包窗口 增加Sigmob广告联盟配置
-* 修复 uniCloud 运行云服务空间初始化向导，某些情况下，DB Schema创建确认窗口，没有显示全部创建的Bug
-* 修复 uniCloud 上传所有云函数，某些情况下，未上传的云函数数量及名称显示错误的Bug
-* 新增 uni-app自动化测试插件 支持在HBuilderX内对uni-app普通项目、CLI项目进行自动化测试 [详情](https://ext.dcloud.net.cn/plugin?id=5708)
-* 修复 HBuilderX CLI 某些命令，运行异常的Bug
-* 新增 HBuilderX CLI引导 在相关功能界面 增加CLI教程跳转链接
+* Fixed a crash in the editor when Find Symbols by clicking on the search area or the built-in Explorer address bar.
+* Fixed 3.3.0 for Windows HBuilderX maximization, editor window interface rendering exception.
+* Fixed the Bug where MacOSX failed to run projects to iOS emulator when the HBuilderX installation path had a space.
 
 ## 3.3.0.20211130-alpha
-* 【重要】调整 新建项目界面，预置大量云端一体完整项目 [详情](https://hx.dcloud.net.cn/Tutorial/project?id=CreateProjectWindows)
-* 新增 项目管理器视图toolbar 新增定位和折叠所有的悬浮按钮 [详情](https://hx.dcloud.net.cn/Tutorial/project?id=toolbar)
-* 修复 代码悬浮提示 某些情况下引发闪退的Bug
-* 修复 Markdown 代码区块第一行后字体显示倾斜的Bug [详情](https://ask.dcloud.net.cn/question/94477)
-* 修复 插件市场 云端一体页面模板 导入非uni_modules插件 导入后pages.json path路径尾部多了一个点的Bug
-* 修复 App 真机运行 某些情况下引发闪退的Bug
-* 修复 MacOSX manifest.json 配置iOS通用链接后 打包完成时偶发闪退的Bug
-* 优化 uni-app 运行带有预处理CSS语言的项目，运行时自动安装相关插件，无需再跳转到插件市场安装
-* 修复 uniCloud uniCloud在项目关闭运行时，偶发没有同步结束的Bug
+* Adjust the UI of the new project window [Details](https://hx.dcloud.net.cn/Tutorial/project?id=CreateProjectWindows)
+* Added project manager view toolbar, added positioning and folding functions [Details](https://hx.dcloud.net.cn/Tutorial/project?id=toolbar)
 
 ## 3.2.15.20211120-alpha
-* 调整 uniCloud admin 改名为 uni-admin [详情](https://uniapp.dcloud.net.cn/uniCloud/admin)
+* Fixed some minor issues
 
 ## 3.2.14.20211112-alpha
-* 修复 Windows 11 真机运行提示wmic错误的Bug
-* 修复 App manifest.json 勾选使用原生隐私政策提示框 再次打开manifest.json后 此选项没有被勾选的Bug
+* Fixed some minor issues
 
 ## 3.2.13.20211110-alpha
-* 新增 uni-app 支持运行和发布到 飞书小程序
-* 修复 MacOSX Xcode13 运行uniapp项目到iOS模拟器，iOS模拟器无法自动启动的的Bug
-* 优化 代码悬浮提示 超过1M大小的文件不显示悬浮提示框
-* 修复 当用户环境变量中配置的max-old-space-size过大时导致node进程启动失败的Bug [详情](https://ask.dcloud.net.cn/question/133144)
-* 优化 App manifest.json 打开速度
-* 新增 App manifest.json App常用其它设置 增加设置项 生成iOS平台符号表(dsym)文件
-* 新增 App manifest.json App模块配置 定位 增加设置项 系统定位
-* 优化 App manifest.json App模块配置 定位 支持多选
-* 删除 uni-app manifest.json App模块配置 删除统计配置项
+* Added Files larger than 1M in size do not display hover code assist
+* Fixed the bug that caused the node process to fail to start when the max-old-space-size configured in the operating system environment variables was too large
 
 ## 3.2.12.20211028-alpha
-* 修复 uniCloud 关联项目解除关联后，重启HBuilderX后项目管理器还显示关联项目的Bug
-* 修复 uniCloud 关联项目 发行到H5 某些情况下，提示未关联服务空间的Bug
-* 优化 uniCloud 新建DB Schema，选择非默认模板，自动填充模板名称到新建文件名输入框
-* 优化 uniCloud 云函数上传ContentAccessDenied错误，控制台增加解决方法 [详情](https://hx.dcloud.net.cn/Tutorial/Questions/win10-defender-contentaccessdenied)
+* Fixed some minor issues
 
 ## 3.2.11.20211021-alpha
-* 新增 HBuilderX插件开发断点调试 [详情](https://hx.dcloud.net.cn/ExtensionTutorial/HowToDebug)
-* 修复 compile-node-sass插件 设置项onDidSaveExecution不生效的Bug
-* 优化 插件API hx.window.createOutputChannel 控制台内容带有URL时，支持点击跳转
-* 修复 多文件字符搜索 配置过滤模式，过滤模式文本颜色没有置灰的Bug
-* 修复 多文件字符搜索 配置过滤模式，某些情况下，过滤模式被清除导致搜索结果错误的Bug
-* 修复 字符搜索和多文件搜索切换，搜索条件内容被清除的Bug
-* 优化 uniCloud 新建数据集合schema文件
-* 修复 uniCloud 断点调试 开启断点调试后，无法正常运行其它云函数的Bug
-* 修复 断点调试 在多个文件加上断点，某些情况下，Debug视图点击继续，断点所在行没有选中的Bug
-* 修复 断点调试 鼠标滚动时，悬浮提示窗口没有消失的Bug
-* 修复 uniapp-cli vue3项目，无法运行发行app的Bug [详情](https://ask.dcloud.net.cn/question/132565)
-* 修复 uniapp-cli vue3项目，以SSR方式发行，提示未绑定服务空间的Bug
+* Added HBuilderX plug-in development breakpoint debugging
 
 ## 3.2.10.20211013-alpha
-* 新增 uniCloud云函数断点调试 [详情](https://uniapp.dcloud.net.cn/uniCloud/quickstart?id=debug)
-* 新增 代码提示 鼠标悬停 显示代码帮助悬浮窗口 [详情](https://hx.dcloud.net.cn/Tutorial/Language/Overview?id=hover-code-assist)
-* 新增 终端 支持点击URL跳转到浏览器 [详情](https://hx.dcloud.net.cn/Tutorial/UserGuide/terminal?id=open-links)
-* 修复 终端 当输入内容超过一定长度时，换行显示错误的Bug
-* 修复 控制台或终端，创建多个时，HBuilderX整体窗口超出屏幕范围的Bug
-* 修复 代码格式化导致编辑器上的书签丢失的Bug
-* 修复 uniCloud 某些情况下，无法绑定其它项目服务空间的Bug
-* 优化 原生App-云打包 当项目下uniCloud未关联服务空间时，提交打包，增加弹窗提示
+* Added hover code assist [Details](https://hx.dcloud.net.cn/Tutorial/Language/Overview?id=hover-code-assist)
+* Added Terminal supports clicking on the URL to jump to the browser [Details](https://hx.dcloud.net.cn/Tutorial/UserGuide/terminal?id=open-links)
+* Fixed the bug that when the terminal input exceeds a certain length, the wrong line is displayed
+* Fixed the bug that the editor window exceeds the screen area when creating multiple terminals
+* Fixed the bug that the editor bookmarks are lost due to code formatting
 
 ## 3.2.8.20210923-alpha
-* 修复 3.2.7-alpha引出的 设置，显示换行符，编辑器文件换行符渲染错误的Bug
-* 修复 3.2.7-alpha引出的 vue3-cli项目，background-color代码提示错误的Bug
+* Fixed the bug that the EOL of the editor file is rendered incorrectly when the EOL is set to be displayed
 
 ## 3.2.7.20210919-alpha
-* 新增 设置项 更新设置 支持配置是否检查更新，默认启动时自动检查更新 （【设置 - 常用配置】，检查更新）
-* 新增 编辑器 删除连续的空格时, 根据设置的tab宽度, 一次性进行删除
-* 新增 Markdown, 有序列表删除或插入, 自动修正序号
-* 新增 js import {} 按需导入，{}内换行自动补上逗号
-* 修复 新建项目 当项目存储路径尾部带有/时，新建项目导致编辑器闪退的Bug
-* 修复 HBuilderX编辑器无法渲染阿拉伯语的Bug
-* 升级 eslint-vue插件 解决vue3 template多个root时校验出错的Bug
-* 修复 MacOSX 某些情况下，打开终端，终端顶部内容被挤压的Bug
-* 修复 Git 当项目管理器项目为Git项目子目录时，文件修改后，项目管理器没有显示相应标记的Bug
-* 修复 Git 在单窗体中，打开Git项目，项目管理器项目名称后面，没有显示Git分支信息的Bug
-* 修复 Git 项目管理器，相同前缀项目，某些情况下，git分支信息显示异常的Bug [详情](https://ask.dcloud.net.cn/question/130696)
-* 优化 Git 推送 当本地分支没有跟踪远程分支时提示用户输入远程仓库
-* 调整 HBuilderX编辑器顶部菜单【帮助 - 许可协议】，调整为在线链接，点击后跳转到浏览器打开
-* 修复 菜单【编辑 - 缩进】调整缩进，某些情况下，在当前编辑器没有生效的Bug
-* 修复 代码提示 vue3 cli项目，script内，某些代码块无法提示的Bug
-* 修复 代码提示 vue3 cli项目，setup函数，return内无法提示定义变量的Bug
-* 修复 外部命令 userInput, 某些情况下没有生效的Bug
-* 新增 uniapp 发行H5 支持以SSR方式发行 [详情](https://uniapp.dcloud.io/collocation/ssr)
-* 优化 uniapp manifest.json 取消使用原生隐私政策提示库，增加确认弹窗
-* 修复 uniapp-cli manifest.json 勾选使用原生隐私政策提示库，自动创建的androidPrivacy.json文件位置错误的Bug
-* 新增 uniCloud 云函数require公共模块 支持提示公共模块名称
-* 调整 App manifest.json QQ通用链接上传apple-app-site-association规则 [参考](https://wiki.connect.qq.com/%E5%A1%AB%E5%86%99%E5%8F%8A%E6%A0%A1%E9%AA%8Cuniversallinks)
-* 调整 App Android平台 打包，没有配置icon时，不再添加橘红色图标
+* Added Configure whether you receive automatic updates.
+* Fixed the bug that the editor crashes when a new project is created with / at the end of the storage path.
+* Fixed Bug that HBuilderX editor cannot render Arabic
+* Upgrade eslint-vue plugin.
+* Fixed the bug of MacOSX system, open in terminal, the top content of the terminal is squeezed.
+* The menu at the top of the HBuilderX editor [Help-License Agreement], adjusted to an online link, click to jump to the browser to open.
 
 ## 3.2.6.20210901-alpha
-* 新增 HBuilderX 支持本地语言扩展 (菜单【工具】，可切换其它语言) [详情](https://github.com/dcloudio/hbuilderx-language-packs)
-
-## 3.2.5.20210827-alpha
-* 【重要】新增 uni-app Vue3 版本 支持运行和发行到 App
-* 优化 vue3 代码提示、转到定义
-* 新增 设置项 帮助我们改进HBuilderX的功能和性能 允许用户自主选择是否上报使用情况统计信息和崩溃报告 [详情](https://hx.dcloud.net.cn/Tutorial/CrashReporter)
-* 新增 代码提示 package.json文件 增加相关字段提示
-* 修复 Windows 某些情况下，复制操作，导致QQ、搜狗拼音输入法无法输入英文;,.标点符号的Bug
-* 修复 MacOSX 操作系统自带的简体拼音输入法，输入easycom，编辑器出现崩溃的Bug
-* 修复 MacOSX 编辑器开启【失去焦点时自动保存】功能后，处于dirty状态下的文件关闭时弹出对话框后编辑器无响应的Bug
-* 修复 视图 前端网页托管，在地址栏，双击根目录/，编辑器闪退的Bug
-* 修复 未启用.editorconfig支持 当.editorconfig文件存在错误，依然弹窗提示的Bug
-* 修复 Git 某些情况下，因.git/index.lock文件导致git命令运行失败的Bug
-* 优化 uniCloud 关联其它项目的服务空间逻辑 不支持关联协作者服务空间项目
-* 修复 uni_modules 插件市场导入`uni_modules`插件，某些情况下，提示`处理外部应用请求未能完成`的Bug
-* 新增 uni-app Vue3 版本 发行到H5 支持以SSR方式发行
-* 优化 App 原生打包 iOS 不再支持构建越狱包
-* 删除 App manifest.json App模块配置 移除小米登录、讯飞语言、广告基础功能
-* 优化 App manifest.json 将“QQ平台通用链接”和“新浪微博平台通用链接”的标题名称统一更改为iOS平台通用链接
-* 优化 App manifest.json 微信自动生成的通用链接的结尾加上/
-
-## 3.2.1.20210811-alpha
-* 【重要】新增 uni-app 支持运行和发布到 快手小程序
-* 新增 项目管理器 对被自定义编辑器关联的文件，增加“打开方式”菜单（【设置】源码视图，增加自定义编辑器文件关联配置）
-* 新增 插件市场 导入uniapp原生SDK项目 导入HBuilderX后，自动将appid和pluginID绑定
-* 修复 App 真机运行 某些情况下，获取iOS自定义基座版本号错误，导致每次修改代码都会重新安装基座到手机的Bug
-* 优化 uni-app 新建项目 包含付费云函数的项目 自动拉起初始化向导
-* 新增 uni-app 插件大赛一等奖获奖作品内置到新建项目模板中 [详情](https://ask.dcloud.net.cn/article/39133)
-
-## 3.2.0.20210801-alpha
-* 【重要】新增 uni-app项目在 manifest-基础配置中 切换项目的 vue版本 使用2或3 （vue3版暂不支持app） [详情](https://ask.dcloud.net.cn/article/37834)
-* 新增 Git插件 支持在项目管理器上显示Git分支并可点击进行快捷操作 [详情](https://hx.dcloud.net.cn/Tutorial/SourceControl/git)
-* 新增 左下角账号快捷切换
-* 新增 设置项 选择自动换行方式 按单词截取、按字符截取 （【设置 - 编辑器配置】，选择自动换行方式）
-* 新增 插件API 插件command支持声明快捷键 [详情](https://hx.dcloud.net.cn/ExtensionDocs/ContributionPoints/README?id=keybindings)
-* 新增 插件API 新增when表达式 isMac、isWindows、editorHasSelection [详情](https://hx.dcloud.net.cn/ExtensionDocs/ContributionPoints/README?id=when)
-* 修复 自定义主题 编辑器上某些颜色无法自定义的Bug
-* 修复 项目管理器 单击预览文件，文件缩进和.editorconfig缩进配置不一致的Bug
-* 修复 某些情况下，因.editorconfig文件内容不合法，打开后编辑器出现崩溃的Bug
-* 修复 多屏情况下并且界面在第二个屏幕上，快捷键冲突时，冲突菜单显示位置不对的Bug
-* 修复 Windows 多屏DPI不一致时，导致编辑器文字排版错乱的Bug
-* 修复 当编辑器标签卡存在搜索结果页时，ctrl+tab切换最近的标签卡，切换列表，出现多条名称为“搜索结果”的Bug
-* 修复 某些编程语言(Python)，安装相应代码块插件后，无法提示代码块的Bug
-* 修复 某些情况下，转到定义激活后, 文字无法恢复普通状态的Bug
-* 修复 JavaScript `switch case`语句 换行会自动加逗号的Bug [详情](https://ask.dcloud.net.cn/question/113434)
-* 修复 JavaScript Vue模板字符串 换行会自动加逗号的Bug [详情](https://ask.dcloud.net.cn/question/126186)
-* 修复 编辑器启动后，已打开的文件，右键菜单【重排代码格式】菜单置灰的Bug
-* 修复 条件编译，鼠标双击注释内容，选区不正确的Bug
-* 修复 Markdown折叠 文件换行符为'\r'时折叠计算错误的Bug
-* 修复 MacOSX，双击uni-app、uniCloud加密文件在编辑器打开后，编辑器无法最小化的Bug
-* 优化 MacOSX，新建项目界面，增加模板列表显示条目数量
-* 调整 原生App-云打包，原生插件包名校验不分区大小写
-* 修复 原生App-云打包，打包结果控制台，一键上传到uniCloud，协作者无法上传安装包到uniCloud服务空间的Bug
-* 修复 iOS安心打包 某些情况下，App安装包mainfest.json文件不是最新的Bug
-* 优化 uniCloud clientDB的field代码提示
-* 新增 uniCloud 初始化向导 增加【部署项目下的DB Schema及扩展校验函数】选项
-* 新增 uniCloud 前端网页托管 支持协作者上传网站到服务器
-* 优化 uniCloud 前端网页托管 优化上传网站到服务器的界面
-* 修复 uniCloud 创建公共模块、uni-clientDB-actions、schema、validateFunction时，同类资源本地存在同名时提示语不正确的Bug
-* 优化 uni-app 发行到H5、制作wgt，增加校验
-* 新增 App manifest.json 一键生成iOS通用链接 支持QQ登录、QQ分享、新浪微博登录、新浪微博分享 [详情](https://uniapp.dcloud.io/api/plugins/universal-links)
-
-## 3.1.22.20210707-alpha
-* 修复 插件开发 Windows 控制台日志部分路径无法打开的Bug
-* 修复 MacOSX 3.1.20引出的 右键菜单快捷键没有显示在菜单中的Bug
-* 修复 uniCloud 下载所有DB Schema及校验函数，勾选全部应用，编辑器闪退的Bug
-
-## 3.1.21.20210624-alpha
-* 无
-
-## 3.1.20.20210623-alpha
-* 【重要】MacOSX 升级内置浏览器版本到Chrome 69、升级QT引擎到5.12.10
-* 修复 插件卸载 某些插件卸载重装后，不重启HBuilderX，插件无法激活的Bug
-* 修复 插件卸载 使用自定义编辑器的插件卸载后，没有恢复文件默认打开方式的Bug
-* 优化 插件开发 控制台日志输出，增加文件行号的点击跳转
-* 优化 大文档选择行数比较多时的性能问题
-* 修复 MacOSX vue-cli项目，当电脑本身没有安装node环境时，运行项目到内置终端，相关npm命令执行失败的Bug
-* 新增 底部控制台标签卡，支持鼠标滚轮翻动
-* 修复 当设置中没有勾选`Ctrl+鼠标滚轮缩放编辑器`设置项时，底部控制台，鼠标滚轮缩放依然生效的Bug
-* 修复 未命名标签卡收藏时，提示需要保存，但是选择了保存后仍然没有收藏成功的Bug
-* 修复 编辑器 选中整行，按下tab, 行内容消失的Bug
-* 新增 Markdown 列表内容为`[]()` 支持锚点跳转
-* 新增 Markdown <>标签，支持转到邮箱
-* 新增 Markdown 图片语法`![]()`和链接语法`[]()` 支持相对路径
-* 修复 代码提示 代码助手处于数字模式时，当按下的数字大于可选项的个数时无法输入的Bug
-* 新增 代码提示 uniCloud 支持提示关联项目的schema、collection
-* 修复 uniCloud 云服务空间初始化向导 当加密云函数时，某些情况下初始化失败的Bug
-
-## 3.1.19.20210613-alpha
-* 优化 代码提示改为异步获取提示数据 避免某些情况计算时间过长卡UI
-* 新增 支持自定义编辑器代码颜色 [详情](https://hx.dcloud.net.cn/Tutorial/themes?id=自定义编辑器代码颜色)
-* 调整 json文件代码的高亮逻辑
-* 修复 MacOSX 3.1.16引出的 自带中文输入法输入英文会造成部分类型的文件着色失效的Bug
-* 修复 MacOSX 3.1.16引出的 10.13.6操作系统，某些情况下，HBuilderX无法启动的Bug
-* 修复 Windows 3.1.16引出的 vue-cli项目，当电脑本身没有安装node环境时，运行项目到内置终端，相关npm命令执行失败的Bug
-* 修复 雅蓝、酷黑主题 HTML无效标签被加上背景色的Bug
-* 优化 酷黑、雅蓝主题 代码助手 选中文本颜色
-* 修复 代码助手 数字模式 sass文件，某些css属性值无法正确输入数字的Bug
-* 修复 标签栏空白处，右键菜单，关闭所有标签卡功能无效的Bug
-* 修复 底部区域标签卡过多时（比如启动多个运行项目，打开多个终端），导致窗口被撑大，并且无法缩放的Bug
-* 修复 Markdown添加列表快捷键，在其它非Markdown文件也生效的Bug
-* 修复 真机运行 某些Android 11系统真机运行同步文件失败的Bug
-* 新增 App 原生App-云打包 Android打包 支持使用云端证书 [详情](https://ask.dcloud.net.cn/article/35985#server)
-* 新增 uni-app vue3 支持以SSR方式运行、发行H5
-
-## 3.1.17.20210603-alpha
-* 【重要】调整 alt+鼠标滚动的行为从横向滚动调整为竖向滚动一屏。横向滚动为shift+鼠标滚轮
-* 强化 各种鼠标滚轮功能，横向竖向滚动、滚3行滚一屏 [详情](https://hx.dcloud.net.cn/Tutorial/keybindings?id=鼠标滚轮)
-* 新增 自定义右键菜单。编辑器和内置资源管理器 `Alt + 鼠标右键`弹出自定义右键菜单
-* 新增 从Git导入项目 托管在 csdn codechina 的项目可以快速导入 [详情](https://ext.dcloud.net.cn/plugin?id=4882)
-* 新增 打通csdn和HBuilder的账户，在csdn web界面可使用HBuilder账户登录，并管理 code china 的Git项目
-* 新增 设置 增加启用自动匹配字符功能 （【设置 - 编辑器配置】，启用自动匹配字符功能）
-* 修复 3.1.16引出的 某些情况下，懒加载状态下，关闭所有已保存标签卡时，未保存的标签卡也被关闭的Bug
-* 修复 3.1.16引出的 某些情况下，懒加载状态下，关闭未保存标签卡，未保存的标签卡没有提示直接被关闭的Bug
-* 修复 3.1.16引出的 调整编辑器缩放等级后，引发其他编辑器字符位置不正确的Bug
-* 修复 3.1.16引出的 多文件字符搜索结果页面，按alt或command键，编辑器闪退的Bug
-* 修复 3.1.16引出的 某些情况下，编辑器最大化，账号登录异常、项目管理器图标异常等Bug
-* 修复 3.1.16引出的 MacOSX 带空格的目录 打开文件所在目录失败的Bug
-* 修复 3.1.16引出的 原生App-云打包，打包结果控制台，某些情况下，一键上传到uniCloud，点击没有反应的Bug
-* 修复 项目管理器 重命名预览打开的文件，编辑器预览文件内容变空白的Bug
-
-## 3.1.16.20210526-alpha
-* 【重要】升级 HBuilderX 内置node版本升级为12.22，内置npm版本升级为6.4
-* 新增 区域内搜索 选中一段文字，在顶部搜索栏选中区域搜索【Ctrl+Shift+f】，可以在特殊背景区内搜索、替换、全选相同词 [详情](https://hx.dcloud.net.cn/Tutorial/UserGuide/find?id=区域内搜索)
-* 优化 Vue、JavaScript(ES6+)、HTML(ES6+)、Markdown、Typescript等语言的语法着色速度，即相关大文档打开速度
-* 调整 js文件的默认编辑器从JavaScript调整为JavaScript(ES6+)
-* 调整 html文件的默认编辑器从HTML调整为HTML(ES6+)
-* 优化 编辑器内长行的渲染性能，解决存在长行时编辑文字、滚动以及选择区域卡顿的Bug
-* 优化 html/css/js/vue等文件 右键菜单，内置菜单【验证本文档语法】，当插件未安装时提示安装
-* 修复 某些情况下，因配置文件损坏，导致HBuilderX无法启动的Bug
-* 优化 插件安装 NodeJS插件npm安装失败时，提示具体失败原因
-* 新增 代码助手窗口 匹配项高亮功能 [详情](https://hx.dcloud.net.cn/Tutorial/Language/CodeAssistant?id=代码助手匹配项高亮)
-* 优化 代码助手窗口 选择模式切换功能 [详情](https://hx.dcloud.net.cn/Tutorial/Language/CodeAssistant?id=代码助手窗口切换选择模式)
-* 优化 支持自定义设置折叠展开方式，可设置是否展开子行（【设置 - 编辑器配置】，代码展开方式）
-* 修复 HTML标签属性 在引号内，按下tab，引号内容变成为html标签的Bug
-* 优化 MacOSX 代码提示窗口 支持ctrl+p/n，上下移动选中代码
-* 修复 vue-cli项目 template内，无法提示html标签代码块的Bug
-* 修复 vue-cli项目 某些情况下，当转到定义的内容处于折叠区域，转到定义，没有展开折叠的Bug
-* 优化 插件API registerUriHandler schema请求，浏览器调起HBuilderX后，当本地未安装相应插件时，支持直接在编辑器内安装插件，无需再跳转到插件市场
-* 修复 插件API hx.workspace.getConfiguration() update操作，无法更新值为Object的Bug
-* 修复 插件API hx.window.setStatusBarMessage, 带有url的消息无法跳转的Bug
-* 修复 插件API setSelection 当文件中存在中文时，设置主选择区域错误的Bug
-* 新增 HBuilderX CLI 支持命令行打开指定文件，并跳转到指定行列 [详情](https://hx.dcloud.net.cn/cli/file)
-* 修复 HBuilderX CLI 终端执行多条CLI命令，不同CLI命令行日志相互串连的Bug
-* 修复 HBuilderX CLI pack 命令行参数--iscustom没有生效的Bug
-* 修复 HBuilderX CLI 新创建的项目，Android第一次打包，终端打印警告提示语后cli程序退出的Bug
-* 优化 HBuilderX 插件项目类型识别
-* 新增 项目管理器 项目右键菜单，增加菜单【托管当前项目】
-* 修复 项目管理器 已关闭项目窗口，当拖动控制台时，已关闭项目窗口高度被撑高的Bug
-* 优化 项目管理器 悬浮收起和展开按钮增加tips
-* 修复 项目管理器 Windows 当目录名称包含括号等特殊字符时，右键菜单，在外部资源管理器打开失败的Bug
-* 修复 MacOSX 项目管理器，右键菜单，点击【打开文件所在目录】出现卡顿的Bug
-* 修复 内置浏览器 预览html文件，重命名项目后，内置浏览器解析错误显示404的Bug
-* 修复 内置浏览器 开发者工具控制台，自动记忆上次位置
-* 修复 内置浏览器 拖曳HBuilderX到分屏 分屏主屏缩放不一样，导致内置浏览器页面及调试窗口被放大的Bug [详情](https://ask.dcloud.net.cn/question/110194)
-* 优化 内置浏览器 地址栏单独显示一行 [详情](https://ask.dcloud.net.cn/article/37703)
-* 优化 内置资源管理器 大图标模式 svg文件 图标显示图像
-* 修复 内置资源管理器 新建文件夹或文件，会闪过其它图标的Bug
-* 修复 内置资源管理器 某些没有预设图标的文件，显示txt图标的Bug
-* 修复 内置资源管理器 无法显示以点开头的隐藏文件的Bug
-* 修复 终端 将操作系统资源管理器文件夹拖入终端，终端变成文件浏览器的Bug
-* 修复 Windows 终端 因执行策略引发的内置终端无法执行某些命令的Bug [详情](https://ask.dcloud.net.cn/question/86935)
-* 修复 Windows 终端 上下来回拖动，终端底部出现空白的Bug
-* 修复 Windows 控制台 分割线太细，很难选中的Bug
-* 修复 Windows 编辑器标签卡，拖出一个标签卡到桌面最右边，某些情况下，无法再次拖动的Bug
-* 修复 Windows 从360压缩软件里拖动目录到HBuilderX的内置资源管理器，HBuilderX没有激活到前台的Bug
-* 修复 Windows 上下拖动编辑器 内置浏览器、终端窗口闪烁的Bug
-* 修复 插件安装窗口 某些情况下，提醒的红色数字数量显示不准确的Bug
-* 修复 MacOSX 插件安装窗口 某些情况下，显示到其它软件窗口上面的Bug
-* 修复 MacOSX 检查更新弹窗 某些情况下，显示到内置刘浏览器后面的Bug
-* 优化 MacOSX HBuilderX顶部菜单 第一个菜单列表 增加检查更新
-* 修复 MacOSX git导入HBuilderX插件项目，导入后，直接按command+R， 编辑器闪退Bug
-* 修复 MacOSX 当编辑器打开插件安装等模态窗口时，点击关闭右下角弹窗没有反应的Bug
-* 修复 MacOSX 将焦点置于Git项目下的文件上，点击菜单【git 推送】，调起终端后，终端显示异常的Bug
-* 修复 MacOSX 全屏幕状态下，关闭HBuilderX，重新启动后，没有进入全屏幕状态的Bug
-* 修复 MacOSX HBuilderX连接并拖动到外接显示器后，某些情况下，搜索框没有光标、搜索下拉列表点击后没有反应的Bug
-* 修复 切换最近的标签卡 内置资源管理器 某些情况下，标签卡列表跟已打开的标签卡对应不上的Bug
-* 优化 切换最近的标签卡 当文件名相同时，标签卡列表显示项目文件路径
-* 修复 标签卡 关闭所有标签卡 当标签卡数量很多时，卡顿、耗时的Bug
-* 修复 标签卡 当文件名包含&符号时，标签卡文件名中的&显示不出来的Bug [详情](https://ask.dcloud.net.cn/question/81108)
-* 修复 当编辑器打开的未保存文件过多时，导致HBuilderX启动速度变慢的Bug
-* 修复 同时拖入多个文件（10个左右）到编辑器，编辑器打开文件，响应慢的Bug
-* 优化 编辑器 失去焦点，高亮的代码变灰
-* 优化 新建项目窗口 单选按钮UI样式
-* 优化 扩展视图 SFTP视图 增加文件夹图标
-* 修复 选中一段代码 按下双引号，ctrl+z撤销错误的Bug
-* 修复 选中一段代码 智能双击包围操作，撤销逻辑错误的Bug
-* 修复 vue文件 某些情况下，双击等号，无法选中整个属性的Bug
-* 修复 vue文件 某些情况下，双击引号内侧，无法选中引号内文字的Bug
-* 修复 MacOSX 选中某行内容，上下移动行，行首出现灰色方块的Bug
-* 优化 跳转 跳转行 输入0跳转到首行，输入$跳转到最后一行
-* 优化 跳转 {}[]()括号 括号内输入}]) 自动跳出括号 [详情](https://ask.dcloud.net.cn/question/62646)
-* 修复 搜索 字符搜索（多文件），搜索到结果后，状态栏提示`未查找到xxx`的Bug
-* 修复 替换 工具栏上没有全选功能的Bug
-* 新增 自定义快捷键 默认设置 增加“验证本文档语法”命令，即editor.action.validation
-* 修复 快捷键 vscode快捷键方案 Ctrl+L (MacOSX: Command+L) 快捷键功能对应vscode功能错误的Bug
-* 修复 快捷键 vscode快捷键方案 eslint校验 状态栏消息 跳转到下一个错误，快捷键显示错误的Bug
-* 修复 快捷键 eclipse快捷键方案 Ctrl+Alt+上箭头（MacOSX: Command+Alt+上箭头），快捷键功能对应eclipse功能错误的Bug
-* 修复 迷你地图 屏幕放大后，迷你地图消失后，迷你地图原先区域出现空白的Bug
-* 修复 深色主题 代码助手窗口，某些文字颜色无法看清的Bug
-* 修复 SVG图片 点击工具栏【预览】按钮，出现无关弹窗的Bug
-* 优化 颜色预览窗口文字及UI
-* 修复 颜色预览 十六进制颜色，带Alpha通道的颜色无法在编辑器预览，且不能通过Alt快捷打开颜色选择器的Bug
-* 修复 搜狗输入法 设置为中文时使用英文标点，在辑器中输入`' " ( { [`不会成对出现的Bug [详情](https://ask.dcloud.net.cn/question/116356)
-* 修复 MarkDown 文档结构图 代码区中`#注释`在文档结构图中显示为标题的Bug
-* 优化 MarkDown 代码块不再显示缩进
-* 修复 3.1.10引出的，某些情况下，项目管理器展开特定目录，导致HBuilderX闪退的Bug
-* 优化 插件市场 导入插件，拉起HBuilderX，选择项目窗口别名UI
-* 修复 插件市场 导入uniCloud相关插件，切换云厂商时，已选好的项目名称被重置的Bug
-* 优化 视图 显示前端网页托管 本地拖曳多个文件上传，每个文件上传后，文件列表实时刷新
-* 修复 前端网页托管 在文件上传过程中，点击HBuilderX关闭按钮，导致HBuilderX失去响应的Bug
-* 修复 前端网页托管 当文件上传确认弹窗和标签卡拖曳动作重叠时，导致编辑器UI异常的Bug
-* 优化 前端网页托管 控制台日志，当有跳过的文件时，最后汇总显示跳过的文件数量
-* 优化 前端网页托管 上传网站到服务器，自动记住上次选择的云服务空间
-* 修复 3.1.15版本引出的 某些情况下，uni_modules插件菜单重复的Bug
-* 修复 uni-app 新建页面 某些分辨率的电脑，新建页面窗口显示不全的Bug [详情](https://gitee.com/dcloud/uni-app/issues/I1YP5O)
-* 修复 uniapp-cli 创建uniCloud云开发环境 自动创建的uni_modules目录位置不对的Bug
-* 修复 uniapp-cli 插件市场导入uniCloud插件，pages等目录创建错误的Bug
-* 修复 uniCloud 初始化数据库，在网络不好或其他情况下，连续多次点击， 导致HBuilderX闪退的Bug
-* 修复 uniCloud 某些情况下，从插件市场导入云函数插件，导入到本地后，创建的目录无法展开，刷新后也没反应的Bug
-* 修复 uniCloud JQL文件 按住Alt，某些情况下，导致编辑器闪退的Bug
-* 修复 App 发行小程序 windows 在输入框中，按下tab，焦点跳转到取消按钮上的Bug
-* 新增 App 原生App-云打包，打包结果控制台，增加【一键上传到uniCloud】功能，免费cdn
-* 优化 App 原生App-云打包，代码编译中、或提交打包过程中，打包窗口底部打包按钮设为禁用状态，避免重复点击
-* 修复 App 原生App-云打包，打包过程中，手动关闭打包窗口，HBuilderX崩溃的Bug
-* 新增 Apk、ipa文件 支持直接安装到手机 (项目管理器，选中文件，右键菜单，安装到手机)
-* 优化 App 制作应用wgt包 原生混淆 记住上次勾选状态
-
-## 3.1.15.20210518-alpha
-* 修复 代码提示 try catch内，没有代码提示的Bug
-* 新增 插件扩展示例webviewdialog 用于演示插件API webviewdialog的基本操作
-* 修复 项目管理器 项目执行Git初始化后，项目文件状态没有刷新的Bug
-* 优化 uniCloud schema文件，右键菜单，增加【schema2code】，且支持schema2code插件随着HBuilderX的升级而升级
-* 优化 uniCloud schema2Code 不生成pages.json，而改成pages_init.json，差量合并新页面
-* 修复 App 安心打包，当勾选原生混淆时，第二次安心打包失败的Bug
-
-## 3.1.14.20210430-alpha
-* 新增 Git托管服务。集成CSDN CodeChina插件。新建项目或对老项目点右键可一键托管到Git [详情](https://ext.dcloud.net.cn/plugin?id=4882)
-* 修复 3.1.4版本引出的 新设备 某些情况下，首次启动，第一次点击编辑器没有反应，第二次点击才能启动的Bug
-* 修复 uniCloud udb代码块 data没有提示的Bug
-* 修复 App 原生App-云打包 服务器返回警告弹窗，用户点击取消，仍继续打包的Bug
-* 优化 App 安心打包 使用原生插件时打包的App体积减小
-* 修复 Windows App 制作应用wgt包 由于文件被占用，第二次制作失败的Bug
-
-## 3.1.10.20210416-alpha
-* 【重要】新增 vue3 代码提示、转到定义，仅支持vue-cli项目
-* 【重要】新增 HBuilderX CLI 部署云函数、管理云服务空间 [详情](https://hx.dcloud.net.cn/cli/uniCloud)
-* 【重要】新增 HBuilderX CLI 部署和管理前端网页托管 [详情](https://hx.dcloud.net.cn/cli/uniCloud-hosting)
-* 新增 在Windows资源管理器的目录点右键 使用HBuilderX打开（需要在【设置】中勾选关联右键菜单选项)
-* 新增 项目管理器 悬浮显示收起和展开按钮
-* 优化 项目管理器 修改项目别名窗口样式
-* 修复 内置资源管理器 SVN更新操作后，文件修改时间没有更新的Bug
-* 新增 插件API when表达式变量支持'-'中划线
-* 优化 插件API hx.authorize.login 增加description字段，用于显示申请权限描述 [详情](http://hx.dcloud.net.cn/ExtensionDocs/Api/README?id=login)
-* 优化 MacOSX 右键菜单样式
-* 修复 文件编辑状态指示器，撤销后状态异常的Bug
-* 修复 关闭所有标签卡，当存在未保存文件时弹窗提示没有聚焦到文件的Bug
-* 新增 插件安装 安装失败弹窗，增加重试按钮
-* 新增 切换到上一个版本 增加确认弹窗
-* 新增 编辑器中存在超链接时，鼠标悬停出现相关操作提示语
-* 修复 HBuilderX 登录窗口 忘记密码功能失效的Bug
-* 新增 uniCloud schema2code插件，快速生成增删改查页面 [详情](https://ext.dcloud.net.cn/plugin?id=4684)
-* 新增 uniCloud JQL查询 增加查看【全部信息】、【只看data】功能
-* 新增 uniCloud 公共模块 增加可视化管理公共模块依赖 （对公共模块点右键->管理公共模块依赖）
-* 调整 uniCloud 项目运行 默认连接本地云函数
-* 移除 uniCloud cloudfunctions目录 右键菜单 移除“同步云端函数列表”
-* 修复 uniCloud 某些情况下，uni_modules下的云函数上传没有反应的Bug
-* 修复 uniCloud 单项目窗体下，关联云服务空间或项目，绑定其它项目的服务空间，项目列表显示不完整的Bug
-* 新增 App 原生打包 打包控制台 打开所在目录，改为打开内置资源管理器
-* 修复 App Android安心打包，打包多个渠道时，只有第一个渠道打包成功，剩余渠道包打包失败的Bug
-* 修复 App Android安心打包，Windows电脑，某些情况下，因JAVA虚拟机内存问题，导致打包失败的Bug
-* 新增 App manifest.json 一键生成iOS通用链接 [详情](https://uniapp.dcloud.io/api/plugins/universal-links)
-* 优化 App manifest.json AppID增加选择复制功能
-
-## 3.1.8.20210407-alpha
-* 修复 uniCloud `uni_modules`公共模块，依赖另一个`uni_modules`公共模块，上传所有云函数、公共模块及actions，公共模块依赖关系丢失的Bug
-
-## 3.1.6.20210318-alpha
-* 修复 MacOSX 内置浏览器 右键菜单【查找代码中对应的DOM节点】菜单丢失的Bug [详情](https://hx.dcloud.net.cn/Tutorial/UserGuide/built-in-browser)
-* 修复 插件市场 云端一体页面模板 导入HBuilderX，某些情况下，页面路径创建错误的Bug
-
-## 3.1.5.20210316-alpha
-* 【重要】新增 HBuilderX CLI 支持命令行调用App打包、启动HBuilderX等操作 [详情](https://hx.dcloud.net.cn/cli/README)
-* 【重要】新增 uniCloud JQL查询调试器 (uniCloud/database目录下打开JQL文件，若无文件可以右键菜单【新建JQL查询文件】) [详情](https://uniapp.dcloud.net.cn/uniCloud/jql-runner)
-* 新增 文件编辑状态指示。当行内容发生未保存变动，行首显示相应色块，鼠标悬浮色块上可预览编辑前的内容
-* 修复 MacOSX M1芯片的电脑，svn操作，提示`svn: command not found`的Bug
-* 修复 js语句，某些情况下，回车没有自动补充行尾逗号的Bug [详情](https://ask.dcloud.net.cn/question/118525)
-* 修复 前端网页托管 文件上传过程中，新建页面，某些情况下，编辑器闪退的Bug
-* 修复 App 原生打包 某些情况下，获取基座版本号失败，导致打包失败的Bug
-* 修复 App 原生打包 带有原生插件的App，打包时，没有拷贝nativeplugins目录下android、ios目录外的文件的Bug
-* 优化 uni-app 新建项目，启用uniCloud，自动创建cloudfunctions和database目录
-* 修复 uniCloud 初始化向导，某些情况下，没有上传云函数，直接提示`上传uni-client-actions结束`的Bug
-* 修复 uniCloud 云函数 公共模块依赖使用`\\`时，上传失败的Bug
-* 优化 uniCloud目录的右键菜单内容
-* 优化 uniCloud clientDB 支持collection、field 转到定义
-* 优化 uniCloud clientDB 代码提示 支持提示聚合函数
-* 修复 uni_modules 发布到插件市场，插件过大时上传失败的Bug
-* 优化 插件API hx.authorize.login 授权登录，去掉5分钟code有效期判断
-
-## 3.1.4.20210303-alpha
-* 修复 当焦点不在编辑器或项目管理器，点击菜单，新建文件，编辑器闪退的Bug [详情](https://ask.dcloud.net.cn/question/117347)
-* 修复 Windows Git导入项目 拉起外部工具TortoiseGit，导入未完成时，HBuilderX无法操作的Bug
-* 修复 曲面屏125%缩放，搜索栏字体大小异常的Bug
-* 修复 内置资源管理器 非项目管理器的空文件夹，删除操作，导致编辑器闪退的Bug
-* 修复 关闭“编辑器向下滚动一屏”配置项后，迷你地图无法拖动的Bug
-* 修复 javascript 对象解构赋值语句，在行尾部按下回车后，自动添加逗号的Bug [详情](https://ask.dcloud.net.cn/question/117270)
-* 修复 javascript 当文件中存在`?.`和`??`操作符时，jsbeautify格式化出错的Bug
-* 修复 字符搜索 正则表达式, 分组无效的Bug [详情](https://ask.dcloud.net.cn/question/57338)
-* 修复 字符搜索 正则表达式, 只输入`$`, 搜索后编辑器无响应的Bug [详情](https://ask.dcloud.net.cn/question/57338)
-* 修复 MacOSX 当电脑同时安装HBuilderX Alpha和正式版, 插件市场导入插件，无法正确拉起HBuilderX的Bug
-* 修复 MacOSX 内置浏览器 某些情况下，开发者工具显示空白的Bug
-* 修复 HBuilderX 某些情况下，更新失败的Bug
-* 修复 HBuilderX 用户登录，当用户状态异常，登录提示语提示不准确的Bug
-* 修复 真机运行 iOS 当手机安装的应用数量超过200时，某些情况下，同步数据失败的Bug
-* 修复 App 原生打包 勾选渠道打包，后续不勾选，仍提交渠道打包的Bug
-* 修复 uni-app manifest.json 原生插件选择窗口 某些情况下，无法关闭的Bug
-* 优化 uni-app 新建组件，模板文件自动添加组件名称
-* 新增 uniCloud 关联云服务空间或项目窗口，增加新建服务空间、刷新服务空间功能
-* 修复 uniCloud 初始化向导 数据库初始化窗口，点击取消按钮、或关闭窗口后，再次上传云函数，弹出数据库初始化窗口的Bug
-* 调整 为兼容hbuilderx 3.1.0+，openDB 表uni-id-address字段名：default，改为：is_default [详情](https://gitee.com/dcloud/opendb/blob/master/collection/uni-id-address/collection.json)
-* 修复 uniCloud 初始化向导 某些情况下，没有执行初始化数据库的Bug
-
-## 3.1.3.20210219-alpha
-* 修复 App manifest.json App原生插件配置 云端插件 含输入框配置项没有显示的Bug
-* 修复 uniCloud uni_modules下的云函数, 依赖项目根目录uniCloud下的公共模块时，上传失败的Bug
-* 修复 uni_modules 项目模板无法从插件市场更新的Bug
-
-## 3.1.2.20210206-alpha
-* 修复 uniCloud 云函数，上传部署，依赖的uni_modules公共模块没有上传的Bug
-
-## 3.1.1.20210204-alpha
-* 优化 uniCloud 前端网页托管 文件上传效率，速度提升数倍
-* 修复 uniCloud 云函数管理公共模块依赖当uni_modules名称长度比较大时UI上出现名称重叠的Bug
-* 修复 uniCloud 云函数管理公共模块依赖某些情况下不显示uni_modules下的公共模块的Bug
-* 优化 uniCloud 下载所有云函数、公共模块及actions, 控制台增加相关日志
-* 修复 uni_modules 删除 module 下的 database 时，项目根目录的 uniCloud目录没有自动刷新的Bug
-* 修复 uni_modules easycom模式 代码助手无法提示 modules 下 components 的Bug
-* 修复 uni_modules 从插件市场更新插件时，部分情况更新失败的Bug
-
-## 3.1.0.20210202-alpha
-* 【重要】新增 uni_modules。uni-app生态的重要模块化方案。[详情](https://uniapp.dcloud.net.cn/uni_modules)
-* 【重要】新增 文件内容对比合并功能。文件覆盖前提供内容级的差异对比界面，支持内容编辑。（插件市场插件导入、schema2code导入时可见）
-* 修复 插件API 当编辑器开启迷你地图时，文档修改事件执行两次的Bug
-* 修复 插件API 内置资源管理器 执行command时传参不对的Bug
-* 修复 插件API 自定义编辑器的持久化对象可能造成内存泄漏的Bug
-* 优化 插件API 注册菜单 when表达式，优化计算性能
-* 修复 插件API 当插件package.json activationEvents没有配置onUri时，某些情况下，编辑器出现闪退的Bug
-* 修复 HBuilderX插件 某些情况下，项目类型识别错误的Bug
-* 修复 颜色预览 某些rgb颜色值显示错误的Bug
-* 修复 转到定义 当vue文件带有`beforeRouteLeave`方法时，转到定义失败的Bug [详情](https://ask.dcloud.net.cn/question/114628)
-* 修复 MacOSX 内置资源管理器 某些情况下，点击目录，编辑器出现闪退的Bug
-* 修复 uni-app cli项目 新建页面，选择分包，点击创建按钮没有反应的Bug
-* 修复 App manifest.json 当文件存在语法错误，某些情况下，打开manifest.json，导致编辑器闪退的Bug
-* 修复 App 原生打包 某些情况下，打包窗口，应用版本号与manifest.json显示不一致的Bug
-* 修复 App 原生打包 iOS 设置自定义storyboard启动界面 某些情况下，提交打包，弹出自定义启动图相关弹窗的Bug
-* 新增 uniCloud 创建云函数、action、公共模块、schema、validateFunction，云端校验是否存在，如果存在提示用户选择本地创建/云端拉取
-* 新增 uniCloud cloudfunctions目录 右键菜单 增加下载云端所有资源
-* 修复 uniCloud 弱网状态，上传云函数，某些情况下，界面卡顿导致编辑器崩溃的Bug
-* 修复 uniCloud 批量上传公共模块，选择跳过云端已存在的模块，其它公共模块没有继续上传的Bug
-* 新增 uniCloud 支持对schema、action文件转到定义
-
-## 3.0.7.20210109-alpha
-* 【重要】新增 iOS App 安心打包，无需提交代码和证书到云打包机。更安全、更快捷 (仅支持MacOSX，不支持windows) [详情](https://ask.dcloud.net.cn/article/37979)
-* 修复 插件API hx.window.createWebViewDialog 设置窗口大小无效的Bug
-* 修复 3.0.4 版本引出的 当编辑器没有打开项目下任何文件，直接在项目管理器选中项目，按下Ctrl+R，HBuilderX闪退的Bug [详情](https://ask.dcloud.net.cn/question/114619)
-* 修复 App 真机运行，某些情况下，HBuilderX闪退的Bug
-* 修复 App manifest.json App原生插件配置，本地插件，带`.`的key值写入文件异常的Bug
-* 修复 App Android 安心打包，某些情况下，打包失败的Bug
-
-## 3.0.4.20201230-alpha
-* 修复 前端网页托管 上传文件，控制台打印日志时，无法切换到其它控制台的Bug
-* 修复 MacOSX uniCloud 某些情况下，关联项目后解除关联，文件夹没有刷新的Bug
-* 修复 uniCloud 迁移cloudfunctions目录 当项目存在cloudfunctions_init.json时，迁移后云函数package.json文件dependencies字段内容丢失的Bug
-
-## 3.0.3.20201228-alpha
-* 修复 3.0.0 版本引出的 HBuilderX标准版 首次启动后 某些情况下，代码块无法正常使用的Bug
-
-## 3.0.2.20201225-alpha
-* 无
-
-## 3.0.1.20201223-alpha
-* 新增 插件API hx.window.createWebViewDialog 创建内容区可由HTML编写的模态对话框 [详情](https://hx.dcloud.net.cn/ExtensionDocs/Api/README?id=createwebviewdialog)
-* 修复 uni-app 新建页面 选择分包后，`在pages.json中注册`复选框，去掉勾选再次点击，导致HBuilderX崩溃的Bug [详情](https://ask.dcloud.net.cn/question/113869)
-* 修复 Windows App manifest.json App常用其它配置 勾选CPU类型，列表框变成白色背景Bug
-* 修复 App 原生打包窗口 勾选广告后，manifest.json中自定义的广告数据被清除的Bug
-
-## 3.0.0.20201219-alpha
-* 【重要】DCloud开发者开放平台上线。向开发者服务商开放账户和流量。 [详情](https://open.dcloud.net.cn/)
-* 【重要】新增 插件API hx.authorize 插件可获取HBuilderX登录用户的授权。类似于微信小程序中的微信登录。三方开发者服务商（如Git服务商）可与HBuilderX账户打通。 [详情](https://hx.dcloud.net.cn/ExtensionDocs/Api/README?id=authorize)
-* 新增 插件API hx.window.showMessageBox 创建简单的对话框 [详情](https://hx.dcloud.net.cn/ExtensionDocs/Api/README?id=showmessagebox)
-* 新增 插件API hx.workspace.copyFileWithPrompt 可将指定文件或文件夹拷贝到目标文件夹下 [详情](https://hx.dcloud.net.cn/ExtensionDocs/Api/README?id=copyfilewithprompt)
-* 优化 插件API when表达式，支持正则匹配 [详情](https://hx.dcloud.net.cn/ExtensionDocs/ContributionPoints/README?id=when)
-* 优化 MacOSX iOS模拟器列表展示方式，按操作系统版本展示
-* 修复 MacOSX 设备运行列表，三级菜单编辑启动页面配置，鼠标滑过时，某些情况下造成iOS模拟器列表卡顿的Bug
-* 修复 MacOSX 新版SVN，命令行输出为中文时，解析出错，导致SVN文件对比等功能异常的Bug [详情](https://ask.dcloud.net.cn/question/72358)
-* 修复 MacOSX 当SVN仓库URL超长时，导致SVN提交窗口超出屏幕的Bug
-* 修复 MacOSX 当html文件存在中文或空格等特殊字符时，运行html到外部浏览器失败的Bug
-* 修复 App iOS 原生App-云打包 某些情况下，提示安装Android安心打包插件的Bug
-* 新增 App manifest.json iOS设置 关联域，用于配置通用链接域名 [详情](https://ask.dcloud.net.cn/article/36393)
-* 修复 插件市场 uniCloud Admin插件 某些情况下，导入插件到HBuilderX，pages.json没有合并的Bug
-* 新增 新建同名项目，增加合并、替换操作
-* 优化 控制台 消息通知 当控制台产生新日志时，右上角显示消息通知
-* 修复 控制台 某些数据类型的日志无法打印的Bug
-
-## 2.9.11.20201121-alpha
-* 修复 Android App 安心打包 某些情况下，原生插件打包失败的Bug
-* 修复 Android App 安心打包 勾选原生混淆，打包失败的Bug
-* 修复 Android App 安心打包 GooglePlay渠道包上线谷歌市场失败的Bug
-
-## 2.9.10.20201117-alpha
-* 修复 MacOSX Big Sur系统，HBuilderX启动后CPU使用率过高的Bug
-
-## 2.9.9.20201114-alpha
-* 【重要】新增 Android App 安心打包，无需提交代码和证书到云打包机。更安全、更快捷 [详情](https://ask.dcloud.net.cn/article/37979)
-* 修复 MacOSX 10.13.6系统，运行app到iOS真机，mdb崩溃的Bug
-* 修复 MacOSX Big Sur 11.0.1 Beta系统，运行菜单列表样式显示异常的Bug
-* 修复 MacOSX Big Sur 11.0.1 Beta系统，运行app到iOS模拟器、Android出错的Bug
-* 修复 Windows 某些情况下，插件市场导入插件，打开新HBuilder窗体的Bug
-* 修复 某些情况下，内置资源管理器外部文件，点击右键菜单，造成编辑器崩溃的Bug
-* 修复 某些情况下，转到定义丢失位置记录，导致后退时跳转位置不对的Bug
-* 修复 uniapp-cli项目，新建页面，提示pages.json存在错误的Bug
-* 新增 uniCloud uni-clientDB-actions 支持单文件上传、删除
-* 优化 uniCloud db_init.json 当云数据库存在同名数据表时，提示覆盖的窗口UI
-
-## 2.9.7.20201103-alpha
-* 修复 新建项目 某些情况下，普通项目模板，第二次创建失败的Bug
-* 修复 MacOSX 2.9.6版本引出的 项目管理器右上角菜单列表样式异常的Bug
-
-## 2.9.6.20201031-alpha
-* 修复 选择所有相同词，文档尾部有匹配结果时，搜索范围设置越界导致编辑器崩溃的Bug
-* 修复 当本地存在遗留文件或同名文件时，插件安装失败的Bug
-* 修复 Windows 隐藏操作系统任务栏，HBuilderX窗体最大化后，鼠标移动到屏幕底部，无法自动弹出任务栏的Bug
-* 修复 MacOSX Big Sur 11 Beta系统，uniCloud，关联云服务空间，编辑器出现闪退的Bug
-* 修复 MacOSX Big Sur 11 Beta系统，鼠标滑过扩展插件视图后，编辑器出现闪退的Bug
-* 修复 MacOSX Big Sur 11 Beta系统，多次按下`添加收藏`快捷键后，编辑器出现闪退的Bug
-* 修复 MacOSX Big Sur 11 Beta系统，云端打包窗口，tab标签卡显示空白的Bug
-* 优化 uni-app 新建页面 选择单页面模板，创建页面前，检查pages.json是否存在语法错误
-* 修复 uni-app 新建页面 当项目已存在云服务空间，选择云端一体列表页面模板，仍弹窗提示选择云服务空间的Bug
-* 修复 uni-app 非cloudfunctions目录下，common目录右键菜单出现`新建公共模块`和`同步公共模块列表`的Bug
-* 新增 代码块 udb，快速创建`<uni-clientdb>`组件
-
-## 2.9.5.20201024-alpha
-* 修复 MacOSX Big Sur 11 Beta系统，无法检测到ios真机的Bug
-* 修复 内部资源管理器 地址栏下拉列表，切换目录，导致编辑器闪退的Bug
-* 修复 多文件搜索，搜索结果窗口内容过长时导致编辑器闪退的Bug
-* 修复 某些情况下，点击对话框上按钮后，切换主题、新建窗体后编辑器闪退的Bug
-* 优化 无边框窗口（新建项目、新建页面等窗口），支持鼠标拖曳移动
-* 修复 新建HBuilder窗体，工具栏显示异常的Bug
-* 修复 SFTP 当SFTP视图已打开时，再次点击`浏览远程文件`，没有跳转到SFTP视图的Bug
-* 修复 插件API 某些情况下，因线程问题，导致插件扩展菜单失效的Bug
-* 修复 插件API 某些情况下，自定义编辑器重复打开，导致webView创建失败的Bug
-* 优化 插件API getActiveTextEditor lineFromPosition方法，返回lineNumber，可以获取到当前光标所在行行号
-* 修复 插件市场导入项目到HBuilderX, 编辑器弹出付费协议窗口的Bug
-* 优化 插件导入加入对HBuilderX版本号的判断，当本地版本小于要求时，提醒用户升级
-* 调整 新建项目 移除微信小程序项目的创建，请在微信工具中创建项目。HBuilderX 仍然可以导入和编辑微信小程序项目
-* 修复 uni-app easycom规则没有配置的情况下，代码提示时组件不提示的Bug
-* 修复 uniCloud 单项目窗体上，新建项目后，重复弹出初始化向导窗体的Bug
-* 优化 uniCloud 前端网页托管 增加上传文件超过设定大小（50MB）限制的提示
-* 优化 uniCloud 前端网页托管 当已配置自定义域名时，上传网站到服务器、MarkDown一键分享，控制台日志显示自定义域名路径
-* 修复 uniCloud 某些情况下，上传公共模块或云函数，控制台日志出现`云端运行`文字的Bug
-* 新增 uniCloud 未实名认证用户，支持创建阿里云体验服务空间（cloudfunctions目录，右键菜单【运行云服务空间初始化向导...】）
-
-## 2.9.2.20200913-alpha
-* 新增 插件API CustomEditor 支持自定义编辑器  [详情](https://hx.dcloud.net.cn/customeditor)
-* 优化 快捷键-VSCode方案的全部保存, 修改为`ctrl+k, s`
-* 修复 已打开的文件，改变文件后缀名，状态栏语言类型没有改变的Bug
-* 修复 Windows 2.9.0版本引出的 uni-app新建页面，导入模版，在根目录下生成空文件夹的Bug
-* 修复 MacOS SVN 1.14.0版本 项目管理器文件内容变化后，SVN状态图标没有显示的Bug
-* 新增 uni-app uniCloud付费插件的试用引导
-* 优化 uni-app 新建页面窗口，获取pages.json文件方式，更快加载pages.json内容
-* 优化 uni-app 在分包的目录上，右键菜单点击新建页面，自动在新建页面选择对应的分包目录
-
-## 2.9.1.20200927-alpha
-* 修复 Windows 2.9.0版本引出的 在网络不好的情况下，uni-app新建页面，导致编辑器卡顿的Bug
-
-## 2.9.0.20200926-alpha
-* 优化 uni-app 新建页面功能。支持在新建页面时直接配置 pages.json 内容，输入标题等。可选更多页面模板，并支持预览内容或图片
-* 修复 uni-app 运行到内置浏览器，某些情况下，控制台日志显示不全的Bug
-* 修复 插件API registerUriHandler拼写错误的Bug
-* 修复 打开前端网页托管时，点击菜单【工具】-【外部命令】，造成编辑器闪退的Bug
-* 新增 uniCloud 云服务空间初始化向导，提升使用便利度 （cloudfunctions目录，右键菜单【运行云服务空间初始化向导...】）
-* 新增 uniCloud 初始化云函数配置 cloudfunctions_init.json，可在插件市场的插件中配置云函数的参数（如云函数url参数），使用者可在HBuilderX中一键完成配置 [详情](https://uniapp.dcloud.net.cn/uniCloud/cf-functions?id=init)
-* 修复 uniCloud 真机运行 调用腾讯云云函数时，控制台不打印云函数运行日志的Bug
-* 修复 uniCloud 上传公共模块 没有上传依赖的公共模块的Bug
-* 修复 uniCloud 某些情况下，关联服务空间，导致HBuilderX编辑器闪退的Bug
-
-## 2.8.11.20200904-alpha
-* 无
-
-## 2.8.10.20200903-alpha
-* 修复 项目管理器 TypeScript、xml、word、xslt文件图标错误的Bug
-* 修复 Windows 资源管理器，选中多个文件，右键点击Open with HBuilderX，造成编辑器崩溃的Bug
-* 新增 HBuilderX 支持跳转到指定的行和列 [详情](https://ask.dcloud.net.cn/article/37732)
-* 修复 跨高分屏缩放引起的窗口拖拽的Bug
-* uni-app 发行 h5界面 uniCloud云服务空间 增加新建和刷新功能
-
-## 2.8.9.20200829-alpha
-* 新增 前端网页托管视图 (菜单【视图】【显示前端网页托管】)
-* 修复 Windows 某些AMD显卡的电脑，无法启动HBuilderX的Bug
-* 优化 内置浏览器 手机扫码预览界面
-* 修复 项目管理器 某些情况下，右键菜单卡顿的Bug
-* 修复 搜索 搜索类型下拉列表 某些情况下，造成编辑器崩溃的Bug
-* 修复 颜色预览 颜色后面还存其它值时，颜色无法预览的Bug
-* 修复 颜色预览 某些hsl、hsla颜色值，预览错误的Bug
-* 修复 颜色预览 rgba 当alpha=1的时候，颜色无法预览的Bug
-* 修复 markdown一键分享 某些情况下，上传失败后，提示信息仍然提示成功的Bug
-* 新增 Git插件 增加`编辑.gitignore`和`添加到.gitignore`功能
-* 优化 App manifest.json 调整文件图标
-
-## 2.8.7.20200820-alpha
-* 新增 MarkDown 一键分享 [详情](https://ask.dcloud.net.cn/article/37573)
-* 修复 文档结构图 显示隐藏操作 导致编辑器焦点丢失的Bug
-* 修复 外部命令 当命令数组为空时保存，编辑器崩溃以及无法启动的Bug
-* 修复 未命名文件保存和其它文件另存为操作，没有更新导航栏的Bug
-* 新增 控制台 URL链接内容 右键菜单 增加复制链接
-* 修复 uniCloud进行上传操作后，内置浏览器、内置终端运行异常的Bug
-
-## 2.8.4.20200805-alpha
-* 修复 windows 2.8.1版引出的 内置浏览器 右键菜单无法显示的Bug
-* 修复 文档结构图 同时打开多个文件，文档结构图出现跳转错误，并造成编辑器崩溃的Bug
-* 修复 某些情况下，启动HBuilderX后，立即关闭内置资源管理器标签卡导致编辑器崩溃的Bug
-
-## 2.8.3.20200727-alpha
-* 修复 目录内字符搜索结果界面右侧预览的vue、less等语言不着色的Bug [详情](https://ask.dcloud.net.cn/question/102438)
-* 修复 菜单 显示左侧视图，菜单名称出现错别字的Bug
-* 修复 插件API webView，引出的SFTP视图，右键菜单无法显示的Bug [详情](https://ask.dcloud.net.cn/question/102493)
-
-## 2.8.2.20200724-alpha
-* 修复 插件API WebView 某些情况下, 旧的html内容没有被彻底清除的Bug
-
-## 2.8.1.20200721-alpha
-* 【重要】新增 uniCloud 本地运行云函数，可连接远程数据库和云存储，大幅提升开发效率，同时方便数据导入导出
-* 优化 兼容自定义代码块配置body时不是数组的情况
-* 修复 某些情况下，编辑器右键菜单【重排代码格式】置灰了的Bug
-* 优化 修改插件配置规范，支持插件配置文件独立 (菜单【设置】【插件配置】)
-* 【重要】新增 插件API hx.window.createWebView。可在创建的webview视图中自由绘制自己的界面 [详情](https://hx.dcloud.net.cn/ExtensionDocs/Api/README?id=createwebview)
-* 新增 插件API hx.window.registerUriHanlder，支持从浏览器打开HBuilderX并自动安装或激活某插件 [详情](https://hx.dcloud.net.cn/ExtensionDocs/Api/README?id=registerurihandler)
-* 修复 插件API getActiveTextEditor()获取临时编辑器url出错的Bug
-* 修复 插件API 2.7.12版引出的showInputBox无法使用的Bug
-* 修复 插件API 消息通知框，当按钮文字太长时，显示不全的Bug
-* 修复 前端网页托管 某些情况下，获取服务空间列表失败，导致编辑器闪退的Bug
-* 优化 manifest.json App启动图，iOS 自定义storyboard启动界面，兼容zip压缩包多一层目录的情况
-
-## 2.8.0.20200701-alpha
-* 【重要】新增 前端网页托管 通过uniCloud，提供免费、高速、安全、免运维的网页部署云服务 [详情](https://uniapp.dcloud.io/uniCloud/hosting)
-+ 入口1：选中web项目，点击菜单发行-上传网站到服务器
-+ 入口2：uni-app发布为H5时，勾选 直接部署到前端网页托管
-* 修复 内部资源管理器 新建或重命名文件后，焦点错误的Bug
-* 修复 内部资源管理器 项目名称过长时，地址栏文件名宽度错误的Bug
-* 修复 某些rgb颜色预览错误的Bug [详情](https://ask.dcloud.net.cn/question/99287)
-* 新增 底部控制台 右键菜单，支持自定义快捷键 [详情](https://ask.dcloud.net.cn/article/37482)
-* 修复 Mac 设置-常用设置中字体列表没有显示的Bug
-* 修复 插件市场 使用HBuilderX导入插件，调起HBuilderX后，编辑器窗口没有前置的Bug
-* 修复 eslint-vue插件 获取workdspaceFolder时插件API调整造成的兼容Bug
-* 修复 jsx后缀的文件没有代码提示的Bug
-* 【重要】新增 App manifest.json - App启动图，支持iOS 自定义storyboard启动界面（6月30日起Appstore强制要求storyboard）[详情](https://ask.dcloud.net.cn/article/37475)
-* 新增 真机运行 支持iOS14_beta系统版本
-* 修复 WebView调试 在新版Chrome(83.x版本) 上无法使用的Bug
-* 修复 uni-app cli项目 提交打包 因缺少cliVersion和baseVersion字段，导致服务器不能正确分配打包机的Bug
-* 优化 App manifest.json 将`App SDK配置`，合并到 App模块配置 中。选择模块后，如涉及SDK配置，则会出现相应界面
-* 优化 App manifest.json - `App SDK配置`，支持三方SDK仅用于单一手机OS。比如只在Android上配高德定位、微信支付、支付宝支付，而在iOS上不启用。避免每次打包前调整manifest
-
-## 2.7.13.20200615-alpha
-* 无
-
-## 2.7.12.20200613-alpha
-* 【重要】HBuilderX插件市场上线，欢迎大家提交插件 [详情](https://ext.dcloud.net.cn/?cat1=1)
-* 优化 FTP/SFTP插件，支持在左侧页签浏览远程FTP目录（对FTP项目右键，浏览远程文件）[详情](https://ask.dcloud.net.cn/article/37430)
-* 优化 新建项目时下载项目模板失败的情况
-* 优化 文档结构图反复打开会导致内存泄漏的Bug
-* 修复 资源管理器 因文件关联导致图标空白的Bug
-* 新增 插件API window.createTreeView 支持创建treeview视图，在项目管理器右侧以tab方式展现新的树形列表 [详情](https://hx.dcloud.net.cn/ExtensionDocs/Api/README?id=createtreeview)
-* 新增 插件API views、viewContainers配置扩展点，可以扩展新的UI视图 [详情](https://hx.dcloud.net.cn/views)
-* 新增 插件API workspace.getWorkspaceFolders 获取项目管理器下所有的项目对象 [详情](https://hx.dcloud.net.cn/ExtensionDocs/Api/README?id=getworkspacefolders)
-* 新增 插件API workspace.getWorkspaceFolder 获取某个文件所在的项目 [详情](https://hx.dcloud.net.cn/ExtensionDocs/Api/README?id=getworkspacefolder)
-
-## 2.7.11.20200602-alpha
-* 新增 Windows 普通项目、uni-app项目 支持同步js断点到内置浏览器进行调试（对js代码的左侧行号点右键，选同步断点到内置浏览器）
-* 新增 编辑器 全部替换时，状态栏提示总替换数量
-* 修复 2.7.6版本，引出的点击行号，无法选中当前行的Bug
-* 修复 启用按tab键自动插入代码助手选中项功能，在激活代码助手的情况下，alt+tab等快捷键无响应的Bug
-* 优化 编辑器视图下点击工具栏的地址栏上的父目录，打开的项目管理器将自动置焦之前编辑器里的文档
-* 修复 编辑器右键菜单复制文件路径复制的是项目管理器中选中的文件路径的Bug
-* 修复 项目管理器 右键菜单在空白位置时仍然能获取到当前文件的Bug
-* 修复 内部资源管理器 重命名单个文件后，文件选择状态丢失的Bug
-* 新增 插件API workspace.onDidChangeConfiguration 事件回调
-* 新增 插件API workspace.onDidChangeWorkspaceFolders 事件回调
-* 新增 uni-app 支持条件编译平台MP-360,QUICKAPP-WEBVIEW的代码提示和高亮
-* 调整 移除快应用项目的创建、运行，请改为使用uni-app开发快应用
-
-## 2.7.8.20200525-alpha
-* 无
-
-## 2.7.7.20200522-alpha
-* 修复 插件API WorkspaceFolder.uri类型没有转换到正确的Uri类型上的Bug
-
-## 2.7.6.20200521-alpha
-* 新增 HBuilderX版本更新支持显示下载进度，并提供多源下载以适配多种网络环境
-* 新增 xml文件 支持文档结构图
-* 新增 代码助手 支持按Tab键自动插入代码助手选中项（默认关闭，可在【设置】【编辑器设置】中开启）
-* 优化 新建项目、新建文件UI
-* 修复 代码块扩展点配置项目类型没有生效的Bug
-* 修复 未保存的文件，切换文件编码，导致未保存内容丢失的Bug
-* 修复 某些情况下，带有中文的文件再次打开后，因编码格式错误导致中文显示乱码的Bug 详情
-* 修复 MarkDown 鼠标悬停预览图片，鼠标移走之后预览图片偶发不关闭的Bug
-* 修复 内部资源管理器 文件重命名过程中，删除字符，导致UI显示错乱的Bug
-* 修复 Mac SVN提交信息不能为空的Bug
-* 修复 Mac 保存修改只读文件时，去掉对话框中的“使用管理员重新打开”按钮，避免此操作造成编辑器关闭后没有再次启动的Bug
-* 新增 插件API snippets扩展点，可以扩展指定编程语言的代码块
-* 新增 插件API hx.env.clipboard 读取剪切板内容和写入内容到剪切板
-* 新增 插件API hx.env.openExternal 打开外部链接
-* 新增 插件API texteditor.setSelection，texteditor.addSelection 设置选择区域
-* 新增 插件API workspace.onDidOpenTextDocument 文档打开时的事件
-* 修复 插件API config.*表达式获取插件默认配置时值不对的Bug
-
-## 2.7.4.20200515-alpha
-* 无
-
-## 2.7.3.20200514-alpha
-* 修复 Windows 运行项目到内置浏览器，某些情况下日志重复打印的Bug
-
-## 2.7.2.20200513-alpha
-* 优化 新建插件项目时，增加项目名称合法性校验
-* 修复 插件Api onDidChangeTextDocument 的回调中doc对象缺失某些属性的Bug
-* 修复 插件Api executeCommand 内部命令同步执行时存在超时的Bug
-* 修复 设置 运行设置，百度、QQ小程序开发者工具下载链接显示不正确的Bug
-* 修复 uni-app easycom组件模式，因校验规则变动，导致代码提示错误的Bug
-
-## 2.7.1.20200510-alpha
-* 修复 HBuilderX内未保存的文档，在外部修改后，HBuilderX出现多个弹框的Bug
-* 修复 vue文件，带有-的标签，某些情况下着色异常的Bug
-* 修复 html文件，带有-->的字符串，着色异常Bug
-* 优化 插件运行时，Ctrl+r可直接运行和停止插件，不再弹出运行菜单
-* 修复 插件市场，云函数模板包含__MACOSX文件夹时，HBuilderX导入错误的Bug
-* 调整 App真机运行基座的图标，从红色改为绿色，与HBuilderX图标主色保持一致
-
-## 2.7.0.20200501-alpha
-* 【重要】新增 插件开放API，用js编写HBuilderX插件，打造更顺手的开发利器 [详情](https://hx.dcloud.net.cn/)
-* 新增 新建项目 普通项目下提供插件扩展开发示例
-* 新增 支持从[插件市场](https://ext.dcloud.net.cn/?cat1=7)一键导入云函数分类模板
-* 调整 ide不再内置账户注册功能，注册会引导到网页注册，并且未验证邮箱将不再允许登录HBuilderX
-* 修复 windows 内置浏览器分离后再最大化，部分窗口被任务栏遮盖的Bug
-* 修复 部分电脑 检查更新，弹框消息显示不完整的Bug
-
-## 2.6.16.20200427-alpha
-* 修复 Sublime Text 快捷键文件语法错误的Bug [详情](https://ask.dcloud.net.cn/question/94359)
-
-## 2.6.14.20200420-alpha
-* 修复 因eslint新版插件导致validate-html、validate-stylelint插件失效的Bug
-* 修复 某些Node.js插件，npm install失败，再次安装，引发编辑器闪退的Bug
-
-## 2.6.13.20200414-alpha
-* 修复 内置浏览器运行时，某些数据类型在HBuilderX控制台显示错误的Bug
-
-## 2.6.12.20200412-alpha
-* 新增 【重要】内置浏览器运行时，将日志直接输出到HBuilderX控制台
-* 新增 内置web服务器 支持自定义端口 （菜单【设置】【运行配置】）
-* 新增 FTP插件 支持通过commands在【自定义快捷键】中配置快捷键 [详情](https://ask.dcloud.net.cn/article/37081)
-* 新增 项目管理器 增加刷新功能
-* 修复 内部资源管理器 当未安装终端插件时，运行外部命令导致编辑器闪退的Bug
-* 修复 Mac 内置浏览器分离后，点击关闭按钮，编辑器崩溃的Bug
-* 修复 Mac 导入vue课程源码时，提示npm install失败的Bug
-* 新增 uni-app 支持自定义uniapp编译器node启动内存（菜单【设置】【运行配置】）
-
-## 2.6.10.20200403-alpha
-* 修复 Mac 部分电脑HBuilderX关闭后无法再次启动的Bug
-* 新增 eslint 支持自定义配置实时校验、自动修复功能 （菜单【设置】【插件配置】）
-* 新增 内置浏览器 增加分离独立窗口功能（内置浏览器【工具栏】分离按钮）
-* 新增 内置浏览器 普通项目HTML文件，右键菜单增加 “高亮浏览器内对应元素” 功能；内置浏览器右键菜单，增加 “查找代码中对应的DOM节点”  [详情](https://ask.dcloud.net.cn/article/37087)
-* 修复 Mac 内置浏览器 手机模式下，uniapp/5+app项目，input输入框无法输入的Bug [详情](https://ask.dcloud.net.cn/question/92267)
-* 新增 内部资源管理器 cloudfunctions目录 右键菜单，增加云函数相关操作
-* 修复 查找索引符号 跳转后已折叠区域内容没有展开的Bug
-* 修复 import以@方式引入不带文件后缀的组件时，无法转到定义的Bug
-* 修复 html标签结束字符后面无法输入中文标点符号的Bug
-* 修复 颜色预览 rgba颜色 在颜色预览窗口修改颜色后，alpha值显示为127的Bug
-* 修复 颜色预览 rgba颜色 当alpha值为1.0时，没有显示相应颜色值的Bug
-* 修复 Mac 颜色预览，无法拾取屏幕颜色的Bug
-* 优化 App 原生App云打包 Android证书 支持选择以key为后缀的证书
-* 优化 App 制作应用wgt包，当versionCode为空时，从服务器获取versionCode值
-* 修复 App manifest.json 配置WKWebview后，App模块权限配置, 提示没有勾选ios UIWebview的Bug
-
-## 2.6.7.20200326-alpha
-* 新增 FTP插件，支持FTP/SFTP协议 [详情](https://ask.dcloud.net.cn/article/37081)
-* 兼容 Mac 因微信开发者工具最新1.02.2003250版本调整cli路径，HBuilderX找不到微信开发者工具路径错误的Bug
-* 修复 eslint插件 保存同步时，偶发请求超时的Bug
-* 修复 当HBuilderX安装目录路径带有@符号时，编辑器布局UI显示异常的Bug
-* 修复 App manifest.json screenOrientation规范放置节点错误的Bug
-
-## 2.6.6.20200320-alpha
-* 优化 eslint一键修复，调整为文件保存时自动修复，无需再手动点修复按钮 [详情](https://ask.dcloud.net.cn/article/37070)
-* 修复 Mac 内置浏览器touch事件无效的Bug
-* 修复 设置自动换行后，重启编辑器第一次点击自动换行不生效的Bug [详情](https://ask.dcloud.net.cn/question/89953)
-* 优化 svn/git导入，URL包含%时，本地路径解析为实际中文名称
-
-## 2.6.4.20200310-alpha
-* 修复 App manifest.json 可视化界面配置模块权限时发生崩溃的Bug
-
-## 2.6.3.20200305-alpha
-* 补齐 MAC 内部资源管理器 [详情](https://ask.dcloud.net.cn/article/36828)
-* 新增 项目管理器、内部资源管理器 支持剪切功能
-* 优化 账号安全登录机制（新老版本混合使用会导致需重新登录）
-* 修复 es6模板字符串内出现一个以上${}变量时导致代码提示出错的Bug
-* 优化 多文件搜索 按esc键 将焦点至焦到编辑器
-* 修复 某些环境下 首次展开项目管理器文件夹，文件夹行高异常显示的Bug
-* 新增 App manifest.json SDK配置 Android自动添加第三方SDK需要的权限
-* 修复 App manifest.json 云打包操作导致文件内容格式变化的Bug
-* 新增 uniCloud 云函数运行传参功能（右键【配置运行测试参数】)
-
-## 2.5.11.20200212-alpha
-* 新增 uniCloud 云函数全部上传、批量上传功能
-* 新增 uniCloud 云数据库初始化的功能（右键db_init.json）
-* 修复 全部替换后，按下`Ctrl+S`, 替换内容没有保存的Bug
-* 修复 某些情况下，`Ctrl+W`关闭标签卡后，编辑器焦点丢失的Bug
-* 优化 Mac 新建项目窗口UI
-
-## 2.5.10.20200205-alpha
-* 新增 Mac 内置浏览器支持跨域请求
-* 修复 uniCloud 项目导入HBuilderX后第一次选择云服务空间后无法正常运行、发行的Bug
-* 优化 uniCloud 项目通过右键菜单绑定服务空间之后，不再需要在代码中初始化
-
-## 2.5.9.20200203-alpha
-* 无
-
-## 2.5.8.20200128-alpha
-* 修复 免打扰模式，搜索后，某些搜索相关的按钮无法点击的Bug
-* 修复 js 注释内无法输入中文标点的Bug
-* 修复 js async修饰箭头函数时，参数不提示的Bug
-* 修复 uni-app pages.json easycom配置autoscan导致组件无法提示的Bug
-
-## 2.5.7.20200116-alpha
-* 新增 资源管理器 支持外部命令，补充右键菜单
-* 修复 资源管理器 无法打开磁盘根目录的Bug
-* 修复 资源管理器 某些情况下，安装svn/git插件导致编辑器崩溃的Bug
-* 修复 资源管理器 当文件夹为svn/git时，在底部状态栏上，点击按照大小、类型、修改日期排序错误的Bug
-* 修复 资源管理器 文件后缀大写，生成预览图标失败的Bug
-* 优化 按F1查看帮助文档，改为打开外部浏览器，避免对边改边看造成影响
-* 修复 Mac 2.5.5版本引出的拖文件到项目管理器，存在相同文件时没有弹窗提示的Bug
-* 修复 Mac 替换文件提示弹窗显示英文的Bug
-* 修复 App 云打包 证书密码过长时，导致打包失败的Bug[详情](https://ask.dcloud.net.cn/question/87746)
-* 修复 App 真机运行 重新自定义调试基座包时，版本号没变不会自动更新调试基座的Bug
-
-## 2.5.6.20200113-alpha
-* 无
-
-## 2.5.5.20200111-alpha
-* 新增 内部资源管理器。大幅提升资源管理器效率（目前仅支持Windows） [详情](https://ask.dcloud.net.cn/article/36828)
-* 新增 项目管理器 支持单击目录不展开/折叠（在项目管理器右上角的菜单中可配置）
-* 新增 项目管理器 增加彩色图标主题 （在项目管理器右上角的菜单中可配置）
-* 优化 关闭代码提示后，将不再启动代码助手服务，可减少内存占用（在【设置】-【编辑器配置】，启用或关闭代码助手服务；默认开启）
-* 修复 某些RGBA颜色值，颜色预览显示错误的Bug
-* 新增 uni-app easycom组件模式，支持代码提示、转到定义
-
-## 2.5.4.20200108-alpha
-* 修复 2.5.3版本引出的微信小程序发行失败、及发行导致编辑器崩溃闪退的Bug
-
-## 2.5.3-20200107-alpha
-* 修复 单项目窗体，搜索框输入多个空格回车后，导致编辑器崩溃的Bug
-* 修复 编辑器内打开图片，然后点击另存为，导致编辑器崩溃的Bug
-* 修复 微信小程序发布过程中，点击关闭控制台，导致编辑器崩溃的Bug
-* 修复 某些情况下，格式化操作出现数组越界问题，导致编辑器崩溃的Bug
-* 修复 某些情况下，单窗口删除项目，导致编辑器崩溃的Bug
-* 修复 某些情况下，文件着色，导致编辑器崩溃的问题
-* 修复 某些情况下，编辑文件，导致其它折叠节点自动展开的Bug
-* 修复 设置显示换行符，并取消自动换行后编辑器横向滚动条向右滚动时文字和行号、折叠等区域重叠的Bug
-* 修复 打开js文件后，再将着色切换到es6+上，然后触发滚动条预览后着色丢失的Bug [详情](https://ask.dcloud.net.cn/question/86932)
-* 新增 App端 uni-AD 广告联盟 在manifest.json和打包界面的设置
-* 新增 uni-app 新建项目支持 uni-ui 项目模板，无需在页面里引入和注册组件，所有 uni-ui组件直接用
-
-## 2.5.0.20191231-alpha
-* 优化 es6部分语法 代码提示、转到定义
-* 新增 dart、tpl语言代码高亮着色
-* 优化 文件关闭后，再次打开，光标显示在上次的位置
-* 新增 记忆文件折叠状态 （默认关闭；可在【设置】-【编辑器配置】，启用记忆折叠状态）
-* 修复 用户自定义代码块目录下存在不合规范的文件名时造成崩溃的Bug
-* 修复 自定义代码块，在$1处输入中文之后，使用Tab无法切换到$2处继续编辑的Bug
-* 修复 当某块代码包含多行注释或条件编译时，导致折叠出错的Bug
-* 修复 js语言，在对象变量行尾回车，自动补充逗号的Bug
-* 修复 悬停预览代码后，某些情况下，无法撤销恢复已修改内容的Bug
-* 修复 在屏幕分辨率低于1024x768的电脑上，首次启动后，顶部菜单栏被遮挡的Bug
-* 修复 在高分辨率电脑上，欢迎页面，HBuilderX图标过大的的Bug
-* 修复 欢迎页面，点击收藏，编辑器崩溃的Bug
-* 修复 复制粘贴，某些情况下内容显示成一行的Bug
-* 修复 控制台打印时间，某些情况下显示为其它语言格式的Bug
-* 修复 焦点在项目管理器上时，按 Ctrl+Alt+f 多文件搜索时没有按选中文件搜索的Bug
-* 修复 Mac 项目管理器，项目上右键菜单点击【字符搜索】某些情况下无效的Bug
-* 修复 Mac 多文件字符搜索，当焦点错误时，输入搜索内容回车，编辑器崩溃的Bug
-* 修复 Mac 终端超时设置的最大数时，在弹框提醒中选择【修改设置】崩溃的Bug
-* 新增 uni-app manifest.json App常用其它配置 编译模式添加【v3编译器】和【fast启动模式】
-
-## 2.4.9.20191223-alpha
-* 无
-
-## 2.4.8.20191220-alpha
-* 新增 当关闭编辑器时，记录文件的折叠状态
-* 修复 某些情况下，CSS color渲染错误的Bug
-* 优化 es6部分语法 代码提示、转到定义
-* 修复 js、html文件，关联JavaScript(ES6+)、HTML（es6+）后，右键菜单【验证本文档语法】失效的Bug
-* 修复 在独立单行内容上，按下折叠快捷键，行尾出现折叠指示器的Bug
-
-## 2.4.7.20191216-alpha
-* 新增 CSS 颜色预览功能 （可Alt+左键，进一步打开颜色选择器）
-* 新增 支持WebP格式的图片预览
-* 新增 标签卡右键菜单，增加打开文件所在位置
-* 优化 代码助手UI性能
-* 优化 语法提示 补充一批新的 CSS 属性
-* 优化 vuedoc 支持属性值域描述
-* 修复 vuedoc nvue中不支持组件语法提示的Bug
-* 修复 项目下文件过多时，文件路径偶发不提示当前目录下文件的Bug
-* 修复 多光标撤销、恢复撤销操作，光标位置错误的Bug
-* 修复 多文件字符串搜索，搜索栏重绘导致CPU使用率过高的Bug
-* 修复 字符串搜索，焦点在编辑器且文件被改变时，清除搜索结果指示器的Bug
-* 修复 格式化 光标在中文附近时，格式化后光标位置跑到开头的Bug [详情](https://ask.dcloud.net.cn/question/84634)
-* 修复 Window10 搜索框，微软输入法快速输入时偶发异常的Bug [详情](https://ask.dcloud.net.cn/question/84147)
-* 修复 某些情况下 语言服务偶发退出的Bug
-* 修复 Mac 搜索文件结果列表，上下键无效的Bug
-* 修复 打开查找索引界面后，编辑器光标仍然闪动的Bug
-* 修复 快捷键触发折叠时折叠框的大小不正确的Bug
-* 修复 拖动标签卡到窗体外面的窗口，修改文件后标签卡状态错误的Bug
-* 新增 uni-app 项目js中可以提示浏览器的api
-* 新增 uni-app 控制台 增加重启手机应用功能，无需再次编译，软重启手机App
-* 新增 App manifest.json SDK配置 增加苹果登录选项
-* 修复 App manifest.json 原生插件列表顺序没有按照配置文件中的顺序排列的Bug
-
-## 2.4.4.20191129-alpha
-* 无
-
-## 2.4.3.20191125-alpha
-* 新增 查找索引符号，可快速查找函数、变量等文档结构图中的内容 （快捷键 Ctrl+Shift+o）
-* 新增 鼠标悬停在代码折叠后的省略号处，可悬浮预览被折叠内容
-* 优化 文件路径提示
-* 优化 字符搜索的性能和指示器样式
-* 优化 字符搜索时点击大小写、全词匹配等操作时自动触发重新搜索
-* 优化 文件搜索的性能，补充匹配字符高亮
-* 修复 某些情况下，git/svn项目，更新代码或切换分支后，文件内容没有更新的Bug
-* 修复 无标题文档不更新title的Bug
-* 修复 某些情况下，状态栏语言名称丢失的Bug
-* 修复 文件未修改状态下，中文输入法敲字卡的Bug
-* 修复 当文件第一行是空行时，再次打开编辑器折叠计算错误的Bug
-* 修复 通过拖拽分栏后的tabbar背景色不正确的Bug
-* 修复 某种情况下，分左右两栏，没有对齐的Bug
-* 优化 编辑器搜索字符指示器加深颜色
-* 修复 vscode快捷键方案，搜索上一个/下一个字符，快捷键显示错误的Bug
-* 修复 win7 安装插件窗口滚动条过细的Bug
-* 修复 win7 QQ输入法输入单引号时触发移动光标的Bug
-* 修复 项目管理器，焦点在目录文件上时，按Ctrl+Shift+c复制路径不生效的Bug
-* 修复 打开WebView调试控制台，菜单状态错误的Bug
-* 删除 uni-app项目的manifest.json可视化视图删除自定义组件模式选择，因为已不再支持非自定组件模式
-
-## 2.4.2.20191115-alpha
-* 无
-
-## 2.4.1.20191114-alpha
-* 新增 鼠标悬停在迷你地图的非当前页区域时，小窗预览指示文档
-* 优化 更新逻辑，非app用户不会收到app插件更新通知
-
-## 2.4.0.20191112-alpha
-* 新增 鼠标悬停在滚动条非当前页区域时，小窗预览指示文档
-* 优化 文字搜索右侧显示搜索结果的数字指示
-* 修复 小屏幕（高度为768像素）下一些界面适配的Bug
-* 修复 Mac Command+m 无法最小化窗体的Bug
-* 修复 Mac 暗色主题下，弹窗文字颜色看不清的Bug
-* 修复 SVN/Git项目导入，输入url后回车，当前窗口被关闭的Bug
-* 修复 修改文件触发自动保存时，再次撤销成未修改状态时，切换标签卡时提示临时文件需要恢复的Bug
-* 优化 设置过自定义代码块的语言，自动显示在【代码块设置】菜单列表中，无需再次查找
-* 修复 某种情况下删除折叠行时，导致编辑器卡死、着色异常的Bug
-* 修复 智能双击在显示迷你地图时逻辑不对的Bug
-* 优化 Mac app运行到iOS模拟器，自动记忆上次运行的模拟器
-* 新增 uni-app 新建页面时允许不创建同名目录
-
-## 2.3.9.20191104-alpha
-* 修复 Mac git/svn点击提交时，导致编辑器崩溃闪退的Bug
-
-## 2.3.8.20191103-alpha
-* 新增 迷你地图（右侧缩略图，可在滚动条右键菜单开启关闭，快捷键 win: Alt+o；mac: Ctrl+o）
-* 新增 JSON文件 支持文档结构图。包括uni-app的pages.json的文档结构图（快捷键 win: Alt+w；mac: Ctrl+w）
-* 新增 编辑器标签卡超出一屏时，支持鼠标滚轮横向滚动标签卡
-* 新增 底部状态栏新增文档结构图、终端两个快捷按钮
-* 修复 预览状态下打开文档结构图后，点击文档结构图的item跳转到编辑器对应位置时焦点不在编辑器上的Bug
-* 修复 Vue文件 {{}} 附近输入中文￥自动转换成$的Bug
-* 修复 已关闭项目丢失项目别名的Bug
-* 修复 某些情况下初次自定义代码块未生效的Bug
-* 修复 对运行中的项目，右键菜单操作【关闭项目】造成崩溃闪退的Bug
-* 修复 日志文件积累时间较长后，造成占用硬盘空间过大的Bug
-* 优化 加快某些大文档在外部变更后重新渲染的速度
-* 优化 打开较多文档时主题切换的速度
-* 修复 跳转到指定行，代码没有展开折叠的Bug
-* 修复 触发全部折叠时行尾的折叠指示器框大小不对的Bug
-* 修复 vscode快捷键方案，eslint校验，跳转到下一个错误，快捷键错误的Bug
-* 修复 Mac 10.15 右键菜单字体异常的Bug
-* 调整 删除快应用发布的菜单，请在快应用官方工具发布快应用
-* 优化 App打包界面 提供更清晰的界面指示、完善提示语
-* 新增 App打包 支持新的Android公共测试证书 [详情](https://ask.dcloud.net.cn/article/68)
-
-## 2.3.7.20191024-alpha
-* 修复 Vuex mapState mapActions mapMutations 映射的函数属性无法转到定义和无法提示的Bug
-* 修复 html 连续编写有默认值的属性时(例如 autocomplete accesskey等)， 覆盖位置不对的Bug
-* 优化 uni-app globaldata代码提示及转到定义
-* 新增 App打包 对manifest中的iOS通用链接进行前置校验
-
-## 2.3.6.20191021-alpha
-* 无
-
-## 2.3.5.20191018-alpha
-* 无
-
-## 2.3.4.20191014-alpha
-* 新增 Vuex、Vue-Router代码提示
-* 新增 本地历史记录功能。（右键菜单-本地历史记录。并可在【设置】-【常用配置】，调整最大文件数量等参数）
-* 新增 首次启动显示欢迎向导
-* 新增 预览图片时，状态栏右下角显示图片的文件大小和像素尺寸
-* 修复 文件保存时恰好设备断电导致文件损坏的Bug
-* 优化 自动保存临时文件的策略。取消固定周期保存临时文件，更改为内容变更后自动保存，同时删除了【设置】中的`自动保存临时文件周期`配置项
-* 修复 某些情况下HBulderX更新失败的Bug
-* 修复 当项目存在时，拖入一个相同项目导致崩溃的Bug
-* 优化 折叠 点击右侧折叠方框可展开折叠
-* 优化 文件搜索，列表隐藏时关闭进度条
-* 优化 Alt+鼠标左键转到定义时，无需移动鼠标也能触发显示下划线
-* 修复 某些情况下因字体渲染导致方法参数提示窗口位置异常的Bug
-* 修复 当设置编辑器处于懒加载的状态时，切换到设置时由于记录焦点变换造成的崩溃Bug
-* 修复 nvue文件 import from 导入组件，无法转到定义的Bug
-* 修复 nvue文件 uni-app生命周期函数内，调用method方法，转到定义失败的Bug
-* 修复 App真机运行 iOS 项目文件过多的情况下，同步文件失败的Bug
-* 修复 App真机运行 Mac 运行控制台打印的日志时间没有对齐的Bug
-* 修复 App真机运行 某些情况下xcode模拟器无法自动启动的Bug
-* 新增 App云端打包 本地校验证书密码，减少证书密码错误造成的无效打包
-* 优化 App云端打包 界面文字描述以及布局，明确显示版本号，减少版本号相同引发的无效打包
-* 新增 uni-app manifest.json H5发行时是否自动裁剪没有使用的组件和API的配置
-
-## 2.3.3.20190924-alpha
-* 无
-
-## 2.3.2.20190921-alpha
-* 修复 uni-app iOS13以下系统 无法启动debugger的Bug
-* 修复 uni-app manifest中未设置组件编译模式时无法启动debugger的Bug
-
-## 2.3.1.20190920-alpha
-* 无
-
-## 2.3.0.20190919-alpha
-* 新增 Eclipse快捷键方案切换【菜单-工具-快捷键切换】
-* 修复 调用npm运行时npm路径初始化不正确的bug
-* 修复 已关闭工程列表展开状态下关闭程序, 再次启动程序后已关闭工程列表位置显示错误的Bug
-* 优化 断电时正在写入的文件损坏的概率
-* 新增 App manifest可视化界面 增加iOS13的蓝牙配置项
-* 新增 uni-app manifest可视化界面 增加nvue页面编译模式
-
-## 2.2.7.20190917-alpha
-* 修复 Mac iOS13真机运行 提示mdb缺少某些依赖库的Bug
-* 优化 Mac 通过WiFi连接的iOS手机不再显示在运行列表中
-
-## 2.2.6.20190914-alpha
-* 新增 Windows 程序关闭前，提示是否创建桌面快捷方式
-* 新增 代码提示 支持支付宝小程序数据、更新微信小程序最新数据。在uni-app项目中自动加载，在其他项目中，手动在状态栏的代码提示库中选择
-* 修复 HTML文件中javascript字符串多行显示时着色不对的Bug
-* 修复 javascript模板字符串在酷黑主题下着色不对的Bug
-* 新增 真机运行 支持iOS13
-* 新增 真机运行 nvue文件支持差量同步，提升修改后界面刷新速度
-* 修复 真机运行 iOS模拟器 nvue文件同步后界面不刷新的Bug
-
-## 2.2.5.20190907-alpha
-* 优化 html中vue的代码提示、转到定义
-* 新增 windows 沉浸式标题栏。统一标题栏和界面主题的颜色，增加窗体内容区的高度（可在设置中切换回普通标题栏）
-* 新增 点击右侧滚动条信息点，直达对应位置
-* 优化 文件关联识别支付宝、百度、头条、QQ小程序文件
-* 优化 酷黑主题 代码选中背景色
-* 优化 折叠的图标样式
-* 修复 Mac 多光标取消 `command + 右键` 弹出右键菜单的Bug
-* 修复 预览窗口打开时，新打开文件，弹出对话框导致欢迎页面UI文字重叠显示的Bug
-* 修复 markdown 列表前缀后按BackSpace无法整体删除列表符的Bug
-* 新增 uni-app 真机运行 支持nvue文件保存后直接刷新App页面而不用重启应用
-* 修复 nvue文件 代码助手无法提示uniapp生命周期的Bug
-
-## 2.2.4.20190823-alpha
-* 无
-
-## 2.2.3.20190822-alpha
-* 新增 支持vue cli web项目直接在内置浏览器中预览（如未npm install，需先执行）
-* 优化 代码提示 支持vue修饰符提示，如v-model.trim=""
-* 修复 scss/less 选择器嵌套的代码内容中无法提示CSS属性的Bug
-* 修复 scss 代码提示 无法提示!default的Bug
-* 新增 智能双击 双击选中es6模板字符串功能
-* 修复 历史剪贴板的多行内容粘贴时变成了一行的Bug
-* 修复 Windows 进入全屏模式后，底部操作系统的工具栏仍然存在的Bug
-* 修复 窗口最大化时通过打开方式打开文件时窗口状态不正确的Bug
-* 新增 nvue文件关联
-* 修复 uni-app 在其它文件中，uni.scss定义的全局变量无法提示的Bug
-
-## 0.1.50.20180918-alpha
-* 无
-
-## 0.1.49.20180917-alpha
-* 新增 设置提供可视化界面
-* 调整 插件配置统一汇总到菜单【工具】-【插件配置】，所有插件包括内置的格式化插件jsbeaufy配置都调整到此入口
-* 新增 Prettier插件，处理less、scss、php文件格式化
-* 修复 插件安装后可能导致外部命令无法显示的问题
-* 新增 wap2app 项目创建、打包、manifest可视化
-* 新增 菜单文件-打开历史文件，支持打开历史项目
-* 优化 全部保存的快捷键默认为【Ctrl+Alt+s】
-* 修复 html的text区域无法输入中文书名号的问题。可选择是否转义
-* 修复 光标在文件开头时格式化造成HBuilderX无响应的问题
-* 修复 项目名称包含空格时代码助手图片预览失效的问题
-* 优化 删除目录时该目录下已打开的文件自动关闭
-* 优化 文件和文件夹内搜索过滤unpackage目录
-* 修复 markdown 大纲层级不正确的问题
-* 优化 运行菜单，在toolbar上点运行和Ctrl+r运行，统一下拉运行菜单。等待手机检测时可反复按Ctrl+r。点击菜单运行很低效，推荐点击toolbar或快捷键
-* 修复 有时打包失败没有提示错误信息的问题
-* 优化 真机运行崩溃的问题
-* 修复 uni-app 编译添加node和npm环境变量，以免因为npm和node不统一造成编译失败的问题
-* 修复 uni-app 小程序运行后，切换项目后点控制台的停止按钮无法停止的问题
-* 优化 uni-app manifest可视化界面新增微信小程序配置（注意app的sdk里的微信设置和微信小程序设置是不同的）
-* 修复 uni-app 微信开发者工具启动后无法查看源码的问题
-* 修复 uni-app 相同appid和projectName时无法启动微信开发者项目的问题
-* 修复 uni-app 修改manifest.json时有可能导致崩溃的问题
-
-## 0.1.48.20180906-alpha
-* 【重要】新增 自动保存修改内容到临时文件的功能，停电、崩溃不再担心。这个机制不是保存正式文件，不会触发自动编译运行。自动保存间隔时间默认为30秒，可在设置里修改
-* 新增 全部保存功能
-* 新增 uni-app项目新建页面、组件的功能。新建页面会自动新建同名目录、vue文件及自动添加到pages.json最后
-* 新增 在uni-app项目下打开的vue页面编辑器，右键添加转到pages.json对应节点的功能
-* 优化 文件在外部被编辑后，提醒变更的逻辑
-* 修复 git插件无法使用的问题
-* 修复 拖动代码不能移动位置的问题
-* 修复 黑色主题下，光标在括号旁边时，匹配括号的黑色小框看不清的问题
-* 修复 js字符串中文字符转义的问题
-* 修复 有些包含大量emoji字符的utf8文件编码识别错误的问题
-* 修复 node插件升级时，如果已安装会重新安装的问题
-* 修复 Ctrl+tab无法切换到预览文件的问题
-* 修复 函数参数为function时不能自动补全圆括号的问题
-* 修复 Mac上中文输入法有时出现多余字符的问题
-* 修复 Mac上撤销操作偶发乱套的问题
-* 调整 删除jshint校验js的逻辑，校验js请安装eslint插件
-* 修复 真机运行菜单iOS设备的中文显示为乱码的问题
-* 修复 真机运行菜单正在运行的设备对应的项目名称有可能显示不对的问题
-* 修复 真机运行多个设备时有时候出现不同步文件的问题
-* 修复 App打包界面选择的iphone、ipad打包时不生效的问题
-
-## 0.1.47.20180823-alpha
-* 无
-
-## 0.1.47.20180821-alpha
-* 添加 uniapp编译前先进行manifest.json和pages.json的语法校验的功能
-* 添加 真机运行控制台添加重启、停止、启动的功能
-* 优化 真机运行控制台焦点切换的问题
-* 优化 代码提示时uni-app下js模块提示过滤掉pages.json下配置的页面
-* 修复 node插件升级失败有可能导致崩溃的问题
-* 修复 通过点击“Android模拟器端口设计”菜单导致端口丢失的问题
-* 修复 正则搜索卡死的问题
-* 修复 外部命令报node不可运行
-* 修复 真机运行编译器报错无法跳转到对应文件的问题
-* 修复 真机运行编译器日志错乱的问题
-* 修复 升级时有些node插件不安装的问题
-* 修复 manifest图形编辑器设置iphonex、iphonexl启动图的节点名称不对的问题
-* 修复 内置浏览器渲染进程异常导致崩溃的问题
-* 修复 项目管理器中操作文件小概率崩溃的问题
-* 修复 manifest.json文件末尾为注释会导致App打包进度一闪而过的问题
-* 修复 manifest可视化编辑器编辑时可能损坏包含//注释的manifest.json文件内容结构的问题
-* 修复 创建项目时关闭新建界面导致崩溃的问题
-* 修复 App打Android包没有提交xxxhdpi图标的问题
-* 修复 mac下移除项目到回收站有时会失败的问题
-* 修复 使用emmet的时候按下tab键后中文乱码
-
-## 0.1.46.20180810-alpha
-* 新增 5+app项目的manifest图形化编辑器
-* 新增 iOS真机运行保存时自动刷新手机的功能
-* 修复 网络被劫持时插件下载失败的问题
-* 修复 mac下休眠一段时间后HBuilderX卡死的问题
-* 修复 在资源管理器中双击文件或通过打开方式启动应用后有时无法打开对应文件的问题
-* 修复 css文件行注释异常的bug
-* 修复 settings.json文件不合法导致启动就弹错误提示框，并且界面主题混乱的问题
-* 优化 App打包时支持隐藏进度界面
-* 新增 移除项目到回收站的功能
-* 新增 uni-app项目光标在标签语句上按F1可打开组件帮助文档
-* 补充 用户登录后每天自动签到加社区积分功能
-* 优化 windows下自动检测微信开发者工具所在目录
-* 优化 vue代码提示，支持自定义组件的属性提示
-* 优化 双引号自动补全时绿光标结束点的逻辑
-* 修复 有时弹出错误的快捷键冲突选择菜单的问题
-* 修复 php自定义代码块不生效的问题
-* 修复 有时启动崩溃的问题
-* 修复 光标选到页首时，注释、加粗、加包围等操作可能引发崩溃的问题
-
-## 0.1.45.20180728-alpha
-* 【重要】新增uni-app，使用vue技术，开发一次，iOS、Android、微信小程序三端同时生成。[详见](https://uniapp.dcloud.io/)
-* 【重要】调整uniapp策略，之前的原生渲染uniapp改为nml项目[详见](https://ask.dcloud.net.cn/article/13507)
-* uni-app：新增条件编译，采用类似 //#ifdef APP-PLUS 的写法做平台条件编译，代码块名为ifdef，还可双击ifdef选中整体代码段落。[详见](https://uniapp.dcloud.io/platform)
-* uni-app：新增u开头的各种组件和api的代码块，如urequest即可快速生成联网代码
-* 【重要】语法校验
-+ 新增html,vue,css,sass,less等语法验证插件【安装插件后默认是保存时校验，也可在工具菜单手动激活】
-+ 优化语法校验，在代码中通过波浪线直接标识，支持F4跳转到下一个语法错误
-+ json文件保存时，自动删除多余错误逗号
-* 【重要】新增光标在api代码处，按F1打开对应的帮助文档。目前支持uni-app、plus、vue的api
-* 优化新建菜单，增加文件模板及自定义模板
-* 新增切换最近文件列表。Win:Ctrl+Tab；Mac:Alt+Tab。短按是在最近2个标签卡切换，长按可在列表中持续移动（逻辑同OS的切屏）
-* 新增文件收藏功能，方便快速访问常用文件【Alt+Shift+f】
-* 新增快捷键冲突时弹出选择菜单的功能
-* 代码提示
-+ 优化js中json语法的提示
-+ 修复翻页可能错乱的bug
-+ 补充vue指令的信息帮助及vuex框架语法库
-+ 修复某些情况下框架语法库失效的问题
-* Emmet：修复在css、php等文件中失效的bug
-* 优化代码块教程，新增clogvar快捷打印变量的js代码块
-* 优化vue转到定义
-* 智能回车
-+ json的键值对和数组后回车，自动补充行尾逗号
-+ 优化js中/**回车处理
-+ 修复回车时光标可能在屏幕外的问题
-* 智能双击
-+ 新增双击逗号左侧或右侧，选中数组或参数的前一个或后一个。大幅提升json的节点增删效率
-+ 新增双击条件编译区的ifdef或endif关键字选中条件编译段落
-+ 新增双击行尾行注释，选中注释段
-+ 新增Alt+双击括号引号，把两侧的括号引号也选中
-* 优化重复插入，不选内容时是重复插入当前行，选内容时是重复插入选区。Win:Ctrl+Insert；Mac:Command+Shift+r
-* 优化缩进，支持空格、tab转换和长度调整，使用方式：菜单【编辑】-【缩进】
-* 外部命令新增terminal类型，使用该类型的外部命令运行环境设定为内置终端
-* 优化内置终端插件的使用体验
-* 优化运行
-+ 支持多设备运行到不同的控制台
-+ 修复项目名含有+号等特殊字符时，无法在内置web服务器运行和预览的问题
-+ 修复Mac无法自动识别已安装的浏览器的问题
-+ 修复预览时web服务器启动慢导致无法使用web服务器预览的bug
-* markdown
-+ 粘贴外部图片到md文件时，自动整理到附件文件夹下，方便整体发行及预览
-+ 修复非项目下的md文件预览时不能显示图片的bug
-* 修复某些情况下，ctrl+f搜索会导致程序崩溃的问题
-* 修复大量删除项目内文件可能会导致崩溃或项目列表清空的问题
-* 【App插件】支持Mac真机运行同步文件
-* 【App插件】新增manifest.json中（plus->arguments）配置应用默认启动参数功能
-* 【App插件】新增toast的图标支持设置宽高（iconWidth/iconHeight）
-* 【App插件】Android平台云端打包支持在manifest中指定targetSdkVersion版本（解决Google提交应用要求支持Android8.0+的问题）
-* 【App插件】Android平台修复应用资源可能被清理工具删除的问题
-* 【App插件】Android平台修复未配置震动权限时扫码成功引起应用崩溃的问题
-* 【App插件】Android平台修复特定情况下状态栏高度计算不正确的问题
-* 【App插件】Android平台修复二维码通过图片扫码识别（plus.barcode.scan）不触发回调的问题
-* 【App插件】iOS平台修复自定义基座concole.log日志无法输出的问题
-
-## 0.1.43.20180625-alpha
-* 修复内置浏览器、内置终端插件配置错误的问题
-
-## 0.1.42.20180623-alpha
-* 【重要】新增内置终端【win: Alt+c；mac: Ctrl+c】
-+ 支持多终端
-+ 菜单运行支持解析package.json的命令直接运行到内置终端
-* 优化代码块的自定义和显示
-* 优化Vue2.x语法提示
-* 插件外部命令支持保存自动执行，在插件配置中将"onDidSaveExecution": true, 重启生效。可用于保存时自动编译、压缩、提交svn等
-* 优化格式化
-* 修复粘贴时有时代码没有智能缩进的问题
-* 解决外部命令运行有时会提示node异常的问题
-* 调整代码助手数字选择默认策略为Alt+数字插入
-* 【App插件】【重要】新增原生视频播放组件（支持flv、rtmp/hls/rtsp协议），新增直播推流组件（rtmp协议），规范参考 [https://www.html5plus.org/doc/zh_cn/video.html](https://www.html5plus.org/doc/zh_cn/video.html)
-* 【App插件】【重要】直播开发指南，参见[https://ask.dcloud.net.cn/article/13416](https://ask.dcloud.net.cn/article/13416)
-* 【App插件】解决wap2app打包原生时没有编译的问题
-* 【App插件】Android平台修复高德定位使用缓存数据导致定位不准确的问题
-* 【App插件】Android平台修复默认不支持媒体输入的问题
-* 【App插件】Android平台修复Webview设置bottom属性横竖屏切换后可能不生效的问题
-* 【App插件】iOS平台修复NView不能显示部分网络gif文件的问题
-* 【App插件】iOS平台修复应用内支付（IAP）无法获取购买凭证的问题
-* 【App插件】iOS平台修复无法直达支付宝的芝麻认证页面的问题
-
-## 0.1.41.20180612-alpha
-* 代码助手新增右侧详细信息
-* 代码助手新增单击Alt切换数字插入状态的功能
-* 新增中文输入免干扰功能，在特定语法区输入全角的分号逗号括号会自动替换为半角符号，减少错误，编写更顺畅。可在设置中配置开关
-* 修复设置分栏为4宫格并关闭HBuilder X后，无法再次启动HBuilder X的问题
-* 修复HTML文件不提示vue指令的问题
-* 完善自定义代码块的帮助说明
-
-##0.1.40.20180607-alpha
-* 修复内置浏览器无法加载页面资源的问题
-* 修复win10下浏览器运行-Edge提示找不到Edge浏览器的问题
-
-##0.1.39.20180606-alpha
-* 修复wxml的注释和智能选中的一些问题
-* 修复某些情况下，格式化后滚动条位置不正确的问题
-
-##0.1.38.20180605-alpha
-* 紧急修复mac上部分文件格式化、外部命令菜单显示的若干bug
-
-##0.1.37.20180605-alpha
-* 新增内置浏览器预览，即老版的边改边看 【win: Alt+p；mac: Ctrl+p】
-* 强化微信小程序支持，更好的小程序开发工具 [详见](https://ask.dcloud.net.cn/article/13373)
-+ 支持新建微信小程序项目、文件
-+ 支持小程序语法提示
-+ 支持直接运行到微信开发工具的模拟器看效果和调试【菜单运行】
-* 新增自定义代码块功能【菜单工具-自定义代码块】
-* 补充mui代码块
-* 默认支持格式化vue文件，并修复格式化后光标位置不正确的问题
-* 修复某些情况下中文输入法卡的问题
-* 修复vue中url跳转失效的问题
-* 修复有时代码块失效或变卡的问题
-* 修复Mac版代码提示经常失效的问题
-* 修复真机运行有时崩溃的问题
-* 修复es6编译无效果的问题
-* 修复js压缩插件不支持es6的问题
-* 修复文件内搜索时输入中文有时候会崩溃的问题
-* 修复Mac下运行项目下的npm命令失效的问题
-* 修复选中内容按左边括号，无法在2端加括号包围的问题。只支持大中小括号，不包含尖括号
-* 修复输入左边引号括号智能补齐匹配引号括号不支持多光标的问题
-
-##0.1.36.20180521-alpha
-* 修复 UniApp真机运行失败的问题
-* 强化折叠，见菜单跳转
-+ 折叠单行【Alt+-】
-+ 展开单行【Alt+=】
-+ 折叠子行【Alt+Shift+-】
-+ 展开子行【Alt+Shift+=】
-+ 折叠所有行【Alt+Ctrl+Shift+-】
-+ 展开所有行【Alt+Ctrl+Shift+=】
-+ 折叠其他区域【Alt+Shift+o】
-* 新增 选中当前行(不含首尾空白字符) 【鼠标双击行尾】【Ctrl+Shift+l】
-
-## 0.1.35.20180519-alpha
-* 无
-
-## 0.1.34.20180519-alpha
-* 【重要】新增App换量联盟，免费获得翻倍用户，[详见](https://ask.dcloud.net.cn/article/13300)
-* 【重要】大幅强化vue，可能是最好的vue开发工具
-* 优化less、scss语法提示
-* 解析项目下package.json中npm命令，在运行和外部命令菜单提供快捷执行入口
-* 优化浏览器运行的若干体验问题
-* 配置语言类型关联，指定某后缀名文件使用某种语言编辑器打开（设置里files.associations节点）
-* win版在根目录新增reset.bat，执行bat可清除HBuilderX所有数据配置
-* 优化框架语法提示库的加载
-* 优化插件部分体验问题
-* 修复mac下外部命令shell模式无法打开终端的问题
-* 优化文件保存无权限时的逻辑
-* 智能双击新增选中折叠。鼠标双击折叠行前字符左侧可选中该折叠区域
-* 优化扩大选区【Ctrl+=】
-* markdown：新增markdown的浏览器运行预览【Ctrl+r】
-* 【App插件】修复创建5+app项目后没有从服务器自动获取appid的问题
-
-## 0.1.33.20180505-alpha
-* 新增插件管理
-* 新增保存自动刷新浏览器功能（仅通过内置服务器打开的页面生效）
-* 新增粘贴智能缩进，光标在行首缩进位置(不是顶格)时粘贴自动处理缩进
-* 新增光标历史前进后退【Alt+←、Alt+→】及清空光标历史
-* 支持拖拽标签卡到外部直接生成新窗体
-* 分栏增加垂直分栏和四宫格模式
-* 内置服务器首次启动策略修改为浏览器运行后启动，弹出权限询问框时请务必点允许
-* 修改某些情况下格式化后光标错位的问题
-* 修复新建窗体后项目管理器单击展开变双击的问题
-* 新建项目时补充hello wap2app模板
-* 优化酷黑主题的一些问题
-* 修复文档结构图/大纲的中文兼容问题
-* 修复临时文件标题不随着第一行内容变更的问题
-
-## 0.1.32.20180424-alpha
-* 新增Ctrl+鼠标右键移除点击位置的多光标/选区
-* 新增js、css等分号结尾的语言中，双击分号选择该段内容的功能
-* 修复酷黑主题搜索输入框字体颜色看不清的问题
-* 修复某些情况下代码块不提示的问题
-
-## 0.1.31.20180420-alpha
-* 新增文档结构图/大纲功能【Alt+w】（mac是Ctrl+w）
-* 智能双击：HTML中新增双击=选中Tag属性、Css中新增双击类名左侧选中整个类、优化js中function等关键字双击末尾则选中该词
-* 优化酷黑主题体验，修复nss,njs等文件酷黑主题下没有高亮的问题
-* 新增Ctrl+鼠标滚轮缩放字体的开关配置项:editor.mouseWheelZoom
-* 修复二进制文件预览的一些错误
-
-## 0.1.30.20180418-alpha
-* 新增黑色主题
-* 新增编辑器分栏功能【Alt+Shift+1、Alt+Shift+2、Alt+Shift+3】
-* 转到定义支持在另一分栏打开，方便并排查看【Ctrl+Alt+鼠标点击或Alt+Shift+D或windows下Shift+F12】
-* 支持Alt+N将焦点移到编辑器的功能。至此完成：Alt+Q是左侧项目管理器，Alt+O是顶部工具栏，Alt+C是底部控制台，Alt+N是中间编辑器（mac下Alt改为Ctrl）
-* 补充了mac下的文件复制移动删除等操作
-* 增加历史剪切板【Ctrl+Alt+v】
-* 优化搜索功能，搜不到的文字会变红，查找下一个循环到开头时会悬浮图标指示
-* 在空白文档粘贴内容时，会自动检测待粘贴内容是否HTML或json，并自动切换语言类型和自动格式化
-* 取消js文件保存时自动校验语法的默认设置，需要的开发者请手动在设置中调整jshint.onsave选项
-* 修复某些情况tab缩进变成8的问题
-* 修复某些情况重命名文件引发崩溃的问题
-* 修复某些情况引号智能补全错乱的问题
-* 修复某些情况JS跨文件转到定义不正确的问题
-* 修复某些情况项目管理器目录层级错乱的问题
-* 修复忘记密码后没有提示已发送邮件的问题
-* 【App插件】Uni-App支持web组件引用本地html、js、css文件
-
-## 0.1.29.20180409-alpha
-* 紧急更新某些情况下内置web服务器打开html显示404的问题
-
-## 0.1.28.20180406-alpha
-* 增加web服务器插件,仅支持HTML文件在浏览器运行时使用
-* 文件夹内搜索添加全部替换的功能
-* 修复未搜索到结果时，状态栏信息立即消失的问题
-* 修复设置和搜索结果编辑器替换所有有时候未替换的问题
-* 修复有时异常退出导致项目列表清空的问题
-* 修复大文档在某些情况下折叠造成卡顿的问题
-* 修复某些情况下大文档着色引发异常的问题
-* 【mac版】解决finder里打开方式不能选择HbuilderX的问题
-* 【mac版】修复部分快捷键失效的问题
-* 【App插件】解决某些情况下，调试debug卡死的问题
-* 【App插件】小程序to快应用/Uni-App转换器支持 url跳转参数传递,优化部分样式,组件转换
-* 【App插件】快应用真机运行基座升级到1.0.15
-
-##0.1.27.20180403-alpha
-* 解决某些情况下App插件升级或安装失败的问题
-* 解决某些情况下Mac版tab键失效的问题
-* 【App插件】解决快应用/Uni-App真机运行时，修改部分文件提示编译失败的问题
-
-## 0.1.26.20180401-alpha
-*  搜索结果在状态栏增加提示
-*  修复文件夹、项目无法重命名的问题
-*  修复重命名文件时，如果该文件已打开，会打开两个标签卡的问题
-*  修复某些情况下设置未成功保存的问题
-*  修复某些语言文件在某些情况下的折叠异常问题
-*  优化less、scss的着色，修复markdown某些字符导致的着色异常问题
-*  Markdown：悬浮预览支持gif动画
-* 【重要】【App插件】添加Uni-App/快应用打包Android apk的功能
-* 【App插件】优化Uni-App/快应用调试流程，解决某些情况下调试器启动失败等问题
-* 【App插件】小程序to快应用/Uni-App转换器优化import,template标签转换、修复部分样式转换问题
-* 【App插件】快应用/Uni-App调试基座修复a标签点击不处理href、二维码扫描引起程序崩溃、video不居中显示等问题
-
-## 0.1.25.20180326-alpha
-* 解决Mac无法浏览器运行的问题，并新增自动检测Chrome、Safari和FireFox
-* 多光标模式支持上下移动行【Ctrl+Up/Down】、回车、反回车【Shift+Enter】等操作
-* 添加Uni-App、快应用示例模板，新建项目时可选择
-* 转义里新增了首字母大写，调整了大小写转换的快捷键【Alt+Shift+U/L/T】
-* 修复搜索到折叠区域时，折叠不展开的bug
-* 修复了代码助手在窗体右边缘时被遮挡、自闭合标签回车缩进错误等问题
-* 修复了Mac版粘贴表格(numbers)内容到markdown文档时无法自动转换markdown表格的问题
-* 【App插件】快应用真机运行基座升级到1.0.13
-* 【App插件】更新小程序to快应用/Uni-App转换器
-
-## 0.1.24.20180323-alpha
-* 控制台右键菜单增加复制
-* 解决创建快应用项目目录结构不正确的问题
-* 解决debug快应用或Uni-App后有时无法退出的问题
-* 优化快应用调试
-* 解决某些情况下真机运行无法启动的问题
-* 解决真机运行/调试debug时，修改单个文件后，设备上显示白屏的问题
-*【快应用开发插件】转换器修复部分样式不生效的问题
-
-##0.1.23.20180320-alpha
-* 【重要】新增快应用开发、运行、调试。[详见](https://quickapp.dcloud.io)
-* 【重要】新增Uni-App开发、运行、调试。Uni-App是5+App的升级版，仍然支持5+webview，但界面主体由原生渲染引擎绘制。支持开发一次发布到更多平台。[详见](https://github.com/dcloudio/Uni-App)
-* 【重要】新增微信小程序转换为快应用/Uni-App
-* 【重要】新增mac版
-* markdown：支持excel、wps、word、number中粘贴表格进来，自动转为markdown表格【特色】
-* markdown：从内存中粘贴图片进md，自动创建md的附件文件夹（类似另存网页），将图片保存到文件夹并将链接展示到md中。保存md时，会自动清理无效图片【特色】
-* markdown：鼠标移到图片语法区，悬浮显示本地图片。配套图片粘贴功能，进一步加强了对word、evernote的替代【特色】
-* markdown：新增标题折叠【特色】
-* markdown：修复了列复制无法按列粘贴的bug
-* 补充了各种新语言的折叠
-* 智能双击统一支持Ctrl添加新选区
-* 智能双击新增双击选中HTML tag
-* 新增HTML tag的包围和反包围【Ctrl+]】
-* 新增HTML tag的起始、结束标签的套框指示
-* 合并行支持多光标，支持去重空格【Ctrl+Shift+k】
-* 优化了注释的体验，支持多光标注释
-* 给选区首尾设置光标【Ctrl+\】。这样双击选中首尾tag或if块，按Ctrl+\，就可以把光标放到首尾，然后Ctrl+/就可以同时注释掉首行和尾行
-* 根据语法选择相同词 【Ctrl+Shift+e】。传统的Ctrl+e选择相同词，在选择tag比如div时，会把子div也选中，而Ctrl+Shift+e则只会选中首尾的tag名称，方便一起改名
-* 撤销最后一个多光标或选区【Ctrl+Shift+z】。用于最后一个光标或选区选错时，丢弃掉这个光标或选区
-* 粘贴为HTML【Ctrl+Shift+v】可以在网页或excel里选内容，直接粘贴为HTML源码
-* 优化转到定义【Alt+单击】
-* 优化启动后代码提示引擎加载的速度
-* js语法校验选项默认开启ES6
-* 优化若干代码助手细节
-* 运行浏览器时windows下自动检测chrome、firefox的路径，如果没有配置webserver地址就用file协议打开
-* 自动修正常见的设置界面json语法错误
-
-## 0.1.22.20180302-alpha
-* 新增若干语言的行注释【Ctrl+/】和块注释【Ctrl+shift+/】
-* 新增if、for等关键字语法块包围【Ctrl+]】与反包围【Ctrl+Shift+]】
-* 强化智能双击：双击if、for等选中函数块、双击注释选中注释块、双击行首空白选择相同缩进行
-* 新增扩大选区【ctrl+=】，可连续扩大选区
-* 复制行、删除行、剪切行，补充了多光标操作，大幅提升效率
-* 新增互换2个选区或2行内容【Ctrl+shift+x】
-* 新增去除行尾空格
-* 优化了粘贴时自动缩进
-* markdown：补充* 号无序列表【ctrl+alt+8】、+号无序列表【ctrl+alt+=】设置行首列表符的快捷键
-* markdown：优化粘贴，自动生成url、图片等标签，自动过滤重复列表符
-* markdown：支持格式化对齐表格【Ctrl+K】（暂未兼容不同字体和缩放条件变化）
-* 解决大的js文件语法校验时卡顿的问题
-* 解决修改软件路径导致文件关联失效的问题
-* 解决文件内容过少导致无法正确获取编码的问题
-* 解决纯净模式没有隐藏控制台的问题
-
-## 0.1.21.20180225-alpha
-* 解决css提示内容不全的问题
-* 解决jshint语法验证时，没有错误却弹出控制台的问题
-
-## 0.1.20.20180212-alpha
-* 新增App打包
-* 新增js和json的语法校验
-* 新增搜索分类、目录内搜索(Ctrl+Alt+F)
-* 新增转到定义(F12)
-* 新增纯净模式(双击标签卡)和免打扰模式(F11)
-* 优化搜索菜单
-* 新增块注释功能(Ctrl+Shift+/)
-* 新增ejs、jade等前端模板语法高亮
-* 新增为选区每行行首添加光标(Ctrl+Shift+\，也可以理解为Ctrl+|)
-* 新增行首列表符设置：无序列表(Ctrl+Alt+-)，有序列表(Ctrl+Alt+1)，任务列表(Ctrl+Alt+1[)，已完成任务列表(Ctrl+Alt+])，并支持多光标设置
-* 新增双击列表符-、*、+、[ ]、[x]，选中列表整段区域
-* 新增双击#选中markdown标题段落
-* [菜单-帮助-markdown语法帮助]中更新了操作技巧
-* 解决配置文件包含中文可能导致视图菜单下的自动换行设置失败的问题
-* 解决启动后项目管理器没有自动选中当前编辑器打开的文件的问题
-* 解决markdown文件中删除空格有时会误删有序/无序列表符号的问题
-
-## 0.1.17.20180122-alpha
-* 【重要】需求墙上线了，喜欢HBuilder X的朋友们请移步[https://dev.dcloud.net.cn/wish/](https://dev.dcloud.net.cn/wish/)投票，提出你的想法
-* 添加项目手动排序功能（通过鼠标拖动项目管理器里的项目上下移动）
-* 添加项目管理器内文件拖拽移动功能
-* 添加拖拽外部文件复制到项目管理器功能
-* 解决高分屏下保存框字太大的问题
-
-## 0.1.16.20180117-alpha
-* 解决同名文件标签卡无法区分的问题
-* 新建无标题文档并粘贴一段json后，文档格式将自动调整为json，同时格式化该文档
-* 项目管理器里的文件，打开后HBuilderX标题栏显示其磁盘全路径url。
-
-## 0.1.15.20180115-alpha
-* 无
+* Added HBuilderX supports localized language pack extension [Details](https://github.com/dcloudio/hbuilderx-language-packs)
+* Vue3 improvements [Details](https://hx.dcloud.net.cn/Tutorial/Language/vue-next)
