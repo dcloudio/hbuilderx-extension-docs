@@ -1,5 +1,4 @@
 ## 4.31.2024102414-alpha
-### HBuilder 
 * uni-app directly runs and publishes Hongmeng applications in HBuilderX, and no longer needs to configure templates in Hongmeng development tools
 * uni-app manifest visual interface, added Hongmeng visual settings, the original App settings were renamed Android/iOS settings
 * Language Server: Added UTS plugin development support with prompts for HarmonyOS APIs.

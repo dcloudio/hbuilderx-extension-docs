@@ -1,5 +1,4 @@
 ## 4.31.2024102414-alpha
-### HBuilder 
 * 新增 uni-app 在HBuilderX中直接运行和发行鸿蒙应用，不再需要在鸿蒙开发工具中配置模板
 * 新增 uni-app manifest可视化界面，新增鸿蒙可视化设置，原App设置改名为安卓/iOS设置
 * 新增 语言服务 uts插件开发支持鸿蒙系统API的提示
