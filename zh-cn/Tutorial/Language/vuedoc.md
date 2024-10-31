@@ -88,6 +88,61 @@ export default {
 
 ```
 
+```javascript
+// 支持在属性中添加描述(hx最低版本-4.32-alpha)
+export default {
+  props: {
+    /**
+    * @description this is demo
+    * @uniPlatform {
+    *   "app": {
+    *     "android": {
+    *       "osVer": "8.0",
+    *       "uniVer": "3.7.0",
+    *       "unixVer": "3.9.0"
+    *     }
+    *   },
+    *   "mp": {
+    *     "weixin": {
+    *       "hostVer": "8.0",
+    *       "uniVer": "3.7.0",
+    *       "unixVer": "x"
+    *     }
+    *   }
+    * }
+    */
+    total: Number
+  }
+};
+```
+
+```javascript
+// 支持在下面的数值中添加描述(hx最低版本-4.32-alpha)
+const { fooo = 'hello' } = defineProps<{
+    cooo:
+    /**
+        * @description this is test1 demo
+        * @uniPlatform {
+        *   "app": {
+        *     "ios": {
+        *       "osVer": "8.0",
+        *       "uniVer": "3.7.0",
+        *       "unixVer": "3.9.0"
+        *     }
+        *  },
+        * "web": {
+        *     "uniVer": "3.6.2+",
+        *     "unixVer": "x"
+        *  }
+        * }
+    */
+    "datavkl" |
+    "dataabc" |
+    "datapwd"
+
+}>();
+```
+
 **组件提示，效果如下：**
 
 <img src="/static/snapshots/tutorial/vuedoc_1.png" />

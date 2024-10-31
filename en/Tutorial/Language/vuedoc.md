@@ -58,6 +58,61 @@ Among them, the type between the @property and @event `{` `}` is the type, and t
 </script>
 ```
 
+```javascript
+// Support adding descriptions to attributes (minimum hx version-4.32-alpha)
+export default {
+  props: {
+    /**
+    * @description this is demo
+    * @uniPlatform {
+    *   "app": {
+    *     "android": {
+    *       "osVer": "8.0",
+    *       "uniVer": "3.7.0",
+    *       "unixVer": "3.9.0"
+    *     }
+    *   },
+    *   "mp": {
+    *     "weixin": {
+    *       "hostVer": "8.0",
+    *       "uniVer": "3.7.0",
+    *       "unixVer": "x"
+    *     }
+    *   }
+    * }
+    */
+    total: Number
+  }
+};
+```
+
+```javascript
+// Support adding descriptions to the following values (minimum hx version-4.32-alpha)
+const { fooo = 'hello' } = defineProps<{
+    cooo:
+    /**
+        * @description this is test1 demo
+        * @uniPlatform {
+        *   "app": {
+        *     "ios": {
+        *       "osVer": "8.0",
+        *       "uniVer": "3.7.0",
+        *       "unixVer": "3.9.0"
+        *     }
+        *  },
+        * "web": {
+        *     "uniVer": "3.6.2+",
+        *     "unixVer": "x"
+        *  }
+        * }
+    */
+    "datavkl" |
+    "dataabc" |
+    "datapwd"
+
+}>();
+```
+
 **Component tips：**
 
 <img src="/static/snapshots/tutorial/vuedoc_1.png" />

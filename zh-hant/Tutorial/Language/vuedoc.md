@@ -57,6 +57,61 @@
 </script>
 ```
 
+```javascript
+// 支持在屬性中添加描述(hx最低版本-4.32-alpha)
+export default {
+  props: {
+    /**
+    * @description this is demo
+    * @uniPlatform {
+    *   "app": {
+    *     "android": {
+    *       "osVer": "8.0",
+    *       "uniVer": "3.7.0",
+    *       "unixVer": "3.9.0"
+    *     }
+    *   },
+    *   "mp": {
+    *     "weixin": {
+    *       "hostVer": "8.0",
+    *       "uniVer": "3.7.0",
+    *       "unixVer": "x"
+    *     }
+    *   }
+    * }
+    */
+    total: Number
+  }
+};
+```
+
+```javascript
+// 支持在下面的數值中添加描述(hx最低版本-4.32-alpha)
+const { fooo = 'hello' } = defineProps<{
+    cooo:
+    /**
+        * @description this is test1 demo
+        * @uniPlatform {
+        *   "app": {
+        *     "ios": {
+        *       "osVer": "8.0",
+        *       "uniVer": "3.7.0",
+        *       "unixVer": "3.9.0"
+        *     }
+        *  },
+        * "web": {
+        *     "uniVer": "3.6.2+",
+        *     "unixVer": "x"
+        *  }
+        * }
+    */
+    "datavkl" |
+    "dataabc" |
+    "datapwd"
+
+}>();
+```
+
 **組件提示，效果如下：**
 
 <img src="/static/snapshots/tutorial/vuedoc_1.png" />
@@ -73,5 +128,13 @@
 
 <img src="/static/snapshots/tutorial/vuedoc_4.png" />
 
+### 特殊值域string@spec-types
+在vue Doc中也可以使用特殊值域string，用于限定属性能够使用的值。它紧跟在property后面使用。
+```javascript
+/**
+ * @property {IDString} id
+ */
+```
 
 
+詳情請參考 [特殊值域string](https://uniapp.dcloud.net.cn/uts/data-type.html#ide-string)
