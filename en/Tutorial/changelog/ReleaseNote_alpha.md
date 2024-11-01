@@ -1,4 +1,9 @@
+## 4.32.2024110103-alpha
+* Fixed the bug in version 4.31 that caused the cli package to prompt that the certificate alias cannot be empty [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=11426)
+* Fixed: The order of switching view files after restarting hx is inconsistent with that when shutting down [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=11094)
+
 ## 4.31.2024102414-alpha
+### HBuilder  
 * uni-app directly runs and publishes Hongmeng applications in HBuilderX, and no longer needs to configure templates in Hongmeng development tools
 * uni-app manifest visual interface, added Hongmeng visual settings, the original App settings were renamed Android/iOS settings
 * Language Server: Added UTS plugin development support with prompts for HarmonyOS APIs.

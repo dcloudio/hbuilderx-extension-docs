@@ -1,4 +1,12 @@
+## 4.32.2024110103-alpha
+* 修复 4.31版本引发 cli打包提示证书别名不能为空的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=11426)
+* 修复 重启hx后的切换视图文件顺序和关闭时不一致 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=11094)
+* 修复 语言服务 uts插件iOS平台在windows电脑上文件查找引和触发函数签名时状态栏报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=11428)
+* 优化 uniapp 运行到鸿蒙时如果检测到运行在非ARM64平台，则弹框提示该平台的鸿蒙模拟器因不支持JSVM而不可用于调试运行
+* 优化 uniapp 优化鸿蒙内置模板升级时与harmony-configs中用户定制内容的冲突解决策略，避免由用户手工合并 [详情](https://uniapp.dcloud.net.cn/tutorial/run/run-app-harmony.html#configs)
+
 ## 4.31.2024102414-alpha
+### HBuilder 
 * 新增 uni-app 在HBuilderX中直接运行和发行鸿蒙应用，不再需要在鸿蒙开发工具中配置模板
 * 新增 uni-app manifest可视化界面，新增鸿蒙可视化设置，原App设置改名为安卓/iOS设置
 * 新增 语言服务 uts插件开发支持鸿蒙系统API的提示
@@ -41,6 +49,7 @@
 * 修复 语言服务 uts plugin中开发安卓插件，覆写interface的方法时误报红的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=10034)
 * 调整 Windows HBuilderX"运行配置"-"kotlin编译器最大堆内存大小"默认值为2048
 * 修复 uni-app 运行到微信开发者工具，偶发关闭运行控制台崩溃的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=10012)
+* 新增 uni-app manifest.json 可视化界面增加鸿蒙配置
 * 新增 uni-app x 云打包支持aab、渠道包和广告配置
 * 新增 uni-app x iOS uvue断点调试 [详情](https://uniapp.dcloud.net.cn/tutorial/debug/uni-uts-debug-ios.html)
 * 新增 uni-app x 新建uni_modules插件，增加分类UTS插件-标准模式组件
