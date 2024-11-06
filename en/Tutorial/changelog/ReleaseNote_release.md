@@ -1,4 +1,5 @@
 ## 4.29.2024093009
+* Fixed some minor issues
 
 ## 4.28.2024092502
 * Adjusted the amazon-corretto plugin, upgraded from 11.0.14 to 17.0.12, and Windows from 32-bit to 64-bit [Details](https://hx.dcloud.net.cn/Tutorial/App/notsupportJava)
