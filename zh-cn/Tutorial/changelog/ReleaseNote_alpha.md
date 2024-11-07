@@ -222,6 +222,8 @@
 
 ## 4.06.2024032403-alpha
 * 修复 4.05版引出的 从插件市场导入项目模版，误提示项目模版无效的Bug
+* 修复 4.02版引出的 uni-app 控制台打印的日志跳转打开文件后不能使用json转type功能的bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=999)
+
 
 ## 4.05.2024032021-alpha
 * 修复 4.0版引出的 uni-app (x) 项目运行 刚启动HBuilderX时立即运行有概率误报`uniapp-extension`插件被篡改的Bug
