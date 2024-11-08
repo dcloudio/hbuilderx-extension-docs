@@ -101,7 +101,7 @@
     * [终端空白及无法输入的问题](/Tutorial/Questions/Terminal-input-problem.md)
 * [崩溃报告](/Tutorial/CrashReporter.md)
 * [历史版本](/Tutorial/HistoryVersion.md)
-* [LICENSE](/license.md)
+* [LICENSE](https://dcloud.io/license/hbuilder.html)
 * 更新日志
     * [正式版](/Tutorial/changelog/ReleaseNote_release.md)
     * [Alpha版](Tutorial/changelog/ReleaseNote_alpha.md)

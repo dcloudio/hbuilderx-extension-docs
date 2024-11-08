@@ -92,7 +92,7 @@
     * [Terminal Input Problem](/Tutorial/Questions/Terminal-input-problem.md)
     <!-- * [云函数上传ContentAccessDenied错误](/Tutorial/Questions/win10-defender-contentaccessdenied.md) -->
 * [Crash Reporter](/Tutorial/CrashReporter.md)
-* [LICENSE](/license.md)
+* [LICENSE](https://dcloud.io/license/hbuilder.html)
 * ChangeLog
     * [Release](/Tutorial/changelog/ReleaseNote_release.md)
     * [Alpha](Tutorial/changelog/ReleaseNote_alpha.md)

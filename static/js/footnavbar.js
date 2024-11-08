@@ -262,7 +262,7 @@ function initFootRightNavBar(lan=undefined) {
                 },
                 {
                     'subTitle': license,
-                    'url': 'https://ask.dcloud.net.cn/article/35623'
+                    'url': 'https://dcloud.io/license/DCloud.html'
                 },
                 {
                     'subTitle': join_us,
