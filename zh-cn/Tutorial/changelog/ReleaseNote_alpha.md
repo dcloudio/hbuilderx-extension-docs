@@ -1,7 +1,22 @@
+## 4.33.2024111702-alpha
+* 修复 语言服务 uni-app x 打开多个项目时资源没有正确释放导致语言服务报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=11379)
+* 修复 语言服务 在项目下执行`npm i`的同时触发转到定义等功能可能会导致语言服务报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=10240)
+* 修复 语言服务 某些情况下语言服务报错：`No Project.`的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=11395)
+* 修复 语言服务 打开某个被引用的vue文件时修改script lang后在script区域悬浮时语言服务报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=12187)
+* 修复 语言服务 语言服务刚初始化时，cli项目下快速转到vue文件可能会出现语言服务报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=11807)
+* 修复 语言服务 html文件写vue时，某些情况下语言服务报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=9966)
+* 修复 语言服务 uts插件开发环境下无法提示插件下文件路径的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=12200)
+* 修复 语言服务 自定义组件属性悬浮提示时, 可能导致语言服务报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=12215)
+* 修复 语言服务 3.8.12版本引发的 特殊值域String, `cssSelectorString`不生效的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=11764)
+* 修复 语言服务 3.8.12版本引发的 特殊值域String, `VideoIdString`和`WebviewIdString`提示不正确的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=11766)
+* 修复 语言服务 3.8.12版本引发的 特殊值域String, `colorString`提示结果顺序不正确的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=11769)
+* 修复 语言服务 3.8.12版本引发的 特殊值域String, `cssPropertyString`提示项的排序不正确的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=11770)
+* 修复 语言服务 3.8.12版本引发的 特殊值域String, 部分情况下`ScriptImportURIString`补全项不正确的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=11773)
+
 ## 4.32.2024110103-alpha
 * 修复 4.31版本引发 cli打包提示证书别名不能为空的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=11426)
 * 修复 重启hx后的切换视图文件顺序和关闭时不一致 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=11094)
-* 修复 语言服务 uts插件iOS平台在windows电脑上文件查找引和触发函数签名时状态栏报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=11428)
+* 修复 语言服务 uts插件iOS平台在windows电脑上文件查找引用和触发函数签名时状态栏报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=11428)
 * 优化 uniapp 运行到鸿蒙时如果检测到运行在非ARM64平台，则弹框提示该平台的鸿蒙模拟器因不支持JSVM而不可用于调试运行
 * 优化 uniapp 优化鸿蒙内置模板升级时与harmony-configs中用户定制内容的冲突解决策略，避免由用户手工合并 [详情](https://uniapp.dcloud.net.cn/tutorial/run/run-app-harmony.html#configs)
 
