@@ -1,3 +1,6 @@
+## 4.34.2024112020-alpha
+* Fixed some minor issues
+
 ## 4.33.2024111702-alpha
 * Language Server: Fixed the bug in uni-app X where resources are not correctly released when opening multiple projects, causing language service errors.[Details](https://issues.dcloud.net.cn/pages/issues/detail?id=11379)
 * Language Server: Fixed the bug where executing `npm i` within a project could trigger language service errors, particularly when using features like "Go to Definition". [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=10240)
