@@ -1,5 +1,10 @@
+## 4.35.2024112402-alpha
+* Fixed some bugs.
+
+
 ## 4.34.2024112020-alpha
-* Fixed some minor issues
+* Fixed some Bugs
+
 
 ## 4.33.2024111702-alpha
 * Language Server: Fixed the bug in uni-app X where resources are not correctly released when opening multiple projects, causing language service errors.[Details](https://issues.dcloud.net.cn/pages/issues/detail?id=11379)

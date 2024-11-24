@@ -1,5 +1,8 @@
+## 4.35.2024112402-alpha
+* 修复 uniapp框架的一些Bug
+
 ## 4.34.2024112020-alpha
-* 新增 uni-app 运行和发行到鸿蒙元服务
+* 修复 uniapp框架的一些Bug
 
 ## 4.33.2024111702-alpha
 * 修复 语言服务 uni-app x 打开多个项目时资源没有正确释放导致语言服务报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=11379)
