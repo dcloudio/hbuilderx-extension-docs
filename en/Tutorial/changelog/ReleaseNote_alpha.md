@@ -1,3 +1,6 @@
+## 4.36.2024112612-alpha
+* Fixed some minor issues
+
 ## 4.35.2024112402-alpha
 * Fixed some bugs.
 
