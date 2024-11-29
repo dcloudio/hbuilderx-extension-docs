@@ -1,3 +1,67 @@
+## 4.36.2024112817
+* 新增 uni-app 在HBuilderX中直接运行和发行鸿蒙应用，不再需要在鸿蒙开发工具中配置模板
+* 新增 uni-app manifest可视化界面，新增鸿蒙可视化设置，原App设置改名为安卓/iOS设置
+* 新增 语言服务 uts插件开发支持鸿蒙系统API的提示
+* 新增 json5文件着色 [详情](https://ext.dcloud.net.cn/plugin?id=19383)
+* 优化 大文档选中相同词高亮性能，避免卡顿UI
+* 优化 项目管理器项目过多时，降低系统内存和资源占用
+* 修复 重启hx后的切换视图文件顺序和关闭时不一致 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=11094)
+* 调整 MacOS 系统文件关联的优先级 [详情](https://ask.dcloud.net.cn/question/90668)
+* 调整 重复插入不再使用快捷键`Ctrl+Insert`，改用`Ctrl+Shift+r`，避免和部分AI工具冲突 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=7238)
+* 修复 `alt+/`快捷键触发代码提示时，偶发触发hover的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=9955)
+* 修复 编辑器字符搜索 焦点切换到外部程序再切换回来时，会导致代码区域滚动出错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=6050)
+* 修复 MacOS HTML文件预览到内置浏览器，高亮浏览器内对应元素功能失效的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=10011)
+* 新增 语言服务 uni-app (x) theme.json语言服务功能支持 [详情](https://uniapp.dcloud.net.cn/tutorial/darkmode.html#themejson)
+* 新增 语言服务 支持内置包名`@dcloudio/uni-app`、`pinia`、`vuex`的自动导包
+* 优化 语言服务 内存占用
+* 优化 语言服务 vue文件代码提示性能
+* 修复 语言服务 当提示项包含`$`符号且当前提示位置后面是括号时，回车后`$`符号丢失的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=10021)
+* 修复 语言服务 uniapp x 项目下某些情况下js文件报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=10014)
+* 修复 语言服务 uniapp项目某些情况下定义了同名属性时语言服务报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=10476)
+* 新增 语言服务 easycom组件 标签属性和事件提示时支持defineProps、defineEmits中的定义的属性和事件
+* 修复 语言服务 uni-app x 打开多个项目时资源没有正确释放导致语言服务报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=11379)
+* 修复 语言服务 在项目下执行`npm i`的同时触发转到定义等功能可能会导致语言服务报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=10240)
+* 修复 语言服务 某些情况下语言服务报错：`No Project.`的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=11395)
+* 修复 语言服务 打开某个被引用的vue文件时修改script lang后在script区域悬浮时语言服务报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=12187)
+* 修复 语言服务 语言服务刚初始化时，cli项目下快速转到vue文件可能会出现语言服务报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=11807)
+* 修复 语言服务 html文件写vue时，某些情况下语言服务报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=9966)
+* 修复 语言服务 uts插件开发环境下无法提示插件下文件路径的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=12200)
+* 修复 语言服务 自定义组件属性悬浮提示时, 可能导致语言服务报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=12215)
+* 修复 语言服务 3.8.12版本引发的 特殊值域String, `cssSelectorString`不生效的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=11764)
+* 修复 语言服务 3.8.12版本引发的 特殊值域String, `VideoIdString`和`WebviewIdString`提示不正确的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=11766)
+* 修复 语言服务 3.8.12版本引发的 特殊值域String, `colorString`提示结果顺序不正确的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=11769)
+* 修复 语言服务 3.8.12版本引发的 特殊值域String, `cssPropertyString`提示项的排序不正确的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=11770)
+* 修复 语言服务 3.8.12版本引发的 特殊值域String, 部分情况下`ScriptImportURIString`补全项不正确的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=11773)
+* 修复 语言服务 3.8.0版本引发的 html文件中，document.getElementById()根据实际dom元素类型提示失效的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=9588)
+* 修复 语言服务 3.5.3版本引发的 html代码块，属性相关代码块不提示的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=8959)
+* 修复 语言服务 3.5.3版本引发的 html代码块，属性值的位置误提示的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=8956)
+* 修复 语言服务 3.5.3版本引发的 style代码块在属性选择器中误提示的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=8953)
+* 修复 语言服务 3.5.3版本引发的 script区域，部分代码块不提示的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=8949)
+* 修复 语言服务 3.5.3版本引发的 uni-app项目中html文件缺少条件编译的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=8957)
+* 修复 语言服务 3.5.3版本引发的 *.schema.json文件`foreignKey`字段循环引用报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=9797)
+* 修复 语言服务 3.5.3版本引发的 路径提示有概率导致语言服务报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=9800)
+* 修复 语言服务 3.5.3版本引发的 jsDoc提示导致语言服务报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=10075)
+* 修复 语言服务 3.5.3版本引发的 URI.parse可能导致的语言服务报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=10108)
+* 修复 语言服务 3.91版本引发的 uni-app x项目中style代码块重复的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=8946)
+* 修复 语言服务 3.5.3版本引发的 jsdoc代码块补全结果不正确的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=8873)
+* 修复 语言服务 4.08版本引发的 右键功能-文件查找引用无结果的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=8022)
+* 修复 语言服务 3.6.11版本引发的 编辑器手动指定关联语言时可能导致乱报红的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=7676)
+* 修复 语言服务 3.98版本引发的 manifest.json文件，在key的中间打字没有代码提示的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=5798)
+* 修复 语言服务 3.99版本引发的 废弃upx还能提示的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=5331)
+* 修复 语言服务 3.99版本引发的 style代码提示描述不对的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=5213)
+* 修复 语言服务 3.94版本引发的 json转type功能，在特定情况下，转换结果不对的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=3930)
+* 修复 语言服务 3.6.5版本引发的 markdown的锚点链接提示不正确的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1788)
+* 修复 语言服务 3.99版本引发的 class类名转到定义跳转文件不对的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=861)
+* 修复 语言服务 uts plugin中开发安卓插件，覆写interface的方法时误报红的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=10034)
+* 修复 语言服务 uts插件iOS平台在windows电脑上文件查找引用和触发函数签名时状态栏报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=11428)
+* 调整 Windows HBuilderX"运行配置"-"kotlin编译器最大堆内存大小"默认值为2048
+* 修复 uni-app 运行到微信开发者工具，偶发关闭运行控制台崩溃的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=10012)
+* 新增 uni-app manifest.json 可视化界面增加鸿蒙配置
+* 新增 uni-app x 云打包支持aab、渠道包和广告配置
+* 新增 uni-app x iOS uvue断点调试 [详情](https://uniapp.dcloud.net.cn/tutorial/debug/uni-uts-debug-ios.html)
+* 新增 uni-app x 新建uni_modules插件，增加分类UTS插件-标准模式组件
+* 新增 内置了 uni-im 消息通知插件，在右下角闪动未读消息
+
 ## 4.29.2024093009
 * 修复 4.28版本引发的 h5+应用 无法制作wgt包的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=9606&ask_id=198971)
 
@@ -48,7 +112,7 @@
 * 修复 uni-app 开启 uni/nvue 调试查询 getApp/getCurrentPage 返回值错误的Bug [详情](https://ask.dcloud.net.cn/question/190917)
 
 ## 4.24.2024072208
-* 无
+* 修复 uniapp框架的一些Bug
 
 ## 4.23.2024070804
 * 新增 语言服务 在状态栏显示语言服务详情，方便了解状态和进行设置 [详情](https://hx.dcloud.net.cn/Tutorial/Language/lsStatus)
