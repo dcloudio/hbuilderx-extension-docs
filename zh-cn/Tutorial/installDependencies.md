@@ -1,5 +1,5 @@
 # 版本要求
-> HBuilderX 版本需 ≥ 4.36
+> HBuilderX 版本需 ≥ 4.41
 
 # 问题原因
 
@@ -13,4 +13,4 @@ Node.js 支持通过 Node-API (N-API) 或 V8 的 Native Addons 编写和加载 C
 
 **注意**
 
-cli项目从HBuilder X 4.36版本调整为使用本地的Node.js执行编译，所以不存在上述问题。
+cli项目从HBuilder X 4.41版本调整为使用本地的Node.js执行编译，所以不存在上述问题。

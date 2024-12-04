@@ -1,6 +1,6 @@
 
 # 事由
-> Hbuilder X 从4.36版本开始调整cli项目使用本地的node执行编译，如果用户未安装并正确配置Node.js会警告报错。
+> Hbuilder X 从4.41版本开始调整cli项目使用本地的node执行编译，如果用户未安装并正确配置Node.js会警告报错。
 
 # Windows 系统
 ### 1. 确认 Node.js 是否已安装
