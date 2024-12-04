@@ -9,7 +9,7 @@ Node.js 支持通过 Node-API (N-API) 或 V8 的 Native Addons 编写和加载 C
 # 功能入口
 
 非cli项目，在项目管理中项目下的package.json文件上右键会出现，使用内置的npm安装依赖，点击会拉起终端执行安装依赖。
-![](installDependencies_files/1.jpg)
+![](https://web-ext-storage.dcloud.net.cn/hx/installDependencies_files.jpg)
 
 **注意**
 
