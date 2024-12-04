@@ -19,7 +19,7 @@ localhost:MacOS hx$ ./cli pack --config /Users/hx/Documents/HBuilderProjects/tes
 16:42:38.689 Compiling packaged resources...
 16:42:43.570 Compress and package resources...
 16:42:43.678 Send a packaging request to the cloud...
-16:42:45.518 Project pca [__UNI__EB87FB4] packaging status: Time: 2021-03-08 16:42:45    Type: iOS Appstore    		in the queue    The current application IDFA has been turned on, and IDFA needs to be turned on in the background when submitting the AppStore for review. [Details](https://ask.dcloud.net.cn/article/36107) Time: 2021-03-08 16:42:45    Type: Android custom certificate     	in the queue    
+16:42:45.518 Project pca [__UNI__EB87FB4] packaging status: Time: 2021-03-08 16:42:45    Type: iOS Appstore    		in the queue    The current application IDFA has been turned on, and IDFA needs to be turned on in the background when submitting the AppStore for review. [Details](https://ask.dcloud.net.cn/article/36107) Time: 2021-03-08 16:42:45    Type: Android custom certificate     	in the queue
 After successful packaging, the download link will be automatically returned. For enquiries about the packaging process, please click the menu issue-view cloud packaging status. There is a long queue for packing during peak hours on Friday evening, so please wait patiently. If it is for third-party SDK debugging, please use a custom debugging dock (menu run-mobile phone or simulator-make custom debugging dock), do not repeatedly package.
 16:42:45.529 Project pca [__UNI__EB87FB4] packaging status: Time: 2021-03-08 16:42:45    Type: iOS Appstore    in the queue    The current application IDFA has been turned on, and IDFA needs to be turned on in the background when submitting the AppStore for review, [Details](https://ask.dcloud.net.cn/article/36107)
 16:43:42.881 Project pca [__UNI__EB87FB4] Successfully packaged:
@@ -56,6 +56,7 @@ The configuration file format is json, save the following content in a json file
       "certfile":"",
       //Android packaging certificate password
       "certpassword":"",
+      "keystorepassword": "",
       //The package channel, the options have "google","yyb","360","huawei","xiaomi","oppo","vivo", separate multiple platforms with commas.
       "channels":""
       },
@@ -107,6 +108,7 @@ The configuration file format is json, save the following content in a json file
 |--android.certalias	|Android packaging certificate alias		|
 |--android.certfile	|Android packaging certificate file path		|
 |--android.certpassword	|Android packaging certificate password		|
+|--android.keystorepassword	|Android packaging certificate password		|
 |--android.channels	|The package channel, the options have "google","yyb","360","huawei","xiaomi","oppo","vivo", separate multiple platforms with commas.		|
 |--ios.bundle	|iOS appid app id		|
 |--ios.supporteddevice	|Device types supported by ios packaging. The default value of iPhone. The options have "iPhone", "iPad". Separate multiple platforms with commas.		|
@@ -124,7 +126,7 @@ The configuration file format is json, save the following content in a json file
 # Package via configuration file
 cli pack --config configuration file
 
-# android pack： 
+# android pack：
 Project name (apps), traditional packaging, package name (io.test), packaging certificate (own certificate, alias: testalias, password 123456)
 cli pack --project apps --platform android --safemode false --android.packagename io.test --android.androidpacktype 0 --android.certalias testalias --android.certfile /Users/hx/Desktop/cert/jdk13/test.key --android.certpassword 123456
 

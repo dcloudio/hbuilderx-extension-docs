@@ -19,7 +19,7 @@ localhost:MacOS hx$ ./cli pack --config /Users/hx/Documents/HBuilderProjects/测
 16:42:38.689 正在编译打包资源...
 16:42:43.570 压缩打包资源...
 16:42:43.678 向云端发送打包请求...
-16:42:45.518 项目 pca [__UNI__EB87FB4]的打包状态：时间: 2021-03-08 16:42:45    类型: iOS Appstore    		队列中    当前应用 IDFA 已经开启，在提交 AppStore 审核时需要在后台开启 IDFA，[详细操作查看](https://ask.dcloud.net.cn/article/36107)时间: 2021-03-08 16:42:45    类型: Android自有证书    	队列中    
+16:42:45.518 项目 pca [__UNI__EB87FB4]的打包状态：时间: 2021-03-08 16:42:45    类型: iOS Appstore    		队列中    当前应用 IDFA 已经开启，在提交 AppStore 审核时需要在后台开启 IDFA，[详细操作查看](https://ask.dcloud.net.cn/article/36107)时间: 2021-03-08 16:42:45    类型: Android自有证书    	队列中
 打包成功后会自动返回下载链接。打包过程查询请点菜单发行-查看云打包状态。周五傍晚等高峰期打包排队较长，请耐心等待。如果是为了三方SDK调试，请使用自定义调试基座（菜单运行-手机或模拟器-制作自定义调试基座），不要反复打包。
 16:42:45.529 项目 pca [__UNI__EB87FB4]的打包状态：时间: 2021-03-08 16:42:45    类型: iOS Appstore    队列中    当前应用 IDFA 已经开启，在提交 AppStore 审核时需要在后台开启 IDFA，[详细操作查看](https://ask.dcloud.net.cn/article/36107)
 16:43:42.881 项目 pca [__UNI__EB87FB4]打包成功：
@@ -56,6 +56,7 @@ localhost:MacOS hx$ ./cli pack --config /Users/hx/Documents/HBuilderProjects/测
       "certfile":"",
       //安卓打包证书密码,自有证书打包填写的参数
       "certpassword":"",
+      "keystorepassword": "",
       //安卓平台要打的渠道包 取值有"google","yyb","360","huawei","xiaomi","oppo","vivo"，如果要打多个逗号隔开
       "channels":""
       },
@@ -107,6 +108,7 @@ localhost:MacOS hx$ ./cli pack --config /Users/hx/Documents/HBuilderProjects/测
 |--android.certalias	|安卓打包证书别名,自有证书打包填写的参数		|
 |--android.certfile	|安卓打包证书文件路径,自有证书打包填写的参数		|
 |--android.certpassword	|安卓打包证书密码,自有证书打包填写的参数		|
+|--android.keystorepassword	|安卓打包证书密码,自有证书打包填写的参数		|
 |--android.channels	|安卓平台要打的渠道包,取值有"google","yyb","360","huawei","xiaomi","oppo","vivo"，如果要打多个逗号隔开		|
 |--ios.bundle	|iOS appid 打ios包填写		|
 |--ios.supporteddevice	|iOS打包支持的设备类型,默认值iPhone 值有"iPhone","iPad" 如果要打多个逗号隔开打包平台		|
