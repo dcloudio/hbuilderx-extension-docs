@@ -56,7 +56,7 @@ The configuration file format is json, save the following content in a json file
       "certfile":"",
       //Android packaging certificate password
       "certpassword":"",
-      "keystorepassword": "",
+      "storePassword": "",
       //The package channel, the options have "google","yyb","360","huawei","xiaomi","oppo","vivo", separate multiple platforms with commas.
       "channels":""
       },
@@ -108,7 +108,7 @@ The configuration file format is json, save the following content in a json file
 |--android.certalias	|Android packaging certificate alias		|
 |--android.certfile	|Android packaging certificate file path		|
 |--android.certpassword	|Android packaging certificate password		|
-|--android.keystorepassword	|Android packaging certificate password		|
+|--android.storePassword	|Android packaging certificate password		|
 |--android.channels	|The package channel, the options have "google","yyb","360","huawei","xiaomi","oppo","vivo", separate multiple platforms with commas.		|
 |--ios.bundle	|iOS appid app id		|
 |--ios.supporteddevice	|Device types supported by ios packaging. The default value of iPhone. The options have "iPhone", "iPad". Separate multiple platforms with commas.		|

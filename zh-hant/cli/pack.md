@@ -56,7 +56,7 @@ localhost:MacOS hx$ ./cli pack --config /Users/hx/Documents/HBuilderProjects/測
       "certfile":"",
       //安卓打包證書密碼,自有證書打包填寫的參數
       "certpassword":"",
-      "keystorepassword": "",
+      "storePassword": "",
       //安卓平臺要打的渠道包 取值有"google","yyb","360","huawei","xiaomi","oppo","vivo"，如果要打多個逗號隔開
       "channels":""
       },
@@ -108,7 +108,7 @@ localhost:MacOS hx$ ./cli pack --config /Users/hx/Documents/HBuilderProjects/測
 |--android.certalias	|安卓打包證書別名,自有證書打包填寫的參數		|
 |--android.certfile	|安卓打包證書文件路徑,自有證書打包填寫的參數		|
 |--android.certpassword	|安卓打包證書密碼,自有證書打包填寫的參數		|
-|--android.keystorepassword	|安卓打包證書密碼,自有證書打包填寫的參數	|
+|--android.storePassword	|安卓打包證書密碼,自有證書打包填寫的參數	|
 |--android.channels	|安卓平臺要打的渠道包,取值有"google","yyb","360","huawei","xiaomi","oppo","vivo"，如果要打多個逗號隔開		|
 |--ios.bundle	|iOS appid 打ios包填寫		|
 |--ios.supporteddevice	|iOS打包支持的設備類型,默認值iPhone 值有"iPhone","iPad" 如果要打多個逗號隔開打包平臺		|
