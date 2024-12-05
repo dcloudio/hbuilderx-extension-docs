@@ -56,6 +56,7 @@ localhost:MacOS hx$ ./cli pack --config /Users/hx/Documents/HBuilderProjects/测
       "certfile":"",
       //安卓打包证书密码,自有证书打包填写的参数
       "certpassword":"",
+      //安卓打包证书库密码（HBuilderx4.41支持）,自有证书打包填写的参数
       "storePassword": "",
       //安卓平台要打的渠道包 取值有"google","yyb","360","huawei","xiaomi","oppo","vivo"，如果要打多个逗号隔开
       "channels":""
@@ -108,7 +109,7 @@ localhost:MacOS hx$ ./cli pack --config /Users/hx/Documents/HBuilderProjects/测
 |--android.certalias	|安卓打包证书别名,自有证书打包填写的参数		|
 |--android.certfile	|安卓打包证书文件路径,自有证书打包填写的参数		|
 |--android.certpassword	|安卓打包证书密码,自有证书打包填写的参数		|
-|--android.storePassword	|安卓打包证书密码,自有证书打包填写的参数		|
+|--android.storepassword	|安卓打包证书库密码（HBuilderx4.41支持）,自有证书打包填写的参数		|
 |--android.channels	|安卓平台要打的渠道包,取值有"google","yyb","360","huawei","xiaomi","oppo","vivo"，如果要打多个逗号隔开		|
 |--ios.bundle	|iOS appid 打ios包填写		|
 |--ios.supporteddevice	|iOS打包支持的设备类型,默认值iPhone 值有"iPhone","iPad" 如果要打多个逗号隔开打包平台		|
@@ -127,7 +128,7 @@ localhost:MacOS hx$ ./cli pack --config /Users/hx/Documents/HBuilderProjects/测
 cli pack --config 配置文件
 
 # android打包： 项目名称（apps）、传统打包、包名（io.test)、打包证书（自有证书、别名：testalias、密码123456）
-cli pack --project apps --platform android --safemode false --android.packagename io.test --android.androidpacktype 0 --android.certalias testalias --android.certfile /Users/hx/Desktop/cert/jdk13/test.key --android.certpassword 123456
+cli pack --project apps --platform android --safemode false --android.packagename io.test --android.androidpacktype 0 --android.certalias testalias --android.certfile /Users/hx/Desktop/cert/jdk13/test.key --android.certpassword 123456 --android.storepassword 123456
 
 # ios打包
 cli pack --project <projectname> --platform iOS --safemode false --iscustom true --ios.bundle <bundle> --ios.supporteddevice iPhone,iPad --ios.isprisonbreak false --ios.profile <profile> --ios.certfile <p12 file> --ios.certpassword <passwd>
