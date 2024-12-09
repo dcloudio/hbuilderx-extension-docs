@@ -14,6 +14,14 @@
 #### 4.電腦時間問題
 解決方法：某些用戶回饋本機時間不正確，校準之後就正常了，可網上蒐索一下電腦時間自動校準操作步驟，校準後重啓HBuilderX再試
 
+#### 5. SslHandshakeFailedError
+
+如下图所示，当登录出现SslHandshakeFailedError错误时，请下载证书, 然后双击安装。
+
+<a download href="https://web-ext-storage.dcloud.net.cn/hx/questions/certum.cer" target="_blank">证书下载地址</a>
+
+<img src="https://web-ext-storage.dcloud.net.cn/hx/questions/hx_login_failed_ssl.png" style="zoom:50%" />
+
 ##如果以上都嘗試了，還未解决，請聯系官方：
 1. Email: ide@dcloud.io
 2. QQ:搜群，群關鍵字：HBuilderX，加入群後，找群管理員幫您解決。

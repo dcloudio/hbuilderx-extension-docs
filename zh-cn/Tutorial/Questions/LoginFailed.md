@@ -12,7 +12,15 @@
 解决方法：将HBuilderX解压目录里bin/msvcr120.dll,bin/msvcp140.dll这两个文件考拷贝到上一级目录（也就是HBuilderX.exe的同级目录），拷贝完成后重启HBuilderX
 
 #### 4.电脑时间问题
-解决方法：某些用户反馈本机时间不正确，校准之后就正常了，可网上搜索一下电脑时间自动校准操作步骤，校准后重启HBuilderX再试
+解决方法：某些用户反馈本机时间不正确，校准之后就正常了，可网上搜索一下电脑时间自动校准操作步骤，校准后重启HBuilderX再试\
+
+#### 5. SslHandshakeFailedError
+
+如下图所示，当登录出现SslHandshakeFailedError错误时，请下载证书, 然后双击安装。
+
+<a download href="https://web-ext-storage.dcloud.net.cn/hx/questions/certum.cer" target="_blank">证书下载地址</a>
+
+<img src="https://web-ext-storage.dcloud.net.cn/hx/questions/hx_login_failed_ssl.png" style="zoom:50%" />
 
 ## 如果以上都尝试了，还未解决，请联系官方：
 1. Email: ide@dcloud.io
