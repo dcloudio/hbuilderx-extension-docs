@@ -1,3 +1,37 @@
+## 4.41.2024121203-alpha
+* 优化 Node插件激活时间
+* 修复 新建HBuilder窗口时，某些电脑上状态栏高度异常的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=13755)
+* 修复 当打开比较大的压缩文件时，如果错误校验时错误比较多，会导致渲染卡顿的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=13769)
+* 修复 3.5.3版本引发的 自定义代码块中存在中文, 光标位置不对的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=10900)
+* 修复 3.94版本引发的 markdown中的code代码块区域, 折叠不正确的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=12767)
+* 修复 语言服务 uts校验 对象字面量类型为可选参数时，误报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=13734)
+* 修复 语言服务 某些情况下，字符串类型的变量提示会被识别为方法，导致误加了括号的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=13763)
+* 修复 语言服务 uni-app x 缓存type导致错误校验乱报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=13752)
+* 修复 语言服务 存在wxs的script时，代码没有代码提示的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=13756)
+* 修复 语言服务 打开tsconfig.json中忽略的文件然后再关闭该文件后，没有代码提示的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=13760)
+* 修复 语言服务 uni-app uts插件 写uvue时没有代码提示的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=13759)
+* 修复 语言服务 uni-app x App.uvue文件，使用this.globalData时，误报错找不到globalData的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=13915)
+* 修复 语言服务 uni-app Vue文件中this.xxx多次转到定义时，后续可能会失败的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=14082)
+* 修复 语言服务 4.29版本引发的 markdown中使用查找引用导致语言服务报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=13739)
+* 修复 语言服务 4.29版本引发的 markdown在一行写多个链接语法时, 描述位置出现代码提示的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=13270)
+* 修复 语言服务 4.31版本引发的 i18n特殊值域String可能导致ts语言服务报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=13561)
+* 修复 语言服务 4.31版本引发的 关闭项目时, 没有删除对应的项目缓存数据的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=13750)
+* 修复 语言服务 3.5.3版本引发的 URI.parse导致语言服务报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=13738)
+* 修复 语言服务 3.5.3版本引发的 组件悬浮结果超链接存在多个时, 按F1跳转了后面超链接的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=13841)
+* 修复 语言服务 3.5.3版本引发的 json代码提示, 反复拉取代码助手的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=14030)
+* 修复 语言服务 4.36版本引发的 特殊值域String, `AttrString`事件属性提示, 补全结果不正确的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=14031)
+* 调整 语言服务 特殊值域String `FontURIString`、`ImageURIString`、`AudioURIString`、`VideoURIString`、`PageURIString`、`NPageURIString`、`UPageURIString` 在uni-app (x)项目下, 代码提示仅支持项目相对路径
+* 新增 uni-app x 运行/发行到微信小程序 [详情](https://doc.dcloud.net.cn/uni-app-x/mp)
+* 新增 uni-app 运行到微信/百度/支付宝/抖音小程序开发者工具，支持日志回显到HBuilder控制台 [详情](https://uniapp.dcloud.net.cn/tutorial/run/mp-log.html)
+* 新增 uni-app 运行到鸿蒙时支持日志回显到HBuilder控制台
+* 新增 uni-app 运行/发行到小红书小程序
+* 新增 uni-app 对项目下的package.json点右键可以使用内置npm安装依赖 [详情](https://hx.dcloud.net.cn/Tutorial/installDependencies)
+* 新增 uni-app App云打包支持证书库密码配置
+* 调整 uni-app 工具栏运行菜单小程序分组中除微信和鸿蒙元服务外默认不显示
+* 调整 uni-app x 工具栏运行菜单只显示受支持的平台
+* 调整 uni-app cli 项目运行/发行时使用系统环境变量里的node，不再默认使用内置node [详情](https://hx.dcloud.net.cn/Tutorial/configureEnvironmentVariables)
+* 修复 uni-app pages.json 3.5.3版本引发的写条件编译时，代码提示项某些情况下回车替换内容不正确的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=13715)
+
 ## 4.36.2024112612-alpha
 * 修复 uniapp框架的一些Bug
 
