@@ -11,7 +11,7 @@
 |--				|--																		|
 |--platform		|必填，发行平台(MP-WEIXIN)												|
 |--project		|必填，项目名称															|
-|--appid		|必填，微信小程序appid													|
+|--appid		|如果上传发行小程序到微信平台，则必填微信小程序appid													|
 |--subPackage	|发行为混合包, 示例：--subPackage xxx									|
 |--upload		|打包后是否上传到微信平台,只有值为true时生效							|
 |--description	|上传的小程序描述														|
