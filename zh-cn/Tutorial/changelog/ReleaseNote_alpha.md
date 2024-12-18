@@ -1,3 +1,6 @@
+## 4.42.2024121808-alpha
+* 修复 语言服务 4.41版本引发的 在uts中，使用setTimeout时，误报红的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=14233)
+
 ## 4.41.2024121203-alpha
 * 优化 Node插件激活时间
 * 修复 新建HBuilder窗口时，某些电脑上状态栏高度异常的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=13755)

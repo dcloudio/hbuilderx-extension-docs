@@ -1,3 +1,7 @@
+## 4.42.2024121808-alpha
+* Language Server: Fixed the bug where setTimeout in UTS files is incorrectly marked with an error. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=14233)
+
+
 ## 4.41.2024121203-alpha
 * Optimize the activation time of the Node plugin.
 * Fixed the bug where the status bar height is abnormal on some computers when creating a new HBuilder window. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=13755)
