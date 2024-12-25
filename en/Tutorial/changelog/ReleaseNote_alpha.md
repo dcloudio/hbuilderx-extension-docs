@@ -1,3 +1,7 @@
+## 4.43.2024122419-alpha
+* Language Server: Optimize the language service uni-app x code hint performance
+
+
 ## 4.42.2024121808-alpha
 * Language Server: Fixed the bug where setTimeout in UTS files is incorrectly marked with an error. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=14233)
 

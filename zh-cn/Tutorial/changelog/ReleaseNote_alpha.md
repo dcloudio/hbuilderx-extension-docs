@@ -1,3 +1,6 @@
+## 4.43.2024122419-alpha
+* 优化 语言服务 uni-app x 代码提示性能
+
 ## 4.42.2024121808-alpha
 * 修复 语言服务 4.41版本引发的 在uts中，使用setTimeout时，误报红的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=14233)
 
