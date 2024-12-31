@@ -1,3 +1,38 @@
+## 4.44.2024123110
+* 优化 Node插件激活时间
+* 修复 新建HBuilder窗口时，某些电脑上状态栏高度异常的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=13755)
+* 修复 当打开比较大的压缩文件时，如果错误校验时错误比较多，会导致渲染卡顿的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=13769)
+* 修复 3.5.3版本引发的 自定义代码块中存在中文, 光标位置不对的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=10900)
+* 修复 3.94版本引发的 markdown中的code代码块区域, 折叠不正确的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=12767)
+* 优化 语言服务 uni-app x 代码提示性能
+* 修复 语言服务 uts校验 对象字面量类型为可选参数时，误报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=13734)
+* 修复 语言服务 某些情况下，字符串类型的变量提示会被识别为方法，导致误加了括号的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=13763)
+* 修复 语言服务 uni-app x 缓存type导致错误校验乱报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=13752)
+* 修复 语言服务 存在wxs的script时，代码没有代码提示的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=13756)
+* 修复 语言服务 打开tsconfig.json中忽略的文件然后再关闭该文件后，没有代码提示的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=13760)
+* 修复 语言服务 uni-app uts插件 写uvue时没有代码提示的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=13759)
+* 修复 语言服务 uni-app x App.uvue文件，使用this.globalData时，误报错找不到globalData的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=13915)
+* 修复 语言服务 uni-app Vue文件中this.xxx多次转到定义时，后续可能会失败的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=14082)
+* 修复 语言服务 4.29版本引发的 markdown中使用查找引用导致语言服务报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=13739)
+* 修复 语言服务 4.29版本引发的 markdown在一行写多个链接语法时, 描述位置出现代码提示的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=13270)
+* 修复 语言服务 4.31版本引发的 i18n特殊值域String可能导致ts语言服务报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=13561)
+* 修复 语言服务 4.31版本引发的 关闭项目时, 没有删除对应的项目缓存数据的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=13750)
+* 修复 语言服务 3.5.3版本引发的 URI.parse导致语言服务报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=13738)
+* 修复 语言服务 3.5.3版本引发的 组件悬浮结果超链接存在多个时, 按F1跳转了后面超链接的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=13841)
+* 修复 语言服务 3.5.3版本引发的 json代码提示, 反复拉取代码助手的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=14030)
+* 修复 语言服务 4.36版本引发的 特殊值域String, `AttrString`事件属性提示, 补全结果不正确的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=14031)
+* 调整 语言服务 特殊值域String `FontURIString`、`ImageURIString`、`AudioURIString`、`VideoURIString`、`PageURIString`、`NPageURIString`、`UPageURIString` 在uni-app (x)项目下, 代码提示仅支持项目相对路径
+* 新增 uni-app x 运行/发行到微信小程序 [详情](https://doc.dcloud.net.cn/uni-app-x/mp)
+* 新增 uni-app 运行到微信/百度/支付宝/抖音小程序开发者工具，支持日志回显到HBuilder控制台 [详情](https://uniapp.dcloud.net.cn/tutorial/run/mp-log.html)
+* 新增 uni-app 运行到鸿蒙时支持日志回显到HBuilder控制台
+* 新增 uni-app 运行/发行到小红书小程序
+* 新增 uni-app 对项目下的package.json点右键可以使用内置npm安装依赖 [详情](https://hx.dcloud.net.cn/Tutorial/installDependencies)
+* 新增 uni-app App云打包支持证书库密码配置
+* 调整 uni-app 工具栏运行菜单小程序分组中除微信和鸿蒙元服务外默认不显示
+* 调整 uni-app x 工具栏运行菜单只显示受支持的平台
+* 调整 uni-app cli 项目运行/发行时使用系统环境变量里的node，不再默认使用内置node [详情](https://hx.dcloud.net.cn/Tutorial/configureEnvironmentVariables)
+* 修复 uni-app pages.json 3.5.3版本引发的写条件编译时，代码提示项某些情况下回车替换内容不正确的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=13715)
+
 ## 4.36.2024112817
 * 新增 uni-app 在HBuilderX中直接运行和发行鸿蒙应用，不再需要在鸿蒙开发工具中配置模板
 * 新增 uni-app manifest可视化界面，新增鸿蒙可视化设置，原App设置改名为安卓/iOS设置
@@ -16,9 +51,9 @@
 * 优化 语言服务 内存占用
 * 优化 语言服务 vue文件代码提示性能
 * 修复 语言服务 当提示项包含`$`符号且当前提示位置后面是括号时，回车后`$`符号丢失的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=10021)
-* 修复 语言服务 uniapp x 项目下某些情况下js文件报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=10014)
 * 修复 语言服务 uniapp项目某些情况下定义了同名属性时语言服务报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=10476)
 * 新增 语言服务 easycom组件 标签属性和事件提示时支持defineProps、defineEmits中的定义的属性和事件
+* 修复 语言服务 uni-app x 项目下某些情况下js文件报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=10014)
 * 修复 语言服务 uni-app x 打开多个项目时资源没有正确释放导致语言服务报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=11379)
 * 修复 语言服务 在项目下执行`npm i`的同时触发转到定义等功能可能会导致语言服务报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=10240)
 * 修复 语言服务 某些情况下语言服务报错：`No Project.`的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=11395)
@@ -41,17 +76,17 @@
 * 修复 语言服务 3.5.3版本引发的 *.schema.json文件`foreignKey`字段循环引用报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=9797)
 * 修复 语言服务 3.5.3版本引发的 路径提示有概率导致语言服务报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=9800)
 * 修复 语言服务 3.5.3版本引发的 jsDoc提示导致语言服务报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=10075)
+* 修复 语言服务 3.5.3版本引发的 jsdoc代码块补全结果不正确的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=8873)
 * 修复 语言服务 3.5.3版本引发的 URI.parse可能导致的语言服务报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=10108)
 * 修复 语言服务 3.91版本引发的 uni-app x项目中style代码块重复的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=8946)
-* 修复 语言服务 3.5.3版本引发的 jsdoc代码块补全结果不正确的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=8873)
 * 修复 语言服务 4.08版本引发的 右键功能-文件查找引用无结果的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=8022)
 * 修复 语言服务 3.6.11版本引发的 编辑器手动指定关联语言时可能导致乱报红的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=7676)
 * 修复 语言服务 3.98版本引发的 manifest.json文件，在key的中间打字没有代码提示的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=5798)
 * 修复 语言服务 3.99版本引发的 废弃upx还能提示的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=5331)
 * 修复 语言服务 3.99版本引发的 style代码提示描述不对的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=5213)
+* 修复 语言服务 3.99版本引发的 class类名转到定义跳转文件不对的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=861)
 * 修复 语言服务 3.94版本引发的 json转type功能，在特定情况下，转换结果不对的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=3930)
 * 修复 语言服务 3.6.5版本引发的 markdown的锚点链接提示不正确的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=1788)
-* 修复 语言服务 3.99版本引发的 class类名转到定义跳转文件不对的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=861)
 * 修复 语言服务 uts plugin中开发安卓插件，覆写interface的方法时误报红的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=10034)
 * 修复 语言服务 uts插件iOS平台在windows电脑上文件查找引用和触发函数签名时状态栏报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=11428)
 * 调整 Windows HBuilderX"运行配置"-"kotlin编译器最大堆内存大小"默认值为2048
