@@ -1,3 +1,10 @@
+## 4.45.2025010502
+* Fixed the bug introduced in version 4.44, where uni-app CLI projects on macOS get stuck at "compiling" when running on a mobile device. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=14754)
+* Fixed the bug introduced in version 4.36 on macOS, where exporting WGT with native obfuscation for JS/NVUE files fails. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=14682)
+* uni-app: Fixed the bug introduced in version 4.44, where the language service occasionally fails to find getOptionsDiagnostics when opening Vue files in uni-app projects.[Details](https://issues.dcloud.net.cn/pages/issues/detail?id=14778) 
+* uni-app: Added support for disabling runtime log output to the HBuilder console when running a uni-app project on WeChat, Baidu, Alipay, and Douyin Mini Program Developer Tools.台 [Details](https://uniapp.dcloud.net.cn/tutorial/run/mp-log.html)
+
+
 ## 4.44.2024123110
 * Optimize the activation time of the Node plugin.
 * Fixed the bug where the status bar height is abnormal on some computers when creating a new HBuilder window. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=13755)
