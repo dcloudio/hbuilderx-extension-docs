@@ -1,3 +1,12 @@
+## 4.45.2025010702-alpha
+* 修复 语言服务 4.41版本引发的 uniapp项目下打开vue文件时语言服务偶现找不到getOptionsDiagnostics的bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=14778)
+* 修复 macOS 4.29版本引发的 导出wgt勾选对js/nvue文件进行原生混淆导出失败的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=14682)
+* 修复 macOS 4.41版本引发的uniapp-cli项目运行到手机，部分电脑因无法获取系统node路径，导致一直卡在编译中的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=14754) 
+* 新增 uni-app 运行到微信/百度/支付宝/抖音小程序开发者工具，支持关闭运行日志回显到HBuilder控制台 [详情](https://uniapp.dcloud.net.cn/tutorial/run/mp-log.html)
+* 修复 uni-app 4.41版本引发的 某些情况下，运行到微信小程序无法启动开发者工具的Bug[详情](https://issues.dcloud.net.cn/pages/issues/detail?id=14830)
+* 修复 uni-app 4.41版本引发的 运行到微信小程序，丢失之前保存的编译模式的Bug[详情](https://issues.dcloud.net.cn/pages/issues/detail?id=14822)
+* 调整 HBuilderX设置 运行配置 uni-app编译器设置，node启动内存参数默认值改为3072
+
 ## 4.43.2024122419-alpha
 * 优化 语言服务 uni-app x 代码提示性能
 
