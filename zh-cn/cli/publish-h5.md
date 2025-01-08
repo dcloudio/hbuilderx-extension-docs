@@ -24,7 +24,7 @@ cli publish --platform h5 --project 项目名称 --webHosting true --provider al
 |--webDomain	|网站域名(发行类型为H5时可配置此项)										|
 |--webTitle		|网站标题(发行类型为H5时可配置此项，不指定默认为项目名称)				|
 |--webHosting	|前端网页托管，值为 true 时使用，默认为 false							|
-|--provider		|uniCloud 服务商代号[aliyun|alipay|tcb]（4.51之前版本只支持aliyun）	|
+|--provider		|uniCloud 服务商代号[aliyun、alipay、tcb]（4.51之前版本只支持aliyun）	|
 |--spaceId		|uniCloud 云空间id												|
 
 注意事项：使用CLI命令，上传文件到前端网页托管，如果云端已存在此文件，会使用本地文件覆盖云端的文件。
