@@ -54,15 +54,11 @@ node -v
 如果配置正确，会显示 Node.js的版本号。
 
 ### 2. 手动添加 Node.js 到环境变量
-> 步骤1：根据终端类型选择文件
+> 步骤1：目前只从bash中读取环境变量，需要确保配置到bash中
 
 - Bash：
 ```
- ~/.bashrc
-```
-- Zsh：
-```
- ~/.zshrc
+~/.bash_profile
 ```
 
 > 步骤 2：添加 Node.js 路径到 PATH
@@ -73,11 +69,11 @@ export PATH=$PATH:/path/nodejs
 ```
 保存退出后执行命令
 ```
-source ~/.bashrc
+source ~/.bash_profile
 ```
 > 步骤 3：验证配置
 
 ```
-node -v
+bash --login -c "node -v"
 ```
 如果配置正确，会显示 Node.js的版本号。
