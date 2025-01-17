@@ -46,6 +46,7 @@
     * [uni-app-x css語法校驗](/Tutorial/Language/cssValidate.md)
     * [uni-app-x uvue標簽語法校驗](/Tutorial/Language/vueValidate.md)
     * [語言服務狀態面板](/Tutorial/Language/lsStatus.md)
+    * [UTS混编原生文件语言服务支持](/Tutorial/Language/uts_hybrid_support.md)
 * App開發
     * [真機運行常見問題](/Tutorial/App/PhoneDebugging.md)
     * [安裝配置模擬器](/Tutorial/App/installSimulator.md)
