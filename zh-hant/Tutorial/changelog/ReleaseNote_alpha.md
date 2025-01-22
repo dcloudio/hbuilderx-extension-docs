@@ -1,3 +1,28 @@
+## 4.51.2025012123-alpha
+* 新增 macOS 支持arm版，需单独下载 
+* 新增 用户登录界面，增加手机号验证码登录方式
+* 调整 HBuilderX CLI uni-app H5发行，--provider参数支持更多服务商[aliyun|alipay|tcb] [详情](https://hx.dcloud.net.cn/cli/publish-h5)
+* 新增 HBuilderX CLI uni-app H5发行，增加--ssrHost和--ssrProvider参数 [详情](https://hx.dcloud.net.cn/cli/publish-h5)
+* 新增 增加配置项 控制项目移除或者关闭时，自动关闭该项目下已打开的标签卡 (菜单【设置-常用配置】)
+* 调整 ets文件语言由`typescript`调整为`ArkTs`, 高亮功能迁移到插件实现 [详情](https://ext.dcloud.net.cn/plugin?id=21741)
+* 修复 macOS `alt + tab`打开切换标签卡面板时，按`alt + shift + tab`进行反向选择时，会在编辑器插入`\t`的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=14977)
+* 修复 3.99版本引发的 项目下存在.editorconfig时，打开的文件无法关闭代码地图的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=14863)
+* 修复 4.31版本引发的 ctrl+f触发搜索栏后，某些情况下按下esc后HBuilderX崩溃的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=14978)
+* 修复 新建文件时，选择模版会将已输入的文件名重置的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=14847)
+* 修复 某些文件打开时编码识别不对导致乱码的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=12395)
+* 修复 4.44引发的自定义代码块未定义生效范围(scope)时不生效的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=14982)
+* 修复 4.31版本引发的 hover出现代码提示框后，双击hover代码无法选中代码的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=15055)
+* 修复 emmet uni-app (x) vue文件下, `隐式标签名称` 语法补全项不正确的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=14374)
+* 新增 语言服务 uni-app (x) uts插件 对导入的kotlin支持代码提示、转到定义等功能 [详情](https://hx.dcloud.net.cn/Tutorial/Language/uts_hybrid_support)
+* 优化 语言服务 uni-app x 语言服务刚启动时加快uni-app x相关功能的初始化速度
+* 修复 语言服务 uni-app x 在template使用ref定义的变量时报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=14968)
+* 修复 语言服务 uni-app vue3+ts不提示全局globalProperties属性或方法的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=14972)
+* 修复 语言服务 uni-app (x) uts插件 覆写class中的属性时，部分原生平台的类型和ts类型校验误报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=15172)
+* 修复 语言服务 uni-app (x) uts插件 三目运算表达式中，部分原生平台的类型和ts类型校验误报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=15173)
+* 调整 语言服务 uni-app x项目下uni api代码提示时会自动填充对象字面量参数大括号
+* 修复 语言服务 vue文件下，id和class在某些情况下, 查找引用获取结果不正确的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=15171)
+* 修复 uni_modules插件 macOS 发布插件到插件市场对话框，点击选择截图，在弹出的文件选择对话框上点击取消后，对话框的层级不对的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=14979)
+
 ## 4.45.2025010702-alpha
 * 修复 语言服务 4.41版本引发的 uniapp项目下打开vue文件时语言服务偶现找不到getOptionsDiagnostics的bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=14778)
 * 修复 macOS 4.29版本引发的 导出wgt勾选对js/nvue文件进行原生混淆导出失败的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=14682)
