@@ -1,3 +1,7 @@
+## 4.52.2025020807-alpha
+* Fixed some Bugs
+
+
 ## 4.51.2025012123-alpha
 * Added support for the ARM version of macOS.
 * Added user login interface, added mobile phone number verification code login method
