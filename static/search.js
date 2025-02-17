@@ -818,7 +818,7 @@
         noData: 'No Results!',
         paths: 'auto',
         depth: 2,
-        maxAge: 86400000 // 1 day
+        maxAge: 60000 // 1 day
     };
 
     /**
