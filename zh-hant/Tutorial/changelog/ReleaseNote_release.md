@@ -1,8 +1,35 @@
+## 4.55.2025030718
+* 新增 macOS 支持arm版。x86版无法升级到arm版，需单独下载
+* 新增 用户登录界面，增加手机号验证码登录方式
+* 新增 ets文件 即 `ArkTs` 语法高亮插件 [详情](https://ext.dcloud.net.cn/plugin?id=21741)
+* 新增 HBuilderX CLI uni-app H5发行，增加--ssrHost和--ssrProvider参数 [详情](https://hx.dcloud.net.cn/cli/publish-h5)
+* 调整 HBuilderX CLI uni-app H5发行，--provider参数支持更多服务商[aliyun|alipay|tcb] [详情](https://hx.dcloud.net.cn/cli/publish-h5)
+* 新增 增加配置项 控制项目移除或者关闭时，自动关闭该项目下已打开的标签卡 (菜单【设置-常用配置】)
+* 修复 macOS `alt + tab`打开切换标签卡面板时，按`alt + shift + tab`进行反向选择时，会在编辑器插入`\t`的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=14977)
+* 修复 3.99版本引发的 项目下存在.editorconfig时，打开的文件无法关闭代码地图的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=14863)
+* 修复 4.31版本引发的 ctrl+f触发搜索栏后，某些情况下按下esc后HBuilderX崩溃的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=14978)
+* 修复 新建文件时，选择模版会将已输入的文件名重置的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=14847)
+* 修复 某些文件打开时编码识别不对导致乱码的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=12395)
+* 修复 4.44引发的自定义代码块未定义生效范围(scope)时不生效的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=14982)
+* 修复 4.31版本引发的 hover出现代码提示框后，双击hover代码无法选中代码的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=15055)
+* 修复 emmet uni-app (x) vue文件下, `隐式标签名称` 语法补全项不正确的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=14374)
+* 新增 运行调试 uni-app x 支持web-view组件中网页日志及错误打印到HBuilderX控制台 [文档](https://uniapp.dcloud.net.cn/tutorial/run/run-app.html#%E8%BF%90%E8%A1%8C)
+* 新增 语言服务 uni-app (x) uts插件 在uts文件中支持混编时导入的kotlin文件的代码提示、转到定义等功能 [详情](https://hx.dcloud.net.cn/Tutorial/Language/uts_hybrid_support)
+* 优化 语言服务 uni-app x 语言服务刚启动时的初始化速度
+* 修复 语言服务 uni-app x 在template使用ref定义的变量时报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=14968)
+* 修复 语言服务 uni-app vue3+ts不提示全局globalProperties属性或方法的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=14972)
+* 修复 语言服务 uni-app (x) uts插件 覆写class中的属性时，部分原生平台的类型和ts类型校验误报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=15172)
+* 修复 语言服务 uni-app (x) uts插件 三目运算表达式中，部分原生平台的类型和ts类型校验误报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=15173)
+* 调整 语言服务 uni-app x 下uni api代码提示时会自动填充对象字面量参数大括号
+* 修复 语言服务 vue文件下，id和class在某些情况下, 查找引用获取结果不正确的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=15171)
+* 修复 uni_modules插件 macOS 发布插件到插件市场对话框，点击选择截图，在弹出的文件选择对话框上点击取消后，对话框的层级不对的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=14979)
+
 ## 4.45.2025010502
+* 新增 uni-app 运行到微信/百度/支付宝/抖音小程序开发者工具，支持关闭运行日志回显到HBuilder控制台，规避小程序socket通道限制的问题 [详情](https://uniapp.dcloud.net.cn/tutorial/run/mp-log.html)
+* 调整 HBuilderX设置 运行配置 uni-app编译器设置，node启动内存参数默认值改为3072
 * 修复 语言服务 4.44版本引发的 uniapp项目下打开vue文件时语言服务偶现找不到getOptionsDiagnostics的bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=14778)
 * 修复 macOS 4.29版本引发的 导出wgt勾选对js/nvue文件进行原生混淆导出失败的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=14682)
-* 修复 macOS 4.44版本引发的uniapp-cli项目运行到手机，部分电脑因无法获取系统node路径，导致一直卡在编译中的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=14754) 
-* 新增 uni-app 运行到微信/百度/支付宝/抖音小程序开发者工具，支持关闭运行日志回显到HBuilder控制台 [详情](https://uniapp.dcloud.net.cn/tutorial/run/mp-log.html)
+* 修复 macOS 4.44版本引发的 uniapp-cli项目运行到手机，部分电脑因无法获取系统node路径，导致一直卡在编译中的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=14754) 
 * 修复 uni-app 4.44版本引发的 某些情况下，运行到微信小程序无法启动开发者工具的Bug[详情](https://issues.dcloud.net.cn/pages/issues/detail?id=14830)
 * 修复 uni-app 4.44版本引发的 运行到微信小程序，丢失之前保存的编译模式的Bug[详情](https://issues.dcloud.net.cn/pages/issues/detail?id=14822)
 
