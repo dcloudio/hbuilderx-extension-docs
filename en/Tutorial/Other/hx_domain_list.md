@@ -20,6 +20,18 @@
 - *.qnqcdn.net
 - *.hiecheimaetu.com
 - *.iquaveizeeru.com
+- * viwipiediema.com
+- * zeicaefiegoh.com
+- * roongeimahwo.com
+- * dooquuequezi.com
+- * xionguamaqui.com
+- * taishoopecei.com
+- * ahdohpiechei.com
+- * kaiwaijaicai.com
+- * wiebaijitamo.com
+- * gaetausohyei.com
+- * ietheivaicai.com
+- * pouquiagievu.com
 
 ### 账户相关
 
