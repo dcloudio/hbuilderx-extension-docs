@@ -1,14 +1,14 @@
-## UTS混编原生文件语言服务支持
+## Language Service Support for UTS Hybrid Native Files
 
-自`4.46+`版本起，uni-app x 项目支持混编原生文件的语言服务，提供在uts文件中代码提示、转到定义、查找引用等功能
+Since version `4.46+`, uni-app x projects support the language service for hybrid native files, providing features such as code hints, go to definition, and find references in uts files.
 
-> uni-app x支持原生文件混编，见[详情](https://doc.dcloud.net.cn/uni-app-x/plugin/uts-plugin-hybrid.html)
+> uni-app x supports native file hybridization. See [Details](https://doc.dcloud.net.cn/uni-app-x/plugin/uts-plugin-hybrid.html).
 
-### 如何使用
+### How to Use
 
-#### 编写原生文件
+#### Write Native Files
 
-*kotlin原生示例代码*
+*Kotlin Native Example Code*
 
 ```kotlin
 package uts.sdk.modules.utsDemoMem
@@ -42,7 +42,7 @@ object NativeCode {
 }
 ```
 
-*java原生示例代码*
+*Java Native Example Code*
 
 ```java
 import java.io.File;
@@ -64,7 +64,21 @@ public class JavaUser {
 }
 ```
 
-#### 在uts文件中引入原生文件
+*Swift Native Example Code*
+
+```swift
+class NativeCode {
+    static func getNativeStr() -> String {
+        return "iOS-code"
+    }
+
+    func getNativeNum() -> Number {
+        return 123
+    }
+}
+```
+
+#### Import Native Files in UTS Files
 
 *kotlin*
 
@@ -80,7 +94,11 @@ import { NativeCode } from "./kotlinCode.kt"
 import JavaUser from "./JavaUser.java"
 ```
 
-#### 代码提示
+*swift*
+
+**Swift native files do not need to be directly imported in UTS files and can be used directly in UTS files.**
+
+#### Code Completion
 
 *kotlin*
 
@@ -90,7 +108,11 @@ import JavaUser from "./JavaUser.java"
 
 ![alt text](https://web-ext-storage.dcloud.net.cn/hx/uts_hybrid/image-6.png)
 
-#### 悬浮提示
+*swift*
+
+![alt text](https://web-ext-storage.dcloud.net.cn/hx/uts_hybrid/swift_completion.png)
+
+#### Hover Tips
 
 *kotlin*
 
@@ -100,7 +122,11 @@ import JavaUser from "./JavaUser.java"
 
 ![alt text](https://web-ext-storage.dcloud.net.cn/hx/uts_hybrid/image-7.png)
 
-#### 转到定义
+*swift*
+
+![alt text](https://web-ext-storage.dcloud.net.cn/hx/uts_hybrid/swift_hover.png)
+
+#### Go to Definition
 
 *kotlin*
 
@@ -118,7 +144,15 @@ import JavaUser from "./JavaUser.java"
 
 ![alt text](https://web-ext-storage.dcloud.net.cn/hx/uts_hybrid/image-9.png)
 
-#### 查找引用
+*swift*
+
+![alt text](https://web-ext-storage.dcloud.net.cn/hx/uts_hybrid/swift_goto_def1.png)
+
+<span style="color:green;">⬇︎⬇⬇</span>
+
+![alt text](https://web-ext-storage.dcloud.net.cn/hx/uts_hybrid/swift_goto_def2.png)
+
+#### Find References
 
 *kotlin*
 
@@ -128,10 +162,18 @@ import JavaUser from "./JavaUser.java"
 
 ![alt text](https://web-ext-storage.dcloud.net.cn/hx/uts_hybrid/image-10.png)
 
-### 注意
+*swift*
 
-#### 安装依赖插件
+![alt text](https://web-ext-storage.dcloud.net.cn/hx/uts_hybrid/swift_ref.png)
 
-android平台需要安装HBuilderX核心插件 `uts开发扩展-Android`
+### Notes
+
+#### Install Dependent Plugins
+
+For the Android platform, you need to install the HBuilderX core plugin `uts开发扩展-Android`
 
 ![alt text](https://web-ext-storage.dcloud.net.cn/hx/uts_hybrid/image.png)
+
+For the iOS platform, you need to install the HBuilderX core plugin `uts开发扩展-iOS`
+
+![alt text](https://web-ext-storage.dcloud.net.cn/hx/uts_hybrid/plugin_uts_dev_ios.png)

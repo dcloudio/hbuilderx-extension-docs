@@ -64,6 +64,20 @@ public class JavaUser {
 }
 ```
 
+*swift原生示例代码*
+
+```swift
+class NativeCode {
+    static func getNativeStr() -> String {
+        return "iOS-code"
+    }
+
+    func getNativeNum() -> Number {
+        return 123
+    }
+}
+```
+
 #### 在uts文件中引入原生文件
 
 *kotlin*
@@ -80,6 +94,10 @@ import { NativeCode } from "./kotlinCode.kt"
 import JavaUser from "./JavaUser.java"
 ```
 
+*swift*
+
+**swift原生文件不需要在uts文件中直接引入，在uts文件中可以直接使用**
+
 #### 代码提示
 
 *kotlin*
@@ -90,6 +108,10 @@ import JavaUser from "./JavaUser.java"
 
 ![alt text](https://web-ext-storage.dcloud.net.cn/hx/uts_hybrid/image-6.png)
 
+*swift*
+
+![alt text](https://web-ext-storage.dcloud.net.cn/hx/uts_hybrid/swift_completion.png)
+
 #### 悬浮提示
 
 *kotlin*
@@ -99,6 +121,10 @@ import JavaUser from "./JavaUser.java"
 *java*
 
 ![alt text](https://web-ext-storage.dcloud.net.cn/hx/uts_hybrid/image-7.png)
+
+*swift*
+
+![alt text](https://web-ext-storage.dcloud.net.cn/hx/uts_hybrid/swift_hover.png)
 
 #### 转到定义
 
@@ -118,6 +144,14 @@ import JavaUser from "./JavaUser.java"
 
 ![alt text](https://web-ext-storage.dcloud.net.cn/hx/uts_hybrid/image-9.png)
 
+*swift*
+
+![alt text](https://web-ext-storage.dcloud.net.cn/hx/uts_hybrid/swift_goto_def1.png)
+
+<span style="color:green;">⬇︎⬇⬇</span>
+
+![alt text](https://web-ext-storage.dcloud.net.cn/hx/uts_hybrid/swift_goto_def2.png)
+
 #### 查找引用
 
 *kotlin*
@@ -128,6 +162,10 @@ import JavaUser from "./JavaUser.java"
 
 ![alt text](https://web-ext-storage.dcloud.net.cn/hx/uts_hybrid/image-10.png)
 
+*swift*
+
+![alt text](https://web-ext-storage.dcloud.net.cn/hx/uts_hybrid/swift_ref.png)
+
 ### 注意
 
 #### 安装依赖插件
@@ -135,3 +173,7 @@ import JavaUser from "./JavaUser.java"
 android平台需要安装HBuilderX核心插件 `uts开发扩展-Android`
 
 ![alt text](https://web-ext-storage.dcloud.net.cn/hx/uts_hybrid/image.png)
+
+ios平台需要安装HBuilderX核心插件 `uts开发扩展-iOS`
+
+![alt text](https://web-ext-storage.dcloud.net.cn/hx/uts_hybrid/plugin_uts_dev_ios.png)
