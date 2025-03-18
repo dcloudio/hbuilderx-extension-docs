@@ -50,6 +50,12 @@ HBuilderX有強大的語法分析引擎，可以準確的跳轉定義位置。
 
 <img src="/static/snapshots/started_tutorial/3b6a921a9021ffa5ed54e7633afb7fd0.gif" style="zoom: 90%;border:1px solid #eee;border-radius: 5px;" />
 
+HBuilderX支援多結果轉到定義
+
+當轉到定義的結果有多個時，`Alt+滑鼠懸浮`會將所有結果列出，可以透過`滑鼠選擇`或`上下鍵選擇`進行跳轉。
+
+<img src="https://web-ext-storage.dcloud.net.cn/hx/goto/goto-def-mult-64.gif" style="zoom: 90%;border:1px solid #eee;border-radius: 5px;" />
+
 > 備註：支持切換【Ctrl+鼠標左鍵】或【Alt+鼠標左鍵】進行轉到定義 （菜單【選擇】，最後一個菜單）
 
 ### 轉到定義到分欄@goto-definition-to-column

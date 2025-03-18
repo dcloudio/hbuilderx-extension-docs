@@ -54,6 +54,12 @@ The shortcut key to go to the definition is `Alt+D`, and the mouse operation is 
 
 > Remarks: Support switching [Ctrl+left mouse button] or [Alt+left mouse button] to go to definition (menu [select], [switch to "Alt+Click" for Multi-Cursor] or [switch to "⌘+Click" for Multi-Cursor])
 
+HBuilderX supports multi-result goto definition.
+
+When there are multiple results for goto definition, hovering the mouse with `Alt` key pressed will list all the results. You can jump to the desired result by `mouse selection` or `using the up and down arrow keys`.
+
+<img src="https://web-ext-storage.dcloud.net.cn/hx/goto/goto-def-mult-64.gif" style="zoom: 90%;border:1px solid #eee;border-radius: 5px;" />
+
 ## Goto Definition to New Column@goto-definition-to-column
 
 Another feature of HBuilderX is `Goto definition to column`.

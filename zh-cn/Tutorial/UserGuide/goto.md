@@ -54,6 +54,12 @@ HBuilderX有强大的语法分析引擎，可以准确的跳转定义位置。
 
 <img src="/static/snapshots/started_tutorial/3b6a921a9021ffa5ed54e7633afb7fd0.gif" style="zoom: 90%;border:1px solid #eee;border-radius: 5px;" />
 
+HBuilderX支持多结果转到定义
+
+当转到定义的结果有多个时，`Alt+鼠标悬浮`会将所有结果列出，可以通过`鼠标选择`或`上下键选择`进行跳转。
+
+<img src="https://web-ext-storage.dcloud.net.cn/hx/goto/goto-def-mult-64.gif" style="zoom: 90%;border:1px solid #eee;border-radius: 5px;" />
+
 > 备注：支持切换【Ctrl+鼠标左键】或【Alt+鼠标左键】进行转到定义 （菜单【选择】，最后一个菜单）
 
 ### 转到定义到分栏@goto-definition-to-column
