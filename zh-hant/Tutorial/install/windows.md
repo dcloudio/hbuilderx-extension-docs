@@ -1,5 +1,11 @@
 # Windows安裝HBuilderX@Windows
 
+### 系统要求@win64
+
+2025年3月起，HBuilderX 4.61+版本，Windows将仅支持64位操作系统，不再对32位系统进行支持。
+
+在Windows 32位系统上进行后续升级将会弹出建议升级的提示。
+
 ### 下載@download
 
 HBuilderX下載地址: [下載地址](https://www.dcloud.io/hbuilderx.html)
