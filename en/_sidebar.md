@@ -18,6 +18,7 @@
     * [Goto](/Tutorial/UserGuide/goto.md)
     * [Find / Repleace](/Tutorial/UserGuide/find.md)
     * [Find in Folder](/Tutorial/UserGuide/node-multi-file-search)
+    * [ConsoleView Search](/Tutorial/UserGuide/ConsoleViewSearch.md)
     * [Fold](/Tutorial/UserGuide/fold.md)
     * [Format](/Tutorial/UserGuide/format.md)
     * [Validate](/Tutorial/UserGuide/SyntaxCheck.md)
