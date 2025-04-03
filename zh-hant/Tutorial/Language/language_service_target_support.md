@@ -10,7 +10,11 @@
 
 - APP-IOS
 
+- APP-APP-HARMONY
+
 - WEB
+
+- MP-WEIXIN
 
 ## 支持的文件類型
 
@@ -46,7 +50,7 @@
 
 - 在彈出的窗口中選擇目標平臺
 
-![](https://web-ext-storage.dcloud.net.cn/hx/language_service_state_change_ui.png)
+![](https://web-ext-storage.dcloud.net.cn/hx/language-service-target-support/target_controler.png)
 
 - 平臺支持多選
 
@@ -145,3 +149,25 @@
     ...
 </style>
 ```
+
+## 條件編譯代碼塊置灰
+
+自 **`4.61+`** 版本起，條件編譯代碼非活動代碼塊支援置灰顯示
+
+當選擇的平台與條件編譯代碼塊不匹配時，條件編譯代碼塊會以灰色顯示，提示用戶當前位置不可用
+
+例如：
+
+<img style="border-radius:10px;" src="https://web-ext-storage.dcloud.net.cn/hx/language-service-target-support/target_graying_example_3.png" />
+
+*注意：*
+
+當一個頁面在`pages.json`中指定了條件編譯平台時，如果選擇的平台沒有包含此頁面指定的平台，此頁面整個文件將被置灰，並彈窗提醒
+
+例如：`
+
+![](https://web-ext-storage.dcloud.net.cn/hx/language-service-target-support/pages_json_conditional_compilation_example.png)
+
+<span style="color:green;">⬇︎⬇︎⬇︎</span>
+
+<img style="border-radius:10px;" src="https://web-ext-storage.dcloud.net.cn/hx/language-service-target-support/pages_json_graying_example.png" />

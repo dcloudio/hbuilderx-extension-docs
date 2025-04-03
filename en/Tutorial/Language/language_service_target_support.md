@@ -10,7 +10,11 @@ Since **`4.0+`**, the uni-app x project supports switching language service by d
 
 - APP-IOS
 
+- APP-APP-HARMONY
+
 - WEB
+
+- MP-WEIXIN
 
 ## Supported file types
 
@@ -48,7 +52,7 @@ Click the status bar notification
 
 - Select the target platform in the pop-up window
 
-![](https://web-ext-storage.dcloud.net.cn/hx/language_service_state_change_ui.png)
+![](https://web-ext-storage.dcloud.net.cn/hx/language-service-target-support/target_controler.png)
 
 - Platform supports multiple choice
 
@@ -147,3 +151,25 @@ Then in the xxx.uvue file, only the language services related to the 'WEB' platf
     ...
 </style>
 ```
+
+## Graying out of conditionally compiled code blocks
+
+Since **`4.61+`**, conditionally compiled inactive code blocks support graying display.
+
+When the selected platform does not match the conditionally compiled code block, the code block will be grayed out to indicate that the current location is unavailable.
+
+Example:
+
+<img style="border-radius:10px;" src="https://web-ext-storage.dcloud.net.cn/hx/language-service-target-support/target_graying_example_3.png" />
+
+*Note:*
+
+When a page specifies a conditionally compiled platform in `pages.json`, if the selected platform does not include the platform specified for this page, the entire file will be grayed out with a pop-up reminder.
+
+Example:
+
+![](https://web-ext-storage.dcloud.net.cn/hx/language-service-target-support/pages_json_conditional_compilation_example.png)
+
+<span style="color:green;">⬇︎⬇︎⬇︎</span>
+
+<img style="border-radius:10px;" src="https://web-ext-storage.dcloud.net.cn/hx/language-service-target-support/pages_json_graying_example.png" />

@@ -10,7 +10,11 @@
 
 - APP-IOS
 
+- APP-APP-HARMONY
+
 - WEB
+
+- MP-WEIXIN
 
 ## 支持的文件类型
 
@@ -46,7 +50,7 @@
 
 - 在弹出的窗口中选择目标平台
 
-![](https://web-ext-storage.dcloud.net.cn/hx/language_service_state_change_ui.png)
+![](https://web-ext-storage.dcloud.net.cn/hx/language-service-target-support/target_controler.png)
 
 - 平台支持多选
 
@@ -143,3 +147,25 @@
     ...
 </style>
 ```
+
+## 条件编译代码块置灰
+
+自 **`4.61+`** 版本起，条件编译代码非活动代码块支持置灰显示
+
+当选择的平台与条件编译代码块不匹配时，条件编译代码块会以灰色显示，提示用户当前位置不可用
+
+例如：
+
+<img style="border-radius:10px;" src="https://web-ext-storage.dcloud.net.cn/hx/language-service-target-support/target_graying_example_3.png" />
+
+*注意：*
+
+当一个页面在`pages.json`中指定了条件编译平台时，如果选择的平台没有包含此页面指定的平台，此页面整个文件将被置灰，并弹窗提醒
+
+例如：
+
+![](https://web-ext-storage.dcloud.net.cn/hx/language-service-target-support/pages_json_conditional_compilation_example.png)
+
+<span style="color:green;">⬇︎⬇︎⬇︎</span>
+
+<img style="border-radius:10px;" src="https://web-ext-storage.dcloud.net.cn/hx/language-service-target-support/pages_json_graying_example.png" />
