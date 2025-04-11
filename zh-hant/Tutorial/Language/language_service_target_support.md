@@ -158,7 +158,7 @@
 
 例如：
 
-<img style="border-radius:10px;" src="https://web-ext-storage.dcloud.net.cn/hx/language-service-target-support/target_graying_example_3.png" />
+<img style="border-radius:10px;" src="https://web-ext-storage.dcloud.net.cn/hx/language-service-target-support/target_graying_and_tip_example_1.png" />
 
 *注意：*
 
