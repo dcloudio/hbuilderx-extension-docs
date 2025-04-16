@@ -1,3 +1,10 @@
+## 4.62.2025041603-alpha
+* 调整 安心打包 apktool更新为2.11.1，解决安心打包时android:foregroundServiceType的参数值会被改变的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=16895)
+* 修复 Git插件 4.61版本引发的 Mac平台上使用Git提交会多打开一个终端的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=16952)
+* 修复 快速打开和关闭文件时语言服务提示Could not find source file的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=16804)
+* 修复 语言服务 uni-app x项目对vue文件路径无法转到定义的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=16879)
+* 优化 语言服务 uni-app x项目对条件编译置灰的代码块悬浮时提示 [详情](https://hx.dcloud.net.cn/Tutorial/Language/language_service_target_support?id=%e6%9d%a1%e4%bb%b6%e7%bc%96%e8%af%91%e4%bb%a3%e7%a0%81%e5%9d%97%e7%bd%ae%e7%81%b0)
+
 ## 4.61.2025040322-alpha
 * 调整 windows HBuilder调整为64位，不再支持32位系统 [详情](https://hx.dcloud.net.cn/Tutorial/install/windows)
 * 新增 HBuilderX 用户登录窗口，增加手机号密码登录方式
@@ -20,9 +27,9 @@
 * 修复 语言服务 uni-app x uvue文件使用computed定义的变量，在template区域提示不对的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=15813)
 * 新增 uni-app x 鸿蒙平台debug，支持调试uts、uvue、uts插件混编arkts文件 [详情](https://uniapp.dcloud.net.cn/tutorial/debug/uni-uts-debug-harmony.html)
 * 新增 uni-app x Android平台debug 支持uvue及uts插件混编kotlin文件的断点调试 [详情](https://uniapp.dcloud.net.cn/tutorial/debug/uni-uts-debug.html)
-* 调整 uni-app (x) 运行到Android 设备列表显示设备品牌和型号
 * 调整 真机运行插件 内置adb从29.0.4升级到35.0.2（该版本支持无线adb）
-* 调整 uni-app (x) 运行到Android 已安装基座由`卸载安装`调整为`覆盖安装`  [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=16397)
+* 调整 uni-app (x) 运行到Android 设备列表显示设备品牌和型号
+* 调整 uni-app (x) 运行到Android 已安装基座由`卸载安装`调整为`覆盖安装` [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=16397)
 
 ## 4.57.2025032014-alpha
 * 修复 uniapp框架的一些Bug
