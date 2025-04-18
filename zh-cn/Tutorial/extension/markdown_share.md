@@ -70,7 +70,7 @@ uniCloud包括`前端网页托管`功能，它是一个免费、高速的网页�
 * `folderName`：文件夹名
 * `projectName`：项目名
 
-<img src="/static/snapshots/tutorial/markdown_share_10.jpeg" style="zoom:80%" />
+<img src="/static/snapshots/tutorial/markdown_share_10.png" style="zoom:80%" />
 
 
 ## 4. 插件使用@usage
