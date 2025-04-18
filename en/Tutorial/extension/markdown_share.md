@@ -22,7 +22,7 @@ In the `md` file, right-click and select [Share to Weblink], you can find that t
 ## 3. Configuration
 
 To use markdown one-click sharing, you have to complete the configuration in advance, including plug-in download, uniCloud activation and set service space.
- 
+
 DCloud cooperated with Alibaba Cloud to establish uniCloud to provide web servers for developers.
 
 uniCloud is a free, high-speed web hosting server that can help you to store web pages。More details：[https://uniapp.dcloud.io/uniCloud/hosting](https://uniapp.dcloud.io/uniCloud/hosting).
@@ -31,28 +31,28 @@ Developers need to log in HBuilderX and activate uniCloud service.
 
 ### 3.1 Sign Up uniCloud
 
-Sign up uniCloud：[https://unicloud.dcloud.net.cn/](https://unicloud.dcloud.net.cn/); 
+Sign up uniCloud：[https://unicloud.dcloud.net.cn/](https://unicloud.dcloud.net.cn/);
 
-<img src="/static/snapshots/tutorial/markdown_share_2.jpeg" style="zoom:80%" />
+<img src="/static/snapshots/tutorial/markdown_share/markdown_share_2.jpeg" style="zoom:80%" />
 
 Note: In accordance with national legal and Alibaba Cloud requirements, to use uniCloud services, real-name authentication is required.
 
-<img src="/static/snapshots/tutorial/markdown_share_3.jpeg" style="zoom:80%" />
+<img src="/static/snapshots/tutorial/markdown_share/markdown_share_3.jpeg" style="zoom:80%" />
 
 
 ### 3.2.  Choose Alibaba Cloud
 
-<img src="/static/snapshots/tutorial/markdown_share_4.jpeg" style="zoom:65%" />
+<img src="/static/snapshots/tutorial/markdown_share/markdown_share_4.jpeg" style="zoom:65%" />
 
 ### 3.3  Activate Web Page Hosting
 
 Note: It takes 1-3 minutes to initialize the front-end web hosting service.
 
-<img src="/static/snapshots/tutorial/markdown_share_5.jpeg" style="zoom:65%" />
+<img src="/static/snapshots/tutorial/markdown_share/markdown_share_5.jpeg" style="zoom:65%" />
 
 After successful activation, go to the homepage and copy the service spaceID.
 
-<img src="/static/snapshots/tutorial/markdown_share_6.jpeg" style="zoom:65%" />
+<img src="/static/snapshots/tutorial/markdown_share/markdown_share_6.jpeg" style="zoom:65%" />
 
 ### 3.4 HBuilderX Plug-in Setting
 
@@ -67,7 +67,7 @@ This setting item determines the title of the generated html file, parameter des
 * `folderName`: folder name
 * `projectName`: project name
 
-<img src="/static/snapshots/tutorial/markdown_share_10.png" style="zoom:80%" />
+<img src="/static/snapshots/tutorial/markdown_share/markdown_share_10.png" style="zoom:80%" />
 
 
 ## 4. How to use plugin

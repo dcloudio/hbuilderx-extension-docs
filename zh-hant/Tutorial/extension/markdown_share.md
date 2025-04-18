@@ -15,7 +15,7 @@ HBuilderX 2.8.7起，基於uniCloud，提供了markdown的`一鍵分享`功能�
 ## 2. 使用方式
 
 在`md`文件上，點擊【右鍵菜單 - 一鍵分享】，然後在控制檯就會返回URL。
-<img src="/static/snapshots/tutorial/markdown_share_1.jpeg" style="zoom:65%" />
+<img src="/static/snapshots/tutorial/markdown_share/markdown_share_1.jpeg" style="zoom:65%" />
 
 
 ## 3. 配置方式
@@ -30,34 +30,34 @@ uniCloud包括`前端網頁託管`功能，它是一個免費、高速的網頁�
 
 ### 3.1 開通uniCloud
 
-開通uniCloud的地址爲：[https://unicloud.dcloud.net.cn/](https://unicloud.dcloud.net.cn/); 
+開通uniCloud的地址爲：[https://unicloud.dcloud.net.cn/](https://unicloud.dcloud.net.cn/);
 
-<img src="/static/snapshots/tutorial/markdown_share_2.jpeg" style="zoom:80%" />
+<img src="/static/snapshots/tutorial/markdown_share/markdown_share_2.jpeg" style="zoom:80%" />
 
 注意： 按照國家法律要求和阿里雲的要求，使用uniCloud服務，需要先實名認證
 
-<img src="/static/snapshots/tutorial/markdown_share_3.jpeg" style="zoom:80%" />
+<img src="/static/snapshots/tutorial/markdown_share/markdown_share_3.jpeg" style="zoom:80%" />
 
 
 ### 3.2.  新建阿里雲服務空間
 
-<img src="/static/snapshots/tutorial/markdown_share_4.jpeg" style="zoom:65%" />
+<img src="/static/snapshots/tutorial/markdown_share/markdown_share_4.jpeg" style="zoom:65%" />
 
 ### 3.3  開通前端網頁託管
 
 注意：前端網頁託管服務初始化，需要 1-3 分鐘，請耐心等待
 
-<img src="/static/snapshots/tutorial/markdown_share_5.jpeg" style="zoom:65%" />
+<img src="/static/snapshots/tutorial/markdown_share/markdown_share_5.jpeg" style="zoom:65%" />
 
 開通成功後，進入到首頁，複製剛纔創建的服務空間SpaceID
 
-<img src="/static/snapshots/tutorial/markdown_share_6.jpeg" style="zoom:65%" />
+<img src="/static/snapshots/tutorial/markdown_share/markdown_share_6.jpeg" style="zoom:65%" />
 
 ### 3.4 HBuilderX 插件設置
 
 打開HBuilderX,  點擊菜單【設置】，插件設置，配置`uniCloud`空間ID （目前只支持阿里雲）
 
-<img src="/static/snapshots/tutorial/markdown_share_7.jpeg" style="zoom:80%" />
+<img src="/static/snapshots/tutorial/markdown_share/markdown_share_7.jpeg" style="zoom:80%" />
 
 `自訂文件分享的標題`設定項
 此設定項會決定生成的html文件的標題, 參數說明:
@@ -66,7 +66,7 @@ uniCloud包括`前端網頁託管`功能，它是一個免費、高速的網頁�
 * `folderName`：資料夾名
 * `projectName`：專案名
 
-<img src="/static/snapshots/tutorial/markdown_share_10.png" style="zoom:80%" />
+<img src="/static/snapshots/tutorial/markdown_share/markdown_share_10.png" style="zoom:80%" />
 
 
 ## 4. 插件使用
@@ -75,10 +75,10 @@ uniCloud包括`前端網頁託管`功能，它是一個免費、高速的網頁�
 
 在`md`文件上，右鍵菜單，點擊【一鍵分享】,會將`md`文件轉換爲html，並自動上傳到雲端。並在控制檯打印出`URL`
 
-<img src="/static/snapshots/tutorial/markdown_share_8.jpeg" style="zoom:80%" />
+<img src="/static/snapshots/tutorial/markdown_share/markdown_share_8.jpeg" style="zoom:80%" />
 
 ### 4.2 查看MarkDown歷史分享記錄
 
 點擊菜單【工具】【查看MarkDown歷史分享記錄】
 
-<img src="/static/snapshots/tutorial/markdown_share_9.jpeg" style="zoom:80%" />
+<img src="/static/snapshots/tutorial/markdown_share/markdown_share_9.jpeg" style="zoom:80%" />
