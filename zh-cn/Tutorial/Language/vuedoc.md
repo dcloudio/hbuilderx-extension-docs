@@ -145,19 +145,19 @@ const { fooo = 'hello' } = defineProps<{
 
 **组件提示，效果如下：**
 
-<img src="/static/snapshots/tutorial/vuedoc_1.png" />
+<img src="/static/snapshots/tutorial/vuedoc/vuedoc_1.png" />
 
-<img src="/static/snapshots/tutorial/vuedoc_2.png" />
+<img src="/static/snapshots/tutorial/vuedoc/vuedoc_2.png" />
 
 
 **属性提示：**
 
-<img src="/static/snapshots/tutorial/vuedoc_3.png" />
+<img src="/static/snapshots/tutorial/vuedoc/vuedoc_3.png" />
 
 
 **事件提示：**
 
-<img src="/static/snapshots/tutorial/vuedoc_4.png" />
+<img src="/static/snapshots/tutorial/vuedoc/vuedoc_4.png" />
 
 
 ### 特殊值域string@spec-types

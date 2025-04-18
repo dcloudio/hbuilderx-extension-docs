@@ -17,7 +17,7 @@
 
 在主窗体上，选中某个项目，右键菜单，点击【在新窗体中打开】，即可将项目在单项目窗体中打开
 
-<img src="/static/snapshots/tutorial/multi-window-1.gif" style="zoom:90%" />
+<img src="/static/snapshots/tutorial/multi-window/multi-window-1.gif" style="zoom:90%" />
 
 
 备注： 单项目窗体，也可以直接将文件夹拖入。
@@ -33,5 +33,5 @@
 
 把HBuilderX固定在任务栏，点右键，可以快速打开某个项目的窗体
 
-<img src="/static/snapshots/tutorial/multi-window-2.png" style="zoom:50%" />
+<img src="/static/snapshots/tutorial/multi-window/multi-window-2.png" style="zoom:50%" />
 

@@ -26,7 +26,7 @@ Steps：
 
 ### 2.1 Setup ftp/sftp configuration file
 
-<img src="/static/snapshots/tutorial/ftp1_en.gif" style="zoom:80%" />
+<img src="/static/snapshots/tutorial/ftp/ftp1_en.gif" style="zoom:80%" />
 
 ### 2.2 Sync directory
 

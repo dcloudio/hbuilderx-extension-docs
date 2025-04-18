@@ -14,7 +14,7 @@
 
 點擊菜單【工具】【插件配置】【eslint-vue】，即可看到eslint-vue相關配置。
 
-<img src="/static/snapshots/tutorial/eslint-js.png" />
+<img src="/static/snapshots/tutorial/eslint/eslint-js.png" />
 
 **實時校驗、自動修復**
 
@@ -22,7 +22,7 @@
 
 1. 使用此功能，必須安裝[eslint-js](https://ext.dcloud.net.cn/plugin?id=2037)和[eslint-vue](https://ext.dcloud.net.cn/plugin?id=2005)插件
 2. `vue-cli`項目，需要安裝eslint庫，並配置eslint規則.
-3. 若滿足上述條件，當編寫完代碼，保存時，若代碼中存在錯誤，自動修復; 
+3. 若滿足上述條件，當編寫完代碼，保存時，若代碼中存在錯誤，自動修復;
 4. 實時校驗功能，默認未開啓，需要手動開啓此功能
 
 ## 配置文件
@@ -36,11 +36,11 @@ eslint-vue的配置文件爲.eslintrc.js。
 ```
   module.exports = {
       "extends": "plugin:vue/essential",
-      "parserOptions": {},    
+      "parserOptions": {},
       "rules": {}             //規則
   };
 ```
-  
+
 更多配置說明可以參考[options](http://eslint.org/docs/user-guide/configuring)
 
 
@@ -53,7 +53,7 @@ eslint-vue的配置文件爲.eslintrc.js。
 - "warn" 或 1 - 開啓規則，使用警告級別的錯誤：warn (不會導致程序退出)
 - "error" 或 2 - 開啓規則，使用錯誤級別的錯誤：error (當被觸發的時候，程序會退出)
 
-修改.eslintrc.js文件，添加規則，比如: 
+修改.eslintrc.js文件，添加規則，比如:
 
 ```js
 {
@@ -87,7 +87,7 @@ eslint-vue的配置文件爲.eslintrc.js。
   'vue/require-v-for-key': 'error',
   // 檢查默認的prop值是否有效
   'vue/require-valid-default-prop': 'error',
-  // 保證computed屬性中有return語句 
+  // 保證computed屬性中有return語句
   'vue/return-in-computed-property': 'error',
   // 強制校驗 template 根節點
   'vue/valid-template-root': 'error',
@@ -97,7 +97,7 @@ eslint-vue的配置文件爲.eslintrc.js。
   'vue/valid-v-cloak': 'error',
   // 強制校驗 v-else-if 指令
   'vue/valid-v-else-if': 'error',
-  // 強制校驗 v-else 指令 
+  // 強制校驗 v-else 指令
   'vue/valid-v-else': 'error',
   // 強制校驗 v-for 指令
   'vue/valid-v-for': 'error',
@@ -132,7 +132,7 @@ eslint-vue的配置文件爲.eslintrc.js。
 
 【示例】eslint自動修復雙引號爲單引號，如下：
 
-<img src="/static/snapshots/tutorial/eslint-uniapp-example.gif" style="zoom: 90%; border: 1px solid #eee;" />
+<img src="/static/snapshots/tutorial/eslint/eslint-uniapp-example.gif" style="zoom: 90%; border: 1px solid #eee;" />
 
 
 ## 示例：cli項目
@@ -165,7 +165,7 @@ module.exports = {
 	},
     rules: {
         "no-alert": 0,
-        "no-multi-spaces": "error", // 禁止多個空格 
+        "no-multi-spaces": "error", // 禁止多個空格
         "semi": [2, "always"] ,// 自動補充分號
         "quotes": ["error", "single"] // 使用單引號
     }

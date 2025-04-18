@@ -17,7 +17,7 @@ Mainly used in the `script` part, it needs to be written on the `export default`
 * @description Here is also a component description
 * @tutorial https://uniapp.dcloud.io/api/media/image?id=chooseimage
 * @property {String} type = [button|input|...] attribute description
-* @event {Function} tap Event description 
+* @event {Function} tap Event description
 * @example Sample code
 */
 ```
@@ -115,19 +115,19 @@ const { fooo = 'hello' } = defineProps<{
 
 **Component tips：**
 
-<img src="/static/snapshots/tutorial/vuedoc_1.png" />
+<img src="/static/snapshots/tutorial/vuedoc/vuedoc_1.png" />
 
-<img src="/static/snapshots/tutorial/vuedoc_2.png" />
+<img src="/static/snapshots/tutorial/vuedoc/vuedoc_2.png" />
 
 
 **Attribute hints：**
 
-<img src="/static/snapshots/tutorial/vuedoc_3.png" />
+<img src="/static/snapshots/tutorial/vuedoc/vuedoc_3.png" />
 
 
 **Event reminder：**
 
-<img src="/static/snapshots/tutorial/vuedoc_4.png" />
+<img src="/static/snapshots/tutorial/vuedoc/vuedoc_4.png" />
 
 
 

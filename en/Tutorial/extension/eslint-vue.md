@@ -36,11 +36,11 @@ The configuration file is as follows：
 ```
   module.exports = {
       "extends": "plugin:vue/essential",
-      "parserOptions": {},    
+      "parserOptions": {},
       "rules": {}
   };
 ```
-  
+
 More configuration instructions can refer to [options](http://eslint.org/docs/user-guide/configuring)
 
 
@@ -132,7 +132,7 @@ Modify the .eslintrc.js file and add rules, such as:
 
 Example: eslint automatically fixes double quotes to single quotes
 
-<img src="/static/snapshots/tutorial/eslint-uniapp-example-en.gif" style="zoom: 90%; border: 1px solid #eee;" />
+<img src="/static/snapshots/tutorial/eslint/eslint-uniapp-example-en.gif" style="zoom: 90%; border: 1px solid #eee;" />
 
 
 ## Example: vue-cli project
@@ -165,7 +165,7 @@ module.exports = {
 	},
     rules: {
         "no-alert": 0,
-        "no-multi-spaces": "error", 
+        "no-multi-spaces": "error",
         "semi": [2, "always"] ,
         "quotes": ["error", "single"]          //enforce the consistent use of either backticks, double, or single quotes
     }

@@ -36,17 +36,17 @@ The configuration file is as follows：
 
 ```js
 module.exports = {
-    "plugins": [],         
+    "plugins": [],
     "env": {
         "browser": true,
         "node": true
     },
-    "parser": "esprima",   
-    "parserOptions": {},    
+    "parser": "esprima",
+    "parserOptions": {},
     "rules": {}
 }
 ```
-  
+
 More configuration instructions can refer to [options](https://eslint.org/docs/rules/)
 
 ## How to add rules?
@@ -110,7 +110,7 @@ module.exports = {
 
 Example: eslint automatically fixes double quotes to single quotes
 
-<img src="/static/snapshots/tutorial/eslint-uniapp-example-en.gif" style="zoom: 90%; border: 1px solid #eee;" />
+<img src="/static/snapshots/tutorial/eslint/eslint-uniapp-example-en.gif" style="zoom: 90%; border: 1px solid #eee;" />
 
 
 ## Example：vue-cli project
@@ -143,7 +143,7 @@ module.exports = {
 	},
     rules: {
         "no-alert": 0,
-        "no-multi-spaces": "error",         // disallow multiple spaces 
+        "no-multi-spaces": "error",         // disallow multiple spaces
         "semi": [2, "always"] ,             // equire or disallow semicolons instead of ASI
         "quotes": ["error", "single"]        // enforce the consistent use of either backticks, double, or single quotes
     }

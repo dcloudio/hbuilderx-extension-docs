@@ -16,7 +16,7 @@ HBuilderX提供了多項優化技巧，達到最好的json編輯體驗。學會�
 
 當然在字符串裏，按下全角符號不會被轉換半角; 舒暢書寫，不用分神，不用緊張。
 
-其實中文符號免干擾輸入是HBuilder多年來一直的亮點，不止是json，在html、js、css、vue裏都支持中文符號免干擾輸入。 
+其實中文符號免干擾輸入是HBuilder多年來一直的亮點，不止是json，在html、js、css、vue裏都支持中文符號免干擾輸入。
 
 我們深切體會中國程序員的痛苦，並動手做出改進。
 
@@ -36,11 +36,11 @@ HBuilderX在保存時會自動清理這些不合法的逗號，無需操心太�
 
 在js的json裏敲kv，會出現KeyValue代碼塊，
 
-<img src="/static/snapshots/tutorial/json_1.jpeg" style="zoom:50%" />
+<img src="/static/snapshots/tutorial/json/json_1.jpeg" style="zoom:50%" />
 
 回車後生成這樣的鍵值對
 
-<img src="/static/snapshots/tutorial/json_2.jpeg" style="zoom:50%" />
+<img src="/static/snapshots/tutorial/json/json_2.jpeg" style="zoom:50%" />
 
 此時敲完key的文字，然後按tab，就可以把光標自動轉到value那裏並選中value，然後繼續敲value的內容即可。
 不用再被敲冒號逗號打斷，專注於寫KeyValue內容，就像用excel。
@@ -74,11 +74,11 @@ windows上是Ctrl+Insert或Ctrl+Shift+r，mac上是Command+Shift+r。
 很多js方法把多個參數合併爲一個json對象，那麼這些參數的語法提示怎麼辦？
 HBuilderX也有完美的json參數語法提示支持。
 
-<img src="/static/snapshots/tutorial/json_3.jpeg" style="zoom:50%" />
+<img src="/static/snapshots/tutorial/json/json_3.jpeg" style="zoom:50%" />
 
 如果參數裏有回調函數，還可以在回車時自動生成匿名函數，如下：
 
-<img src="/static/snapshots/tutorial/json_4.jpeg" style="zoom:50%" />
+<img src="/static/snapshots/tutorial/json/json_4.jpeg" style="zoom:50%" />
 
 多想業務，少爲形式浪費時間，這是HBuilderX要幫助開發者做到的事。
 

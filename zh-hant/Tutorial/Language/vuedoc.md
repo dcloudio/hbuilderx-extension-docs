@@ -17,7 +17,7 @@
 * @description 這裏也是一個組件描述
 * @tutorial https://uniapp.dcloud.io/api/media/image?id=chooseimage
 * @property {String} type = [button|input|...值域] 這裏是屬性描述
-* @event {Function} tap 這是是事件描述 
+* @event {Function} tap 這是是事件描述
 * @example 這裏是示例代碼
 */
 ```
@@ -114,19 +114,19 @@ const { fooo = 'hello' } = defineProps<{
 
 **組件提示，效果如下：**
 
-<img src="/static/snapshots/tutorial/vuedoc_1.png" />
+<img src="/static/snapshots/tutorial/vuedoc/vuedoc_1.png" />
 
-<img src="/static/snapshots/tutorial/vuedoc_2.png" />
+<img src="/static/snapshots/tutorial/vuedoc/vuedoc_2.png" />
 
 
 **屬性提示：**
 
-<img src="/static/snapshots/tutorial/vuedoc_3.png" />
+<img src="/static/snapshots/tutorial/vuedoc/vuedoc_3.png" />
 
 
 **事件提示：**
 
-<img src="/static/snapshots/tutorial/vuedoc_4.png" />
+<img src="/static/snapshots/tutorial/vuedoc/vuedoc_4.png" />
 
 ### 特殊值域string@spec-types
 在vue Doc中也可以使用特殊值域string，用于限定属性能够使用的值。它紧跟在property后面使用。

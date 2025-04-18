@@ -25,20 +25,20 @@ HBuilderX 2.7.12+版本，优化了SFTP/FTP插件
 
 ### 2.1 创建ftp/sftp配置文件
 
-<img src="/static/snapshots/tutorial/ftp1.gif" style="zoom:80%" />
+<img src="/static/snapshots/tutorial/ftp/ftp1.gif" style="zoom:80%" />
 
 ### 2.2 同步目录
 
 - 从远程同步到本地
 - 从本地同步到远程
 
-<img src="/static/snapshots/tutorial/ftp2.png" style="zoom:80%" />
+<img src="/static/snapshots/tutorial/ftp/ftp2.png" style="zoom:80%" />
 
 ### 2.3 本地编辑远程文件、删除远程文件
 
 选中项目，右键菜单【FTP: 浏览远程文件】，即可打开`SFTP视图`
 
-<img src="/static/snapshots/tutorial/ftp3.png" style="zoom:80%" />
+<img src="/static/snapshots/tutorial/ftp/ftp3.png" style="zoom:80%" />
 
 
 ## 3. ftp配置文件参数说明

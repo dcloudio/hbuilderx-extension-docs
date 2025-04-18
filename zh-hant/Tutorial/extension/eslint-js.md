@@ -14,7 +14,7 @@ eslint-js, 用於校驗js和html中的js代碼
 
 點擊菜單【工具】【設置 -> 插件配置】【eslint-js】，即可看到eslint-js相關配置。
 
-<img src="/static/snapshots/tutorial/eslint-js.png" />
+<img src="/static/snapshots/tutorial/eslint/eslint-js.png" />
 
 **實時校驗、自動修復**
 
@@ -22,7 +22,7 @@ eslint-js, 用於校驗js和html中的js代碼
 
 1. 使用此功能，必須安裝[eslint-js](https://ext.dcloud.net.cn/plugin?id=2037)插件
 2. `vue-cli`項目，需要安裝eslint庫，並配置eslint規則.
-3. 若滿足上述條件，當編寫完代碼，保存時，若代碼中存在錯誤，自動修復; 
+3. 若滿足上述條件，當編寫完代碼，保存時，若代碼中存在錯誤，自動修復;
 4. 實時校驗功能，默認未開啓，需要手動開啓此功能
 
 
@@ -41,11 +41,11 @@ module.exports = {
         "node": true
     },
     "parser": "esprima",    //指定解析器
-    "parserOptions": {},    
+    "parserOptions": {},
     "rules": {}             //規則
 }
 ```
-  
+
 更多配置說明可以參考[options](https://cn.eslint.org/docs/user-guide/configuring)
 
 ## 如何增加規則?
@@ -108,7 +108,7 @@ module.exports = {
 
 【示例】eslint自動修復雙引號爲單引號，如下：
 
-<img src="/static/snapshots/tutorial/eslint-uniapp-example.gif" style="zoom: 90%; border: 1px solid #eee;" />
+<img src="/static/snapshots/tutorial/eslint/eslint-uniapp-example.gif" style="zoom: 90%; border: 1px solid #eee;" />
 
 
 ## 示例：vue-cli項目
@@ -133,7 +133,7 @@ module.exports = {
     ],
     rules: {
         "no-alert": 0,
-        "no-multi-spaces": "error", // 禁止多個空格 
+        "no-multi-spaces": "error", // 禁止多個空格
         "semi": [2, "always"] ,// 自動補充分號
        "quotes": ["error", "single"] // 使用單引號
     }

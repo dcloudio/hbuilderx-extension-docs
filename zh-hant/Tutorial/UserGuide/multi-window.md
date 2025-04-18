@@ -17,7 +17,7 @@
 
 在主窗體上，選中某個項目，右鍵菜單，點擊【在新窗體中打開】，即可將項目在單項目窗體中打開
 
-<img src="/static/snapshots/tutorial/multi-window-1.gif" style="zoom:90%" />
+<img src="/static/snapshots/tutorial/multi-window/multi-window-1.gif" style="zoom:90%" />
 
 
 備註： 單項目窗體，也可以直接將文件夾拖入。
@@ -33,5 +33,5 @@
 
 把HBuilderX固定在任務欄，點右鍵，可以快速打開某個項目的窗體
 
-<img src="/static/snapshots/tutorial/multi-window-2.png" style="zoom:50%" />
+<img src="/static/snapshots/tutorial/multi-window/multi-window-2.png" style="zoom:50%" />
 
