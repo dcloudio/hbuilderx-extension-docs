@@ -34,7 +34,7 @@ uniCloud包括`前端网页托管`功能，它是一个免费、高速的网页�
 
 ### 3.1 开通uniCloud
 
-开通uniCloud的地址为：[https://unicloud.dcloud.net.cn/](https://unicloud.dcloud.net.cn/); 
+开通uniCloud的地址为：[https://unicloud.dcloud.net.cn/](https://unicloud.dcloud.net.cn/);
 
 <img src="/static/snapshots/tutorial/markdown_share_2.jpeg" style="zoom:80%" />
 
@@ -62,6 +62,15 @@ uniCloud包括`前端网页托管`功能，它是一个免费、高速的网页�
 打开HBuilderX,  点击菜单【设置】，插件设置，配置`uniCloud`空间ID （目前只支持阿里云）
 
 <img src="/static/snapshots/tutorial/markdown_share_7.jpeg" style="zoom:80%" />
+
+`自定义文档分享的标题`设置项  
+此设置项会决定生成的html文件的标题, 参数说明:
+* `fileName`：当前md文件名
+* `firstMarkdownTitle`：md中的第一个标题, 无关标题(#)等级
+* `folderName`：文件夹名
+* `projectName`：项目名
+
+<img src="/static/snapshots/tutorial/markdown_share_10.jpeg" style="zoom:80%" />
 
 
 ## 4. 插件使用@usage
