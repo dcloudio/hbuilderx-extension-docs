@@ -60,11 +60,11 @@ Open HBuilderX, click [Settings] and choose "Plugins", then set `uniCloud` space
 
 <img src="/static/snapshots/tutorial/markdown_share/markdown_share_7_en.png" class="hd-img" />
 
-`Customize the title of document sharing` setting item
-This setting item determines the title of the generated HTML file.
-You can customize the title name, and support template string replacement. Example:
-`Title Name` or `Title Name - ${fileName}` or `${projectName}${folderName}${fileName}`
-By default, `${firstMarkdownTitle}` is used as the title. Parameter Description:
+`Customize the title of document sharing` setting item  
+This setting item determines the title of the generated HTML file.  
+You can customize the title name, and support template string replacement. Example:  
+`Title Name` or `Title Name - ${fileName}` or `${projectName}${folderName}${fileName}`  
+By default, `${firstMarkdownTitle}` is used as the title. Parameter Description:  
 * `${fileName}`: Current md file name
 * `${firstMarkdownTitle}`: The first title in md, regardless of the title (#) level
 * `${folderName}`: Folder name

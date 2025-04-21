@@ -59,11 +59,11 @@ uniCloud包括`前端網頁託管`功能，它是一個免費、高速的網頁�
 
 <img src="/static/snapshots/tutorial/markdown_share/markdown_share_7.jpeg" style="zoom:80%" />
 
-`自訂文件分享的標題`設定項
-此設定項會決定生成的html文件的標題
-可自訂標題名稱，且支援模板字串替換。例如：
-`標題名稱` 或 `標題名稱 - ${fileName}` 或 `${projectName}${fileName}`
-預設使用`${firstMarkdownTitle}`作為標題。參數說明：
+`自訂文件分享的標題`設定項  
+此設定項會決定生成的html文件的標題  
+可自訂標題名稱，且支援模板字串替換。例如：  
+`標題名稱` 或 `標題名稱 - ${fileName}` 或 `${projectName}${fileName}`  
+預設使用`${firstMarkdownTitle}`作為標題。參數說明：  
 * `${fileName}`：當前md檔案名
 * `${firstMarkdownTitle}`：md中的第一個標題，無關標題(#)等級
 * `${folderName}`：資料夾名
