@@ -1,3 +1,7 @@
+## 4.63.2025042307-alpha
+* Fixed some bugs
+
+
 ## 4.62.2025041603-alpha
 * Adjust secure packaging apktool update to solve 2.11.1, peace of mind when packaged ` android: foregroundServiceType Bug ` parameter values will be changed [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=16895)
 * Fixed the bug that Git plugin version 4.61 causes an extra terminal to open when using Git to commit on the Mac platform. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=16952)

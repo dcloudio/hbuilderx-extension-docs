@@ -1,3 +1,6 @@
+## 4.63.2025042307-alpha
+* 修复 uniapp框架的一些Bug
+
 ## 4.62.2025041603-alpha
 * 调整 安心打包 apktool更新为2.11.1，解决安心打包时android:foregroundServiceType的参数值会被改变的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=16895)
 * 修复 Git插件 4.61版本引发的 Mac平台上使用Git提交会多打开一个终端的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=16952)
