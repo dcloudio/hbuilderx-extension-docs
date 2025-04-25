@@ -99,7 +99,7 @@ Please follow our steps to customize code color:
 
 **Complete steps**：
 
-<img src="/static/snapshots/tutorial/custom_token_color.gif" style="border: 1px solid #eee;border-radius: 5px; "  />
+<img src="/static/snapshots/tutorial/menu_tool/custom_token_color.gif" style="border: 1px solid #eee;border-radius: 5px; "  />
 
 Notes: Now, you can customize the theme based on the 3 built-in themes `Default`, `Monokai` and `Atom One Dark` by overriding the theme settings, but you cannot create new themes.
 

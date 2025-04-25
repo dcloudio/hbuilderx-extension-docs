@@ -16,7 +16,7 @@ HBuilderX支持多种项目类型，不同类型的项目的运行也是不一�
 
 如下为不同项目类型的图例：
 
-<img src="/static/snapshots/tutorial/ProjectType.png" style="zoom: 70%;" />
+<img src="/static/snapshots/tutorial/project/ProjectType.png" style="zoom: 70%;" />
 
 #### 注意事项
 

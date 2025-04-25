@@ -16,7 +16,7 @@ keyword: uninstall,卸载
 
 > 如下图。MacOSX，打开`访达`，左侧点击`应用程序`，进入应用程序窗口，找到HBuilderX，右键菜单，点击`移到废纸篓`
 
-<img src="/static/snapshots/mac_uninstall.png" style="zoom: 50%; border:1px solid #eee; border-radius: 20px;" />
+<img src="/static/snapshots/tutorial/install_macosx/mac_uninstall.png" style="zoom: 50%; border:1px solid #eee; border-radius: 20px;" />
 
 #### 2. 删除数据目录
 

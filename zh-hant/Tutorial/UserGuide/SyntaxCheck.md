@@ -31,13 +31,13 @@ HBuilderX，代碼語法校驗，需要安裝相應插件。
 
 如下圖所示，在對應的文件上，右鍵菜單，點擊【驗證本文檔語法】，如未出現此菜單，請先安裝相關插件。
 
-<img src="/static/snapshots/tutorial/syntaxcheck.png" style="zoom:90%;" />
+<img src="/static/snapshots/tutorial/syntaxcheck/yntaxcheck.png" style="zoom:90%;" />
 
 校驗概要結果會顯示在`狀態欄`
 
 比如有2個錯誤（如下圖），可以按`F4`切換到不同的錯誤處，畫有紅波浪線（如下圖），鼠標移到紅波浪線上會顯示具體的錯誤信息。（如下圖示例）
 
-<img src="/static/snapshots/started_tutorial/plugins-syntax-check-01.png" style="zoom: 90%;border:1px solid #eee;border-radius: 5px;" />
+<img src="/static/snapshots/tutorial/syntaxcheck/plugins-syntax-check-01.png" style="zoom: 90%;border:1px solid #eee;border-radius: 5px;" />
 
 ## 如何开启和关闭HBuilderX内置的js和ts语法校验？@builtInCheck
 
@@ -45,4 +45,4 @@ HBuilderX，代碼語法校驗，需要安裝相應插件。
 
 HBuilderX菜单【设置】【语言服务配置】，可以开启或关闭js、ts语法校验。具体如下图：
 
-<img src="https://web-assets.dcloud.net.cn/hbuilderx-doc/hx_settings_sytax_check.jpg" class="hd-img" />
+<img src="/static/snapshots/tutorial/syntaxcheck/hx_settings_sytax_check.jpg" class="hd-img" />

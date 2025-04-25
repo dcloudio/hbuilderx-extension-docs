@@ -17,7 +17,7 @@ In HBuilderX, the use of `scss/sass` requires the installation of the `compile-n
 - The uni-app project will automatically compile files that use sass。
 - How to compile the sass file separately. Select the sass file, right-click and choose menu -> External Commands -> Scss/Sass compilation -> Compile Scss/Sass.
 
-<img src="/static/snapshots/tutorial/menu_tool/project-explorer_menu_en.png"  class="hd-img"/>
+<img src="/static/snapshots/tutorial/plugins/sass/sass_1.en.png"  class="hd-img"/>
 
 ## Configuration File
 
@@ -25,7 +25,7 @@ The configuration file of compile-node-sass is package.json.
 
 Click the menu [Tools -> External Command Setting -> compile-node-sass -> package.json] to open the package.json file.
 
-<img src="/static/snapshots/tutorial/menu_tool/menu_sass_en.png"  class="hd-img"/>
+<img src="/static/snapshots/tutorial/plugins/sass/sass_2.en.png"  class="hd-img"/>
 
 ```json
 {

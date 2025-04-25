@@ -59,7 +59,7 @@ commands二級模塊對象，用於處理和`命令`相關的邏輯。`命令`�
 
 執行指定id的`命令`。除了插件擴展的`命令`外，還可以執行HBuilderX內置的`命令`，完整的內置`命令`列表可以通過HBuilderX的頂部菜單`工具`-`自定義快捷鍵`，然後在打開的配置文件左側部分找到所有列出的`command`字段，如下圖：
 
-<img src="/static/snapshots/commands@2x.png" style="zoom:50%" />
+<img src="/static/snapshots/api/commands@2x.png" style="zoom:50%" />
 
 ##### 參數說明
 

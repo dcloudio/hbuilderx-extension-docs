@@ -23,7 +23,7 @@ HBuilderX，Windows为zip包，解压后才能使用。
 
 > 特别注意：解压过程中，不要中断解压。
 
-<img src="/static/snapshots/tutorial/install_windows.png" />
+<img src="/static/snapshots/tutorial/install_windows/install_windows.png" />
 
 ### 错误的打开方式@wrong-approach
 
@@ -32,11 +32,11 @@ HBuilderX，Windows为zip包，解压后才能使用。
 
 错误的打开方式：
 
-<img src="/static/snapshots/tutorial/windows_error_open.min.png" style="zoom:80%" />
+<img src="/static/snapshots/tutorial/install_windows/windows_error_open.min.png" style="zoom:80%" />
 
 ### 创建桌面快捷方式@desktop-shortcut
 
-<img src="/static/snapshots/tutorial/create_shortcut.png" style="zoom:80%" />
+<img src="/static/snapshots/tutorial/install_windows/create_shortcut.png" style="zoom:80%" />
 
 ### 启动问题排查指南@startup-troubleshooting
 

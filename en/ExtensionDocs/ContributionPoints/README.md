@@ -42,7 +42,7 @@ The configuration in the properties is a jsonobject object, the key of the objec
 ```
 As follows：
 
-<img src="/static/snapshots/plugins_setting.jpg" style="zoom:50%" />
+<img src="/static/snapshots/tutorial/plugins/plugins_setting.jpg" style="zoom:50%" />
 
 
 ## commands

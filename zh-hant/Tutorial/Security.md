@@ -6,11 +6,11 @@
 
 #### 360 審覈截圖
 
-<img src="/static/snapshots/tutorial/Security_1.png" style="zoom: 80%;" />
+<img src="/static/snapshots/tutorial/security/Security_1.png" style="zoom: 80%;" />
 
 #### 微軟審覈截圖
 
-<img src="/static/snapshots/tutorial/Security_2.png" style="zoom: 80%;" />
+<img src="/static/snapshots/tutorial/security/Security_2.png" style="zoom: 80%;" />
 
 #### 爲什麼通過檢測，有時我本機的微軟殺毒軟件仍然報警
 

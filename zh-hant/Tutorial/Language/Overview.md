@@ -10,7 +10,7 @@
 
 HBuilderX中，在可以輸入js的文件，比如js、html等文件裏，（不含vue、ts），底部狀態欄有“語法提示庫”，可以加載內置的框架語法庫。
 
-<img src="/static/snapshots/tutorial/lang_1.png" />
+<img src="/static/snapshots/tutorial/language/overview/lang_1.png" />
 
 其中node.js也是作爲一種框架語法而存在的。
 勾選相應js框架語法後，js區域即可提示相應語法（初次勾選需要延時幾秒後才能使用）
@@ -28,7 +28,7 @@ HBuilderX中，在可以輸入js的文件，比如js、html等文件裏，（不
 ## jsdoc+
 jsdoc是以註釋方式聲明方法、參數、屬性，HBuilderX提供了經過擴展的jsdoc+，可實現強大的語法提示，詳見：[https://ask.dcloud.net.cn/docs/#//ask.dcloud.net.cn/article/129](https://ask.dcloud.net.cn/docs/#//ask.dcloud.net.cn/article/129)
 
-<img src="/static/snapshots/tutorial/lang_2.png" style="zoom:50%;" />
+<img src="/static/snapshots/tutorial/language/overview/lang_2.png" style="zoom:50%;" />
 
 ## vue doc
 vue組件開發者，如果想給組件使用者提供更好的使用方式，應該給組件寫vue doc。
@@ -41,7 +41,7 @@ vue doc是一種類似jsdoc的方式，通過在註釋裏描述組件的方法�
 一些vue的組件庫，已經按照vetur規範製作語法提示庫，比如Element UI、Onsen UI、Bootstrap Vue等框架。
 這些框架npm安裝是在node_module下會自帶一個json語法庫，或在HBuilderX新建模板中選擇element ui模板安裝也會包含該庫。有了這個語法庫，就可以直接代碼提示。如下圖
 
-<img src="/static/snapshots/tutorial/lang_3.png" style="zoom:50%;"/>
+<img src="/static/snapshots/tutorial/language/overview/lang_3.png" style="zoom:50%;"/>
 
 ## 代碼塊
 
@@ -60,8 +60,8 @@ HBuilderX支持自定義代碼塊，在菜單工具-代碼塊設置中可自行�
 
 按下`F1`会在浏览器打开帮助文档。
 
-<img src="/static/snapshots/tutorial/language/hover_helper.png" style="zoom:45%;border: 1px solid #eee;"/>
+<img src="/static/snapshots/tutorial/language/overview/hover_helper.png" style="zoom:45%;border: 1px solid #eee;"/>
 
 如果您不需要代码悬浮帮助，可以在【设置 - 编辑器设置】中，手动关闭此功能。
 
-<img src="/static/snapshots/tutorial/language/settings_hover_help.png" style="zoom:50%;border: 1px solid #eee;"/>
+<img src="/static/snapshots/tutorial/language/overview/settings_hover_help.png" style="zoom:50%;border: 1px solid #eee;"/>

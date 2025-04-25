@@ -12,7 +12,7 @@
 
 > As shown below. Open `Finder`, click `Applications` on the left, in the application list, find HBuilderX, right-click the menu, and click `Move to Bin`
 
-<img src="/static/snapshots/mac_uninstall_en.png" style="zoom: 50%; border:1px solid #eee; border-radius: 20px;" />
+<img src="/static/snapshots/tutorial/install_macosx/mac_uninstall_en.png" style="zoom: 50%; border:1px solid #eee; border-radius: 20px;" />
 
 #### 2. Delete data directory
 

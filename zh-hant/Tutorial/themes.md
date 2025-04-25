@@ -90,7 +90,7 @@
 
 **完整的操作動畫如下圖**：
 
-<img src="/static/snapshots/tutorial/custom_token_color.gif" style="border: 1px solid #eee;border-radius: 5px; "  />
+<img src="/static/snapshots/tutorial/menu_tool/custom_token_color.gif" style="border: 1px solid #eee;border-radius: 5px; "  />
 
 注意:
 
@@ -101,4 +101,4 @@
 
 菜單【工具】【項目管理器圖標主題】，可以調整文件圖標。
 
-<img src="/static/snapshots/tutorial/icon.jpg" style="zoom: 50%; border: 1px solid #eee;border-radius: 5px; " />
+<img src="/static/snapshots/tutorial/menu_tool/icon.jpg" style="zoom: 50%; border: 1px solid #eee;border-radius: 5px; " />

@@ -4,7 +4,7 @@ In HBuilderX, you can complete most operations directly through the keyboard.
 
 HBuilderX has built-in 5 shortcut key modes, `HBuilderX`、`VS Code`、`Sublime Text`、`IntelliJ Idea / Webstorm`、`Eclipse`
 
-<img src="/static/snapshots/tutorial/keyboard_en.png" style="border: 1px solid #eee;"/>
+<img src="/static/snapshots/tutorial/keyboard/keyboard.en.png" style="border: 1px solid #eee;"/>
 
 ## Custom shortcuts
 
@@ -14,7 +14,7 @@ Click the menu [Tools] [Custom Keybingdings] to open the custom shortcut key con
 
 The shortcut key setting consists of `command` and `key`.
 
-<img src="/static/snapshots/tutorial/keyboard_set.png"  style="zoom: 80%;"/>
+<img src="/static/snapshots/tutorial/keyboard/keyboard_set.png"  style="zoom: 80%;"/>
 
 FAQ：[HBuilderX Shortcut key concept.](/Tutorial/Other/keybindings_idea)
 

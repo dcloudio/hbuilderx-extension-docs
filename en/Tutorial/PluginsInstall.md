@@ -6,7 +6,7 @@ In HBuilderX, click the menu [Tools] [Plugin Installation] to open the plugin in
 
 In addition to the core plugins shown in the figure below, please go to [plugin market](https://ext.dcloud.net.cn/?cat1=1&cat2=11&orderBy=TotalDownload) to download other plugins.
 
-<img src="/static/snapshots/tutorial/plugins_install_en_1.png" style="zoom: 45%;border: 1px solid #eee;border-radius: 20px;"/>
+<img src="/static/snapshots/tutorial/plugins_install/plugins_install_1.en.png" style="zoom: 45%;border: 1px solid #eee;border-radius: 20px;"/>
 
 ## Installed plugins
 
@@ -14,13 +14,13 @@ The installed plugins of HBuilderX will be displayed in [Installed].
 
 When a new version of the plugin is released, this plugin will display the word `upgrade`.
 
-<img src="/static/snapshots/tutorial/plugins_install_en_2.png" style="zoom: 45%;border: 1px solid #eee;border-radius: 20px;"/>
+<img src="/static/snapshots/tutorial/plugins_install/plugins_install_2.en.png" style="zoom: 45%;border: 1px solid #eee;border-radius: 20px;"/>
 
 ## Install plugins from market
 
 In [Plugin Market](https://ext.dcloud.net.cn/?cat1=1&cat2=11&orderBy=TotalDownload), enter the plugin details page, click [Import Plugin], the installed HBuilderX will be called up.
 
-<img src="/static/snapshots/tutorial/plugins_install_3.jpg" style="zoom: 45%;border: 1px solid #eee;border-radius: 20px;"/>
+<img src="/static/snapshots/tutorial/plugins_install/plugins_install_3.jpg" style="zoom: 45%;border: 1px solid #eee;border-radius: 20px;"/>
 
 ## Install plugin offline
 
@@ -51,7 +51,7 @@ open /Applications/HBuilderX-Alpha.app/Contents/HBuilderX/plugins/
 
 Recently, a part of our users have been getting problems with `plugins install`, e.g.
 
-<img src="/static/snapshots/plugins/plugin_install_fail.png" class="hd-img" />
+<img src="/static/snapshots/tutorial/plugins_install/plugin_install_fail.png" class="hd-img" />
 
 When failed on install plugins, click on the window menu 【Help - View Running Logs】 to find out the related errors, according them to get a deal.
 

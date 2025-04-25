@@ -9,7 +9,7 @@
 - Windows: 顶部菜单【工具】-> 【设置】(快捷键: `ctrl` + `alt` + `,`)
 - MacOSX: 顶部菜单【HBuilderX】-> 【偏好设置】(快捷键: `command` + `,`)
 
-<img src="/static/snapshots/tutorial/settings.png" style="zoom:90%" />
+<img src="/static/snapshots/tutorial/settings/settings.png" style="zoom:90%" />
 
 设置视图，主要分为5部分：
 

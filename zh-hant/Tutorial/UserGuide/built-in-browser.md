@@ -19,7 +19,7 @@ HBuilderX，內置瀏覽器，支持邊改邊預覽。
 
 **示例**
 
-<img src="/static/snapshots/tutorial/browser_1.gif" style="zoom: 90%;border:1px solid #eee;" />
+<img src="/static/snapshots/tutorial/browser/browser_1.gif" style="zoom: 90%;border:1px solid #eee;" />
 
 ### 控制檯log跳轉到指定源碼位置@log-jumps-to-source-location
 

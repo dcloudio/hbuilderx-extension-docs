@@ -18,7 +18,7 @@ compile-node-sass插件，编译sass/scss为css。
 - uni-app项目，会自动编译使用sass的文件。
 - 单独编译sass文件。选中sass文件，点击右键菜单 -> 外部命令 -> sass -> 编译scss/sass。
 
-<img src="/static/snapshots/tutorial/sass_1.jpeg" />
+<img src="/static/snapshots/tutorial/plugins/sass/sass_1.jpeg" />
 
 ### 配置文件@config
 
@@ -26,7 +26,7 @@ compile-node-sass的配置文件为package.json。
 
 点击菜单【工具 -> 插件配置 -> compile-node-sass -> package.json】，即可打开package.json文件。
 
-<img src="/static/snapshots/tutorial/sass_2.png" />
+<img src="/static/snapshots/tutorial/plugins/sass/sass_2.png" />
 
 ### 快捷键@shortcut
 

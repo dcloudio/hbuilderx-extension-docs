@@ -24,7 +24,7 @@
 
 如下圖，您可以看到幾個例子
 
-<img src="/static/snapshots/tutorial/externalCommands.png" />
+<img src="/static/snapshots/tutorial/menu_tool/externalCommands.png" />
 
 點擊菜單【工具】-->【外部命令】-->【自定義外部命令】，就可以自定義外部命令，格式爲json。
 

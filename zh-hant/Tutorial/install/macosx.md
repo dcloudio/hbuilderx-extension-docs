@@ -8,15 +8,15 @@ HBuilderX下載地址: [下載地址](https://www.dcloud.io/hbuilderx.html)
 
 如圖，將HBuilderX`拖`到Applications，纔是正確的安裝姿勢。
 
-<img src="/static/snapshots/tutorial/install_mac.jpeg" />
+<img src="/static/snapshots/tutorial/install_macosx/install_mac.jpeg" />
 
 > MacOSX，軟件必須安裝到`/Applications`目錄，如未安裝到此目錄，可能會出現插件安裝失敗、項目創建失敗等問題。
 
 如果啓動遇到下列問題，請到【系統設置】中解決。
 
-<img src="/static/snapshots/tutorial/mac_download1.min.jpg" style="zoom: 40%; border: 1px solid #eee;border-radius: 10px;"/>
+<img src="/static/snapshots/tutorial/install_macosx/mac_download1.min.jpg" style="zoom: 40%; border: 1px solid #eee;border-radius: 10px;"/>
 
-<img src="/static/snapshots/tutorial/mac_download2.min.jpg" style="zoom: 40%; border: 1px solid #eee;border-radius: 10px;"/>
+<img src="/static/snapshots/tutorial/install_macosx/mac_download2.min.jpg" style="zoom: 40%; border: 1px solid #eee;border-radius: 10px;"/>
 
 ## 配置文件目錄@config
 

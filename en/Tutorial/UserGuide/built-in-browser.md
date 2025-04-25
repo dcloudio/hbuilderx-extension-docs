@@ -19,7 +19,7 @@ HBuilderX has built-in browser and support live preview。
 
 **Example**
 
-<img src="/static/snapshots/tutorial/browser_1_en.gif" style="zoom: 90%;border:1px solid #eee;" />
+<img src="/static/snapshots/tutorial/browser/browser_1_en.gif" style="zoom: 90%;border:1px solid #eee;" />
 
 ### The console log jumps to the specified source location@log-jumps-to-source-location
 

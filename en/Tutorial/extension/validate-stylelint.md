@@ -9,7 +9,7 @@ This plugin needs to be installed at [HBuilderX Plugin Market](https://ext.dclou
 
 Menu [Settings] -> [Plugins] -> [stylelint], click on `.stylelintrc.js` to open the configuration file.
   
-<img src="/static/snapshots/plugins/plugin_setting_en.png" style="zoom: 45%; border: 1px solid #eee;border-radius: 20px;"/>
+<img src="/static/snapshots/tutorial/plugins/stylelint.en.png" style="zoom: 45%; border: 1px solid #eee;border-radius: 20px;"/>
 
 ## Rule
 

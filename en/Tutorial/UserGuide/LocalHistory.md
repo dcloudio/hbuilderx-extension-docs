@@ -4,7 +4,7 @@ In HBuilderX, files are automatically backed up when they are modified and saved
 
 Open the file in the editor, then click the right-click menu, and click [Local History]
 
-<img src="/static/snapshots/tutorial/localhistory.gif" style="zoom: 89%;border: 1px solid #eee;border-radius: 5px;"/>
+<img src="/static/snapshots/tutorial/file/localhistory.gif" style="zoom: 89%;border: 1px solid #eee;border-radius: 5px;"/>
 
 
 #### Settings

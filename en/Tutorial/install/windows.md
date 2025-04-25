@@ -18,7 +18,7 @@ Download a Zip archive, extract it and run exe file from there.
 1. Right click the zip file and choose `Extract Here`.
 2. Open HBuilderX.exe from unzipped folder.
 
-<img src="/static/snapshots/tutorial/install_windows_en.png" style="zoom: 40%;"/>
+<img src="/static/snapshots/tutorial/install_windows/install_windows_en.png" style="zoom: 40%;"/>
 
 ### Wrong Approach@wrong-approach
 
@@ -27,7 +27,7 @@ Download a Zip archive, extract it and run exe file from there.
 
 ### Create Desktop Shortcut@desktop-shortcut
 
-<img src="/static/snapshots/tutorial/create_shortcut_en.png" style="zoom:40%" />
+<img src="/static/snapshots/tutorial/install_windows/create_shortcut_en.png" style="zoom:40%" />
 
 ### Startup Troubleshooting@startup-troubleshooting
 

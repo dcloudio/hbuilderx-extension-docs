@@ -9,7 +9,7 @@ HBuilderX启动后，点击菜单【工具】【插件安装】，即可打开�
 
 除下图所示插件外，其它插件，需要到[插件市场](https://ext.dcloud.net.cn/?cat1=1&cat2=11&orderBy=TotalDownload)进行下载。
 
-<img src="/static/snapshots/tutorial/plugins_install_1.jpg" style="zoom: 45%;border: 1px solid #eee;border-radius: 20px;"/>
+<img src="/static/snapshots/tutorial/plugins_install/plugins_install_1.jpg" style="zoom: 45%;border: 1px solid #eee;border-radius: 20px;"/>
 
 ## 已安装插件@installed
 
@@ -17,13 +17,13 @@ HBuilderX启动后，点击菜单【工具】【插件安装】，即可打开�
 
 当服务器存在高版本插件时，相应插件会显示`升级`字样。
 
-<img src="/static/snapshots/tutorial/plugins_install_2.jpg" style="zoom: 45%;border: 1px solid #eee;border-radius: 20px;"/>
+<img src="/static/snapshots/tutorial/plugins_install/plugins_install_2.jpg" style="zoom: 45%;border: 1px solid #eee;border-radius: 20px;"/>
 
 ## 插件市场安装插件@market
 
 如下图所示，在[插件市场](https://ext.dcloud.net.cn/?cat1=1&cat2=11&orderBy=TotalDownload)，进入插件详情页，点击【导入插件】，会自动拉起本地安装的HBuilderX。
 
-<img src="/static/snapshots/tutorial/plugins_install_3.jpg" style="zoom: 45%;border: 1px solid #eee;border-radius: 20px;"/>
+<img src="/static/snapshots/tutorial/plugins_install/plugins_install_3.jpg" style="zoom: 45%;border: 1px solid #eee;border-radius: 20px;"/>
 
 ## 离线安装插件@OfflineInstall
 
@@ -54,7 +54,7 @@ open /Applications/HBuilderX-Alpha.app/Contents/HBuilderX/plugins/
 
 最近，小部分用户遇到`插件安装`失败的问题，如下:
 
-<img src="/static/snapshots/plugins/plugin_install_fail.png" class="hd-img" />
+<img src="/static/snapshots/tutorial/plugins_install/plugin_install_fail.png" class="hd-img" />
 
 插件安装失败时，点击顶部菜单【帮助】【查看运行日志】，即可看到相关错误，根据相关错误解决问题。
 
@@ -78,7 +78,7 @@ open /Applications/HBuilderX-Alpha.app/Contents/HBuilderX/plugins/
 
 在HBuilderX 3.5.2-alpha+版本，您可能会看到如下弹窗：
 
-<img src="/static/snapshots/plugins/plugin-install-fail-message-box.jpg" class="hd-img" />
+<img src="/static/snapshots/tutorial/plugins_install/plugin-install-fail-message-box.jpg" class="hd-img" />
 
 这些信息代表，插件下载后，拷贝到指定目录失败了。
 

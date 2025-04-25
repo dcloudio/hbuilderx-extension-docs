@@ -58,7 +58,7 @@ User-defined shortcut keys: Users who use the extension can learn the ID of the 
 
 Execute the `command` with the specified id. In addition to the `commands` extended by the extension, you can also execute the built-in `commands` of HBuilderX. The complete list of built-in `commands` can be through the top menu of HBuilderX `tools`-`custom shortcut keys`, and then on the left of the opened configuration file In the side section, find all the listed `command` fields, as shown below:
 
-<img src="/static/snapshots/commands@2x.png" style="zoom:50%" />
+<img src="/static/snapshots/api/commands@2x.png" style="zoom:50%" />
 
 ##### Parameter
 

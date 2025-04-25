@@ -61,7 +61,7 @@ DCloud为开发者提供了网站发布、App发布等功能，`前端网页托�
 
   在菜单视图中，或者在左下角状态栏中，点击`前端网页托管`，可在左侧打开前端网页托管管理器。如下图
 
-<img src="/static/snapshots/tutorial/hosting.jpeg" style="border: 1px solid #eee; zoom: 50%;">
+<img src="/static/snapshots/tutorial/unicloud/hosting.jpeg" style="border: 1px solid #eee; zoom: 50%;">
 
   在前端网页托管管理器中，可以看到当前用户的服务空间列表，置灰表示该服务空间还没有开通前端网页托管，点击后可根据提示开通。（如上图中置灰的ali1服务空间）。
 

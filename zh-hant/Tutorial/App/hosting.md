@@ -61,7 +61,7 @@ DCloud爲開發者提供了網站發佈、App發佈等功能，`前端網頁託�
 
   在菜單視圖中，或者在左下角狀態欄中，點擊`前端網頁託管`，可在左側打開前端網頁託管管理器。如下圖
 
-<img src="/static/snapshots/tutorial/hosting.jpeg" style="border: 1px solid #eee; zoom: 50%;">
+<img src="/static/snapshots/tutorial/unicloud/hosting.jpeg" style="border: 1px solid #eee; zoom: 50%;">
 
   在前端網頁託管管理器中，可以看到當前用戶的服務空間列表，置灰表示該服務空間還沒有開通前端網頁託管，點擊後可根據提示開通。（如上圖中置灰的ali1服務空間）。
 

@@ -8,7 +8,7 @@ HBuilderX download url:  [download](https://www.dcloud.io/hbuilderx.html)
 
 Drag and drop the HBuilderX app to the applications folder.
 
-<img src="/static/snapshots/tutorial/install_mac.jpeg" />
+<img src="/static/snapshots/tutorial/install_macosx/install_mac.jpeg" />
 
 > The HBuilder application should be installed in the /Applications directory on MacOSX to avoid problems such as extension installation failure and project creation failure.
 > Please jump to `System Perference -> Security & Privacy -> General`, allow to use HBuilderX.app.

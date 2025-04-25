@@ -12,7 +12,7 @@
 
 > 如下圖。MacOSX，打開`訪達`，左側點擊`應用程序`，進入應用程序窗口，找到HBuilderX，右鍵菜單，點擊`移到廢紙簍`
 
-<img src="/static/snapshots/mac_uninstall.png" style="zoom: 50%; border:1px solid #eee; border-radius: 20px;" />
+<img src="/static/snapshots/tutorial/install_macosx/mac_uninstall.png" style="zoom: 50%; border:1px solid #eee; border-radius: 20px;" />
 
 #### 2. 刪除數據目錄
 

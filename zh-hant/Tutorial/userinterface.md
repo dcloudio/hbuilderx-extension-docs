@@ -2,7 +2,7 @@
 
 像許多其他代碼編輯器一樣，HBuilderX採用通用的用戶界面和左側的資源管理器佈局，而右側的編輯器則顯示已打開文件的內容。 
 
-<img src="/static/snapshots/tutorial/HBuilderX.png" style="zoom:90%" />
+<img src="/static/snapshots/tutorial/userinterface/HBuilderX.png" style="zoom:90%" />
 
 ### 基本佈局@basic-layout
 
@@ -22,7 +22,7 @@
 
 迷你地圖, 顯示在編輯器的右側。您可以單擊或拖動陰影區域以快速跳至文件的不同部分。
 
-<img src="/static/snapshots/tutorial/minimap.png" style="zoom:90%" />
+<img src="/static/snapshots/tutorial/userinterface/minimap.png" style="zoom:90%" />
 
 提示：
 - 您可以在編輯器最右側，點擊右鍵，關閉或打開迷你地圖。
@@ -34,7 +34,7 @@
 
 可以點底欄左側紅框內的大綱按鈕，對應的快捷鍵是【win：alt+w、mac：ctrl+w】
 
-<img src="/static/snapshots/tutorial/outline.png" style="zoom:90%" />
+<img src="/static/snapshots/tutorial/userinterface/outline.png" style="zoom:90%" />
 
 ### 內置資源管理器@Built-in-Explorer
 
@@ -59,7 +59,7 @@ HBuilderX，默認情況下，編輯器組以垂直列布局。
 
 菜單 “視圖 -> 分欄”，有一組預定義的編輯器佈局。
 
-<img src="/static/snapshots/tutorial/subfield.png" style="zoom:98%" />
+<img src="/static/snapshots/tutorial/userinterface/subfield.png" style="zoom:98%" />
 
 ### 單窗體@single-window
 

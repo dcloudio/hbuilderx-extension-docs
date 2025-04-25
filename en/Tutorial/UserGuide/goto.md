@@ -23,13 +23,13 @@ In HBuilderX, `Alt+Left` (MacOSX: `ctrl + -`) or click `<` on the toolbar, to re
 
 Go to line shortcut：`ctrl + G`
 
-<img src="/static/snapshots/tutorial/goto/goto_line_en.png" class="hd-img" />
+<img src="/static/snapshots/tutorial/goto/goto_line.en.png" class="hd-img" />
 
 ## Goto the specified rank@goto-line-column
 
 > Supported from HBuilderX 2.8.10+
 
-<img src="/static/snapshots/tutorial/goto/goto_lc_en.png" class="hd-img" />
+<img src="/static/snapshots/tutorial/goto/goto_lc.en.png" class="hd-img" />
 
 - input `0` to jump to the first line (Supported from HBuilderX 3.1.13+)
 - input `$` to jump to the last line. (Supported from HBuilderX 3.1.13+)
@@ -50,7 +50,7 @@ HBuilderX has a powerful syntax analysis engine that can accurately jump to the 
 
 The shortcut key to go to the definition is `Alt+D`, and the mouse operation is `Alt+left click`. 
 
-<img src="/static/snapshots/started_tutorial/goto-definition-en.gif" style="zoom: 90%;border:1px solid #eee;border-radius: 5px;" />
+<img src="/static/snapshots/tutorial/goto/goto-definition-en.gif" style="zoom: 90%;border:1px solid #eee;border-radius: 5px;" />
 
 > Remarks: Support switching [Ctrl+left mouse button] or [Alt+left mouse button] to go to definition (menu [select], [switch to "Alt+Click" for Multi-Cursor] or [switch to "⌘+Click" for Multi-Cursor])
 
@@ -58,7 +58,7 @@ HBuilderX supports multi-result goto definition.
 
 When there are multiple results for goto definition, hovering the mouse with `Alt` key pressed will list all the results. You can jump to the desired result by `mouse selection` or `using the up and down arrow keys`.
 
-<img src="https://web-ext-storage.dcloud.net.cn/hx/goto/goto-def-mult-64.gif" style="zoom: 90%;border:1px solid #eee;border-radius: 5px;" />
+<img src="/static/snapshots/tutorial/goto/goto-def-mult-64.gif" style="zoom: 90%;border:1px solid #eee;border-radius: 5px;" />
 
 ## Goto Definition to New Column@goto-definition-to-column
 
@@ -66,7 +66,7 @@ Another feature of HBuilderX is `Goto definition to column`.
 
 `ctrl+alt+left click`, you can open the defined code on the other side for easy viewing.
 
-<img src="/static/snapshots/started_tutorial/goto-definition-col-en.gif" style="zoom: 90%;border:1px solid #eee;border-radius: 5px;" />
+<img src="/static/snapshots/tutorial/goto/goto-definition-col-en.gif" style="zoom: 90%;border:1px solid #eee;border-radius: 5px;" />
 
 
 

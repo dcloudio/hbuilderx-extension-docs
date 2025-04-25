@@ -4,7 +4,7 @@ HBuilderX，文件修改、保存時在本地進行備份，防止意外丟失�
 
 在編輯器打開的文件上，點擊右鍵菜單，點擊【本地歷史記錄】
 
-<img src="/static/snapshots/tutorial/localhistory.gif" style="zoom: 89%;border: 1px solid #eee;border-radius: 5px;"/>
+<img src="/static/snapshots/tutorial/file/localhistory.gif" style="zoom: 89%;border: 1px solid #eee;border-radius: 5px;"/>
 
 
 #### 配置

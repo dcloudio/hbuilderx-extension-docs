@@ -6,11 +6,11 @@
 
 #### 360 审核截图@360
 
-<img src="/static/snapshots/tutorial/Security_1.png" style="zoom: 80%;" />
+<img src="/static/snapshots/tutorial/security/Security_1.png" style="zoom: 80%;" />
 
 #### 微软审核截图@microsoft
 
-<img src="/static/snapshots/tutorial/Security_2.png" style="zoom: 80%;" />
+<img src="/static/snapshots/tutorial/security/Security_2.png" style="zoom: 80%;" />
 
 #### 为什么通过检测，有时我本机的微软杀毒软件仍然报警
 

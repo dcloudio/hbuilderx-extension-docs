@@ -8,11 +8,11 @@
 
 敲`ife`
 
-<img src="/static/snapshots/tutorial/snippets_3.png" style="zoom: 90%;" />
+<img src="/static/snapshots/tutorial/ls_snippets/snippets_3.png" style="zoom: 90%;" />
 
 回車後生成if結構體
 
-<img src="/static/snapshots/tutorial/snippets_4.png" style="zoom: 90%;" />
+<img src="/static/snapshots/tutorial/ls_snippets/snippets_4.png" style="zoom: 90%;" />
 
 ## 常用代碼塊列表
 
@@ -46,11 +46,11 @@ HBuilderX已經內置了大量常用的代碼塊，熟悉這些代碼塊，對�
 
 查看內建的代碼塊，點擊菜單-工具-代碼塊設置，選擇你要查看的語言的代碼塊。
 
-<img src="/static/snapshots/tutorial/snippets_1.png" style="zoom: 90%;" />
+<img src="/static/snapshots/tutorial/ls_snippets/snippets_1.png" style="zoom: 90%;" />
 
 打開的界面中，左側即是預置的代碼塊，右側是開發者可以自己擴展代碼塊的地方。
 
-<img src="/static/snapshots/tutorial/snippets_2.png" style="zoom: 80%;" />
+<img src="/static/snapshots/tutorial/ls_snippets/snippets_2.png" style="zoom: 80%;" />
 
 
 ## 自定義代碼塊
@@ -111,7 +111,7 @@ HBuilderX使用json定義代碼塊的格式，兼容vscode的代碼塊格式，�
 
 HBuilderX，顶部菜单【工具 代码块设置 自定义项目代码块】。创建的代码块文件，会出现在项目根目录下的`.hbuilderx`目录下。
 
-<img src="/static/snapshots/tutorial/language/project_snippets.png" class="hd-img"/>
+<img src="/static/snapshots/tutorial/ls_snippets/project_snippets.png" class="hd-img"/>
 
 ## 註釋模板同步時間
 
@@ -139,7 +139,7 @@ HBuilderX，顶部菜单【工具 代码块设置 自定义项目代码块】。
 }
 ```
 
-<img src="/static/snapshots/tutorial/Snippets_time.gif" style="zoom: 80%; border: 1px solid #eee;border-radius: 10px;" />
+<img src="/static/snapshots/tutorial/ls_snippets/Snippets_time.gif" style="zoom: 80%; border: 1px solid #eee;border-radius: 10px;" />
 
 ## 自定义包围代码块@surround
 

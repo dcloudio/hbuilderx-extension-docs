@@ -22,7 +22,7 @@ External commands allow you to call external programs or command lines through m
 
 From the figure below, you can find several examples through the menu [Tools] --> [External Commands]
 
-<img src="/static/snapshots/tutorial/menu_tool/externalCommands_en.png" class="hd-img" />
+<img src="/static/snapshots/tutorial/menu_tool/externalCommands.en.png" class="hd-img" />
 
 Click the menu [Tools] --> [External Commands] --> [Custom External Commands], you can customize the external commands, json format.
 

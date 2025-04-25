@@ -20,14 +20,14 @@ HBuilderX擁有強大的跳轉功能，如下:
 
 轉到行快捷鍵：`ctrl + G`
 
-<img src="/static/snapshots/tutorial/goto_line.jpg" style="zoom: 50%;border:1px solid #eee;border-radius: 25px;" />
+<img src="/static/snapshots/tutorial/goto/goto_line.jpg" style="zoom: 50%;border:1px solid #eee;border-radius: 25px;" />
 
 ### 跳轉到指定行列@goto-line-column
 
 > 僅支持HBuilderX 2.8.10+
 
 
-<img src="/static/snapshots/tutorial/goto_lc.jpg" style="zoom: 50%;border:1px solid #eee;border-radius: 25px;" />
+<img src="/static/snapshots/tutorial/goto/goto_lc.jpg" style="zoom: 50%;border:1px solid #eee;border-radius: 25px;" />
 
 注意：HBuilderX 3.1.13+版本，支持輸入`0`跳轉到首行、輸入`$`跳轉到最後一行。
 
@@ -48,13 +48,13 @@ HBuilderX有強大的語法分析引擎，可以準確的跳轉定義位置。
 
 轉到定義的快捷鍵是`Alt+d`，鼠標操作是alt+左鍵單擊（注意不是ctrl，因爲ctrl留給了多光標）
 
-<img src="/static/snapshots/started_tutorial/3b6a921a9021ffa5ed54e7633afb7fd0.gif" style="zoom: 90%;border:1px solid #eee;border-radius: 5px;" />
+<img src="/static/snapshots/tutorial/goto/3b6a921a9021ffa5ed54e7633afb7fd0.gif" style="zoom: 90%;border:1px solid #eee;border-radius: 5px;" />
 
 HBuilderX支援多結果轉到定義
 
 當轉到定義的結果有多個時，`Alt+滑鼠懸浮`會將所有結果列出，可以透過`滑鼠選擇`或`上下鍵選擇`進行跳轉。
 
-<img src="https://web-ext-storage.dcloud.net.cn/hx/goto/goto-def-mult-64.gif" style="zoom: 90%;border:1px solid #eee;border-radius: 5px;" />
+<img src="/static/snapshots/tutorial/goto/goto-def-mult-64.gif" style="zoom: 90%;border:1px solid #eee;border-radius: 5px;" />
 
 > 備註：支持切換【Ctrl+鼠標左鍵】或【Alt+鼠標左鍵】進行轉到定義 （菜單【選擇】，最後一個菜單）
 
@@ -62,7 +62,7 @@ HBuilderX支援多結果轉到定義
 
 而HBuilderX還有一個特色是`轉到定義到分欄`，`ctrl+alt+左鍵`，可以把一個定義處的代碼打開在另一側，方便共同查看
 
-<img src="/static/snapshots/started_tutorial/c75ed6bdd5b6c5a9b8c827b2ee1262a9.gif" style="zoom: 90%;border:1px solid #eee;border-radius: 5px;" />
+<img src="/static/snapshots/tutorial/goto/c75ed6bdd5b6c5a9b8c827b2ee1262a9.gif" style="zoom: 90%;border:1px solid #eee;border-radius: 5px;" />
 
 
 

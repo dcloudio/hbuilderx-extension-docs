@@ -6,7 +6,7 @@ HBuilderX, 可以让您直接从键盘执行大多数任务。
 
 HBuilderX，预设了5种快捷键方案，分别为: `HBuilderX`、`VS Code`、`Sublime Text`、`IntelliJ Idea / Webstorm`、`Eclipse`
 
-<img src="/static/snapshots/tutorial/keyboard.png" />
+<img src="/static/snapshots/tutorial/keyboard/keyboard.png" />
 
 ## 自定义快捷键
 
@@ -16,7 +16,7 @@ HBuilderX，所有键盘快捷键都可以通过`keybindings.json`文件进行�
 
 快捷键，由`command`和`key`组成，如下图所示。
 
-<img src="/static/snapshots/tutorial/keyboard_set.png"  style="zoom: 80%;"/>
+<img src="/static/snapshots/tutorial/keyboard/keyboard_set.png"  style="zoom: 80%;"/>
 
 知识点：[HBuilderX的快捷键理念](/Tutorial/Other/keybindings_idea)
 

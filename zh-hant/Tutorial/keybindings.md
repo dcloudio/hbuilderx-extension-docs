@@ -4,7 +4,7 @@ HBuilderX, 可以讓您直接從鍵盤執行大多數任務。
 
 HBuilderX，預設了5種快捷鍵方案，分別爲: `HBuilderX`、`VS Code`、`Sublime Text`、`IntelliJ Idea / Webstorm`、`Eclipse`
 
-<img src="/static/snapshots/tutorial/keyboard.png" />
+<img src="/static/snapshots/tutorial/keyboard/keyboard.png" />
 
 ## 自定義快捷鍵
 
@@ -14,7 +14,7 @@ HBuilderX，所有鍵盤快捷鍵都可以通過`keybindings.json`文件進行�
 
 快捷鍵，由`command`和`key`組成，如下圖所示。
 
-<img src="/static/snapshots/tutorial/keyboard_set.png"  style="zoom: 80%;"/>
+<img src="/static/snapshots/tutorial/keyboard/keyboard_set.png"  style="zoom: 80%;"/>
 
 知識點：[HBuilderX的快捷鍵理念](/Tutorial/Other/keybindings_idea)
 

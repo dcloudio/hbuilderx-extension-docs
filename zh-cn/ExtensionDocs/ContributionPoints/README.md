@@ -42,7 +42,7 @@ properties内配置的是一个jsonobject对象，该对象的key代表着要扩
 ```
 效果图如下：
 
-<img src="/static/snapshots/plugins_setting.jpg" style="zoom:45%" />
+<img src="/static/snapshots/tutorial/plugins/plugins_setting.jpg" style="zoom:45%" />
 
 
 ## commands

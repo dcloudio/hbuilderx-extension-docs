@@ -2,13 +2,13 @@
 
 hx的代码助手，可以按`alt+数字`选择直接选择某个项目，类似中文输入法数字选词
 
-<img src="/static/snapshots/tutorial/codehelper.png" style="zoom: 90%;" />
+<img src="/static/snapshots/tutorial/language/codehelper.png" style="zoom: 90%;" />
 
 ## 代码助手匹配项高亮@highlight
 
 > 仅适用于HBuilderX 3.1.13+版本
 
-<img src="/static/snapshots/tutorial/code_highlight.jpg" style="zoom: 50%;" />
+<img src="/static/snapshots/tutorial/language/code_highlight.jpg" style="zoom: 50%;" />
 
 ## 代码助手窗口切换选择模式@select-mode
 
@@ -16,7 +16,7 @@ hx的代码助手，可以按`alt+数字`选择直接选择某个项目，类似
 
 默认需要`Alt+数字`选择
 
-<img src="/static/snapshots/tutorial/codehelper_selected.jpg" style="zoom: 50%;" />
+<img src="/static/snapshots/tutorial/language/codehelper_selected.jpg" style="zoom: 50%;" />
 
 ## 代码助手配置@config
 
@@ -27,7 +27,7 @@ hx的代码助手，可以按`alt+数字`选择直接选择某个项目，类似
 - 调整代码助手触发字符
 - Tab自动插入代码助手选中项
 
-<img src="/static/snapshots/tutorial/codehelper_config.png" style="zoom: 90%;" />
+<img src="/static/snapshots/tutorial/language/codehelper_config.png" style="zoom: 90%;" />
 
 ## 关闭代码助手@closed
 

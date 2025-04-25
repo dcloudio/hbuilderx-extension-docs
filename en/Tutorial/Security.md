@@ -4,11 +4,11 @@ Firstly, every release of HBuilderX will be individually tested by a professiona
 
 #### 360 Testing Result
 
-<img src="/static/snapshots/tutorial/Security_1.png" style="zoom: 80%;" />
+<img src="/static/snapshots/tutorial/security/Security_1.png" style="zoom: 80%;" />
 
 #### Microsoft Testing Result
 
-<img src="/static/snapshots/tutorial/Security_2.png" style="zoom: 80%;" />
+<img src="/static/snapshots/tutorial/security/Security_2.png" style="zoom: 80%;" />
 
 #### Why I still receive a virus warning from antivirus software?
 

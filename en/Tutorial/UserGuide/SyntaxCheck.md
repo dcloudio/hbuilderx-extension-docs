@@ -30,13 +30,13 @@ In HBuilderX, you should install the following plugins to implement code inspect
 
 Right-click on the current file, and click [Validation]. Please install above plugins if you do not find this menu.
 
-<img src="/static/snapshots/tutorial/syntaxcheck.png" style="zoom:90%;" />
+<img src="/static/snapshots/tutorial/syntaxcheck/syntaxcheck.png" style="zoom:90%;" />
 
 The summary of syntax validation will be displayed on the `Status Bar`.
 
 You can press "F4" to switch between multiple errors. Each error is accompanied by a red wavy line. When you move your mouse over the red wavy line, an error message will be displayed.
 
-<img src="/static/snapshots/started_tutorial/plugins-syntax-check-01_en.png" style="zoom: 90%;border:1px solid #eee;border-radius: 5px;" />
+<img src="/static/snapshots/tutorial/syntaxcheck/plugins-syntax-check-01.en.png" style="zoom: 90%;border:1px solid #eee;border-radius: 5px;" />
 
 ## 如何开启和关闭HBuilderX内置的js和ts语法校验？@builtInCheck
 
@@ -44,4 +44,4 @@ You can press "F4" to switch between multiple errors. Each error is accompanied 
 
 HBuilderX菜单【设置】【语言服务配置】，可以开启或关闭js、ts语法校验。具体如下图：
 
-<img src="https://web-assets.dcloud.net.cn/hbuilderx-doc/hx_settings_sytax_check.jpg" class="hd-img" />
+<img src="/static/snapshots/tutorial/syntaxcheck/hx_settings_sytax_check.jpg" class="hd-img" />

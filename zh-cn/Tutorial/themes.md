@@ -92,7 +92,7 @@
 
 **完整的操作动画如下图**：
 
-<img src="/static/snapshots/tutorial/custom_token_color.gif" style="border: 1px solid #eee;border-radius: 5px; "  />
+<img src="/static/snapshots/tutorial/menu_tool/custom_token_color.gif" style="border: 1px solid #eee;border-radius: 5px; "  />
 
 注意:
 
@@ -102,4 +102,4 @@
 -------
 菜单【工具】【项目管理器图标主题】，可以调整文件图标。
 
-<img src="/static/snapshots/tutorial/icon.jpg" style="zoom: 50%; border: 1px solid #eee;border-radius: 5px; " />
+<img src="/static/snapshots/tutorial/menu_tool/icon.jpg" style="zoom: 50%; border: 1px solid #eee;border-radius: 5px; " />

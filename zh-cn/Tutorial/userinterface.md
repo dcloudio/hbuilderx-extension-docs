@@ -2,7 +2,7 @@
 
 像许多其他代码编辑器一样，HBuilderX采用通用的用户界面和左侧的资源管理器布局，而右侧的编辑器则显示已打开文件的内容。 
 
-<img src="/static/snapshots/tutorial/HBuilderX.png" style="zoom:90%" />
+<img src="/static/snapshots/tutorial/userinterface/HBuilderX.png" style="zoom:90%" />
 
 ### 基本布局@basic-layout
 
@@ -22,7 +22,7 @@
 
 迷你地图, 显示在编辑器的右侧。您可以单击或拖动阴影区域以快速跳至文件的不同部分。
 
-<img src="/static/snapshots/tutorial/minimap.png" style="zoom:90%" />
+<img src="/static/snapshots/tutorial/userinterface/minimap.png" style="zoom:90%" />
 
 提示：
 - 您可以在编辑器最右侧，点击右键，关闭或打开迷你地图。
@@ -34,7 +34,7 @@
 
 可以点底栏左侧红框内的大纲按钮，对应的快捷键是【win：alt+w、mac：ctrl+w】
 
-<img src="/static/snapshots/tutorial/outline.png" style="zoom:90%" />
+<img src="/static/snapshots/tutorial/userinterface/outline.png" style="zoom:90%" />
 
 ### 内置资源管理器@Built-in-Explorer
 
@@ -59,7 +59,7 @@ HBuilderX，默认情况下，编辑器组以垂直列布局。
 
 菜单 “视图 -> 分栏”，有一组预定义的编辑器布局。
 
-<img src="/static/snapshots/tutorial/subfield.png" style="zoom:98%" />
+<img src="/static/snapshots/tutorial/userinterface/subfield.png" style="zoom:98%" />
 
 ### 单窗体@single-window
 

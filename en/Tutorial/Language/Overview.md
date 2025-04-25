@@ -10,7 +10,7 @@
 
 In HBuilderX, you can click on the "Javascript Libraries" in the bottom status bar and select the library for js and html files.
 
-<img src="/static/snapshots/tutorial/lang_1.png" />
+<img src="/static/snapshots/tutorial/language/overview/lang_1.png" />
 
 node.js is also one of the syntax list. After selecting a js syntax type, it will be loaded immediately. (Note: You need to wait a while for the first use.)
 
@@ -26,7 +26,7 @@ Many frameworks have built-in `d.ts` file. HBuilderX also fully supports the `d.
 
 jsdoc declares methods, parameters and attributes via annotations. HBuilderX provides extended jsdoc+ which can realize powerful syntax prompts.
 
-<img src="/static/snapshots/tutorial/lang_2.png" style="zoom:50%;" />
+<img src="/static/snapshots/tutorial/language/overview/lang_2.png" style="zoom:50%;" />
 
 ## Vue Doc
 
@@ -42,7 +42,7 @@ Some vue component libraries have been produced according to the vetur specifica
 
 These frameworks are installed in npm or installed in the new HBuilderX template, which can directly implement code prompts.
 
-<img src="/static/snapshots/tutorial/lang_3.png" style="zoom:50%;"/>
+<img src="/static/snapshots/tutorial/language/overview/lang_3.png" style="zoom:50%;"/>
 
 ## Snippets
 
@@ -59,8 +59,8 @@ As shown in the figure below, move the mouse to the code to be viewed, and a flo
 
 Press F1 to open the help documents in the browser.
 
-<img src="/static/snapshots/tutorial/language/hover_help_en.png" style="zoom:45%;border: 1px solid #eee;"/>
+<img src="/static/snapshots/tutorial/language/overview/hover_help_en.png" style="zoom:45%;border: 1px solid #eee;"/>
 
 If you don't need it, you can turn off this feature manually in [Settings - Editor].
 
-<img src="/static/snapshots/tutorial/language/settings_hover_help_en.png" style="zoom:50%;border: 1px solid #eee;"/>
+<img src="/static/snapshots/tutorial/language/overview/settings_hover_help_en.png" style="zoom:50%;border: 1px solid #eee;"/>

@@ -6,7 +6,7 @@
 
 HBuilderX顶部菜单，【工具】-> 【插件安装】，即可打开插件安装窗口，如下图所示，找到Git插件，点击【安装】即可。
 
-<img src="/static/snapshots/tutorial/plugins_install_1.jpg" style="zoom: 45%;border: 1px solid #eee;border-radius: 20px;"/>
+<img src="/static/snapshots/tutorial/plugins_install/plugins_install_1.jpg" style="zoom: 45%;border: 1px solid #eee;border-radius: 20px;"/>
 
 ## 克隆或导入项目
 

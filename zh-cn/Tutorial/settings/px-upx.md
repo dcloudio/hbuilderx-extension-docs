@@ -6,11 +6,11 @@ uni-app 使用 upx 作为默认尺寸单位， upx 是相对于基准宽度的�
   
 1. 在HBuilderX 【设置】【语言服务配置】中进行配置  
 
-<img src="/static/snapshots/tutorial/upx_1.png" style="zoom: 80%;" />
+<img src="/static/snapshots/tutorial/settings/upx/upx_1.png" style="zoom: 80%;" />
 
 2. 启用px转upx后，就可以愉快的在uni-app中使用了。如下图：
 
-<img src="/static/snapshots/tutorial/upx_2.png" style="zoom: 80%;" />
+<img src="/static/snapshots/tutorial/settings/upx/upx_2.png" style="zoom: 80%;" />
 
 关于upx尺寸单位，更多见：[upx尺寸单位](https://uniapp.dcloud.io/frame?id=%E5%B0%BA%E5%AF%B8%E5%8D%95%E4%BD%8D)  
 

@@ -9,7 +9,7 @@ To open the settings, please do the following:
 - Windows: Top menu [Tools -> Settings] (shortcut key: `ctrl` + `alt` + `,`)
 - MacOSX: Top menu [HBuilderX -> Preferences] (shortcut key: `command` + `,`)
 
-<img src="/static/snapshots/tutorial/settings/ui_settings_en.png" class="hd-img" />
+<img src="/static/snapshots/tutorial/settings/settings.en.png" class="hd-img" />
 
 Settings page include 5 tabs：
 

@@ -32,7 +32,7 @@ keyword: 无法启动,HBuilderX无法启动,HBuilderX点击没有反应,打开�
 
 <img src="/static/snapshots/tutorial/windows_error_open.min.png" style="zoom:80%" />
 
-<img src="/static/snapshots/tutorial/install_windows.png" />
+<img src="/static/snapshots/tutorial/install_windows/install_windows.png" />
 
 
 ### 1.1 快捷方式引发的问题
@@ -58,7 +58,7 @@ windows, 部分小伙伴，解压zip后，为了创建快捷方式，把`HBuilde
 3. 按照现象1的方案尝试一下
 4. 在`HBuilderX.exe`上，鼠标右键，点击属性。如下图所示操作：
 
-<img src="/static/snapshots/tutorial/windows_install/1.png" style="zoom:80%;border: 1px solid #eee;" />
+<img src="/static/snapshots/tutorial/install_windows_error/1.png" style="zoom:80%;border: 1px solid #eee;" />
 
 > 备注： 如果此方法，没有解决您的问题，请看下【事件查看器】中的错误。[关于事件查看器，请查看章节3](#EventViewer)
 
@@ -77,7 +77,7 @@ windows, 部分小伙伴，解压zip后，为了创建快捷方式，把`HBuilde
 - 解压后，点击HBuilderX.exe,  提示缺少`qt5*.dll`库
 - 解压后，点击HBuilderX.exe,  提示`无法定位输入点xxxxxxx于动态链接库xxx.dll上`
 
-<img src="/static/snapshots/tutorial/windows_install/qt_error_1.png" style="border: 1px solid #eee;"/>
+<img src="/static/snapshots/tutorial/install_windows_error/qt_error_1.png" style="border: 1px solid #eee;"/>
 
 
 ** 解决方案**
@@ -92,11 +92,11 @@ windows, 部分小伙伴，解压zip后，为了创建快捷方式，把`HBuilde
 
 如下图：
 
-<img src="/static/snapshots/tutorial/windows_install/qt_error_2.png" style="zoom: 80%;border: 1px solid #eee; padding: 10px;"/>
+<img src="/static/snapshots/tutorial/install_windows_error/qt_error_2.png" style="zoom: 80%;border: 1px solid #eee; padding: 10px;"/>
 
 解决方案：检查一下本机是否安装了`qt`，如以前安装过，进入`环境变量`，将qt相关的环境变量删除
 
-<img src="/static/snapshots/tutorial/windows_install/env.png" style="zoom: 80%;border: 1px solid #eee;"/>
+<img src="/static/snapshots/tutorial/install_windows_error/env.png" style="zoom: 80%;border: 1px solid #eee;"/>
 
 
 ## 3. 通过 事件查看器 排查问题@EventViewer
@@ -110,11 +110,11 @@ windows, 部分小伙伴，解压zip后，为了创建快捷方式，把`HBuilde
 
 打开事件查看器的方法： 点击“开始→运行”，输入eventvwr，点击“确定”，就可以打开事件查看器。
 
-<img src="/static/snapshots/tutorial/windows_install/eventvwr_1.png" style="zoom: 90%;border: 1px solid #eee;"/>
+<img src="/static/snapshots/tutorial/install_windows_error/eventvwr_1.png" style="zoom: 90%;border: 1px solid #eee;"/>
 
 如下图： 点击【Windows 日志】--【应用程序】，找到级别为`错误`的记录，如是`HBuilderX`的`记录`，根据`记录`，解决问题
 
-<img src="/static/snapshots/tutorial/windows_install/eventvwr_2.png" style="zoom: 80%; border: 1px solid #eee;"/>
+<img src="/static/snapshots/tutorial/install_windows_error/eventvwr_2.png" style="zoom: 80%; border: 1px solid #eee;"/>
 
 特别说明：如果事件查看器错误显示`unKnow`, 那就下载此 [opengl32sw.dll文件补丁](https://update.dcloud.net.cn/hbuilderx/patch/opengl32sw.dll)，放到HBuilderX根目录试试
 
@@ -125,7 +125,7 @@ windows, 部分小伙伴，解压zip后，为了创建快捷方式，把`HBuilde
 
 ** 在`事件查看器`中，可能遇到`ig9icd32.dll错误`的解决办法**
 
-<img src="/static/snapshots/tutorial/windows_install/eventvwr_3.png" style="zoom: 80%;" />
+<img src="/static/snapshots/tutorial/install_windows_error/eventvwr_3.png" style="zoom: 80%;" />
 
 方法1：升级显卡驱动
 
@@ -151,7 +151,7 @@ windows, 部分小伙伴，解压zip后，为了创建快捷方式，把`HBuilde
 2. 点击【设备管理器】--> 【显示适配器】
 3. 如果有两块显卡，且其中一块为AMD，选中amd显卡，右键菜单，`禁用`。如果只有一块AMD显卡，就别禁用了。
 
-<img src="/static/snapshots/tutorial/windows_install/amd.png" />
+<img src="/static/snapshots/tutorial/install_windows_error/amd.png" />
 
 ### 3.5 【设备管理器】显卡上面出现叹号
 
@@ -182,14 +182,14 @@ windows, 部分小伙伴，解压zip后，为了创建快捷方式，把`HBuilde
 
 进入后，如发现存在`.lock`文件，删除此文件，然后尝试启动HBuilderX。
 
-<img src="/static/snapshots/tutorial/lock.png" />
+<img src="/static/snapshots/tutorial/install_windows_error/lock.png" />
 
 ### 4.2 方案2：重置配置文件目录
 
 1. 先点击一下安装目录下的`reset.bat`文件
 2. 还不行，再尝试如下方案， 如下图所示，在地址栏输入`%appdata%`回车； 在此目录下，找到HBuilder X目录，注意：将此目录随便重命名一下，也可以删除掉
 
-<img src="/static/snapshots/tutorial/windows_install/appdata.png" style="border: 1px solid #eee;"/>
+<img src="/static/snapshots/tutorial/install_windows_error/appdata.png" style="border: 1px solid #eee;"/>
 
 
 ## 5. win:启动后，顶部工具栏显示不全

@@ -8,11 +8,11 @@ For example, we often use `if...else` conditional-statement. HBuilderX can creat
 
 Enter `ife`
 
-<img src="/static/snapshots/tutorial/language/snippets_3_en.png" class="hd-img" />
+<img src="/static/snapshots/tutorial/ls_snippets/snippets_3.png" style="zoom: 90%;" />
 
 Generate if..else structure after carriage return.
 
-<img src="/static/snapshots/tutorial/snippets_4.png" style="zoom: 90%;" />
+<img src="/static/snapshots/tutorial/ls_snippets/snippets_4.png" style="zoom: 90%;" />
 
 ## List of snippets
 
@@ -45,11 +45,11 @@ HBuilderX has built-in a large number of snippets. Knowing how to use snippets c
 
 To view the built-in snippets, click [Menu-Tools-Snippets Settings], and select the snippets of the language you want to view.
 
-<img src="/static/snapshots/tutorial/menu_tool/menu_snippets_en.png" class="hd-img" />
+<img src="/static/snapshots/tutorial/ls_snippets/snippets_1.en.png" style="zoom: 90%;" />
 
 In the opened page, the left side is the preset snippets, and the right side is the place where developers can extend the snippets by themselves.
 
-<img src="/static/snapshots/tutorial/menu_tool/snippets_custom_en.png" class="hd-img" />
+<img src="/static/snapshots/tutorial/ls_snippets/snippets_2.en.png" style="zoom: 80%;" />
 
 
 ## Custom Snippets
@@ -110,7 +110,7 @@ Remark：
 
 HBuilderX，顶部菜单【工具 代码块设置 自定义项目代码块】。创建的代码块文件，会出现在项目根目录下的`.hbuilderx`目录下。
 
-<img src="/static/snapshots/tutorial/language/project_snippets.png" class="hd-img"/>
+<img src="/static/snapshots/tutorial/ls_snippets/project_snippets.en.png" class="hd-img"/>
 
 ## Datetime variable
 
@@ -138,7 +138,7 @@ Click the menu [Tools - Snippets settings - javascript snippets], and enter the 
 }
 ```
 
-<img src="/static/snapshots/tutorial/Snippets_time.gif" style="zoom: 80%; border: 1px solid #eee;border-radius: 10px;" />
+<img src="/static/snapshots/tutorial/ls_snippets/Snippets_time.gif" style="zoom: 80%; border: 1px solid #eee;border-radius: 10px;" />
 
 ## 自定义包围代码块@surround
 

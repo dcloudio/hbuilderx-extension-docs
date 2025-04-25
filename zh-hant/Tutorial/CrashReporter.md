@@ -15,4 +15,4 @@ HBuilderX開啓或停止自動報告是在'工具->設置->常用設置'裏設�
 - 您的HBuilderX帳戶名
 - HBuilderX崩潰的Dump文件，該文件類似於Chrome生成的Dump文件
 
-<img src="/static/snapshots/report.jpg" style="zoom: 50%;border: 1px solid #eee; border-radius: 20px;" />
+<img src="/static/snapshots/tutorial/report.jpg" style="zoom: 50%;border: 1px solid #eee; border-radius: 20px;" />

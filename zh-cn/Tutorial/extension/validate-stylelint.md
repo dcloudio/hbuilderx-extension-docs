@@ -12,7 +12,7 @@ validate-stylelint, 用于校验css、less、scss语法。
 
 菜单【设置】-> 【插件配置】-> 【stylelint】，点击`.stylelintrc.js`, 即可打开配置文件。
   
-<img src="/static/snapshots/tutorial/stylelint.png" />
+<img src="/static/snapshots/tutorial/plugins/stylelint.png" />
 
 ## 规则配置格式
 

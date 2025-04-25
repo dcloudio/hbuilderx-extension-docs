@@ -27,9 +27,9 @@
 
 這種是不對的，`zip包需要解壓才能使用`
 
-<img src="/static/snapshots/tutorial/windows_error_open.min.png" style="zoom:80%" />
+<img src="/static/snapshots/tutorial/install_windows/windows_error_open.min.png" style="zoom:80%" />
 
-<img src="/static/snapshots/tutorial/install_windows.png" />
+<img src="/static/snapshots/tutorial/install_windows/install_windows.png" />
 
 
 ### 1.1 快捷方式引發的問題
@@ -55,7 +55,7 @@ windows, 部分小夥伴，解壓zip後，爲了創建快捷方式，把`HBuilde
 3. 按照現象1的方案嘗試一下
 4. 在`HBuilderX.exe`上，鼠標右鍵，點擊屬性。如下圖所示操作：
 
-<img src="/static/snapshots/tutorial/windows_install/1.png" style="zoom:80%;border: 1px solid #eee;" />
+<img src="/static/snapshots/tutorial/install_windows_error/1.png" style="zoom:80%;border: 1px solid #eee;" />
 
 > 備註： 如果此方法，沒有解決您的問題，請看下【事件查看器】中的錯誤。[关于事件查看器，请查看章节3](#EventViewer)
 
@@ -74,7 +74,7 @@ windows, 部分小夥伴，解壓zip後，爲了創建快捷方式，把`HBuilde
 - 解壓後，點擊HBuilderX.exe,  提示缺少`qt5*.dll`庫
 - 解壓後，點擊HBuilderX.exe,  提示`無法定位輸入點xxxxxxx於動態鏈接庫xxx.dll上`
 
-<img src="/static/snapshots/tutorial/windows_install/qt_error_1.png" style="border: 1px solid #eee;"/>
+<img src="/static/snapshots/tutorial/install_windows_error/qt_error_1.png" style="border: 1px solid #eee;"/>
 
 
 ** 解決方案**
@@ -89,11 +89,11 @@ windows, 部分小夥伴，解壓zip後，爲了創建快捷方式，把`HBuilde
 
 如下圖：
 
-<img src="/static/snapshots/tutorial/windows_install/qt_error_2.png" style="zoom: 80%;border: 1px solid #eee; padding: 10px;"/>
+<img src="/static/snapshots/tutorial/install_windows_error/qt_error_2.png" style="zoom: 80%;border: 1px solid #eee; padding: 10px;"/>
 
 解決方案：檢查一下本機是否安裝了`qt`，如以前安裝過，進入`環境變量`，將qt相關的環境變量刪除
 
-<img src="/static/snapshots/tutorial/windows_install/env.png" style="zoom: 80%;border: 1px solid #eee;"/>
+<img src="/static/snapshots/tutorial/install_windows_error/env.png" style="zoom: 80%;border: 1px solid #eee;"/>
 
 
 ## 3. 通過 事件查看器 排查問題@EventViewer
@@ -107,11 +107,11 @@ windows, 部分小夥伴，解壓zip後，爲了創建快捷方式，把`HBuilde
 
 打開事件查看器的方法： 點擊“開始→運行”，輸入eventvwr，點擊“確定”，就可以打開事件查看器。
 
-<img src="/static/snapshots/tutorial/windows_install/eventvwr_1.png" style="zoom: 90%;border: 1px solid #eee;"/>
+<img src="/static/snapshots/tutorial/install_windows_error/eventvwr_1.png" style="zoom: 90%;border: 1px solid #eee;"/>
 
 如下圖： 點擊【Windows 日誌】--【應用程序】，找到級別爲`錯誤`的記錄，如是`HBuilderX`的`記錄`，根據`記錄`，解決問題
 
-<img src="/static/snapshots/tutorial/windows_install/eventvwr_2.png" style="zoom: 80%; border: 1px solid #eee;"/>
+<img src="/static/snapshots/tutorial/install_windows_error/eventvwr_2.png" style="zoom: 80%; border: 1px solid #eee;"/>
 
 特別說明：如果事件查看器錯誤顯示`unKnow`, 那就下載此 [opengl32sw.dll文件補丁](https://update.dcloud.net.cn/hbuilderx/patch/opengl32sw.dll)，放到HBuilderX根目錄試試
 
@@ -122,7 +122,7 @@ windows, 部分小夥伴，解壓zip後，爲了創建快捷方式，把`HBuilde
 
 ** 在`事件查看器`中，可能遇到`ig9icd32.dll錯誤`的解決辦法**
 
-<img src="/static/snapshots/tutorial/windows_install/eventvwr_3.png" style="zoom: 80%;" />
+<img src="/static/snapshots/tutorial/install_windows_error/eventvwr_3.png" style="zoom: 80%;" />
 
 方法1：升級顯卡驅動
 
@@ -148,7 +148,7 @@ windows, 部分小夥伴，解壓zip後，爲了創建快捷方式，把`HBuilde
 2. 點擊【設備管理器】--> 【顯示適配器】
 3. 如果有兩塊顯卡，且其中一塊爲AMD，選中amd顯卡，右鍵菜單，`禁用`。如果只有一塊AMD顯卡，就別禁用了。
 
-<img src="/static/snapshots/tutorial/windows_install/amd.png" />
+<img src="/static/snapshots/tutorial/install_windows_error/amd.png" />
 
 ### 3.5 【設備管理器】顯卡上面出現歎號
 
@@ -179,14 +179,14 @@ windows, 部分小夥伴，解壓zip後，爲了創建快捷方式，把`HBuilde
 
 進入後，如發現存在`.lock`文件，刪除此文件，然後嘗試啓動HBuilderX。
 
-<img src="/static/snapshots/tutorial/lock.png" />
+<img src="/static/snapshots/tutorial/install_windows_error/lock.png" />
 
 ### 4.2 方案2：重置配置文件目錄
 
 1. 先點擊一下安裝目錄下的`reset.bat`文件
 2. 還不行，再嘗試如下方案， 如下圖所示，在地址欄輸入`%appdata%`回車； 在此目錄下，找到HBuilder X目錄，注意：將此目錄隨便重命名一下，也可以刪除掉
 
-<img src="/static/snapshots/tutorial/windows_install/appdata.png" style="border: 1px solid #eee;"/>
+<img src="/static/snapshots/tutorial/install_windows_error/appdata.png" style="border: 1px solid #eee;"/>
 
 
 ## 5. win:啓動後，頂部工具欄顯示不全

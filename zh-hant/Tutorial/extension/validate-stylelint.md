@@ -8,7 +8,7 @@ validate-stylelint, 用於校驗css、less、scss的exex語法。
 
 菜單【設置】-> 【插件配置】-> 【stylelint】，點擊`.stylelintrc.js`, 即可打開配置文件。
   
-<img src="/static/snapshots/tutorial/stylelint.png" />
+<img src="/static/snapshots/tutorial/plugins/stylelint.png" />
 
 ## 規則配置格式
 

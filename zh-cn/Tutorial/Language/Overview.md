@@ -10,7 +10,7 @@
 
 HBuilderX中，在可以输入js的文件，比如js、html等文件里，（不含vue、ts），底部状态栏有“语法提示库”，可以加载内置的框架语法库。
 
-<img src="/static/snapshots/tutorial/lang_1.png" />
+<img src="/static/snapshots/tutorial/language/overview/lang_1.png" />
 
 其中node.js也是作为一种框架语法而存在的。
 勾选相应js框架语法后，js区域即可提示相应语法（初次勾选需要延时几秒后才能使用）
@@ -28,7 +28,7 @@ HBuilderX中，在可以输入js的文件，比如js、html等文件里，（不
 ## jsdoc+
 jsdoc是以注释方式声明方法、参数、属性，HBuilderX提供了经过扩展的jsdoc+，可实现强大的语法提示，详见：[https://ask.dcloud.net.cn/docs/#//ask.dcloud.net.cn/article/129](https://ask.dcloud.net.cn/docs/#//ask.dcloud.net.cn/article/129)
 
-<img src="/static/snapshots/tutorial/lang_2.png" style="zoom:50%;" />
+<img src="/static/snapshots/tutorial/language/overview/lang_2.png" style="zoom:50%;" />
 
 ## vue doc
 vue组件开发者，如果想给组件使用者提供更好的使用方式，应该给组件写vue doc。
@@ -41,7 +41,7 @@ vue doc是一种类似jsdoc的方式，通过在注释里描述组件的方法�
 一些vue的组件库，已经按照vetur规范制作语法提示库，比如Element UI、Onsen UI、Bootstrap Vue等框架。
 这些框架npm安装是在node_module下会自带一个json语法库，或在HBuilderX新建模板中选择element ui模板安装也会包含该库。有了这个语法库，就可以直接代码提示。如下图
 
-<img src="/static/snapshots/tutorial/lang_3.png" style="zoom:50%;"/>
+<img src="/static/snapshots/tutorial/language/overview/lang_3.png" style="zoom:50%;"/>
 
 ## 代码块
 
@@ -60,8 +60,8 @@ HBuilderX支持自定义代码块，在菜单工具-代码块设置中可自行�
 
 按下`F1`会在浏览器打开帮助文档。
 
-<img src="/static/snapshots/tutorial/language/hover_helper.png" style="zoom:45%;border: 1px solid #eee;"/>
+<img src="/static/snapshots/tutorial/language/overview/hover_helper.png" style="zoom:45%;border: 1px solid #eee;"/>
 
 如果您不需要代码悬浮帮助，可以在【设置 - 编辑器设置】中，手动关闭此功能。
 
-<img src="/static/snapshots/tutorial/language/settings_hover_help.png" style="zoom:50%;border: 1px solid #eee;"/>
+<img src="/static/snapshots/tutorial/language/overview/settings_hover_help.png" style="zoom:50%;border: 1px solid #eee;"/>
