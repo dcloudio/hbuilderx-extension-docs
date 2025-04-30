@@ -1,3 +1,34 @@
+## 4.64.2025042916
+* 调整 windows HBuilder调整为64位，不再支持32位系统 [详情](https://hx.dcloud.net.cn/Tutorial/install/windows)
+* 新增 HBuilderX 用户登录窗口，增加手机号密码登录方式
+* 新增 控制台支持字符搜索 [详情](https://hx.dcloud.net.cn/Tutorial/UserGuide/ConsoleViewSearch)
+* 修复 运行控制台打印日志时会清空选中区域的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=15814)
+* 修复 编辑器右键【选择相同变量】不生效的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=16413)
+* 修复 项目管理器下项目过多时，批量关闭项目可能导致卡死和崩溃的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=16410)
+* 修复 当打开一个比较大的压缩文件时，若该文件错误校验时产生错误较多，会导致编辑器卡顿的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=16411)
+* 修复 某些情况下中文标点自动转换不对的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=16220&ask_id=206467)
+* 修复 macosx HBuilderX升级后点立即重启，某些情况下无法正常重启的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=16399)
+* 修复 macosx arm 右键菜单不显示快捷键的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=16414)
+* 修复 macosx arm Git提交界面自动全屏的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=15910)
+* 修复 Git/SVN插件 4.52版本引发的 Git/SVN导入项目, 提示下载Tortoise Git/SVN工具的链接不生效的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=16407)
+* 修复 Git插件 操作命令时控制台乱报无意义日志的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=16408)
+* 新增 swift、kotlin等插件市场扩展的语言，支持智能编辑、智能配对、折叠、格式化等功能 [详情](https://hx.dcloud.net.cn/Tutorial/Language/uts_hybrid_support)
+* 新增 语言服务 转到定义支持多结果 [详情](https://hx.dcloud.net.cn/Tutorial/UserGuide/goto?id=goto-definition)
+* 新增 语言服务 uts插件 支持swift混编时的代码提示 [详情](https://hx.dcloud.net.cn/Tutorial/Language/uts_hybrid_support)
+* 新增 语言服务 uni-app x项目 条件编译支持置灰非活动平台代码块 [详情](https://hx.dcloud.net.cn/Tutorial/Language/language_service_target_support)
+* 优化 语言服务 uni-app x项目 条件编译下，提升转到定义性能
+* 修复 语言服务 uni-app x项目 uvue文件使用computed定义的变量，在template区域提示不对的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=15813)
+* 修复 语言服务 uni-app x项目 对vue文件路径无法转到定义的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=16879)
+* 修复 语言服务 快速打开和关闭文件时语言服务提示Could not find source file的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=16804)
+* 新增 uni-app x Android平台debug 支持uvue及uts插件混编kotlin文件的断点调试 [详情](https://uniapp.dcloud.net.cn/tutorial/debug/uni-uts-debug.html)
+* 新增 uni-app x 鸿蒙平台debug，支持调试uts、uvue、uts插件混编arkts文件 [详情](https://uniapp.dcloud.net.cn/tutorial/debug/uni-uts-debug-harmony.html)
+* 新增 manifest 通过交互界面配置鸿蒙的数字签名证书，支持自动申请调试证书 [详情](https://uniapp.dcloud.net.cn/tutorial/harmony/runbuild.html#signing-configs)
+* 新增 真机运行插件 运行到鸿蒙时可以选择构建过程的缓存策略 [详情](https://uniapp.dcloud.net.cn/tutorial/harmony/runbuild.html#run)
+* 调整 真机运行插件 内置adb从29.0.4升级到35.0.2（该版本支持无线adb）
+* 优化 uni-app (x) 运行到Android 设备列表显示设备品牌和型号
+* 调整 uni-app (x) 运行到Android和鸿蒙时 已安装基座由`卸载安装`调整为`覆盖安装` [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=16397)
+* 调整 安心打包 apktool更新为2.11.1，解决安心打包时android:foregroundServiceType的参数值会被改变的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=16895)
+
 ## 4.57.2025032507
 * 修复 uniapp框架的一些Bug
 
