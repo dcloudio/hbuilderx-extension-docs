@@ -23,7 +23,7 @@
 * 无需禁用volar/vue等相关插件
 
 
-#### Target配置说明
+#### Target配置说明@setting
 * 支持`Target`功能
     * 在uniappx项目中, 打开任意文件, 即可在**状态栏**看到**Target信息**
     * **点击状态栏Target信息**可打开对应项目的**Target配置文件**, 可进行修改
@@ -47,11 +47,13 @@
 * 打开uniapp x项目, 打开一个.uvue/.uts文件, 会自动关联对应的语言
 * 如果没有自动关联, 点击右下角文件类型, 选择关联文件为uvue/uts;  
 
-右下角文件类型  
+  **右下角文件类型**  
 <img src="/static/snapshots/tutorial/language/vscodeUseHxLs/4.png" style="zoom:80%" />
-选择对应配置  
+
+  **选择对应配置**  
 <img src="/static/snapshots/tutorial/language/vscodeUseHxLs/5.png" style="zoom:80%" />
-选择语言  
+
+  **选择语言**  
 <img src="/static/snapshots/tutorial/language/vscodeUseHxLs/6.png" style="zoom:80%" />
 
 #### 禁用插件
