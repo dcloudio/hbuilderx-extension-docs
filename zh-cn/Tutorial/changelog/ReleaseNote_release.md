@@ -1,3 +1,8 @@
+## 4.65.2025051206
+* 新增 uni-app manifest可视化界面，支持百度地图配置入口
+* 修复 4.64版本引发的 在HBuilderX内，运行uni-app-cli Vue2项目编译报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=17535)    
+* 调整 真机运行插件 项目中启用了push、一键登录模块的时候，若服务尚未开通不会阻断构建和运行
+
 ## 4.64.2025042916
 * 调整 windows HBuilder调整为64位，不再支持32位系统 [详情](https://hx.dcloud.net.cn/Tutorial/install/windows)
 * 新增 HBuilderX 用户登录窗口，增加手机号密码登录方式

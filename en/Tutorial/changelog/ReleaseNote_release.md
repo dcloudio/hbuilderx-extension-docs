@@ -1,3 +1,8 @@
+## 4.65.2025051206
+* Added Uni-app manifest visual interface supports the configuration entry for Baidu Maps.
+* Fixed the bug caused by version 4.64 that caused an error in compiling the uni-app-cli Vue2 project in HBuilderX [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=17535) 
+
+
 ## 4.64.2025042916
 * Adjusted HBuilder for Windows to 64-bit, discontinuing support for 32-bit systems.[Details](https://hx.dcloud.net.cn/Tutorial/install/windows)
 * Added a phone number and password login option to the HBuilderX user login window.
