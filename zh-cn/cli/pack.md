@@ -1,6 +1,7 @@
-# cli 打包@pack
+# CLI uni-app发行 - Android/iOS云打包@pack
 
 > HBuilderX cli命令行工具, 仅适用于HBuilderX 3.1.5+版本
+
 
 ## 基本使用@usage
 
@@ -29,7 +30,41 @@ localhost:MacOS hx$ ./cli pack --config /Users/hx/Documents/HBuilderProjects/测
     类型: iOS Appstore 下载地址: https://service.dcloud.net.cn/build/download/40c60580-7fea-11eb-af55-b9c5ccd8a1ee （注意该地址为临时下载地址，只能下载5次）当前应用 IDFA 已经开启，在提交 AppStore 审核时需要在后台开启 IDFA，[详细操作查看](https://ask.dcloud.net.cn/article/36107)
 ```
 
-## 打包配置文件@config
+
+## 命令参数@params
+
+> 以下参数选项, 均为`cli pack`的选项.
+
+|参数名称	    |描述	    |
+|--			|--			|
+|--help	|打包命令帮助		|
+|--config	|配置文件绝对路径，配置文件配置，参考[配置文件](/cli/pack?id=config)	|
+|--project	|HBuilder X里导入的项目名或绝对路径		|
+|--platform	|配打包平台,默认值android,取值有"android","ios"如果要打多个逗号隔开		|
+|--iscustom	|是否使用自定义基座 默认值false, true自定义基座 false自定义证书		|
+|--safemode	|打包方式是否为安心打包,默认值false,true安心打包,false传统打包		|
+|--isconfusion  | 是否对配置的js/nvue文件进行原生混淆，true打开 false关闭|
+|--splashads	|开屏广告,默认值false, true打开 false关闭		|
+|--rpads	|悬浮红包广告,默认值false, true打开 false关闭		|
+|--pushads	|push广告,默认值false, true打开 false关闭		|
+|--exchange	|加入换量联盟,默认值false, true加入 false不加入		|
+|--android.packagename	|安卓包名，打安卓包填写		|
+|--android.androidpacktype	|安卓打包类型 默认值0,0 使用自有证书 1 使用公共证书 2 使用DCloud老版证书	|
+|--android.certalias	|安卓打包证书别名,自有证书打包填写的参数		|
+|--android.certfile	|安卓打包证书文件路径,自有证书打包填写的参数		|
+|--android.certpassword	|安卓打包证书密码,自有证书打包填写的参数		|
+|--android.storepassword	|安卓打包证书库密码（HBuilderx4.41支持）,自有证书打包填写的参数		|
+|--android.channels	|安卓平台要打的渠道包,取值有"google","yyb","360","huawei","xiaomi","oppo","vivo"，如果要打多个逗号隔开		|
+|--ios.bundle	|iOS appid 打ios包填写		|
+|--ios.supporteddevice	|iOS打包支持的设备类型,默认值iPhone 值有"iPhone","iPad" 如果要打多个逗号隔开打包平台		|
+|--ios.isprisonbreak	|iOS打包是否打越狱包,true打越狱包,false正式包。HBuilderX 3.2.3+版本起，不再支持构建越狱包。		|
+|--ios.profile	|iOS使用自定义证书打包的profile文件路径		|
+|--ios.certfile	|iOS使用自定义证书打包的p12文件路径		|
+|--ios.certpassword 	|iOS使用自定义证书打包的证书密码		|
+
+> 注 如果配置文件与配置参数都配置了相同参数，以命令行参数为准
+
+## 打包配置文件格式@config
 
 配置文件格式为json,将下面内容保存在文件json文件，编码为utf-8，根据说明配置所需参数
 
@@ -87,40 +122,7 @@ localhost:MacOS hx$ ./cli pack --config /Users/hx/Documents/HBuilderProjects/测
 }
 ```
 
-## cli pack 参数@params
-
-> 以下参数选项, 均为`cli pack`的选项.
-
-|参数名称	    |描述	    |
-|--			|--			|
-|--help	|打包命令帮助		|
-|--config	|配置文件绝对路径，配置文件配置，参考[配置文件](/cli/pack?id=config)	|
-|--project	|HBuilder X里导入的项目名或绝对路径		|
-|--platform	|配打包平台,默认值android,取值有"android","ios"如果要打多个逗号隔开		|
-|--iscustom	|是否使用自定义基座 默认值false, true自定义基座 false自定义证书		|
-|--safemode	|打包方式是否为安心打包,默认值false,true安心打包,false传统打包		|
-|--isconfusion  | 是否对配置的js/nvue文件进行原生混淆，true打开 false关闭|
-|--splashads	|开屏广告,默认值false, true打开 false关闭		|
-|--rpads	|悬浮红包广告,默认值false, true打开 false关闭		|
-|--pushads	|push广告,默认值false, true打开 false关闭		|
-|--exchange	|加入换量联盟,默认值false, true加入 false不加入		|
-|--android.packagename	|安卓包名，打安卓包填写		|
-|--android.androidpacktype	|安卓打包类型 默认值0,0 使用自有证书 1 使用公共证书 2 使用DCloud老版证书	|
-|--android.certalias	|安卓打包证书别名,自有证书打包填写的参数		|
-|--android.certfile	|安卓打包证书文件路径,自有证书打包填写的参数		|
-|--android.certpassword	|安卓打包证书密码,自有证书打包填写的参数		|
-|--android.storepassword	|安卓打包证书库密码（HBuilderx4.41支持）,自有证书打包填写的参数		|
-|--android.channels	|安卓平台要打的渠道包,取值有"google","yyb","360","huawei","xiaomi","oppo","vivo"，如果要打多个逗号隔开		|
-|--ios.bundle	|iOS appid 打ios包填写		|
-|--ios.supporteddevice	|iOS打包支持的设备类型,默认值iPhone 值有"iPhone","iPad" 如果要打多个逗号隔开打包平台		|
-|--ios.isprisonbreak	|iOS打包是否打越狱包,true打越狱包,false正式包。HBuilderX 3.2.3+版本起，不再支持构建越狱包。		|
-|--ios.profile	|iOS使用自定义证书打包的profile文件路径		|
-|--ios.certfile	|iOS使用自定义证书打包的p12文件路径		|
-|--ios.certpassword 	|iOS使用自定义证书打包的证书密码		|
-
-> 注 如果配置文件与配置参数都配置了相同参数，以命令行参数为准
-
-## 命令行使用示例@example
+## 使用示例@example
 
 ```shell
 

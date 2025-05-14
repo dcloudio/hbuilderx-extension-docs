@@ -1,19 +1,10 @@
-# CLI 发行uni-app到H5@h5
+# CLI uni-app发行 - WEB@h5
 
 > HBuilderX 3.3.7-alpha，支持使用CLI发行uni-app项目到H5。
 
 通过此种方式，可在命令行或其它CI工具中，完成uni-app项目到H5的编译、上传。
 
-## 命令语法@cmd
-
-```shell
-# 仅编译uni-app项目到H5，不上传uniCloud前端网页托管
-cli publish --platform h5 --project 项目名称
-
-# 编译uni-app项目到H5，并上传到前端网页托管
-cli publish --platform h5 --project 项目名称 --webHosting true --provider aliyun --spaceId xxxxxxx
-```
-
+## 命令参数@params
 |参数			|说明																	|
 |--				|--																		|
 |--platform		|必填，发行平台(MP-WEIXIN)												|
@@ -28,6 +19,15 @@ cli publish --platform h5 --project 项目名称 --webHosting true --provider al
 |--spaceId		|uniCloud 云空间id												|
 
 注意事项：使用CLI命令，上传文件到前端网页托管，如果云端已存在此文件，会使用本地文件覆盖云端的文件。
+
+## 使用示例@example
+```shell
+# 仅编译uni-app项目到H5，不上传uniCloud前端网页托管
+cli publish --platform h5 --project 项目名称
+
+# 编译uni-app项目到H5，并上传到前端网页托管
+cli publish --platform h5 --project 项目名称 --webHosting true --provider aliyun --spaceId xxxxxxx
+```
 
 # 拓展@expand
 

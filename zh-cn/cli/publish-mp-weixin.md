@@ -1,10 +1,10 @@
-# CLI 发行uni-app到微信小程序@mp-weixin
+# CLI uni-app发行 - 微信小程序@mp-weixin
 
 > HBuilderX 3.3.7-alpha，支持使用CLI发行微信小程序。
 
 通过此种方式，可在命令行或其它CI工具中，完成微信小程序代码的上传、预览等操作。
 
-## CLI命令语法@cmd
+## 命令参数@params
 
 |参数			|说明																	|
 |--				|--																		|
@@ -21,7 +21,7 @@
 
 注意：`--robot`参数，仅支持HBuilderX 3.6.18+版本。同时需要升级 [微信小程序上传CI插件](https://ext.dcloud.net.cn/plugin?id=7199)
 
-
+## 使用示例@example
 ```shell
 # 仅编译uni-app项目到微信小程序
 cli publish --platform mp-weixin --project 项目名称
