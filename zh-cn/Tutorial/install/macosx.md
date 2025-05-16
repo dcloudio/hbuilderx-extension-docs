@@ -22,7 +22,6 @@ HBuilderX下载地址: [下载地址](https://www.dcloud.io/hbuilderx.html)
 
 <img src="/static/snapshots/tutorial/install_macosx/mac_download2.min.jpg" style="zoom: 40%; border: 1px solid #eee;border-radius: 10px;"/>
 
-
 ## 配置文件目录@config
 
 配置文件目录，如下：
@@ -42,7 +41,7 @@ HBuilderX下载地址: [下载地址](https://www.dcloud.io/hbuilderx.html)
 
 #### 删除.lock文件@deleteLockFile
 
-打开操作系统终端，输入如下命令： 
+打开操作系统终端，输入如下命令：
 
 ```
 rm -f $HOME/Library/Application\ Support/HBuilder\ X/.lock
@@ -64,3 +63,7 @@ cp -r $HOME/Library/Application\ Support/HBuilder\ X   $HOME/Desktop/HX
 rm -r $HOME/Library/Application\ Support/HBuilder\ X
 rm -r $HOME/Library/Caches/HBuilder\ X
 ```
+
+#### apple芯片电脑如何执行intel程序？@rosetta
+
+[在apple芯片电脑安装rosetta](/Tutorial/install/macosx-install-rosetta)

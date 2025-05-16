@@ -1,4 +1,4 @@
-# MacOSX 
+# MacOSX
 
 ## Download
 
@@ -24,7 +24,7 @@ In some cases, MacOSX HBuilderX Unable to start up, Please try the following sol
 
 ### DEL .lock File
 
-Open `Terminal`，input the command： 
+Open `Terminal`，input the command：
 
 ```
 rm -f $HOME/Library/Application\ Support/HBuilder\ X/.lock
@@ -34,7 +34,7 @@ If HBuilderX still fails to startup after deleting the .lock file, please remove
 ### Reset Configuration File
 
 > Please backup before remove any files.
-> 
+>
 
 Configuration file directory：`$HOME/Library/Application\ Support/HBuilder\ X`
 
@@ -47,3 +47,7 @@ cp -rf $HOME/Library/Application\ Support/HBuilder\ X   $HOME/Desktop/HX
 # Remove configuration file directory
 rm -rf $HOME/Library/Application\ Support/HBuilder\ X
 ```
+
+#### apple芯片电脑如何执行intel程序？@rosetta
+
+[在apple芯片电脑安装rosetta](/Tutorial/install/macosx-install-rosetta)

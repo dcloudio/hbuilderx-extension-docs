@@ -37,7 +37,7 @@ HBuilderX下載地址: [下載地址](https://www.dcloud.io/hbuilderx.html)
 
 #### 刪除.lock文件@deleteLockFile
 
-打開操作系統終端，輸入如下命令： 
+打開操作系統終端，輸入如下命令：
 
 ```
 rm -f $HOME/Library/Application\ Support/HBuilder\ X/.lock
@@ -59,3 +59,7 @@ cp -r $HOME/Library/Application\ Support/HBuilder\ X   $HOME/Desktop/HX
 rm -r $HOME/Library/Application\ Support/HBuilder\ X
 rm -r $HOME/Library/Caches/HBuilder\ X
 ```
+
+#### apple芯片电脑如何执行intel程序？@rosetta
+
+[在apple芯片电脑安装rosetta](/Tutorial/install/macosx-install-rosetta)
