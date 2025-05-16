@@ -2,6 +2,10 @@
 
 
 ### 安装
+#### 搜索线上包进行安装
+* 在vscode中, 插件界面, 搜索`hbuilderx-language-services`进行安装
+
+#### 使用VSIX文件进行安装
 1. 进入扩展管理
     * 在侧边栏点击 扩展（Extensions） 图标, 或者使用快捷键
         * Windows / Linux: Ctrl + Shift + X

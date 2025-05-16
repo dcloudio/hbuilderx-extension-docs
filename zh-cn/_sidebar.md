@@ -51,6 +51,7 @@
     * [语言服务状态面板](/Tutorial/Language/lsStatus.md)
     * [UTS混编原生文件语言服务支持](/Tutorial/Language/uts_hybrid_support.md)
     * [kotlin、swift文件格式化](/Tutorial/Language/native_language_format.md)
+    * [uni-app-x 语言服务使用说明](/Tutorial/Language/vscodeUseHxLs.md)
 * App开发
     * [真机运行常见问题](/Tutorial/App/PhoneDebugging.md)
     * [安装配置模拟器](/Tutorial/App/installSimulator.md)

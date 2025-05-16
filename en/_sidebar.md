@@ -48,6 +48,7 @@
     * [Language services status panel](/Tutorial/Language/lsStatus.md)
     * [UTS hybrid language service support](/Tutorial/Language/uts_hybrid_support.md)
     * [Formatting of Kotlin and Swift files](/Tutorial/Language/native_language_format.md)
+    * [uni-app-x Language Service Instructions](/Tutorial/Language/vscodeUseHxLs.md)
 * App
     * [Phone Debugging](/Tutorial/App/PhoneDebugging.md)
     * [Install Simulator](/Tutorial/App/installSimulator.md)
