@@ -1,5 +1,7 @@
 ## How to use the hbuilderx-language-services plugin in VS Code
 
+### Official communication group
+[im Official communication group](https://im.dcloud.net.cn/#/?joinGroup=682c303383abe400024d38ba)
 
 ### Installation
 #### Search for online packages to install

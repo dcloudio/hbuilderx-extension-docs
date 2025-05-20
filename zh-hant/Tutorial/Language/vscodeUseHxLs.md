@@ -1,5 +1,7 @@
 ## 在vscode中, 如何使用hbuilderx-language-services插件
 
+### 官方交流羣
+[點擊加入im官方交流羣](https://im.dcloud.net.cn/#/?joinGroup=682c303383abe400024d38ba)
 
 ### 安裝
 #### 搜索線上包進行安裝
