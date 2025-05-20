@@ -1,3 +1,10 @@
+## 4.66.2025051912
+* Fixed the bug where, in certain situations, entering the characters `(,` would cause the editor to freeze for 1-2 seconds. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=16804)
+* Fixed the bug caused by uni-app 4.64 version that caused the uts plugin cache to be invalid when running to the custom base for the first time [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=17904)
+* Fixed a bug in uni-app (x) UTS plugin where formatting a Swift file would delete code if the file had unsaved changes. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=17821)
+* Fixed a bug in the uni-app (x) UTS plugin where, in certain cases, formatting a Kotlin file would fail and display a message asking to check for syntax errors in the code. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=17824)
+
+
 ## 4.65.2025051206
 * Added Uni-app manifest visual interface supports the configuration entry for Baidu Maps.
 * Fixed the bug caused by version 4.64 that caused an error in compiling the uni-app-cli Vue2 project in HBuilderX [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=17535) 

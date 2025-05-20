@@ -1,5 +1,11 @@
+## 4.66.2025051912
+* 修复 4.64版本引发的 某些情况下，输入`(,`字符时会引发编辑器卡顿1-2s的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=16804)
+* 修复 uni-app 4.64版本引发的 首次运行到自定义基座uts插件缓存无效的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=17904)
+* 修复 uni-app (x) uts插件 swift文件，未保存代码时，格式化导致代码删除的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=17821)
+* 修复 uni-app (x) uts插件 kotlin文件，某些情况下，格式化代码时，提示格式化失败，请检查代码中是否有语法错误的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=17824)
+
 ## 4.65.2025051206
-* 新增 uni-app manifest可视化界面，支持百度地图配置入口
+* 新增 uni-app manifest可视化界面，安卓/iOS模块配置，Maps，支持百度地图配置入口
 * 修复 4.64版本引发的 在HBuilderX内，运行uni-app-cli Vue2项目编译报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=17535)    
 * 调整 真机运行插件 项目中启用了push、一键登录模块的时候，若服务尚未开通不会阻断构建和运行
 
