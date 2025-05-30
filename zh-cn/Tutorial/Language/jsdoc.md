@@ -41,7 +41,7 @@ HBuilder/HBuilderX支持JSDoc的书写和解析，JSDoc详细的标签介绍及�
 | [uniPlatform](#uniplatform)	| `@uniPlatform { "app":{...},"mp":{...},"web":{...}} }`	| 用于提供兼容性信息。仅用于`uni-app`项目				|
 
 
-### @description
+### description
 
 使用@description可以在代码提示时显示被描述变量或者函数的描述信息。
 
@@ -67,7 +67,7 @@ function Animal(name, weight) {
 ![description](https://web-assets.dcloud.net.cn/hbuilderx-doc/jsDoc/description.png)
 
 
-### @example
+### example
 
 使用@example可以提示代码示例。
 
@@ -96,7 +96,7 @@ function Animal(name,weight){
 ![example](https://web-assets.dcloud.net.cn/hbuilderx-doc/jsDoc/example.png)
 
 
-### @param
+### param
 
 使用@param可以描述一个函数的参数以及参数类型
 
@@ -124,7 +124,7 @@ function request(method) {}
 ![param](https://web-assets.dcloud.net.cn/hbuilderx-doc/jsDoc/param.png)
 
 
-### @value
+### value
 
 使用@value可以描述一个函数的参数的值域
 
@@ -150,7 +150,7 @@ function request(method) {}
 ![value](https://web-assets.dcloud.net.cn/hbuilderx-doc/jsDoc/value.png)
 
 
-### @property
+### property
 
 使用@property可以描述一个对象的属性
 
@@ -176,7 +176,7 @@ htmlOptions.classNames = "arrow area"
 ```
 
 
-### @remark
+### remark
 
 使用@remark可以添加相关说明，可以多行，支持 markdown 语法
 
@@ -203,7 +203,7 @@ function getDocumentApi(method) {}
 ![remark](https://web-assets.dcloud.net.cn/hbuilderx-doc/jsDoc/remark.png)
 
 
-### @return
+### return
 
 使用@return可以描述返回对象的属性
 
@@ -226,7 +226,7 @@ function getDocumentApi() {}
 ![return](https://web-assets.dcloud.net.cn/hbuilderx-doc/jsDoc/return.png)
 
 
-### @since
+### since
 
 使用@since可以标识从哪个版本开始支持
 
@@ -249,7 +249,7 @@ function getDocumentApi(method) {}
 ![since](https://web-assets.dcloud.net.cn/hbuilderx-doc/jsDoc/since.png)
 
 
-### @tutorial
+### tutorial
 
 使用@tutorial可以引用其他文档或教程。它可以用于提供更多的信息或链接到其他相关资源。
 
@@ -272,7 +272,7 @@ function getDocumentApi(method) {}
 ![tutorial](https://web-assets.dcloud.net.cn/hbuilderx-doc/jsDoc/tutorial.png)
 
 
-### @type
+### type
 
 使用@type可以定义某个对象的类型
 
@@ -293,7 +293,7 @@ htmlId = "uni-app-myButton";
 ```
 
 
-### @uniPlatform
+### uniPlatform
 
 使用@uniPlatform可以标识兼容性信息，`uniPlatform`需要参考详细规范。
 
