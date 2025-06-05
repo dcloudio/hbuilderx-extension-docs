@@ -33,6 +33,7 @@
     * [onDidSaveTextDocument](/ExtensionDocs/Api/workspace/onDidSaveTextDocument.md)
     * [onDidOpenTextDocument](/ExtensionDocs/Api/workspace/onDidOpenTextDocument.md)
     * [onWillSaveTextDocument](/ExtensionDocs/Api/workspace/onWillSaveTextDocument.md)
+    * [gotoConfiguration](/ExtensionDocs/Api/workspace/gotoConfiguration.md)
 * util
     * [JSON操作](/ExtensionDocs/Api/util/json.md)
 * env
