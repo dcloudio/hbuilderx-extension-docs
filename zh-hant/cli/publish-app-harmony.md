@@ -16,7 +16,7 @@ cli publish app-harmony --type 資源類型 --project 項目名稱
 
 | 參數       | 說明                                              |
 | ---------- | ------------------------------------------------- |
-| --type     | 必填，[appResource\|wgt] 資源類型，打包 App 資源或 wgt |
+| --type     | 必填，資源類型，取值为 `appResource` 或 `wgt`，表示打包 App 資源或 wgt |
 | --project  | 必填，項目名稱                                    |
 
 ## 使用示例@example
