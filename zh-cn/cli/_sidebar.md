@@ -6,6 +6,7 @@
     * [uni-app发行 - Android/iOS云打包](/cli/pack.md)
     * [uni-app发行 - App生成本地打包资源](/cli/publish-app-appResource.md)
     * [uni-app发行 - App-Harmony-本地打包](/cli/pack-app-harmony.md)
+    * [uni-app发行 - App-Harmony-本地打包App资源](/cli/publish-app-harmony.md)
     * [uni-app发行 - App制作应用wgt包](/cli/publish-app-wgt.md)
     * [uni-app发行 - 微信小程序](cli/publish-mp-weixin.md)
     * [uni-app发行 - 支付宝小程序](cli/publish-mp-alipay.md)

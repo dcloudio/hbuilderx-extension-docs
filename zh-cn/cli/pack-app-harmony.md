@@ -1,6 +1,6 @@
 # CLI uni-app发行 - App-Harmony-本地打包@packAppHarmony
 
-> HBuilderX 4.67-alpha，支持使用CLI对鸿蒙平台进行本地打包。
+> HBuilderX 4.67-alpha，支持使用 CLI 对鸿蒙平台进行本地打包。
 
 通过此种方式，可在命令行或其它 CI 工具中，完成 uni-app (x) 项目对鸿蒙平台进行本地打包。
 

@@ -6,6 +6,7 @@
     * [app-打包](/cli/pack.md)
     * [app-生成本地打包App资源](/cli/publish-app-appResource.md)
     * [uni-app發行 - App-Harmony-本地打包](/cli/pack-app-harmony.md)
+    * [uni-app發行 - App-Harmony-本地打包App資源](/cli/publish-app-harmony.md)
     * [app-制作应用wgt包](/cli/publish-app-wgt.md)
     * [uniCloud](/cli/uniCloud.md)
     * [前端網頁託管](/cli/uniCloud-hosting.md)
