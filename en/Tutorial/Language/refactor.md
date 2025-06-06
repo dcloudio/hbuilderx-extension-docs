@@ -14,13 +14,13 @@ This feature aims to help developers quickly and safely modify symbols such as v
 
 ### Demo@demo
 
-![alt text](https://web-ext-storage.dcloud.net.cn/hx/refacor-rename/rename.gif)
+<img style="border-radius:10px;" src="https://web-ext-storage.dcloud.net.cn/hx/refacor-rename/rename.gif" />
 
 ### Steps@steps
 
 1. **Select a symbol:** In the editor, position the cursor on the symbol you want to rename or use the mouse to select the symbol.
 
-  ![alt text](https://web-ext-storage.dcloud.net.cn/hx/refacor-rename/rename-select-symbol.png)
+  <img style="border-radius:10px;" src="https://web-ext-storage.dcloud.net.cn/hx/refacor-rename/rename-select-symbol.png" />
 
 2. **Trigger the rename:** You can trigger the rename operation via a shortcut key or a menu option.
 
@@ -30,15 +30,15 @@ This feature aims to help developers quickly and safely modify symbols such as v
 
   - Menu operation: Right - click on the selected symbol and choose the `Rename Symbol` option.
 
-  ![alt text](https://web-ext-storage.dcloud.net.cn/hx/refacor-rename/rename-select-menu.png)
+  <img style="border-radius:10px;" src="https://web-ext-storage.dcloud.net.cn/hx/refacor-rename/rename-select-menu.png" />
 
   ***Note:*** If you are in some unsupported file types, the symbol rename operation will be disabled.
 
-  ![alt text](https://web-ext-storage.dcloud.net.cn/hx/refacor-rename/rename-menu-disable.png)
+  <img style="border-radius:10px;" src="https://web-ext-storage.dcloud.net.cn/hx/refacor-rename/rename-menu-disable.png" />
 
 3. **Enter a new name:** Enter the new symbol name you want to use, then press the `Enter` key to rename the symbol, or press `⌘+Enter` (`Ctrl+Enter` on the Windows platform) to preview the rename.
 
-  ![alt text](https://web-ext-storage.dcloud.net.cn/hx/refacor-rename/rename-input.png)
+  <img style="border-radius:10px;" src="https://web-ext-storage.dcloud.net.cn/hx/refacor-rename/rename-input.png" />
 
   ***Note:*** If input new name is the same as the current symbol name, application of the rename operation will not do anything.
 
@@ -46,10 +46,10 @@ This feature aims to help developers quickly and safely modify symbols such as v
 
 5. **Preview:** If you choose to press `⌘+Enter` (Windows platform is `Ctrl+Enter`) key, it will open the preview window on the left, displaying all references to the symbol. You can view and select the reference to the symbol in the preview window, and finally click the `Apply` button to apply the rename operation or click the `Cancel` button to cancel the rename operation.
 
-  ![alt text](https://web-ext-storage.dcloud.net.cn/hx/refacor-rename/rename-preview.png)
+  <img style="border-radius:10px;" src="https://web-ext-storage.dcloud.net.cn/hx/refacor-rename/rename-preview.png" />
 
   ***Tip:*** Click or double click on the item in the preview list, it will be redirected to the corresponding file corresponding location to check the context of the symbol reference.
 
   ***Note:*** If you uncheck the item reference, the subsequent application of this rename operation will not update this symbol reference.
 
-  ![alt text](https://web-ext-storage.dcloud.net.cn/hx/refacor-rename/rename-filter.png)
+  <img style="border-radius:10px;" src="https://web-ext-storage.dcloud.net.cn/hx/refacor-rename/rename-filter.png" />
