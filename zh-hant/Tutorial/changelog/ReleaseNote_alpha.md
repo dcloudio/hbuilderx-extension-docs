@@ -1,5 +1,10 @@
+## 4.72.2025061803-alpha
+* 优化 AI修错 代码纠正的对比交互UI [文档](https://doc.dcloud.net.cn/uni-app-x/tutorial/bug_repair.html) <https://issues.dcloud.net.cn/pages/issues/detail?id=18721>
+* 修复 windows uni-app (x) uts插件 kotlin文件，格式化代码中文乱码 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=18019)
+* 修复 uni-app (x) uts插件 解析jar文件时丢失class的部分成员 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=18571)
+
 ## 4.71.2025061206-alpha
-* 【重要】新增 AI修复 uni-app x 运行到Android/iOS平台时，对于编译期错误可以通过AI自动修复 [详情](https://doc.dcloud.net.cn/uni-app-x/tutorial/bug_repair.html)
+* 【重要】新增 AI修错 uni-app x 运行到Android/iOS平台时，对于编译期错误可以通过AI自动修复 [详情](https://doc.dcloud.net.cn/uni-app-x/tutorial/bug_repair.html)
 * 新增 语言服务 支持对符号进行重命名 [详情](https://hx.dcloud.net.cn/Tutorial/Language/refactor?id=renamesymbol)
 * 修复 HBuilderX 使用AI代码补全后关闭编辑器标签卡时崩溃的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=18507)
 * 修复 4.62版本引发的 某些情况下，输入`(,`字符时会引发编辑器卡顿1-2s的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=16804)

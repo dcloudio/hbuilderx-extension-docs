@@ -1,3 +1,9 @@
+## 4.72.2025061803-alpha
+* Optimized the comparison interaction UI when replacing file contents in the HBuilderX AI plugin.[Details](https://doc.dcloud.net.cn/uni-app-x/tutorial/bug_repair.html) <https://issues.dcloud.net.cn/pages/issues/detail?id=18721>
+* Fixed an issue where formatting code in Kotlin files of uni-app (x) uts plugins on Windows resulted in garbled Chinese characters. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=18019)
+* Fixed an issue where some class members were lost when parsing JAR files in the uni-app (x) uts plugin. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=18571)
+
+
 ## 4.71.2025061206-alpha
 * Add AI Fix for uni-app x: When running on Android/iOS platforms, compilation errors can be automatically fixed through AI [Details](https://doc.dcloud.net.cn/uni-app-x/tutorial/bug_repair.html)
 * Language Server: Added support for symbol renaming. [Details](https://hx.dcloud.net.cn/Tutorial/Language/refactor)
