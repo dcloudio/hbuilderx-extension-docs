@@ -1,6 +1,6 @@
 # Linux HBuilderX CLI
 
-### 说明
+### 简介@desc
 -------------------
 
 cli的用途是让开发者可以在linux服务器上调用HBuilderX cli，来实现程序化操作打包app、上传unicloud云函数。
@@ -11,8 +11,16 @@ cli的用途是让开发者可以在linux服务器上调用HBuilderX cli，来�
 
 **目前我们仅在Ubuntu 20.04 LTS系统上进行了测试，并没有在其它Linux发行版上测试，如有问题，请在本帖反馈**
 
+### 下载@download
+--------------------------
 
-### 常见使用命令
+<div style="display: inner; line-height: 40px;" id="hx_alpha_donwload"></div>
+<div style="display: inner; line-height: 40px;" id="hx_release_donwload"></div>
+
+历史版本，可在百度网盘下载， [网盘访问地址](https://pan.baidu.com/s/1kvigifhSaEImD-gCx_DQ8Q)
+提取码: bmnh
+
+### 常见使用命令@usage
 --------------------------
 
 **1. 安装包解压**
@@ -45,8 +53,10 @@ cli pack --config 配置文件
 
 完整的cli文档见：[https://hx.dcloud.net.cn/cli/README](https://hx.dcloud.net.cn/cli/README)
 
-# `报Bug`
+### 报Bug
 
 如果大家遇到问题，请大家到[https://issues.dcloud.net.cn/pages/issues/report-req?mid=pluginsCLI.linux](https://issues.dcloud.net.cn/pages/issues/report-req?mid=pluginsCLI.linux)报Bug。提交问题，请包含以下内容：
 1. 操作系统信息
 2. 详细的命令示例、截图
+
+您提供的信息越相信，越有助于排查解决问题。
