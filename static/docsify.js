@@ -566,17 +566,19 @@ function getLang() {
             var oldCatchTime = window.localStorage.getItem("catchTime");
             var newCatchTime = new Date().getTime();
 
-            if (!oldCatchTime || oldCatchTime + mdCache < newCatchTime) {
-                url += '?timestamp=' + newCatchTime;
-                localStorage.setItem("catchTime", newCatchTime);
+            if (!url.includes("_sidebar.md")) {
+                if (oldCatchTime || oldCatchTime + mdCache < newCatchTime) {
+                    url += '?timestamp=' + newCatchTime;
+                    localStorage.setItem("catchTime", newCatchTime);
+                } else {
+                    url += '?timestamp=' + oldCatchTime;
+                };
             } else {
                 url += '?timestamp=' + oldCatchTime;
-            }
+            };
             // fixed by hdx 修改参数拼接问题
             url = url.replace(/\?/g, "&").replace(/\&/, "?");
-        } catch (error) {
-
-        }
+        } catch (error) {}
 
         xhr.open('GET', url);
 
