@@ -2,7 +2,7 @@
 * 安裝
     * [Windows](/Tutorial/install/windows.md)
     * [MacOSX](/Tutorial/install/macosx.md)
-    * [Linux-CLI](/Tutorial/install/linux-cli.md)
+    <!-- * [Linux-CLI](/Tutorial/install/linux-cli.md) -->
     * [首次啓動](/Tutorial/startup.md)
     * [卸載HBuilderX](/Tutorial/uninstall.md)
     * [離線安裝HBuilderX](/Tutorial/OfflineInstall.md)
