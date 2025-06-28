@@ -1,7 +1,16 @@
-## 4.72.2025061803-alpha
-* 优化 AI修错 代码纠正的对比交互UI [文档](https://doc.dcloud.net.cn/uni-app-x/tutorial/bug_repair.html) <https://issues.dcloud.net.cn/pages/issues/detail?id=18721>
-* 修复 windows uni-app (x) uts插件 kotlin文件，格式化代码中文乱码 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=18019)
-* 修复 uni-app (x) uts插件 解析jar文件时丢失class的部分成员 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=18571)
+## 4.73.2025062714-alpha
+* 【重要】新增 Linux cli [文档](https://hx.dcloud.net.cn/Tutorial/install/linux-cli)[详情](https://issues.dcloud.net.cn/pages/issues/detail?id=19148)
+* 修复 语言服务 报错 Cannot read properties of undefined (reading 'getSyntacticDiagnostics') [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=17048)
+* 修复 语言服务 大于4M的文件下崩溃 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=17195)
+* 修复 语言服务 快速打开关闭文件时报错 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=18499)
+* 修复 语言服务 4.44版本引发的 uni-app x项目 easycom无提示且误报红 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=19040)
+* 修复 语言服务 多个重载的API，其中一个包含internal标记时，无代码提示 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=19058)
+* 修复 语言服务 4.71版本引发的 vue文件内查找引用部分失效的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=18927)
+* 修复 4.72版本引发的 语法服务平台选择的对话框中点击更多设置没有反应 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=18996)
+* 修复 4.64版本引发的 运行到Android 控制台标题显示Undefined [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=19083)
+* 修复 4.71版本引发的 uni-app项目 发行/App-制作应用wgt包，版本号异常 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=18893)
+* 修复 鸿蒙联编调试时无法在uts中打断点 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=18977)
+* 升级 uni-app x AI修复插件 [详情](https://ext.dcloud.net.cn/plugin?id=23720)
 
 ## 4.71.2025061206-alpha
 * 【重要】新增 AI修错 uni-app x 运行到Android/iOS平台时，对于编译期错误可以通过AI自动修复 [详情](https://doc.dcloud.net.cn/uni-app-x/tutorial/bug_repair.html)
@@ -37,9 +46,9 @@
 * 修复 uni-app 4.62版本引发的 在HBuilderX内，运行uni-app-cli Vue2项目编译报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=17535)
 * 新增 App真机运行 Android平台，支持无线ADB连接设备 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=16395)
 * 【重要】新增 App真机运行 Android平台，uni-app x 项目 支持原生联编，方便原生工程和uni-app x混合开发 [文档](https://doc.dcloud.net.cn/uni-app-x/native/debug/android.html)
+* 【重要】新增 App真机运行 鸿蒙平台 uni-app x 项目 支持原生联编，方便原生工程和uni-app x混合开发 [文档](https://doc.dcloud.net.cn/uni-app-x/native/debug/harmony.html)
 * 新增 App真机运行 在Apple芯片上运行提示安装Rosetta 2 [详情](https://hx.dcloud.net.cn/Tutorial/install/macosx-install-rosetta)
 * 新增 App真机运行 鸿蒙平台 uni-app x 项目 支持 x64 平台的鸿蒙模拟器 [文档](https://uniapp.dcloud.net.cn/tutorial/harmony/runbuild.html#compatibility)
-* 【重要】新增 App真机运行 鸿蒙平台 uni-app x 项目 支持原生联编，方便原生工程和uni-app x混合开发 [文档](https://doc.dcloud.net.cn/uni-app-x/native/debug/harmony.html)
 * 优化 App真机运行 鸿蒙元服务平台运行和打包时允许用户通过自定义环境变量 `NPM_CONFIG_REGISTRY` 使用指定的公共仓库 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=18315)
 * 修复 App真机运行 改造调试运行鸿蒙元服务时的日志收集方式，以解决由于鸿蒙系统底层调整导致日志收集失败的问题 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=18216)
 * 修复 App真机运行 改造调试运行鸿蒙元服务时调用鸿蒙工具链的方式，解决由于ascf插件调整导致的分包页面显示空白页的问题 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=18218)
@@ -50,7 +59,7 @@
 * 新增 发行 鸿蒙平台支持 cli 打包 [文档](https://hx.dcloud.net.cn/cli/pack-app-harmony)
 * 新增 发行 鸿蒙平台支持 cli 打包 App 资源 [文档](https://hx.dcloud.net.cn/cli/publish-app-harmony)
 * 优化 发行 鸿蒙平台运行和打包时，如果启用了uni-push和一键登录模块而服务尚未开通或者配置参数不足则只报警不阻断 [文档](https://doc.dcloud.net.cn/uni-app-x/collocation/manifest-harmony.html)
-* 调整 uni_modules插件 平台兼容性重构 区分uni-app、uni-app x 平台 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=18241)
+* 调整 uni_modules插件 插件市场 平台兼容性重构 区分uni-app、uni-app x 平台 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=18241)
 
 ## 4.63.2025042307-alpha
 * 修复 uniapp框架的一些Bug

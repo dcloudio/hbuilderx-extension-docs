@@ -1,7 +1,16 @@
-## 4.72.2025061803-alpha
-* Optimized the comparison interaction UI when replacing file contents in the HBuilderX AI plugin.[Details](https://doc.dcloud.net.cn/uni-app-x/tutorial/bug_repair.html) <https://issues.dcloud.net.cn/pages/issues/detail?id=18721>
-* Fixed an issue where formatting code in Kotlin files of uni-app (x) uts plugins on Windows resulted in garbled Chinese characters. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=18019)
-* Fixed an issue where some class members were lost when parsing JAR files in the uni-app (x) uts plugin. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=18571)
+## 4.73.2025062714-alpha
+* Added Linux cli [Details](https://hx.dcloud.net.cn/Tutorial/install/linux-cli)
+* Language Server: Fixed a bug where no code completion was provided when one of multiple overloaded APIs contained the internal tag. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=19058)
+* Language Server: Fixed a bug where reference search within Vue files stopped working due to changes introduced in version 4.71. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=18927)
+* Language Server: Fixed a bug where, due to changes introduced in version 4.44, easycom components in uni-app x projects had no code hints and were incorrectly marked as errors. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=19040)
+* Language Server: Fixed a bug where the error Cannot read properties of undefined (reading 'getSyntacticDiagnostics') could occur. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=17048)
+* Language Server: Fixed a bug that caused a crash in certain situations. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=17195)
+* Language Server: Fixed the bug that the language service reported an error when opening and closing files quickly[Details](https://issues.dcloud.net.cn/pages/issues/detail?id=18499)
+* Fixed a bug introduced in version 4.72 where the application of subsequent fix results by the HBuilderX AI plugin would replace incorrect positions in the document after editing. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=19112)
+* Fixed a bug introduced in version 4.64 where the Android console title displayed as "Undefined" during execution.[Details](https://issues.dcloud.net.cn/pages/issues/detail?id=19083)
+* Fixed a bug introduced in version 4.71 where the version number was incorrect when generating an App wgt package for uni-app projects. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=18893)
+* Fixed a bug where breakpoints could not be set in UTS files during HarmonyOS collaborative debugging. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=18977)
+* Upgrade uni-app x AI repair plug-in [Details](https://ext.dcloud.net.cn/plugin?id=23720)
 
 
 ## 4.71.2025061206-alpha
