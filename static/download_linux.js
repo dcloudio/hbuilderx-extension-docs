@@ -30,19 +30,19 @@ function parseCfgData(data, hx_type = "") {
     let version = data.displayVersion;
     let linux_url;
     for (let s of data.files) {
-        if (s.code.includes('win')) {
+        if (s.code.includes('linux_full_x64')) {
             s.path = s.path.replace('download1.dcloud.net.cn', 'qiniu-ecdn.dcloud.net.cn');
             linux_url = s.path;
             break;
         };
     };
     if (hx_type == "alpha" && linux_url) {
-        let _x = `<a download href="${linux_url}" target="_blank"><span></span> v${version} alpha 下载地址</a>`;
-        document.getElementById("hx_alpha_donwload").innerHTML = _x;
+        let _x = `<a download href="${linux_url}" target="_blank">${version} alpha 下载地址</a>`;
+        document.getElementById("hx_alpha_download").innerHTML = _x;
     };
     if (hx_type == "release" && linux_url) {
-        let _x = `<a download href="${linux_url}" target="_blank"><span></span> v${version} 正式版 下载地址</a>`;
-        document.getElementById("hx_release_donwload").innerHTML = _x;
+        let _x = `<a download href="${linux_url}" target="_blank">v${version} 正式版 下载地址</a>`;
+        document.getElementById("hx_release_download").innerHTML = _x;
     };
 };
 

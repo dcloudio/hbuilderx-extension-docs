@@ -2,7 +2,7 @@
 * Install
     * [Windows](/Tutorial/install/windows.md)
     * [MacOSX](/Tutorial/install/macosx.md)
-    <!-- * [Linux-CLI](/Tutorial/install/linux-cli.md) -->
+    * [Linux-CLI](/Tutorial/install/linux-cli.md)
     * [startup](/Tutorial/startup.md)
     * [uninstall](/Tutorial/uninstall.md)
     * [OfflineInstall](/Tutorial/OfflineInstall.md)
