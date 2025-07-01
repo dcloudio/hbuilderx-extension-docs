@@ -38,11 +38,17 @@ function parseCfgData(data, hx_type = "") {
     };
     if (hx_type == "alpha" && linux_url) {
         let _x = `<a download href="${linux_url}" target="_blank">${version} alpha 下载地址</a>`;
-        document.getElementById("hx_alpha_download").innerHTML = _x;
+        const el = document.getElementById("hx_alpha_download");
+        if (el) {
+            el.innerHTML = _x;
+        };
     };
     if (hx_type == "release" && linux_url) {
         let _x = `<a download href="${linux_url}" target="_blank">v${version} 正式版 下载地址</a>`;
-        document.getElementById("hx_release_download").innerHTML = _x;
+        const el = document.getElementById("hx_release_download");
+        if (el) {
+            el.innerHTML = _x;
+        };
     };
 };
 
