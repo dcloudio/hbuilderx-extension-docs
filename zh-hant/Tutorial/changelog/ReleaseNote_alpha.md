@@ -1,4 +1,7 @@
-## 4.73.2025062714-alpha
+## 4.74.2025063012-alpha
+* 修复 uniapp框架的一些Bug
+
+## 4.73.2025061803-alpha
 * 【重要】新增 Linux cli [文档](https://hx.dcloud.net.cn/Tutorial/install/linux-cli)[详情](https://issues.dcloud.net.cn/pages/issues/detail?id=19148)
 * 修复 语言服务 报错 Cannot read properties of undefined (reading 'getSyntacticDiagnostics') [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=17048)
 * 修复 语言服务 大于4M的文件下崩溃 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=17195)
@@ -11,6 +14,11 @@
 * 修复 4.71版本引发的 uni-app项目 发行/App-制作应用wgt包，版本号异常 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=18893)
 * 修复 鸿蒙联编调试时无法在uts中打断点 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=18977)
 * 升级 uni-app x AI修复插件 [详情](https://ext.dcloud.net.cn/plugin?id=23720)
+
+## 4.72.2025061803-alpha
+* 优化 AI修错 代码纠正的对比交互UI [文档](https://doc.dcloud.net.cn/uni-app-x/tutorial/bug_repair.html) <https://issues.dcloud.net.cn/pages/issues/detail?id=18721>
+* 修复 windows uni-app (x) uts插件 kotlin文件，格式化代码中文乱码 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=18019)
+* 修复 uni-app (x) uts插件 解析jar文件时丢失class的部分成员 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=18571)
 
 ## 4.71.2025061206-alpha
 * 【重要】新增 AI修错 uni-app x 运行到Android/iOS平台时，对于编译期错误可以通过AI自动修复 [详情](https://doc.dcloud.net.cn/uni-app-x/tutorial/bug_repair.html)

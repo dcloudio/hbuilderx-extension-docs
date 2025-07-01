@@ -1,3 +1,7 @@
+## 4.74.2025063012-alpha
+* Fixed Some Bugs
+
+
 ## 4.73.2025062714-alpha
 * Added Linux cli [Details](https://hx.dcloud.net.cn/Tutorial/install/linux-cli)
 * Language Server: Fixed a bug where no code completion was provided when one of multiple overloaded APIs contained the internal tag. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=19058)
@@ -11,6 +15,12 @@
 * Fixed a bug introduced in version 4.71 where the version number was incorrect when generating an App wgt package for uni-app projects. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=18893)
 * Fixed a bug where breakpoints could not be set in UTS files during HarmonyOS collaborative debugging. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=18977)
 * Upgrade uni-app x AI repair plug-in [Details](https://ext.dcloud.net.cn/plugin?id=23720)
+
+
+## 4.72.2025061803-alpha
+* Optimized the comparison interaction UI when replacing file contents in the HBuilderX AI plugin.[Details](https://doc.dcloud.net.cn/uni-app-x/tutorial/bug_repair.html) <https://issues.dcloud.net.cn/pages/issues/detail?id=18721>
+* Fixed an issue where formatting code in Kotlin files of uni-app (x) uts plugins on Windows resulted in garbled Chinese characters. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=18019)
+* Fixed an issue where some class members were lost when parsing JAR files in the uni-app (x) uts plugin. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=18571)
 
 
 ## 4.71.2025061206-alpha
