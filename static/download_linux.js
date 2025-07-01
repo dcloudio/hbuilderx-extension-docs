@@ -46,14 +46,16 @@ function parseCfgData(data, hx_type = "") {
     };
 };
 
-var current_url = window.location.href;
-if (current_url.includes('/Tutorial/install/linux-cli')) {
-    (async () => {
-        const data = await getCfgData(AlphaCfgFile);
-        parseCfgData(data, 'alpha');
-    })();
-    (async () => {
-        const data = await getCfgData(ReleaseCfgFile);
-        parseCfgData(data, 'release');
-    })();
+window.onload = function() {
+    var current_url = window.location.href;
+    if (current_url.includes('/Tutorial/install/linux-cli')) {
+        (async () => {
+            const data = await getCfgData(AlphaCfgFile);
+            parseCfgData(data, 'alpha');
+        })();
+        (async () => {
+            const data = await getCfgData(ReleaseCfgFile);
+            parseCfgData(data, 'release');
+        })();
+    };
 };
