@@ -54,7 +54,9 @@ function parseCfgData(data, hx_type = "") {
 
 window.onload = function() {
     var current_url = window.location.href;
+    console.log("------", current_url);
     if (current_url.includes('/Tutorial/install/linux-cli')) {
+        console.log("=============")
         (async () => {
             const data = await getCfgData(AlphaCfgFile);
             parseCfgData(data, 'alpha');
