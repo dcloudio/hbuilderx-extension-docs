@@ -1,3 +1,12 @@
+## 4.75.2025070414-alpha
+* Fixed a bug introduced in version 4.74-alpha where, in certain cases, running a uni-app x project and modifying code would cause the console to frequently display AI correction prompts.[Details](https://issues.dcloud.net.cn/pages/issues/detail?id=19386)
+* Fixed a bug introduced in version 4.61-alpha where the "Find corresponding DOM node in code" feature did not work in the built-in hx browser on MacOS (Intel). [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=19165)
+* Fixed a bug caused by version 4.41 where the project import dialog would appear blank when importing a project from issues. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=19323)
+* Language Server: Fixed a bug caused by version 4.28 where, in Vue Composition API scenarios, functions in the template were incorrectly displayed as properties. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=19135)
+* Language Server: Fixed a bug caused by version 4.71 where variables returned by computed properties could not be correctly displayed in the uvue template area. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=19270)
+* uniCloud: Adjust the sorting order of uniCloud service providers when creating a new uniCloud project. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=19266)
+
+
 ## 4.74.2025063012-alpha
 * Fixed Some Bugs
 
