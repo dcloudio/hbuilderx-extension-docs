@@ -1,3 +1,7 @@
+## 4.76.2025073103-alpha
+* Fixed Some Bugs
+
+
 ## 4.75.2025070414-alpha
 * Fixed a bug introduced in version 4.74-alpha where, in certain cases, running a uni-app x project and modifying code would cause the console to frequently display AI correction prompts.[Details](https://issues.dcloud.net.cn/pages/issues/detail?id=19386)
 * Fixed a bug introduced in version 4.61-alpha where the "Find corresponding DOM node in code" feature did not work in the built-in hx browser on MacOS (Intel). [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=19165)

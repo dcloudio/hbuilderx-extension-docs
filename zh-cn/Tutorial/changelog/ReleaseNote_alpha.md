@@ -1,3 +1,10 @@
+## 4.76.2025073103-alpha
+* 修复 4.66版本引发的 语言服务 当项目下css class比较多时，代码提示class时很慢 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=19456&ask_id=211211)
+* 修复 4.64版本引发的 修改版本号后安心打包失败 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=18447)
+* 修复 uni-app (x) 运行/发行 Android平台 Gradle配置正确却提示不是可执行程序 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=19938)
+* 修复 uniCloud 本地运行 uniapp cli 项目，修改uni_modules下的云函数代码不会实时更新 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=19772)
+* 修复 uniCloud 本地调试启用了IP防刷导致本地云函数响应变慢 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=19867)
+
 ## 4.75.2025070414-alpha
 * 修复 4.74版本引发的 某些情况下，运行uni-app x项目，修改代码控制台频繁提示AI纠错 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=19386)
 * 修复 4.61版本引发的 MacOS(Intel)上hx内置浏览器的 查找代码中对应的DOM节点 功能失效的bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=19165)
