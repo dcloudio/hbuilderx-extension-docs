@@ -19,7 +19,7 @@ cli的用途是让开发者可以在linux服务器上调用HBuilderX cli，来�
 
 <a id="download_alpha" download="" href="https://download1.dcloud.net.cn/download/HBuilderX.4.76.2025073103-alpha.linux_x64.full.tar.gz" target="_blank"> v4.76-alpha 下载地址</a>
 
-<a id="download_release" download="" href="https://download1.dcloud.net.cn/download/HBuilderX.4.75.2025071105.linux_x64.full.tar.gz" target="_blank"> v4.75 正式版 下载地址</a>
+<a id="download_release" download="" href="https://download1.dcloud.net.cn/download/HBuilderX.4.76.2025082103.linux_x64.full.tar.gz" target="_blank"> v4.76 正式版 下载地址</a>
 
 历史版本，可在百度网盘下载， [网盘访问地址](https://pan.baidu.com/s/1kvigifhSaEImD-gCx_DQ8Q)
 提取码: bmnh
