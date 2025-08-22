@@ -1,4 +1,11 @@
-## 4.75.2025071105
+## 4.76.2025082103
+* Language Server: Fixed a bug introduced in version 4.66 where code suggestions for CSS classes were very slow when there were many classes in the project. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=19456&ask_id=211211)
+* Fixed a bug introduced in version 4.64 where packaging would fail after modifying the version number. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=18447)
+* Fixed an issue where uni-app (x) would incorrectly report that Gradle is not an executable on the Android platform, even when Gradle is properly configured. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=19938)
+* uniCloud: Fixed a bug where changes to cloud function code under uni_modules would not be updated in real time when running a uniapp CLI project locally with uniCloud. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=19772)
+* uniCloud: Fixed an issue where enabling IP rate limiting during local debugging with uniCloud caused slow response times for local cloud functions. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=19867)
+
+## 4.75.2025070414-alpha
 * Add AI Fix for uni-app x: When running on Android/iOS platforms, compilation errors can be automatically fixed through AI [Details](https://doc.dcloud.net.cn/uni-app-x/tutorial/bug_repair.html)
 * Added Linux cli [Details](https://hx.dcloud.net.cn/Tutorial/install/linux-cli)
 * Language Server: Added support for symbol renaming. [Details](https://hx.dcloud.net.cn/Tutorial/Language/refactor)

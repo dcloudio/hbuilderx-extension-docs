@@ -1,4 +1,11 @@
-## 4.75.2025071105
+## 4.76.2025082103
+* 修复 4.66版本引发的 语言服务 当项目下css class比较多时，代码提示class时很慢 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=19456&ask_id=211211)
+* 修复 4.64版本引发的 修改版本号后安心打包失败 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=18447)
+* 修复 uni-app (x) 运行/发行 Android平台 Gradle配置正确却提示不是可执行程序 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=19938)
+* 修复 uniCloud 本地运行 uniapp cli 项目，修改uni_modules下的云函数代码不会实时更新 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=19772)
+* 修复 uniCloud 本地调试启用了IP防刷导致本地云函数响应变慢 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=19867)
+
+## 4.75.2025070414-alpha
 * 【重要】新增 AI修错 uni-app x 运行到Android/iOS平台时，对于编译期错误可以通过AI自动修复 [详情](https://doc.dcloud.net.cn/uni-app-x/tutorial/bug_repair.html)
 * 【重要】新增 Linux cli [文档](https://hx.dcloud.net.cn/Tutorial/install/linux-cli)[详情](https://issues.dcloud.net.cn/pages/issues/detail?id=19148)
 * 新增 语言服务 支持对符号进行重命名 [详情](https://hx.dcloud.net.cn/Tutorial/Language/refactor?id=renamesymbol)
