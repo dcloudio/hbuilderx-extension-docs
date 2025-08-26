@@ -24,3 +24,12 @@ cli user login --username <用户名>  --password <密码>
 ```shell
 cli user logout
 ```
+
+#### 登录参数 --global
+
+> HBuilderX 4.81+，新增登录参数--global
+
+```shell
+# --global, 布尔值， 默认为false
+cli user login --global true --username <用户名>  --password <密码>
+```
