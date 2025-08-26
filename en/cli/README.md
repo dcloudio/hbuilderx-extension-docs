@@ -28,6 +28,8 @@ cli的用途是让开发者可以在linux服务器上调用HBuilderX cli，来�
 
 目前我们仅在Ubuntu系统上进行了测试，并没有在其它Linux发行版上测试，如有问题，请及时反馈。
 
+扩展：[Linux 安装插件市场插件](/cli/linux-install-market-plugin)
+
 #### Cli Help
 
 > To use the help command, you need to start HBuilderX first.

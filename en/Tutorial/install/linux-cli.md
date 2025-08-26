@@ -57,6 +57,10 @@ cli pack --config 配置文件
 
 完整的cli文档见：[https://hx.dcloud.net.cn/cli/README](https://hx.dcloud.net.cn/cli/README)
 
+### 扩展
+
+- [Linux 安装插件市场插件](/cli/linux-install-market-plugin)
+
 ### 报Bug
 
 如果大家遇到问题，请大家到[https://issues.dcloud.net.cn/pages/issues/report-req?mid=pluginsCLI.linux](https://issues.dcloud.net.cn/pages/issues/report-req?mid=pluginsCLI.linux)报Bug。提交问题，请包含以下内容：

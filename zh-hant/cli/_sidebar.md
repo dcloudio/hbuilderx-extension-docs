@@ -15,6 +15,7 @@
     * [uni-app發行 - H5](cli/publish-h5.md)
 * 擴展
     * [配置環境變量](/cli/env.md)
+    * [Linux 安装插件市场插件](/cli/linux-install-market-plugin.md)
 <div class="contact-box">
   <a href="https://www.dcloud.io/hbuilderx.html" target="_blank" class="contact-item">
     <img src="/static/favicon/favicon.png" width="20" height="21">

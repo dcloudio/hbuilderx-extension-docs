@@ -12,6 +12,7 @@
     * [uni-app publish - H5](cli/publish-h5.md)
 * extension
     * [Environment Vairables](/cli/env.md)
+    * [Linux Install Market Plugin](/cli/linux-install-market-plugin.md)
 <div class="contact-box">
   <a href="https://www.dcloud.io/hbuilderx.html" target="_blank" class="contact-item">
     <img src="/static/favicon/favicon.png" width="20" height="21">
