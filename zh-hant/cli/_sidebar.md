@@ -12,6 +12,7 @@
     * [前端網頁託管](/cli/uniCloud-hosting.md)
     * [uni-app發行 - 微信小程序](cli/publish-mp-weixin.md)
     * [uni-app發行 - 支付宝小程序](cli/publish-mp-alipay.md)
+    * [uni-app發行 - 鸿蒙元服務打包](/cli/pack-mp-harmony.md)
     * [uni-app發行 - H5](cli/publish-h5.md)
 * 擴展
     * [配置環境變量](/cli/env.md)

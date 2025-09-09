@@ -10,6 +10,7 @@
     * [uni-app发行 - App制作应用wgt包](/cli/publish-app-wgt.md)
     * [uni-app发行 - 微信小程序](cli/publish-mp-weixin.md)
     * [uni-app发行 - 支付宝小程序](cli/publish-mp-alipay.md)
+    * [uni-app发行 - 鸿蒙元服务打包](/cli/pack-mp-harmony.md)
     * [uni-app发行 - WEB](cli/publish-h5.md)
     * [uniCloud](/cli/uniCloud.md)
     * [前端网页托管](/cli/uniCloud-hosting.md)

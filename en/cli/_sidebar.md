@@ -7,6 +7,7 @@
     * [uniCloud](/cli/uniCloud.md)
     * [hosting](/cli/uniCloud-hosting.md)
     * [uni-app pack - App-Harmony-Pack](/cli/pack-app-harmony.md)
+    * [uni-app pack - Mp-Harmony-Pack](/cli/pack-mp-harmony.md)
     * [uni-app publish - WeChat](cli/publish-mp-weixin.md)
     * [uni-app publish - Alipay](cli/publish-mp-alipay.md)
     * [uni-app publish - H5](cli/publish-h5.md)
