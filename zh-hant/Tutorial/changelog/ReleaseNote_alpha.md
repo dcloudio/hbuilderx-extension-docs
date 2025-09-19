@@ -1,3 +1,85 @@
+## 4.81.2025091909-alpha
+* 新增 HBuilder主菜单增加重启功能，菜单位置：【文件】-【重启】 [文档](https://issues.dcloud.net.cn/pages/issues/detail?id=20854) <https://issues.dcloud.net.cn/pages/issues/detail?id=20854>
+* 新增 HBuilder核心插件版本校验，保证插件版本和HBuilder版本匹配 [文档](https://issues.dcloud.net.cn/pages/issues/detail?id=20862) <https://issues.dcloud.net.cn/pages/issues/detail?id=20862>
+* 修复 运行控制台向上滚动看日志时，当有新内容输出时又自动滚动到底部问题 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=20331)
+* 修复 鼠标双击行号打断点时，断点位置和预期不符 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=20823)
+* 修复 4.66版本引发的 以 UTF-8(BOM) 编码另存文件时，另存文件的内容空白 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=21373)
+* 修复 4.73版本引发的 在其他软件内编辑HBuilder中已打开的文件时，有时会引发HBuilder崩溃 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=20825)
+* 修复 4.61版本引发的 控制台搜索某些情况下会引发崩溃 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=20826)
+* 修复 特定场景下，左侧资源管理器字体大小不正确 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=21030)
+* 修复 特定场景下，大纲字体大小不正确 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=21169)
+* 修复 uni-app (x) 新建页面 在pages.json文本框中敲击回车键后导致合并后的pages.json中出现 \r和\t 字符，引发的pages.json出现语法错误的问题 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=17766)
+* 修复 4.57版本引发的 uni-app (x) 新建页面 不能在分包的子文件夹中新建的问题 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=17947)
+* 修复 uni-app (x) 新建页面 可能会引发的软件崩溃的问题 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=19888)
+* 修复 uni-app (x) 删除页面时，点击状态栏同步到pages.json的消息并跳转到page.json编辑器时，可能会引发软件崩溃的问题 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=20936)
+* 修复 多文件搜索 性能与稳定性优化 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=18860)
+* 修复 多文件搜索 搜索结果与当前文件搜索结果高亮冲突 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=20839)
+* 修复 多文件搜索 搜索完成后继续编辑文档，然后再替换文本时，无文档变更提示 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=20840)
+* 修复 多文件搜索 当前目录和打开目录时候输入框可编辑 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=20841)
+* 修复 多文件搜索 未发起搜索时，直接点替换时没有反应和提示 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=20842)
+* 修复 编译器的字符搜索历史，记录不完整 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=21184)
+* 修复 多文件搜索 UTF8带BOM头时，文件搜索错位 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=21244)
+* 修复 多文件搜索 windows平台下搜索记录在重启ide后消失 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=21500)
+* 修复 macOS markdown文件 粘贴表格功能失效 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=16419)
+* 修复 markdown文件 特定场景下，按下Tab切换无序列表后，输入文字乱码 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=20689)
+* 修复 css文件 特定场景下，反注释不生效 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=21178)
+* 修复 特定场景下，智能双击标签，选区不正确 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=18702)
+* 修复 4.03版本引发的 已打开的文件，删除其所在目录后，编辑器打开的文件没有同步关闭 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=19394)
+* 新增 语言服务 支持系统API自动显示平台兼容性 [文档](https://hx.dcloud.net.cn/Tutorial/Language/jsdoc?id=uniplatform) <https://issues.dcloud.net.cn/pages/issues/detail?id=18641>
+* 新增 语言服务 UTS插件 鸿蒙平台支持har包解析，import后支持代码提示等功能 [文档](https://doc.dcloud.net.cn/uni-app-x/plugin/uts-for-harmony.html#%E9%85%8D%E7%BD%AEuts%E6%8F%92%E4%BB%B6%E4%BE%9D%E8%B5%96) <https://issues.dcloud.net.cn/pages/issues/detail?id=20861>
+* 修复 语言服务 存在多个转到定义项时，偶发点击跳转无反应 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=20793)
+* 修复 语言服务 特定写法下，json转type数据缺失 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=19806)
+* 修复 语言服务 关闭vue引用文件后，引用位置报错 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=19992)
+* 修复 语言服务 连续触发转到定义后，语言服务无响应 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=20694)
+* 修复 语言服务 id和class的校验逻辑进行了修改, 仅校验定义的id或class未使用 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=20843)
+* 修复 语言服务 uni-app(x) 项目引用UTS插件时，不支持按条件编译区分平台 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=20853)
+* 修复 语言服务 uni-app x 条件编译置灰不支持uniVersion、VUE2、VUE3 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=20864)
+* 修复 语言服务 特定场景下，HBuilder退出时，语言服务缓存资源没有被清理 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=21179)
+* 修复 语言服务 uts文件 string类型赋值给联合类型时报红 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=20846)
+* 修复 语言服务 uts文件 可选参数赋值给联合类型时报红 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=20847)
+* 修复 语言服务 uts文件 UTSJSONObject类型下的属性如果为null时，string类型赋值给这个属性时报红 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=20850)
+* 修复 语言服务 uts文件 utssdk根目录下，使用装饰符报错 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=20868)
+* 修复 语言服务 uts文件 匿名类下的方法添加override时报错 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=20873)
+* 修复 语言服务 uts文件 必选参数在可选参数后边时会报错 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=20874)
+* 修复 语言服务 uts插件 iOS平台 使用String.contains时报错找不到该属性 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=20875)
+* 修复 语言服务 vue文件 标签校验时vueModifier校验不正确 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=19669)
+* 修复 语言服务 vue文件 标签校验时作用域插槽，定义属性的语法误报黄 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=19713)
+* 修复 语言服务 uvue文件 defineMixin下定义的变量，在模板中使用报错找不到该变量 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=20852)
+* 修复 语言服务 uvue文件 props下的数组类型与any类型数组赋值时报错 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=20855)
+* 修复 语言服务 uvue文件 data下的变量，如果类型不一致进行赋值时，会报错 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=20858)
+* 修复 语言服务 uvue文件 data下定义空对象，在模板中使用该对象下的任意属性时，报错 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=20867)
+* 修复 语言服务 uvue文件 使用多层嵌套的mixins时，属性和方法误报错 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=20871)
+* 修复 语言服务 uvue文件 computed返回值中如果包含this时，template区域无法补全提示 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=20876)
+* 修复 语言服务 uvue文件 computed不支持set、get [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=21128)
+* 修复 语言服务 uni-app(x) 项目引用vue文件自动导包路径不对 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=21459)
+* 修复 AI修复，点击修复链接，弹窗提示下载插件的情况下，取消插件下载后，鼠标在控制台晃动引起文本选择 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=20116)
+* 修复 4.72版本引发的 AI修复，某些情况下修复过程中HBuilder崩溃 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=20838)
+* 修复 4.72版本引发的 AI修复，对比界面新内容没有代码着色 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=20883)
+* 修复 Linux HBuilder cli 国外账号登录错误 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=17471)
+* 新增 manifest.json 支持可视化配置【鸿蒙App配置】的微信登录、微信分享 [文档](https://uniapp.dcloud.net.cn/collocation/manifest.html#app-harmony) <https://issues.dcloud.net.cn/pages/issues/detail?id=19316>
+* 新增 manifest.json uni-app x Android平台启动界面背景颜色支持配置暗色模式颜色 [文档](https://issues.dcloud.net.cn/pages/issues/detail?id=19668) <https://issues.dcloud.net.cn/pages/issues/detail?id=19668>
+* 新增 manifest.json 支持鸿蒙元服务的证书配置 [文档](https://uniapp.dcloud.net.cn/collocation/manifest.html#mp-harmony) <https://issues.dcloud.net.cn/pages/issues/detail?id=19805>
+* 新增 manifest.json uni-app x Android平台可选模块配置uni-push [文档](https://issues.dcloud.net.cn/pages/issues/detail?id=18885) <https://issues.dcloud.net.cn/pages/issues/detail?id=20860>
+* 新增 manifest.json uni-app x Android平台可选模块配置uni-barcode-scanning [文档](https://issues.dcloud.net.cn/pages/issues/detail?id=18903) <https://issues.dcloud.net.cn/pages/issues/detail?id=20865>
+* 新增 manifest.json 支持可视化配置【鸿蒙App配置】的华为登录 client_id [文档](https://uniapp.dcloud.net.cn/collocation/manifest.html#app-harmony) <https://issues.dcloud.net.cn/pages/issues/detail?id=20974>
+* 修复 manifest.json web配置中未开启https,但可视化默认勾选了启用https [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=19743)
+* 新增 App真机运行 uni-app x 编译和运行报错后提供上报Bug功能 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=20878)
+* 新增 App真机运行 运行到Android 支持自动检测内存泄漏数据显示到运行控制台 [文档](https://uniapp.dcloud.net.cn/tutorial/run/memory-leak.html) <https://issues.dcloud.net.cn/pages/issues/detail?id=18528>
+* 修复 App真机运行 运行到Android 在开启Android Studio的情况下无法使用调试 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=21181)
+* 修复 App真机运行 运行到iOS iOS17+系统无法自启动 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=21183)
+* 新增 App真机运行 鸿蒙平台构建打包时把manifest.json里面的weixin配置组装到鸿蒙工程里 [文档](https://uniapp.dcloud.net.cn/collocation/manifest.html#app-harmony) <https://issues.dcloud.net.cn/pages/issues/detail?id=19315>
+* 新增 App真机运行 集成鸿蒙 Hot Reload 能力，实现热重载 [文档](https://uniapp.dcloud.net.cn/tutorial/harmony/runbuild.html#hot-reload) <https://issues.dcloud.net.cn/pages/issues/detail?id=20972>
+* 新增 App真机运行 集成鸿蒙元服务的热更新能力 [文档](https://uniapp.dcloud.net.cn/tutorial/mp-harmony/intro.html#ascf-serve) <https://issues.dcloud.net.cn/pages/issues/detail?id=20980>
+* 修复 App真机运行 uni-app x 鸿蒙平台debug 如果监视区域存在表达式时app可能闪退 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=21171)
+* 新增 App真机运行 支持iOS原生混编联调 [文档](https://doc.dcloud.net.cn/uni-app-x/native/debug/ios.html) <https://issues.dcloud.net.cn/pages/issues/detail?id=19433>
+* 新增 App真机运行 支持iOS17+系统断点调试 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=21182)
+* 修复 App真机运行 iOS调试停止后调试进程没有退出的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=20172)
+* 修复 App云打包 uni-app 提交打包后有一定概率引发HBuilder崩溃 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=20851)
+* 新增 App云打包 uni-app (x) 国外广告新增applovin渠道 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=20877)
+* 修复 App云打包 "运行-运行到手机或模拟器-选择制作自定义基座"，打包界面制作自定义调试基座选项，未被自动打勾 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=19745)
+* 新增 支持 CLI 打包鸿蒙元服务 [文档](https://hx.dcloud.net.cn/cli/pack-mp-harmony) <https://issues.dcloud.net.cn/pages/issues/detail?id=21467>
+* 修复 uni_modules插件 云端平台兼容性选项默认选中bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=20781)
+
 ## 4.76.2025073103-alpha
 * 修复 4.66版本引发的 语言服务 当项目下css class比较多时，代码提示class时很慢 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=19456&ask_id=211211)
 * 修复 4.64版本引发的 修改版本号后安心打包失败 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=18447)
