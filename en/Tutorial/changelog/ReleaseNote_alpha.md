@@ -1,3 +1,15 @@
+## 4.82.2025093004-alpha
+* Added HBuilder support for the macOS 26 icon style.[Details](https://issues.dcloud.net.cn/pages/issues/detail?id=22025)
+* Fixed missing debug button in iOS hybrid compilation caused by version 4.81 [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=22041)
+* Fixed incorrect display of project aliases caused by version 4.81.[Details](https://issues.dcloud.net.cn/pages/issues/detail?id=21920)
+* Fixed the built-in browser in Vue3 CLI project that cannot be closed. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=21471)
+* Fixed failure to install the debug base when running on the iOS 26 simulator. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=21734)
+* Fixed automatic deletion of resource fork files in HarmonyOS project directories on non-mac file systems to prevent HarmonyOS toolchain execution exceptions. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=20975)
+* Fixed editor crash after selecting a plugin in manifest.json visualization -> native plugin configuration. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=22042)
+* Fixed issue where setting initPrivacyAuthorization to disagree in manifest.json configuration was ineffective in version 4.71. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=20236)
+* Added support for uni_modules UTS API plugins and standard mode components for the HarmonyOS platform. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=21997)
+
+
 ## 4.81.2025091909-alpha
 * Added a restart function to the HBuilder main menu. Menu location: 【File】-【Restart】 [Doc](https://issues.dcloud.net.cn/pages/issues/detail?id=20854) <https://issues.dcloud.net.cn/pages/issues/detail?id=20854>
 * Added HBuilder core plugin version validation to ensure that the plugin version matches the HBuilder version. [Doc](https://issues.dcloud.net.cn/pages/issues/detail?id=20862) <https://issues.dcloud.net.cn/pages/issues/detail?id=20862>

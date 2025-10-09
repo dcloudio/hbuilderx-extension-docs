@@ -1,3 +1,14 @@
+## 4.82.2025093004-alpha
+* 新增 支持macOS 26 的图标风格 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=22025)
+* 修复 4.81版本引发的 项目管理器 多显示器情况下，不同缩放比时项目别名显示不正确 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=21920)
+* 修复 预览vue3 cli创建的web项目时，内置浏览器无法关闭 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=21471)
+* 修复 manifest.json 可视化->原生插件配置，json格式不对时，选择插件后编辑器崩溃 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=22042)
+* 修复 App真机运行 运行到iOS iOS26模拟器，安装调试基座失败 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=21734)
+* 修复 4.81版本引发的 App真机运行 运行到iOS 混编没有调试按钮 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=22041)
+* 修复 鸿蒙项目目录在非mac文件系统时自动删除资源分叉文件以避免鸿蒙工具链执行异常 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=20975)
+* 修复 4.71版本引发的 App云打包 manifest.json 配置 initPrivacyAuthorization 为 disagree 无效 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=20236)
+* 新增 uni_modules UTS API插件、标准模式组件支持鸿蒙平台 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=21997)
+
 ## 4.81.2025091909-alpha
 * 新增 HBuilder主菜单增加重启功能，菜单位置：【文件】-【重启】 [文档](https://issues.dcloud.net.cn/pages/issues/detail?id=20854) <https://issues.dcloud.net.cn/pages/issues/detail?id=20854>
 * 新增 HBuilder核心插件版本校验，保证插件版本和HBuilder版本匹配 [文档](https://issues.dcloud.net.cn/pages/issues/detail?id=20862) <https://issues.dcloud.net.cn/pages/issues/detail?id=20862>
