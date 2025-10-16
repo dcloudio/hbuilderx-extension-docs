@@ -11,11 +11,15 @@ const hx = require("hbuilderx");
 
 function activate(context) {
     // 注册cli命令test.input
-    let disposable = hx.commands.registerCliCommand('test.input', (params) => {
+    let disposable = hx.commands.registerCliCommand('test.input', async (params) => {
         // 解析命令行参数与输入
         let {args} = params;
         let {name} = args;
         console.log("[cli参数] name:", name);
+
+        // 请注意这个clientID，非常重要，可以将插件内的日志输出到终端
+        let client_id = params.cliconsole.clientId;
+        await hx.cliconsole.log({ clientId: client_id, msg: `欢迎使用HBuilderX CLI`, status: 'Info' });
     });
     context.subscriptions.push(disposable);
 };
@@ -77,10 +81,14 @@ module.exports = {
 }
 ```
 
-**说明：**
+**args 说明：**
 
-* args.type的值域：string，boolean，enum，file
-* enum示例:  a | b | c
+|args	|介绍	|
+|--	|--	|
+|type	|string，boolean，enum，file	|
+|enum    |多个使用&#124;分割    |
+|usage	|如果参数必填，可以设置require	|
+
 
 ## 如何在命令行使用？
 
@@ -91,3 +99,18 @@ module.exports = {
 ```
 
 备注：MacOSX，cli所在的路径为：`/Applications/HBuilderX.app/Contents/MacOS/cli`
+
+## 如何将插件内的日志输出到终端？
+
+```js
+let disposable = hx.commands.registerCliCommand('test.input', async (params) => {
+    // 请注意这个clientID，非常重要，可以将插件内的日志输出到终端
+    let client_id = params.cliconsole.clientId;
+    await hx.cliconsole.log({ clientId: client_id, msg: `欢迎使用HBuilderX CLI`, status: 'Info' });
+});
+context.subscriptions.push(disposable);
+```
+
+注意上面的代码，先从params中解析中`client_id`，然后调用`hx.cliconsole.log`打印消息
+
+具体请参考：[hx.cliconsole.log](/ExtensionDocs/Api/cli/cliconsole) 详细文档。

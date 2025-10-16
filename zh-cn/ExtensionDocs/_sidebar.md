@@ -41,6 +41,8 @@
     * [authorize](/ExtensionDocs/Api/env/authorize.md)
     * [Clipboard](/ExtensionDocs/Api/env/Clipboard.md)
     * [openExternal](/ExtensionDocs/Api/env/openExternal.md)
+* cli
+    * [cliconsole](/ExtensionDocs/Api/cli/cliconsole.md)
 * 其它
     * [Disposable](/ExtensionDocs/Api/other/Disposable.md)
     * [Command](/ExtensionDocs/Api/other/Command.md)
