@@ -20,6 +20,27 @@
     });
 ```
 
+输出结果示例：
+
+```json
+{
+   appid: '__UNI__XXXXX',
+   id: '{1de3edba-85fc-42d0-87bb-5b03f1f4900d}',
+   metatype: 'WorkspaceFolder',
+   name: 'project1',
+   nature: 'UniApp_Vue',
+   uri: {
+     authority: '',
+     fragment: '',
+     fsPath: '/Users/apple/Documents/HBuilderProjects/project1',
+     metatype: 'Uri',
+     path: '/Users/apple/Documents/HBuilderProjects/project1',
+     query: '',
+     scheme: 'file'
+   },
+   vueVersion: '3'
+ }
+```
 
 #### WorkspaceFolder
 工作空间下的项目目录,在左侧项目管理器内的每一个项目表示一个WorkspaceFolder
