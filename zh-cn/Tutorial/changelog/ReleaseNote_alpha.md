@@ -1,3 +1,7 @@
+## 4.83.2025101713-alpha
+* 修复 4.81版本引发的 App真机运行 运行到iOS 重签基座不弹框 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=22469)
+* 修复 uni-app x项目在鸿蒙平台打包时报错找不到UniAppRuntime.har文件 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=21877)
+
 ## 4.82.2025093004-alpha
 * 新增 支持macOS 26 的图标风格 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=22025)
 * 修复 4.81版本引发的 项目管理器 多显示器情况下，不同缩放比时项目别名显示不正确 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=21920)
