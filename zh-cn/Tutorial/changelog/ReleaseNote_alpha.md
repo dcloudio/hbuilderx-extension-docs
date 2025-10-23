@@ -1,3 +1,6 @@
+## 4.84.2025102304-alpha
+* 修复 4.81版本引发的 uni-app (x) 运行/发行在部分情况下引发HBuilderX闪退 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=22573)
+
 ## 4.83.2025101713-alpha
 * 修复 4.81版本引发的 App真机运行 运行到iOS 重签基座不弹框 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=22469)
 * 修复 uni-app x项目在鸿蒙平台打包时报错找不到UniAppRuntime.har文件 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=21877)

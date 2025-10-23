@@ -1,3 +1,7 @@
+## 4.84.2025102304-alpha
+* Fixed HBuilderX crashes in certain scenarios when running/releasing uni-app (x) projects, introduced in version 4.81 [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=22573)
+
+
 ## 4.83.2025101713-alpha
 * Fixed issue in version 4.81 where the app, when running on a real iOS device with a resigned base, wouldn't display a prompt. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=22469)
 * Fixed the issue where the application runs normally during development but reports "unpackage\dist\build\app-harmony\libs\UniAppRuntime.har does not exist" during the build process. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=21877)
