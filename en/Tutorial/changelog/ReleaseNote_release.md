@@ -1,3 +1,95 @@
+## 4.84.2025110307
+* Added HBuilder support for the macOS 26 icon style.[Details](https://issues.dcloud.net.cn/pages/issues/detail?id=22025)
+* Added a restart function to the HBuilder main menu. Menu location: 【File】-【Restart】 [Doc](https://issues.dcloud.net.cn/pages/issues/detail?id=20854) <https://issues.dcloud.net.cn/pages/issues/detail?id=20854>
+* Added HBuilder core plugin version validation to ensure that the plugin version matches the HBuilder version. [Doc](https://issues.dcloud.net.cn/pages/issues/detail?id=20862) <https://issues.dcloud.net.cn/pages/issues/detail?id=20862>
+* Fixed the issue where the console automatically scrolls to the bottom when new content is output while scrolling up to view logs. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=20331)
+* Fixed an issue where the breakpoint position did not match the expected location when double-clicking the line number to set a breakpoint. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=20823)
+* Fixed the issue where saving a file in UTF-8(BOM) encoding in version 4.66 resulted in blank file content. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=21373)
+* Fixed an issue where editing a file already open in HBuilder from another software might occasionally cause HBuilder to crash in version 4.73. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=20825)
+* Fixed an issue where the console search could cause crashes under certain circumstances in version 4.61. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=20826)
+* Fixed incorrect font size in the left-side explorer under specific scenarios. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=21030)
+* Fixed incorrect outline font size in specific scenarios. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=21169)
+* Fixed the issue where pressing the Enter key in the pages.json text box of uni-app (x) when creating a new page resulted in the insertion of \r and \t characters in the merged pages.json file, causing syntax errors.[Details](https://issues.dcloud.net.cn/pages/issues/detail?id=17766)
+* Fixed the issue in version 4.57 where new pages in uni-app (x) could not be created in subfolders of subpackages. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=17947)
+* Fixed potential software crash issues when creating new pages in uni-app (x). [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=19888)
+* Fixed an issue in uni-app (x) where deleting a page and clicking the status bar to sync to pages.json, then navigating to the pages.json editor, could cause the application to crash. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=20936)
+* Multi-file search: Fixed performance and stability optimization. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=18860)
+* Multi-file search: Fixed conflict between search result highlighting and current file search result highlighting. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=20839)
+* Multi-file search: Fixed issue where no document change prompt appears when continuing to edit the document after search completion and then replacing text. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=20840)
+* Multi-file search: Fixed Input fields are editable when in the current directory and when opening a directory. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=20841)
+* Multi-file search: Fixed issue where clicking replace directly without initiating a search resulted in no response or prompt. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=20842)
+* Multi-file search: Fixed incomplete character search history logging in the compiler. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=21184)
+* Multi-file search: Fixed misalignment in file search when UTF8 encoding includes a BOM header. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=21244)
+* Multi-file search: Fixed the issue where search history disappears after restarting the IDE on the Windows platform. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=21500)
+* Fixed issue with table paste functionality in macOS Markdown files. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=16419)
+* Fixed garbled text when entering content after pressing Tab to switch to an unordered list in Markdown files under specific scenarios. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=20689)
+* Fixed issue where uncommenting does not take effect in specific scenarios in CSS files. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=21178)
+* Fixed incorrect selection area during intelligent double-click on labels in specific scenarios. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=18702)
+* Fixed an issue in version 4.03 where the editor did not automatically close open files after their parent directories were deleted. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=19394)
+* Language Server: Added support for automatic display of platform compatibility for system APIs. [Doc](https://hx.dcloud.net.cn/Tutorial/Language/jsdoc?id=uniplatform) <https://issues.dcloud.net.cn/pages/issues/detail?id=18641>
+* Language Server: Added UTS plugin HarmonyOS platform support for HAR package parsing, with features such as code hints after import. [Doc](https://doc.dcloud.net.cn/uni-app-x/plugin/uts-for-harmony.html#%E9%85%8D%E7%BD%AEuts%E6%8F%92%E4%BB%B6%E4%BE%9D%E8%B5%96) <https://issues.dcloud.net.cn/pages/issues/detail?id=20861>
+* Language Server: Fixed Occasionally, clicking to jump to a definition does not respond when multiple "Go to Definition" items are present. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=20793)
+* Language Server: Fixed missing data when converting JSON to type in certain code patterns. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=19806)
+* Language Server: Fixed error at the reference location after closing the referenced Vue file. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=19992)
+* Language Server: Fixed unresponsive language service after repeatedly triggering \"Go to Definition\". [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=20694)
+* Language Server: Fixed the validation logic for IDs and classes, now only validating that defined IDs or classes are not used. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=20843)
+* Language Server: Fixed issue where uni-app(x) projects referencing UTS plugins did not support conditional compilation for platform differentiation. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=20853)
+* Language Server: Fixed issue where conditional compilation graying in uni-app x does not support uniVersion, VUE2, and VUE3. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=20864)
+* Language Server: Fixed issue where language service cache resources were not being cleaned up upon HBuilder exit in specific scenarios. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=21179)
+* Language Server: Fixed issue where assigning a string type to a union type in UTS files caused red error highlighting. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=20846)
+* Language Server: Fixed error when assigning optional parameters to union types in UTS files. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=20847)
+* Language Server: Fixed issue where assigning a string value to a UTSJSONObject property that is null causes a red error highlight. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=20850)
+* Language Server: Fixed an error when using decorators in the root directory of the utssdk for uts files. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=20868)
+* Language Server: Fixed error when adding @override to methods within anonymous classes in UTS files. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=20873)
+* Language Server: Fixed an error where required parameters were placed after optional parameters in UTS files. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=20874)
+* Language Server: Fixed an issue where the UTS plugin on the iOS platform reported an error for not finding the `contains` property when using `String.contains`. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=20875)
+* Language Server: Fixed incorrect validation of vueModifier during tag validation in Vue files. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=19669)
+* Language Server: Fixed false positive yellow warnings for attribute definition syntax in scoped slot validation of Vue files. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=19713)
+* Language Server: Fixed issue where variables defined under `defineMixin` in a `.uvue` file could not be found in the template. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=20852)
+* Language Server: Fixed error when assigning array types and arrays of type 'any' under props in uvue files. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=20855)
+* Language Server: Fixed an issue where assigning values to variables under the data section of a uvue file would result in an error if the types were inconsistent.[Details](https://issues.dcloud.net.cn/pages/issues/detail?id=20858)
+* Language Server: Fixed error when using any property of an empty object defined under data in a uvue file within the template. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=20867)
+* Language Server: Fixed false error reporting for properties and methods when using multi-level nested mixins in uvue files. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=20871)
+* Language Server: Fixed issue where template area completion hints were unavailable when computed return values in uvue files contained `this`. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=20876)
+* Language Server: Fixed issue where computed properties in uvue files do not support setter and getter methods. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=21128)
+* Language Server: Fixed incorrect auto-import path for referenced Vue files in uni-app(x) projects. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=21459)
+* Fixed AI Repair When the pop-up prompts to download a plugin after clicking the repair link, text selection occurs when the mouse hovers over the console after canceling the plugin download. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=20116)
+* Fixed AI repair issues caused by version 4.72, where HBuilder crashes during the repair process under certain circumstances. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=20838)
+* Fixed AI repair caused by version 4.72: No code coloring for new content in the comparison interface. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=20883)
+* Fixed Linux HBuilder CLI login error for overseas accounts. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=17471)
+* Fixed the built-in browser in Vue3 CLI project that cannot be closed. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=21471)
+* manifest.json: Added support for visual configuration of WeChat login and WeChat sharing in 【HarmonyOS App Configuration】. [Doc](https://uniapp.dcloud.net.cn/collocation/manifest.html#app-harmony) <https://issues.dcloud.net.cn/pages/issues/detail?id=19316>
+* manifest.json: Added uni-app x Android platform now supports configuring dark mode colors for the splash screen background. [Doc](https://issues.dcloud.net.cn/pages/issues/detail?id=19668) <https://issues.dcloud.net.cn/pages/issues/detail?id=19668>
+* manifest.json: Added support for certificate configuration for HarmonyOS Meta Services in manifest.json. [Doc](https://uniapp.dcloud.net.cn/collocation/manifest.html#mp-harmony) <https://issues.dcloud.net.cn/pages/issues/detail?id=19805>
+* manifest.json: Added uni-app x Android platform optional module configuration uni-push. [Doc](https://issues.dcloud.net.cn/pages/issues/detail?id=18885) <https://issues.dcloud.net.cn/pages/issues/detail?id=20860>
+* manifest.json: Added optional module configuration for uni-barcode-scanning on the uni-app x Android platform. [Doc](https://issues.dcloud.net.cn/pages/issues/detail?id=18903) <https://issues.dcloud.net.cn/pages/issues/detail?id=20865>
+* manifest.json: Added support for visual configuration of the Huawei Login client_id in the HarmonyOS App configuration. [Doc](https://uniapp.dcloud.net.cn/collocation/manifest.html#app-harmony) <https://issues.dcloud.net.cn/pages/issues/detail?id=20974>
+* manifest.json: Fixed issue where HTTPS was enabled by default in the visualization settings, even though it was not configured in the web settings. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=19743)
+* manifest.json: Fixed issue where setting initPrivacyAuthorization to disagree in manifest.json configuration was ineffective in version 4.71. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=20236)
+* manifest.json: Fixed editor crash after selecting a plugin in manifest.json visualization -> native plugin configuration. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=22042)
+* Mobile App Playground: Added a Bug reporting feature for uni-app x compilation and runtime errors. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=20878)
+* Mobile App Playground: Added support for running on Android with automatic detection of memory leaks, displaying data in the runtime console. [Doc](https://issues.dcloud.net.cn/pages/issues/detail?id=18528) <https://issues.dcloud.net.cn/pages/issues/detail?id=18528>
+* Mobile App Playground: Fixed issue where debugging could not be used when running on Android while Android Studio was open. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=21181)
+* Mobile App Playground: Fixed issue where app fails to auto-start on iOS 17+ systems. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=21183)
+* Mobile App Playground: Added assembly of Weixin configuration from manifest.json into the HarmonyOS project during the build and packaging process for the HarmonyOS platform. [Doc](https://uniapp.dcloud.net.cn/collocation/manifest.html#app-harmony) <https://issues.dcloud.net.cn/pages/issues/detail?id=19315>
+* Mobile App Playground: Added integration of HarmonyOS Hot Reload capability to enable hot reloading. [Doc](https://uniapp.dcloud.net.cn/tutorial/harmony/runbuild.html#hot-reload) <https://issues.dcloud.net.cn/pages/issues/detail?id=20972>
+* Mobile App Playground: Added hot update capability for integrated HarmonyOS atomic services. [Doc](https://uniapp.dcloud.net.cn/tutorial/mp-harmony/intro.html#ascf-serve) <https://issues.dcloud.net.cn/pages/issues/detail?id=20980>
+* Mobile App Playground: Fixed an issue in the Uni-App X HarmonyOS platform debug mode where the app might crash if expressions are present in the watch area. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=21171)
+* Mobile App Playground: Added support for native hybrid compilation and debugging for iOS. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=19433)
+* Mobile App Playground: Added support for breakpoint debugging on iOS 17+ systems. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=21182)
+* Mobile App Playground: Fixed the bug where the debug process did not exit after iOS debugging was stopped. debug process did not exit after stopping iOS debugging. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=20172)
+* Mobile App Playground: Fixed failure to install the debug base when running on the iOS 26 simulator. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=21734)
+* Fixed an issue where submitting an App cloud build for uni-app had a certain probability of causing HBuilder to crash. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=20851)
+* Added App Cloud Packaging for uni-app (x): New AppLovin Channel for Overseas Ads. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=20877)
+* Fixed issue where the "Build Custom Debug Base" option in the App cloud packaging interface was not automatically checked when selecting "Run to Phone or Emulator" → "Build Custom Base" during the "Run" process. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=19745)
+* Added support for CLI packaging of HarmonyOS atomic services. [Doc](https://hx.dcloud.net.cn/cli/pack-mp-harmony) <https://issues.dcloud.net.cn/pages/issues/detail?id=21467>
+* Fixed automatic deletion of resource fork files in HarmonyOS project directories on non-mac file systems to prevent HarmonyOS toolchain execution exceptions. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=20975)
+* Fixed the issue where the application runs normally during development but reports "unpackage\dist\build\app-harmony\libs\UniAppRuntime.har does not exist" during the build process. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=21877)
+* Fixed the bug where the cloud platform compatibility option in the uni_modules plugin was incorrectly selected by default. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=20781)
+* Added support for uni_modules UTS API plugins and standard mode components for the HarmonyOS platform. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=21997)
+
+
+
 ## 4.76.2025082103
 * Language Server: Fixed a bug introduced in version 4.66 where code suggestions for CSS classes were very slow when there were many classes in the project. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=19456&ask_id=211211)
 * Fixed a bug introduced in version 4.64 where packaging would fail after modifying the version number. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=18447)
@@ -5,7 +97,7 @@
 * uniCloud: Fixed a bug where changes to cloud function code under uni_modules would not be updated in real time when running a uniapp CLI project locally with uniCloud. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=19772)
 * uniCloud: Fixed an issue where enabling IP rate limiting during local debugging with uniCloud caused slow response times for local cloud functions. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=19867)
 
-## 4.75.2025070414-alpha
+## 4.75.2025071105
 * Add AI Fix for uni-app x: When running on Android/iOS platforms, compilation errors can be automatically fixed through AI [Details](https://doc.dcloud.net.cn/uni-app-x/tutorial/bug_repair.html)
 * Added Linux cli [Details](https://hx.dcloud.net.cn/Tutorial/install/linux-cli)
 * Language Server: Added support for symbol renaming. [Details](https://hx.dcloud.net.cn/Tutorial/Language/refactor)
