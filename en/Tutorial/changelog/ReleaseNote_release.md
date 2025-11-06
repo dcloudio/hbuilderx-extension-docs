@@ -1,3 +1,9 @@
+## 4.85.2025110510
+* Fixed an issue in version 4.84 where the right-click menu for the project's uniCloud directory lacked options such as "Create Cloud Object". [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=22993&ask_id=214980)
+* Fixed an issue in version 4.84 in uni-app(x) projects where, after creating a new page under a subpackage and unchecking the "Register in pages.json" option, the selected file location and subpackage did not match when clicking "Create". [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=22990)
+* Fixed an issue where uni-app (x) projects were not automatically imported when running on certain versions of WeChat Developer Tools for WeChat Mini Programs.[Details](https://issues.dcloud.net.cn/pages/issues/detail?id=22962)
+
+
 ## 4.84.2025110307
 * Added HBuilder support for the macOS 26 icon style.[Details](https://issues.dcloud.net.cn/pages/issues/detail?id=22025)
 * Added a restart function to the HBuilder main menu. Menu location: 【File】-【Restart】 [Doc](https://issues.dcloud.net.cn/pages/issues/detail?id=20854) <https://issues.dcloud.net.cn/pages/issues/detail?id=20854>

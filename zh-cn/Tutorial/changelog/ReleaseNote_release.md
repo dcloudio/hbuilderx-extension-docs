@@ -1,3 +1,8 @@
+## 4.85.2025110510
+* 修复 4.84版本引发的 uni-app (x) 项目，uniCloud目录 右键菜单，没有新建云对象等菜单的问题 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=22993&ask_id=214980)
+* 修复 4.84版本引发的 uni-app (x) 项目，在分包下新建页面，取消勾选在pages.json中注册后点击创建显示选择的文件位置和分包不匹配的问题 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=22990)
+* 修复 uni-app (x) 项目，运行到微信小程序 特定版本微信开发者工具下项目未自动导入问题 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=22962)
+
 ## 4.84.2025110307
 * 新增 支持macOS 26 的图标风格 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=22025)
 * 新增 HBuilder主菜单增加重启功能，菜单位置：【文件】-【重启】 [文档](https://issues.dcloud.net.cn/pages/issues/detail?id=20854) <https://issues.dcloud.net.cn/pages/issues/detail?id=20854>
