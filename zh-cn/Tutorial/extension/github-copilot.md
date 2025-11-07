@@ -1,4 +1,4 @@
-# HBuilderX Copilot 插件使用说明
+# Github Copilot for HBuilder 插件使用说明
 
 ## 简介
 
