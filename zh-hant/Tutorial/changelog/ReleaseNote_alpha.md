@@ -1,3 +1,7 @@
+## 4.86.2025110715-alpha
+* 修复 4.84版本引发的 uni-app (x) 项目，在分包下新建页面，取消勾选在pages.json中注册后点击创建显示选择的文件位置和分包不匹配的问题 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=22990)
+* 修复 uni-app (x) 项目，运行到微信小程序 特定版本微信开发者工具下项目未自动导入问题 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=22962)
+
 ## 4.84.2025102304-alpha
 * 修复 4.81版本引发的 uni-app (x) 运行/发行在部分情况下引发HBuilderX闪退 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=22573)
 

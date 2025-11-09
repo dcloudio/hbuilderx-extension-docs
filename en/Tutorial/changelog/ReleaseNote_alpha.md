@@ -1,3 +1,8 @@
+## 4.86.2025110715-alpha
+* Fixed an issue in version 4.84 in uni-app(x) projects where, after creating a new page under a subpackage and unchecking the "Register in pages.json" option, the selected file location and subpackage did not match when clicking "Create". [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=22990)
+* Fixed an issue where uni-app (x) projects were not automatically imported when running on certain versions of WeChat Developer Tools for WeChat Mini Programs.[Details](https://issues.dcloud.net.cn/pages/issues/detail?id=22962)
+
+
 ## 4.84.2025102304-alpha
 * Fixed HBuilderX crashes in certain scenarios when running/releasing uni-app (x) projects, introduced in version 4.81 [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=22573)
 
