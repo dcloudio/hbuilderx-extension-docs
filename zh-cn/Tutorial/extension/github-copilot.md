@@ -13,7 +13,7 @@
 ## 如何使用
 
 ### 1. 安装与激活
-- 打开 HBuilderX 后，在菜单栏点击 `工具 -> 插件安装 ` 打开插件安装面板。
+- 打开 HBuilderX 后，在菜单栏点击 `工具 -> 插件安装` 打开插件安装面板。
 - 在插件安装面板中切换到 `安装新插件` 标签页，找到 `Github Copilot for HBuilder` 并点击 `安装` 按钮。
 - 插件安装完毕后会自动激活。  
 
@@ -37,7 +37,7 @@
 <img src="https://web-ext-storage.dcloud.net.cn/hx/doc/copilot-device-code.png" />
 
 - **完成授权**: 在浏览器打开的页面中，粘贴设备码并授权。授权成功后，插件会自动验证并完成登录。  
-<img src="https://web-ext-storage.dcloud.net.cn/hx/doc/copilog-signin-ok.png" />
+<img src="https://web-ext-storage.dcloud.net.cn/hx/doc/copilot-signin-ok.png" />
 
 ### 4. 获取代码建议
 
