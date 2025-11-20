@@ -1,0 +1,109 @@
+name: i18n validation
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+  push:
+    branches:
+      - '**'
+
+jobs:
+  check-i18n:
+    runs-on: ubuntu-latest
+    env:
+      LOCALES: "zh-cn en zh-hant"
+      GITHUB_EVENT_NAME: ${{ github.event_name }}
+      GITHUB_BASE_REF: ${{ github.event.pull_request.base.ref || '' }}
+      GITHUB_BEFORE: ${{ github.event.before || '' }}
+      GITHUB_SHA: ${{ github.sha }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Validate added localized markdown files
+        run: |
+          set -euo pipefail
+          echo "Locales: $LOCALES"
+          # compute diff range
+          if [ "${GITHUB_EVENT_NAME}" = "pull_request" ]; then
+            if [ -z "${GITHUB_BASE_REF}" ]; then
+              echo "GITHUB_BASE_REF is empty for this pull_request event. Exiting."
+              exit 1
+            fi
+            echo "PR event, base ref: ${GITHUB_BASE_REF}"
+            git fetch origin "${GITHUB_BASE_REF}" --quiet || true
+            DIFF_RANGE="origin/${GITHUB_BASE_REF}...HEAD"
+          else
+            echo "Push event"
+            if [ -z "${GITHUB_BEFORE}" ] || [ -z "${GITHUB_SHA}" ]; then
+              echo "Missing before/sha info for push event. Exiting."
+              exit 1
+            fi
+            DIFF_RANGE="${GITHUB_BEFORE}..${GITHUB_SHA}"
+          fi
+          echo "Diff range: $DIFF_RANGE"
+
+          # Get list of added files (status A)
+          mapfile -t ADDED < <(git diff --name-status $DIFF_RANGE | awk '$1=="A" {print $2}')
+
+          if [ ${#ADDED[@]} -eq 0 ]; then
+            echo "No added files in this range. Nothing to check."
+            exit 0
+          fi
+
+          echo "Added files:"
+          printf ' - %s\n' "${ADDED[@]}"
+
+          # Build map: key = relative path under locale (e.g. "guide/foo.md"), value = list of locales added for that key
+          declare -A seen
+          IFS=' ' read -r -a LOCALES_ARR <<< "$LOCALES"
+          ERR=0
+
+          for f in "${ADDED[@]}"; do
+            # only consider markdown files under the 3 locale dirs
+            if [[ "$f" =~ ^(zh-cn|en|zh-hant)/.+\.md$ ]]; then
+              locale="${f%%/*}"
+              name="${f#*/}"
+              # trim possible leading ./
+              name="${name#./}"
+              seen["$name"]="${seen["$name"]} ${locale}"
+            fi
+          done
+
+          if [ ${#seen[@]} -eq 0 ]; then
+            echo "No new localized markdown files added under zh-cn/en/zh-hant. Nothing to check."
+            exit 0
+          fi
+
+          echo "Checking that for each new localized file all locales are added in this same commit/PR..."
+          for key in "${!seen[@]}"; do
+            present="${seen[$key]}"
+            # normalize to array
+            read -r -a present_arr <<< "$present"
+            missing=()
+            for loc in "${LOCALES_ARR[@]}"; do
+              found=false
+              for p in "${present_arr[@]}"; do
+                if [ "$p" = "$loc" ]; then found=true; break; fi
+              done
+              if ! $found; then missing+=("$loc"); fi
+            done
+            if [ ${#missing[@]} -ne 0 ]; then
+              echo "ERROR: New file '$key' added in locales:${present} but missing in locales: ${missing[*]}"
+              ERR=1
+            else
+              echo "OK: '$key' present in all locales (${present})"
+            fi
+          done
+
+          if [ "$ERR" -ne 0 ]; then
+            echo ""
+            echo "One or more localized md files are missing their counterparts. Please add the missing files in the same commit/PR."
+            echo ""
+            echo "Expected for each new file under zh-cn/en/zh-hant to have the same relative path and filename."
+            exit 1
+          fi
+
+          echo "All checks passed."
