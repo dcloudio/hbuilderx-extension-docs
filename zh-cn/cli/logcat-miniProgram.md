@@ -2,6 +2,10 @@
 
 > HBuilderX cli 命令行工具
 
+> 仅适用于 HBuilderX 4.87+ 版本
+
+> 您也可以通过 npm 包使用此功能：[@dcloudio/hbuilderx-cli](https://www.npmjs.com/package/@dcloudio/hbuilderx-cli)
+
 通过 CLI 查看运行到各平台小程序的 uni-app 应用日志，支持微信、支付宝、百度、字节跳动、QQ、360、京东、快手、飞书、小红书、鸿蒙元服务、快应用等平台。
 
 ## 命令说明
@@ -18,12 +22,11 @@
 
 **参数：**
 
-| 参数名称       | 描述                                                                       |
-| -------------- | -------------------------------------------------------------------------- |
-| --help         | 显示 cli 命令帮助                                                          |
-| --project      | HBuilder X 里导入的项目名称或绝对路径                                      |
-| --wait-for-stop | 等待运行停止后再退出，取值：true 或 false，默认值为 false                 |
-| --full-log     | 获取完整编译日志，默认仅显示最新编译日志，取值：true 或 false，默认值为 false |
+| 参数名称  | 描述                                                           |
+| --------- | -------------------------------------------------------------- |
+| --help    | 显示 cli 命令帮助                                              |
+| --project | HBuilder X 里导入的项目名称或绝对路径                          |
+| --mode    | 日志模式，取值：full、lastBuild、prevBuild，默认值为 prevBuild |
 
 **使用示例：**
 
@@ -31,14 +34,9 @@
 # 查看微信小程序日志
 ./cli logcat mp-weixin --project 项目名称
 
-# 查看微信小程序日志（等待运行停止）
-./cli logcat mp-weixin --project 项目名称 --wait-for-stop true
+# 查看微信小程序日志（指定日志模式）
+./cli logcat mp-weixin --project 项目名称 --mode full
 
-# 查看微信小程序日志（获取完整日志）
-./cli logcat mp-weixin --project 项目名称 --full-log true
-
-# 查看微信小程序日志（组合参数：等待停止 + 完整日志）
-./cli logcat mp-weixin --project 项目名称 --wait-for-stop true --full-log true
 ```
 
 ### logcat mp-alipay
@@ -53,12 +51,11 @@
 
 **参数：**
 
-| 参数名称       | 描述                                                                       |
-| -------------- | -------------------------------------------------------------------------- |
-| --help         | 显示 cli 命令帮助                                                          |
-| --project      | HBuilder X 里导入的项目名称或绝对路径                                      |
-| --wait-for-stop | 等待运行停止后再退出，取值：true 或 false，默认值为 false                 |
-| --full-log     | 获取完整编译日志，默认仅显示最新编译日志，取值：true 或 false，默认值为 false |
+| 参数名称  | 描述                                                           |
+| --------- | -------------------------------------------------------------- |
+| --help    | 显示 cli 命令帮助                                              |
+| --project | HBuilder X 里导入的项目名称或绝对路径                          |
+| --mode    | 日志模式，取值：full、lastBuild、prevBuild，默认值为 prevBuild |
 
 **使用示例：**
 
@@ -66,14 +63,9 @@
 # 查看支付宝小程序日志
 ./cli logcat mp-alipay --project 项目名称
 
-# 查看支付宝小程序日志（等待运行停止）
-./cli logcat mp-alipay --project 项目名称 --wait-for-stop true
+# 查看支付宝小程序日志（指定日志模式）
+./cli logcat mp-alipay --project 项目名称 --mode full
 
-# 查看支付宝小程序日志（获取完整日志）
-./cli logcat mp-alipay --project 项目名称 --full-log true
-
-# 查看支付宝小程序日志（组合参数：等待停止 + 完整日志）
-./cli logcat mp-alipay --project 项目名称 --wait-for-stop true --full-log true
 ```
 
 ### logcat mp-baidu
@@ -88,12 +80,11 @@
 
 **参数：**
 
-| 参数名称       | 描述                                                                       |
-| -------------- | -------------------------------------------------------------------------- |
-| --help         | 显示 cli 命令帮助                                                          |
-| --project      | HBuilder X 里导入的项目名称或绝对路径                                      |
-| --wait-for-stop | 等待运行停止后再退出，取值：true 或 false，默认值为 false                 |
-| --full-log     | 获取完整编译日志，默认仅显示最新编译日志，取值：true 或 false，默认值为 false |
+| 参数名称  | 描述                                                           |
+| --------- | -------------------------------------------------------------- |
+| --help    | 显示 cli 命令帮助                                              |
+| --project | HBuilder X 里导入的项目名称或绝对路径                          |
+| --mode    | 日志模式，取值：full、lastBuild、prevBuild，默认值为 prevBuild |
 
 **使用示例：**
 
@@ -101,14 +92,9 @@
 # 查看百度小程序日志
 ./cli logcat mp-baidu --project 项目名称
 
-# 查看百度小程序日志（等待运行停止）
-./cli logcat mp-baidu --project 项目名称 --wait-for-stop true
+# 查看百度小程序日志（指定日志模式）
+./cli logcat mp-baidu --project 项目名称 --mode full
 
-# 查看百度小程序日志（获取完整日志）
-./cli logcat mp-baidu --project 项目名称 --full-log true
-
-# 查看百度小程序日志（组合参数：等待停止 + 完整日志）
-./cli logcat mp-baidu --project 项目名称 --wait-for-stop true --full-log true
 ```
 
 ### logcat mp-toutiao
@@ -123,12 +109,11 @@
 
 **参数：**
 
-| 参数名称       | 描述                                                                       |
-| -------------- | -------------------------------------------------------------------------- |
-| --help         | 显示 cli 命令帮助                                                          |
-| --project      | HBuilder X 里导入的项目名称或绝对路径                                      |
-| --wait-for-stop | 等待运行停止后再退出，取值：true 或 false，默认值为 false                 |
-| --full-log     | 获取完整编译日志，默认仅显示最新编译日志，取值：true 或 false，默认值为 false |
+| 参数名称  | 描述                                                           |
+| --------- | -------------------------------------------------------------- |
+| --help    | 显示 cli 命令帮助                                              |
+| --project | HBuilder X 里导入的项目名称或绝对路径                          |
+| --mode    | 日志模式，取值：full、lastBuild、prevBuild，默认值为 prevBuild |
 
 **使用示例：**
 
@@ -136,14 +121,9 @@
 # 查看抖音小程序日志
 ./cli logcat mp-toutiao --project 项目名称
 
-# 查看抖音小程序日志（等待运行停止）
-./cli logcat mp-toutiao --project 项目名称 --wait-for-stop true
+# 查看抖音小程序日志（指定日志模式）
+./cli logcat mp-toutiao --project 项目名称 --mode full
 
-# 查看抖音小程序日志（获取完整日志）
-./cli logcat mp-toutiao --project 项目名称 --full-log true
-
-# 查看抖音小程序日志（组合参数：等待停止 + 完整日志）
-./cli logcat mp-toutiao --project 项目名称 --wait-for-stop true --full-log true
 ```
 
 ### logcat mp-qq
@@ -158,12 +138,11 @@
 
 **参数：**
 
-| 参数名称       | 描述                                                                       |
-| -------------- | -------------------------------------------------------------------------- |
-| --help         | 显示 cli 命令帮助                                                          |
-| --project      | HBuilder X 里导入的项目名称或绝对路径                                      |
-| --wait-for-stop | 等待运行停止后再退出，取值：true 或 false，默认值为 false                 |
-| --full-log     | 获取完整编译日志，默认仅显示最新编译日志，取值：true 或 false，默认值为 false |
+| 参数名称  | 描述                                                           |
+| --------- | -------------------------------------------------------------- |
+| --help    | 显示 cli 命令帮助                                              |
+| --project | HBuilder X 里导入的项目名称或绝对路径                          |
+| --mode    | 日志模式，取值：full、lastBuild、prevBuild，默认值为 prevBuild |
 
 **使用示例：**
 
@@ -171,14 +150,9 @@
 # 查看QQ小程序日志
 ./cli logcat mp-qq --project 项目名称
 
-# 查看QQ小程序日志（等待运行停止）
-./cli logcat mp-qq --project 项目名称 --wait-for-stop true
+# 查看QQ小程序日志（指定日志模式）
+./cli logcat mp-qq --project 项目名称 --mode full
 
-# 查看QQ小程序日志（获取完整日志）
-./cli logcat mp-qq --project 项目名称 --full-log true
-
-# 查看QQ小程序日志（组合参数：等待停止 + 完整日志）
-./cli logcat mp-qq --project 项目名称 --wait-for-stop true --full-log true
 ```
 
 ### logcat mp-360
@@ -193,12 +167,11 @@
 
 **参数：**
 
-| 参数名称       | 描述                                                                       |
-| -------------- | -------------------------------------------------------------------------- |
-| --help         | 显示 cli 命令帮助                                                          |
-| --project      | HBuilder X 里导入的项目名称或绝对路径                                      |
-| --wait-for-stop | 等待运行停止后再退出，取值：true 或 false，默认值为 false                 |
-| --full-log     | 获取完整编译日志，默认仅显示最新编译日志，取值：true 或 false，默认值为 false |
+| 参数名称  | 描述                                                           |
+| --------- | -------------------------------------------------------------- |
+| --help    | 显示 cli 命令帮助                                              |
+| --project | HBuilder X 里导入的项目名称或绝对路径                          |
+| --mode    | 日志模式，取值：full、lastBuild、prevBuild，默认值为 prevBuild |
 
 **使用示例：**
 
@@ -206,14 +179,9 @@
 # 查看360小程序日志
 ./cli logcat mp-360 --project 项目名称
 
-# 查看360小程序日志（等待运行停止）
-./cli logcat mp-360 --project 项目名称 --wait-for-stop true
+# 查看360小程序日志（指定日志模式）
+./cli logcat mp-360 --project 项目名称 --mode full
 
-# 查看360小程序日志（获取完整日志）
-./cli logcat mp-360 --project 项目名称 --full-log true
-
-# 查看360小程序日志（组合参数：等待停止 + 完整日志）
-./cli logcat mp-360 --project 项目名称 --wait-for-stop true --full-log true
 ```
 
 ### logcat mp-jd
@@ -228,12 +196,11 @@
 
 **参数：**
 
-| 参数名称       | 描述                                                                       |
-| -------------- | -------------------------------------------------------------------------- |
-| --help         | 显示 cli 命令帮助                                                          |
-| --project      | HBuilder X 里导入的项目名称或绝对路径                                      |
-| --wait-for-stop | 等待运行停止后再退出，取值：true 或 false，默认值为 false                 |
-| --full-log     | 获取完整编译日志，默认仅显示最新编译日志，取值：true 或 false，默认值为 false |
+| 参数名称  | 描述                                                           |
+| --------- | -------------------------------------------------------------- |
+| --help    | 显示 cli 命令帮助                                              |
+| --project | HBuilder X 里导入的项目名称或绝对路径                          |
+| --mode    | 日志模式，取值：full、lastBuild、prevBuild，默认值为 prevBuild |
 
 **使用示例：**
 
@@ -241,14 +208,9 @@
 # 查看京东小程序日志
 ./cli logcat mp-jd --project 项目名称
 
-# 查看京东小程序日志（等待运行停止）
-./cli logcat mp-jd --project 项目名称 --wait-for-stop true
+# 查看京东小程序日志（指定日志模式）
+./cli logcat mp-jd --project 项目名称 --mode full
 
-# 查看京东小程序日志（获取完整日志）
-./cli logcat mp-jd --project 项目名称 --full-log true
-
-# 查看京东小程序日志（组合参数：等待停止 + 完整日志）
-./cli logcat mp-jd --project 项目名称 --wait-for-stop true --full-log true
 ```
 
 ### logcat mp-kuaishou
@@ -263,12 +225,11 @@
 
 **参数：**
 
-| 参数名称       | 描述                                                                       |
-| -------------- | -------------------------------------------------------------------------- |
-| --help         | 显示 cli 命令帮助                                                          |
-| --project      | HBuilder X 里导入的项目名称或绝对路径                                      |
-| --wait-for-stop | 等待运行停止后再退出，取值：true 或 false，默认值为 false                 |
-| --full-log     | 获取完整编译日志，默认仅显示最新编译日志，取值：true 或 false，默认值为 false |
+| 参数名称  | 描述                                                           |
+| --------- | -------------------------------------------------------------- |
+| --help    | 显示 cli 命令帮助                                              |
+| --project | HBuilder X 里导入的项目名称或绝对路径                          |
+| --mode    | 日志模式，取值：full、lastBuild、prevBuild，默认值为 prevBuild |
 
 **使用示例：**
 
@@ -276,14 +237,9 @@
 # 查看快手小程序日志
 ./cli logcat mp-kuaishou --project 项目名称
 
-# 查看快手小程序日志（等待运行停止）
-./cli logcat mp-kuaishou --project 项目名称 --wait-for-stop true
+# 查看快手小程序日志（指定日志模式）
+./cli logcat mp-kuaishou --project 项目名称 --mode full
 
-# 查看快手小程序日志（获取完整日志）
-./cli logcat mp-kuaishou --project 项目名称 --full-log true
-
-# 查看快手小程序日志（组合参数：等待停止 + 完整日志）
-./cli logcat mp-kuaishou --project 项目名称 --wait-for-stop true --full-log true
 ```
 
 ### logcat mp-lark
@@ -298,12 +254,11 @@
 
 **参数：**
 
-| 参数名称       | 描述                                                                       |
-| -------------- | -------------------------------------------------------------------------- |
-| --help         | 显示 cli 命令帮助                                                          |
-| --project      | HBuilder X 里导入的项目名称或绝对路径                                      |
-| --wait-for-stop | 等待运行停止后再退出，取值：true 或 false，默认值为 false                 |
-| --full-log     | 获取完整编译日志，默认仅显示最新编译日志，取值：true 或 false，默认值为 false |
+| 参数名称  | 描述                                                           |
+| --------- | -------------------------------------------------------------- |
+| --help    | 显示 cli 命令帮助                                              |
+| --project | HBuilder X 里导入的项目名称或绝对路径                          |
+| --mode    | 日志模式，取值：full、lastBuild、prevBuild，默认值为 prevBuild |
 
 **使用示例：**
 
@@ -311,14 +266,9 @@
 # 查看飞书小程序日志
 ./cli logcat mp-lark --project 项目名称
 
-# 查看飞书小程序日志（等待运行停止）
-./cli logcat mp-lark --project 项目名称 --wait-for-stop true
+# 查看飞书小程序日志（指定日志模式）
+./cli logcat mp-lark --project 项目名称 --mode full
 
-# 查看飞书小程序日志（获取完整日志）
-./cli logcat mp-lark --project 项目名称 --full-log true
-
-# 查看飞书小程序日志（组合参数：等待停止 + 完整日志）
-./cli logcat mp-lark --project 项目名称 --wait-for-stop true --full-log true
 ```
 
 ### logcat mp-xhs
@@ -333,12 +283,11 @@
 
 **参数：**
 
-| 参数名称       | 描述                                                                       |
-| -------------- | -------------------------------------------------------------------------- |
-| --help         | 显示 cli 命令帮助                                                          |
-| --project      | HBuilder X 里导入的项目名称或绝对路径                                      |
-| --wait-for-stop | 等待运行停止后再退出，取值：true 或 false，默认值为 false                 |
-| --full-log     | 获取完整编译日志，默认仅显示最新编译日志，取值：true 或 false，默认值为 false |
+| 参数名称  | 描述                                                           |
+| --------- | -------------------------------------------------------------- |
+| --help    | 显示 cli 命令帮助                                              |
+| --project | HBuilder X 里导入的项目名称或绝对路径                          |
+| --mode    | 日志模式，取值：full、lastBuild、prevBuild，默认值为 prevBuild |
 
 **使用示例：**
 
@@ -346,14 +295,9 @@
 # 查看小红书小程序日志
 ./cli logcat mp-xhs --project 项目名称
 
-# 查看小红书小程序日志（等待运行停止）
-./cli logcat mp-xhs --project 项目名称 --wait-for-stop true
+# 查看小红书小程序日志（指定日志模式）
+./cli logcat mp-xhs --project 项目名称 --mode full
 
-# 查看小红书小程序日志（获取完整日志）
-./cli logcat mp-xhs --project 项目名称 --full-log true
-
-# 查看小红书小程序日志（组合参数：等待停止 + 完整日志）
-./cli logcat mp-xhs --project 项目名称 --wait-for-stop true --full-log true
 ```
 
 ### logcat mp-harmony
@@ -368,13 +312,12 @@
 
 **参数：**
 
-| 参数名称       | 描述                                                                         |
-| -------------- | ---------------------------------------------------------------------------- |
-| --help         | 显示 cli 命令帮助                                                            |
-| --project      | HBuilder X 里导入的项目名称或绝对路径                                        |
-| --deviceId     | 指定要使用的设备序列号，默认使用第一个设备，可通过 devices list 获取设备列表 |
-| --wait-for-stop | 等待运行停止后再退出，取值：true 或 false，默认值为 false                   |
-| --full-log     | 获取完整编译日志，默认仅显示最新编译日志，取值：true 或 false，默认值为 false |
+| 参数名称   | 描述                                                                         |
+| ---------- | ---------------------------------------------------------------------------- |
+| --help     | 显示 cli 命令帮助                                                            |
+| --project  | HBuilder X 里导入的项目名称或绝对路径                                        |
+| --deviceId | 指定要使用的设备序列号，默认使用第一个设备，可通过 devices list 获取设备列表 |
+| --mode     | 日志模式，取值：full、lastBuild、prevBuild，默认值为 prevBuild               |
 
 **使用示例：**
 
@@ -385,14 +328,12 @@
 # 查看鸿蒙元服务日志（指定设备）
 ./cli logcat mp-harmony --project 项目名称 --deviceId 设备序列号
 
-# 查看鸿蒙元服务日志（等待运行停止）
-./cli logcat mp-harmony --project 项目名称 --wait-for-stop true
+# 查看鸿蒙元服务日志（指定日志模式）
+./cli logcat mp-harmony --project 项目名称 --mode full
 
-# 查看鸿蒙元服务日志（获取完整日志）
-./cli logcat mp-harmony --project 项目名称 --full-log true
+# 查看鸿蒙元服务日志（组合参数：指定设备 + 日志模式）
+./cli logcat mp-harmony --project 项目名称 --deviceId 设备序列号 --mode lastBuild
 
-# 查看鸿蒙元服务日志（组合参数：指定设备 + 等待停止 + 完整日志）
-./cli logcat mp-harmony --project 项目名称 --deviceId 设备序列号 --wait-for-stop true --full-log true
 ```
 
 ### logcat quickapp-webview-huawei
@@ -407,12 +348,11 @@
 
 **参数：**
 
-| 参数名称       | 描述                                                                       |
-| -------------- | -------------------------------------------------------------------------- |
-| --help         | 显示 cli 命令帮助                                                          |
-| --project      | HBuilder X 里导入的项目名称或绝对路径                                      |
-| --wait-for-stop | 等待运行停止后再退出，取值：true 或 false，默认值为 false                 |
-| --full-log     | 获取完整编译日志，默认仅显示最新编译日志，取值：true 或 false，默认值为 false |
+| 参数名称  | 描述                                                           |
+| --------- | -------------------------------------------------------------- |
+| --help    | 显示 cli 命令帮助                                              |
+| --project | HBuilder X 里导入的项目名称或绝对路径                          |
+| --mode    | 日志模式，取值：full、lastBuild、prevBuild，默认值为 prevBuild |
 
 **使用示例：**
 
@@ -420,14 +360,9 @@
 # 查看华为快应用日志
 ./cli logcat quickapp-webview-huawei --project 项目名称
 
-# 查看华为快应用日志（等待运行停止）
-./cli logcat quickapp-webview-huawei --project 项目名称 --wait-for-stop true
+# 查看华为快应用日志（指定日志模式）
+./cli logcat quickapp-webview-huawei --project 项目名称 --mode full
 
-# 查看华为快应用日志（获取完整日志）
-./cli logcat quickapp-webview-huawei --project 项目名称 --full-log true
-
-# 查看华为快应用日志（组合参数：等待停止 + 完整日志）
-./cli logcat quickapp-webview-huawei --project 项目名称 --wait-for-stop true --full-log true
 ```
 
 ### logcat quickapp-webview-union
@@ -442,12 +377,11 @@
 
 **参数：**
 
-| 参数名称       | 描述                                                                       |
-| -------------- | -------------------------------------------------------------------------- |
-| --help         | 显示 cli 命令帮助                                                          |
-| --project      | HBuilder X 里导入的项目名称或绝对路径                                      |
-| --wait-for-stop | 等待运行停止后再退出，取值：true 或 false，默认值为 false                 |
-| --full-log     | 获取完整编译日志，默认仅显示最新编译日志，取值：true 或 false，默认值为 false |
+| 参数名称  | 描述                                                           |
+| --------- | -------------------------------------------------------------- |
+| --help    | 显示 cli 命令帮助                                              |
+| --project | HBuilder X 里导入的项目名称或绝对路径                          |
+| --mode    | 日志模式，取值：full、lastBuild、prevBuild，默认值为 prevBuild |
 
 **使用示例：**
 
@@ -455,12 +389,7 @@
 # 查看快应用联盟日志
 ./cli logcat quickapp-webview-union --project 项目名称
 
-# 查看快应用联盟日志（等待运行停止）
-./cli logcat quickapp-webview-union --project 项目名称 --wait-for-stop true
+# 查看快应用联盟日志（指定日志模式）
+./cli logcat quickapp-webview-union --project 项目名称 --mode full
 
-# 查看快应用联盟日志（获取完整日志）
-./cli logcat quickapp-webview-union --project 项目名称 --full-log true
-
-# 查看快应用联盟日志（组合参数：等待停止 + 完整日志）
-./cli logcat quickapp-webview-union --project 项目名称 --wait-for-stop true --full-log true
 ```
