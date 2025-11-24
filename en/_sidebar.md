@@ -77,6 +77,7 @@
     * [Formator Prettier 1.0.6](/Tutorial/extension/prettier-1.0.6.md)
     * [FTP/SFTP](/Tutorial/extension/ftp.md)
     * [MarkDown Share](/Tutorial/extension/markdown_share.md)
+    * [Github Copilot](/Tutorial/extension/github-copilot.md)
 * Other
     * [Font Setting](/Tutorial/settings/font.md)
     * [px-upx](/Tutorial/settings/px-upx)
