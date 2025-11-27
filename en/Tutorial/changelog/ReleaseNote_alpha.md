@@ -1,3 +1,8 @@
+## 4.87.2025112602-alpha
+* Added uni-app (x) to run and retrieved runtime logs via CLI. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=22250)
+* Fixed an issue in version 4.84 where the app couldn't run on the iOS 26 simulator under certain circumstances. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=23348)
+
+
 ## 4.86.2025110715-alpha
 * Fixed an issue in version 4.84 in uni-app(x) projects where, after creating a new page under a subpackage and unchecking the "Register in pages.json" option, the selected file location and subpackage did not match when clicking "Create". [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=22990)
 * Fixed an issue where uni-app (x) projects were not automatically imported when running on certain versions of WeChat Developer Tools for WeChat Mini Programs.[Details](https://issues.dcloud.net.cn/pages/issues/detail?id=22962)
