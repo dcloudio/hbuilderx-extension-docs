@@ -2,9 +2,9 @@
 
 ### OS System Requirements@win64
 
-2025年3月起，HBuilderX 4.61+版本，Windows将仅支持64位操作系统，不再对32位系统进行支持。
+Starting from March 2025, HBuilderX 4.61+ will only support 64-bit Windows operating systems and will no longer support 32-bit systems.
 
-在Windows 32位系统上进行后续升级将会弹出建议升级的提示。
+Subsequent upgrades on Windows 32-bit systems will display a prompt recommending an upgrade.
 
 
 ### DownLoad@download
@@ -32,7 +32,7 @@ Download a Zip archive, extract it and run exe file from there.
 ### Startup Troubleshooting@startup-troubleshooting
 
 1. HBuilderX startup issue，ref to: [HBuilderX Startup Troubleshooting Guide](/Tutorial/Questions/WindowsStart)
-2. HBuilderX startup problem with damaged configuration file，ref to: [HBuilderX configuration file troubleshooting guide](/Tutorial/Questions/WindowsStart?id=_4-配置文件损坏)
+2. HBuilderX startup problem with damaged configuration file, ref to: [HBuilderX configuration file troubleshooting guide](/Tutorial/Questions/WindowsStart?id=_4-configuration-file-damaged)
 
 ### Falsely Reported as a Malicious File@security
 

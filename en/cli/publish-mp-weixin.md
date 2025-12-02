@@ -1,58 +1,58 @@
-# CLI 发行uni-app到微信小程序@mp-weixin
+# CLI Publish uni-app to WeChat Mini Program@mp-weixin
 
-> HBuilderX 3.3.7-alpha，支持使用CLI发行微信小程序。
+> HBuilderX 3.3.7-alpha, supports using CLI to publish WeChat Mini Programs.
 
-通过此种方式，可在命令行或其它CI工具中，完成微信小程序代码的上传、预览等操作。
+Through this method, you can complete operations such as uploading and previewing WeChat Mini Program code in command line or other CI tools.
 
-## CLI命令语法@cmd
+## CLI Command Syntax@cmd
 
 
-|参数			|说明																	|
+|Parameter			|Description																	|
 |--				|--																		|
-|--platform		|必填，发行平台(MP-WEIXIN)												|
-|--project		|必填，项目名称															|
-|--appid		|如果上传发行小程序到微信平台，则必填微信小程序appid													|
-|--subPackage	|发行为混合包, 示例：--subPackage xxx									|
-|--upload		|打包后是否上传到微信平台,只有值为true时生效							|
-|--description	|上传的小程序描述														|
-|--privatekey	|微信代码上传密钥文件 [详情](#uploadPrivateKey)							|
-|--version		|上传小程序的版本号；选填。如果不填写，则会读取manifest.json中的版本号	|
-|--sourceMap    |生成SourceMap,值为 true 时生效，默认为 false				|
-|--robot		|指定微信ci机器人编号（取值范围：1 ~ 30），默认为 1						|
+|--platform		|Required, publish platform (MP-WEIXIN)												|
+|--project		|Required, project name															|
+|--appid		|Required if uploading mini program to WeChat platform, WeChat Mini Program appid													|
+|--subPackage	|Publish as hybrid package, example: --subPackage xxx									|
+|--upload		|Whether to upload to WeChat platform after packaging, only effective when value is true							|
+|--description	|Description of the uploaded mini program														|
+|--privatekey	|WeChat code upload key file [Details](#uploadPrivateKey)							|
+|--version		|Version number of the uploaded mini program; optional. If not filled, it will read the version number from manifest.json	|
+|--sourceMap    |Generate SourceMap, effective when value is true, default is false				|
+|--robot		|Specify WeChat CI robot number (range: 1 ~ 30), default is 1						|
 
-注意：`--robot`参数，仅支持HBuilderX 3.6.18+版本。同时需要升级 [微信小程序上传CI插件](https://ext.dcloud.net.cn/plugin?id=7199)
+Note: The `--robot` parameter only supports HBuilderX 3.6.18+ versions. You also need to upgrade the [WeChat Mini Program Upload CI Plugin](https://ext.dcloud.net.cn/plugin?id=7199)
 
 
 ```shell
-# 仅编译uni-app项目到微信小程序
-cli publish --platform mp-weixin --project 项目名称
+# Only compile uni-app project to WeChat Mini Program
+cli publish --platform mp-weixin --project project_name
 
-# 编译uni-app项目到微信小程序，并上传发行小程序到微信平台
-cli publish --platform mp-weixin --project 项目名称 --upload true --appid 小程序appid --description 发布描述 --version 发布版本 --privatekey 小程序上传密钥文件
+# Compile uni-app project to WeChat Mini Program and upload to WeChat platform
+cli publish --platform mp-weixin --project project_name --upload true --appid mini_program_appid --description publish_description --version publish_version --privatekey mini_program_upload_key_file
 
-cli publish --platform mp-weixin --project 项目名称 --upload true --appid 小程序appid --description 发布描述 --version 发布版本 --privatekey 小程序上传密钥文件  --robot 2
+cli publish --platform mp-weixin --project project_name --upload true --appid mini_program_appid --description publish_description --version publish_version --privatekey mini_program_upload_key_file --robot 2
 ```
 
 
-## 小程序代码上传密钥@uploadPrivateKey
+## Mini Program Code Upload Key@uploadPrivateKey
 
-> HBuilderX 3.3.7+, uni-app 发行到微信小程序，支持自动上传代码到微信平台，无需再通过微信开发者工具上传发行。[详情](/Tutorial/App/uni-app-publish-mp-weixin)
+> HBuilderX 3.3.7+, uni-app publishing to WeChat Mini Program supports automatically uploading code to WeChat platform, no need to upload through WeChat Developer Tools anymore. [Details](/Tutorial/App/uni-app-publish-mp-weixin)
 >
-> HBuilderX 发行微信小程序，需要提供微信小程序代码上传密钥
+> HBuilderX publishing WeChat Mini Program requires providing the WeChat Mini Program code upload key
 
-通过微信小程序CI，使用上传密钥上传代码，无需打开微信开发者工具，一键完成微信小程序代码的上传、预览等操作。
+Through WeChat Mini Program CI, using the upload key to upload code, you can complete operations such as uploading and previewing WeChat Mini Program code with one click without opening WeChat Developer Tools.
 
-**如何获取微信小程序代码上传密钥？**
+**How to obtain the WeChat Mini Program code upload key?**
 
-打开微信公众平台 [官网](https://mp.weixin.qq.com/), 扫码登录，左侧菜单【开发 -> 开发管理】，点击tab【开发设置】，如下图：
+Open the WeChat Mini Program platform [official website](https://mp.weixin.qq.com/), scan to log in, in the left menu [Development -> Development Management], click the tab [Development Settings], as shown below:
 
 <img src="/static/snapshots/cli/wechat-uploadPrivateKey.png" class="hd-img" />
 
-**下载密钥文件：**
+**Download the key file:**
 
 <img src="/static/snapshots/cli/wechat-downloadkeyFile.png" class="hd-img"/>
 
-## 注意事项
+## Notes
 
-1. 请正确填写`微信小程序appid`和`privatekey`
-2. 如果开启了`IP白名单`，请确保微信平台已配置 IP 白名单
+1. Please fill in the `WeChat Mini Program appid` and `privatekey` correctly
+2. If `IP whitelist` is enabled, please ensure the IP whitelist is configured on the WeChat platform

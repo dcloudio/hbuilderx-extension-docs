@@ -1,34 +1,34 @@
-# 插件国际化@localized
+# Plugin Internationalization@localized
 
 
-什么是插件国际化？即插件支持多国家、多语言。
+What is plugin internationalization? It means that the plugin supports multiple countries and languages.
 
-HBuilderX优先查找`插件扩展中的对应的翻译文件`，然后再查找语言包中对应插件扩展的翻译文件。
+HBuilderX first looks for the `corresponding translation file in the plugin extension`, and then looks for the translation file of the corresponding plugin extension in the language pack.
 
-大多数情况下，个人开发的插件，可能无需集成到HBuilderX语言包中，如有需要，请联系HBuilderX官方。
+In most cases, plugins developed by individuals may not need to be integrated into the HBuilderX language pack. If needed, please contact HBuilderX official.
 
-**插件扩展的目录结构：**
+**Directory structure of the plugin extension:**
 ```shell
-插件目录 /
+Plugin directory /
     package.json
-    package.nls.json			主语言翻译键值对应数据
-    package.nls.[语言id].json	特定语言翻译键值对应关系
+    package.nls.json              Main language translation key-value data
+    package.nls.[language_id].json    Specific language translation key-value mapping
 ```
 
-**特别说明：**
+**Special Notes:**
 
-- 本文仅适用于package.json中的键值。
-- `语言id`，必须规范。请参考：[语言id列表](https://github.com/dcloudio/hbuilderx-language-packs/blob/main/docs/localizations.md)
+- This article only applies to key values in package.json.
+- `language_id` must be standardized. Please refer to: [Language ID List](https://github.com/dcloudio/hbuilderx-language-packs/blob/main/docs/localizations.md)
 
-## 插件扩展package.json
+## Plugin Extension package.json
 
-插件扩展package.json中需要进行根据HBuilderX当前语言进行翻译的值使用`%键名%`来表达。
+In the plugin extension package.json, values that need to be translated according to the current HBuilderX language are expressed using `%key_name%`.
 
-比如`%description%`,此时HBuilderX会优先查找`插件扩展目录`中(`package.nls.json`或`package.nls.[对应语言id].json`)的翻译文件
+For example, `%description%`, at this time HBuilderX will first look for the translation file in the `plugin extension directory` (`package.nls.json` or `package.nls.[corresponding_language_id].json`)
 
 
 ```json
-// 插件扩展package.json
+// Plugin extension package.json
 {
     "name": "xxxxx",
     "description": "%description%",
@@ -37,18 +37,18 @@ HBuilderX优先查找`插件扩展中的对应的翻译文件`，然后再查找
 }
 ```
 
-## 插件语言国际化示例
+## Plugin Language Internationalization Example
 
-以【markdown-share】插件为例，目录结构如下：
+Taking the [markdown-share] plugin as an example, the directory structure is as follows:
 
 ```shell
 markdown-share /
     package.json
     package.nls.json
-    package.nls.en.json	  # 英语语言包
+    package.nls.en.json    # English language pack
 ```
 
-插件package.json内容如下:
+The plugin package.json content is as follows:
 
 ```JSON
 {
@@ -62,19 +62,19 @@ markdown-share /
 
 ```JSON
 {
-    "description": "一键分享markdown"
+    "description": "One-click share markdown"
 }
 ```
 
 ### package.nls.en.json
 
-> package.nls.[对应语言id].json, 优先于package.nls.json匹配
+> package.nls.[corresponding_language_id].json takes precedence over package.nls.json
 
 ```JSON
 {
-    "description": "一键分享markdown"	,
-    "displayname": "一键分享"
+    "description": "One-click share markdown",
+    "displayname": "One-click share"
 }
 ```
 
-使用该文件，插件扩展中的package.json里有包含`%description%`字样的值时，该值将会被替换成翻译文件中对应的值(如:一键分享markdown,而%displayname%被替换为一键分享)
+When using this file, if the package.json in the plugin extension contains a value with `%description%`, the value will be replaced with the corresponding value in the translation file (e.g., One-click share markdown, and %displayname% is replaced with One-click share)

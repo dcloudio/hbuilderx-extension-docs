@@ -49,7 +49,7 @@ For apis [hx. Window. GetActiveTextEditor ()] (/ ExtensionDocs/API/Windows/getAc
 
 ### setSelection
 
-> Set the main selection area, the API will clear your selection first, if you want to use multiple channels, please use[addSelection](#addSelection)方法
+> Set the main selection area, the API will clear your selection first, if you want to use multiple channels, please use [addSelection](#addSelection) method
 
 **Parameter**
 
@@ -194,7 +194,7 @@ let activeEditor = hx.window.getActiveTextEditor();
 activeEditor.then(function(editor) {
     let linePromise = editor.document.lineFromPosition(editor.selection.active);
     linePromise.then((line)=>{
-        console.log("Line info:", line.text, "start：", line.start, "end：", line.end);
+        console.log("Line info:", line.text, "start:", line.start, "end:", line.end);
     });
 });
 ```

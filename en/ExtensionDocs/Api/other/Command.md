@@ -1,12 +1,12 @@
 ## Command
 
-Command: 对命令的引用
+Command: A reference to a command
 
-**属性列表**
+**Property List**
 
-|属性名		|属性类型	|描述			|
+|Property Name		|Property Type	|Description			|
 |--			|--			|--				|
-|arguments?	|any[]		|使用的参数		|
-|command	|String		|command标识符	|
-|title		|String		|命令的标题		|
-|tooltip?	|String		|在鼠标悬浮显示	|
+|arguments?	|any[]		|Arguments to use		|
+|command	|String		|Command identifier	|
+|title		|String		|Title of the command		|
+|tooltip?	|String		|Displayed on mouse hover	|

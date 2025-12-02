@@ -1,21 +1,21 @@
 # showFormDialog
 
-showFormDialog, 用于在HBuilderX中创建简单的窗口。
+showFormDialog is used to create simple dialog windows in HBuilderX.
 
 
-## 支持哪些控件？
+## What Controls are Supported?
 
-- [标签描述文本](#label)
-- [输入框](#input)
-- [文件夹选择框](#fileSelectInput)
-- [单选按钮组](#radioGroup)
-- [列表控件](#list)
-- [复选框控件](#checkBox)
-- [文本编辑器](#textEditor)
-- [组合下拉框](#comboBox)
-- [组合控件](#widgetGroup)
+- [Label Description Text](#label)
+- [Input Box](#input)
+- [File/Folder Selection Input](#fileSelectInput)
+- [Radio Button Group](#radioGroup)
+- [List Control](#list)
+- [Checkbox Control](#checkBox)
+- [Text Editor](#textEditor)
+- [Combo Box](#comboBox)
+- [Widget Group](#widgetGroup)
 
-## 语法
+## Syntax
 -----------------------
 
 ```js
@@ -24,20 +24,20 @@ hx.window.showFormDialog({
         {
             type: "input",
             name: "projectName",
-            label: "项目名称",
-            placeholder: '请输入项目名称...',
+            label: "Project Name",
+            placeholder: 'Please enter project name...',
             value: ""
         },
     ],
     title: "showFormDialog",
-    subtitle: "演示插件API hx.window.showFormDialog使用",
+    subtitle: "Demonstrates the use of plugin API hx.window.showFormDialog",
     width: 480,
     height: 180,
-    submitButtonText: "提交(&S)",
-    cancelButtonText: "取消(&C)",
+    submitButtonText: "Submit(&S)",
+    cancelButtonText: "Cancel(&C)",
     validate: function(formData) {
         if (!formData.projectName) {
-            this.showError("项目名称不能为空，请填写");
+            this.showError("Project name cannot be empty, please fill in");
             return false;
         };
         return true;
@@ -45,54 +45,54 @@ hx.window.showFormDialog({
     onOpened: function() { },
     onChanged: function(field, value) { }
 }).then((res) => {
-    console.log("返回结果：", JSON.stringify(res));
+    console.log("Return result:", JSON.stringify(res));
 });
 ```
 
-**主窗口数据格式**
+**Main Window Data Format**
 
-|       参数名称       |     类型      |                      描述                      |
+|       Parameter Name       |     Type      |                      Description                      |
 | :------------------: | :-----------: | :--------------------------------------------: |
-|        title         |    String     |                   窗口主标题                   |
-|       subtitle       |    String     |                   窗口副标题                   |
-|        footer        |    String     |                  窗口底部文本                  |
-|     hideSubTitle     |    Boolean    |     隐藏副标题(未设置 subtitle 时自动隐藏)     |
-|    hideErrorLabel    |    Boolean    |                  隐藏错误提示                  |
-| hideFooterSeparator  |    Boolean    |                 隐藏底部分隔符                 |
-|      hideFooter      |    Boolean    |                隐藏底部所有控件                |
-|        width         |    Number     |        窗口宽度, 可不设置, 默认值为 640        |
-|        height        |    Number     |        窗口高度, 可不设置, 默认值为 480        |
-|   submitButtonText   |    String     |                 提交或上传按钮                 |
-|   acceptButtonText   |    String     |                 提交或上传按钮                 |
-|   cancelButtonText   |    String     |                    取消按钮                    |
-|   rejectButtonText   |    String     |                    取消按钮                    |
-|      formItems       | Array&lt;Object&gt; |                 窗口中的子控件                 |
-| subtitleLinkAutoOpen |    Boolean    |    设置副标题是否自动打开链接（默认为true）    |
-|  footerLinkAutoOpen  |    Boolean    |   设置底部文本是否自动打开链接（默认为true）   |
-|  errorLinkAutoOpen   |    Boolean    | 设置错误提示标签是否自动打开链接（默认为true） |
-| validate| | 此方法用于校验输入，比如校验输入框是否为空 |
-| onChanged| | 此方法用于更新控件 |
-| onOpened| | 此方法用于窗口UI加载完成后，去加载某些数据 |
+|        title         |    String     |                   Main window title                   |
+|       subtitle       |    String     |                   Window subtitle                   |
+|        footer        |    String     |                  Window footer text                  |
+|     hideSubTitle     |    Boolean    |     Hide subtitle (automatically hidden when subtitle is not set)     |
+|    hideErrorLabel    |    Boolean    |                  Hide error message                  |
+| hideFooterSeparator  |    Boolean    |                 Hide footer separator                 |
+|      hideFooter      |    Boolean    |                Hide all footer controls                |
+|        width         |    Number     |        Window width, optional, default is 640        |
+|        height        |    Number     |        Window height, optional, default is 480        |
+|   submitButtonText   |    String     |                 Submit or upload button                 |
+|   acceptButtonText   |    String     |                 Submit or upload button                 |
+|   cancelButtonText   |    String     |                    Cancel button                    |
+|   rejectButtonText   |    String     |                    Cancel button                    |
+|      formItems       | Array&lt;Object&gt; |                 Child controls in the window                 |
+| subtitleLinkAutoOpen |    Boolean    |    Set whether subtitle auto-opens links (default is true)    |
+|  footerLinkAutoOpen  |    Boolean    |   Set whether footer text auto-opens links (default is true)   |
+|  errorLinkAutoOpen   |    Boolean    | Set whether error label auto-opens links (default is true) |
+| validate| | This method is used for input validation, such as checking if input box is empty |
+| onChanged| | This method is used to update controls |
+| onOpened| | This method is used to load data after window UI is loaded |
 
 
-## 控件
+## Controls
 -----------------------
 
 ### label
 
-标签控件, 生成一个标签, 放置描述文字
+Label control, creates a label to display description text
 
-| 参数名称 |  类型  |                       描述                       |
+| Parameter Name |  Type  |                       Description                       |
 | :------: | :----: | :----------------------------------------------: |
-|   type   | String | label(type 为控件类型识别关键字, label 为固定值) |
-|   name   | String |                  控件的唯一标识                  |
-|   text   | String |                     描述文字                     |
+|   type   | String | label (type is control type identifier, label is a fixed value) |
+|   name   | String |                  Unique control identifier                  |
+|   text   | String |                     Description text                     |
 
 ```json
 {
   "type": "label",
   "name": "label1",
-  "text": "这是一个label"
+  "text": "This is a label"
 }
 
 or
@@ -100,7 +100,7 @@ or
 {
   "type": "label",
   "name": "label2",
-  "text": '<span style="color:red;">这是一个带有颜色的label</span>'
+  "text": '<span style="color:red;">This is a label with color</span>'
 }
 ```
 
@@ -108,24 +108,24 @@ or
 
 ### input
 
-输入框控件, 生成一个输入框
+Input control, creates an input box
 
-|  参数名称		|  类型	|                             描述									|
+|  Parameter Name		|  Type	|                             Description									|
 | :---------:	| :----:| :----------------------------------------------------------:		|
 |    type		| String|                            input									|
-|    name		| String|                        控件的唯一标识								|
-|    label		| String| 输入框的说明文字(在输入框前, 存在一个 label, 进行必要的描述)		|
-| placeholder	| String|                 输入框中没有文字时的提示文字						|
-|    value		| String|                        输入框中的文字								|
-|    mode		| String|                        设置输入框模式, 可选值为normal或password	|
-|    disabled	| String| 设置输入框是否禁用，默认false。设置ture时，输入框不可输入。	|
+|    name		| String|                        Unique control identifier								|
+|    label		| String| Input box description text (there is a label before the input box for necessary description)		|
+| placeholder	| String|                 Placeholder text when input box is empty						|
+|    value		| String|                        Text in input box								|
+|    mode		| String|                        Set input box mode, options are normal or password	|
+|    disabled	| String| Set whether input box is disabled, default false. When set to true, input box is not editable.	|
 
 ```json
 {
     type: "input",
     name: "projectName",
-    label: "普通输入框",
-    placeholder: "这是一个普通输入框",
+    label: "Normal Input Box",
+    placeholder: "This is a normal input box",
     value: "",
     disabled: false
 }
@@ -135,25 +135,25 @@ or
 
 ### fileSelectInput
 
-输入框控件, 生成一个文件或文件夹选择框
+Input control, creates a file or folder selection input
 
-|  参数名称   |     类型      |                             描述                             |
+|  Parameter Name   |     Type      |                             Description                             |
 | :---------: | :-----------: | :----------------------------------------------------------: |
 |    type     |    String     |                       fileSelectInput                        |
-|    name     |    String     |                        控件的唯一标识                        |
-|    mode     |    String     | 控制文件选择输入框, 是选择文件(file), 还是选择文件夹(folder) |
-|    label    |    String     | 输入框的说明文字(在输入框前, 存在一个 label, 进行必要的描述) |
-| placeholder |    String     |                 输入框中没有文字时的提示文字                 |
-|    value    |    String     |                        输入框中的文字                        |
-|   Filters   | Array&lt;string&gt; |                 文件过滤，当mode为file时生效                 |
+|    name     |    String     |                        Unique control identifier                        |
+|    mode     |    String     | Control file selection input, select file (file) or folder (folder) |
+|    label    |    String     | Input box description text (there is a label before the input box for necessary description) |
+| placeholder |    String     |                 Placeholder text when input box is empty                 |
+|    value    |    String     |                        Text in input box                        |
+|   Filters   | Array&lt;string&gt; |                 File filter, effective when mode is file                 |
 
 ```json
 {
   "type": "fileSelectInput",
   "name": "projectLocation",
   "mode": "file",
-  "label": "项目位置",
-  "placeholder": "请选择项目位置",
+  "label": "Project Location",
+  "placeholder": "Please select project location",
   "value": "",
   "filters":["*.html;*.json"]
 }
@@ -163,25 +163,25 @@ or
 
 ### radioGroup
 
-单选按钮组, 生成一组单选按钮
+Radio button group, creates a group of radio buttons
 
-|   参数名称   |     类型      |           描述           |
+|   Parameter Name   |     Type      |           Description           |
 | :----------: | :-----------: | :----------------------: |
 |     type     |    String     |        radioGroup        |
-|     name     |    String     |      控件的唯一标识      |
-|    label     |    String     | 可以给按钮组设置说明文字 |
-|    items     | Array&lt;Object&gt; |   单选按钮项, 数组格式   |
-| label(items) |    String     |     单选框的说明文字     |
-|  id(items)   |    String     |     单选框的唯一标识     |
-|    value     |    String     |    选中的单选框的 id     |
+|     name     |    String     |      Unique control identifier      |
+|    label     |    String     | Can set description text for button group |
+|    items     | Array&lt;Object&gt; |   Radio button items, array format   |
+| label(items) |    String     |     Radio button description text     |
+|  id(items)   |    String     |     Radio button unique identifier     |
+|    value     |    String     |    ID of selected radio button     |
 
 ```json
 {
   "type": "radioGroup",
   "name": "projectType",
-  "label": "所有的项目: ",
+  "label": "All Projects: ",
   "items": [
-    {"label": "Web项目","id": "web"},
+    {"label": "Web Project","id": "web"},
     {"label": "uni-app","id": "uni-app"}
   ],
   "value": "uni-app"
@@ -192,40 +192,40 @@ or
 
 ### list
 
-列表控件, 生成一组可选择的列表
+List control, creates a selectable list
 
-|    参数名称		| 类型					|描述										|
+|    Parameter Name		| Type					|Description										|
 | :-------------:	| :-----------:			| :----------------------------------:		|
 |      type			|    String				| list										|
-|      name			|    String				| 控件的唯一标识							|
-|      title		|    String				| 列表外部存在一个 group, 这是 group 的标题	|
-| columnStretches	|     Array				| 列表各个列的宽度比例						|
-|      items		| Array&lt;Object&gt;	| 列表的全部行数据							|
-| columns(items)	| Array&lt;Object&gt;	| 列表一行的数据							|
-| label(columns)	|    String				| 在某行中, 表格第 N 列的数据				|
-| multiSelection	|      boolean			| 是否允许多选								|
-| value(columns)	|      int或Array		| 选择的列表项，如value:0，value:[0,1,2,3]	|
-| refreshable		|      boolean			| 是否可刷新								|
-| searchable		|      boolean			| 搜索设置									|
-| searchColumns		| Array					| 要搜索的行列, 示例："searchColumns":[1,2]	|
+|      name			|    String				| Unique control identifier							|
+|      title		|    String				| There is a group outside the list, this is the group title	|
+| columnStretches	|     Array				| Width ratio of each column in the list						|
+|      items		| Array&lt;Object&gt;	| All row data of the list							|
+| columns(items)	| Array&lt;Object&gt;	| Data of one row in the list							|
+| label(columns)	|    String				| Data of column N in a row				|
+| multiSelection	|      boolean			| Whether multiple selection is allowed								|
+| value(columns)	|      int or Array		| Selected list item, e.g. value:0, value:[0,1,2,3]	|
+| refreshable		|      boolean			| Whether refreshable								|
+| searchable		|      boolean			| Search settings									|
+| searchColumns		| Array					| Rows and columns to search, example: "searchColumns":[1,2]	|
 
 ```json
 {
   "type": "list",
-  "title": "选择框",
+  "title": "Selection Box",
   "name": "list1",
   "columnStretches": [1, 2],
   "items": [
     {
       "columns": [
-        {"label": "百度"},
-        {"label": "使用百度搜索 <a href='www.baidu.com'>Baidu</a>"}
+        {"label": "Baidu"},
+        {"label": "Use Baidu search <a href='www.baidu.com'>Baidu</a>"}
       ]
     },
     {
       "columns": [
         {"label": "Google"},
-        {"label": "使用Google搜索 <a href='www.google.com'>Google</a>"}
+        {"label": "Use Google search <a href='www.google.com'>Google</a>"}
       ]
     }
   ],
@@ -240,18 +240,18 @@ or
 
 ### checkBox
 
-| 参数名称 |  类型   |        描述         |
+| Parameter Name |  Type   |        Description         |
 | :------: | :-----: | :-----------------: |
 |   type   | String  |      checkBox       |
-|   name   | String  |   控件的唯一标识    |
-|  label   | String  | checkBox 的说明文字 |
-|  value   | Boolean | checkBox 是否被选中 |
+|   name   | String  |   Unique control identifier    |
+|  label   | String  | Checkbox description text |
+|  value   | Boolean | Whether checkbox is checked |
 
 ```json
 {
   "type": "checkBox",
   "name": "checkBox1",
-  "label": "复选框",
+  "label": "Checkbox",
   "value": true
 }
 ```
@@ -261,22 +261,22 @@ or
 
 ### textEditor
 
-文本编辑器,提供一个让用户输入的编辑框
+Text editor, provides an editing box for user input
 
 
-| 参数名称   | 类型   | 描述                         |
+| Parameter Name   | Type   | Description                         |
 | ---------- | ------ | ---------------------------- |
 | type       | String | textEditor                   |
-| name       | String | 控件的唯一标识               |
-| languageId | String | 设置编辑语言id，提供代码高亮 |
-| text       | String | 设置编辑内容                 |
-| title      | String | 标题                         |
+| name       | String | Unique control identifier               |
+| languageId | String | Set editing language ID for code highlighting |
+| text       | String | Set editing content                 |
+| title      | String | Title                         |
 
 ```json
 {
   type: "textEditor",
   name: "paramsInput",
-  title: "参数输入",
+  title: "Parameter Input",
   languageId: "json",
   text: "{\n\"params\":[\n]}"
 }
@@ -287,23 +287,23 @@ or
 
 ### comboBox
 
-组合下拉框
+Combo dropdown box
 
-| 参数名称    | 类型          | 描述                                            |
+| Parameter Name    | Type          | Description                                            |
 | ----------- | ------------- | ----------------------------------------------- |
 | type        | String        | textEditor                                      |
-| name        | String        | 控件的唯一标识                                  |
-| items       | Array<String> | 字符串数组                                      |
-| editable    | Boolean       | 设置是否可编辑，默认false                       |
-| index       | Number        | 设置当前索引(editable设置为false时可以设置此项) |
-| text        | String        | 设置当前文本(editable设置为true时可以设置此项)  |
-| placeholder | String        | 设置提示占位提示文本                            |
+| name        | String        | Unique control identifier                                  |
+| items       | Array<String> | String array                                      |
+| editable    | Boolean       | Set whether editable, default false                       |
+| index       | Number        | Set current index (can be set when editable is false) |
+| text        | String        | Set current text (can be set when editable is true)  |
+| placeholder | String        | Set placeholder hint text                            |
 
 
 ```json
 {
   type: "comboBox",
-  placeholder: "请输入",
+  placeholder: "Please enter",
   name: "functionNameInput",
   editable: true,
   items: ["item1","item2","item3"],
@@ -322,63 +322,63 @@ or
 
 ### widgetGroup
 
-组合控件(widgetGroup)，提供一个横向布局的控件窗口，使用者可以自定义向其中放入不同类型的控件.
+Widget group (widgetGroup), provides a horizontal layout control window where users can add different types of controls.
 
-##### widgetGroup参数
+##### widgetGroup Parameters
 
-| 参数名称 | 类型   | 描述                |
+| Parameter Name | Type   | Description                |
 | -------- | ------ | ------------------- |
-| type     | String | widgetGroup(固定值) |
-| name     | String | 控件的唯一标识      |
-| widgets  | Array  | 控件                |
+| type     | String | widgetGroup (fixed value) |
+| name     | String | Unique control identifier      |
+| widgets  | Array  | Controls                |
 
-##### widgetGroup支持的子控件
+##### Child Controls Supported by widgetGroup
 
-- 普通按钮控件(button)
+- Normal button control (button)
 
-| 参数名称 | 类型   | 描述           |
+| Parameter Name | Type   | Description           |
 | -------- | ------ | -------------- |
 | type     | String | button         |
-| name     | String | 控件的唯一标识 |
-| text     | String | 按钮显示文本   |
-| size     | String | 设置按钮大小等级, 可选值为small、normal、large。默认为normal   |
+| name     | String | Unique control identifier |
+| text     | String | Button display text   |
+| size     | String | Set button size level, options are small, normal, large. Default is normal   |
 
-- 普通单选按钮(radioButton)
+- Normal radio button (radioButton)
 
-| 参数名称 | 类型    | 描述                                                         |
+| Parameter Name | Type    | Description                                                         |
 | -------- | ------- | ------------------------------------------------------------ |
-| type     | String  | radioButton(固定值，若放在radioGroup中type可以不写)          |
-| name     | String  | 控件的唯一标识                                               |
-| text     | String  | 单选按钮显示文本                                             |
-| checked  | boolean | 是否选中，默认为否，一个组合控件中的多个`radioButton`默认选中一个，如果指定则选中指定的，<br/>若放在在radioGroup中，并且radioGroup指定了checkedRadio选项，则以checkedRadio选项为准 |
+| type     | String  | radioButton (fixed value, type can be omitted if placed in radioGroup)          |
+| name     | String  | Unique control identifier                                               |
+| text     | String  | Radio button display text                                             |
+| checked  | boolean | Whether selected, default is no. One radioButton in a widget group is selected by default, if specified then select the specified one,<br/>If placed in radioGroup and radioGroup specifies checkedRadio option, then checkedRadio option takes precedence |
 
-- 普通标签控件(label)
+- Normal label control (label)
 
-| 参数名称  | 类型    | 描述                     |
+| Parameter Name  | Type    | Description                     |
 | --------- | ------- | ------------------------ |
 | type      | String  | label                    |
-| name      | String  | 控件的唯一标识           |
-| text      | String  | 标签显示文本             |
-| canSelect | boolean | 设置标签文本是否可以选中 |
+| name      | String  | Unique control identifier           |
+| text      | String  | Label display text             |
+| canSelect | boolean | Set whether label text is selectable |
 
-- 普通复选框(checkBox)
+- Normal checkbox (checkBox)
 
-| 参数名称 | 类型    | 描述                             |
+| Parameter Name | Type    | Description                             |
 | -------- | ------- | -------------------------------- |
 | type     | String  | checkBox                         |
-| name     | String  | 控件的唯一标识                   |
-| text     | String  | 复选框显示文本，支持`html a标签` |
-| checked  | boolean | 是否选中，默认不选中             |
+| name     | String  | Unique control identifier                   |
+| text     | String  | Checkbox display text, supports `html a tag` |
+| checked  | boolean | Whether selected, default not selected             |
 
-- 单选按钮组,多个单选按钮组成
+- Radio button group, composed of multiple radio buttons
 
-| 参数名称     | 类型   | 描述                                        |
+| Parameter Name     | Type   | Description                                        |
 | ------------ | ------ | ------------------------------------------- |
 | type         | String | radioGroup                                  |
-| name         | String | 控件的唯一标识                              |
-| radios       | Array  | 存放一组radioButton                         |
-| checkedRadio | String | 选中的单选按钮名称                          |
-| layout       | String | horizontal(横向)/vertical(纵向)，默认为横向 |
+| name         | String | Unique control identifier                              |
+| radios       | Array  | Store a group of radioButtons                         |
+| checkedRadio | String | Name of selected radio button                          |
+| layout       | String | horizontal/vertical, default is horizontal |
 
 ```js
 {
@@ -388,19 +388,19 @@ or
         {
             type: 'radioButton',
             name: 'testRadioButton',
-            text: "单选按钮",
+            text: "Radio Button",
             checked: true
         },
         {
             type: 'button',
             name: 'testButton',
-            text: '按钮',
+            text: 'Button',
             size: 'small'
         },
         {
             type: 'label',
             name: 'testLabel',
-            text: "<a href='https://www.baidu.com'>了解详情</a>",
+            text: "<a href='https://www.baidu.com'>Learn More</a>",
             canSelect: true
         },
     ]
@@ -409,25 +409,25 @@ or
 
 <img src="https://web-assets.dcloud.net.cn/hbuilderx-doc/api_showFormDialog_widgetGroup.jpg" class="hd-img" />
 
-## 完整示例
+## Complete Example
 -----------------------
 
 ```js
 let hx = require('hbuilderx');
 
 /**
- * @description 窗口控件
+ * @description Window controls
  * @param {Object} selected
  */
 function getUIData(selected) {
     let uiData = {
         title: "showFormDialog",
-        subtitle: "演示插件API hx.window.showFormDialog的使用",
+        subtitle: "Demonstrates the use of plugin API hx.window.showFormDialog",
         formItems: [
             {
                 type: "radioGroup",
                 name: "projectType",
-                label: "单选框",
+                label: "Radio Box",
                 value: selected,
                 items: [
                     {label: "css",id: "css"},
@@ -435,26 +435,26 @@ function getUIData(selected) {
                     {label: "javaScript",id: "javascript"}
                 ]
             },
-            {type: "label",name: "selectedText",text: `<p style="color: gray;">您选择的单选框是: ${selected}</p>`},
-            {type: "input",name: "projectName",label: "普通输入框",placeholder: '这是一个普通输入框',value: ""},
+            {type: "label",name: "selectedText",text: `<p style="color: gray;">Your selected radio box is: ${selected}</p>`},
+            {type: "input",name: "projectName",label: "Normal Input Box",placeholder: 'This is a normal input box',value: ""},
         ]
     }
     return uiData;
 };
 
 function showFormDialog() {
-    // 获取默认UI数据
+    // Get default UI data
     let uidata = getUIData('css');
 
     hx.window.showFormDialog({
         ...uidata,
         width: 480,
         height: 280,
-        submitButtonText: "提交(&S)",
-        cancelButtonText: "取消(&C)",
+        submitButtonText: "Submit(&S)",
+        cancelButtonText: "Cancel(&C)",
         validate: function(formData) {
             if (!formData.projectName) {
-                this.showError("普通输入框不能为空，请填写");
+                this.showError("Normal input box cannot be empty, please fill in");
                 return false;
             };
             return true;
@@ -467,7 +467,7 @@ function showFormDialog() {
             };
         }
     }).then((res) => {
-        console.log("返回结果：", JSON.stringify(res));
+        console.log("Return result:", JSON.stringify(res));
     });
 
 };

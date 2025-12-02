@@ -72,7 +72,7 @@ Custom snippets are in the configuration json file. The following is configurati
 }
 ```
 
-备注：HBuilderX 3.7.1+，支持代码块包围功能。[更多](#自定义包围代码块)
+Note: Starting from HBuilderX 3.7.1+, surround snippet functionality is supported. [More](#custom-surround-snippets)
 
 #### Snippets format description
 
@@ -104,11 +104,11 @@ Remark：
 1. Each snippet uses `key` as the primary key, and multiple snippets are separated by `commas`.
 2. You will receive a warning message if the json format is wrong.
 
-## 自定义项目代码块@projectSnippets
+## Custom Project Snippets@projectSnippets
 
-> HBuilderX 3.4.8+版本起，支持自定义项目代码块。
+> Starting from HBuilderX 3.4.8+, custom project snippets are supported.
 
-HBuilderX，顶部菜单【工具 代码块设置 自定义项目代码块】。创建的代码块文件，会出现在项目根目录下的`.hbuilderx`目录下。
+In HBuilderX, go to top menu [Tools - Snippets settings - Custom project snippets]. The created snippet file will appear in the `.hbuilderx` directory under the project root.
 
 <img src="/static/snapshots/tutorial/ls_snippets/project_snippets.en.png" class="hd-img"/>
 
@@ -140,25 +140,25 @@ Click the menu [Tools - Snippets settings - javascript snippets], and enter the 
 
 <img src="/static/snapshots/tutorial/ls_snippets/Snippets_time.gif" style="zoom: 80%; border: 1px solid #eee;border-radius: 10px;" />
 
-## 自定义包围代码块@surround
+## Custom Surround Snippets@surround
 
-> HBuilderX 3.7.1-alpha，新增自定义包围代码块功能。
+> HBuilderX 3.7.1-alpha added custom surround snippet functionality.
 
-目前HBuilderX，内置了js和ts的部分包围代码块，如需更多包围代码块，需要自定义进行配置。
+Currently HBuilderX has built-in some surround snippets for js and ts. If you need more surround snippets, you need to configure them yourself.
 
-如下Gif，在编辑器选中要操作的代码，按下`Ctrl + Alt + T`(MacOSX快捷键：`Command + Alt + T`)，则会打开代码块包围功能。
+As shown in the Gif below, select the code you want to operate in the editor, press `Ctrl + Alt + T` (MacOSX shortcut: `Command + Alt + T`), and the surround snippets feature will open.
 
-当然，您也可以点击HBuilderX顶部菜单【编辑 - 包围 - 代码块包围】
+Of course, you can also click the HBuilderX top menu [Edit - Surround - Surround with Snippet]
 
 ![](https://web-assets.dcloud.net.cn/hbuilderx-doc/code-block-surround.gif)
 
-#### 如何自定义包围代码块？
+#### How to customize surround snippets?
 
 ![](https://web-assets.dcloud.net.cn/hbuilderx-doc/code-block-surround-example.gif)
 
-如下示例，`$SELECTION` 表示选中的区域。
+In the following example, `$SELECTION` represents the selected area.
 
-其它配置项，[参考](#代码块配置格式说明)
+For other configuration items, [refer to](#snippets-format-description)
 
 ```json
 {

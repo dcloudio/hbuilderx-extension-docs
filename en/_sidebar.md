@@ -57,7 +57,7 @@
     * [Android Custom Channel Packages](/Tutorial/App/AndroidChannel.md)
     * [Safe Packing](/Tutorial/App/SafePack.md)
     * [iOS Safe Packing For Certificate](/Tutorial/App/iosSafePack.md)
-    <!-- * [Chrome调试 5+ Android应用](Tutorial/App/use-chrome-to-debug-android-apps.md) -->
+    <!-- * [Chrome Debug 5+ Android Apps](Tutorial/App/use-chrome-to-debug-android-apps.md) -->
     * [SoftLink](/Tutorial/App/softLink.md)
 * Version Control
     * [Git Introduce](/Tutorial/SourceControl/Git/README.md)
@@ -97,8 +97,8 @@
     * [MacOSX Privacy](/Tutorial/Other/macPrivacy.md)
     * [User Login Failed](/Tutorial/Questions/LoginFailed.md)
     * [Terminal Input Problem](/Tutorial/Questions/Terminal-input-problem.md)
-    <!-- * [Webview2 runtime](/Tutorial/Questions/Webview2Runtime.md) 功能上线时打开-->
-    <!-- * [云函数上传ContentAccessDenied错误](/Tutorial/Questions/win10-defender-contentaccessdenied.md) -->
+    <!-- * [Webview2 runtime](/Tutorial/Questions/Webview2Runtime.md) Enable when feature goes live-->
+    <!-- * [Cloud Function Upload ContentAccessDenied Error](/Tutorial/Questions/win10-defender-contentaccessdenied.md) -->
 * [Crash Reporter](/Tutorial/CrashReporter.md)
 * [LICENSE](https://dcloud.io/license/hbuilder.html)
 * ChangeLog

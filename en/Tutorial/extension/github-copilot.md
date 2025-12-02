@@ -1,119 +1,119 @@
 
-# GitHub Copilot For HBuilderx 插件使用说明
+# GitHub Copilot For HBuilderX Plugin User Guide
 
-## 简介
+## Introduction
 
-本插件旨在将 GitHub Copilot 的代码自动补全功能集成到 HBuilderX IDE 中，为开发者提供行内代码建议，从而提升编码效率。  
-本插件通过连接到 GitHub Copilot 的官方语言服务器实时获取代码补全建议。  
-要了解更多 GitHub Copilot 信息，请访问 [https://github.com/features/copilot](https://github.com/features/copilot).
+This plugin aims to integrate GitHub Copilot's code auto-completion feature into HBuilderX IDE, providing developers with inline code suggestions to improve coding efficiency.  
+This plugin connects to GitHub Copilot's official language server to get code completion suggestions in real time.  
+To learn more about GitHub Copilot, please visit [https://github.com/features/copilot](https://github.com/features/copilot).
 
-## 环境要求
+## Environment Requirements
 
-- **HBuilderX**: 版本 `4.71` 或更高。
-- **Node.js**: 版本 `22` 或更高，Copilot 语言服务器需要独立的 Node.js 环境运行。  
+- **HBuilderX**: Version `4.71` or higher.
+- **Node.js**: Version `22` or higher. The Copilot language server requires a separate Node.js environment to run.  
 
-## 如何使用
+## How to Use
 
-### 1. 安装与激活
-#### 通过访问插件市场安装
-- 在 [HBuilderX 插件市场](https://ext.dcloud.net.cn/plugin?name=copilot-for-hbuilder) 点击`下载插件并导入HBuilderX`。
-- 浏览器会自动调起 `HBuilderX` IDE 并自动开始下载导入本插件。
-- 插件导入完成后会自动激活。
+### 1. Installation and Activation
+#### Install via Plugin Market
+- Visit the [HBuilderX Plugin Market](https://ext.dcloud.net.cn/plugin?name=copilot-for-hbuilder) and click `Download Plugin and Import to HBuilderX`.
+- The browser will automatically launch the `HBuilderX` IDE and start downloading and importing this plugin.
+- The plugin will be automatically activated after import is complete.
 
-#### 通过 HBuilderX IDE 安装
-- 打开 HBuilderX 后，在菜单栏点击 `工具 -> 插件安装` 打开插件安装面板。
-- 在插件安装面板中切换到 `安装新插件` 标签页，找到 `Github Copilot for HBuilder` 并点击 `安装` 按钮。
-- 插件安装完毕后会自动激活。  
+#### Install via HBuilderX IDE
+- After opening HBuilderX, click `Tools -> Plugin Installation` in the menu bar to open the plugin installation panel.
+- In the plugin installation panel, switch to the `Install New Plugin` tab, find `Github Copilot for HBuilder` and click the `Install` button.
+- The plugin will be automatically activated after installation.  
 
 <img src="https://web-ext-storage.dcloud.net.cn/hx/doc/copilot-install.png" />
 
-### 2. 首次配置
+### 2. First-time Configuration
 
-- 插件首次启动时，会检查 Node.js 环境。如果插件无法自动找到符合版本要求的 Node.js (≥22)，HBuilderX 会弹出提示，要求您进行配置。
-- 您需要将您本地的 Node.js 可执行文件路径填入到 `设置 -> 插件配置 -> Github Copilot -> 指定Copilot语言服务端运行时的node可执行程序路径` 中。
-- 正确配置后，插件会尝试启动 Copilot 语言服务。  
+- When the plugin starts for the first time, it will check the Node.js environment. If the plugin cannot automatically find a Node.js version that meets the requirements (≥22), HBuilderX will display a prompt asking you to configure it.
+- You need to fill in your local Node.js executable path in `Settings -> Plugin Configuration -> Github Copilot -> Specify the node executable path for Copilot language server runtime`.
+- After correct configuration, the plugin will try to start the Copilot language service.  
 
 <img src="https://web-ext-storage.dcloud.net.cn/hx/doc/copilot-conf-node-path.png" />
 
-### 3. 登录 GitHub Copilot
-> 注意：在开始登录前，您需要拥有一个活跃的 Github 账户并订阅 GitHub Copilot 才能使用此插件，您可以通过此链接查看订阅状态: [https://github.com/settings/copilot/features](https://github.com/settings/copilot/features)。
+### 3. Login to GitHub Copilot
+> Note: Before starting the login, you need to have an active Github account and subscribe to GitHub Copilot to use this plugin. You can check your subscription status via this link: [https://github.com/settings/copilot/features](https://github.com/settings/copilot/features).
 
-- **状态栏图标**: 在 HBuilderX 右下角的状态栏会显示 Copilot 的图标。点击该图标可以打开 Copilot 状态面板。  
-- **开始登录**: 在状态面板中，点击 `登录 Github` 按钮，插件会向 Github 发起登录请求，请求成功后会返回用于设备授权的 `设备码`。  
+- **Status Bar Icon**: The Copilot icon will be displayed in the status bar at the bottom right of HBuilderX. Click this icon to open the Copilot status panel.  
+- **Start Login**: In the status panel, click the `Sign in to Github` button. The plugin will send a login request to Github and return a `device code` for device authorization upon successful request.  
 <img src="https://web-ext-storage.dcloud.net.cn/hx/doc/copilot-signin.png" />
-- **设备授权**: 面板会显示一个设备码，并提供一个 GitHub 授权链接。点击 `复制并访问` 会将设备码复制到剪贴板并自动调用系统浏览器打开授权页面。  
+- **Device Authorization**: The panel will display a device code and provide a GitHub authorization link. Click `Copy and Visit` to copy the device code to the clipboard and automatically open the authorization page in the system browser.  
 <img src="https://web-ext-storage.dcloud.net.cn/hx/doc/copilot-device-code.png" />
 
-- **完成授权**: 在浏览器打开的页面中，粘贴设备码并授权。授权成功后，插件会自动验证并完成登录。  
+- **Complete Authorization**: On the page opened in the browser, paste the device code and authorize. After successful authorization, the plugin will automatically verify and complete the login.  
 <img src="https://web-ext-storage.dcloud.net.cn/hx/doc/copilot-signin-ok.png" />
 
-### 4. 获取代码建议
+### 4. Get Code Suggestions
 
-- 登录并启用成功后，在您编写代码（支持的语言文件中）时，Copilot 会自动提供行内代码建议。  
-- 按 `Tab` 键即可采纳建议。  
+- After successful login and activation, when you write code (in supported language files), Copilot will automatically provide inline code suggestions.  
+- Press `Tab` to accept the suggestion.  
 
 <img src="https://web-ext-storage.dcloud.net.cn/hx/doc/copilot-working.png" />
 
-### 5. 状态管理
+### 5. Status Management
 
-- 点击状态栏图标，可以打开状态面板，进行以下操作：
-  - **登入/登出**: 管理您的 GitHub 账号登录状态。
-  - **启用/禁用**: 全局启用或禁用 Copilot 功能。
-  - **语言设置**: 直接在面板中修改语言启用配置。
-  - **查看额度**: 在面板右下角可查看您的账户中代码自动补全功能剩余的使用额度。
+- Click the status bar icon to open the status panel and perform the following operations:
+  - **Sign In/Sign Out**: Manage your GitHub account login status.
+  - **Enable/Disable**: Globally enable or disable Copilot functionality.
+  - **Language Settings**: Modify language enable configuration directly in the panel.
+  - **View Quota**: View the remaining usage quota for code auto-completion in your account in the bottom right corner of the panel.
 
-## 配置项说明
+## Configuration Options
 
-您可以在 `设置 -> 插件配置 -> GitHub Copilot` 中找到以下配置项：
+You can find the following configuration options in `Settings -> Plugin Configuration -> GitHub Copilot`:
 
-- **`Copilot状态显示`**: 控制状态栏图标的显示方式。
-  - `自动`: 自动模式。
-  - `仅图标`: 仅显示图标。
-  - `图标+文本`: 显示图标和文字 "Copilot"。
-- **`启用或禁用Copilot行内自动补全`**: 全局启用或禁用此插件的代码自动补全功能。
-  - `勾选`: 启用 (默认)。
-  - `未勾选`: 禁用。
-- **`配置指定语言的自动补全`**: 配置在哪些语言中启用代码补全。
-  - 格式为 `languageId=true/false`，多个配置用逗号 `,` 分隔。
-  - 例如: `*=true,markdown=false` 表示为所有语言启用，但 markdown 文件除外。
-- **`指定Copilot语言服务端运行时的node可执行程序路径`**: 指定运行 Copilot 语言服务所需的 Node.js 可执行文件路径。
-  - **重要**: 请确保此路径指向的 Node.js 版本不低于 22.0。
+- **`Copilot Status Display`**: Controls how the status bar icon is displayed.
+  - `Auto`: Automatic mode.
+  - `Icon Only`: Display icon only.
+  - `Icon + Text`: Display icon and text "Copilot".
+- **`Enable or Disable Copilot Inline Auto-completion`**: Globally enable or disable this plugin's code auto-completion feature.
+  - `Checked`: Enabled (default).
+  - `Unchecked`: Disabled.
+- **`Configure Auto-completion for Specific Languages`**: Configure which languages to enable code completion for.
+  - Format is `languageId=true/false`, multiple configurations separated by commas `,`.
+  - For example: `*=true,markdown=false` means enable for all languages, except markdown files.
+- **`Specify the Node Executable Path for Copilot Language Server Runtime`**: Specify the Node.js executable file path required to run the Copilot language service.
+  - **Important**: Please ensure the Node.js version pointed to by this path is not lower than 22.0.
 
-## 注意事项
+## Notes
 
-- **GitHub Copilot 订阅**: 您需要拥有一个活跃的 Github 账户并订阅 GitHub Copilot 才能使用此插件，您可以通过此链接查看有关 Github Copilot 的订阅状态: [https://github.com/settings/copilot/features](https://github.com/settings/copilot/features)。
-- **网络连接**: 插件需要稳定的网络连接以访问 GitHub Copilot 服务。如果您的网络环境需要代理（科学上网），请确保正确配置了网络代理。
-- **登录超时**: 设备授权流程有时间限制（通常为15分钟），请在设备码过期前完成授权。
-- **错误排查**: 如果遇到问题，可以打开 HBuilderX 的开发日志 (`帮助 -> 查看运行日志`)，在日志中查看有关 "Copilot Server" 或 "Copilot Log Message" 的输出以获取详细错误信息。
-- **手动安装**: 如果您是通过将插件zip包解压到HBuilderX的plugins目录的方式安装插件，请务必保证插件根目录的名称与`package.json`中`id`的内容保持一致，否则将导致插件激活失败。
+- **GitHub Copilot Subscription**: You need to have an active Github account and subscribe to GitHub Copilot to use this plugin. You can view your GitHub Copilot subscription status via this link: [https://github.com/settings/copilot/features](https://github.com/settings/copilot/features).
+- **Network Connection**: The plugin requires a stable network connection to access GitHub Copilot services. If your network environment requires a proxy, please ensure the network proxy is correctly configured.
+- **Login Timeout**: The device authorization process has a time limit (usually 15 minutes). Please complete the authorization before the device code expires.
+- **Error Troubleshooting**: If you encounter problems, you can open the HBuilderX development log (`Help -> View Run Log`) to view output related to "Copilot Server" or "Copilot Log Message" for detailed error information.
+- **Manual Installation**: If you install the plugin by extracting the plugin zip package to the HBuilderX plugins directory, please ensure that the plugin root directory name is consistent with the `id` content in `package.json`, otherwise the plugin activation will fail.
 
-## 常见问题
+## FAQ
 
-**Q: 点击登录后失败或长时间无响应怎么办？**
+**Q: What if login fails or there is no response for a long time after clicking login?**
 
-A: 这通常由以下几种原因造成：
-1.  **网络问题**: 这是最常见的原因。插件无法连接到 GitHub 的授权服务器（需要科学上网）。请检查您的网络连接、防火墙或代理设置，确保可以正常访问 `https://github.com`。日志中可能会出现 "无法访问 https://github.com/" 或 "request timed out" 等错误。
-2.  **设备码过期或授权被拒**: 网页授权过程有时间限制，若操作超时设备码会失效。另外，如果您在 GitHub 页面上手动拒绝了授权，登录也会失败。请重新尝试登录流程。
+A: This is usually caused by the following reasons:
+1.  **Network Issues**: This is the most common reason. The plugin cannot connect to GitHub's authorization server (may require a VPN). Please check your network connection, firewall, or proxy settings to ensure you can normally access `https://github.com`. The log may show errors like "Unable to access https://github.com/" or "request timed out".
+2.  **Device Code Expired or Authorization Denied**: The web authorization process has a time limit, and the device code will become invalid if the operation times out. Also, if you manually deny authorization on the GitHub page, the login will fail. Please try the login process again.
 
-**Q: 为什么我看不到任何代码建议？**
+**Q: Why can't I see any code suggestions?**
 
-A: 请按以下步骤排查：
-1.  检查状态栏图标，确保您已成功登录并且 Copilot 处于启用状态。
-2.  确认当前文件的语言在 `配置指定语言的自动补全` 配置中是启用的。
-3.  检查您的网络连接是否正常。
-4.  查看 HBuilderX 的开发日志，确认是否有来自 Copilot 服务的错误信息。
+A: Please follow these steps to troubleshoot:
+1.  Check the status bar icon to ensure you have successfully logged in and Copilot is enabled.
+2.  Confirm that the current file's language is enabled in the `Configure Auto-completion for Specific Languages` configuration.
+3.  Check if your network connection is normal.
+4.  View the HBuilderX development log to confirm if there are any error messages from the Copilot service.
 
-**Q: 状态栏图标显示为禁用或警告状态，这是什么意思？**
+**Q: The status bar icon shows disabled or warning status. What does this mean?**
 
 A:
-- **禁用图标**: 表示插件被全局禁用，或者当前文件所属的语言被禁用了。
-- **警告图标**: 通常表示与 Copilot 服务的通信出现了问题，例如网络错误或请求失败。
-- 点击图标打开状态面板可以获取更详细的状态信息。
+- **Disabled Icon**: Indicates the plugin is globally disabled, or the language of the current file is disabled.
+- **Warning Icon**: Usually indicates a problem communicating with the Copilot service, such as a network error or request failure.
+- Click the icon to open the status panel for more detailed status information.
 
-**Q: 插件启动失败，提示 "node" 相关错误。**
+**Q: Plugin startup failed with "node" related errors.**
 
-A: 这是因为插件未能找到合适的 Node.js 运行环境。请确保您已安装 **Node.js v22 或更高版本**，并在插件设置 `GithubCopilot.node.path` 中正确填写了它的可执行文件路径。
+A: This is because the plugin failed to find a suitable Node.js runtime environment. Please ensure you have installed **Node.js v22 or higher**, and correctly filled in its executable file path in the plugin setting `GithubCopilot.node.path`.
 
-**Q: 如何登出我的 GitHub 账号？**
+**Q: How do I log out of my GitHub account?**
 
-A: 点击状态栏的 Copilot 图标打开状态面板，然后点击 "登出" 链接即可。
+A: Click the Copilot icon in the status bar to open the status panel, then click the "Sign Out" link.

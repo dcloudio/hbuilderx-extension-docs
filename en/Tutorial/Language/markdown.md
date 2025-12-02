@@ -61,10 +61,10 @@ The task list is very practical, and it is very convenient to manage to-do and a
 - [ ] Task List-Unfinished Tasks `Windows Shortcut Key: Ctrl+Alt+[`, `Mac Shortcut Key: Ctrl+Option+[`
 - [x] Task list-completed tasks `Windows Shortcut key: Ctrl+Alt+]`, `Mac Shortcut key: Ctrl+Option+]`
 
-## 路径提示@PathHints
+## Path Hints@PathHints
 ------
 
-HBuilderX 3.6.8+，MarkDown支持文件路径提示，比如提示图片路径，如下图：
+HBuilderX 3.6.8+, MarkDown supports file path hints, such as prompting image paths, as shown below:
 
 <img src="/static/snapshots/tutorial/markdown/md_path_hints.png" class="hd-img" />
 
@@ -88,115 +88,115 @@ HBuilderX 3.5.2，Markdown supports `[]()` filename + anchor go to definition, a
 <img src="/static/snapshots/tutorial/markdown/file_goto_definition.png" class="hd-img" />
 
 
-## Mermaid流程图@Mermaid
+## Mermaid Flowcharts@Mermaid
 ------
 
-> HBuilderX 3.6.8+，MarkDown支持 mermaid 流程图，并支持在内置浏览器预览。
+> HBuilderX 3.6.8+, MarkDown supports mermaid flowcharts and supports preview in the built-in browser.
 
-Markdown 的原生语法不支持绘制图形，但通过 mermaid 扩展，我们可以将一些格式化的文字渲染成我们需要的图形。比如 “流程图”。
+Markdown's native syntax does not support drawing graphics, but with the mermaid extension, we can render some formatted text into the graphics we need, such as "flowcharts".
 
-下文将介绍如何通过 mermaid 绘制「流程图」。
+The following will introduce how to draw "flowcharts" with mermaid.
 
-流程图由几何图形节点及连接线组成。几何图形节点是流程图内的各元素的载体，通常用形状来区分其属性，例如圆形代表开始或结束、菱形代表判断等。连接线用于描述几何图形节点之间的联系，可能是有向线段，也可能是无向线段等。
+A flowchart consists of geometric shape nodes and connection lines. Geometric shape nodes are carriers of various elements in the flowchart. Their properties are usually distinguished by shapes, for example, circles represent start or end, diamonds represent decisions, etc. Connection lines are used to describe the relationships between geometric shape nodes, which may be directed lines or undirected lines, etc.
 
-在 Markdown 中添加 mermaid 图形，需要声明 mermaid 类型的代码块，代码如下：
+To add mermaid graphics in Markdown, you need to declare a code block of type mermaid, as follows:
 
 <img src="/static/snapshots/tutorial/markdown/md_Mermaid_sytax.png" class="hd-img" />
 
-**HBuilderX内，mermaid图，内置浏览器预览效果：**
+**In HBuilderX, mermaid diagram preview effect in built-in browser:**
 
 <img src="https://f184e7c3-1912-41b2-b81f-435d1b37c7b4.cdn.bspapp.com/VKCEYUGU-f184e7c3-1912-41b2-b81f-435d1b37c7b4/2adef01d-0265-4916-bbfd-e3f3c5bf4e6a.jpg" class="hd-img" />
 
-> **本文档仅介绍了mermaid基本的语法，更多mermaid语法请参考 [mermaid官方文档](https://mermaid-js.github.io/mermaid/#/)**
+> **This document only introduces the basic mermaid syntax. For more mermaid syntax, please refer to [mermaid official documentation](https://mermaid-js.github.io/mermaid/#/)**
 
-### 基本语法
+### Basic Syntax
 
-基本的流程图包含：流程图布局方向、几何图形和连接线三个部分组成。
+A basic flowchart consists of three parts: flowchart layout direction, geometric shapes, and connection lines.
 
-**流程图布局方向**
+**Flowchart Layout Direction**
 
-|标志	|方向	|
+|Flag	|Direction	|
 |--	|--	|
-|TB	|top bottom - 从上到下|
-|BT	|bottom top - 从下到上|
-|RL	|right left - 从右到左|
-|LR	|left right - 从左到右|
-|TD	|等同于 TB|
+|TB	|top bottom - from top to bottom|
+|BT	|bottom top - from bottom to top|
+|RL	|right left - from right to left|
+|LR	|left right - from left to right|
+|TD	|equivalent to TB|
 
-**连接线**
+**Connection Lines**
 
-不同种类的连接线可以表示不同类型的关系，例如，无方向的连接线可用来表示相关性、有方向的连接线可以表示数据流向或者节点间的依赖关系；用实线表示强关联、用虚线表示弱关联等待。[](#示例3)
+Different types of connection lines can represent different types of relationships. For example, undirected connection lines can represent correlation, directed connection lines can represent data flow or dependencies between nodes; solid lines represent strong association, dashed lines represent weak association, etc. [](#example-3)
 
-### 示例1： 基本的横向流程图
+### Example 1: Basic Horizontal Flowchart
 
 ```mermaid
 graph LR
-    1[方形] --> 2(圆角) --> 3((圆形)) --> 4>非对称] --> 5{菱形} --> 6{{六角形}} --> 7[/平行四边形--右倾/] --> 8[\平行四边形--左倾\] --> 9[/梯形--正向\]  --> 10[\梯形--反向/]
+    1[Rectangle] --> 2(Rounded) --> 3((Circle)) --> 4>Asymmetric] --> 5{Diamond} --> 6{{Hexagon}} --> 7[/Parallelogram--Right Tilt/] --> 8[\Parallelogram--Left Tilt\] --> 9[/Trapezoid--Forward\]  --> 10[\Trapezoid--Reverse/]
 ```
 
 <img src="/static/snapshots/tutorial/markdown/md-Mermaid_flow_basic.jpg" class="hd-img" />
 
-### 示例2：基本的竖向流程图
+### Example 2: Basic Vertical Flowchart
 
 ```mermaid
 graph TD
-    开始 --> 结束
+    Start --> End
 ```
 
 <img src="/static/snapshots/tutorial/markdown/md-Mermaid_flow_td.jpg" class="hd-img" />
 
-### 示例3：分组图
+### Example 3: Group Chart
 
 ```mermaid
 graph TB
     c1-->a2
-    subgraph 第一组
+    subgraph First Group
     a1-->a2
     end
-    subgraph 第二组
+    subgraph Second Group
     b1-->b2
     end
-    subgraph 第三组
+    subgraph Third Group
     c1-->c2
     end
 ```
 
 <img src="/static/snapshots/tutorial/markdown/md-Mermaid_flow_subgraph.jpg" class="hd-img" />
 
-### 示例4：冒泡排序流程图
+### Example 4: Bubble Sort Flowchart
 
 ```mermaid
 graph LR
-    执行1[i = 1]
-  执行2[j = 0]
-  执行3[i ++]
-  执行4["a = arr[j], b = arr[j + 1]"]
-  执行5[交换 a, b]
-  执行6[j ++]
-    判断1["i < n"]
-    判断2["j < n - i"]
-  判断3["a > b"]
-  开始 --> 执行1
-  执行1 --> 判断1
-  判断1 --Y--> 执行2
-  执行2 --> 判断2
-  判断2 --Y--> 执行4
-  判断2 --N--> 执行3
-  执行3 --> 判断1
-  执行4 --> 判断3
-  判断3 --N--> 判断2
-  判断3 --Y--> 执行5
-  执行5 --> 执行6
-  执行6 --> 判断2
-  判断1 --N--> 结束
+    execute1[i = 1]
+  execute2[j = 0]
+  execute3[i ++]
+  execute4["a = arr[j], b = arr[j + 1]"]
+  execute5[swap a, b]
+  execute6[j ++]
+    decision1["i < n"]
+    decision2["j < n - i"]
+  decision3["a > b"]
+  Start --> execute1
+  execute1 --> decision1
+  decision1 --Y--> execute2
+  execute2 --> decision2
+  decision2 --Y--> execute4
+  decision2 --N--> execute3
+  execute3 --> decision1
+  execute4 --> decision3
+  decision3 --N--> decision2
+  decision3 --Y--> execute5
+  execute5 --> execute6
+  execute6 --> decision2
+  decision1 --N--> End
 ```
 
 <img src="/static/snapshots/tutorial/markdown/md-Mermaid_flow_if.jpg" class="hd-img" />
 
 
-### 示例5：连接线语法
+### Example 5: Connection Line Syntax
 
-基本的连接线语法：
+Basic connection line syntax:
 
 ```mermaid
 graph LR
@@ -205,18 +205,18 @@ graph LR
 
 <img src="/static/snapshots/tutorial/markdown/md-Mermaid_flow_line_basic.jpg" class="hd-img" />
 
-带文字的连接线线语法：
+Connection line with text syntax:
 
 ```mermaid
 graph LR
-    A ==> B == 带文字连接线 ==> C
+    A ==> B == connection line with text ==> C
 ```
 
 <img src="/static/snapshots/tutorial/markdown/md-Mermaid_flow_line_basic_2.jpg" class="hd-img" />
 
-### 示例6: sequenceDiagram
+### Example 6: sequenceDiagram
 
-基本语法如下:
+Basic syntax is as follows:
 
 ```mermaid
 sequenceDiagram
@@ -227,7 +227,7 @@ sequenceDiagram
 
 <img src="https://f184e7c3-1912-41b2-b81f-435d1b37c7b4.cdn.bspapp.com/VKCEYUGU-f184e7c3-1912-41b2-b81f-435d1b37c7b4/54446bed-0e66-4621-85b5-dc2e587c0344.jpg" class="hd-img" />
 
-**备注：**[查看更多sequenceDiagram语法](https://mermaid-js.github.io/mermaid/#/sequenceDiagram)
+**Note:** [View more sequenceDiagram syntax](https://mermaid-js.github.io/mermaid/#/sequenceDiagram)
 
 ## Onedrive Sync
 ------

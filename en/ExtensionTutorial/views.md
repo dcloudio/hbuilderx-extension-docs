@@ -108,7 +108,7 @@ module.exports = {
 <img src="/static/snapshots/Plug-in-development/webview.png" style="zoom:50%" />
 
 ## TreeView
-`Supported from 从HBuilderX 2.7.12+`
+`Supported from HBuilderX 2.7.12+`
 
 Extend a new TreeView `view` (view) through the following 2 steps:
 

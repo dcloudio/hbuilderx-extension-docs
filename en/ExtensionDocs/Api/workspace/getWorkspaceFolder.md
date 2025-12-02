@@ -22,7 +22,7 @@ Returns the workspace folder that contains a given uri.
     });
 ```
 
-输出结果示例：
+Output result example:
 
 ```json
 {

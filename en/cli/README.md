@@ -20,15 +20,15 @@ In addition, you can add `cli` to `environment variables`, so that you can call 
 
 #### Linux CLI
 
-2025年1月初，推出了Linux HBuilderX CLI，欢迎大家试用反馈。 [详情](https://ask.dcloud.net.cn/article/41469)
+In early January 2025, the Linux HBuilderX CLI was released. Welcome to try it out and provide feedback. [Details](https://ask.dcloud.net.cn/article/41469)
 
-cli的用途是让开发者可以在linux服务器上调用HBuilderX cli，来实现程序化操作打包app、上传unicloud云函数等，为持续集成、自动化发布、类saas业务的自动化给客户部署等业务提供支持。
+The purpose of CLI is to allow developers to call HBuilderX CLI on Linux servers to achieve programmatic operations such as packaging apps, uploading uniCloud cloud functions, etc., providing support for continuous integration, automated publishing, and automated deployment for SaaS-like business customers.
 
-请注意是cli程序，不是HBuilderX可视化编辑器。仅适用于Linux命令行调用。
+Please note that this is a CLI program, not the HBuilderX visual editor. It is only applicable for Linux command line calls.
 
-目前我们仅在Ubuntu系统上进行了测试，并没有在其它Linux发行版上测试，如有问题，请及时反馈。
+Currently, we have only tested on Ubuntu systems and have not tested on other Linux distributions. If you encounter any issues, please provide feedback promptly.
 
-扩展：[Linux 安装插件市场插件](/cli/linux-install-market-plugin)
+Extension: [Install Plugins from Plugin Market on Linux](/cli/linux-install-market-plugin)
 
 #### Cli Help
 

@@ -1,10 +1,10 @@
 ## Position
 
-Position: 线条和字符的位置
+Position: A position of line and character
 
-**属性列表**
+**Property List**
 
-|属性名		|属性类型	|描述					|
+|Property Name		|Property Type	|Description					|
 |--			|--			|--						|
-|line		|Number		|行，从零开始的字符值	|
-|character	|Number		|字符，从零开始的字符值	|
+|line		|Number		|Line, zero-based value	|
+|character	|Number		|Character, zero-based value	|

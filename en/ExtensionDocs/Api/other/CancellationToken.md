@@ -1,10 +1,10 @@
 ## CancellationToken
 
-CancellationToken: 取消令牌被传递给异步或长时间运行的操作以请求取消，就像由于用户继续键入而取消对完成项的请求一样。
+CancellationToken: A cancellation token is passed to asynchronous or long-running operations to request cancellation, like canceling a request for completion items because the user kept typing.
 
-**属性列表**
+**Property List**
 
-|属性名					|属性类型	|描述								|
+|Property Name					|Property Type	|Description								|
 |--						|--			|--									|
-|isCancellationRequested|Boolean	|当令牌被取消时为true，否则为false。|
-|onCancellationRequested|Event<any>	|取消时触发的事件					|
+|isCancellationRequested|Boolean	|True if the token has been cancelled, otherwise false.|
+|onCancellationRequested|Event<any>	|Event that is fired when cancellation is requested					|

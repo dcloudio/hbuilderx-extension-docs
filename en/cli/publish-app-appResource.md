@@ -1,18 +1,18 @@
-# CLI 原生App-本地打包(生成本地打包App资源)@appResource
+# CLI Native App - Local Packaging (Generate Local Packaging App Resources)@appResource
 
-> HBuilderX 3.4.3-alpha，支持使用CLI生成本地打包App资源。
+> HBuilderX 3.4.3-alpha, supports using CLI to generate local packaging App resources.
 
-通过此种方式，可在命令行或其它CI工具中，完成uni-app、Wap2App、5+App项目生成本地打包App资源。
+Through this method, you can complete the generation of local packaging App resources for uni-app, Wap2App, and 5+App projects in command line or other CI tools.
 
-## CLI命令语法@cmd
+## CLI Command Syntax@cmd
 
 ```shell
-# 生成本地打包App资源
-cli publish --platform APP --type appResource --project 项目名称
+# Generate local packaging App resources
+cli publish --platform APP --type appResource --project project_name
 ```
 
-| 参数       | 说明                                              |
+| Parameter  | Description                                              |
 | ---------- | ------------------------------------------------- |
-| --platform | 必填，[APP] 原生App                               |
-| --type     | 必填，[appResource] 本地打包(生成本地打包App资源) |
-| --project  | 必填，项目名称                                    |
+| --platform | Required, [APP] Native App                               |
+| --type     | Required, [appResource] Local packaging (generate local packaging App resources) |
+| --project  | Required, project name                                    |

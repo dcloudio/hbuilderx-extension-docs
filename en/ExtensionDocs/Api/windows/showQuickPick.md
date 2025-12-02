@@ -21,7 +21,7 @@ Shows a selection list allowing multiple selections.
     const pickResult = hx.window.showQuickPick([
       {
         label: '../',
-        description: 'Back to the previous directory录',
+        description: 'Back to the previous directory',
         backPath: 'foo/bar'
       }
     ], {placeHolder: 'Please select a directory or file'});
