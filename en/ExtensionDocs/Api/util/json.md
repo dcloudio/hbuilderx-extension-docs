@@ -1,18 +1,18 @@
-# 读取和写入JSON
+# Read and Write JSON
 
-## 读取JSON: readJSONValue
+## Read JSON: readJSONValue
 
 
 ```js
 let filePath = "";
 let result = hx.util.readJSONValue(filePath, 'name');
 result.then((data) => {
-    console.log("----读取的值为:", data)
+    console.log("----The read value is:", data)
 });
 ```
 
 
-## 写入JSON: writeJSONValue
+## Write JSON: writeJSONValue
 
 ```js
 let filePath = "";

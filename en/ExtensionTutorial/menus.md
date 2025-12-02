@@ -23,6 +23,6 @@ The code is as follows:
 > For details, please refer to here [menus](/ExtensionDocs/ContributionPoints/README.md#menus)
 
 
-### 如何注册二级菜单？
+### How to Register a Submenu?
 
-关于二级菜单的注册，请参考[二级菜单](/ExtensionDocs/ContributionPoints/README.md#注册二级菜单)
+For information about registering a submenu, please refer to [Submenu](/ExtensionDocs/ContributionPoints/README.md#register-submenu)

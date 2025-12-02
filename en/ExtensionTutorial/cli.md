@@ -1,25 +1,25 @@
-# 如何注册插件CLI命令？
+# How to Register Plugin CLI Commands?
 
-## 注册cli命令
+## Register CLI Commands
 
-在插件的入口文件中，使用`hx.commands.registerCliCommand()`中注册cli命令。
+In the entry file of the plugin, use `hx.commands.registerCliCommand()` to register CLI commands.
 
-如下示例：注册了一个`test.input`命令。
+The following example: registers a `test.input` command.
 
 ```js
 const hx = require("hbuilderx");
 
 function activate(context) {
-    // 注册cli命令test.input
+    // Register CLI command test.input
     let disposable = hx.commands.registerCliCommand('test.input', async (params) => {
-        // 解析命令行参数与输入
+        // Parse command line arguments and input
         let {args} = params;
         let {name} = args;
-        console.log("[cli参数] name:", name);
+        console.log("[CLI args] name:", name);
 
-        // 请注意这个clientID，非常重要，可以将插件内的日志输出到终端
+        // Please note this clientID is very important, it can output logs from the plugin to the terminal
         let client_id = params.cliconsole.clientId;
-        await hx.cliconsole.log({ clientId: client_id, msg: `欢迎使用HBuilderX CLI`, status: 'Info' });
+        await hx.cliconsole.log({ clientId: client_id, msg: `Welcome to HBuilderX CLI`, status: 'Info' });
     });
     context.subscriptions.push(disposable);
 };
@@ -34,9 +34,9 @@ module.exports = {
 
 ## package.json
 
-在package.json文件`contributes`节点下，使用`clicommands`定义参数配置项。
+In the package.json file under the `contributes` node, use `clicommands` to define parameter configuration items.
 
-如下示例，定义了一个`name`参数
+The following example defines a `name` parameter
 
 ```json
 {
@@ -81,36 +81,36 @@ module.exports = {
 }
 ```
 
-**args 说明：**
+**args Description:**
 
-|args	|介绍	|
+|args	|Description	|
 |--	|--	|
-|type	|string，boolean，enum，file	|
-|enum    |多个使用&#124;分割    |
-|usage	|如果参数必填，可以设置require	|
+|type	|string, boolean, enum, file	|
+|enum    |Use &#124; to separate multiple values    |
+|usage	|If the parameter is required, you can set it to require	|
 
 
-## 如何在命令行使用？
+## How to Use from Command Line?
 
-打开操作系统终端或命令行工具，进入HBuilderX安装目录，找到cli程序。
+Open the operating system terminal or command line tool, navigate to the HBuilderX installation directory, and find the cli program.
 
 ```
 ./cli test.input --name xxx
 ```
 
-备注：MacOSX，cli所在的路径为：`/Applications/HBuilderX.app/Contents/MacOS/cli`
+Note: On MacOSX, the cli path is: `/Applications/HBuilderX.app/Contents/MacOS/cli`
 
-## 如何将插件内的日志输出到终端？
+## How to Output Plugin Logs to Terminal?
 
 ```js
 let disposable = hx.commands.registerCliCommand('test.input', async (params) => {
-    // 请注意这个clientID，非常重要，可以将插件内的日志输出到终端
+    // Please note this clientID is very important, it can output logs from the plugin to the terminal
     let client_id = params.cliconsole.clientId;
-    await hx.cliconsole.log({ clientId: client_id, msg: `欢迎使用HBuilderX CLI`, status: 'Info' });
+    await hx.cliconsole.log({ clientId: client_id, msg: `Welcome to HBuilderX CLI`, status: 'Info' });
 });
 context.subscriptions.push(disposable);
 ```
 
-注意上面的代码，先从params中解析中`client_id`，然后调用`hx.cliconsole.log`打印消息
+Note the code above, first parse `client_id` from params, then call `hx.cliconsole.log` to print messages
 
-具体请参考：[hx.cliconsole.log](/ExtensionDocs/Api/cli/cliconsole) 详细文档。
+For details, please refer to: [hx.cliconsole.log](/ExtensionDocs/Api/cli/cliconsole) documentation.

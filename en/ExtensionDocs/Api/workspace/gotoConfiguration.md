@@ -1,8 +1,8 @@
 # gotoConfiguration
 
-用于跳转到HBuilderX【设置】【插件配置】指定项。
+Used to navigate to a specific item in HBuilderX [Settings] [Plugin Configuration].
 
-#### 示例
+#### Example
 ``` javascript
 
 hx.workspace.gotoConfiguration('uts-development-ios.target')

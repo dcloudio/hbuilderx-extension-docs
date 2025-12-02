@@ -1,10 +1,10 @@
 ## DocumentSelector
 
-DocumentSelector: 文档选择器
+DocumentSelector: Document selector
 
-语言选择器是一个或多个语言标识符和语言过滤器的组合。
+A language selector is a combination of one or more language identifiers and language filters.
 
-请注意，文档选择器只是一个语言标识符，它会选择所有文档，甚至是那些没有保存在磁盘上的文档。仅当功能在没有进一步上下文的情况下工作时才使用此类选择器。
+Note that a document selector that is just a language identifier will select all documents, even those that are not saved on disk. Only use such selectors when the feature works without further context.
 
 - example
     * ```ts let sel:DocumentSelector = { scheme: 'file', language: 'typescript' };```

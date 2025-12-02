@@ -1,10 +1,10 @@
 ## Range
 
-Range: 文本区域
+Range: Text region
 
-**属性列表**
+**Property List**
 
-|属性名	|属性类型	|描述		|
+|Property Name	|Property Type	|Description		|
 |--		|--			|--			|
-|start	|Number		|起始位置	|
-|end	|Number		|结束位置	|
+|start	|Number		|Start position	|
+|end	|Number		|End position	|

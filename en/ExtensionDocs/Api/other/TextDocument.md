@@ -1,15 +1,15 @@
 ## TextDocument
 
-TextDocument: 文档文件
+TextDocument: Document file
 
-**属性列表**
+**Property List**
 
-|属性名			|属性类型													|描述																							|
+|Property Name			|Property Type													|Description																							|
 |--				|--															|--																								|
-|fileName		|String														|文件名称																						|
-|isDirty		|Boolean													|是否是修改状态																					|
-|isUntitled		|Boolean													| 是否是无标题文件																				|
-|lineCount		|Number														|文档总行数																						|
-|uri			|[Uri](/ExtensionDocs/Api/other/Uri)						|文档的uri，如果是本地文件，可通过uri.fsPath获取本地文件路径									|
-|languageId		|String														|编程语言Id，如'javascript','html'等，完整id列表参见[这里](/ExtensionDocs/Api/other/languageId)	|
-|workspaceFolder|[WorkspaceFolder](/ExtensionDocs/Api/other/WorkspaceFolder)|该文档文件所属的项目对象																		|
+|fileName		|String														|File name																						|
+|isDirty		|Boolean													|Whether the document has unsaved changes																					|
+|isUntitled		|Boolean													| Whether the document is an untitled file																				|
+|lineCount		|Number														|Total number of lines in the document																						|
+|uri			|[Uri](/ExtensionDocs/Api/other/Uri)						|Document URI. For local files, you can use uri.fsPath to get the local file path									|
+|languageId		|String														|Programming language ID, such as 'javascript', 'html', etc. See [here](/ExtensionDocs/Api/other/languageId) for the complete list	|
+|workspaceFolder|[WorkspaceFolder](/ExtensionDocs/Api/other/WorkspaceFolder)|The project object that this document file belongs to																		|

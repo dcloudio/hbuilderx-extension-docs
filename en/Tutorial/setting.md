@@ -37,9 +37,9 @@ Settings page include 5 tabs：
 
 #### Project Explorer Font Size@project-explorer-font-size
 
-> 需HBuilderX 3.7.1+
+> Requires HBuilderX 3.7.1+
 
-菜单【设置 - 常用配置 - 项目管理器字体大小】，可以调整左侧视图文字大小。
+Go to menu [Settings - Common Configuration - Project Explorer Font Size] to adjust the font size of the left view.
 
 <img src="https://web-assets.dcloud.net.cn/hbuilderx-doc/setting-left-view-fontsize.jpg" class="hd-img" />
 

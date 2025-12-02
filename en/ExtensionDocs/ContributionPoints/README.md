@@ -500,17 +500,17 @@ Complete reference for the process of extending a custom editor [How to extend a
 ### icons
 --------
 
-icons扩展点用于声明一个从图标（最好是SVG）和图标字体创建自己的图标主题
+The icons extension point is used to declare your own icon theme from icons (preferably SVG) and icon fonts.
 
-|属性名称		|属性类型	|描述																									|
+|Attribute name		|Attribute type	|Description																									|
 |--				|--			|--																										|
-|iconPath		|String		|使用svg/png时：图像的路径。																			|
-|fontCharacter	|String		|使用字形字体时：要使用的字体中的字符。																	|
-|fontColor		|String		|使用字形时字体：用于字形的颜色。																		|
-|fontSize		|String		|使用字体时：字体大小。默认情况下，将使用字体规范中指定的大小。应该是父字体大小的相对大小（例如150%）。	|
-|fontId			|String		|使用字体时：字体的id。如果未指定，将选取字体指定部分中指定的第一个字体									|
+|iconPath		|String		|When using svg/png: the path to the image.																			|
+|fontCharacter	|String		|When using glyph font: the character in the font to use.																	|
+|fontColor		|String		|When using glyph font: the color for the glyph.																		|
+|fontSize		|String		|When using font: font size. By default, the size specified in the font specification will be used. Should be a relative size to the parent font size (e.g., 150%).	|
+|fontId			|String		|When using font: the id of the font. If not specified, the first font specified in the font specification section will be selected.									|
 
-##### 示例:
+##### Example:
 ```json
     "contributes": {
 		"icons": {

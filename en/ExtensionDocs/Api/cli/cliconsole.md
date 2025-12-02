@@ -1,29 +1,29 @@
-## cliconsole 将插件内的日志输出到终端
+## cliconsole Output Plugin Logs to Terminal
 
-将插件内的日志输出到终端
+Output logs from within the plugin to the terminal
 
 ```js
-await hx.cliconsole.log({ clientId: client_id, msg: `欢迎使用HBuilderX CLI`, status: 'Info' });
+await hx.cliconsole.log({ clientId: client_id, msg: `Welcome to HBuilderX CLI`, status: 'Info' });
 ```
 
-### 参数说明
+### Parameter Description
 
-|参数名称		|参数类型	|描述												|
+|Parameter Name		|Parameter Type	|Description												|
 |--			|--		|--													|
-|clientId	|String	|必填, 具体用法参考下面的示例代码						|
-|msg		|String	|													|
-|status		|String	|选项：Info、Error，通常不要用Error，Error代表终止终端输出	|
-|hideTime	|Boolean|控制终端消息是否显示时间日期，默认为true							|
+|clientId	|String	|Required, refer to the example code below for specific usage						|
+|msg		|String	|The message to output													|
+|status		|String	|Options: Info, Error. Usually don't use Error, as Error will terminate terminal output	|
+|hideTime	|Boolean|Controls whether the terminal message shows date and time, default is true							|
 
 
-### 示例代码
+### Example Code
 ```js
 let disposable = hx.commands.registerCliCommand('test.input', async (params) => {
-    // 请注意这个clientID，非常重要，可以将插件内的日志输出到终端
+    // Please note this clientID is very important, it can output logs from the plugin to the terminal
     let client_id = params.cliconsole.clientId;
-    await hx.cliconsole.log({ clientId: client_id, msg: `欢迎使用HBuilderX CLI`, status: 'Info' });
+    await hx.cliconsole.log({ clientId: client_id, msg: `Welcome to HBuilderX CLI`, status: 'Info' });
 });
 context.subscriptions.push(disposable);
 ```
 
-注意上面的代码，先从params中解析中`client_id`，然后调用`hx.cliconsole.log`打印消息
+Note the code above, first parse `client_id` from params, then call `hx.cliconsole.log` to print messages

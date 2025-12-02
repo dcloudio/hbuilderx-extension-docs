@@ -1,59 +1,59 @@
 # createStatusBarItem
-> `从HBuilderX 3.8.5及以上版本开始支持`
+> `Supported from HBuilderX 3.8.5 and above`
 
-创建一个状态栏元素
+Create a status bar item
 
-#### 参数说明
+#### Parameter Description
 
-|参数名称	|参数类型									|描述												|
+|Parameter Name	|Parameter Type									|Description												|
 |--			|--											|--													|
-|alignment	|[StatusBarAlignment](#StatusBarAlignment)	|状态栏元素对其方式									|
-|priority	|Number										|状态栏元素优先级。值越高，表示元素应显示得越靠左。	|
+|alignment	|[StatusBarAlignment](#StatusBarAlignment)	|Status bar item alignment									|
+|priority	|Number										|Status bar item priority. Higher values mean the item should be displayed more to the left.	|
 
-#### 返回值
+#### Return Value
 
-|返回类型						|描述				|
+|Return Type						|Description				|
 |--								|--					|
-|[StatusBarItem](#StatusBarItem)|一个新的状态栏元素	|
+|[StatusBarItem](#StatusBarItem)|A new status bar item	|
 
 
 #### StatusBarAlignment
 
-状态栏元素对其方式
+Status bar item alignment
 
-|枚举值	|描述		|
+|Enum Value	|Description		|
 |--		|--			|
-|Left	|与左侧对齐	|
-|Right	|与右侧对齐	|
+|Left	|Align to left	|
+|Right	|Align to right	|
 
 #### StatusBarItem
 
-状态栏元素是在状态栏显示的文本或图标，并可以在单击时运行命令。
+A status bar item is text or an icon displayed in the status bar that can run a command when clicked.
 
-**属性列表**
+**Property List**
 
-|属性名			|属性类型									|描述																																						|
+|Property Name			|Property Type									|Description																																						|
 |--				|--											|--																																							|
-|alignment		|[StatusBarAlignment](#StatusBarAlignment)	|状态栏元素对其方式																																			|
-|backgroundColor|String										|状态栏元素的背景色。																																		|
-|color			|String										|状态栏元素的前景色。																																		|
-|command		|String										|要在单击时运行的命令或命令的标识符。命令必须是已注册的。																									|
-|id				|String										|状态栏元素标识。																																			|
-|name			|String										|状态栏元素名称。																																			|
-|priority		|Number										|状态栏元素优先级。值越高，表示元素应显示得越靠左。																											|
-|text			|String										|状态栏元素要显示的文本。文本可以包含像$(icon-name)图标，需要在提前在[package.json#contributes/icons](/ExtensionDocs/ContributionPoints/README.md#icons)配置|
-|tooltip		|String										|将鼠标悬停在状态栏元素上时的工具提示文本。																													|
+|alignment		|[StatusBarAlignment](#StatusBarAlignment)	|Status bar item alignment																																			|
+|backgroundColor|String										|Background color of the status bar item.																																		|
+|color			|String										|Foreground color of the status bar item.																																		|
+|command		|String										|Command or command identifier to run when clicked. The command must be registered.																									|
+|id				|String										|Status bar item identifier.																																			|
+|name			|String										|Status bar item name.																																			|
+|priority		|Number										|Status bar item priority. Higher values mean the item should be displayed more to the left.																											|
+|text			|String										|Text to display in the status bar item. Text can include icons like $(icon-name), which need to be configured in advance in [package.json#contributes/icons](/ExtensionDocs/ContributionPoints/README.md#icons)|
+|tooltip		|String										|Tooltip text when hovering over the status bar item.																													|
 
-**方法列表**
+**Method List**
 
-|方法名		|返回值	|描述					|
+|Method Name		|Return Value	|Description					|
 |--			|--		|--						|
-|dispose()	|void	|销毁状态栏元素			|
-|hide()		|void	|在状态栏隐藏状态栏元素	|
-|show()		|void	|在状态栏显示状态栏元素	|
+|dispose()	|void	|Dispose the status bar item			|
+|hide()		|void	|Hide the status bar item	|
+|show()		|void	|Show the status bar item	|
 
 
-#### 示例
+#### Example
 
 ``` javascript
 const myStatusBarItem = hx.window.createStatusBarItem(
