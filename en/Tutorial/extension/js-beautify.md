@@ -1,58 +1,58 @@
 # js-beautify
 
-HBuilderX 3.7.6+, 内置format插件(即js-beautify)，支持项目下格式化配置.jsbeautifyrc文件
+HBuilderX 3.7.6+, the built-in format plugin (js-beautify) supports project-level formatting configuration via .jsbeautifyrc file
 
-注意事项：只有项目下存在`.jsbeautifyrc`文件时才会生效。否则则采用HBuilderX内置的jsbeautifyrc格式化规则。
+Note: This only takes effect when a `.jsbeautifyrc` file exists in the project. Otherwise, HBuilderX's built-in jsbeautifyrc formatting rules are used.
 
 <img src="https://web-assets.dcloud.net.cn/hbuilderx-doc/jsbeautifyrc-setting.jpg" class="hd-img" />
 
-备注：如上截图，【打开文件.jsbeautifyrc进行配置】，如果您曾在此配置过规则，新版`js-beautify`格式化会使用旧的格式化配置文件。如需使用最新`.jsbeautifyrc`配置文件，请删除此文件，再次进入，会重新生成。
+Note: As shown in the screenshot above, [Open file .jsbeautifyrc for configuration], if you have configured rules here before, the new `js-beautify` formatting will use the old formatting configuration file. If you want to use the latest `.jsbeautifyrc` configuration file, please delete this file and re-enter to regenerate it.
 
-## 如何在项目下配置.jsbeautifyrc
+## How to Configure .jsbeautifyrc in a Project
 
-> HBuilderX 3.7.6+起生效
+> Effective from HBuilderX 3.7.6+
 
-在项目下，新建`.jsbeautifyrc`文件，配置相关格式化规则即可。
+In the project, create a new `.jsbeautifyrc` file and configure the relevant formatting rules.
 
 <img src="https://web-assets.dcloud.net.cn/hbuilderx-doc/jsbeautifyrc-file.jpg" class="hd-img" />
 
-## 缩进风格
+## Indentation Style
 
-格式化时， 使用的缩进方式，是读取的菜单【工具 --> 设置】中的配置
+When formatting, the indentation method used is read from the menu [Tools --> Settings] configuration
 
 ![](https://hx.dcloud.net.cn/static/snapshots/tutorial/format/indent.png)
 
-特别说明： editorconfig配置会覆盖HBuilderX编辑器配置；当项目下存在`.editorconfig`文件时，格式化时，读取的是此配置文件。
+Note: editorconfig configuration will override HBuilderX editor configuration; when a `.editorconfig` file exists in the project, the formatting reads from this configuration file.
 
-## js-beautify格式化规则
+## js-beautify Formatting Rules
 
-格式化规则，请查看js-beautify官方文档[详情](https://github.com/beautify-web/js-beautify)。
+For formatting rules, please check the js-beautify official documentation [details](https://github.com/beautify-web/js-beautify).
 
-下面简单的罗列一些js-beautify格式化规则:
+Here are some simple js-beautify formatting rules:
 
 ```json
 {
-    "eol": "\r\n",                      //行结束符
-    "end_with_newline": false,          //使用换行结束输出
-    "indent_level": 0,                  //起始代码缩进数
-    "preserve_newlines": true,          //保留空行
-    "max_preserve_newlines": null,      //最大连续保留换行符个数。比如设为2，则会将2行以上的空行删除为只保留1行
-    "space_in_paren": true,             //括弧添加空格 示例 f( a, b )
-    "space_in_empty_paren": false,      //函数的括弧内没有参数时插入空格 示例 f( )
-    "jslint_happy": false,              //启用jslint-strict模式
-    "space_after_anon_function": false, //匿名函数的括号前加空格
-    "brace_style": "collapse",          //代码样式，可选值 [collapse|expand|end-expand|none][,preserve-inline] [collapse,preserve-inline
-    "unindent_chained_methods": false,  //不缩进链式方法调用
-    "break_chained_methods": false,     //在随后的行中断开链式方法调用
-    "keep_array_indentation": false,    //保持数组缩进
-    "unescape_strings": false,          //使用xNN符号编码解码可显示的字符
+    "eol": "\r\n",                      //Line ending character
+    "end_with_newline": false,          //End output with newline
+    "indent_level": 0,                  //Starting code indentation level
+    "preserve_newlines": true,          //Preserve empty lines
+    "max_preserve_newlines": null,      //Maximum consecutive newlines to preserve. For example, set to 2 to delete more than 2 empty lines to keep only 1
+    "space_in_paren": true,             //Add spaces in parentheses, example f( a, b )
+    "space_in_empty_paren": false,      //Insert space when function parentheses have no parameters, example f( )
+    "jslint_happy": false,              //Enable jslint-strict mode
+    "space_after_anon_function": false, //Add space before parentheses of anonymous functions
+    "brace_style": "collapse",          //Code style, options [collapse|expand|end-expand|none][,preserve-inline] [collapse,preserve-inline
+    "unindent_chained_methods": false,  //Don't indent chained method calls
+    "break_chained_methods": false,     //Break chained method calls in subsequent lines
+    "keep_array_indentation": false,    //Keep array indentation
+    "unescape_strings": false,          //Decode displayable characters using xNN symbol encoding
     "wrap_line_length": 120
 }
 ```
 
-## js-beautify支持配置ts格式化规则
+## js-beautify Supports Configuring ts Formatting Rules
 
-HBuilderX 3.7.6+，js-beautify支持配置ts格式化规则。具体如下所示:
+HBuilderX 3.7.6+, js-beautify supports configuring ts formatting rules. Specifically as follows:
 
 ```json
 {

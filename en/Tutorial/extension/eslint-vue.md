@@ -65,7 +65,7 @@ Modify the .eslintrc.js file and add rules, such as:
   'vue/no-dupe-keys': 'error',
   //no duplicate attributes
   'vue/no-duplicate-attributes': 'error',
-  //在 <template> Parsing errors are not allowed under the label
+  //In <template> Parsing errors are not allowed under the label
   'vue/no-parsing-error': ['error',{
       'x-invalid-end-tag': false,
   }],
@@ -77,7 +77,7 @@ Modify the .eslintrc.js file and add rules, such as:
   'vue/no-side-effects-in-computed-properties': 'error',
   //<template>No key attributes
   'vue/no-template-key': 'error',
-  //在 <textarea> not mustaches
+  //In <textarea> not mustaches
   'vue/no-textarea-mustache': 'error',
   //Unused variable definitions are not allowed in v-for or attributes in the scope
   'vue/no-unused-vars': 'error',
@@ -95,7 +95,7 @@ Modify the .eslintrc.js file and add rules, such as:
   'vue/valid-template-root': 'error',
   // Mandatory verification of v-bind command
   'vue/valid-v-bind': 'error',
-  // 指令Mandatory verification of v-cloak command
+  // Mandatory verification of v-cloak command
   'vue/valid-v-cloak': 'error',
   // Mandatory verification of v-else-if command
   'vue/valid-v-else-if': 'error',
