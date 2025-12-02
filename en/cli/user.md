@@ -25,12 +25,12 @@ If the logout is successful, it will return `0:user logout:OK`
 cli user logout
 ```
 
-#### 登录参数 --global
+#### Login Parameter --global
 
-> HBuilderX 4.81+，新增登录参数--global
+> HBuilderX 4.81+, added login parameter --global
 
 ```shell
-# --global, 布尔值， 默认为false
-cli user login --global true --username <用户名>  --password <密码>
+# --global, boolean, defaults to false
+cli user login --global true --username <username>  --password <password>
 ```
 
