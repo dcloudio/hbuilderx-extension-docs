@@ -51,10 +51,10 @@ The meaning of each field is listed below:
 ```
 
 
-### 备注
+### Note
 
-插件根目录package.json，存在很多字段，一些字段并未对开发者开放。
+The plugin root directory package.json contains many fields, some of which are not open to developers.
 
-近期，某些插件package.json，配置了一些HBuilderX未开放的字段，比如`"__private": true`, 此字段表示此插件属于HBuilderX`内置插件`，不会显示在HBuilderX菜单【设置 - 插件配置】中。
+Recently, some plugin package.json files have been configured with fields that HBuilderX has not opened, such as `"__private": true`. This field indicates that the plugin belongs to the HBuilderX `built-in plugins` and will not be displayed in the HBuilderX menu [Settings - Plugin Configuration].
 
-**所有开发者开发的插件，都应该显示在HBuilderX菜单【设置 - 插件配置】中，允许用户自行卸载。**
+**All plugins developed by developers should be displayed in the HBuilderX menu [Settings - Plugin Configuration], allowing users to uninstall them.**

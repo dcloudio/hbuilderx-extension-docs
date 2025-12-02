@@ -103,7 +103,7 @@ In the non-conditionally compiled code area, code hints and syntax checks will b
 
 ## Conditional compilation support for `pages.json`
 
-> pages.json条件编译，见[详情](https://uniapp.dcloud.net.cn/tutorial/platform.html#pages-json-%E7%9A%84%E6%9D%A1%E4%BB%B6%E7%BC%96%E8%AF%91)
+> For pages.json conditional compilation, see [details](https://uniapp.dcloud.net.cn/tutorial/platform.html#pages-json-%E7%9A%84%E6%9D%A1%E4%BB%B6%E7%BC%96%E8%AF%91)
 
 In `pages.json`, pages written in conditional compilation are only served with the language of the platform for which the conditional compilation is intended
 

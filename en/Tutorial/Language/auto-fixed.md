@@ -1,30 +1,30 @@
-## JS、TS错误校验自动修复
+## JS/TS Error Validation Auto Fix
 
-> 仅适用于HBuilderX 3.8.10+版本
+> Only applicable to HBuilderX 3.8.10+ versions
 
-本功能需要开启内置的js或ts语法校验（[如何开启](https://hx.dcloud.net.cn/Tutorial/UserGuide/SyntaxCheck?id=builtincheck)），当检测到代码中存在错误，在错误处悬浮或者通过快捷键`ctrl+alt+.`（macOS:`cmd+alt+.`）可以在编辑器中快速查询可用的修复建议。
+This feature requires enabling the built-in js or ts syntax validation ([How to enable](https://hx.dcloud.net.cn/Tutorial/UserGuide/SyntaxCheck?id=builtincheck)). When errors are detected in the code, you can hover over the error or use the shortcut `Ctrl+Alt+.` (macOS: `Cmd+Alt+.`) to quickly query available fix suggestions in the editor.
 
-### 支持范围
+### Scope of Support
 
-单独js文件、单独ts文件、vue内嵌的js、vue内嵌的ts、html内嵌的js
+Standalone js files, standalone ts files, embedded js in vue, embedded ts in vue, embedded js in html
 
-### 如何使用
+### How to Use
 
-#### 1. 将鼠标悬浮在错误的代码位置
+#### 1. Hover the mouse over the error code location
   ![](https://web-assets.dcloud.net.cn/hbuilderx-doc/hls/hls_auto_fixed_01.png)
 
-#### 2. 点击自动修复
+#### 2. Click auto fix
   ![](https://web-assets.dcloud.net.cn/hbuilderx-doc/hls/hls_auto_fixed_02.png)
 
-#### 3. 选择需要修复的操作
+#### 3. Select the fix operation you need
   ![](https://web-assets.dcloud.net.cn/hbuilderx-doc/hls/hls_auto_fixed_04.png)
 
-#### 4.完成自动修复
+#### 4. Auto fix completed
   ![](https://web-assets.dcloud.net.cn/hbuilderx-doc/hls/hls_auto_fixed_05.png)
 
-### 注意
+### Note
 
-注意事项：并不是所有的错误都能自动修复
+Note: Not all errors can be automatically fixed
 
   ![](https://web-assets.dcloud.net.cn/hbuilderx-doc/hls/hls_auto_fixed_06.png)
 
