@@ -1,51 +1,51 @@
-# CLI 发行uni-app到支付宝小程序@mp-aplipay
+# CLI Publish uni-app to Alipay Mini Program@mp-alipay
 
-> HBuilderX 3.8.5-alpha，支持使用CLI发行支付宝小程序。
+> HBuilderX 3.8.5-alpha, supports using CLI to publish Alipay Mini Programs.
 
-通过此种方式，可在命令行或其它CI工具中，完成支付宝小程序代码的上传、预览等操作。
+Through this method, you can complete operations such as uploading and previewing Alipay Mini Program code in command line or other CI tools.
 
-## CLI命令语法@cmd
+## CLI Command Syntax@cmd
 
-|参数			|说明																	|
+|Parameter			|Description																	|
 |--				|--																		|
-|--platform		|必填，发行平台(MP-ALIPAY)												|
-|--project		|必填，项目名称															|
-|--appid		|必填，支付宝小程序appid													|
-|--subPackage	|发行为混合包, 示例：--subPackage xxx									|
-|--upload		|打包后是否上传到支付宝平台,只有值为true时生效							|
-|--description	|上传的小程序描述														|
-|--privatekey	|支付宝开发工具密钥文件 [详情](#uploadPrivateKey)							|
-|--version		|上传小程序的版本号；选填。如果不填写，则会读取manifest.json中的版本号	|
+|--platform		|Required, publish platform (MP-ALIPAY)												|
+|--project		|Required, project name															|
+|--appid		|Required, Alipay Mini Program appid													|
+|--subPackage	|Publish as hybrid package, example: --subPackage xxx									|
+|--upload		|Whether to upload to Alipay platform after packaging, only effective when value is true							|
+|--description	|Description of the uploaded mini program														|
+|--privatekey	|Alipay development tool key file [Details](#uploadPrivateKey)							|
+|--version		|Version number of the uploaded mini program; optional. If not filled, it will read the version number from manifest.json	|
 
 
 ```shell
-# 仅编译uni-app项目到支付宝小程序
-cli publish --platform mp-alipay --project 项目名称
+# Only compile uni-app project to Alipay Mini Program
+cli publish --platform mp-alipay --project project_name
 
-# 编译uni-app项目到支付宝小程序，并上传发行小程序到支付宝平台
-cli publish --platform mp-alipay --project 项目名称 --upload true --appid 小程序appid --description 发布描述 --version 发布版本 --privatekey 支付宝开发工具密钥文件
+# Compile uni-app project to Alipay Mini Program and upload to Alipay platform
+cli publish --platform mp-alipay --project project_name --upload true --appid mini_program_appid --description publish_description --version publish_version --privatekey alipay_dev_tool_key_file
 
 ```
 
 
-## 支付宝开发工具密钥文件@uploadPrivateKey
+## Alipay Development Tool Key File@uploadPrivateKey
 
-> HBuilderX 3.8.5+, uni-app 发行到支付宝小程序，支持自动上传代码到支付宝平台，无需再通过支付宝开发者工具上传发行。
+> HBuilderX 3.8.5+, uni-app publishing to Alipay Mini Program supports automatically uploading code to Alipay platform, no need to upload through Alipay Developer Tools anymore.
 >
-> HBuilderX 发行支付宝小程序，需要提供支付宝开发工具密钥文件
+> HBuilderX publishing Alipay Mini Program requires providing the Alipay development tool key file
 
-通过支付宝小程序CLI，使用支付宝开发工具密钥上传代码，无需打开支付宝开发者工具，一键完成支付宝小程序代码的上传操作
+Through Alipay Mini Program CLI, using the Alipay development tool key to upload code, you can complete the Alipay Mini Program code upload operation with one click without opening Alipay Developer Tools.
 
-**如何获取支付宝开发工具密钥文件？**
+**How to obtain the Alipay development tool key file?**
 
-打开支付宝开放平台 [开发工具密钥](https://open.alipay.com/develop/manage/tool-key), 扫码登录，左侧菜单【开发工具密钥】, 点击,生成身份密钥，如下图：
+Open Alipay Open Platform [Development Tool Key](https://open.alipay.com/develop/manage/tool-key), scan to log in, in the left menu [Development Tool Key], click to generate identity key, as shown below:
 
 <img src="https://web-assets.dcloud.net.cn/hbuilderx-doc/cli/alipay-createPrivateKey.png" class="hd-img" />
 
-**下载开发工具密钥：**
+**Download the development tool key:**
 
 <img src="https://web-assets.dcloud.net.cn/hbuilderx-doc/cli/alipay-downloadkeyFile.png" class="hd-img"/>
 
-## 注意事项
+## Notes
 
-请正确填写`支付宝小程序appid`和 开发工具密钥
+Please fill in the `Alipay Mini Program appid` and development tool key correctly

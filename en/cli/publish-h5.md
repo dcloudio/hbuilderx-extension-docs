@@ -1,32 +1,32 @@
-# CLI 发行uni-app到H5@h5
+# CLI Publish uni-app to H5@h5
 
-> HBuilderX 3.3.7-alpha，支持使用CLI发行uni-app项目到H5。
+> HBuilderX 3.3.7-alpha, supports using CLI to publish uni-app projects to H5.
 
-通过此种方式，可在命令行或其它CI工具中，完成uni-app项目到H5的编译、上传。
+Through this method, you can complete the compilation and upload of uni-app projects to H5 in command line or other CI tools.
 
-## 命令语法@cmd
+## Command Syntax@cmd
 
 ```shell
-# 仅编译uni-app项目到H5，不上传uniCloud前端网页托管
-cli publish --platform h5 --project 项目名称
+# Only compile uni-app project to H5, do not upload to uniCloud frontend web hosting
+cli publish --platform h5 --project project_name
 
-# 编译uni-app项目到H5，并上传到前端网页托管
-cli publish --platform h5 --project 项目名称 --webHosting true --provider aliyun --spaceId xxxxxxx
+# Compile uni-app project to H5 and upload to frontend web hosting
+cli publish --platform h5 --project project_name --webHosting true --provider aliyun --spaceId xxxxxxx
 ```
 
-|参数			|说明																	|
+|Parameter			|Description																	|
 |--				|--																		|
-|--platform		|必填，发行平台(MP-WEIXIN)												|
-|--project		|必填，项目名称															|
-|--ssr			|ssr发行，值为 true 时使用，默认为 false(项目使用vue3时配置此项才生效)	|
-|--webDomain	|网站域名(发行类型为H5时可配置此项)										|
-|--webTitle		|网站标题(发行类型为H5时可配置此项，不指定默认为项目名称)				|
-|--webHosting	|前端网页托管，值为 true 时使用，默认为 false							|
-|--provider		|uniCloud 服务商代号(当前仅支持aliyun,不填写默认为aliyun),不支持腾讯云	|
-|--spaceId		|uniCloud 云空间id												|
+|--platform		|Required, publish platform (H5)												|
+|--project		|Required, project name															|
+|--ssr			|SSR publishing, use when value is true, default is false (only effective when project uses vue3)	|
+|--webDomain	|Website domain (can be configured when publish type is H5)										|
+|--webTitle		|Website title (can be configured when publish type is H5, defaults to project name if not specified)				|
+|--webHosting	|Frontend web hosting, use when value is true, default is false							|
+|--provider		|uniCloud service provider code (currently only supports aliyun, defaults to aliyun if not specified), does not support Tencent Cloud	|
+|--spaceId		|uniCloud cloud space id												|
 
-注意事项：使用CLI命令，上传文件到前端网页托管，如果云端已存在此文件，会使用本地文件覆盖云端的文件。
+Note: When using CLI command to upload files to frontend web hosting, if the file already exists in the cloud, the local file will overwrite the cloud file.
 
-# 拓展@expand
+# Extensions@expand
 
-- [前端网页托管功能详情](https://uniapp.dcloud.io/uniCloud/hosting)
+- [Frontend Web Hosting Feature Details](https://uniapp.dcloud.io/uniCloud/hosting)
