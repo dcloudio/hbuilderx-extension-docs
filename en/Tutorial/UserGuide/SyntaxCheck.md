@@ -6,9 +6,9 @@ A good validator can save your time to find bugs.
 
 A good validator can ensure that the coding follows the standard.
 
-HBuilderX 3.6.2+, 内置的语言服务插件，支持对js和ts进行语法校验，[查看](#builtInCheck)。
+HBuilderX 3.6.2+, the built-in language service plugin supports syntax validation for js and ts. [View](#builtInCheck).
 
-当然您也可以安装其它语法校验插件，比如：htmlhint, stylelint, eslint-plugin-vue, eslint-js。
+Of course, you can also install other syntax validation plugins, such as: htmlhint, stylelint, eslint-plugin-vue, eslint-js.
 
 ## Syntax Validation Plugins
 

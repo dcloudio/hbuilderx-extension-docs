@@ -1,21 +1,21 @@
-# HBuilderX工具使用的域名列表
+# List of Domains Used by HBuilderX
 
 
-### 软件升级或插件安装相关
+### Software Upgrade or Plugin Installation Related
 
 
 - [update.liuyingyong.cn](http://update.liuyingyong.cn)
 - [download.dcloud.net.cn](http://download.dcloud.net.cn)
 
-注意事项:
+Notes:
 
-1. 某些插件或项目模板安装，需要从npm下载, 相关域名： npmjs.com、npmmirror.com
-2. 特别注意：update域名会跳转到CDN域名，需要把CDN域名都加入到白名单。
+1. Some plugins or project template installations require downloading from npm, related domains: npmjs.com, npmmirror.com
+2. Note: The update domain will redirect to CDN domains, you need to add all CDN domains to the whitelist.
 
 ### CDN
 
 
-> 请注意：基本上所有的插件下载都走了CDN，务必将下列CDN域名加入白名单。
+> Please note: Basically all plugin downloads go through CDN, be sure to add the following CDN domains to the whitelist.
 
 - *.qnqcdn.net
 - *.hiecheimaetu.com
@@ -33,30 +33,30 @@
 - * ietheivaicai.com
 - * pouquiagievu.com
 
-### 账户相关
+### Account Related
 
 
 - [account.dcloud.net.cn](https://account.dcloud.net.cn)
 
-### 插件市场相关
+### Plugin Market Related
 
 
 - [ext.dcloud.net.cn](https://ext.dcloud.net.cn)
 - [ext.liuyingyong.cn](https://ext.liuyingyong.cn)
 
-### 文档相关
+### Documentation Related
 
 
 - [hx.dcloud.net.cn](https://hx.dcloud.net.cn)
 - [uniapp.dcloud.net.cn](https://uniapp.dcloud.net.cn)
 
-### 打包相关
+### Packaging Related
 
 
 - [ide.liuyingyong.cn](https://ide.liuyingyong.cn)
 - [ide.dcloud.net.cn](https://ide.dcloud.net.cn)
 
-### 其它
+### Others
 
 
 - [stream.dcloud.net.cn](https://stream.dcloud.net.cn)
@@ -67,11 +67,11 @@
 - [user.liuyingyong.cn](https://user.liuyingyong.cn)
 - [log.liuyingyong.cn](https://log.liuyingyong.cn)
 
-### 特别注意
+### Special Note
 
 
-相关业务域名可能会进行调整，建议将以下主域名或泛域名全部加入白名单：
+Related business domains may be adjusted. It is recommended to add all the following main domains or wildcard domains to the whitelist:
 
-- dcloud.net.cn 或 *.dcloud.net.cn
-- dcloud.io 或 *.dcloud.io
-- liuyingyong.cn 或 *.liuyingyong.cn
+- dcloud.net.cn or *.dcloud.net.cn
+- dcloud.io or *.dcloud.io
+- liuyingyong.cn or *.liuyingyong.cn

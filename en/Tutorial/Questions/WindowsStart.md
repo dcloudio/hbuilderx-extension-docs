@@ -2,7 +2,7 @@
 
 ## Summary
 
-This document is `windows` platform solution，Mac please refer to:[mac solution](http://hx.dcloud.net.cn/Tutorial/install/macosx?id=启动问题)
+This document is `windows` platform solution, Mac please refer to: [mac solution](http://hx.dcloud.net.cn/Tutorial/install/macosx?id=startup-issues)
   
 The `zip` package of `windows` takes a long time to decompress, please do not interrupt! If the decompression is interrupted, please decompress again.
 

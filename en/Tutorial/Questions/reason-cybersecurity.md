@@ -1,17 +1,17 @@
-# 关于HBuilderX Node扩展插件启动失败的解决方案
+# Solution for HBuilderX Node Extension Plugin Startup Failure
 
-某些Windows 10 电脑，HBuilderX启动后，没有代码提示，uni-app无法正常运行到手机。
+On some Windows 10 computers, after HBuilderX starts, there is no code hint, and uni-app cannot run normally on phones.
 
-点击菜单【帮助】【查看运行日志】，如果日志中出现`无法成功完成操作，因为文件包含病毒或潜在的垃圾软件`，且电脑安装了`reason cybersecurity`, 请将`reason cybersecurity`删除。
+Click menu [Help] [View Run Log], if the log shows `The operation could not be completed successfully because the file contains a virus or potentially unwanted software`, and the computer has `reason cybersecurity` installed, please uninstall `reason cybersecurity`.
 
-**原因：** 这是因为电脑上安装的`reason cybersecurity`拦截了`Node.exe`，导致HBuilderX Node扩展插件无法启动。
+**Reason:** This is because `reason cybersecurity` installed on the computer blocked `Node.exe`, causing HBuilderX Node extension plugins to fail to start.
 
-#### 如何判断电脑是否安装了reason cybersecurity？
+#### How to determine if reason cybersecurity is installed on the computer?
 
-打开Windows安全中心，如下图所示，标红部分，则是reason cybersecurity。
+Open Windows Security Center, as shown in the figure below, the highlighted part is reason cybersecurity.
 
 <img src="/static/snapshots/tutorial/question/reason.jpeg" style="zoom: 50%;" />
 
-#### 卸载reason cybersecurity
+#### Uninstall reason cybersecurity
 
-打开电脑C盘，进入`C:\Program Files\RAVAntivirus`目录，找到`Uninstall.exe`程序进行卸载。
+Open your computer's C drive, go to the `C:\Program Files\RAVAntivirus` directory, and find the `Uninstall.exe` program to uninstall.

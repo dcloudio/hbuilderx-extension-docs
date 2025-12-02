@@ -13,10 +13,10 @@ Since version `4.46+`, uni-app x projects support the language service for hybri
 ```kotlin
 package uts.sdk.modules.utsDemoMem
 
-// 这里是原生的包名引用
+// This is native package name references
 import android.app.ActivityManager
 import android.content.Context.ACTIVITY_SERVICE
-// UTS内置对象的包名引用
+// UTS built-in object package name references
 import io.dcloud.uts.UTSAndroid
 import io.dcloud.uts.setInterval
 import io.dcloud.uts.clearInterval
@@ -33,8 +33,8 @@ object NativeCode {
         val availMem = memoryInfo.availMem / 1024 / 1024
         val totalMem = memoryInfo.totalMem / 1024 / 1024
     
-        // availMem 可用内存，单位MB
-        // totalMem 设备内存，单位MB
+        // availMem: available memory, unit MB
+        // totalMem: device memory, unit MB
         console.log(availMem,totalMem)
         return arrayOf(availMem,totalMem)
     }
@@ -83,14 +83,14 @@ class NativeCode {
 *kotlin*
 
 ```js
-// 导入kotlin原生文件
+// Import kotlin native file
 import { NativeCode } from "./kotlinCode.kt"
 ```
 
 *java*
 
 ```js
-// 导入java原生文件
+// Import java native file
 import JavaUser from "./JavaUser.java"
 ```
 
@@ -170,10 +170,10 @@ import JavaUser from "./JavaUser.java"
 
 #### Install Dependent Plugins
 
-For the Android platform, you need to install the HBuilderX core plugin `uts开发扩展-Android`
+For the Android platform, you need to install the HBuilderX core plugin `UTS Development Extension-Android`
 
 ![alt text](https://web-ext-storage.dcloud.net.cn/hx/uts_hybrid/image.png)
 
-For the iOS platform, you need to install the HBuilderX core plugin `uts开发扩展-iOS`
+For the iOS platform, you need to install the HBuilderX core plugin `UTS Development Extension-iOS`
 
 ![alt text](https://web-ext-storage.dcloud.net.cn/hx/uts_hybrid/plugin_uts_dev_ios.png)

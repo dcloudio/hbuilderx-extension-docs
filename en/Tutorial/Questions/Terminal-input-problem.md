@@ -1,21 +1,21 @@
-# 终端空白或无法输入的解决方案
+# Solution for Blank Terminal or Unable to Input
 
-### 问题
+### Problem
 
 <img src="/static/snapshots/tutorial/terminal/BlankTerminal.png" />
 
-### windows 解决方案
+### Windows Solution
 
-1. 关闭HBuilderX。
-2. 资源管理器中，进入HbuilderX安装目录
-3. 打开文件`HBuilderX\plugins\builtincef3terminal\script\main.js`
-4. 从17行到44行之间，将shell中的值写成绝对路径，如将shell="powershell.exe"改为shell = 'C:/WINDOWS/System32/WindowsPowerShell/v1.0/powershell.exe'；
-5. shell="cmd.exe"同等改法；
-6. 重启HBuilderX
+1. Close HBuilderX.
+2. In File Explorer, navigate to the HBuilderX installation directory
+3. Open the file `HBuilderX\plugins\builtincef3terminal\script\main.js`
+4. Between lines 17 to 44, change the shell value to an absolute path, for example, change shell="powershell.exe" to shell = 'C:/WINDOWS/System32/WindowsPowerShell/v1.0/powershell.exe';
+5. Apply the same change for shell="cmd.exe";
+6. Restart HBuilderX
 
-### mac解决方案
+### Mac Solution
 
-1. 关闭HBuilderX。
-2. 编辑文件`/Applications/HBuilderX.app/Contents/HBuilderX/plugins/builtinterminal/script/main.js`
-3. 39行，将shell中的值写成绝对路径，比如`shell = "/bin/zsh"`
-4. 重启HBuilderX
+1. Close HBuilderX.
+2. Edit the file `/Applications/HBuilderX.app/Contents/HBuilderX/plugins/builtinterminal/script/main.js`
+3. On line 39, change the shell value to an absolute path, for example `shell = "/bin/zsh"`
+4. Restart HBuilderX
