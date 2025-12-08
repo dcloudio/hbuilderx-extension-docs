@@ -147,3 +147,30 @@ D:\ide\HBuilderX\cli.exe logcat app-harmony --project hello-uni-app-x
 # 查看鸿蒙App日志（组合参数：指定设备 + 日志模式）
 ./cli logcat app-harmony --project 项目名称 --deviceId 设备序列号 --mode lastBuild
 ```
+
+## 通过npm scripts使用CLI@npm
+
+我们需要在项目中安装 [@dcloudio/hbuilderx-cli](https://www.npmjs.com/package/@dcloudio/hbuilderx-cli),它是一个桥梁，让我们可以通过命令行来调用 HBuilderX 的强大功能（如启动测试流程）。
+
+#### 添加 npm 脚本支持
+
+```shell
+# 首先，请确保你的项目根目录下有 package.json 文件。如果没有，可以通过以下命令快速生成：
+npm init -y
+
+# 然后，安装 hbuilderx-cli 作为开发依赖：
+npm install @dcloudio/hbuilderx-cli --save-dev
+```
+
+#### 使用npm命令查看日志
+
+```shell
+# 查看 Android 日志
+npm run logcat:app-android -- --deviceId feyhuos8ai89jr4p
+
+# 查看 iOS真机 日志。 
+npm run logcat:app-ios -- --iosTarget device --deviceId 00001110001C35240AF2801A
+
+# 查看 iOS模拟器 日志。 
+npm run logcat:app-ios -- --iosTarget simulator --deviceId 3FFE4F41-997F-4ED3-AC3B-DF4ADB9A4262
+```

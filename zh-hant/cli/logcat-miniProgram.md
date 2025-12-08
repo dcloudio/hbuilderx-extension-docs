@@ -499,3 +499,35 @@ D:\ide\HBuilderX\cli.exe logcat quickapp-webview-huawei --project hello-uni-app-
 # Windows电脑: 使用cli查看 hello-uni-app-x项目 快应用联盟日志
 D:\ide\HBuilderX\cli.exe logcat quickapp-webview-union --project hello-uni-app-x
 ```
+
+## 通过npm scripts使用CLI@npm
+
+我们需要在项目中安装 [@dcloudio/hbuilderx-cli](https://www.npmjs.com/package/@dcloudio/hbuilderx-cli),它是一个桥梁，让我们可以通过命令行来调用 HBuilderX 的强大功能（如启动测试流程）。
+
+#### 添加 npm 脚本支持
+
+```shell
+# 首先，请确保你的项目根目录下有 package.json 文件。如果没有，可以通过以下命令快速生成：
+npm init -y
+
+# 然后，安装 hbuilderx-cli 作为开发依赖：
+npm install @dcloudio/hbuilderx-cli --save-dev
+```
+
+#### 使用npm命令查看日志
+
+**语法**
+
+```
+npm run logcat:<小程序平台名称>
+```
+
+**示例**
+
+```shell
+# 查看 微信小程序日志
+npm run logcat:mp-weixin
+
+# 查看 鸿蒙元服务日志
+npm run logcat:mp-harmony
+```

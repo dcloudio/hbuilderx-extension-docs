@@ -28,7 +28,7 @@
 | --------- | -------------------------------------------------------------------------- |
 | --help    | 显示 cli 命令帮助                                                          |
 | --project | HBuilder X 里导入的项目名称或绝对路径                                      |
-| --browser | 浏览器类型，取值：Built、Chrome、Firefox、Ie、Edge、Safari，默认值为 Built |
+| --browser | 浏览器类型，取值：Built、Chrome、Firefox、Ie、Edge、Safari，默认值为 Built(HBuilderX内置浏览器) |
 | --mode    | 日志模式，取值：full、lastBuild、prevBuild，默认值为 prevBuild             |
 
 **使用示例：**
@@ -70,4 +70,31 @@
 
 # Windows电脑: 使用cli查看 hello-uni-app-x项目 运行到 chrome 日志
 D:\ide\HBuilderX\cli.exe logcat web --project hello-uni-app-x --browser Chrome
+```
+
+## 通过npm scripts使用CLI@npm
+
+我们需要在项目中安装 [@dcloudio/hbuilderx-cli](https://www.npmjs.com/package/@dcloudio/hbuilderx-cli),它是一个桥梁，让我们可以通过命令行来调用 HBuilderX 的强大功能（如启动测试流程）。
+
+#### 添加 npm 脚本支持
+
+```shell
+# 首先，请确保你的项目根目录下有 package.json 文件。如果没有，可以通过以下命令快速生成：
+npm init -y
+
+# 然后，安装 hbuilderx-cli 作为开发依赖：
+npm install @dcloudio/hbuilderx-cli --save-dev
+```
+
+#### 使用npm命令查看日志
+
+```shell
+# 查看 uni-app(x) HBuilderX内置浏览器 运行日志
+npm run logcat:web
+
+# 查看 uni-app(x) Chrome 运行日志
+npm run logcat:web -- --browser Chrome
+
+# 查看 uni-app(x) Safari 运行日志
+npm run logcat:web -- --browser Safari
 ```
