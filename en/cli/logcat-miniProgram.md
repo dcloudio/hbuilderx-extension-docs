@@ -1,533 +1,533 @@
-# CLI uni-app 运行日志 - 小程序@launch-miniProgram
+# CLI uni-app Run Logs - MiniProgram@launch-miniProgram
 
-> HBuilderX cli 命令行工具
+> HBuilderX cli command line tool
 
-> 需HBuilderX 4.87+ 版本
+> Requires HBuilderX 4.87+ version
 
-> 您也可以通过 npm 包使用此功能：[@dcloudio/hbuilderx-cli](https://www.npmjs.com/package/@dcloudio/hbuilderx-cli)
+> You can also use this feature through npm package: [@dcloudio/hbuilderx-cli](https://www.npmjs.com/package/@dcloudio/hbuilderx-cli)
 
-通过 CLI 查看运行到各平台小程序的 uni-app 应用日志，支持微信、支付宝、百度、字节跳动、QQ、360、京东、快手、飞书、小红书、鸿蒙元服务、快应用等平台。[了解HBuilderX CLI](/cli/README?id=cli)
+View uni-app application logs running on various mini-program platforms through CLI, supporting WeChat, Alipay, Baidu, ByteDance, QQ, 360, JD, Kuaishou, Feishu, Xiaohongshu, HarmonyOS Meta Service, Quick App and other platforms. [Learn about HBuilderX CLI](/cli/README?id=cli)
 
-您可以将cli加入到环境变量，这样您就可以在任意目录、任意终端上，随时随地调用cli， 而无需通过输入cli绝对路径的方式来使用它。[详情](/cli/env)
+You can add cli to the environment variables, so you can call cli anytime, anywhere in any directory or terminal, without having to use it by entering the absolute path of cli. [Details](/cli/env)
 
-## 命令说明
+## Command Description
 
 ### logcat mp-weixin
 
-查看运行到小程序-微信日志
+View logs for running on MiniProgram-WeChat
 
-**用法：**
+**Usage:**
 
 ```shell
 ./cli logcat mp-weixin --help
 ```
 
-**参数：**
+**Parameters:**
 
-| 参数名称  | 描述                                                           |
-| --------- | -------------------------------------------------------------- |
-| --help    | 显示 cli 命令帮助                                              |
-| --project | HBuilder X 里导入的项目名称或绝对路径                          |
-| --mode    | 日志模式，取值：full、lastBuild、prevBuild，默认值为 prevBuild |
+| Parameter | Description                                                           |
+| --------- | --------------------------------------------------------------------- |
+| --help    | Display cli command help                                              |
+| --project | Project name or absolute path imported in HBuilder X                 |
+| --mode    | Log mode, values: full, lastBuild, prevBuild, default is prevBuild   |
 
-**使用示例：**
+**Usage Examples:**
 
 ```shell
-# 查看微信小程序日志
-./cli logcat mp-weixin --project 项目名称
+# View WeChat MiniProgram logs
+./cli logcat mp-weixin --project ProjectName
 
-# 查看微信小程序日志（指定日志模式）
-./cli logcat mp-weixin --project 项目名称 --mode full
+# View WeChat MiniProgram logs (specify log mode)
+./cli logcat mp-weixin --project ProjectName --mode full
 
-# Mac电脑 使用cli查看 hello-uni-app-x项目 微信小程序日志
+# Mac: Use cli to view WeChat MiniProgram logs for hello-uni-app-x project
 /Applications/HBuilderX.app/Contents/MacOS/cli logcat mp-weixin --project hello-uni-app-x
 
-# Mac电脑 --project 传递绝对路径
+# Mac: --project passing absolute path
 /Applications/HBuilderX.app/Contents/MacOS/cli logcat mp-weixin --project /User/apple/Desktop/hello-uni-app-x
 
-# Windows电脑: 使用cli查看 hello-uni-app-x项目 微信小程序日志
+# Windows: Use cli to view WeChat MiniProgram logs for hello-uni-app-x project
 D:\ide\HBuilderX\cli.exe logcat mp-weixin --project hello-uni-app-x
 ```
 
 ### logcat mp-alipay
 
-查看运行到小程序-支付宝(仅适用于 uni-app)日志
+View logs for running on MiniProgram-Alipay (only for uni-app)
 
-**用法：**
+**Usage:**
 
 ```shell
 ./cli logcat mp-alipay --help
 ```
 
-**参数：**
+**Parameters:**
 
-| 参数名称  | 描述                                                           |
-| --------- | -------------------------------------------------------------- |
-| --help    | 显示 cli 命令帮助                                              |
-| --project | HBuilder X 里导入的项目名称或绝对路径                          |
-| --mode    | 日志模式，取值：full、lastBuild、prevBuild，默认值为 prevBuild |
+| Parameter | Description                                                           |
+| --------- | --------------------------------------------------------------------- |
+| --help    | Display cli command help                                              |
+| --project | Project name or absolute path imported in HBuilder X                 |
+| --mode    | Log mode, values: full, lastBuild, prevBuild, default is prevBuild   |
 
-**使用示例：**
+**Usage Examples:**
 
 ```shell
-# 查看支付宝小程序日志
-./cli logcat mp-alipay --project 项目名称
+# View Alipay MiniProgram logs
+./cli logcat mp-alipay --project ProjectName
 
-# 查看支付宝小程序日志（指定日志模式）
-./cli logcat mp-alipay --project 项目名称 --mode full
+# View Alipay MiniProgram logs (specify log mode)
+./cli logcat mp-alipay --project ProjectName --mode full
 
-# Mac电脑 使用cli查看 hello-uni-app-x项目 支付宝小程序日志
+# Mac: Use cli to view Alipay MiniProgram logs for hello-uni-app-x project
 /Applications/HBuilderX.app/Contents/MacOS/cli logcat mp-alipay --project hello-uni-app-x
 
-# Mac电脑 --project 传递绝对路径
+# Mac: --project passing absolute path
 /Applications/HBuilderX.app/Contents/MacOS/cli logcat mp-alipay --project /User/apple/Desktop/hello-uni-app-x
 
-# Windows电脑: 使用cli查看 hello-uni-app-x项目 支付宝小程序日志
+# Windows: Use cli to view Alipay MiniProgram logs for hello-uni-app-x project
 D:\ide\HBuilderX\cli.exe logcat mp-alipay --project hello-uni-app-x
 ```
 
 ### logcat mp-baidu
 
-查看运行到小程序-百度(仅适用于 uni-app)日志
+View logs for running on MiniProgram-Baidu (only for uni-app)
 
-**用法：**
+**Usage:**
 
 ```shell
 ./cli logcat mp-baidu --help
 ```
 
-**参数：**
+**Parameters:**
 
-| 参数名称  | 描述                                                           |
-| --------- | -------------------------------------------------------------- |
-| --help    | 显示 cli 命令帮助                                              |
-| --project | HBuilder X 里导入的项目名称或绝对路径                          |
-| --mode    | 日志模式，取值：full、lastBuild、prevBuild，默认值为 prevBuild |
+| Parameter | Description                                                           |
+| --------- | --------------------------------------------------------------------- |
+| --help    | Display cli command help                                              |
+| --project | Project name or absolute path imported in HBuilder X                 |
+| --mode    | Log mode, values: full, lastBuild, prevBuild, default is prevBuild   |
 
-**使用示例：**
+**Usage Examples:**
 
 ```shell
-# 查看百度小程序日志
-./cli logcat mp-baidu --project 项目名称
+# View Baidu MiniProgram logs
+./cli logcat mp-baidu --project ProjectName
 
-# 查看百度小程序日志（指定日志模式）
-./cli logcat mp-baidu --project 项目名称 --mode full
+# View Baidu MiniProgram logs (specify log mode)
+./cli logcat mp-baidu --project ProjectName --mode full
 
-# Mac电脑 使用cli查看 hello-uni-app-x项目 百度小程序日志
+# Mac: Use cli to view Baidu MiniProgram logs for hello-uni-app-x project
 /Applications/HBuilderX.app/Contents/MacOS/cli logcat mp-baidu --project hello-uni-app-x
 
-# Mac电脑 --project 传递绝对路径
+# Mac: --project passing absolute path
 /Applications/HBuilderX.app/Contents/MacOS/cli logcat mp-baidu --project /User/apple/Desktop/hello-uni-app-x
 
-# Windows电脑: 使用cli查看 hello-uni-app-x项目 百度小程序日志
+# Windows: Use cli to view Baidu MiniProgram logs for hello-uni-app-x project
 D:\ide\HBuilderX\cli.exe logcat mp-baidu --project hello-uni-app-x
 ```
 
 ### logcat mp-toutiao
 
-查看运行到小程序-抖音(仅适用于 uni-app)日志
+View logs for running on MiniProgram-Douyin (only for uni-app)
 
-**用法：**
+**Usage:**
 
 ```shell
 ./cli logcat mp-toutiao --help
 ```
 
-**参数：**
+**Parameters:**
 
-| 参数名称  | 描述                                                           |
-| --------- | -------------------------------------------------------------- |
-| --help    | 显示 cli 命令帮助                                              |
-| --project | HBuilder X 里导入的项目名称或绝对路径                          |
-| --mode    | 日志模式，取值：full、lastBuild、prevBuild，默认值为 prevBuild |
+| Parameter | Description                                                           |
+| --------- | --------------------------------------------------------------------- |
+| --help    | Display cli command help                                              |
+| --project | Project name or absolute path imported in HBuilder X                 |
+| --mode    | Log mode, values: full, lastBuild, prevBuild, default is prevBuild   |
 
-**使用示例：**
+**Usage Examples:**
 
 ```shell
-# 查看抖音小程序日志
-./cli logcat mp-toutiao --project 项目名称
+# View Douyin MiniProgram logs
+./cli logcat mp-toutiao --project ProjectName
 
-# 查看抖音小程序日志（指定日志模式）
-./cli logcat mp-toutiao --project 项目名称 --mode full
+# View Douyin MiniProgram logs (specify log mode)
+./cli logcat mp-toutiao --project ProjectName --mode full
 
-# Mac电脑 使用cli查看 hello-uni-app-x项目 抖音小程序日志
+# Mac: Use cli to view Douyin MiniProgram logs for hello-uni-app-x project
 /Applications/HBuilderX.app/Contents/MacOS/cli logcat mp-toutiao --project hello-uni-app-x
 
-# Mac电脑 --project 传递绝对路径
+# Mac: --project passing absolute path
 /Applications/HBuilderX.app/Contents/MacOS/cli logcat mp-toutiao --project /User/apple/Desktop/hello-uni-app-x
 
-# Windows电脑: 使用cli查看 hello-uni-app-x项目 抖音小程序日志
+# Windows: Use cli to view Douyin MiniProgram logs for hello-uni-app-x project
 D:\ide\HBuilderX\cli.exe logcat mp-toutiao --project hello-uni-app-x
 ```
 
 ### logcat mp-qq
 
-查看运行到小程序-QQ(仅适用于 uni-app)日志
+View logs for running on MiniProgram-QQ (only for uni-app)
 
-**用法：**
+**Usage:**
 
 ```shell
 ./cli logcat mp-qq --help
 ```
 
-**参数：**
+**Parameters:**
 
-| 参数名称  | 描述                                                           |
-| --------- | -------------------------------------------------------------- |
-| --help    | 显示 cli 命令帮助                                              |
-| --project | HBuilder X 里导入的项目名称或绝对路径                          |
-| --mode    | 日志模式，取值：full、lastBuild、prevBuild，默认值为 prevBuild |
+| Parameter | Description                                                           |
+| --------- | --------------------------------------------------------------------- |
+| --help    | Display cli command help                                              |
+| --project | Project name or absolute path imported in HBuilder X                 |
+| --mode    | Log mode, values: full, lastBuild, prevBuild, default is prevBuild   |
 
-**使用示例：**
+**Usage Examples:**
 
 ```shell
-# 查看QQ小程序日志
-./cli logcat mp-qq --project 项目名称
+# View QQ MiniProgram logs
+./cli logcat mp-qq --project ProjectName
 
-# 查看QQ小程序日志（指定日志模式）
-./cli logcat mp-qq --project 项目名称 --mode full
+# View QQ MiniProgram logs (specify log mode)
+./cli logcat mp-qq --project ProjectName --mode full
 
-# Mac电脑 使用cli查看 hello-uni-app-x项目 qq小程序日志
+# Mac: Use cli to view QQ MiniProgram logs for hello-uni-app-x project
 /Applications/HBuilderX.app/Contents/MacOS/cli logcat mp-qq --project hello-uni-app-x
 
-# Mac电脑 --project 传递绝对路径
+# Mac: --project passing absolute path
 /Applications/HBuilderX.app/Contents/MacOS/cli logcat mp-qq --project /User/apple/Desktop/hello-uni-app-x
 
-# Windows电脑: 使用cli查看 hello-uni-app-x项目 qq小程序日志
+# Windows: Use cli to view QQ MiniProgram logs for hello-uni-app-x project
 D:\ide\HBuilderX\cli.exe logcat mp-qq --project hello-uni-app-x
 ```
 
 ### logcat mp-360
 
-查看运行到小程序-360(仅适用于 uni-app)日志
+View logs for running on MiniProgram-360 (only for uni-app)
 
-**用法：**
+**Usage:**
 
 ```shell
 ./cli logcat mp-360 --help
 ```
 
-**参数：**
+**Parameters:**
 
-| 参数名称  | 描述                                                           |
-| --------- | -------------------------------------------------------------- |
-| --help    | 显示 cli 命令帮助                                              |
-| --project | HBuilder X 里导入的项目名称或绝对路径                          |
-| --mode    | 日志模式，取值：full、lastBuild、prevBuild，默认值为 prevBuild |
+| Parameter | Description                                                           |
+| --------- | --------------------------------------------------------------------- |
+| --help    | Display cli command help                                              |
+| --project | Project name or absolute path imported in HBuilder X                 |
+| --mode    | Log mode, values: full, lastBuild, prevBuild, default is prevBuild   |
 
-**使用示例：**
+**Usage Examples:**
 
 ```shell
-# 查看360小程序日志
-./cli logcat mp-360 --project 项目名称
+# View 360 MiniProgram logs
+./cli logcat mp-360 --project ProjectName
 
-# 查看360小程序日志（指定日志模式）
-./cli logcat mp-360 --project 项目名称 --mode full
+# View 360 MiniProgram logs (specify log mode)
+./cli logcat mp-360 --project ProjectName --mode full
 
-# Mac电脑 使用cli查看 hello-uni-app-x项目 360小程序日志
+# Mac: Use cli to view 360 MiniProgram logs for hello-uni-app-x project
 /Applications/HBuilderX.app/Contents/MacOS/cli logcat mp-360 --project hello-uni-app-x
 
-# Mac电脑 --project 传递绝对路径
+# Mac: --project passing absolute path
 /Applications/HBuilderX.app/Contents/MacOS/cli logcat mp-360 --project /User/apple/Desktop/hello-uni-app-x
 
-# Windows电脑: 使用cli查看 hello-uni-app-x项目 360小程序日志
+# Windows: Use cli to view 360 MiniProgram logs for hello-uni-app-x project
 D:\ide\HBuilderX\cli.exe logcat mp-360 --project hello-uni-app-x
 ```
 
 ### logcat mp-jd
 
-查看运行到小程序-京东(仅适用于 uni-app)日志
+View logs for running on MiniProgram-JD (only for uni-app)
 
-**用法：**
+**Usage:**
 
 ```shell
 ./cli logcat mp-jd --help
 ```
 
-**参数：**
+**Parameters:**
 
-| 参数名称  | 描述                                                           |
-| --------- | -------------------------------------------------------------- |
-| --help    | 显示 cli 命令帮助                                              |
-| --project | HBuilder X 里导入的项目名称或绝对路径                          |
-| --mode    | 日志模式，取值：full、lastBuild、prevBuild，默认值为 prevBuild |
+| Parameter | Description                                                           |
+| --------- | --------------------------------------------------------------------- |
+| --help    | Display cli command help                                              |
+| --project | Project name or absolute path imported in HBuilder X                 |
+| --mode    | Log mode, values: full, lastBuild, prevBuild, default is prevBuild   |
 
-**使用示例：**
+**Usage Examples:**
 
 ```shell
-# 查看京东小程序日志
-./cli logcat mp-jd --project 项目名称
+# View JD MiniProgram logs
+./cli logcat mp-jd --project ProjectName
 
-# 查看京东小程序日志（指定日志模式）
-./cli logcat mp-jd --project 项目名称 --mode full
+# View JD MiniProgram logs (specify log mode)
+./cli logcat mp-jd --project ProjectName --mode full
 
-# Mac电脑 使用cli查看 hello-uni-app-x项目 京东小程序日志
+# Mac: Use cli to view JD MiniProgram logs for hello-uni-app-x project
 /Applications/HBuilderX.app/Contents/MacOS/cli logcat mp-jd --project hello-uni-app-x
 
-# Mac电脑 --project 传递绝对路径
+# Mac: --project passing absolute path
 /Applications/HBuilderX.app/Contents/MacOS/cli logcat mp-jd --project /User/apple/Desktop/hello-uni-app-x
 
-# Windows电脑: 使用cli查看 hello-uni-app-x项目 京东小程序日志
+# Windows: Use cli to view JD MiniProgram logs for hello-uni-app-x project
 D:\ide\HBuilderX\cli.exe logcat mp-jd --project hello-uni-app-x
 ```
 
 ### logcat mp-kuaishou
 
-查看运行到小程序-快手(仅适用于 uni-app)日志
+View logs for running on MiniProgram-Kuaishou (only for uni-app)
 
-**用法：**
+**Usage:**
 
 ```shell
 ./cli logcat mp-kuaishou --help
 ```
 
-**参数：**
+**Parameters:**
 
-| 参数名称  | 描述                                                           |
-| --------- | -------------------------------------------------------------- |
-| --help    | 显示 cli 命令帮助                                              |
-| --project | HBuilder X 里导入的项目名称或绝对路径                          |
-| --mode    | 日志模式，取值：full、lastBuild、prevBuild，默认值为 prevBuild |
+| Parameter | Description                                                           |
+| --------- | --------------------------------------------------------------------- |
+| --help    | Display cli command help                                              |
+| --project | Project name or absolute path imported in HBuilder X                 |
+| --mode    | Log mode, values: full, lastBuild, prevBuild, default is prevBuild   |
 
-**使用示例：**
+**Usage Examples:**
 
 ```shell
-# 查看快手小程序日志
-./cli logcat mp-kuaishou --project 项目名称
+# View Kuaishou MiniProgram logs
+./cli logcat mp-kuaishou --project ProjectName
 
-# 查看快手小程序日志（指定日志模式）
-./cli logcat mp-kuaishou --project 项目名称 --mode full
+# View Kuaishou MiniProgram logs (specify log mode)
+./cli logcat mp-kuaishou --project ProjectName --mode full
 
-# Mac电脑 使用cli查看 hello-uni-app-x项目 快手小程序日志
+# Mac: Use cli to view Kuaishou MiniProgram logs for hello-uni-app-x project
 /Applications/HBuilderX.app/Contents/MacOS/cli logcat mp-kuaishou --project hello-uni-app-x
 
-# Mac电脑 --project 传递绝对路径
+# Mac: --project passing absolute path
 /Applications/HBuilderX.app/Contents/MacOS/cli logcat mp-kuaishou --project /User/apple/Desktop/hello-uni-app-x
 
-# Windows电脑: 使用cli查看 hello-uni-app-x项目 快手小程序日志
+# Windows: Use cli to view Kuaishou MiniProgram logs for hello-uni-app-x project
 D:\ide\HBuilderX\cli.exe logcat mp-kuaishou --project hello-uni-app-x
 ```
 
 ### logcat mp-lark
 
-查看运行到小程序-飞书(仅适用于 uni-app)日志
+View logs for running on MiniProgram-Feishu (only for uni-app)
 
-**用法：**
+**Usage:**
 
 ```shell
 ./cli logcat mp-lark --help
 ```
 
-**参数：**
+**Parameters:**
 
-| 参数名称  | 描述                                                           |
-| --------- | -------------------------------------------------------------- |
-| --help    | 显示 cli 命令帮助                                              |
-| --project | HBuilder X 里导入的项目名称或绝对路径                          |
-| --mode    | 日志模式，取值：full、lastBuild、prevBuild，默认值为 prevBuild |
+| Parameter | Description                                                           |
+| --------- | --------------------------------------------------------------------- |
+| --help    | Display cli command help                                              |
+| --project | Project name or absolute path imported in HBuilder X                 |
+| --mode    | Log mode, values: full, lastBuild, prevBuild, default is prevBuild   |
 
-**使用示例：**
+**Usage Examples:**
 
 ```shell
-# 查看飞书小程序日志
-./cli logcat mp-lark --project 项目名称
+# View Feishu MiniProgram logs
+./cli logcat mp-lark --project ProjectName
 
-# 查看飞书小程序日志（指定日志模式）
-./cli logcat mp-lark --project 项目名称 --mode full
+# View Feishu MiniProgram logs (specify log mode)
+./cli logcat mp-lark --project ProjectName --mode full
 
-# Mac电脑 使用cli查看 hello-uni-app-x项目 飞书小程序日志
+# Mac: Use cli to view Feishu MiniProgram logs for hello-uni-app-x project
 /Applications/HBuilderX.app/Contents/MacOS/cli logcat mp-lark --project hello-uni-app-x
 
-# Mac电脑 --project 传递绝对路径
+# Mac: --project passing absolute path
 /Applications/HBuilderX.app/Contents/MacOS/cli logcat mp-lark --project /User/apple/Desktop/hello-uni-app-x
 
-# Windows电脑: 使用cli查看 hello-uni-app-x项目 飞书小程序日志
+# Windows: Use cli to view Feishu MiniProgram logs for hello-uni-app-x project
 D:\ide\HBuilderX\cli.exe logcat mp-lark --project hello-uni-app-x
 ```
 
 ### logcat mp-xhs
 
-查看运行到小程序-小红书(仅适用于 uni-app)日志
+View logs for running on MiniProgram-Xiaohongshu (only for uni-app)
 
-**用法：**
+**Usage:**
 
 ```shell
 ./cli logcat mp-xhs --help
 ```
 
-**参数：**
+**Parameters:**
 
-| 参数名称  | 描述                                                           |
-| --------- | -------------------------------------------------------------- |
-| --help    | 显示 cli 命令帮助                                              |
-| --project | HBuilder X 里导入的项目名称或绝对路径                          |
-| --mode    | 日志模式，取值：full、lastBuild、prevBuild，默认值为 prevBuild |
+| Parameter | Description                                                           |
+| --------- | --------------------------------------------------------------------- |
+| --help    | Display cli command help                                              |
+| --project | Project name or absolute path imported in HBuilder X                 |
+| --mode    | Log mode, values: full, lastBuild, prevBuild, default is prevBuild   |
 
-**使用示例：**
+**Usage Examples:**
 
 ```shell
-# 查看小红书小程序日志
-./cli logcat mp-xhs --project 项目名称
+# View Xiaohongshu MiniProgram logs
+./cli logcat mp-xhs --project ProjectName
 
-# 查看小红书小程序日志（指定日志模式）
-./cli logcat mp-xhs --project 项目名称 --mode full
+# View Xiaohongshu MiniProgram logs (specify log mode)
+./cli logcat mp-xhs --project ProjectName --mode full
 
-# Mac电脑 使用cli查看 hello-uni-app-x项目 小红书小程序日志
+# Mac: Use cli to view Xiaohongshu MiniProgram logs for hello-uni-app-x project
 /Applications/HBuilderX.app/Contents/MacOS/cli logcat mp-xhs --project hello-uni-app-x
 
-# Mac电脑 --project 传递绝对路径
+# Mac: --project passing absolute path
 /Applications/HBuilderX.app/Contents/MacOS/cli logcat mp-xhs --project /User/apple/Desktop/hello-uni-app-x
 
-# Windows电脑: 使用cli查看 hello-uni-app-x项目 小红书小程序日志
+# Windows: Use cli to view Xiaohongshu MiniProgram logs for hello-uni-app-x project
 D:\ide\HBuilderX\cli.exe logcat mp-xhs --project hello-uni-app-x
 ```
 
 ### logcat mp-harmony
 
-查看运行到鸿蒙元服务(仅适用于 uni-app)日志
+View logs for running on HarmonyOS Meta Service (only for uni-app)
 
-**用法：**
+**Usage:**
 
 ```shell
 ./cli logcat mp-harmony --help
 ```
 
-**参数：**
+**Parameters:**
 
-| 参数名称   | 描述                                                                         |
-| ---------- | ---------------------------------------------------------------------------- |
-| --help     | 显示 cli 命令帮助                                                            |
-| --project  | HBuilder X 里导入的项目名称或绝对路径                                        |
-| --deviceId | 指定要使用的设备序列号，默认使用第一个设备，可通过 devices list 获取设备列表 |
-| --mode     | 日志模式，取值：full、lastBuild、prevBuild，默认值为 prevBuild               |
+| Parameter  | Description                                                                         |
+| ---------- | ----------------------------------------------------------------------------------- |
+| --help     | Display cli command help                                                            |
+| --project  | Project name or absolute path imported in HBuilder X                               |
+| --deviceId | Specify device serial number to use, defaults to first device, can get list via devices list |
+| --mode     | Log mode, values: full, lastBuild, prevBuild, default is prevBuild                 |
 
-**使用示例：**
+**Usage Examples:**
 
 ```shell
-# 查看鸿蒙元服务日志
-./cli logcat mp-harmony --project 项目名称
+# View HarmonyOS Meta Service logs
+./cli logcat mp-harmony --project ProjectName
 
-# 查看鸿蒙元服务日志（指定设备）
-./cli logcat mp-harmony --project 项目名称 --deviceId 设备序列号
+# View HarmonyOS Meta Service logs (specify device)
+./cli logcat mp-harmony --project ProjectName --deviceId DeviceSerialNumber
 
-# 查看鸿蒙元服务日志（指定日志模式）
-./cli logcat mp-harmony --project 项目名称 --mode full
+# View HarmonyOS Meta Service logs (specify log mode)
+./cli logcat mp-harmony --project ProjectName --mode full
 
-# 查看鸿蒙元服务日志（组合参数：指定设备 + 日志模式）
-./cli logcat mp-harmony --project 项目名称 --deviceId 设备序列号 --mode lastBuild
+# View HarmonyOS Meta Service logs (combined parameters: specify device + log mode)
+./cli logcat mp-harmony --project ProjectName --deviceId DeviceSerialNumber --mode lastBuild
 
-# Mac电脑 使用cli查看 hello-uni-app-x项目 鸿蒙元服务日志
+# Mac: Use cli to view HarmonyOS Meta Service logs for hello-uni-app-x project
 /Applications/HBuilderX.app/Contents/MacOS/cli logcat mp-harmony --project hello-uni-app-x
 
-# Mac电脑 --project 传递绝对路径
+# Mac: --project passing absolute path
 /Applications/HBuilderX.app/Contents/MacOS/cli logcat mp-harmony --project /User/apple/Desktop/hello-uni-app-x
 
-# Windows电脑: 使用cli查看 hello-uni-app-x项目 鸿蒙元服务日志
+# Windows: Use cli to view HarmonyOS Meta Service logs for hello-uni-app-x project
 D:\ide\HBuilderX\cli.exe logcat mp-harmony --project hello-uni-app-x
 ```
 
 ### logcat quickapp-webview-huawei
 
-查看运行到快应用-华为(仅适用于 uni-app)日志
+View logs for running on QuickApp-Huawei (only for uni-app)
 
-**用法：**
+**Usage:**
 
 ```shell
 ./cli logcat quickapp-webview-huawei --help
 ```
 
-**参数：**
+**Parameters:**
 
-| 参数名称  | 描述                                                           |
-| --------- | -------------------------------------------------------------- |
-| --help    | 显示 cli 命令帮助                                              |
-| --project | HBuilder X 里导入的项目名称或绝对路径                          |
-| --mode    | 日志模式，取值：full、lastBuild、prevBuild，默认值为 prevBuild |
+| Parameter | Description                                                           |
+| --------- | --------------------------------------------------------------------- |
+| --help    | Display cli command help                                              |
+| --project | Project name or absolute path imported in HBuilder X                 |
+| --mode    | Log mode, values: full, lastBuild, prevBuild, default is prevBuild   |
 
-**使用示例：**
+**Usage Examples:**
 
 ```shell
-# 查看华为快应用日志
-./cli logcat quickapp-webview-huawei --project 项目名称
+# View Huawei QuickApp logs
+./cli logcat quickapp-webview-huawei --project ProjectName
 
-# 查看华为快应用日志（指定日志模式）
-./cli logcat quickapp-webview-huawei --project 项目名称 --mode full
+# View Huawei QuickApp logs (specify log mode)
+./cli logcat quickapp-webview-huawei --project ProjectName --mode full
 
-# Mac电脑 使用cli查看 hello-uni-app-x项目 华为快应用日志
+# Mac: Use cli to view Huawei QuickApp logs for hello-uni-app-x project
 /Applications/HBuilderX.app/Contents/MacOS/cli logcat quickapp-webview-huawei --project hello-uni-app-x
 
-# Mac电脑 --project 传递绝对路径
+# Mac: --project passing absolute path
 /Applications/HBuilderX.app/Contents/MacOS/cli logcat quickapp-webview-huawei --project /User/apple/Desktop/hello-uni-app-x
 
-# Windows电脑: 使用cli查看 hello-uni-app-x项目 华为快应用日志
+# Windows: Use cli to view Huawei QuickApp logs for hello-uni-app-x project
 D:\ide\HBuilderX\cli.exe logcat quickapp-webview-huawei --project hello-uni-app-x
 ```
 
 ### logcat quickapp-webview-union
 
-查看运行到快应用-联盟(仅适用于 uni-app)日志
+View logs for running on QuickApp-Union (only for uni-app)
 
-**用法：**
+**Usage:**
 
 ```shell
 ./cli logcat quickapp-webview-union --help
 ```
 
-**参数：**
+**Parameters:**
 
-| 参数名称  | 描述                                                           |
-| --------- | -------------------------------------------------------------- |
-| --help    | 显示 cli 命令帮助                                              |
-| --project | HBuilder X 里导入的项目名称或绝对路径                          |
-| --mode    | 日志模式，取值：full、lastBuild、prevBuild，默认值为 prevBuild |
+| Parameter | Description                                                           |
+| --------- | --------------------------------------------------------------------- |
+| --help    | Display cli command help                                              |
+| --project | Project name or absolute path imported in HBuilder X                 |
+| --mode    | Log mode, values: full, lastBuild, prevBuild, default is prevBuild   |
 
-**使用示例：**
+**Usage Examples:**
 
 ```shell
-# 查看快应用联盟日志
-./cli logcat quickapp-webview-union --project 项目名称
+# View QuickApp Union logs
+./cli logcat quickapp-webview-union --project ProjectName
 
-# 查看快应用联盟日志（指定日志模式）
-./cli logcat quickapp-webview-union --project 项目名称 --mode full
+# View QuickApp Union logs (specify log mode)
+./cli logcat quickapp-webview-union --project ProjectName --mode full
 
-# Mac电脑 使用cli查看 hello-uni-app-x项目 快应用联盟日志
+# Mac: Use cli to view QuickApp Union logs for hello-uni-app-x project
 /Applications/HBuilderX.app/Contents/MacOS/cli logcat quickapp-webview-union --project hello-uni-app-x
 
-# Mac电脑 --project 传递绝对路径
+# Mac: --project passing absolute path
 /Applications/HBuilderX.app/Contents/MacOS/cli logcat quickapp-webview-union --project /User/apple/Desktop/hello-uni-app-x
 
-# Windows电脑: 使用cli查看 hello-uni-app-x项目 快应用联盟日志
+# Windows: Use cli to view QuickApp Union logs for hello-uni-app-x project
 D:\ide\HBuilderX\cli.exe logcat quickapp-webview-union --project hello-uni-app-x
 ```
 
-## 通过npm scripts使用CLI@npm
+## Using CLI through npm scripts@npm
 
-我们需要在项目中安装 [@dcloudio/hbuilderx-cli](https://www.npmjs.com/package/@dcloudio/hbuilderx-cli),它是一个桥梁，让我们可以通过命令行来调用 HBuilderX 的强大功能（如启动测试流程）。
+We need to install [@dcloudio/hbuilderx-cli](https://www.npmjs.com/package/@dcloudio/hbuilderx-cli) in the project, which serves as a bridge that allows us to call HBuilderX's powerful features through the command line (such as starting test processes).
 
-#### 添加 npm 脚本支持
+#### Add npm Script Support
 
 ```shell
-# 首先，请确保你的项目根目录下有 package.json 文件。如果没有，可以通过以下命令快速生成：
+# First, make sure there is a package.json file in your project root directory. If not, you can quickly generate it with the following command:
 npm init -y
 
-# 然后，安装 hbuilderx-cli 作为开发依赖：
+# Then, install hbuilderx-cli as a development dependency:
 npm install @dcloudio/hbuilderx-cli --save-dev
 ```
 
-#### 使用npm命令查看日志
+#### View Logs Using npm Commands
 
-**语法**
+**Syntax**
 
 ```
-npm run logcat:<小程序平台名称>
+npm run logcat:<miniprogram-platform-name>
 ```
 
-**示例**
+**Examples**
 
 ```shell
-# 查看 微信小程序日志
+# View WeChat MiniProgram logs
 npm run logcat:mp-weixin
 
-# 查看 鸿蒙元服务日志
+# View HarmonyOS Meta Service logs
 npm run logcat:mp-harmony
 ```
