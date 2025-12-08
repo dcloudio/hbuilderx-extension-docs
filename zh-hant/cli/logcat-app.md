@@ -6,7 +6,9 @@
 
 > 您也可以通过 npm 包使用此功能：[@dcloudio/hbuilderx-cli](https://www.npmjs.com/package/@dcloudio/hbuilderx-cli)
 
-通过 CLI 查看运行到手机或模拟器的 uni-app 应用日志，支持 Android、iOS、鸿蒙平台。
+通过 CLI 查看运行到手机或模拟器的 uni-app 应用日志，支持 Android、iOS、鸿蒙平台。[了解HBuilderX CLI](/cli/README?id=cli)
+
+您可以将cli加入到环境变量，这样您就可以在任意目录、任意终端上，随时随地调用cli， 而无需通过输入cli绝对路径的方式来使用它。[详情](/cli/env)
 
 ## 命令说明
 
@@ -32,6 +34,15 @@
 **使用示例：**
 
 ```shell
+# Mac电脑 使用cli查看 hello-uni-app-x项目 Android App日志
+/Applications/HBuilderX.app/Contents/MacOS/cli logcat app-android --project hello-uni-app-x
+
+# Mac电脑 --project 传递绝对路径
+/Applications/HBuilderX.app/Contents/MacOS/cli logcat app-android --project /User/apple/Desktop/hello-uni-app-x
+
+# Windows电脑: 使用cli查看 hello-uni-app-x项目 Android App日志
+D:\ide\HBuilderX\cli.exe logcat app-android --project hello-uni-app-x
+
 # 查看Android App日志
 ./cli logcat app-android --project 项目名称
 
@@ -68,6 +79,15 @@
 **使用示例：**
 
 ```shell
+# Mac电脑 使用cli查看 hello-uni-app-x项目 iOS App日志（真机）
+/Applications/HBuilderX.app/Contents/MacOS/cli logcat app-ios --project hello-uni-app-x
+
+# Mac电脑 --project 传递绝对路径
+/Applications/HBuilderX.app/Contents/MacOS/cli logcat app-ios --project /User/apple/Desktop/hello-uni-app-x
+
+# Windows电脑: 使用cli查看 hello-uni-app-x项目 iOS App日志（真机）
+D:\ide\HBuilderX\cli.exe logcat app-ios --project hello-uni-app-x
+
 # 查看iOS App日志（真机）
 ./cli logcat app-ios --project 项目名称
 
@@ -106,6 +126,15 @@
 **使用示例：**
 
 ```shell
+# Mac电脑 使用cli查看 hello-uni-app-x项目 鸿蒙App日志
+/Applications/HBuilderX.app/Contents/MacOS/cli logcat app-harmony --project hello-uni-app-x
+
+# Mac电脑 --project 传递绝对路径
+/Applications/HBuilderX.app/Contents/MacOS/cli logcat app-harmony --project /User/apple/Desktop/hello-uni-app-x
+
+# Windows电脑: 使用cli查看 hello-uni-app-x项目 鸿蒙App日志
+D:\ide\HBuilderX\cli.exe logcat app-harmony --project hello-uni-app-x
+
 # 查看鸿蒙App日志
 ./cli logcat app-harmony --project 项目名称
 

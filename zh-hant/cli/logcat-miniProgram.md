@@ -6,7 +6,9 @@
 
 > 您也可以通过 npm 包使用此功能：[@dcloudio/hbuilderx-cli](https://www.npmjs.com/package/@dcloudio/hbuilderx-cli)
 
-通过 CLI 查看运行到各平台小程序的 uni-app 应用日志，支持微信、支付宝、百度、字节跳动、QQ、360、京东、快手、飞书、小红书、鸿蒙元服务、快应用等平台。
+通过 CLI 查看运行到各平台小程序的 uni-app 应用日志，支持微信、支付宝、百度、字节跳动、QQ、360、京东、快手、飞书、小红书、鸿蒙元服务、快应用等平台。[了解HBuilderX CLI](/cli/README?id=cli)
+
+您可以将cli加入到环境变量，这样您就可以在任意目录、任意终端上，随时随地调用cli， 而无需通过输入cli绝对路径的方式来使用它。[详情](/cli/env)
 
 ## 命令说明
 
@@ -37,6 +39,14 @@
 # 查看微信小程序日志（指定日志模式）
 ./cli logcat mp-weixin --project 项目名称 --mode full
 
+# Mac电脑 使用cli查看 hello-uni-app-x项目 微信小程序日志
+/Applications/HBuilderX.app/Contents/MacOS/cli logcat mp-weixin --project hello-uni-app-x
+
+# Mac电脑 --project 传递绝对路径
+/Applications/HBuilderX.app/Contents/MacOS/cli logcat mp-weixin --project /User/apple/Desktop/hello-uni-app-x
+
+# Windows电脑: 使用cli查看 hello-uni-app-x项目 微信小程序日志
+D:\ide\HBuilderX\cli.exe logcat mp-weixin --project hello-uni-app-x
 ```
 
 ### logcat mp-alipay
@@ -66,6 +76,14 @@
 # 查看支付宝小程序日志（指定日志模式）
 ./cli logcat mp-alipay --project 项目名称 --mode full
 
+# Mac电脑 使用cli查看 hello-uni-app-x项目 支付宝小程序日志
+/Applications/HBuilderX.app/Contents/MacOS/cli logcat mp-alipay --project hello-uni-app-x
+
+# Mac电脑 --project 传递绝对路径
+/Applications/HBuilderX.app/Contents/MacOS/cli logcat mp-alipay --project /User/apple/Desktop/hello-uni-app-x
+
+# Windows电脑: 使用cli查看 hello-uni-app-x项目 支付宝小程序日志
+D:\ide\HBuilderX\cli.exe logcat mp-alipay --project hello-uni-app-x
 ```
 
 ### logcat mp-baidu
@@ -95,6 +113,14 @@
 # 查看百度小程序日志（指定日志模式）
 ./cli logcat mp-baidu --project 项目名称 --mode full
 
+# Mac电脑 使用cli查看 hello-uni-app-x项目 百度小程序日志
+/Applications/HBuilderX.app/Contents/MacOS/cli logcat mp-baidu --project hello-uni-app-x
+
+# Mac电脑 --project 传递绝对路径
+/Applications/HBuilderX.app/Contents/MacOS/cli logcat mp-baidu --project /User/apple/Desktop/hello-uni-app-x
+
+# Windows电脑: 使用cli查看 hello-uni-app-x项目 百度小程序日志
+D:\ide\HBuilderX\cli.exe logcat mp-baidu --project hello-uni-app-x
 ```
 
 ### logcat mp-toutiao
@@ -124,6 +150,14 @@
 # 查看抖音小程序日志（指定日志模式）
 ./cli logcat mp-toutiao --project 项目名称 --mode full
 
+# Mac电脑 使用cli查看 hello-uni-app-x项目 抖音小程序日志
+/Applications/HBuilderX.app/Contents/MacOS/cli logcat mp-toutiao --project hello-uni-app-x
+
+# Mac电脑 --project 传递绝对路径
+/Applications/HBuilderX.app/Contents/MacOS/cli logcat mp-toutiao --project /User/apple/Desktop/hello-uni-app-x
+
+# Windows电脑: 使用cli查看 hello-uni-app-x项目 抖音小程序日志
+D:\ide\HBuilderX\cli.exe logcat mp-toutiao --project hello-uni-app-x
 ```
 
 ### logcat mp-qq
@@ -153,6 +187,14 @@
 # 查看QQ小程序日志（指定日志模式）
 ./cli logcat mp-qq --project 项目名称 --mode full
 
+# Mac电脑 使用cli查看 hello-uni-app-x项目 qq小程序日志
+/Applications/HBuilderX.app/Contents/MacOS/cli logcat mp-qq --project hello-uni-app-x
+
+# Mac电脑 --project 传递绝对路径
+/Applications/HBuilderX.app/Contents/MacOS/cli logcat mp-qq --project /User/apple/Desktop/hello-uni-app-x
+
+# Windows电脑: 使用cli查看 hello-uni-app-x项目 qq小程序日志
+D:\ide\HBuilderX\cli.exe logcat mp-qq --project hello-uni-app-x
 ```
 
 ### logcat mp-360
@@ -182,6 +224,14 @@
 # 查看360小程序日志（指定日志模式）
 ./cli logcat mp-360 --project 项目名称 --mode full
 
+# Mac电脑 使用cli查看 hello-uni-app-x项目 360小程序日志
+/Applications/HBuilderX.app/Contents/MacOS/cli logcat mp-360 --project hello-uni-app-x
+
+# Mac电脑 --project 传递绝对路径
+/Applications/HBuilderX.app/Contents/MacOS/cli logcat mp-360 --project /User/apple/Desktop/hello-uni-app-x
+
+# Windows电脑: 使用cli查看 hello-uni-app-x项目 360小程序日志
+D:\ide\HBuilderX\cli.exe logcat mp-360 --project hello-uni-app-x
 ```
 
 ### logcat mp-jd
@@ -211,6 +261,14 @@
 # 查看京东小程序日志（指定日志模式）
 ./cli logcat mp-jd --project 项目名称 --mode full
 
+# Mac电脑 使用cli查看 hello-uni-app-x项目 京东小程序日志
+/Applications/HBuilderX.app/Contents/MacOS/cli logcat mp-jd --project hello-uni-app-x
+
+# Mac电脑 --project 传递绝对路径
+/Applications/HBuilderX.app/Contents/MacOS/cli logcat mp-jd --project /User/apple/Desktop/hello-uni-app-x
+
+# Windows电脑: 使用cli查看 hello-uni-app-x项目 京东小程序日志
+D:\ide\HBuilderX\cli.exe logcat mp-jd --project hello-uni-app-x
 ```
 
 ### logcat mp-kuaishou
@@ -240,6 +298,14 @@
 # 查看快手小程序日志（指定日志模式）
 ./cli logcat mp-kuaishou --project 项目名称 --mode full
 
+# Mac电脑 使用cli查看 hello-uni-app-x项目 快手小程序日志
+/Applications/HBuilderX.app/Contents/MacOS/cli logcat mp-kuaishou --project hello-uni-app-x
+
+# Mac电脑 --project 传递绝对路径
+/Applications/HBuilderX.app/Contents/MacOS/cli logcat mp-kuaishou --project /User/apple/Desktop/hello-uni-app-x
+
+# Windows电脑: 使用cli查看 hello-uni-app-x项目 快手小程序日志
+D:\ide\HBuilderX\cli.exe logcat mp-kuaishou --project hello-uni-app-x
 ```
 
 ### logcat mp-lark
@@ -269,6 +335,14 @@
 # 查看飞书小程序日志（指定日志模式）
 ./cli logcat mp-lark --project 项目名称 --mode full
 
+# Mac电脑 使用cli查看 hello-uni-app-x项目 飞书小程序日志
+/Applications/HBuilderX.app/Contents/MacOS/cli logcat mp-lark --project hello-uni-app-x
+
+# Mac电脑 --project 传递绝对路径
+/Applications/HBuilderX.app/Contents/MacOS/cli logcat mp-lark --project /User/apple/Desktop/hello-uni-app-x
+
+# Windows电脑: 使用cli查看 hello-uni-app-x项目 飞书小程序日志
+D:\ide\HBuilderX\cli.exe logcat mp-lark --project hello-uni-app-x
 ```
 
 ### logcat mp-xhs
@@ -298,6 +372,14 @@
 # 查看小红书小程序日志（指定日志模式）
 ./cli logcat mp-xhs --project 项目名称 --mode full
 
+# Mac电脑 使用cli查看 hello-uni-app-x项目 小红书小程序日志
+/Applications/HBuilderX.app/Contents/MacOS/cli logcat mp-xhs --project hello-uni-app-x
+
+# Mac电脑 --project 传递绝对路径
+/Applications/HBuilderX.app/Contents/MacOS/cli logcat mp-xhs --project /User/apple/Desktop/hello-uni-app-x
+
+# Windows电脑: 使用cli查看 hello-uni-app-x项目 小红书小程序日志
+D:\ide\HBuilderX\cli.exe logcat mp-xhs --project hello-uni-app-x
 ```
 
 ### logcat mp-harmony
@@ -334,6 +416,14 @@
 # 查看鸿蒙元服务日志（组合参数：指定设备 + 日志模式）
 ./cli logcat mp-harmony --project 项目名称 --deviceId 设备序列号 --mode lastBuild
 
+# Mac电脑 使用cli查看 hello-uni-app-x项目 鸿蒙元服务日志
+/Applications/HBuilderX.app/Contents/MacOS/cli logcat mp-harmony --project hello-uni-app-x
+
+# Mac电脑 --project 传递绝对路径
+/Applications/HBuilderX.app/Contents/MacOS/cli logcat mp-harmony --project /User/apple/Desktop/hello-uni-app-x
+
+# Windows电脑: 使用cli查看 hello-uni-app-x项目 鸿蒙元服务日志
+D:\ide\HBuilderX\cli.exe logcat mp-harmony --project hello-uni-app-x
 ```
 
 ### logcat quickapp-webview-huawei
@@ -363,6 +453,14 @@
 # 查看华为快应用日志（指定日志模式）
 ./cli logcat quickapp-webview-huawei --project 项目名称 --mode full
 
+# Mac电脑 使用cli查看 hello-uni-app-x项目 华为快应用日志
+/Applications/HBuilderX.app/Contents/MacOS/cli logcat quickapp-webview-huawei --project hello-uni-app-x
+
+# Mac电脑 --project 传递绝对路径
+/Applications/HBuilderX.app/Contents/MacOS/cli logcat quickapp-webview-huawei --project /User/apple/Desktop/hello-uni-app-x
+
+# Windows电脑: 使用cli查看 hello-uni-app-x项目 华为快应用日志
+D:\ide\HBuilderX\cli.exe logcat quickapp-webview-huawei --project hello-uni-app-x
 ```
 
 ### logcat quickapp-webview-union
@@ -392,4 +490,12 @@
 # 查看快应用联盟日志（指定日志模式）
 ./cli logcat quickapp-webview-union --project 项目名称 --mode full
 
+# Mac电脑 使用cli查看 hello-uni-app-x项目 快应用联盟日志
+/Applications/HBuilderX.app/Contents/MacOS/cli logcat quickapp-webview-union --project hello-uni-app-x
+
+# Mac电脑 --project 传递绝对路径
+/Applications/HBuilderX.app/Contents/MacOS/cli logcat quickapp-webview-union --project /User/apple/Desktop/hello-uni-app-x
+
+# Windows电脑: 使用cli查看 hello-uni-app-x项目 快应用联盟日志
+D:\ide\HBuilderX\cli.exe logcat quickapp-webview-union --project hello-uni-app-x
 ```

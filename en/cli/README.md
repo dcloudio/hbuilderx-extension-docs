@@ -2,7 +2,7 @@
 
 The developers can execute startup, package, log-in and other operations through the cli command line of HBuilderX.
 
-#### cli
+#### cli@cli
 
 The path of the command line tool:
 
