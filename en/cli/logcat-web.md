@@ -1,100 +1,100 @@
-# CLI uni-app 运行日志 - WEB@launch-web
+# CLI uni-app Run Logs - WEB@launch-web
 
-> HBuilderX cli 命令行工具
+> HBuilderX cli command line tool
 
-> 需HBuilderX 4.87+ 版本
+> Requires HBuilderX 4.87+ version
 
-> 您也可以通过 npm 包使用此功能：[@dcloudio/hbuilderx-cli](https://www.npmjs.com/package/@dcloudio/hbuilderx-cli)
+> You can also use this feature through npm package: [@dcloudio/hbuilderx-cli](https://www.npmjs.com/package/@dcloudio/hbuilderx-cli)
 
-通过 CLI 查看运行到 Web 或手机 H5 的 uni-app 应用日志。[了解HBuilderX CLI](/cli/README?id=cli)
+View uni-app application logs running on Web or Mobile H5 through CLI. [Learn about HBuilderX CLI](/cli/README?id=cli)
 
-您可以将cli加入到环境变量，这样您就可以在任意目录、任意终端上，随时随地调用cli， 而无需通过输入cli绝对路径的方式来使用它。[详情](/cli/env)
+You can add cli to the environment variables, so you can call cli anytime, anywhere in any directory or terminal, without having to use it by entering the absolute path of cli. [Details](/cli/env)
 
-## 命令说明
+## Command Description
 
 ### logcat web
 
-查看运行到 Web 或手机 H5 日志
+View logs for running on Web or Mobile H5
 
-**用法：**
+**Usage:**
 
 ```shell
 ./cli logcat web --help
 ```
 
-**参数：**
+**Parameters:**
 
-| 参数名称  | 描述                                                                       |
-| --------- | -------------------------------------------------------------------------- |
-| --help    | 显示 cli 命令帮助                                                          |
-| --project | HBuilder X 里导入的项目名称或绝对路径                                      |
-| --browser | 浏览器类型，取值：Built、Chrome、Firefox、Ie、Edge、Safari，默认值为 Built(HBuilderX内置浏览器) |
-| --mode    | 日志模式，取值：full、lastBuild、prevBuild，默认值为 prevBuild             |
+| Parameter | Description                                                                       |
+| --------- | --------------------------------------------------------------------------------- |
+| --help    | Display cli command help                                                          |
+| --project | Project name or absolute path imported in HBuilder X                             |
+| --browser | Browser type, values: Built, Chrome, Firefox, Ie, Edge, Safari, default is Built (HBuilderX built-in browser) |
+| --mode    | Log mode, values: full, lastBuild, prevBuild, default is prevBuild               |
 
-**使用示例：**
+**Usage Examples:**
 
 ```shell
-# 查看Web日志（使用默认浏览器）
-./cli logcat web --project 项目名称
+# View Web logs (using default browser)
+./cli logcat web --project ProjectName
 
-# 查看Web日志（指定Chrome浏览器）
-./cli logcat web --project 项目名称 --browser Chrome
+# View Web logs (specify Chrome browser)
+./cli logcat web --project ProjectName --browser Chrome
 
-# 查看Web日志（指定Firefox浏览器）
-./cli logcat web --project 项目名称 --browser Firefox
+# View Web logs (specify Firefox browser)
+./cli logcat web --project ProjectName --browser Firefox
 
-# 查看Web日志（指定Edge浏览器）
-./cli logcat web --project 项目名称 --browser Edge
+# View Web logs (specify Edge browser)
+./cli logcat web --project ProjectName --browser Edge
 
-# 查看Web日志（指定Safari浏览器）
-./cli logcat web --project 项目名称 --browser Safari
+# View Web logs (specify Safari browser)
+./cli logcat web --project ProjectName --browser Safari
 
-# 查看Web日志（指定IE浏览器）
-./cli logcat web --project 项目名称 --browser Ie
+# View Web logs (specify IE browser)
+./cli logcat web --project ProjectName --browser Ie
 
-# 查看Web日志（指定日志模式）
-./cli logcat web --project 项目名称 --mode full
+# View Web logs (specify log mode)
+./cli logcat web --project ProjectName --mode full
 
-# 查看Web日志（组合参数：指定浏览器 + 日志模式）
-./cli logcat web --project 项目名称 --browser Chrome --mode lastBuild
+# View Web logs (combined parameters: specify browser + log mode)
+./cli logcat web --project ProjectName --browser Chrome --mode lastBuild
 ```
 
-**cli实际使用示例**
+**CLI Practical Usage Examples**
 
 ```shell
-# Mac电脑 使用cli查看 hello-uni-app-x项目 运行到 chrome 日志
+# Mac: Use cli to view hello-uni-app-x project running on Chrome logs
 /Applications/HBuilderX.app/Contents/MacOS/cli logcat web --project hello-uni-app-x --browser Chrome
 
-# Mac电脑 --project 传递绝对路径
+# Mac: --project passing absolute path
 /Applications/HBuilderX.app/Contents/MacOS/cli logcat web --project /User/apple/Desktop/hello-uni-app-x --browser Chrome
 
-# Windows电脑: 使用cli查看 hello-uni-app-x项目 运行到 chrome 日志
+# Windows: Use cli to view hello-uni-app-x project running on Chrome logs
 D:\ide\HBuilderX\cli.exe logcat web --project hello-uni-app-x --browser Chrome
 ```
 
-## 通过npm scripts使用CLI@npm
+## Using CLI through npm scripts@npm
 
-我们需要在项目中安装 [@dcloudio/hbuilderx-cli](https://www.npmjs.com/package/@dcloudio/hbuilderx-cli),它是一个桥梁，让我们可以通过命令行来调用 HBuilderX 的强大功能（如启动测试流程）。
+We need to install [@dcloudio/hbuilderx-cli](https://www.npmjs.com/package/@dcloudio/hbuilderx-cli) in the project, which serves as a bridge that allows us to call HBuilderX's powerful features through the command line (such as starting test processes).
 
-#### 添加 npm 脚本支持
+#### Add npm Script Support
 
 ```shell
-# 首先，请确保你的项目根目录下有 package.json 文件。如果没有，可以通过以下命令快速生成：
+# First, make sure there is a package.json file in your project root directory. If not, you can quickly generate it with the following command:
 npm init -y
 
-# 然后，安装 hbuilderx-cli 作为开发依赖：
+# Then, install hbuilderx-cli as a development dependency:
 npm install @dcloudio/hbuilderx-cli --save-dev
 ```
 
-#### 使用npm命令查看日志
+#### View Logs Using npm Commands
 
 ```shell
-# 查看 uni-app(x) HBuilderX内置浏览器 运行日志
+# View uni-app(x) HBuilderX built-in browser run logs
 npm run logcat:web
 
-# 查看 uni-app(x) Chrome 运行日志
+# View uni-app(x) Chrome run logs
 npm run logcat:web -- --browser Chrome
 
-# 查看 uni-app(x) Safari 运行日志
+# View uni-app(x) Safari run logs
 npm run logcat:web -- --browser Safari
 ```

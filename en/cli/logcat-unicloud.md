@@ -1,41 +1,41 @@
-# CLI uni-app 运行日志 - uniCloud
+# CLI uni-app Run Logs - uniCloud
 
-> HBuilderX cli 命令行工具
+> HBuilderX cli command line tool
 
-> 需HBuilderX 4.87+ 版本
+> Requires HBuilderX 4.87+ version
 
-通过 CLI 查看运行到 uniCloud 的日志。[了解HBuilderX CLI](/cli/README?id=cli)
+View logs for running on uniCloud through CLI. [Learn about HBuilderX CLI](/cli/README?id=cli)
 
-您可以将cli加入到环境变量，这样您就可以在任意目录、任意终端上，随时随地调用cli， 而无需通过输入cli绝对路径的方式来使用它。[详情](/cli/env)
+You can add cli to the environment variables, so you can call cli anytime, anywhere in any directory or terminal, without having to use it by entering the absolute path of cli. [Details](/cli/env)
 
-## 命令说明
+## Command Description
 
 ### logcat unicloud
 
-查看运行到 uniCloud 日志
+View logs for running on uniCloud
 
-**用法：**
+**Usage:**
 
 ```shell
-./cli logcat unicloud --project 项目名称
+./cli logcat unicloud --project ProjectName
 ```
 
-**参数：**
+**Parameters:**
 
-| 参数名称  | 描述                                  |
-| --------- | ------------------------------------- |
-| --project | HBuilder X 里导入的项目名称或绝对路径 |
+| Parameter | Description                                           |
+| --------- | ----------------------------------------------------- |
+| --project | Project name or absolute path imported in HBuilder X |
 
 
-**cli实际使用示例：**
+**CLI Practical Usage Examples:**
 
 ```shell
-# Mac电脑 使用cli查看 hello-uni-app-x项目 uniCloud日志
+# Mac: Use cli to view uniCloud logs for hello-uni-app-x project
 /Applications/HBuilderX.app/Contents/MacOS/cli logcat unicloud --project hello-uni-app-x
 
-# Mac电脑 --project 传递绝对路径
+# Mac: --project passing absolute path
 /Applications/HBuilderX.app/Contents/MacOS/cli logcat unicloud --project /User/apple/Desktop/hello-uni-app-x
 
-# Windows电脑: 使用cli查看 hello-uni-app-x项目 uniCloud日志
+# Windows: Use cli to view uniCloud logs for hello-uni-app-x project
 D:\ide\HBuilderX\cli.exe logcat unicloud --project hello-uni-app-x
 ```
