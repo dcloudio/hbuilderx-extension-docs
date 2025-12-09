@@ -72,6 +72,8 @@
 D:\ide\HBuilderX\cli.exe logcat web --project hello-uni-app-x --browser Chrome
 ```
 
+<img src="https://web-ext-storage.dcloud.net.cn/hx/cli/cli-logcat-web.jpg?t=1" style="zoom: 40%;" />
+
 ## 通过npm scripts使用CLI@npm
 
 我们需要在项目中安装 [@dcloudio/hbuilderx-cli](https://www.npmjs.com/package/@dcloudio/hbuilderx-cli),它是一个桥梁，让我们可以通过命令行来调用 HBuilderX 的强大功能（如启动测试流程）。

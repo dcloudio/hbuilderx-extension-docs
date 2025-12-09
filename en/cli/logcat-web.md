@@ -72,6 +72,8 @@ View logs for running on Web or Mobile H5
 D:\ide\HBuilderX\cli.exe logcat web --project hello-uni-app-x --browser Chrome
 ```
 
+<img src="https://web-ext-storage.dcloud.net.cn/hx/cli/cli-logcat-web.jpg?t=1" style="zoom: 40%;" />
+
 ## Using CLI through npm scripts@npm
 
 We need to install [@dcloudio/hbuilderx-cli](https://www.npmjs.com/package/@dcloudio/hbuilderx-cli) in the project, which serves as a bridge that allows us to call HBuilderX's powerful features through the command line (such as starting test processes).
