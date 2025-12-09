@@ -4,7 +4,7 @@
 
 > 需HBuilderX 4.87+ 版本
 
-通过 CLI 查看运行到 uniCloud 的日志。[了解HBuilderX CLI](/cli/README?id=cli)
+通过 CLI 查看运行到 uniCloud 的日志。[HBuilderX CLI](/cli/README?id=cli)
 
 您可以将cli加入到环境变量，这样您就可以在任意目录、任意终端上，随时随地调用cli， 而无需通过输入cli绝对路径的方式来使用它。[详情](/cli/env)
 
