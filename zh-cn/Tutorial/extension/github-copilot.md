@@ -1,17 +1,17 @@
 
-# GitHub Copilot For HBuilderx 插件使用说明
+# GitHub Copilot For HBuilderX 插件使用说明
 
 ## 简介
 
-本插件旨在将 GitHub Copilot 的代码自动补全功能集成到 HBuilderX IDE 中，为开发者提供行内代码建议，从而提升编码效率。  
-本插件基于 VS Code Copilot Chat 提取的 SDK `@vscode/chat-lib` 实时获取代码补全建议。  
-要了解更多 GitHub Copilot 信息，请访问 [https://github.com/features/copilot](https://github.com/features/copilot)。  
-要了解更多 @vscode/chat-lib 信息，请访问 [https://github.com/microsoft/vscode-copilot-chat](https://github.com/microsoft/vscode-copilot-chat)。  
+本插件旨在将 GitHub Copilot 的代码自动补全功能集成到 HBuilderX IDE 中，为开发者提供行内代码建议，从而提升编码效率。
+本插件基于 VS Code Copilot Chat 提取的 SDK `@vscode/chat-lib` 实时获取代码补全建议。
+要了解更多 GitHub Copilot 信息，请访问 [https://github.com/features/copilot](https://github.com/features/copilot)。
+要了解更多 @vscode/chat-lib 信息，请访问 [https://github.com/microsoft/vscode-copilot-chat](https://github.com/microsoft/vscode-copilot-chat)。
 
 ## 环境要求
 
 - **HBuilderX**: 版本 `4.71` 或更高。
-- **Node.js**: 版本 `22.14` 或更高，@vscode/chat-lib 语言服务器需要独立的 Node.js 环境运行。  
+- **Node.js**: 版本 `22.14` 或更高，@vscode/chat-lib 语言服务器需要独立的 Node.js 环境运行。
 
 ## 如何使用
 
@@ -24,7 +24,7 @@
 #### 通过 HBuilderX IDE 安装
 - 打开 HBuilderX 后，在菜单栏点击 `工具 -> 插件安装` 打开插件安装面板。
 - 在插件安装面板中切换到 `安装新插件` 标签页，找到 `Github Copilot for HBuilder` 并点击 `安装` 按钮。
-- 插件安装完毕后会自动激活。  
+- 插件安装完毕后会自动激活。
 
 <img src="https://web-ext-storage.dcloud.net.cn/hx/doc/copilot-install.png" />
 
@@ -32,26 +32,26 @@
 
 - 插件首次启动时，会检查 Node.js 环境。如果插件无法自动找到符合版本要求的 Node.js (≥22.14)，HBuilderX 会弹出提示，要求您进行配置。
 - 您需要将您本地的 Node.js 可执行文件路径填入到 `设置 -> 插件配置 -> Github Copilot -> 指定Copilot语言服务端运行时的node可执行程序路径` 中。
-- 正确配置后，插件会尝试启动 Copilot 语言服务。  
+- 正确配置后，插件会尝试启动 Copilot 语言服务。
 
 <img src="https://web-ext-storage.dcloud.net.cn/hx/doc/copilot-conf-node-path.png" />
 
 ### 3. 登录 GitHub Copilot
 > 注意：在开始登录前，您需要拥有一个活跃的 Github 账户并订阅 GitHub Copilot 才能使用此插件，您可以通过此链接查看订阅状态: [https://github.com/settings/copilot/features](https://github.com/settings/copilot/features)。
 
-- **状态栏图标**: 在 HBuilderX 右下角的状态栏会显示 Copilot 的图标。点击该图标可以打开 Copilot 状态面板。  
-- **开始登录**: 在状态面板中，点击 `登录 Github` 按钮，插件会向 Github 发起登录请求，请求成功后会返回用于设备授权的 `设备码`。  
+- **状态栏图标**: 在 HBuilderX 右下角的状态栏会显示 Copilot 的图标。点击该图标可以打开 Copilot 状态面板。
+- **开始登录**: 在状态面板中，点击 `登录 Github` 按钮，插件会向 Github 发起登录请求，请求成功后会返回用于设备授权的 `设备码`。
 <img src="https://web-ext-storage.dcloud.net.cn/hx/doc/copilot-signin.png" />
-- **设备授权**: 面板会显示一个设备码，并提供一个 GitHub 授权链接。点击 `复制并访问` 会将设备码复制到剪贴板并自动调用系统浏览器打开授权页面。  
+- **设备授权**: 面板会显示一个设备码，并提供一个 GitHub 授权链接。点击 `复制并访问` 会将设备码复制到剪贴板并自动调用系统浏览器打开授权页面。
 <img src="https://web-ext-storage.dcloud.net.cn/hx/doc/copilot-device-code.png" />
 
-- **完成授权**: 在浏览器打开的页面中，粘贴设备码并授权。授权成功后，插件会自动验证并完成登录。  
+- **完成授权**: 在浏览器打开的页面中，粘贴设备码并授权。授权成功后，插件会自动验证并完成登录。
 <img src="https://web-ext-storage.dcloud.net.cn/hx/doc/copilot-signin-ok.png" />
 
 ### 4. 获取代码建议
 
-- 登录并启用成功后，在您编写代码（支持的语言文件中）时，Copilot 会自动提供行内代码建议。  
-- 按 `Tab` 键即可采纳建议。  
+- 登录并启用成功后，在您编写代码（支持的语言文件中）时，Copilot 会自动提供行内代码建议。
+- 按 `Tab` 键即可采纳建议。
 
 <img src="https://web-ext-storage.dcloud.net.cn/hx/doc/copilot-working.png" />
 
