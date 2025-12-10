@@ -1,3 +1,8 @@
+## 4.87.2025121004
+* Added support for running uni-app (x) and obtaining runtime logs via the `CLI logcat` command, facilitating AI access to runtime logs for automatic problem fixing. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=22250)
+* Fixed an issue in version 4.84 where the app couldn't run on the iOS 26 simulator under certain circumstances. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=23348)
+
+
 ## 4.85.2025110510
 * Fixed an issue in version 4.84 where the right-click menu for the project's uniCloud directory lacked options such as "Create Cloud Object". [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=22993&ask_id=214980)
 * Fixed an issue in version 4.84 in uni-app(x) projects where, after creating a new page under a subpackage and unchecking the "Register in pages.json" option, the selected file location and subpackage did not match when clicking "Create". [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=22990)

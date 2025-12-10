@@ -1,3 +1,8 @@
+## 4.87.2025121004
+* 新增 uni-app (x)运行 通过`CLI logcat`命令行获取运行日志，方便AI调取运行日志自动修复问题 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=22250) [文档](https://hx.dcloud.net.cn/cli/logcat-app)
+* 修复 4.84版本引发的 App真机运行 特定情况下不能运行到iOS26模拟器 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=23348)
+* 修复 uni-app (x) manifest.json 自动申请调试证书功能无法查到注册设备而失败 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=24177)
+
 ## 4.85.2025110510
 * 修复 4.84版本引发的 uni-app (x) 项目，uniCloud目录 右键菜单，没有新建云对象等菜单的问题 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=22993&ask_id=214980)
 * 修复 4.84版本引发的 uni-app (x) 项目，在分包下新建页面，取消勾选在pages.json中注册后点击创建显示选择的文件位置和分包不匹配的问题 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=22990)
