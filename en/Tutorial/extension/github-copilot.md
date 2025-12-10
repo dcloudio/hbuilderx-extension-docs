@@ -4,13 +4,14 @@
 ## Introduction
 
 This plugin aims to integrate GitHub Copilot's code auto-completion feature into HBuilderX IDE, providing developers with inline code suggestions to improve coding efficiency.  
-This plugin connects to GitHub Copilot's official language server to get code completion suggestions in real time.  
-To learn more about GitHub Copilot, please visit [https://github.com/features/copilot](https://github.com/features/copilot).
+This plugin leverages the SDK `@vscode/chat-lib` extracted from VS Code Copilot Chat to retrieve code completion suggestions in real time.  
+To learn more about GitHub Copilot, please visit [https://github.com/features/copilot](https://github.com/features/copilot).  
+To learn more about @vscode/chat-lib, please visit [https://github.com/microsoft/vscode-copilot-chat](https://github.com/microsoft/vscode-copilot-chat).  
 
 ## Environment Requirements
 
 - **HBuilderX**: Version `4.71` or higher.
-- **Node.js**: Version `22` or higher. The Copilot language server requires a separate Node.js environment to run.  
+- **Node.js**: Version `22.14` or higher. The @vscode/chat-lib language server requires a separate Node.js environment to run.  
 
 ## How to Use
 
@@ -29,7 +30,7 @@ To learn more about GitHub Copilot, please visit [https://github.com/features/co
 
 ### 2. First-time Configuration
 
-- When the plugin starts for the first time, it will check the Node.js environment. If the plugin cannot automatically find a Node.js version that meets the requirements (≥22), HBuilderX will display a prompt asking you to configure it.
+- When the plugin starts for the first time, it will check the Node.js environment. If the plugin cannot automatically find a Node.js version that meets the requirements (≥22.14), HBuilderX will display a prompt asking you to configure it.
 - You need to fill in your local Node.js executable path in `Settings -> Plugin Configuration -> Github Copilot -> Specify the node executable path for Copilot language server runtime`.
 - After correct configuration, the plugin will try to start the Copilot language service.  
 
@@ -77,14 +78,14 @@ You can find the following configuration options in `Settings -> Plugin Configur
   - Format is `languageId=true/false`, multiple configurations separated by commas `,`.
   - For example: `*=true,markdown=false` means enable for all languages, except markdown files.
 - **`Specify the Node Executable Path for Copilot Language Server Runtime`**: Specify the Node.js executable file path required to run the Copilot language service.
-  - **Important**: Please ensure the Node.js version pointed to by this path is not lower than 22.0.
+  - **Important**: Please ensure the Node.js version pointed to by this path is not lower than 22.14.
 
 ## Notes
 
 - **GitHub Copilot Subscription**: You need to have an active Github account and subscribe to GitHub Copilot to use this plugin. You can view your GitHub Copilot subscription status via this link: [https://github.com/settings/copilot/features](https://github.com/settings/copilot/features).
 - **Network Connection**: The plugin requires a stable network connection to access GitHub Copilot services. If your network environment requires a proxy, please ensure the network proxy is correctly configured.
 - **Login Timeout**: The device authorization process has a time limit (usually 15 minutes). Please complete the authorization before the device code expires.
-- **Error Troubleshooting**: If you encounter problems, you can open the HBuilderX development log (`Help -> View Run Log`) to view output related to "Copilot Server" or "Copilot Log Message" for detailed error information.
+- **Error Troubleshooting**: If you encounter problems, you can open the HBuilderX development log (`Help -> View Run Log`) to view output related to "copilot-for-hbuilder" for detailed error information.
 - **Manual Installation**: If you install the plugin by extracting the plugin zip package to the HBuilderX plugins directory, please ensure that the plugin root directory name is consistent with the `id` content in `package.json`, otherwise the plugin activation will fail.
 
 ## FAQ
@@ -112,7 +113,7 @@ A:
 
 **Q: Plugin startup failed with "node" related errors.**
 
-A: This is because the plugin failed to find a suitable Node.js runtime environment. Please ensure you have installed **Node.js v22 or higher**, and correctly filled in its executable file path in the plugin setting `GithubCopilot.node.path`.
+A: This is because the plugin failed to find a suitable Node.js runtime environment. Please ensure you have installed **Node.js v22.14 or higher**, and correctly filled in its executable file path in the plugin setting `GithubCopilot.node.path`.
 
 **Q: How do I log out of my GitHub account?**
 

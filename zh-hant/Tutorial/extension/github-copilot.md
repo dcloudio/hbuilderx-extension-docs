@@ -4,13 +4,14 @@
 ## 简介
 
 本插件旨在将 GitHub Copilot 的代码自动补全功能集成到 HBuilderX IDE 中，为开发者提供行内代码建议，从而提升编码效率。  
-本插件通过连接到 GitHub Copilot 的官方语言服务器实时获取代码补全建议。  
-要了解更多 GitHub Copilot 信息，请访问 [https://github.com/features/copilot](https://github.com/features/copilot).
+本插件基于 VS Code Copilot Chat 提取的 SDK `@vscode/chat-lib` 实时获取代码补全建议。  
+要了解更多 GitHub Copilot 信息，请访问 [https://github.com/features/copilot](https://github.com/features/copilot)。  
+要了解更多 @vscode/chat-lib 信息，请访问 [https://github.com/microsoft/vscode-copilot-chat](https://github.com/microsoft/vscode-copilot-chat)。  
 
 ## 环境要求
 
 - **HBuilderX**: 版本 `4.71` 或更高。
-- **Node.js**: 版本 `22` 或更高，Copilot 语言服务器需要独立的 Node.js 环境运行。  
+- **Node.js**: 版本 `22.14` 或更高，@vscode/chat-lib 语言服务器需要独立的 Node.js 环境运行。  
 
 ## 如何使用
 
@@ -29,7 +30,7 @@
 
 ### 2. 首次配置
 
-- 插件首次启动时，会检查 Node.js 环境。如果插件无法自动找到符合版本要求的 Node.js (≥22)，HBuilderX 会弹出提示，要求您进行配置。
+- 插件首次启动时，会检查 Node.js 环境。如果插件无法自动找到符合版本要求的 Node.js (≥22.14)，HBuilderX 会弹出提示，要求您进行配置。
 - 您需要将您本地的 Node.js 可执行文件路径填入到 `设置 -> 插件配置 -> Github Copilot -> 指定Copilot语言服务端运行时的node可执行程序路径` 中。
 - 正确配置后，插件会尝试启动 Copilot 语言服务。  
 
@@ -84,7 +85,7 @@
 - **GitHub Copilot 订阅**: 您需要拥有一个活跃的 Github 账户并订阅 GitHub Copilot 才能使用此插件，您可以通过此链接查看有关 Github Copilot 的订阅状态: [https://github.com/settings/copilot/features](https://github.com/settings/copilot/features)。
 - **网络连接**: 插件需要稳定的网络连接以访问 GitHub Copilot 服务。如果您的网络环境需要代理（科学上网），请确保正确配置了网络代理。
 - **登录超时**: 设备授权流程有时间限制（通常为15分钟），请在设备码过期前完成授权。
-- **错误排查**: 如果遇到问题，可以打开 HBuilderX 的开发日志 (`帮助 -> 查看运行日志`)，在日志中查看有关 "Copilot Server" 或 "Copilot Log Message" 的输出以获取详细错误信息。
+- **错误排查**: 如果遇到问题，可以打开 HBuilderX 的开发日志 (`帮助 -> 查看运行日志`)，在日志中查看有关 "copilot-for-hbuilder" 的输出以获取详细错误信息。
 - **手动安装**: 如果您是通过将插件zip包解压到HBuilderX的plugins目录的方式安装插件，请务必保证插件根目录的名称与`package.json`中`id`的内容保持一致，否则将导致插件激活失败。
 
 ## 常见问题
@@ -112,7 +113,7 @@ A:
 
 **Q: 插件启动失败，提示 "node" 相关错误。**
 
-A: 这是因为插件未能找到合适的 Node.js 运行环境。请确保您已安装 **Node.js v22 或更高版本**，并在插件设置 `GithubCopilot.node.path` 中正确填写了它的可执行文件路径。
+A: 这是因为插件未能找到合适的 Node.js 运行环境。请确保您已安装 **Node.js v22.14 或更高版本**，并在插件设置 `GithubCopilot.node.path` 中正确填写了它的可执行文件路径。
 
 **Q: 如何登出我的 GitHub 账号？**
 
