@@ -86,7 +86,7 @@ HBuilderX，可以通过以下方式打开聊天视图。
 
 - 引用特定文件
 - 获取控制台内容 （比如获取uni-app运行控制台错误信息）
-- 获取当前当开的文件
+- 获取当前打开的文件
 - 获取鼠标选中内容
 
 ### 上下文-引用特定文件
@@ -101,7 +101,7 @@ HBuilderX，可以通过以下方式打开聊天视图。
 如下图所示：您可以告诉AI，操作当前选中的代码，比如
 
 ```md
-删除当前标选中的代码
+删除当前被选中的代码
 ```
 
 <img src="https://web-ext-storage.dcloud.net.cn/hx/ai-chat/al-currently-selected-code.jpg" style="zoom: 35%" />
@@ -128,7 +128,7 @@ HBuilderX，可以通过以下方式打开聊天视图。
 
 ### Q1:未选择项目
 
-**错误消息: **`No workspace folder found. Please open a folder first.`
+**错误消息：**`No workspace folder found. Please open a folder first.`
 
 **解决方案：**
 
