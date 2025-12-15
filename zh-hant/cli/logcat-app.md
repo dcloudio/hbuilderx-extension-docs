@@ -1,20 +1,20 @@
-# CLI uni-app 运行日志 - 手机或模拟器@launch-app
+# CLI uni-app 運行日誌 - 手機或模擬器@launch-app
 
 > HBuilderX cli 命令行工具
 
 > 需HBuilderX 4.87+ 版本
 
-> 您也可以通过 npm 包使用此功能：[@dcloudio/hbuilderx-cli](https://www.npmjs.com/package/@dcloudio/hbuilderx-cli)
+> 您也可以通過 npm 包使用此功能：[@dcloudio/hbuilderx-cli](https://www.npmjs.com/package/@dcloudio/hbuilderx-cli)
 
-通过 CLI 查看运行到手机或模拟器的 uni-app 应用日志，支持 Android、iOS、鸿蒙平台。[HBuilderX CLI](/cli/README?id=cli)
+通過 CLI 查看運行到手機或模擬器的 uni-app 應用日誌，支持 Android、iOS、鴻蒙平臺。[HBuilderX CLI](/cli/README?id=cli)
 
-您可以将cli加入到环境变量，这样您就可以在任意目录、任意终端上，随时随地调用cli， 而无需通过输入cli绝对路径的方式来使用它。[详情](/cli/env)
+您可以將cli加入到環境變量，這樣您就可以在任意目錄、任意終端上，隨時隨地調用cli， 而無需通過輸入cli絕對路徑的方式來使用它。[詳情](/cli/env)
 
-## 命令说明
+## 命令說明
 
 ### logcat app-android
 
-查看运行到 Android App 日志
+查看運行到 Android App 日誌
 
 **用法：**
 
@@ -22,43 +22,43 @@
 ./cli logcat app-android --help
 ```
 
-**参数：**
+**參數：**
 
-| 参数名称   | 描述                                                                         |
+| 參數名稱   | 描述                                                                         |
 | ---------- | ---------------------------------------------------------------------------- |
-| --help     | 显示 cli 命令帮助                                                            |
-| --project  | HBuilder X 里导入的项目名称或绝对路径                                        |
-| --deviceId | 指定要使用的设备序列号，默认使用第一个设备，可通过 devices list 获取设备列表 |
-| --mode     | 日志模式，取值：full、lastBuild、prevBuild，默认值为 prevBuild               |
+| --help     | 顯示 cli 命令幫助                                                            |
+| --project  | HBuilder X 裏導入的項目名稱或絕對路徑                                        |
+| --deviceId | 指定要使用的設備序列號，默認使用第一個設備，可通過 devices list 獲取設備列表 |
+| --mode     | 日誌模式，取值：full、lastBuild、prevBuild，默認值爲 prevBuild               |
 
 **使用示例：**
 
 ```shell
-# Mac电脑 使用cli查看 hello-uni-app-x项目 Android App日志
+# Mac電腦 使用cli查看 hello-uni-app-x項目 Android App日誌
 /Applications/HBuilderX.app/Contents/MacOS/cli logcat app-android --project hello-uni-app-x
 
-# Mac电脑 --project 传递绝对路径
+# Mac電腦 --project 傳遞絕對路徑
 /Applications/HBuilderX.app/Contents/MacOS/cli logcat app-android --project /User/apple/Desktop/hello-uni-app-x
 
-# Windows电脑: 使用cli查看 hello-uni-app-x项目 Android App日志
+# Windows電腦: 使用cli查看 hello-uni-app-x項目 Android App日誌
 D:\ide\HBuilderX\cli.exe logcat app-android --project hello-uni-app-x
 
-# 查看Android App日志
-./cli logcat app-android --project 项目名称
+# 查看Android App日誌
+./cli logcat app-android --project 項目名稱
 
-# 查看Android App日志（指定设备）
-./cli logcat app-android --project 项目名称 --deviceId 设备序列号
+# 查看Android App日誌（指定設備）
+./cli logcat app-android --project 項目名稱 --deviceId 設備序列號
 
-# 查看Android App日志（指定日志模式）
-./cli logcat app-android --project 项目名称 --mode full
+# 查看Android App日誌（指定日誌模式）
+./cli logcat app-android --project 項目名稱 --mode full
 
-# 查看Android App日志（组合参数：指定设备 + 日志模式）
-./cli logcat app-android --project 项目名称 --deviceId 设备序列号 --mode lastBuild
+# 查看Android App日誌（組合參數：指定設備 + 日誌模式）
+./cli logcat app-android --project 項目名稱 --deviceId 設備序列號 --mode lastBuild
 ```
 
 ### logcat app-ios
 
-查看运行到 iOS App 日志
+查看運行到 iOS App 日誌
 
 **用法：**
 
@@ -66,47 +66,47 @@ D:\ide\HBuilderX\cli.exe logcat app-android --project hello-uni-app-x
 ./cli logcat app-ios --help
 ```
 
-**参数：**
+**參數：**
 
-| 参数名称    | 描述                                                                         |
+| 參數名稱    | 描述                                                                         |
 | ----------- | ---------------------------------------------------------------------------- |
-| --help      | 显示 cli 命令帮助                                                            |
-| --project   | HBuilder X 里导入的项目名称或绝对路径                                        |
-| --deviceId  | 指定要使用的设备序列号，默认使用第一个设备，可通过 devices list 获取设备列表 |
-| --iosTarget | 设备类型，取值：device 或 simulator，默认值为 device                         |
-| --mode      | 日志模式，取值：full、lastBuild、prevBuild，默认值为 prevBuild               |
+| --help      | 顯示 cli 命令幫助                                                            |
+| --project   | HBuilder X 裏導入的項目名稱或絕對路徑                                        |
+| --deviceId  | 指定要使用的設備序列號，默認使用第一個設備，可通過 devices list 獲取設備列表 |
+| --iosTarget | 設備類型，取值：device 或 simulator，默認值爲 device                         |
+| --mode      | 日誌模式，取值：full、lastBuild、prevBuild，默認值爲 prevBuild               |
 
 **使用示例：**
 
 ```shell
-# Mac电脑 使用cli查看 hello-uni-app-x项目 iOS App日志（真机）
+# Mac電腦 使用cli查看 hello-uni-app-x項目 iOS App日誌（真機）
 /Applications/HBuilderX.app/Contents/MacOS/cli logcat app-ios --project hello-uni-app-x
 
-# Mac电脑 --project 传递绝对路径
+# Mac電腦 --project 傳遞絕對路徑
 /Applications/HBuilderX.app/Contents/MacOS/cli logcat app-ios --project /User/apple/Desktop/hello-uni-app-x
 
-# Windows电脑: 使用cli查看 hello-uni-app-x项目 iOS App日志（真机）
+# Windows電腦: 使用cli查看 hello-uni-app-x項目 iOS App日誌（真機）
 D:\ide\HBuilderX\cli.exe logcat app-ios --project hello-uni-app-x
 
-# 查看iOS App日志（真机）
-./cli logcat app-ios --project 项目名称
+# 查看iOS App日誌（真機）
+./cli logcat app-ios --project 項目名稱
 
-# 查看iOS App日志（模拟器）
-./cli logcat app-ios --project 项目名称 --iosTarget simulator
+# 查看iOS App日誌（模擬器）
+./cli logcat app-ios --project 項目名稱 --iosTarget simulator
 
-# 查看iOS App日志（指定设备）
-./cli logcat app-ios --project 项目名称 --deviceId 设备序列号
+# 查看iOS App日誌（指定設備）
+./cli logcat app-ios --project 項目名稱 --deviceId 設備序列號
 
-# 查看iOS App日志（指定日志模式）
-./cli logcat app-ios --project 项目名称 --mode full
+# 查看iOS App日誌（指定日誌模式）
+./cli logcat app-ios --project 項目名稱 --mode full
 
-# 查看iOS App日志（组合参数：模拟器 + 指定设备 + 日志模式）
-./cli logcat app-ios --project 项目名称 --iosTarget simulator --deviceId 设备序列号 --mode lastBuild
+# 查看iOS App日誌（組合參數：模擬器 + 指定設備 + 日誌模式）
+./cli logcat app-ios --project 項目名稱 --iosTarget simulator --deviceId 設備序列號 --mode lastBuild
 ```
 
 ### logcat app-harmony
 
-查看运行到鸿蒙日志
+查看運行到鴻蒙日誌
 
 **用法：**
 
@@ -114,63 +114,63 @@ D:\ide\HBuilderX\cli.exe logcat app-ios --project hello-uni-app-x
 ./cli logcat app-harmony --help
 ```
 
-**参数：**
+**參數：**
 
-| 参数名称   | 描述                                                                         |
+| 參數名稱   | 描述                                                                         |
 | ---------- | ---------------------------------------------------------------------------- |
-| --help     | 显示 cli 命令帮助                                                            |
-| --project  | HBuilder X 里导入的项目名称或绝对路径                                        |
-| --deviceId | 指定要使用的设备序列号，默认使用第一个设备，可通过 devices list 获取设备列表 |
-| --mode     | 日志模式，取值：full、lastBuild、prevBuild，默认值为 prevBuild               |
+| --help     | 顯示 cli 命令幫助                                                            |
+| --project  | HBuilder X 裏導入的項目名稱或絕對路徑                                        |
+| --deviceId | 指定要使用的設備序列號，默認使用第一個設備，可通過 devices list 獲取設備列表 |
+| --mode     | 日誌模式，取值：full、lastBuild、prevBuild，默認值爲 prevBuild               |
 
 **使用示例：**
 
 ```shell
-# Mac电脑 使用cli查看 hello-uni-app-x项目 鸿蒙App日志
+# Mac電腦 使用cli查看 hello-uni-app-x項目 鴻蒙App日誌
 /Applications/HBuilderX.app/Contents/MacOS/cli logcat app-harmony --project hello-uni-app-x
 
-# Mac电脑 --project 传递绝对路径
+# Mac電腦 --project 傳遞絕對路徑
 /Applications/HBuilderX.app/Contents/MacOS/cli logcat app-harmony --project /User/apple/Desktop/hello-uni-app-x
 
-# Windows电脑: 使用cli查看 hello-uni-app-x项目 鸿蒙App日志
+# Windows電腦: 使用cli查看 hello-uni-app-x項目 鴻蒙App日誌
 D:\ide\HBuilderX\cli.exe logcat app-harmony --project hello-uni-app-x
 
-# 查看鸿蒙App日志
-./cli logcat app-harmony --project 项目名称
+# 查看鴻蒙App日誌
+./cli logcat app-harmony --project 項目名稱
 
-# 查看鸿蒙App日志（指定设备）
-./cli logcat app-harmony --project 项目名称 --deviceId 设备序列号
+# 查看鴻蒙App日誌（指定設備）
+./cli logcat app-harmony --project 項目名稱 --deviceId 設備序列號
 
-# 查看鸿蒙App日志（指定日志模式）
-./cli logcat app-harmony --project 项目名称 --mode full
+# 查看鴻蒙App日誌（指定日誌模式）
+./cli logcat app-harmony --project 項目名稱 --mode full
 
-# 查看鸿蒙App日志（组合参数：指定设备 + 日志模式）
-./cli logcat app-harmony --project 项目名称 --deviceId 设备序列号 --mode lastBuild
+# 查看鴻蒙App日誌（組合參數：指定設備 + 日誌模式）
+./cli logcat app-harmony --project 項目名稱 --deviceId 設備序列號 --mode lastBuild
 ```
 
-## 通过npm scripts使用CLI@npm
+## 通過npm scripts使用CLI@npm
 
-我们需要在项目中安装 [@dcloudio/hbuilderx-cli](https://www.npmjs.com/package/@dcloudio/hbuilderx-cli),它是一个桥梁，让我们可以通过命令行来调用 HBuilderX 的强大功能（如启动测试流程）。
+我們需要在項目中安裝 [@dcloudio/hbuilderx-cli](https://www.npmjs.com/package/@dcloudio/hbuilderx-cli),它是一個橋樑，讓我們可以通過命令行來調用 HBuilderX 的強大功能（如啓動測試流程）。
 
-#### 添加 npm 脚本支持
+#### 添加 npm 腳本支持
 
 ```shell
-# 首先，请确保你的项目根目录下有 package.json 文件。如果没有，可以通过以下命令快速生成：
+# 首先，請確保你的項目根目錄下有 package.json 文件。如果沒有，可以通過以下命令快速生成：
 npm init -y
 
-# 然后，安装 hbuilderx-cli 作为开发依赖：
+# 然後，安裝 hbuilderx-cli 作爲開發依賴：
 npm install @dcloudio/hbuilderx-cli --save-dev
 ```
 
-#### 使用npm命令查看日志
+#### 使用npm命令查看日誌
 
 ```shell
-# 查看 Android 日志
-npm run logcat:app-android -- --deviceId feyhuoa1ai82jr4p
+# 查看 Android 日誌
+npm run logcat:app-android -- --deviceId feyhuos8ai89jr4p
 
-# 查看 iOS真机 日志。 
+# 查看 iOS真機 日誌。 
 npm run logcat:app-ios -- --iosTarget device --deviceId 00001110001C35240AF2801A
 
-# 查看 iOS模拟器 日志。 
+# 查看 iOS模擬器 日誌。 
 npm run logcat:app-ios -- --iosTarget simulator --deviceId 3FFE4F41-997F-4ED3-AC3B-DF4ADB9A4262
 ```
