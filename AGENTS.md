@@ -6,12 +6,17 @@
 
 hbuilderx-extension-docs 是HBuilderX软件使用文档。
 
-文档包含3种语言：
-- zh-cn 中文简体，对应zh-cn目录
-- zh-hant 中文繁体，对应zh-hant目录
-- en 英文，对应en目录
+文档包含3种语言：zh-cn（中文简体）、en（英文）、zh-hant（中文繁体）。其中，en、zh-hant，是由zh-cn目录翻译而来。
 
-en目录（英文）、zh-hant目录（中文繁体），均由 zh-cn 翻译而来。
+**目录结构**
+
+```md
+.
+├── zh-cn          # 中文简体
+├── zh-hant        # 中文繁体
+├── en             # 英文
+```
+
 
 ## 仓库特点与约束
 ----------------
