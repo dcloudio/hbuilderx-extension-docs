@@ -2,6 +2,19 @@
 
 HBuilderX文档官网: [https://hx.dcloud.net.cn/](https://hx.dcloud.net.cn/)
 
+## Repository overview
+```md
+.
+├── zh-cn          # 中文简体
+├── zh-hant        # 中文繁体
+├── en             # 英文
+├── static         # js、css、图片等静态文件存储目录
+├── index.html     # 入口文件
+├── package.json
+├── AGENTS.md      # AI
+├── README.md
+```
+
 ### 文档新增与编辑
 
 - 添加《新文档.md》，请在zh-cn目录下增加，然后将增加的文件复制到en和zh-hant目录。
@@ -14,10 +27,21 @@ HBuilderX文档官网: [https://hx.dcloud.net.cn/](https://hx.dcloud.net.cn/)
 正确应为: ##：下载@Download
 ```
 
-### 预览文档
+### 本地预览文档
 
 ```shell
 npm run serve
+```
+
+**输出:**
+
+```shell
+hxdeMac-mini:hbuilderx-extension-docs hx$ npm run serve
+
+> hbuilderx-extension-docs@1.0.0 serve
+> node ./scripts/preview.js
+
+server running at http://localhost:3000
 ```
 
 ### 部署
