@@ -15,7 +15,7 @@ HBuilderX文档官网: [https://hx.dcloud.net.cn/](https://hx.dcloud.net.cn/)
 ├── README.md
 ```
 
-### 文档新增与编辑
+## 文档新增与编辑
 
 - 添加《新文档.md》，请在zh-cn目录下增加，然后将增加的文件复制到en和zh-hant目录。
 - 如截图的是高清屏，请压缩图片。并设置图片大小。图片压缩网站：https://tinypng.com/
@@ -27,7 +27,7 @@ HBuilderX文档官网: [https://hx.dcloud.net.cn/](https://hx.dcloud.net.cn/)
 正确应为: ##：下载@Download
 ```
 
-### 本地预览文档
+## 本地预览文档
 
 ```shell
 npm run serve
@@ -44,7 +44,7 @@ hxdeMac-mini:hbuilderx-extension-docs hx$ npm run serve
 server running at http://localhost:3000
 ```
 
-### 部署
+## 部署
 
 提交文档后，服务器会自动部署，预计10分钟左右生效。
 
