@@ -25,4 +25,14 @@ npm run serve
 提交文档后，服务器会自动部署，预计10分钟左右生效。
 
 
+## 常用prompt
 
+以下仅适用于Github copilot cli等AI工具
+
+```md
+同步并翻译zh-cn目录下git变更文件到en、zh-hant目录
+```
+
+```
+优化与扩充zh-cn目录下的git变更文件（包含内容质量提升、补充示例、补全步骤、修正错误等）
+```
