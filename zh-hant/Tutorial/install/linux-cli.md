@@ -63,8 +63,8 @@ cli pack --config 配置文件
 
 ### 报Bug
 
-如果大家遇到问题，请大家到[https://issues.dcloud.net.cn/pages/issues/report-req?mid=pluginsCLI.linux](https://issues.dcloud.net.cn/pages/issues/report-req?mid=pluginsCLI.linux)报Bug。提交问题，请包含以下内容：
+如果大家遇到问题，请大家到[https://issues.dcloud.net.cn/pages/issues/report-bug?mid=pluginsCLI.linux](https://issues.dcloud.net.cn/pages/issues/report-bug?mid=pluginsCLI.linux)报Bug。提交问题，请包含以下内容：
 1. 操作系统信息
 2. 详细的命令示例、截图
 
-您提供的信息越详细，越有助于排查解决问题。
+您提供的資訊越詳細，越有助於排查解決問題。
