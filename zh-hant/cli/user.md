@@ -1,4 +1,4 @@
-# 用戶操作
+# 用戶操作@user
 
 > HBuilderX cli命令行工具, 僅適用於HBuilderX 3.1.5+版本
 
@@ -25,11 +25,11 @@ cli user login --username <用戶名>  --password <密碼>
 cli user logout
 ```
 
-#### 登录参数 --global
+#### 登錄參數 --global
 
-> HBuilderX 4.81+，新增登录参数--global
+> HBuilderX 4.81+，新增登錄參數--global
 
 ```shell
-# --global, 布尔值， 默认为false
-cli user login --global true --username <用户名>  --password <密码>
+# --global, 布爾值， 默認爲false
+cli user login --global true --username <用戶名>  --password <密碼>
 ```

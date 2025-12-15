@@ -10,7 +10,7 @@
 - MacOSX
     - 正式版 `/Applications/HBuilderX.app/Contents/MacOS/cli`
     - Alpha版 `/Applications/HBuilderX-Alpha.app/Contents/MacOS/cli`
-- Linux: HBuilderX安装目录根目录, `cli`
+- Linux: HBuilderX安裝目錄根目錄, `cli`
 
 特別注意：本文所有命令示例，均以cli代替cli.exe，請根據不同操作系統，實際應用。
 
@@ -20,15 +20,15 @@
 
 #### Linux CLI
 
-2025年1月初，推出了Linux HBuilderX CLI，欢迎大家试用反馈。 [详情](https://ask.dcloud.net.cn/article/41469)
+2025年1月初，推出了Linux HBuilderX CLI，歡迎大家試用反饋。 [詳情](https://ask.dcloud.net.cn/article/41469)
 
-cli的用途是让开发者可以在linux服务器上调用HBuilderX cli，来实现程序化操作打包app、上传unicloud云函数等，为持续集成、自动化发布、类saas业务的自动化给客户部署等业务提供支持。
+cli的用途是讓開發者可以在linux服務器上調用HBuilderX cli，來實現程序化操作打包app、上傳unicloud雲函數等，爲持續集成、自動化發佈、類saas業務的自動化給客戶部署等業務提供支持。
 
-请注意是cli程序，不是HBuilderX可视化编辑器。仅适用于Linux命令行调用。
+請注意是cli程序，不是HBuilderX可視化編輯器。僅適用於Linux命令行調用。
 
-目前我们仅在Ubuntu系统上进行了测试，并没有在其它Linux发行版上测试，如有问题，请及时反馈。
+目前我們僅在Ubuntu系統上進行了測試，並沒有在其它Linux發行版上測試，如有問題，請及時反饋。
 
-扩展：[Linux 安装插件市场插件](/cli/linux-install-market-plugin)
+擴展：[Linux 安裝插件市場插件](/cli/linux-install-market-plugin)
 
 #### 查看幫助文檔
 
@@ -63,5 +63,5 @@ cli app quit
 |文件操作，打開文件並跳轉指定行列				|[詳情](/cli/file)					|
 |項目操作，導入、關閉項目				|[詳情](/cli/project)					|
 |app打包												|[詳情](/cli/pack)						|
-|uniCLoud操作，比如雲函數上傳等	|[詳情](/cli/uniCloud)				|
+|uniCloud操作，比如雲函數上傳等	|[詳情](/cli/uniCloud)				|
 |uniCloud 前端網頁託管					|[詳情](/cli/uniCloud-hosting)|

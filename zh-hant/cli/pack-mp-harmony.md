@@ -1,30 +1,32 @@
-# CLI uni-app發行 - 鴻蒙元服務@packMpHarmony
+# CLI uni-app 發行 - 鴻蒙元服務打包@packMpHarmony
 
-> HBuilderX 4.81-alpha，支援使用 CLI 對鴻蒙元服務平台進行本地打包。
+> HBuilderX cli 命令行工具
 
-透過此方式，可在命令列或其他 CI 工具中，完成 uni-app 專案對鴻蒙元服務平台進行本地打包。
+通過 CLI 對鴻蒙元服務平臺進行本地打包，支持 uni-app 項目。
 
-## 基本使用@usage
+## 命令說明
 
-1. 首先，需要啟動 HBuilderX。（進入 HBuilderX 安裝目錄根目錄，終端輸入 `cli.exe open`）
-2. cli 執行，終端輸入
-```shell
-cli pack mp-harmony --project 專案名稱
-```
+### pack mp-harmony
 
-## 命令參數@params
+對鴻蒙元服務平臺進行本地打包
 
-| 參數       | 說明                      |
-| ---------- | ------------------------ |
-| --help     | 命令幫助                  |
-| --project  | 必填，專案名稱            |
+**參數：**
 
+| 參數      | 說明           |
+| --------- | -------------- |
+| --help    | 顯示命令幫助   |
+| --project | 必填，項目名稱 |
 
-## 使用範例@example
+**使用示例：**
+
 ```shell
 # 查看命令幫助
 cli pack mp-harmony --help
 
-# 對鴻蒙元服務平台進行本地打包
-cli pack mp-harmony --project demo-app
+# 對鴻蒙元服務平臺進行本地打包
+cli pack mp-harmony --project 項目名稱
 ```
+
+**注意事項：**
+
+> 首先, 需要啓動 HBuilderX. (進入 HBuilderX 安裝目錄根目錄, 終端輸入 `cli.exe open`)
