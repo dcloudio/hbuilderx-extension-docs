@@ -1,7 +1,5 @@
 # CLI uni-app 运行日志 - uniCloud
 
-> HBuilderX cli 命令行工具
-
 > 需HBuilderX 4.87+ 版本
 
 通过 CLI 查看运行到 uniCloud 的日志。[HBuilderX CLI](/cli/README?id=cli)

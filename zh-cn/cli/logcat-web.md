@@ -1,7 +1,5 @@
 # CLI uni-app 运行日志 - WEB@launch-web
 
-> HBuilderX cli 命令行工具
-
 > 需HBuilderX 4.87+ 版本
 
 > 您也可以通过 npm 包使用此功能：[@dcloudio/hbuilderx-cli](https://www.npmjs.com/package/@dcloudio/hbuilderx-cli)

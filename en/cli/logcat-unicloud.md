@@ -1,7 +1,5 @@
 # CLI uni-app Run Logs - uniCloud
 
-> HBuilderX cli command line tool
-
 > Requires HBuilderX 4.87+ version
 
 View logs for running on uniCloud through CLI. [Learn about HBuilderX CLI](/cli/README?id=cli)

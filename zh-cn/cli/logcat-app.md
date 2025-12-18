@@ -1,7 +1,5 @@
 # CLI uni-app 运行日志 - 手机或模拟器@launch-app
 
-> HBuilderX cli 命令行工具
-
 > 需HBuilderX 4.87+ 版本
 
 > 您也可以通过 npm 包使用此功能：[@dcloudio/hbuilderx-cli](https://www.npmjs.com/package/@dcloudio/hbuilderx-cli)
@@ -168,9 +166,9 @@ npm install @dcloudio/hbuilderx-cli --save-dev
 # 查看 Android 日志
 npm run logcat:app-android -- --deviceId feyhuos8ai89jr4p
 
-# 查看 iOS真机 日志。 
+# 查看 iOS真机 日志。
 npm run logcat:app-ios -- --iosTarget device --deviceId 00001110001C35240AF2801A
 
-# 查看 iOS模拟器 日志。 
+# 查看 iOS模拟器 日志。
 npm run logcat:app-ios -- --iosTarget simulator --deviceId 3FFE4F41-997F-4ED3-AC3B-DF4ADB9A4262
 ```

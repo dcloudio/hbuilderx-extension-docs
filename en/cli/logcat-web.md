@@ -1,7 +1,5 @@
 # CLI uni-app Run Logs - WEB@launch-web
 
-> HBuilderX cli command line tool
-
 > Requires HBuilderX 4.87+ version
 
 > You can also use this feature through npm package: [@dcloudio/hbuilderx-cli](https://www.npmjs.com/package/@dcloudio/hbuilderx-cli)
