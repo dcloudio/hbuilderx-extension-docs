@@ -3466,6 +3466,11 @@ function getLang() {
                         el.insertBefore(aa, firstChild.nextSibling);
                         el.removeChild(firstChild);
                     }
+
+                    // 2025-12-18 默认展开level 1 章节
+                    if (level == "1.0.1") {
+                        el.classList.remove("close");
+                    };
                 }
                 var contactBox = sidebarUl.querySelector(".contact-box");
                 contactBox && sidebarUl.appendChild(contactBox);
