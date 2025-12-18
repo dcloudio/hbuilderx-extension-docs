@@ -18,7 +18,7 @@
 
 如下图所示，当登录出现SslHandshakeFailedError错误时，请下载证书, 然后双击安装。
 
-<a download href="https://web-ext-storage.dcloud.net.cn/hx/questions/certum.cer" target="_blank">证书下载地址</a>
+<a download href="https://web-ext-storage.dcloud.net.cn/hx/questions/certum.pem" target="_blank">证书下载地址</a>
 
 <img src="https://web-ext-storage.dcloud.net.cn/hx/questions/hx_login_failed_ssl.png" style="zoom:50%" />
 

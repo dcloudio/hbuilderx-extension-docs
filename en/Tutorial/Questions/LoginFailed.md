@@ -18,7 +18,7 @@ Solution: Some users reported that the machine time is incorrect. After calibrat
 
 As shown in the image below, when an SslHandshakeFailedError occurs during login, please download the certificate and double-click to install it.
 
-<a download href="https://web-ext-storage.dcloud.net.cn/hx/questions/certum.cer" target="_blank">Certificate download URL.</a>
+<a download href="https://web-ext-storage.dcloud.net.cn/hx/questions/certum.pem" target="_blank">Certificate download URL.</a>
 
 <img src="https://web-ext-storage.dcloud.net.cn/hx/questions/hx_login_failed_ssl.png" style="zoom:50%" />
 
