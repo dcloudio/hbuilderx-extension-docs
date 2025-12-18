@@ -60,7 +60,7 @@
     <!-- * [Chrome Debug 5+ Android Apps](Tutorial/App/use-chrome-to-debug-android-apps.md) -->
     * [SoftLink](/Tutorial/App/softLink.md)
 * Version Control
-    * [Git Introduce](/Tutorial/SourceControl/Git/README.md)
+    * [Git Introduce](/Tutorial/SourceControl/Git/overview.md)
     * [Git Windows](/Tutorial/SourceControl/Git/Windows.md)
     * [Git MacOSX](/Tutorial/SourceControl/Git/MacOSX.md)
     * [SVN Windows](/Tutorial/SourceControl/SVN/Windows.md)

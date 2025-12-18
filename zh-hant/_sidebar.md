@@ -63,7 +63,7 @@
     * [Chrome調試 5+ Android應用](Tutorial/App/use-chrome-to-debug-android-apps.md)
     * [通過軟鏈優化日常開發體驗](/Tutorial/App/softLink.md)
 * 版本控制
-    * [Git 介紹](/Tutorial/SourceControl/Git/README.md)
+    * [Git 介紹](/Tutorial/SourceControl/Git/overview.md)
     * [Git重大更新](/Tutorial/SourceControl/git.md)
     * [Git Windows手冊](/Tutorial/SourceControl/Git/Windows.md)
     * [Git MacOSX手冊](/Tutorial/SourceControl/Git/MacOSX.md)
