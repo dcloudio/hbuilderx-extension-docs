@@ -83,6 +83,7 @@
     * [MarkDown一鍵分享](/Tutorial/extension/markdown_share.md)
     * [Node程序开发](/Tutorial/extension/node-development.md)
     * [Github Copilot](/Tutorial/extension/github-copilot.md)
+    * [hbuilderx-ai-chat](/Tutorial/extension/hbuilderx-ai-chat.md)
 * 參考/其它
     * [自定義字體](/Tutorial/settings/font.md)
     * [px自動轉upx](/Tutorial/settings/px-upx)

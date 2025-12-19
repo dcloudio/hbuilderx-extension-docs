@@ -78,6 +78,7 @@
     * [FTP/SFTP](/Tutorial/extension/ftp.md)
     * [MarkDown Share](/Tutorial/extension/markdown_share.md)
     * [Github Copilot](/Tutorial/extension/github-copilot.md)
+    * [hbuilderx-ai-chat](/Tutorial/extension/hbuilderx-ai-chat.md)
 * Other
     * [Font Setting](/Tutorial/settings/font.md)
     * [px-upx](/Tutorial/settings/px-upx)
