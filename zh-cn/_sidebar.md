@@ -106,6 +106,7 @@
 	* [MacOSX项目管理器项目无法打开问题](/Tutorial/Other/macPrivacy.md)
     * [云函数上传ContentAccessDenied错误](/Tutorial/Questions/win10-defender-contentaccessdenied.md)
     * [登录失败问题](/Tutorial/Questions/LoginFailed.md)
+    * [uniapp发行服务器响应异常](/Tutorial/faq/uniapp_publish_server_error.md)
     * [终端空白及无法输入的问题](/Tutorial/Questions/Terminal-input-problem.md)
     <!-- * [WebView2 运行时的问题](/Tutorial/Questions/Webview2Runtime.md) 功能上线时打开-->
 * [崩溃报告](/Tutorial/CrashReporter.md)

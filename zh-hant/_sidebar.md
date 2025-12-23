@@ -103,6 +103,7 @@
     * [MacOSX項目管理器項目無法打開問題](/Tutorial/Other/macPrivacy.md)
     * [雲函數上傳ContentAccessDenied錯誤](/Tutorial/Questions/win10-defender-contentaccessdenied.md)
     * [登錄失敗問題](/Tutorial/Questions/LoginFailed.md)
+    * [uniapp發行服務器響應異常](/Tutorial/faq/uniapp_publish_server_error.md)
     * [终端空白及无法输入的问题](/Tutorial/Questions/Terminal-input-problem.md)
     <!-- * [WebView2 執行時的问题](/Tutorial/Questions/Webview2Runtime.md) 功能上线时打开-->
 * [崩潰報告](/Tutorial/CrashReporter.md)
