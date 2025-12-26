@@ -36,9 +36,9 @@ HBuilderX，可以通过以下方式打开聊天视图。
 
 ## 聊天视图概览
 
-如下图所示，AI聊天视图，提供了5个AI助手，以便大家选择。
+如下图所示，AI聊天视图，提供了多个AI助手，以便大家选择。
 
-您可以根据自己的需要，选择合适的AI助手。如图所示，您可以在视图内 `安装` 和 `更新` AI助手。
+您可以根据自己的需要，选择合适的AI助手。各 CLI 助手需要手动在命令行中安装，详见 [CLI AI 助手管理](#AI-CLI助手管理)。
 
 - [CLI AI 助手管理（安装、切换、更新）](#AI-CLI助手管理)
 - 切换项目
@@ -54,12 +54,172 @@ HBuilderX，可以通过以下方式打开聊天视图。
 
 ## AI-CLI助手管理
 
+### 助手选择与切换
+
+在 HBuilderX AI Chat 插件的聊天视图中，提供了多个 AI 助手供您选择：
+
 * 在中央卡片列表中选择助手。每个卡片显示：
-    - CLI助手名称与版本（例如：Claude Code CLI 2.0.53）
-    - 状态：已安装、未安装、需要更新（对应 UI 上的“安装”、“更新”按钮）。
-* 安装：对于标记为 未安装 的助手，点击 安装，插件会负责下载安装 CLI 依赖（或引导你到安装步骤）。
-* 更新：当有更新按钮时，点击即可更新到最新版本以获得新能力或修复。
-* 切换CLI助手：在会话中切换助手会影响后续回答。建议在长会话需要不同能力时，开始 新会话 再切换。
+    - CLI 助手名称与版本（例如：Claude Code CLI 2.0.53）
+    - 安装状态：已安装、未安装、需要更新
+* **切换 CLI 助手**：在会话中切换助手会影响后续回答。建议在长会话需要不同能力时，开始 新会话 再切换。
+
+### CLI 助手手动安装
+
+> **重要提示**：HBuilderX AI Chat 插件不提供自动安装功能，您需要在命令行中手动安装各个 AI CLI 助手。
+
+以下是各主流 AI CLI 助手的官方安装方式：
+
+---
+
+#### 1. Claude Code CLI
+
+**官方网站**：[https://claude.com/claude-code](https://claude.com/claude-code)
+
+**安装方式**：
+
+**macOS / Linux：**
+```bash
+curl -fsSL https://claude.ai/install.sh | bash
+```
+
+**Windows：**
+```powershell
+irm https://claude.ai/install.ps1 | iex
+```
+
+**npm 安装（跨平台）：**
+```bash
+npm install -g @anthropic-ai/claude-code
+```
+
+**验证安装**：
+```bash
+claude --version
+```
+
+
+---
+
+#### 2. Qoder CLI
+
+**官方网站**：[https://docs.qoder.com/](https://docs.qoder.com/)
+
+**安装方式**：
+
+**macOS / Linux：**
+```bash
+brew install qoderai/qoder/qodercli --cask
+```
+
+**Windows：**
+```powershell
+curl -fsSL https://qoder.com/install | bash
+```
+
+**npm 安装（跨平台）：**
+```bash
+npm install -g @qoder-ai/qodercli
+```
+
+**验证安装**：
+```bash
+qodercli --version
+```
+
+
+---
+
+#### 3. Cursor CLI
+
+**官方网站**：[https://cursor.com/cn/cli](https://cursor.com/cn/cli)
+
+**安装方式**：
+
+**macOS / Windows：**
+```bash
+curl https://cursor.com/install -fsS | bash
+```
+
+
+**验证安装**：
+```bash
+cursor-agent --version
+```
+
+---
+
+#### 4. Copilot CLI
+
+**官方网站**：[https://docs.github.com/en/copilot/how-tos/set-up/install-copilot-cli](https://docs.github.com/en/copilot/how-tos/set-up/install-copilot-cli)
+
+**前置要求**：需要有 GitHub Copilot 订阅
+
+**安装方式**：
+
+```bash
+npm install -g @github/copilot
+```
+
+**验证安装**：
+```bash
+copilot --version
+```
+
+
+---
+
+
+
+#### 5. Gemini CLI
+
+**官方网站**：[https://geminicli.com/](https://geminicli.com/)
+
+**安装方式**：
+
+```bash
+npm install -g @google/gemini-cli
+```
+
+
+**验证安装**：
+```bash
+gemini --version
+```
+
+---
+
+
+### 安装后刷新
+
+安装完成后，请执行以下操作：
+
+1. **重启 HBuilderX**：确保 HBuilderX 能够检测到新安装的 CLI 工具
+2. **重新打开 AI Chat 视图**：检查助手是否显示版本号
+3. **验证路径**：确保 CLI 工具已添加到系统 PATH 环境变量中
+
+
+### 常见安装问题
+
+**Q: 安装后 HBuilderX 仍显示"未安装"状态？**
+
+A: 请检查：
+1. CLI 工具是否已正确添加到系统 PATH 环境变量
+2. 在命令行中运行 `which <cli-name>`（macOS/Linux）或 `where <cli-name>`（Windows）验证安装路径
+3. 重启 HBuilderX
+
+**Q: 权限不足无法安装？**
+
+A:
+- macOS/Linux：在命令前添加 `sudo`
+- Windows：以管理员身份运行终端
+- npm 全局安装权限问题：参考 [npm 权限修复指南](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally)
+
+**Q: 网络问题导致安装失败？**
+
+A:
+- 使用国内镜像源（npm、pip）
+- 配置代理：`npm config set proxy http://your-proxy:port`
+- 直接从 GitHub Releases 下载预编译包
 
 
 ## 开启聊天
