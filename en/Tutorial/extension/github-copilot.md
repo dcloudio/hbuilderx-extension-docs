@@ -67,10 +67,6 @@ To learn more about @vscode/chat-lib, please visit [https://github.com/microsoft
 
 You can find the following configuration options in `Settings -> Plugin Configuration -> GitHub Copilot`:
 
-- **`Copilot Status Display`**: Controls how the status bar icon is displayed.
-  - `Auto`: Automatic mode.
-  - `Icon Only`: Display icon only.
-  - `Icon + Text`: Display icon and text "Copilot".
 - **`Enable or Disable Copilot Inline Auto-completion`**: Globally enable or disable this plugin's code auto-completion feature.
   - `Checked`: Enabled (default).
   - `Unchecked`: Disabled.
