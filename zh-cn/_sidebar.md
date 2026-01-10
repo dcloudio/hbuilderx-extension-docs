@@ -56,6 +56,7 @@
     * [重构](/Tutorial/Language/refactor.md)
 * AI扩展
     * [AI Chat](/Tutorial/AI/AIChat.md)
+    * [AI 代码补全](/Tutorial/AI/github-copilot.md)
 * App开发
     * [真机运行常见问题](/Tutorial/App/PhoneDebugging.md)
     * [安装配置模拟器](/Tutorial/App/installSimulator.md)
@@ -87,7 +88,6 @@
     * [FTP/SFTP](/Tutorial/extension/ftp.md)
     * [MarkDown一键分享](/Tutorial/extension/markdown_share.md)
     * [Node程序开发](/Tutorial/extension/node-development.md)
-    * [Github Copilot](/Tutorial/extension/github-copilot.md)
 * 参考/其它
     * [自定义字体](/Tutorial/settings/font.md)
     * [px自动转upx](/Tutorial/settings/px-upx)

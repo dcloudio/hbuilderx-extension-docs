@@ -53,6 +53,7 @@
     * [Refactor](/Tutorial/Language/refactor.md)
 * AI
     * [AI Chat](/Tutorial/AI/AIChat.md)
+    * [AI Code Completion](/Tutorial/AI/github-copilot.md)
 * App
     * [Phone Debugging](/Tutorial/App/PhoneDebugging.md)
     * [Install Simulator](/Tutorial/App/installSimulator.md)
@@ -79,7 +80,6 @@
     * [Formator Prettier 1.0.6](/Tutorial/extension/prettier-1.0.6.md)
     * [FTP/SFTP](/Tutorial/extension/ftp.md)
     * [MarkDown Share](/Tutorial/extension/markdown_share.md)
-    * [Github Copilot](/Tutorial/extension/github-copilot.md)
 * Other
     * [Font Setting](/Tutorial/settings/font.md)
     * [px-upx](/Tutorial/settings/px-upx)
