@@ -1,17 +1,16 @@
 
-# GitHub Copilot For HBuilderX Plugin User Guide
+# AI Code Completion Plugin User Guide
 
 ## Introduction
 
 This plugin aims to integrate GitHub Copilot's code auto-completion feature into HBuilderX IDE, providing developers with inline code suggestions to improve coding efficiency.  
-This plugin leverages the SDK `@vscode/chat-lib` extracted from VS Code Copilot Chat to retrieve code completion suggestions in real time.  
+This plugin delivers auto-completion functionality through the GitHub Copilot SDK. To use it, you must sign in to your GitHub account via GitHub OAuth Device authentication.  
 To learn more about GitHub Copilot, please visit [https://github.com/features/copilot](https://github.com/features/copilot).  
-To learn more about @vscode/chat-lib, please visit [https://github.com/microsoft/vscode-copilot-chat](https://github.com/microsoft/vscode-copilot-chat).  
 
 ## Environment Requirements
 
 - **HBuilderX**: Version `4.71` or higher.
-- **Node.js**: Version `22.14` or higher. The @vscode/chat-lib language server requires a separate Node.js environment to run.  
+- **Node.js**: Version `22.14` or higher.   
 
 ## How to Use
 

@@ -1,17 +1,16 @@
 
-# GitHub Copilot For HBuilderX 插件使用说明
+# AI 代码补全 插件使用说明
 
 ## 简介
 
-本插件旨在将 GitHub Copilot 的代码自动补全功能集成到 HBuilderX IDE 中，为开发者提供行内代码建议，从而提升编码效率。
-本插件基于 VS Code Copilot Chat 提取的 SDK `@vscode/chat-lib` 实时获取代码补全建议。
-要了解更多 GitHub Copilot 信息，请访问 [https://github.com/features/copilot](https://github.com/features/copilot)。
-要了解更多 @vscode/chat-lib 信息，请访问 [https://github.com/microsoft/vscode-copilot-chat](https://github.com/microsoft/vscode-copilot-chat)。
+本插件旨在将 GitHub Copilot 的代码自动补全功能集成到 HBuilderX IDE 中，为开发者提供行内代码建议，从而提升编码效率。  
+本插件通过GitHub Copilot开放的SDK提供自动补全功能，使用时，需要通过Github OAuth Device认证登录Github账号。  
+要了解更多 GitHub Copilot 信息，请访问 [https://github.com/features/copilot](https://github.com/features/copilot)。  
 
 ## 环境要求
 
 - **HBuilderX**: 版本 `4.71` 或更高。
-- **Node.js**: 版本 `22.14` 或更高，@vscode/chat-lib 语言服务器需要独立的 Node.js 环境运行。
+- **Node.js**: 版本 `22.14` 或更高。  
 
 ## 如何使用
 
