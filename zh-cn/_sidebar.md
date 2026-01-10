@@ -54,6 +54,8 @@
     * [kotlin、swift文件格式化](/Tutorial/Language/native_language_format.md)
     * [uni-app-x 语言服务使用说明](/Tutorial/Language/vscodeUseHxLs.md)
     * [重构](/Tutorial/Language/refactor.md)
+* AI扩展
+    * [AI Chat](/Tutorial/AI/AIChat.md)
 * App开发
     * [真机运行常见问题](/Tutorial/App/PhoneDebugging.md)
     * [安装配置模拟器](/Tutorial/App/installSimulator.md)
@@ -86,7 +88,6 @@
     * [MarkDown一键分享](/Tutorial/extension/markdown_share.md)
     * [Node程序开发](/Tutorial/extension/node-development.md)
     * [Github Copilot](/Tutorial/extension/github-copilot.md)
-    * [hbuilderx-ai-chat](/Tutorial/extension/hbuilderx-ai-chat.md)
 * 参考/其它
     * [自定义字体](/Tutorial/settings/font.md)
     * [px自动转upx](/Tutorial/settings/px-upx)
