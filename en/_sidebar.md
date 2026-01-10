@@ -51,6 +51,8 @@
     * [Formatting of Kotlin and Swift files](/Tutorial/Language/native_language_format.md)
     * [uni-app-x Language Service Instructions](/Tutorial/Language/vscodeUseHxLs.md)
     * [Refactor](/Tutorial/Language/refactor.md)
+* AI
+    * [AI Chat](/Tutorial/AI/AIChat.md)
 * App
     * [Phone Debugging](/Tutorial/App/PhoneDebugging.md)
     * [Install Simulator](/Tutorial/App/installSimulator.md)
@@ -78,7 +80,6 @@
     * [FTP/SFTP](/Tutorial/extension/ftp.md)
     * [MarkDown Share](/Tutorial/extension/markdown_share.md)
     * [Github Copilot](/Tutorial/extension/github-copilot.md)
-    * [hbuilderx-ai-chat](/Tutorial/extension/hbuilderx-ai-chat.md)
 * Other
     * [Font Setting](/Tutorial/settings/font.md)
     * [px-upx](/Tutorial/settings/px-upx)
