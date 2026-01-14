@@ -482,20 +482,11 @@ test/chat.test.js:
 ### 使用限制
 
 1. **文件必须已打开**: LSP 需要文件已在编辑器中打开才能提供准确信息
-2. **语言服务支持**: 只支持已安装语言服务的文件类型(JavaScript、TypeScript 等)
+2. **语言服务支持**: 只支持已安装语言服务的文件类型(JavaScript、TypeScript、UTS 等)
 3. **初始化时间**: LSP 服务启动需要一些时间,过早调用可能返回空结果
 
 ---
 
-### 详细文档
-
-想了解更多 LSP MCP 工具的详细信息,包括:
-- 完整的工具参数说明
-- AI 触发机制原理
-- 更多示例对话
-- 常见问题解答
-
-请参阅完整的 [LSP MCP 工具使用指南](https://github.com/dcloudio/hbuilderx-ai-chat/blob/main/docs/LSP_MCP_TOOLS_GUIDE.md)
 
 
 ## 常见问题
