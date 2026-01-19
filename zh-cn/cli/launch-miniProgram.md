@@ -1,8 +1,10 @@
 # CLI uni-app 运行 - 小程序@launch-miniProgram
 
-> HBuilderX cli 命令行工具
+> 需HBuilderX 5.0+ 版本
 
-通过 CLI 运行到各平台小程序的 uni-app 应用，支持微信、支付宝、百度、字节跳动、QQ、360、京东、快手、飞书、小红书、鸿蒙元服务、快应用等平台。
+> 您也可以通过 npm 包使用此功能：[@dcloudio/hbuilderx-cli](https://www.npmjs.com/package/@dcloudio/hbuilderx-cli)
+
+通过 CLI 运行到各平台小程序的 uni-app 应用，支持微信、支付宝、百度、字节跳动、QQ、360、京东、快手、飞书、小红书、鸿蒙元服务、快应用等平台。[HBuilderX CLI](/cli/README?id=cli)
 
 ## 命令说明
 
@@ -486,4 +488,43 @@ cli launch mp-harmony --project 项目名称 --compile true --cleanCache true
 
 # 运行到快应用联盟（组合参数：编译模式 + 编译错误后继续运行）
 ./cli launch quickapp-webview-union --project 项目名称 --compile true --continue-on-error true
+```
+
+## 通过npm scripts使用CLI@npm
+
+我们需要在项目中安装 [@dcloudio/hbuilderx-cli](https://www.npmjs.com/package/@dcloudio/hbuilderx-cli),它是一个桥梁，让我们可以通过命令行来调用 HBuilderX 的强大功能（如启动测试流程）。
+
+#### 添加 npm 脚本支持
+
+```shell
+# 首先，请确保你的项目根目录下有 package.json 文件。如果没有，可以通过以下命令快速生成：
+npm init -y
+
+# 然后，安装 hbuilderx-cli 作为开发依赖：
+npm install @dcloudio/hbuilderx-cli --save-dev
+```
+
+#### 使用npm命令运行小程序
+
+```shell
+# 运行到微信小程序
+npm run launch:mp-weixin
+
+# 运行到支付宝小程序
+npm run launch:mp-alipay
+
+# 运行到百度小程序
+npm run launch:mp-baidu
+
+# 运行到抖音小程序
+npm run launch:mp-toutiao
+
+# 运行到QQ小程序
+npm run launch:mp-qq
+
+# 运行到微信小程序（编译模式）
+npm run launch:mp-weixin -- --compile true
+
+# 运行到微信小程序（回显运行时日志）
+npm run launch:mp-weixin -- --runtime-log true
 ```

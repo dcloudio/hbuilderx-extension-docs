@@ -1,8 +1,10 @@
 # CLI uni-app 运行 - 手机或模拟器@launch-app
 
-> HBuilderX cli 命令行工具
+> 需HBuilderX 5.0+ 版本
 
-通过 CLI 运行到手机或模拟器的 uni-app 应用，支持 Android、iOS、鸿蒙平台。
+> 您也可以通过 npm 包使用此功能：[@dcloudio/hbuilderx-cli](https://www.npmjs.com/package/@dcloudio/hbuilderx-cli)
+
+通过 CLI 运行到手机或模拟器的 uni-app 应用，支持 Android、iOS、鸿蒙平台。[HBuilderX CLI](/cli/README?id=cli)
 
 ## 命令说明
 
@@ -167,4 +169,34 @@ cli launch app-harmony --project 项目名称 --deviceId 设备序列号 --clean
 
 # 运行到鸿蒙（组合参数：编译模式 + 清理构建缓存）
 cli launch app-harmony --project 项目名称 --compile true --cleanCache true
+```
+
+## 通过npm scripts使用CLI@npm
+
+我们需要在项目中安装 [@dcloudio/hbuilderx-cli](https://www.npmjs.com/package/@dcloudio/hbuilderx-cli),它是一个桥梁，让我们可以通过命令行来调用 HBuilderX 的强大功能（如启动测试流程）。
+
+#### 添加 npm 脚本支持
+
+```shell
+# 首先，请确保你的项目根目录下有 package.json 文件。如果没有，可以通过以下命令快速生成：
+npm init -y
+
+# 然后，安装 hbuilderx-cli 作为开发依赖：
+npm install @dcloudio/hbuilderx-cli --save-dev
+```
+
+#### 使用npm命令运行应用
+
+```shell
+# 运行到 Android App
+npm run launch:app-android -- --deviceId feyhuos8ai89jr4p
+
+# 运行到 iOS真机
+npm run launch:app-ios -- --iosTarget device --deviceId 00001110001C35240AF2801A
+
+# 运行到 iOS模拟器
+npm run launch:app-ios -- --iosTarget simulator --deviceId 3FFE4F41-997F-4ED3-AC3B-DF4ADB9A4262
+
+# 运行到鸿蒙
+npm run launch:app-harmony -- --deviceId 设备序列号
 ```

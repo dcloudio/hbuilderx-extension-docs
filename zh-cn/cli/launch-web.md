@@ -1,8 +1,10 @@
 # CLI uni-app 运行 - WEB@launch-web
 
-> HBuilderX cli 命令行工具
+> 需HBuilderX 5.0+ 版本
 
-通过 CLI 运行到 Web 或手机 H5 的 uni-app 应用。
+> 您也可以通过 npm 包使用此功能：[@dcloudio/hbuilderx-cli](https://www.npmjs.com/package/@dcloudio/hbuilderx-cli)
+
+通过 CLI 运行到 Web 或手机 H5 的 uni-app 应用。[HBuilderX CLI](/cli/README?id=cli)
 
 ## 命令说明
 
@@ -58,4 +60,31 @@
 
 # 运行到Web（组合参数：编译模式 + 编译错误后继续运行）
 ./cli launch web --project 项目名称 --compile true --continue-on-error true
+```
+
+## 通过npm scripts使用CLI@npm
+
+我们需要在项目中安装 [@dcloudio/hbuilderx-cli](https://www.npmjs.com/package/@dcloudio/hbuilderx-cli),它是一个桥梁，让我们可以通过命令行来调用 HBuilderX 的强大功能（如启动测试流程）。
+
+#### 添加 npm 脚本支持
+
+```shell
+# 首先，请确保你的项目根目录下有 package.json 文件。如果没有，可以通过以下命令快速生成：
+npm init -y
+
+# 然后，安装 hbuilderx-cli 作为开发依赖：
+npm install @dcloudio/hbuilderx-cli --save-dev
+```
+
+#### 使用npm命令运行应用
+
+```shell
+# 运行到 Web（使用默认浏览器）
+npm run launch:web
+
+# 运行到 Web（指定Chrome浏览器）
+npm run launch:web -- --browser Chrome
+
+# 运行到 Web（编译模式运行）
+npm run launch:web -- --compile true
 ```
