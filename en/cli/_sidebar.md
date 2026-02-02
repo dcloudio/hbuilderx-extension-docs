@@ -18,6 +18,7 @@
     * [获取设备列表](/cli/devices-list.md)
     * [uniCloud](/cli/uniCloud.md)
     * [前端网页托管](/cli/uniCloud-hosting.md)
+    * [uni_modules](/cli/uniModules.md)
 * extension
     * [Environment Vairables](/cli/env.md)
     * [Linux Install Market Plugin](/cli/linux-install-market-plugin.md)
