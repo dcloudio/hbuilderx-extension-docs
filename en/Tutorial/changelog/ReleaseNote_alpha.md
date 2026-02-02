@@ -1,5 +1,57 @@
+## 5.0.2026013113-alpha
+* 【Important】Added AI Chat plugin. Supports integration with Claude Code, Gemini, Copilot and other CLI tools [Documentation](https://hx.dcloud.net.cn/Tutorial/AI/AIChat) <https://issues.dcloud.net.cn/pages/issues/detail?id=25161>
+* 【Important】Added Copilot for HBuilder plugin. Supports AI code completion [Documentation](https://hx.dcloud.net.cn/Tutorial/AI/github-copilot) <https://issues.dcloud.net.cn/pages/issues/detail?id=24781>
+* Added uni-app (x) run via `CLI launch`, facilitating AI automatic problem fixing [Documentation](https://hx.dcloud.net.cn/cli/launch-app) <https://issues.dcloud.net.cn/pages/issues/detail?id=24793>
+* Added Language Service uni-app x project style supports externalClasses [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=25784)
+* Added command(workbench.action.autoUpdate) supports user-configured shortcuts for automatic updates [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=26043)
+* Fixed macOS HBuilderX tooltip visibility issues in Cool Black and Elegant Blue themes at bottom console [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=20959)
+* Fixed UI state and actual debug state inconsistency when switching active breakpoints during plugin debugging [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=21306)
+* Fixed single project window (multi-window) causing project confusion in certain situations [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=23011)
+* Fixed debug view UI and actual state desynchronization, call stack node click breakpoint jump without highlighting, sometimes debug exit highlighting not cleared [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=24773)
+* Fixed uniapp-x project manifest.json unable to respond to view switching and tab switching when not in source view [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=24780)
+* Fixed version 3.87 issue where Windows plugins using font files would fail to uninstall [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=24783)
+* Fixed built-in file system switching to large icons, clicking any file then shaking mouse causes icon following, long-term mouse shaking causes program crash [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=24868)
+* Fixed plugin-registered shortcuts sometimes not working [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=25346)
+* Fixed switching user login, when password input is incorrect, occasionally a duplicate login page appears on the login page [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=26041)
+* Fixed version 4.81 issue where console link text selection triggers link jump, causing shortcut copy to copy unexpected content [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=25094)
+* Fixed project manager using esc to cancel folder rename causes current position collapse/expand failure [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=23070)
+* Fixed multi-file search results cannot be replaced with empty string [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=24792)
+* Fixed multi-file search Windows replacement not updating results timely [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=24794)
+* Fixed multi-file search Windows replacement text error popup consistency prompt [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=24796)
+* Fixed multi-file search Windows dirty files having duplicate search results [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=24802)
+* Fixed editor conditional compilation graying when folding code blocks, hover preview shows abnormal coloring [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=23021)
+* Fixed viewing local history of open files, history records contain other files with same name but different file types [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=21079)
+* Fixed multi-cursor selection minimap causing left partial position cancel multi-cursor selection failure [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=23065)
+* Fixed conditional compilation parentheses syntax highlighting error [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=25443)
+* Fixed js, ts, uts files missing partial syntax highlighting in Cool Black theme [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=26037)
+* Fixed version 4.66 issue where Language Service px to rpx completion items no longer prompt [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=24340)
+* Added Language Service UTS plugin root path files support conditional compilation [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=20869)
+* Added Language Service UTS plugin Harmony platform supports native file mixed compilation syntax hints [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=21727)
+* Added Language Service UTS plugin development environment supports conditional compilation [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=22069)
+* Fixed Language Service UTS plugin package name conditional compilation not compatible with app-js platform, causing errors [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=21886)
+* Fixed Language Service platform compatibility display error [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=22520)
+* Fixed Language Service hovering over conditional compilation comment text shows conditional compilation graying prompt [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=22739)
+* Added Language Service easycom supports withDefault+defineProps setting default values [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=22763)
+* Added Language Service vue slots support [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=23696)
+* Added Language Service Harmony platform enabling vapor mode supports referencing C++ files [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=24390)
+* Fixed Language Service component bool type attributes, completion results incorrect [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=22771)
+* Fixed Language Service css attribute values, hover results incorrect [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=23511)
+* Fixed Language Service uni-app x project HTML files cannot prompt DOM API [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=21429)
+* Fixed Language Service special value domain String missing CSSString [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=22425)
+* Fixed Language Service in certain situations, causing projects unable to delete [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=22526)
+* Fixed Language Service pages.json subPackages root and path missing code hints [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=22864)
+* Fixed syntax highlighting vue files v-bind shorthand syntax causing incorrect syntax highlighting [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=23004)
+* Fixed mac dark theme opening built-in browser flashes white screen [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=26039)
+* Fixed opening built-in browser, dragging in external file automatically opens [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=26042)
+* Added AI plugin Android memory leak automatic analysis function [Documentation](https://ext.dcloud.net.cn/plugin?id=23720) <https://issues.dcloud.net.cn/pages/issues/detail?id=24785>
+* Added adjustment new page cloud integration series built-in templates support uni_modules type [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=26040)
+* Fixed version 4.84 issue where new page window automatically caches all template files [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=26038)
+* Added pages.json page filtering, quick run to specified page [Documentation](https://uniapp.dcloud.net.cn/tutorial/run/pages-json-filter.html) <https://issues.dcloud.net.cn/pages/issues/detail?id=25453>
+* Fixed version 4.87 issue where creating uniCloud project prompts "missing appid, please set appid in manifest.json" [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=24935)
+* Fixed version 4.76 issue where unable to download all public modules [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=25160)
+
 ## 4.87.2025112602-alpha
-* Added uni-app (x) to run and retrieved runtime logs via CLI. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=22250)
+* Added support for running uni-app (x) and obtaining runtime logs via the `CLI logcat` command, facilitating AI access to runtime logs for automatic problem fixing. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=22250)
 * Fixed an issue in version 4.84 where the app couldn't run on the iOS 26 simulator under certain circumstances. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=23348)
 
 
