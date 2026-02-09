@@ -27,28 +27,42 @@ HBuilderX启动后，点击菜单【工具】【插件安装】，即可打开�
 
 ## 离线安装插件@OfflineInstall
 
-> `nodejs`插件，如果插件内，没有`node_modules`，需要手动执行`npm install`
+插件市场，找到要下载的插件，如下所示，点击【下载插件ZIP】，
 
-#### windows
+<img src="https://web-ext-storage.dcloud.net.cn/hx/download_zip_for_dart_sass.jpg" style="zoom: 50%;" />
 
-1. 打开资源管理器，进入HBuilderX安装目录
-2. 进入`plugins`目录
-3. 将插件文件夹, 放置到此目录。（如是zip包，解压即可）
+1. 打开HBuilderX安装目录，进入`plugins`目录
+
+   ```bash
+   # Mac电脑 正式版 安装目录
+   cd /Applications/HBuilderX.app/Contents/HBuilderX/plugins/
+
+   # Mac电脑 Alpha版 安装目录
+   cd /Applications/HBuilderX-Alpha.app/Contents/HBuilderX/plugins/
+   ```
+
+2. 将下载的zip包，解压到此文件夹 （注意解压的目录名，不能带版本号，必须跟插件市场的`插件ID`一致。）
+
+    ```bash
+    ✅ 正确示例：
+    plugins/
+    └── compile-dart-sass/
+
+    ❌ 错误示例：
+    plugins/
+    └── compile-dart-sass-0.0.3/  （包含版本号）
+    └── compile-dart-sass-main/   （包含其他后缀）
+    ```
+3. 安装依赖
+    - 如果插件的 package.json 中声明了依赖，且目录下不存在 node_modules 文件夹
+    - 在插件目录中打开命令行，执行：
+    ```bash
+    npm install
+
+    # 使用HBuilderX 自带的npm安装
+    ../npm/npm install
+    ```
 4. 重启HBuilderX编辑器
-
-#### Mac
-
-1. 打开系统终端，输入如下命令，打开HBuilderX插件目录 （注意：mac上，正式版和alpha目录不一样）
-2. 将插件文件夹, 如是zip包，解压即可），放置到`plugins`目录下
-3. 重启HBuilderX编辑器
-
-```shell
-# 正式版
-open /Applications/HBuilderX.app/Contents/HBuilderX/plugins/
-
-# Alpha版
-open /Applications/HBuilderX-Alpha.app/Contents/HBuilderX/plugins/
-```
 
 ## 插件安装失败问题汇总@install-Fail
 

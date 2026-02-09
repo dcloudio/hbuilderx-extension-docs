@@ -22,30 +22,44 @@ In [Plugin Market](https://ext.dcloud.net.cn/?cat1=1&cat2=11&orderBy=TotalDownlo
 
 <img src="/static/snapshots/tutorial/plugins_install/plugins_install_3.jpg" style="zoom: 45%;border: 1px solid #eee;border-radius: 20px;"/>
 
-## Install plugin offline
+## 离线安装插件@OfflineInstall
 
-> `nodejs` plugin, if `node_modules` does not exist in the plugin, you have to manually run `npm install`.
+插件市场，找到要下载的插件，如下所示，点击【下载插件ZIP】，
 
-#### windows
+<img src="https://web-ext-storage.dcloud.net.cn/hx/download_zip_for_dart_sass.jpg" style="zoom: 50%;" />
 
-1. Open Resource Manager and find the HBuilderX installation directory
-2. Open the 'plugins' directory of HBuilderX
-3. Copy/paste the downloaded HBuilderX plugins to the current directory. (Decompress the archive file if it is a ZIP package)
-4. Restart the HBuilderX editor
+1. 打开HBuilderX安装目录，进入`plugins`目录
 
-#### Mac
+   ```bash
+   # Mac电脑 正式版 安装目录
+   cd /Applications/HBuilderX.app/Contents/HBuilderX/plugins/
 
-1. Open the system terminal and run the following command to open the HBuilderX plugins directory (note: On MAC, The official version and the alpha version have different directories).
-2. Copy/paste the downloaded HBuilderX plugins to the current directory. (Decompress the archive file if it is a ZIP package)
-3. Restart the HBuilderX editor
+   # Mac电脑 Alpha版 安装目录
+   cd /Applications/HBuilderX-Alpha.app/Contents/HBuilderX/plugins/
+   ```
 
-```shell
-# release
-open /Applications/HBuilderX.app/Contents/HBuilderX/plugins/
+2. 将下载的zip包，解压到此文件夹 （注意解压的目录名，不能带版本号，必须跟插件市场的`插件ID`一致。）
 
-# Alpha
-open /Applications/HBuilderX-Alpha.app/Contents/HBuilderX/plugins/
-```
+    ```bash
+    ✅ 正确示例：
+    plugins/
+    └── compile-dart-sass/
+
+    ❌ 错误示例：
+    plugins/
+    └── compile-dart-sass-0.0.3/  （包含版本号）
+    └── compile-dart-sass-main/   （包含其他后缀）
+    ```
+3. 安装依赖
+    - 如果插件的 package.json 中声明了依赖，且目录下不存在 node_modules 文件夹
+    - 在插件目录中打开命令行，执行：
+    ```bash
+    npm install
+
+    # 使用HBuilderX 自带的npm安装
+    ../npm/npm install
+    ```
+4. 重启HBuilderX编辑器
 
 ## FAQs on Plugins Install Failed @install-Fail
 
