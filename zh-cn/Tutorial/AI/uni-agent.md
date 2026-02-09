@@ -86,7 +86,7 @@ uni-agent 运行时依赖以下 5 个环境变量：
 |--------|------|------|--------|
 | `UNI_AGENT_BASE_URL` | 是 | uni-agent API 服务的基础地址 | `http://localhost:4141` |
 | `UNI_AGENT_API_KEY` | 是 | API 认证密钥，用于身份验证 | `cr_abcdefghijklmnopqrstuvwxyz` |
-| `UNI_AGENT_PROVIDER` | 是 | AI 模型提供商标识 | `anthropic`、 `github-copilot`、 `openai-compatible` |
+| `UNI_AGENT_PROVIDER` | 是 | AI 模型提供商标识 | `anthropic`、 `github-copilot` |
 | `UNI_AGENT_MODEL` | 是 | 默认使用的模型 | `claude-sonnet-4-5` |
 | `UNI_AGENT_SMALL_FAST_MODEL` | 否 | 用于快速任务的小模型 | `claude-haiku-4-5` |
 
