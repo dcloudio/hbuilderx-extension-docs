@@ -18,6 +18,7 @@
     * [uni-app 运行日志 - WEB](cli/logcat-web.md)
     * [uni-app 运行日志 - 小程序](cli/logcat-miniProgram.md)
     * [uni-app 运行日志 - uniCloud](cli/logcat-unicloud.md)
+    * [uni-app 截图 - 手机或模拟器](cli/screencap-app.md)
     * [获取设备列表](/cli/devices-list.md)
     * [uniCloud](/cli/uniCloud.md)
     * [前端网页托管](/cli/uniCloud-hosting.md)

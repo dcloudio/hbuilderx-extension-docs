@@ -30,6 +30,8 @@
 | --cleanCache        | 清理构建缓存（仅 uni-app x 项目生效），取值：true 或 false，默认值为 false          |
 | --compile           | 编译模式运行（只编译代码），取值：true 或 false，默认值为 false                     |
 | --continue-on-error | 编译错误后继续运行，取值：true 或 false，默认值为 false                             |
+| --pagePath          | 页面路径（需HBuilderX 5.01+ 版本）                                                  |
+| --pageQuery         | 页面查询参数（使用 & 符号连接多个参数，需HBuilderX 5.01+ 版本）                      |
 
 **使用示例：**
 
@@ -63,6 +65,12 @@
 
 # 运行到Android App（组合参数：清理构建缓存 + 编译模式）
 ./cli launch app-android --project 项目名称 --cleanCache true --compile true
+
+# 运行到Android App（指定页面路径）
+./cli launch app-android --project 项目名称 --pagePath pages/index/index
+
+# 运行到Android App（指定页面路径和查询参数）
+./cli launch app-android --project 项目名称 --pagePath pages/detail/detail --pageQuery id=123&type=product
 ```
 
 ### launch app-ios
@@ -90,6 +98,8 @@
 | --peveloperCertificate | 开发者证书文件（开发 uts 插件需要）                                                 |
 | --provisioningProfile  | 配置描述文件（开发 uts 插件需要）                                                   |
 | --privateKey           | 私钥密码（开发 uts 插件需要）                                                       |
+| --pagePath             | 页面路径（需HBuilderX 5.01+ 版本）                                                  |
+| --pageQuery            | 页面查询参数（使用 & 符号连接多个参数，需HBuilderX 5.01+ 版本）                      |
 
 **使用示例：**
 
@@ -123,6 +133,12 @@
 
 # 运行到iOS App（组合参数：编译模式 + 清理构建缓存）
 ./cli launch app-ios --project 项目名称 --compile true --cleanCache true
+
+# 运行到iOS App（指定页面路径）
+./cli launch app-ios --project 项目名称 --pagePath pages/index/index
+
+# 运行到iOS App（指定页面路径和查询参数）
+./cli launch app-ios --project 项目名称 --pagePath pages/detail/detail --pageQuery id=123&type=product
 ```
 
 ### launch app-harmony
