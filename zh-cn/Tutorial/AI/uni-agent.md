@@ -1,8 +1,8 @@
 # uni-agent
 
-## 在 hbuilderx-ai-chat 中使用 uni-agent
+uni-agent 是专为 uni-app / uni-app x 开发者打造的 AI 编程助手，内置了丰富的技能（Skills）、子智能体（Subagents）和知识库，帮助您高效完成跨平台应用开发。
 
-uni-agent 是 hbuilderx-ai-chat 插件支持的 AI 编码助手 Provider，支持多模型调用、流式输出、工具调用和 MCP 协议等能力。
+## 在 hbuilderx-ai-chat 中使用 uni-agent
 
 在 hbuilderx-ai-chat 中使用 uni-agent 有两种方式：
 
@@ -28,16 +28,14 @@ uni-agent 是 hbuilderx-ai-chat 插件支持的 AI 编码助手 Provider，支�
    - 如果您尚未订阅，请前往 DCloud 官网订阅 uni-agent 套餐
    - 订阅完成后，套餐信息会自动关联到您的 DCloud 账户
 
-2. **登录 DCloud 账户**
-   - 在 HBuilderX 中，点击状态栏的登录入口，使用 DCloud 账户登录
-   - 登录成功后，插件会自动检测账户的订阅状态
+2. **选择 uni-agent 助手**
+   - 打开 HBuilderX 并登录您的 DCloud 账户
+   - 点击 HBuilderX 右上角的 `AI` 图标，进入插件视图
+   - 在插件视图界面中打开一个新会话，并选择 `uni-agent` 助手
 
-<img src="https://web-ext-storage.dcloud.net.cn/hx/uni-agent/hbuilderx-login.png" style="zoom: 60%;" />
+<img src="https://web-ext-storage.dcloud.net.cn/hx/uni-agent/choose-uni-agent.png" style="zoom: 60%;" />
 
-3. **选择 uni-agent Provider**
-   - 在 hbuilderx-ai-chat 的 Provider 选择界面中，选择 `uni-agent(sdk)` 作为当前 Provider
-
-4. **自动配置生效**
+3. **自动配置生效**
    - 插件会自动向 DCloud 服务端请求您的套餐信息
    - 使用 `uni-agent` 时，插件自动从套餐信息中提取 API 地址、密钥、模型提供商和默认模型等配置
 
@@ -66,7 +64,7 @@ uni-agent 是 hbuilderx-ai-chat 插件支持的 AI 编码助手 Provider，支�
 
    ```
    # uni-agent 配置
-   UNI_AGENT_BASE_URL=http://localhost:1234
+   UNI_AGENT_BASE_URL=your_provider_api_base_url
    UNI_AGENT_API_KEY=your_api_key
    UNI_AGENT_PROVIDER=anthropic
    UNI_AGENT_MODEL=anthropic/claude-sonnet-4-5
@@ -84,10 +82,20 @@ uni-agent 运行时依赖以下 5 个环境变量：
 
 | 变量名 | 必填 | 说明 | 示例值 |
 |--------|------|------|--------|
-| `UNI_AGENT_BASE_URL` | 是 | uni-agent API 服务的基础地址 | `http://localhost:4141` |
-| `UNI_AGENT_API_KEY` | 是 | API 认证密钥，用于身份验证 | `cr_abcdefghijklmnopqrstuvwxyz` |
-| `UNI_AGENT_PROVIDER` | 是 | AI 模型提供商标识 | `anthropic`、 `github-copilot` |
-| `UNI_AGENT_MODEL` | 是 | 默认使用的模型 | `claude-sonnet-4-5` |
-| `UNI_AGENT_SMALL_FAST_MODEL` | 否 | 用于快速任务的小模型 | `claude-haiku-4-5` |
+| `UNI_AGENT_BASE_URL` | 是 | uni-agent API 服务的基础地址 | `your_provider_api_base_url` |
+| `UNI_AGENT_API_KEY` | 是 | API 认证密钥，用于身份验证 | `your_api_key` |
+| `UNI_AGENT_PROVIDER` | 是 | AI 模型提供商标识 | `anthropic`、`openai-compatible` |
+| `UNI_AGENT_MODEL` | 是 | 默认使用的模型 | `anthropic/claude-sonnet-4-5` |
+| `UNI_AGENT_SMALL_FAST_MODEL` | 否 | 用于快速任务的小模型 | `anthropic/claude-haiku-4-5` |
 
+**openai-compatible 配置说明**
+如果 `UNI_AGENT_PROVIDER` 配置为 `openai-compatible`，可以使用任何兼容 OpenAI API 的服务商和模型，例如 deepseek、azure-openai 等。
+- 以 deepseek 模型提供商为例，环境变量配置如下：
+```shell
+UNI_AGENT_BASE_URL=https://api.deepseek.com
+UNI_AGENT_API_KEY=your_deepseek_api_key
+UNI_AGENT_PROVIDER=openai-compatible
+UNI_AGENT_MODEL=openai-compatible/deepseek-chat
+UNI_AGENT_SMALL_FAST_MODEL=openai-compatible/deepseek-chat
+```
 ---
