@@ -88,7 +88,8 @@ uni-agent 运行时依赖以下 5 个环境变量：
 | `UNI_AGENT_MODEL` | 是 | 默认使用的模型 | `anthropic/claude-sonnet-4-5` |
 | `UNI_AGENT_SMALL_FAST_MODEL` | 否 | 用于快速任务的小模型 | `anthropic/claude-haiku-4-5` |
 
-**openai-compatible 配置说明**
+**openai-compatible 模型提供商配置说明**  
+
 如果 `UNI_AGENT_PROVIDER` 配置为 `openai-compatible`，可以使用任何兼容 OpenAI API 的服务商和模型，例如 deepseek、azure-openai 等。
 - 以 deepseek 模型提供商为例，环境变量配置如下：
 ```shell
