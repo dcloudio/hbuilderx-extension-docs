@@ -24,6 +24,7 @@
 | --project  | HBuilder X 里导入的项目名称或绝对路径                                        |
 | --deviceId | 设备序列号，需与当前运行会话一致；不填则使用该平台下最近连接的一台设备       |
 | --saveFile | 截图保存的完整文件路径（如 .png），必填                                      |
+| --fullPage | 截图类型，取值：true（长图）或 false（当前屏），默认值为 true                |
 
 **使用示例：**
 
@@ -42,6 +43,12 @@ D:\ide\HBuilderX\cli.exe screencap app-android --project hello-uni-app-x --saveF
 
 # 对Android App截图（指定设备）
 ./cli screencap app-android --project 项目名称 --deviceId 设备序列号 --saveFile screenshot.png
+
+# 对Android App截图（截取长图，默认）
+./cli screencap app-android --project 项目名称 --saveFile screenshot.png --fullPage true
+
+# 对Android App截图（只截取当前屏）
+./cli screencap app-android --project 项目名称 --saveFile screenshot.png --fullPage false
 ```
 
 ### screencap app-ios
@@ -62,6 +69,7 @@ D:\ide\HBuilderX\cli.exe screencap app-android --project hello-uni-app-x --saveF
 | --project  | HBuilder X 里导入的项目名称或绝对路径                                        |
 | --deviceId | 设备序列号（udid），需与当前运行会话一致；不填则使用该平台下最近连接的一台设备 |
 | --saveFile | 截图保存的完整文件路径（如 .png），必填                                      |
+| --fullPage | 截图类型，取值：true（长图）或 false（当前屏），默认值为 true                |
 
 **使用示例：**
 
@@ -80,6 +88,12 @@ D:\ide\HBuilderX\cli.exe screencap app-ios --project hello-uni-app-x --saveFile 
 
 # 对iOS App截图（指定设备）
 ./cli screencap app-ios --project 项目名称 --deviceId 设备序列号 --saveFile screenshot.png
+
+# 对iOS App截图（截取长图，默认）
+./cli screencap app-ios --project 项目名称 --saveFile screenshot.png --fullPage true
+
+# 对iOS App截图（只截取当前屏）
+./cli screencap app-ios --project 项目名称 --saveFile screenshot.png --fullPage false
 ```
 
 ### screencap app-harmony
@@ -100,6 +114,7 @@ D:\ide\HBuilderX\cli.exe screencap app-ios --project hello-uni-app-x --saveFile 
 | --project  | HBuilder X 里导入的项目名称或绝对路径                                        |
 | --deviceId | 设备序列号，需与当前运行会话一致；不填则使用该平台下最近连接的一台设备       |
 | --saveFile | 截图保存的完整文件路径（如 .png），必填                                      |
+| --fullPage | 截图类型，取值：true（长图）或 false（当前屏），默认值为 true                |
 
 **使用示例：**
 
@@ -118,4 +133,10 @@ D:\ide\HBuilderX\cli.exe screencap app-harmony --project hello-uni-app-x --saveF
 
 # 对鸿蒙App截图（指定设备）
 ./cli screencap app-harmony --project 项目名称 --deviceId 设备序列号 --saveFile screenshot.png
+
+# 对鸿蒙App截图（截取长图，默认）
+./cli screencap app-harmony --project 项目名称 --saveFile screenshot.png --fullPage true
+
+# 对鸿蒙App截图（只截取当前屏）
+./cli screencap app-harmony --project 项目名称 --saveFile screenshot.png --fullPage false
 ```
