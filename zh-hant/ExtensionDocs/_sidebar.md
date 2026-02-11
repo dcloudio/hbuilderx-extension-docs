@@ -38,9 +38,10 @@
     * [JSON操作](/ExtensionDocs/Api/util/json.md)
 * env
     * [env屬性列表](/ExtensionDocs/Api/env/readme.md)
-    * [authorize](/ExtensionDocs/Api/env/authorize.md)
     * [Clipboard](/ExtensionDocs/Api/env/Clipboard.md)
     * [openExternal](/ExtensionDocs/Api/env/openExternal.md)
+* authorize
+    * [authorize](/ExtensionDocs/Api/env/authorize.md)
 * cli
     * [cliconsole](/ExtensionDocs/Api/cli/cliconsole.md)
 * other
