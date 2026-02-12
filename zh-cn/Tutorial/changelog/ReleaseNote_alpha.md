@@ -1,3 +1,17 @@
+## 5.01.2026021122-alpha
+* 新增 AI Chat 支持 uni-agent 专为 uni-app (x) 开发者打造的 AI 编程助手 [文档](https://hx.dcloud.net.cn/Tutorial/AI/uni-agent) <https://issues.dcloud.net.cn/pages/issues/detail?id=26435>
+* Windows平台 修复 安装路径含特殊字符时，三种主题的样式显示异常 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=26353)
+* 修复 展开跳转->书签的二级菜单后，左侧资源管理器的F2重命名失效 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=25854)
+* 修复 md文件中uvue代码块没有高亮 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=26341)
+* 修复 5.0版本引发的 md预览误渲染括号内容 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=26327)
+* 修复 5.0版本引发的 语言服务 性能问题 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=26199)
+* 修复 vue在特定语法的行中注释，注释不对 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=25894)
+* macOS(Apple Silicon)平台 修复 5.0版本引发的 语言服务 easycom组件某些情况下无法提示标签属性 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=26434)
+* 新增 uni-app x运行 通过`CLI screencap`截图，方便AI自动修复问题 [文档](https://hx.dcloud.net.cn/cli/screencap-app) <https://issues.dcloud.net.cn/pages/issues/detail?id=26397>
+* 新增 uni-app (x)运行 通过`CLI launch`运行，支持运行到指定页面 [文档](https://hx.dcloud.net.cn/cli/launch-app) <https://issues.dcloud.net.cn/pages/issues/detail?id=26399>
+* 新增 uni-app (x)运行/发行 将项目目录添加到杀毒软件监控排除名单中 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=26400)
+* macOS平台 修复 5.0版本引发的 manifest 配置的应用图标在安心打包生成的 APK 中未生效 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=26437)
+
 ## 5.0.2026013113-alpha
 * 【重要】新增 AI Chat 插件。支持Claude Code、Gemini、Copilot等CLI工具集成 [文档](https://hx.dcloud.net.cn/Tutorial/AI/AIChat) <https://issues.dcloud.net.cn/pages/issues/detail?id=25161>
 * 【重要】新增 Copilot for HBuilder 插件。支持AI代码补全 [文档](https://hx.dcloud.net.cn/Tutorial/AI/github-copilot) <https://issues.dcloud.net.cn/pages/issues/detail?id=24781>
