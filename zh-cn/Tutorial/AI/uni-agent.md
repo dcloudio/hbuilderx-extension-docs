@@ -100,3 +100,46 @@ UNI_AGENT_MODEL=openai-compatible/deepseek-chat
 UNI_AGENT_SMALL_FAST_MODEL=openai-compatible/deepseek-chat
 ```
 ---
+
+
+## 为 uni-agent 配置自定义规则
+
+您可以在项目根目录创建一个 AGENTS.md 文件为 uni-agent 提供自定义规则，该文件中的规则会被注入到与大模型对话的上下文中，以便针对您的项目规范 uni-agent 的行为。
+
+### AGENTS.md 文件示例
+
+```markdown
+# 项目自定义规则
+
+## 项目概述
+
+本项目是一个基于 uni-app 开发的跨平台电商应用，支持 H5、微信小程序和 App 三端。
+
+## 技术栈
+
+- 框架：uni-app（Vue 3 + Composition API）
+- UI 组件库：uni-ui
+- 状态管理：Pinia
+- 网络请求：uni.request 封装
+- 样式：SCSS，采用 BEM 命名规范
+
+## 代码规范
+
+- 组件文件名使用 PascalCase，如 `GoodsList.vue`
+- 页面文件放在 `pages/` 目录，按模块分子目录
+- 公共组件放在 `components/` 目录
+- 工具函数放在 `utils/` 目录，按功能模块拆分
+- 接口请求统一封装在 `api/` 目录
+
+## 接口约定
+
+- 后端接口基础地址通过 `BASE_URL` 环境变量配置
+- 所有接口返回格式为 `{ code, data, message }`，code 为 0 表示成功
+- Token 存储在 `uni.getStorageSync('token')` 中，请求头携带 `Authorization: Bearer <token>`
+
+## 注意事项
+
+- 不要使用 `window`、`document` 等浏览器专有 API，请使用 uni 提供的跨平台 API
+- 图片资源统一放在 `static/` 目录，不要使用网络图片作为默认资源
+- 涉及支付、授权等敏感功能，修改前请先查阅 `docs/` 目录下的相关说明文档
+```
