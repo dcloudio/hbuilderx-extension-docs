@@ -1,4 +1,16 @@
-# hbuilderx-ai-chat
+# hbuilderx-ai-chat （已迁移至 [uni-agent](https://hx.dcloud.net.cn/Tutorial/AI/uni-agent)）
+
+## 迁移说明
+
+为了提供更专业、更全面的 AI 编程助手体验,我们已经将 hbuilderx-ai-chat 插件升级并迁移为全新的 **uni-agent** 插件。  
+
+uni-agent 是专为 uni-app / uni-app x 开发者打造的 AI 编程助手，内置了丰富的技能（Skills）、子智能体（Subagents）和知识库，帮助您高效完成跨平台应用开发。
+
+我们强烈建议所有 hbuilderx-ai-chat 用户尽快迁移到 uni-agent，以享受更强大的功能和更优质的体验。详情请参见 [uni-agent 插件文档](https://hx.dcloud.net.cn/Tutorial/AI/uni-agent)。
+
+---
+
+# hbuilderx-ai-chat 插件文档
 
 > HBuilderX 需5.0+版本
 
