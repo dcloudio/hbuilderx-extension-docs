@@ -15,7 +15,7 @@ uni-agent 是专为 uni-app / uni-app x 开发者打造的 AI 编程助手，内
 HBuilderX,可以通过以下方式打开聊天视图。
 
 - 工具栏,点击最右侧的 `AI` 图标
-- 菜单【视图】【插件扩展视图】【uni-agent】
+- 菜单【视图】【插件扩展视图】【AI Code Chat】
 - 快捷键: Windows `Ctrl+Alt+I` ;  MacOS `⌃⌘I`
 
 <img src="https://web-ext-storage.dcloud.net.cn/hx/ai-chat/plugin-entry.jpg?t=1" style="zoom: 35%;" />
@@ -65,7 +65,7 @@ HBuilderX,可以通过以下方式打开聊天视图。
 1. **打开设置面板**
    - 在 uni-agent 的聊天界面中，点击`设置`按钮打开 API Keys 配置面板
 
-<img src="https://web-ext-storage.dcloud.net.cn/hx/uni-agent/config-env.png" style="zoom: 60%;" />
+<img src="https://web-ext-storage.dcloud.net.cn/hx/ai-chat/config-env.png" style="zoom: 60%;" />
 
 2. **填写环境变量**
 - 在编辑器中使用 `KEY=VALUE` 格式填写环境变量，每行一个，以 `#` 开头的行为注释，会被忽略，[点击此处查看环境变量详细说明](#环境变量说明)。
@@ -88,20 +88,18 @@ HBuilderX,可以通过以下方式打开聊天视图。
 
 ## uni-agent 视图概览
 
-<img src="https://web-ext-storage.dcloud.net.cn/hx/uni-agent/chat-view.jpg" style="zoom: 60%;" />
+<img src="https://web-ext-storage.dcloud.net.cn/hx/ai-chat/uniagent-view.png" style="zoom: 60%;" />
 
 ### 新会话
 
 用于开始一段全新的对话。点击聊天视图右上角【新会话】后，会创建一个新的会话并重置当前会话的大纲与对话上下文；当你需要切换问题主题、重新梳理需求，或希望避免旧对话内容影响新的讨论时，可以使用该功能。
-
-<img src="https://web-ext-storage.dcloud.net.cn/hx/uni-agent/config-env.png" style="zoom: 60%;" />
 
 
 ### 历史会话
 
 用于管理和回到以前保存的会话记录。便于你从过往对话中快速续聊或复盘。
 
-<img src="https://web-ext-storage.dcloud.net.cn/hx/uni-agent/config-env.png" style="zoom: 60%;" />
+<img src="https://web-ext-storage.dcloud.net.cn/hx/ai-chat/session-history.png" style="zoom: 60%;" />
 
 - **查看历史会话** 点击聊天视图右上角【历史会话】后，会弹出历史会话列表，并显示会话标题与时间，在历史会话列表中，点击某条记录即可加载该会话内容；加载后，你可以在原会话上下文中继续提问，或查看此前的分析与结论。
 
@@ -112,7 +110,7 @@ HBuilderX,可以通过以下方式打开聊天视图。
 
 用于查看当前会话的结构化摘要，并在长对话中快速定位关键内容。
 
-<img src="https://web-ext-storage.dcloud.net.cn/hx/uni-agent/config-env.png" style="zoom: 60%;" />
+<img src="https://web-ext-storage.dcloud.net.cn/hx/ai-chat/outline.png" style="zoom: 60%;" />
 
 - **查看会话大纲** 点击聊天视图右上角【大纲】后，会在右侧展示由 uni-agent 基于当前对话自动生成的大纲条目。
 
@@ -125,17 +123,18 @@ HBuilderX,可以通过以下方式打开聊天视图。
 
 切换项目会影响后续对话中“读取项目文件、理解目录结构、解析配置（如页面与路由）”的上下文来源。
 
-<img src="https://web-ext-storage.dcloud.net.cn/hx/uni-agent/config-env.png" style="zoom: 60%;" />
+<img src="https://web-ext-storage.dcloud.net.cn/hx/ai-chat/switch-project.png" style="zoom: 60%;" />
 
 #### 同时处理多个项目的任务
 如果您想让 uni-agent 同时处理多个项目的任务，可以将需要同步处理的项目在新窗体中打开，并在每个窗体的 uni-agent 视图中切换到对应项目，这样每个窗体的 uni-agent 就会基于当前所选的项目上下文进行对话和操作。 
 
 如下图，HBuilderX 同时导入了 `unix-demo` 和 `hello-uni-app-demo` 两个项目，我想让 uni-agent 同时处理这个两个项目的任务，那么我就可以将 `hello-uni-app-demo` 项目在新窗体中打开，然后再打开 uni-agent 聊天视图，这样新窗体的 uni-agent 就会基于当前所选的项目上下文进行对话和操作。
 
-<img src="https://web-ext-storage.dcloud.net.cn/hx/uni-agent/config-env.png" style="zoom: 60%;" />
-
 **具体操作**：在项目上点击右键，选择【在新窗体中打开】 > 在新窗体中的右上角点击 `AI` 以打开 uni-agent 聊天视图 > 在聊天输入框中开启新聊天即可。
 
+<img src="https://web-ext-storage.dcloud.net.cn/hx/ai-chat/open-in-new-window.png" style="zoom: 60%;" />
+
+<img src="https://web-ext-storage.dcloud.net.cn/hx/ai-chat/open-in-new-window-2.png" style="zoom: 60%;" />
 
 ### 设置
 
@@ -143,7 +142,7 @@ HBuilderX,可以通过以下方式打开聊天视图。
 
 点击聊天视图右上角【设置】进入配置面板后，按 `KEY=VALUE` 的格式逐行填写（以 `#` 开头的行会被忽略）。点击【保存】后，这些配置会写入插件的全局存储，并在下次初始化 uni-agent 时自动注入到进程环境变量中；如果你同时使用了 DCloud 账户订阅与手动配置了环境变量，则会优先使用手动配置而不再请求订阅信息。
 
-<img src="https://web-ext-storage.dcloud.net.cn/hx/uni-agent/config-env.png" style="zoom: 60%;" />
+<img src="https://web-ext-storage.dcloud.net.cn/hx/ai-chat/config-env.png" style="zoom: 60%;" />
 
 #### 环境变量说明
 
