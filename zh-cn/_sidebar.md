@@ -55,7 +55,7 @@
     * [uni-app-x 语言服务使用说明](/Tutorial/Language/vscodeUseHxLs.md)
     * [重构](/Tutorial/Language/refactor.md)
 * AI扩展
-    * [AI Chat](/Tutorial/AI/AIChat.md)
+    * [uni-agent](/Tutorial/AI/uni-agent.md)
     * [AI 代码补全](/Tutorial/AI/github-copilot.md)
 * App开发
     * [真机运行常见问题](/Tutorial/App/PhoneDebugging.md)
