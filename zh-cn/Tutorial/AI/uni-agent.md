@@ -216,4 +216,4 @@ UNI_AGENT_SMALL_FAST_MODEL=openai-compatible/deepseek-chat
 ---
 
 ## 其他问题
-如果您在使用 uni-agent 的过程中遇到任何问题或者有好的建议，欢迎加入我们的 [**uni-agent 技术交流群**](https://im.dcloud.net.cn/#/?joinGroup=698bf7c65923842ac72bcb19) 沟通交流。
+如果您在使用 uni-agent 的过程中遇到任何问题或者有好的建议，欢迎加入我们的 [uni-agent 技术交流群](https://im.dcloud.net.cn/#/?joinGroup=698bf7c65923842ac72bcb19) 沟通交流。
