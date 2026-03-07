@@ -1,3 +1,21 @@
+## 5.02.2026030616-alpha
+* Windows platform: Fixed the issue where clicking a button in showQuickPick automatically closes the dialog without triggering the button callback when buttons are added [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=26605)
+* Fixed the issue where pressing Enter key closes the entire dialog when using textEditor in showFormDialog, preventing normal line breaks [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=26603)
+* Fixed the issue where the search input box does not automatically focus when clicking "Search for Characters (Multiple Files)" in the Windows top toolbar search dropdown list [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=21247)
+* Fixed the issue in markdown files where certain syntax causes incorrect syntax highlighting for characters following the kotlin keyword when the kotlin syntax coloring plugin is present [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=21568)
+* Fixed uni-agent permission dialog interaction issue where the last permission dialog overlays the previous one, causing authorization exceptions [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=26750)
+* Fixed uni-agent slash command misjudgment [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=26751)
+* Fixed uni-agent conversation message retry mechanism [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=26752)
+* Fixed the issue where uni-agent does not execute the next command after clicking the stop button [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=26753)
+* Fixed the issue where uni-agent still executes the previous command when asking again after clicking the stop button [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=26754)
+* Fixed uni-agent duplicate tool call display [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=26755)
+* Fixed uni-agent error when project path contains Chinese characters [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=26756)
+* Fixed the issue where uni-agent cannot save all files on some computers [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=26757)
+* Added uni-agent outline view feature [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=26747)
+* Added uni-agent automatic collapse when there are too many user messages [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=26748)
+* Added uni-agent plugin version number display in the lower left corner of the page [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=26749)
+
+
 ## 5.01.2026021122-alpha
 * Added AI Chat support for uni-agent, an AI programming assistant specially designed for uni-app (x) developers [Details](https://hx.dcloud.net.cn/Tutorial/AI/uni-agent) <https://issues.dcloud.net.cn/pages/issues/detail?id=26435>
 * Windows platform: Fixed the issue where the styles of all three themes display abnormally when the installation path contains special characters [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=26353)

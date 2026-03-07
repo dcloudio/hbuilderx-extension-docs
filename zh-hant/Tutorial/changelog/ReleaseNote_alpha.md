@@ -1,5 +1,22 @@
+## 5.02.2026030616-alpha
+* Windows平台 修复 showQuickPick中增加按钮时，点击按钮后对话框自动关闭，不会触发按钮回调 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=26605)
+* 修复 在showFormDialog中使用textEditor时，按下回车键会关闭整个对话框，导致无法正常换行 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=26603)
+* 修复 windows 顶部工具栏，搜索下拉列表，点击字符搜索(多文件)， 搜索输入框没有自动置焦 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=21247)
+* 修复 markdown文件 存在kotlin语法着色插件时，某些写法会导致kotlin单词后面的字符着色不对 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=21568)
+* 修复 uni-agent 权限弹窗交互问题，最后出现的权限弹窗覆盖前一个导致授权异常的问题 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=26750)
+* 修复 uni-agent 斜杠命令误判 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=26751)
+* 修复 uni-agent 会话消息重试机制 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=26752)
+* 修复 uni-agent 点击终止按钮后，不执行下次指令 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=26753)
+* 修复 uni-agent 点击终止按钮后，再次提问时，仍然在执行上一次指令 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=26754)
+* 修复 uni-agent 工具调用重复显示 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=26755)
+* 修复 uni-agent 项目路径有中文时报错 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=26756)
+* 修复 uni-agent 部分电脑无法保存全部文件 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=26757)
+* 新增 uni-agent 大纲视图功能 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=26747)
+* 新增 uni-agent 用户消息过多时，自动折叠 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=26748)
+* 新增 uni-agent 页面左下角显示插件版本号 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=26749)
+
 ## 5.01.2026021122-alpha
-* 新增 AI Chat 支持 uni-agent 专为 uni-app (x) 开发者打造的 AI 编程助手 [文档](https://hx.dcloud.net.cn/Tutorial/AI/uni-agent) <https://issues.dcloud.net.cn/pages/issues/detail?id=26435>
+* 新增 uni-agent。uni-app (x) 的 AI 编程助手（入口在HBuilderX右上角AI） [文档](https://hx.dcloud.net.cn/Tutorial/AI/uni-agent) <https://issues.dcloud.net.cn/pages/issues/detail?id=26435>
 * Windows平台 修复 安装路径含特殊字符时，三种主题的样式显示异常 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=26353)
 * 修复 展开跳转->书签的二级菜单后，左侧资源管理器的F2重命名失效 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=25854)
 * 修复 md文件中uvue代码块没有高亮 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=26341)
