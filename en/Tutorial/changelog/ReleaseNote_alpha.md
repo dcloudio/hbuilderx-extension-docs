@@ -1,3 +1,7 @@
+## 5.03.2026031009-alpha
+* Fixed some bugs
+
+
 ## 5.02.2026030616-alpha
 * Windows platform: Fixed the issue where clicking a button in showQuickPick automatically closes the dialog without triggering the button callback when buttons are added [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=26605)
 * Fixed the issue where pressing Enter key closes the entire dialog when using textEditor in showFormDialog, preventing normal line breaks [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=26603)

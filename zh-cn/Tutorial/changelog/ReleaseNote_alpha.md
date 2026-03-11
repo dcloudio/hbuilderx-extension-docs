@@ -1,3 +1,6 @@
+## 5.03.2026031009-alpha
+* 修复 uniapp框架的一些Bug
+
 ## 5.02.2026030616-alpha
 * Windows平台 修复 showQuickPick中增加按钮时，点击按钮后对话框自动关闭，不会触发按钮回调 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=26605)
 * 修复 在showFormDialog中使用textEditor时，按下回车键会关闭整个对话框，导致无法正常换行 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=26603)
