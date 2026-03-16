@@ -212,5 +212,22 @@ UNI_AGENT_SMALL_FAST_MODEL=openai-compatible/deepseek-chat
 
 ---
 
+## 安装指定版本
+
+如需使用某一特定版本的 uni-agent 插件（例如兼容性要求或回退到旧版本），请前往 uni-agent 的插件页面操作：
+
+**[uni-agent - DCloud 插件市场](https://ext.dcloud.net.cn/plugin?name=hbuilderx-ai-chat)**
+
+1. **打开上述链接**，进入 uni-agent 的插件详情页。
+2. **在「更新记录」中**找到目标版本，点击该版本右侧的 **「下载此版本」**，下载对应版本的插件包（ZIP）。
+3. **将插件拷贝到 HBuilderX 插件目录**：解压下载的 ZIP，将解压得到的插件文件夹复制到 HBuilderX 的 `plugins` 目录下。解压后的文件夹名带版本号（如 `hbuilderx-ai-chat_1.5.1.260312193`），复制时请将文件夹重命名为 `hbuilderx-ai-chat`（去掉版本号后缀），否则插件可能无法被正确识别。
+   - **Windows**：HBuilderX 安装目录下的 `plugins` 目录
+   - **macOS**：`HBuilderX.app` 内 `Contents/HBuilderX/plugins` 目录（右键 HBuilderX.app → 显示包内容 → 进入上述路径）
+4. **安装后确认**：重启 HBuilderX，再通过右上角的【AI】打开 uni-agent，确认版本与功能是否符合预期。
+
+若安装或使用指定版本时遇到问题，可加入 [uni-agent 技术交流群](https://im.dcloud.net.cn/#/?joinGroup=698bf7c65923842ac72bcb19) 咨询。
+
+---
+
 ## 其他问题
 如果您在使用 uni-agent 的过程中遇到任何问题或者有好的建议，欢迎加入我们的 [uni-agent 技术交流群](https://im.dcloud.net.cn/#/?joinGroup=698bf7c65923842ac72bcb19) 沟通交流。
