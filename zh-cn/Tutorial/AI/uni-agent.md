@@ -2,6 +2,8 @@
 
 uni-agent 是专为 uni-app / uni-app x 开发者打造的 AI 编程助手，内置了丰富的技能（Skills）、子智能体（Subagents）和知识库，帮助您高效完成跨平台应用开发。
 
+它的设计理念和使用技巧另见 [https://doc.dcloud.net.cn/uni-app-x/ai/](https://doc.dcloud.net.cn/uni-app-x/ai/)
+
 ---
 
 ## 安装插件
@@ -38,7 +40,7 @@ HBuilderX,可以通过以下方式打开聊天视图。
 
 ### 方式一：DCloud 账户订阅（推荐）
 
-通过登录 DCloud 账户并订阅 uni-agent 套餐，插件会自动获取套餐中的 API 地址、密钥和模型配置，无需手动填写任何环境变量。
+通过登录 DCloud 账户并订阅 uni-agent 套餐，插件会自动获取套餐中的 API 地址、密钥和模型配置，无需手动填写任何环境变量。此时使用的是全球顶尖的 AI Coding 模型。
 
 #### 使用步骤
 
@@ -175,30 +177,25 @@ UNI_AGENT_SMALL_FAST_MODEL=openai-compatible/deepseek-chat
 
 您可以在项目根目录创建一个 AGENTS.md 文件为 uni-agent 提供自定义规则，该文件中的规则会被注入到与大模型对话的上下文中，以便针对您的项目规范 uni-agent 的行为。
 
-### AGENTS.md 文件示例
+### uni-app的AGENTS.md 文件示例
 
 ```markdown
 # 项目自定义规则
 
 ## 项目概述
 
-本项目是一个基于 uni-app 开发的跨平台电商应用，支持 H5、微信小程序和 App 三端。
+本项目是一个基于 uni-app 开发的跨平台电商应用，支持 H5、微信小程序和 App 三端。（**此处务必自行定义**）
 
 ## 技术栈
 
 - 框架：uni-app（Vue 3 + Composition API）
 - UI 组件库：uni-ui
-- 状态管理：Pinia
 - 网络请求：uni.request 封装
 - 样式：SCSS，采用 BEM 命名规范
 
 ## 代码规范
 
-- 组件文件名使用 PascalCase，如 `GoodsList.vue`
 - 页面文件放在 `pages/` 目录，按模块分子目录
-- 公共组件放在 `components/` 目录
-- 工具函数放在 `utils/` 目录，按功能模块拆分
-- 接口请求统一封装在 `api/` 目录
 
 ## 接口约定
 
@@ -208,10 +205,27 @@ UNI_AGENT_SMALL_FAST_MODEL=openai-compatible/deepseek-chat
 
 ## 注意事项
 
-- 不要使用 `window`、`document` 等浏览器专有 API，请使用 uni 提供的跨平台 API
-- 图片资源统一放在 `static/` 目录，不要使用网络图片作为默认资源
+- 除了在web的条件编译中，其他情况不要使用 `window`、`document` 等浏览器专有 API，请使用 uni 提供的跨平台 API
+- 图片视频字体等多媒体文件资源统一放在 `static/` 目录
 - 涉及支付、授权等敏感功能，修改前请先查阅 `docs/` 目录下的相关说明文档
 ```
+
+---
+
+## 安装指定版本
+
+如需使用某一特定版本的 uni-agent 插件（例如兼容性要求或回退到旧版本），请前往 uni-agent 的插件页面操作：
+
+**[uni-agent - DCloud 插件市场](https://ext.dcloud.net.cn/plugin?name=hbuilderx-ai-chat)**
+
+1. **打开上述链接**，进入 uni-agent 的插件详情页。
+2. **在「更新记录」中**找到目标版本，点击该版本右侧的 **「下载此版本」**，下载对应版本的插件包（ZIP）。
+3. **将插件拷贝到 HBuilderX 插件目录**：解压下载的 ZIP，将解压得到的插件文件夹复制到 HBuilderX 的 `plugins` 目录下。解压后的文件夹名带版本号（如 `hbuilderx-ai-chat_1.5.1.260312193`），复制时请将文件夹重命名为 `hbuilderx-ai-chat`（去掉版本号后缀），否则插件可能无法被正确识别。
+   - **Windows**：HBuilderX 安装目录下的 `plugins` 目录
+   - **macOS**：`HBuilderX.app` 内 `Contents/HBuilderX/plugins` 目录（右键 HBuilderX.app → 显示包内容 → 进入上述路径）
+4. **安装后确认**：重启 HBuilderX，再通过右上角的【AI】打开 uni-agent，确认版本与功能是否符合预期。
+
+若安装或使用指定版本时遇到问题，可加入 [uni-agent 技术交流群](https://im.dcloud.net.cn/#/?joinGroup=698bf7c65923842ac72bcb19) 咨询。
 
 ---
 
