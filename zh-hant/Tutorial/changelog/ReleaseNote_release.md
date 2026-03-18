@@ -1,3 +1,9 @@
+## 5.04.2026031801
+* 修复 5.0版本引发的 快捷键切换文件/视图功能的窗口显示位置异常 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=27247)
+* 修复 5.0版本引发的 语言服务 代码提示性能慢的问题 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=27139)
+* Windows平台 修复 5.03版本引发的 标签的class属性值在多值的场景下，获取补全，提示不正确 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=27097)
+* Windows平台 修复 某些情况下（如在 C:\Program Files 等受限目录）打开 uni-agent 时，因读写权限问题导致加载失败 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=27185)
+
 ## 5.03.2026031210
 * 【重要】新增 uni-agent。uni-app (x) 的 AI 编程助手（入口在HBuilderX右上角AI） [文档](https://hx.dcloud.net.cn/Tutorial/AI/uni-agent) <https://issues.dcloud.net.cn/pages/issues/detail?id=26435>
 * 【重要】新增 Copilot for HBuilder 插件。支持AI代码补全 [文档](https://hx.dcloud.net.cn/Tutorial/AI/github-copilot) <https://issues.dcloud.net.cn/pages/issues/detail?id=24781>

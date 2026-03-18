@@ -1,3 +1,10 @@
+## 5.04.2026031801
+- Fixed an issue introduced in v5.0 where the window position was incorrect when using keyboard shortcuts to switch files/views. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=27247)  
+- Fixed a performance regression introduced in v5.0 that caused slow code completion in Language Services. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=27139)  
+- **Windows:** Fixed an issue introduced in v5.03 where HTML tag `class` attribute completion/IntelliSense was incorrect when multiple class values were present. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=27097)  
+- **Windows:** Fixed an issue where opening `uni-agent` in certain cases (e.g., under restricted directories like `C:\Program Files`) could fail to load due to insufficient read/write permissions. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=27185)
+
+
 ## 5.03.2026031210
 * [Important] Added uni-agent. AI programming assistant for uni-app (x) (entry point in HBuilderX top-right corner AI) [Documentation](https://hx.dcloud.net.cn/Tutorial/AI/uni-agent) <https://issues.dcloud.net.cn/pages/issues/detail?id=26435>
 * [Important] Added Copilot for HBuilder plugin. Supports AI code completion [Documentation](https://hx.dcloud.net.cn/Tutorial/AI/github-copilot) <https://issues.dcloud.net.cn/pages/issues/detail?id=24781>
