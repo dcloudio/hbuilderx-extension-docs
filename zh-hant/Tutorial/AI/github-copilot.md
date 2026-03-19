@@ -99,6 +99,13 @@ A: 请按以下步骤排查：
 3.  检查您的网络连接是否正常。
 4.  查看 HBuilderX 的开发日志，确认是否有来自 Copilot 服务的错误信息。
 
+**Q: 為什麼按 `Tab` 鍵時，沒有採納行內代碼提示？**
+
+A: 這通常和編輯器的 `editor.codeassistKeyTab` 配置有關。
+
+- 當 `editor.codeassistKeyTab` 開啟後，如果代碼助手和行內代碼提示 `editor.inlineassist` 同時出現，按下 `Tab` 鍵會優先接受代碼助手當前選中的條目；關閉 `editor.codeassistKeyTab` 後，如果代碼助手和行內代碼提示同時出現，按下 `Tab` 鍵會優先接受行內代碼提示。
+- 當 `editor.codeassistKeyTab` 開啟且不想修改該設置時，如果代碼助手和行內代碼提示同時出現，可以按下 `Esc` 關閉代碼助手，再按下 `Tab` 接受行內代碼提示。
+
 **Q: 状态栏图标显示为禁用或警告状态，这是什么意思？**
 
 A:

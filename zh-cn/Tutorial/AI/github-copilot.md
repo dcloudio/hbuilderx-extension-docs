@@ -107,6 +107,15 @@ A: 请按以下步骤排查：
 
 ---
 
+**Q: 为什么按 `Tab` 键时，没有采纳行内代码提示？**
+
+A: 这通常和编辑器的 `editor.codeassistKeyTab` 配置有关。
+
+- 当 `editor.codeassistKeyTab` 开启后，如果代码助手和行内代码提示 `editor.inlineassist` 同时出现，按下 `Tab` 键会优先接受代码助手当前选中的条目；关闭 `editor.codeassistKeyTab` 后，如果代码助手和行内代码提示同时出现，按下 `Tab` 键会优先接受行内代码提示。
+- 当 `editor.codeassistKeyTab` 开启且不想修改该设置时，如果代码助手和行内代码提示同时出现，可以按下Esc关闭代码助手，再按下 `Tab` 接受行内代码提示。
+
+---
+
 **Q: 状态栏图标显示为禁用或警告状态，这是什么意思？**
 
 A:

@@ -99,6 +99,13 @@ A: Please follow these steps to troubleshoot:
 3.  Check if your network connection is normal.
 4.  View the HBuilderX development log to confirm if there are any error messages from the Copilot service.
 
+**Q: Why doesn't pressing `Tab` accept the inline code suggestion?**
+
+A: This is usually related to the editor setting `editor.codeassistKeyTab`.
+
+- When `editor.codeassistKeyTab` is enabled, if the code assistant and the inline code suggestion `editor.inlineassist` appear at the same time, pressing `Tab` will prioritize accepting the currently selected item in the code assistant. After disabling `editor.codeassistKeyTab`, if the code assistant and the inline code suggestion appear at the same time, pressing `Tab` will prioritize accepting the inline code suggestion.
+- If `editor.codeassistKeyTab` is enabled and you do not want to change this setting, when the code assistant and the inline code suggestion appear at the same time, you can press `Esc` to close the code assistant first, then press `Tab` to accept the inline code suggestion.
+
 **Q: The status bar icon shows disabled or warning status. What does this mean?**
 
 A:
