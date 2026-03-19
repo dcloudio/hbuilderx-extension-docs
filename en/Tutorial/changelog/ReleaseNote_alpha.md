@@ -1,3 +1,10 @@
+## 5.04.2026031906-alpha
+- Fixed an issue introduced in v5.0 where the window position was incorrect when using keyboard shortcuts to switch files/views. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=27247)  
+- Fixed a performance regression introduced in v5.0 that caused slow code completion in Language Services. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=27139)  
+- **Windows:** Fixed an issue introduced in v5.03 where HTML tag `class` attribute completion/IntelliSense was incorrect when multiple class values were present. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=27097)  
+- **Windows:** Fixed an issue where opening `uni-agent` in certain cases (e.g., under restricted directories like `C:\Program Files`) could fail to load due to insufficient read/write permissions. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=27185)
+
+
 ## 5.03.2026031009-alpha
 * Fixed some bugs
 

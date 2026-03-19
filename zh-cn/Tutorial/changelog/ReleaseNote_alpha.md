@@ -1,3 +1,9 @@
+## 5.04.2026031906-alpha
+* 修复 5.0版本引发的 快捷键切换文件/视图功能的窗口显示位置异常 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=27247)
+* 修复 5.0版本引发的 语言服务 代码提示性能慢的问题 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=27139)
+* Windows平台 修复 5.03版本引发的 标签的class属性值在多值的场景下，获取补全，提示不正确 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=27097)
+* Windows平台 修复 5.0版本版引发的 插件API 自定义webview视图 在受限目录（如 C:\Program Files）等场景下，由于读写权限受限，导致插件加载失败的问题（如打开 uni-agent） [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=27185)
+
 ## 5.03.2026031009-alpha
 * 修复 uniapp框架的一些Bug
 
