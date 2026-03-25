@@ -1,3 +1,7 @@
+## 5.05.2026032417
+* Fixed the issue where the language service displays incorrect hover results when custom components have the same name as built-in components [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=27507)
+
+
 ## 5.04.2026031801
 - Fixed an issue introduced in v5.0 where the window position was incorrect when using keyboard shortcuts to switch files/views. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=27247)  
 - Fixed a performance regression introduced in v5.0 that caused slow code completion in Language Services. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=27139)  

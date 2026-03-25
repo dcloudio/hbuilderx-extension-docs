@@ -1,11 +1,14 @@
+## 5.05.2026032417
+* 修复 语言服务 自定义组件和内置组件重名后, 悬浮结果不正确 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=27507)
+
 ## 5.04.2026031801
 * 修复 5.0版本引发的 快捷键切换文件/视图功能的窗口显示位置异常 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=27247)
 * 修复 5.0版本引发的 语言服务 代码提示性能慢的问题 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=27139)
 * Windows平台 修复 5.03版本引发的 标签的class属性值在多值的场景下，获取补全，提示不正确 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=27097)
-* Windows平台 修复 某些情况下（如在 C:\Program Files 等受限目录）打开 uni-agent 时，因读写权限问题导致加载失败 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=27185)
+* Windows平台 修复 5.0版本版引发的 插件API 自定义webview视图 在受限目录（如 C:\Program Files）等场景下，由于读写权限受限，导致插件加载失败的问题（如打开 uni-agent） [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=27185)
 
 ## 5.03.2026031210
-* 【重要】新增 uni-agent。uni-app (x) 的 AI 编程助手（入口在HBuilderX右上角AI） [文档](https://hx.dcloud.net.cn/Tutorial/AI/uni-agent) <https://issues.dcloud.net.cn/pages/issues/detail?id=26435>
+* 【重要】新增 uni-agent。uni-app (x) 的 AI 编程助手（入口在HBuilderX右上角AI） [文档](https://doc.dcloud.net.cn/uni-app-x/ai/)
 * 【重要】新增 Copilot for HBuilder 插件。支持AI代码补全 [文档](https://hx.dcloud.net.cn/Tutorial/AI/github-copilot) <https://issues.dcloud.net.cn/pages/issues/detail?id=24781>
 * 新增 uni-app (x)运行 通过`CLI launch`运行，方便AI自动修复问题 [文档](https://hx.dcloud.net.cn/cli/launch-app) <https://issues.dcloud.net.cn/pages/issues/detail?id=24793>
 * 新增 uni-app (x)运行 通过`CLI launch`运行，支持运行到指定页面 [文档](https://hx.dcloud.net.cn/cli/launch-app) <https://issues.dcloud.net.cn/pages/issues/detail?id=26399>
@@ -251,7 +254,7 @@
 
 ## 4.65.2025051206
 * 新增 uni-app manifest可视化界面，安卓/iOS模块配置，Maps，支持百度地图配置入口
-* 修复 4.64版本引发的 在HBuilderX内，运行uni-app-cli Vue2项目编译报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=17535)    
+* 修复 4.64版本引发的 在HBuilderX内，运行uni-app-cli Vue2项目编译报错的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=17535)
 * 调整 真机运行插件 项目中启用了push、一键登录模块的时候，若服务尚未开通不会阻断构建和运行
 
 ## 4.64.2025042916
@@ -322,7 +325,7 @@
 * 调整 HBuilderX设置 运行配置 uni-app编译器设置，node启动内存参数默认值改为3072
 * 修复 语言服务 4.44版本引发的 uniapp项目下打开vue文件时语言服务偶现找不到getOptionsDiagnostics的bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=14778)
 * 修复 macOS 4.29版本引发的 导出wgt勾选对js/nvue文件进行原生混淆导出失败的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=14682)
-* 修复 macOS 4.44版本引发的 uniapp-cli项目运行到手机，部分电脑因无法获取系统node路径，导致一直卡在编译中的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=14754) 
+* 修复 macOS 4.44版本引发的 uniapp-cli项目运行到手机，部分电脑因无法获取系统node路径，导致一直卡在编译中的Bug [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=14754)
 * 修复 uni-app 4.44版本引发的 某些情况下，运行到微信小程序无法启动开发者工具的Bug[详情](https://issues.dcloud.net.cn/pages/issues/detail?id=14830)
 * 修复 uni-app 4.44版本引发的 运行到微信小程序，丢失之前保存的编译模式的Bug[详情](https://issues.dcloud.net.cn/pages/issues/detail?id=14822)
 
