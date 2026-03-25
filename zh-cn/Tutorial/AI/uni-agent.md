@@ -240,7 +240,7 @@ UNI_AGENT_SMALL_FAST_MODEL=openai-compatible/deepseek-chat
 ---
 
 
-## 为 uni-agent 配置自定义规则
+## 配置自定义规则
 
 您可以在项目根目录创建一个 AGENTS.md 文件为 uni-agent 提供自定义规则，该文件中的规则会被注入到与大模型对话的上下文中，以便针对您的项目规范 uni-agent 的行为。
 
@@ -276,6 +276,82 @@ UNI_AGENT_SMALL_FAST_MODEL=openai-compatible/deepseek-chat
 - 图片视频字体等多媒体文件资源统一放在 `static/` 目录
 - 涉及支付、授权等敏感功能，修改前请先查阅 `docs/` 目录下的相关说明文档
 ```
+
+---
+
+## 配置自定义技能
+
+uni-agent 支持通过自定义技能（Skills）来扩展其能力。您可以创建自定义技能，让 uni-agent 在对话中根据业务场景进行自动调用。
+
+自定义技能支持两种配置方式：**全局配置** 和 **项目级配置**。
+
+### 配置优先级
+
+当同名技能同时存在于多个位置时，优先级如下：
+
+**项目级配置 > 全局配置 > 内置技能**
+
+### 全局配置
+
+全局配置的技能对所有项目生效，技能目录位置因操作系统而异：
+
+- **Windows**：`%APPDATA%/HBuilder X/extensions/hbuilderx-ai-chat/uni-agent/config/skills`
+- **macOS**：`~/Library/Application Support/HBuilder X/extensions/hbuilderx-ai-chat/uni-agent/config/skills`
+
+### 项目级配置
+
+项目级配置的技能仅对当前项目生效，技能目录位于项目根目录下：
+
+```
+.hbuilderx/uni-agent/skills
+```
+
+### 技能目录结构
+
+每个技能是 `skills` 目录下的一个子文件夹，文件夹内包含一个 `SKILL.md` 文件：
+
+```
+skills/
+└── my_skill/
+    └── SKILL.md
+```
+
+### SKILL.md 文件格式
+
+`SKILL.md` 文件由两部分组成：
+
+1. **Frontmatter**（YAML 格式）：定义技能的名称和描述，描述中应明确技能的调用要求和场景，以确保 Agent 能够准确使用
+    - name: 技能名称，必须唯一
+    - description: 技能描述，需详细说明技能的功能、调用条件和使用场景，帮助 Agent 理解何时以及如何调用此技能
+    - project: 技能适用的项目类型，支持 `uniapp` 和 `uniappx`，若为空，则代表支持所有项目类型
+      * 在全局配置中，uni-agent 会判断SKILL项目类型与当前项目类型是否匹配，如果不匹配则不会将技能描述追加到提示词中，以节省token消耗
+
+2. **正文**：技能被调用时发送给大模型的 Prompt 内容
+
+### 配置示例
+
+以下示例创建一个名为 `code_review` 的代码审查技能：
+
+**文件路径**（全局配置 - Windows）：`%APPDATA%/HBuilder X/extensions/hbuilderx-ai-chat/uni-agent/config/skills/code_review/SKILL.md`
+
+```markdown
+---
+name: code_review
+description: 对修改的代码进行审查，检查潜在问题并给出优化建议，编码完成后必须调用此技能
+project: uniapp
+---
+
+请对以下代码进行审查，重点关注：
+
+1. 代码逻辑是否正确
+2. 是否存在性能问题
+3. 是否符合 uni-app 跨平台开发规范（避免使用平台特有 API）
+4. 命名是否清晰、规范
+
+请给出具体的修改建议和优化后的代码。
+```
+
+配置完成后，需要重启 HBuilderX，再次发起会话时，Agent 会根据技能描述内容自动调用技能。
 
 ---
 
