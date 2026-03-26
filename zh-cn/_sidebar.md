@@ -109,6 +109,7 @@
     * [登录失败问题](/Tutorial/Questions/LoginFailed.md)
     * [uniapp发行服务器响应异常](/Tutorial/faq/uniapp_publish_server_error.md)
     * [终端空白及无法输入的问题](/Tutorial/Questions/Terminal-input-problem.md)
+    * [macOS切换用户后升级时提示权限不足](/Tutorial/Questions/MacPermissiondenied.md)
     <!-- * [WebView2 运行时的问题](/Tutorial/Questions/Webview2Runtime.md) 功能上线时打开-->
 * [崩溃报告](/Tutorial/CrashReporter.md)
 * [历史版本](/Tutorial/HistoryVersion.md)

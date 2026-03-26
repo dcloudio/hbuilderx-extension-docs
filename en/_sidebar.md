@@ -100,6 +100,7 @@
     * [User Login Failed](/Tutorial/Questions/LoginFailed.md)
     * [uniapp Publishing Server Response Exception](/Tutorial/faq/uniapp_publish_server_error.md)
     * [Terminal Input Problem](/Tutorial/Questions/Terminal-input-problem.md)
+    * [Permission denied during upgrade after switching users on macOS](/Tutorial/Questions/MacPermissiondenied.md)
     <!-- * [Webview2 runtime](/Tutorial/Questions/Webview2Runtime.md) Enable when feature goes live-->
     <!-- * [Cloud Function Upload ContentAccessDenied Error](/Tutorial/Questions/win10-defender-contentaccessdenied.md) -->
 * [Crash Reporter](/Tutorial/CrashReporter.md)
