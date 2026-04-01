@@ -1,5 +1,8 @@
+## 5.06.2026033105
+* macOS平台 修复 5.0版本引发的 iOS 安心打包功能中资源拷贝路径不正确的问题 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=27379)
+
 ## 5.05.2026032417
-* 修复 语言服务 自定义组件和内置组件重名后, 悬浮结果不正确 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=27507)
+* 修复 语言服务 自定义组件和内置组件重名时，悬浮Tips不正确 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=27507)
 
 ## 5.04.2026031801
 * 修复 5.0版本引发的 快捷键切换文件/视图功能的窗口显示位置异常 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=27247)

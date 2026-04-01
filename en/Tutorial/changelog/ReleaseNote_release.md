@@ -1,3 +1,7 @@
+## 5.06.2026033105
+* Fixed some bugs
+
+
 ## 5.05.2026032417
 * Fixed the issue where the language service displays incorrect hover results when custom components have the same name as built-in components [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=27507)
 
