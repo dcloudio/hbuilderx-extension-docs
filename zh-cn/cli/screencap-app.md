@@ -1,8 +1,8 @@
-# CLI uni-app 截图 - 手机或模拟器@screencap-app
+# CLI uni-app 截图 - 手机、模拟器与 Web@screencap-app
 
-> 需HBuilderX 5.01+ 版本
+> **手机或模拟器**截图需 HBuilderX **5.01+**；**Web** 截图自 **5.07** 起支持。
 
-通过 CLI 对已运行到手机或模拟器的 uni-app 应用进行截图，支持 Android、iOS、鸿蒙平台。该功能主要用于辅助 AI 通过截图来判断页面显示的准确性，帮助开发者快速验证应用在不同设备上的实际渲染效果。
+通过 CLI 对已运行的 uni-app 项目进行截图：**手机或模拟器**端支持 Android、iOS、鸿蒙；**Web** 端支持对已运行到浏览器的项目进行截图（仅 **Chrome** 或 **HBuilderX 内置浏览器**）。该功能主要用于辅助 AI 通过截图判断页面显示是否准确，帮助开发者快速验证实际渲染效果。
 
 ## 命令说明
 
@@ -139,4 +139,45 @@ D:\ide\HBuilderX\cli.exe screencap app-harmony --project hello-uni-app-x --saveF
 
 # 对鸿蒙App截图（只截取当前屏）
 ./cli screencap app-harmony --project 项目名称 --saveFile screenshot.png --fullPage false
+```
+
+### screencap web
+
+> 需 HBuilderX **5.07+** 版本
+
+对已运行到浏览器的 Web 项目进行截图；**仅支持 Chrome 或 HBuilderX 内置浏览器（Built）**。用于辅助 AI 判断页面在浏览器中的显示效果。
+
+**用法：**
+
+```shell
+./cli screencap web --help
+```
+
+**参数：**
+
+| 参数名称   | 描述 |
+| ---------- | ---- |
+| --help     | 显示 cli 命令帮助 |
+| --project  | HBuilder X 里导入的项目名称或绝对路径 |
+| --saveFile | 截图保存的完整文件路径（如 `.png`），**必填** |
+| --browser  | 浏览器类型，仅支持 `Chrome` 或 `Built`（内置浏览器）；**不传时默认使用当前正在运行 Web 项目的那一个浏览器** |
+| --fullPage | 截图范围：`true` 为长图（整页），`false` 为当前可视区域；默认值为 `true` |
+
+**使用示例：**
+
+```shell
+# Mac：对已运行的 Web 项目截图（默认使用当前运行中的浏览器；默认长图）
+/Applications/HBuilderX.app/Contents/MacOS/cli screencap web --project hello-uni-app --saveFile /Users/apple/Desktop/web-screenshot.png
+
+# 指定使用 Chrome 截图
+./cli screencap web --project 项目名称 --saveFile screenshot.png --browser Chrome
+
+# 指定使用 HBuilderX 内置浏览器截图
+./cli screencap web --project 项目名称 --saveFile screenshot.png --browser Built
+
+# 只截当前可视区域（非整页长图）
+./cli screencap web --project 项目名称 --saveFile screenshot.png --fullPage false
+
+# Windows
+D:\ide\HBuilderX\cli.exe screencap web --project hello-uni-app --saveFile D:\web-screenshot.png
 ```

@@ -1,8 +1,8 @@
-# CLI uni-app 截图 - 手机或模拟器@screencap-app
+# CLI uni-app screenshot - device, emulator & Web@screencap-app
 
-> 需HBuilderX 5.01+ 版本
+> **Device/emulator** screenshots require HBuilderX **5.01+**; **Web** screenshots require **5.07+**.
 
-通过 CLI 对已运行到手机或模拟器的 uni-app 应用进行截图，支持 Android、iOS、鸿蒙平台。该功能主要用于辅助 AI 通过截图来判断页面显示的准确性，帮助开发者快速验证应用在不同设备上的实际渲染效果。
+Use the CLI to capture screenshots of running uni-app projects: **device or emulator** supports Android, iOS, HarmonyOS; **Web** supports projects already running in a browser (**Chrome** or **HBuilderX built-in browser** only). The feature helps AI-assisted workflows judge visual accuracy and verify rendering.
 
 ## 命令说明
 
@@ -139,4 +139,39 @@ D:\ide\HBuilderX\cli.exe screencap app-harmony --project hello-uni-app-x --saveF
 
 # 对鸿蒙App截图（只截取当前屏）
 ./cli screencap app-harmony --project 项目名称 --saveFile screenshot.png --fullPage false
+```
+
+### screencap web
+
+> Requires HBuilderX **5.07+**
+
+Captures the running Web project in the browser. **Only Chrome or the HBuilderX built-in browser (`Built`) are supported.**
+
+**Usage:**
+
+```shell
+./cli screencap web --help
+```
+
+**Parameters:**
+
+| Name | Description |
+| ---- | ----------- |
+| --help | Show CLI help |
+| --project | Project name as imported in HBuilderX, or absolute path |
+| --saveFile | Full path for the image file (e.g. `.png`), **required** |
+| --browser | `Chrome` or `Built`. If omitted, uses whichever browser is currently running the Web project |
+| --fullPage | `true` full-page (long) screenshot, `false` current viewport only; default `true` |
+
+**Examples:**
+
+```shell
+# macOS: screenshot while Web is running (default browser + full page)
+/Applications/HBuilderX.app/Contents/MacOS/cli screencap web --project hello-uni-app --saveFile /Users/apple/Desktop/web-screenshot.png
+
+./cli screencap web --project my-project --saveFile screenshot.png --browser Chrome
+./cli screencap web --project my-project --saveFile screenshot.png --browser Built
+./cli screencap web --project my-project --saveFile screenshot.png --fullPage false
+
+D:\ide\HBuilderX\cli.exe screencap web --project hello-uni-app --saveFile D:\web-screenshot.png
 ```
