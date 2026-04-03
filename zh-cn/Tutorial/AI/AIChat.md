@@ -1,4 +1,4 @@
-# hbuilderx-ai-chat （已迁移至 [uni-agent](https://hx.dcloud.net.cn/Tutorial/AI/uni-agent)）
+# hbuilderx-ai-chat （已迁移至 [uni-agent](https://uniapp.dcloud.net.cn/ai/uni-agent.html)）
 
 ## 迁移说明
 
