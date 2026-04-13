@@ -1,3 +1,6 @@
+## 5.07.2026041006
+* 修复 5.0版本引发的 uni-app iOS安心打包图标没有生效 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=27902)
+
 ## 5.06.2026033105
 * macOS平台 修复 5.0版本引发的 iOS 安心打包功能中资源拷贝路径不正确的问题 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=27379)
 

@@ -1,3 +1,7 @@
+## 5.07.2026041006
+* Fixed the issue where the iOS icon for the Uni-app package did not take effect caused by version 5.0. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=27902)
+
+
 ## 5.06.2026033105
 * Fixed some bugs
 
