@@ -1,3 +1,6 @@
+## 5.07.2026041610-alpha
+* 修复 5.0版本引发的 uni-app iOS安心打包图标没有生效 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=27902)
+
 ## 5.04.2026031906-alpha
 * 修复 5.0版本引发的 快捷键切换文件/视图功能的窗口显示位置异常 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=27247)
 * 修复 5.0版本引发的 语言服务 代码提示性能慢的问题 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=27139)
@@ -25,7 +28,7 @@
 * 新增 uni-agent 页面左下角显示插件版本号 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=26749)
 
 ## 5.01.2026021122-alpha
-* 新增 uni-agent。uni-app (x) 的 AI 编程助手（入口在HBuilderX右上角AI） [文档](https://hx.dcloud.net.cn/Tutorial/AI/uni-agent) <https://issues.dcloud.net.cn/pages/issues/detail?id=26435>
+* 新增 uni-agent。uni-app (x) 的 AI 编程助手（入口在HBuilderX右上角AI） [文档](https://doc.dcloud.net.cn/uni-app-x/ai/)
 * Windows平台 修复 安装路径含特殊字符时，三种主题的样式显示异常 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=26353)
 * 修复 展开跳转->书签的二级菜单后，左侧资源管理器的F2重命名失效 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=25854)
 * 修复 md文件中uvue代码块没有高亮 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=26341)
