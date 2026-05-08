@@ -1,3 +1,15 @@
+## 5.08.2026050815-alpha
+* Fixed an issue introduced in version 4.55 on macOS (Arm) where text entered with the Sogou Input Method disappeared after switching from Chinese to English input. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=22901&ask_id=214698)
+* Fixed an issue introduced in version 5.07 where the language service reported errors in component property hints after using specific syntax. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=29057)
+* Added support for taking screenshots when running uni-app (x) on Web via the `CLI screencap` command, making it easier for AI to automatically fix issues. [Documentation](https://hx.dcloud.net.cn/cli/screencap-app) [https://issues.dcloud.net.cn/pages/issues/detail?id=27980](https://issues.dcloud.net.cn/pages/issues/detail?id=27980)
+* Fixed an issue on Web where the `browser` parameter was removed when retrieving runtime logs via the `CLI logcat` command. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=28862)
+* On macOS and Windows, added support in the Run menu and CLI for specifying a page when launching on the HarmonyOS platform. [Documentation](https://hx.dcloud.net.cn/cli/launch-app?id=launch-app-harmony) [https://issues.dcloud.net.cn/pages/issues/detail?id=27919](https://issues.dcloud.net.cn/pages/issues/detail?id=27919)
+* On Windows, fixed a random crash issue introduced in version 5.01 where `uni-agent` could occasionally crash while viewing AI-generated modification comparison results. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=27913)
+* Added support for wireless debugging when running on the HarmonyOS platform. [Documentation](https://uniapp.dcloud.net.cn/tutorial/harmony/runbuild.html#run) [https://issues.dcloud.net.cn/pages/issues/detail?id=28978](https://issues.dcloud.net.cn/pages/issues/detail?id=28978)
+* Added display of device names in the Console tab when running on the HarmonyOS platform. [Documentation](https://uniapp.dcloud.net.cn/tutorial/harmony/runbuild.html#run) [https://issues.dcloud.net.cn/pages/issues/detail?id=28096](https://issues.dcloud.net.cn/pages/issues/detail?id=28096)
+* Added support for configuring style isolation strategies in the `manifest` of uni-app x projects. [Documentation](https://doc.dcloud.net.cn/uni-app-x/css/common/style-isolation.html) [https://issues.dcloud.net.cn/pages/issues/detail?id=28821](https://issues.dcloud.net.cn/pages/issues/detail?id=28821)
+
+
 ## 5.07.2026041610-alpha
 * Fixed the issue where the iOS icon for the Uni-app package did not take effect caused by version 5.0. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=27902)
 

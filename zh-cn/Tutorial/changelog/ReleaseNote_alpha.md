@@ -1,3 +1,14 @@
+## 5.08.2026050815-alpha
+* 修复 4.55版本引发的 macOS(Arm) 搜狗输入法中文切换英文后输入消失 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=22901&ask_id=214698)
+* 修复 5.07版本引发的 语言服务 使用特定语法后，组件属性提示报错 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=29057)
+* 新增 uni-app (x)运行到Web 通过`CLI screencap`截图，方便AI自动修复问题 [文档](https://hx.dcloud.net.cn/cli/screencap-app) <https://issues.dcloud.net.cn/pages/issues/detail?id=27980>
+* 修复 Web 通过`CLI logcat`命令行获取运行日志移除browser参数 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=28862)
+* macOS平台、Windows平台 新增 运行菜单和 CLI 在运行到鸿蒙平台时支持指定页面 [文档](https://hx.dcloud.net.cn/cli/launch-app?id=launch-app-harmony) <https://issues.dcloud.net.cn/pages/issues/detail?id=27919>
+* Windows平台 修复 5.01版本引发的 uni-agent在查看AI修改前后的对比效果时概率闪退 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=27913)
+* 新增 运行到鸿蒙平台时支持无线调试 [文档](https://uniapp.dcloud.net.cn/tutorial/harmony/runbuild.html#run) <https://issues.dcloud.net.cn/pages/issues/detail?id=28978>
+* 新增 运行到鸿蒙时在控制台页签显示设备名称 [文档](https://uniapp.dcloud.net.cn/tutorial/harmony/runbuild.html#run) <https://issues.dcloud.net.cn/pages/issues/detail?id=28096>
+* 新增 uni-app x项目 manifest 支持配置样式隔离策略 [文档](https://doc.dcloud.net.cn/uni-app-x/css/common/style-isolation.html) <https://issues.dcloud.net.cn/pages/issues/detail?id=28821>
+
 ## 5.07.2026041610-alpha
 * 修复 5.0版本引发的 uni-app iOS安心打包图标没有生效 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=27902)
 
