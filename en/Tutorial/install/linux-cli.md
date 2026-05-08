@@ -17,7 +17,7 @@ It provides support for continuous integration, automated releases, and automate
 <!-- <div style="display: block; line-height: 40px;" id="hx_alpha_download"></div>
 <div style="display: block; line-height: 40px;" id="hx_release_download"></div> -->
 
-<a id="download_alpha" download="" href="https://download1.dcloud.net.cn/download/HBuilderX.5.07.2026041610-alpha.linux_x64.full.tar.gz" target="_blank"> v5.07 alpha 下载地址</a>
+<a id="download_alpha" download="" href="https://download1.dcloud.net.cn/download/HBuilderX.5.08.2026050815-alpha.linux_x64.full.tar.gz" target="_blank"> v5.08 alpha 下载地址</a>
 
 <a id="download_release" download="" href="https://download1.dcloud.net.cn/download/HBuilderX.5.07.2026041006.linux_x64.full.tar.gz" target="_blank"> v5.07 正式版 下载地址</a>
 
