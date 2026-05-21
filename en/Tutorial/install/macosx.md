@@ -1,5 +1,10 @@
 # MacOSX
 
+## System Requirements
+
+- Since March 7, 2025, HBuilderX 4.55+ supports the macOS (Arm) platform. The supported macOS system version is macOS 11+.
+- HBuilderX Alpha 5.11+ has been upgraded to Qt 6. The supported macOS system version is macOS 11+.
+
 ## Download
 
 HBuilderX download url:  [download](https://www.dcloud.io/hbuilderx.html)

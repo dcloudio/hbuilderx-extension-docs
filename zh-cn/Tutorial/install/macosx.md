@@ -4,6 +4,11 @@
 keyword:安装,安装HBuilderX,下载
 -->
 
+## 系统要求
+
+- 2025年3月7日起，HBuilderX 4.55+版本新增macOS(Arm)平台支持，支持的macOS系统版本为macOS 11+
+- HBuilderX Alpha 5.11+版本升级到Qt6，支持的macOS系统版本为macOS 11+
+
 ## 下载@download
 
 HBuilderX下载地址: [下载地址](https://www.dcloud.io/hbuilderx.html)
