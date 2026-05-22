@@ -1,8 +1,10 @@
-# CLI uni-app 发行 - WEB@h5
+# CLI uni-app / uni-app x 发行 - WEB@h5
 
 > HBuilderX cli 命令行工具
 
-通过 CLI 发行 uni-app 项目到 H5，支持编译、上传等操作。
+通过 CLI 将 **uni-app** 或 **uni-app x** 项目发行到 H5/Web，支持编译、上传等操作。
+
+> **适用项目**：uni-app、uni-app x（`web`）。完整平台对照见 [CLI 概述](/cli/README?id=project-platform)。
 
 ## 命令说明
 

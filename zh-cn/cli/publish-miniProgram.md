@@ -1,14 +1,14 @@
-# CLI uni-app 发行 - 小程序@publish-miniProgram
+# CLI uni-app / uni-app x 发行 - 小程序@publish-miniProgram
 
 > HBuilderX cli 命令行工具
 
-通过 CLI 发行到各平台小程序，支持微信、支付宝等平台。
+通过 CLI 将 **uni-app** 或 **uni-app x** 项目发行到各平台小程序。**uni-app** 项目支持更多小程序平台；**uni-app x** 项目目前仅支持微信小程序（`mp-weixin`）。支付宝等平台命令仅适用于 uni-app 项目。完整平台对照见 [CLI 概述](/cli/README?id=project-platform)。
 
 ## 命令说明
 
 ### publish mp-weixin
 
-发行到小程序-微信
+发行到小程序-微信（uni-app / uni-app x）
 
 **参数：**
 
@@ -65,7 +65,7 @@ cli publish mp-weixin --project 项目名称 --upload true --appid 小程序appi
 
 ### publish mp-alipay
 
-发行到小程序-支付宝
+发行到小程序-支付宝（仅适用于 uni-app）
 
 **参数：**
 
@@ -110,7 +110,7 @@ cli publish mp-alipay --project 项目名称 --upload true --appid 小程序appi
 
 ## 小程序代码上传密钥@uploadPrivateKeyWeixin
 
-> HBuilderX 3.3.7+, uni-app 发行到微信小程序，支持自动上传代码到微信平台，无需再通过微信开发者工具上传发行。[详情](/Tutorial/App/uni-app-publish-mp-weixin)
+> HBuilderX 3.3.7+, uni-app / uni-app x 发行到微信小程序，支持自动上传代码到微信平台，无需再通过微信开发者工具上传发行。[详情](/Tutorial/App/uni-app-publish-mp-weixin)
 >
 > HBuilderX 发行微信小程序，需要提供微信小程序代码上传密钥
 
@@ -128,7 +128,7 @@ cli publish mp-alipay --project 项目名称 --upload true --appid 小程序appi
 
 ## 支付宝开发工具密钥文件@uploadPrivateKeyAlipay
 
-> HBuilderX 3.8.5+, uni-app 发行到支付宝小程序，支持自动上传代码到支付宝平台，无需再通过支付宝开发者工具上传发行。
+> HBuilderX 3.8.5+, uni-app 发行到支付宝小程序（仅适用于 uni-app 项目），支持自动上传代码到支付宝平台，无需再通过支付宝开发者工具上传发行。
 >
 > HBuilderX 发行支付宝小程序，需要提供支付宝开发工具密钥文件
 

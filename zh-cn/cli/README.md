@@ -55,6 +55,15 @@ cli open
 cli app quit
 ```
 
+#### 项目类型与平台支持@project-platform
+
+CLI 的运行、发行等命令面向 **uni-app** 与 **uni-app x** 项目。各项目类型支持的平台如下，具体命令文档仅说明该命令适用的项目类型，不再重复列举。
+
+| 项目类型 | 支持的平台 |
+| --- | --- |
+| uni-app | `app-android` / `app-ios` / `app-harmony` / `web` / `mp-weixin` / `mp-alipay` / `mp-baidu` / `mp-toutiao` / `mp-qq` / `mp-360` / `mp-jd` / `mp-kuaishou` / `mp-lark` / `mp-xhs` / `mp-harmony` |
+| uni-app x | `app-android` / `app-ios` / `app-harmony` / `mp-weixin` / `web` |
+
 #### 更多命令
 
 |cli命令												|详情													|

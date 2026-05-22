@@ -1,8 +1,10 @@
-# CLI uni-app发行 - 支付宝小程序@mp-aplipay
+# CLI uni-app / uni-app x 发行 - 支付宝小程序@mp-aplipay
 
 > HBuilderX 3.8.5-alpha，支持使用CLI发行支付宝小程序。
 
-通过此种方式，可在命令行或其它CI工具中，完成支付宝小程序代码的上传、预览等操作。
+通过此种方式，可在命令行或其它 CI 工具中，完成支付宝小程序代码的上传、预览等操作。
+
+> **适用项目**：仅 uni-app（`mp-alipay`）。完整平台对照见 [CLI 概述](/cli/README?id=project-platform)。
 
 ## 命令参数@params
 
@@ -30,7 +32,7 @@ cli publish --platform mp-alipay --project 项目名称 --upload true --appid �
 
 ## 支付宝开发工具密钥文件@uploadPrivateKey
 
-> HBuilderX 3.8.5+, uni-app 发行到支付宝小程序，支持自动上传代码到支付宝平台，无需再通过支付宝开发者工具上传发行。
+> HBuilderX 3.8.5+, uni-app 发行到支付宝小程序（仅适用于 uni-app 项目），支持自动上传代码到支付宝平台，无需再通过支付宝开发者工具上传发行。
 >
 > HBuilderX 发行支付宝小程序，需要提供支付宝开发工具密钥文件
 

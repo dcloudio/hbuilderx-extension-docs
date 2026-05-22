@@ -1,8 +1,10 @@
-# CLI uni-app 发行 - App 生成本地打包资源@appResource
+# CLI uni-app / uni-app x 发行 - App 生成本地打包资源@appResource
 
 > HBuilderX cli 命令行工具
 
-通过 CLI 生成本地打包 App 资源，支持 uni-app、Wap2App、5+App 项目。
+通过 CLI 生成本地打包 App 资源，支持 **uni-app**、**uni-app x**、Wap2App、5+App 项目。
+
+> **适用项目**：uni-app、uni-app x（`app-android` / `app-ios`）；另支持 Wap2App、5+App。完整平台对照见 [CLI 概述](/cli/README?id=project-platform)。
 
 ## 命令说明
 

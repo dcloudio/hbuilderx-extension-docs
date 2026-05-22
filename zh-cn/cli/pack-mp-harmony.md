@@ -1,8 +1,10 @@
-# CLI uni-app 发行 - 鸿蒙元服务打包@packMpHarmony
+# CLI uni-app / uni-app x 发行 - 鸿蒙元服务打包@packMpHarmony
 
 > HBuilderX cli 命令行工具
 
-通过 CLI 对鸿蒙元服务平台进行本地打包，支持 uni-app 项目。
+通过 CLI 对鸿蒙元服务平台进行本地打包。
+
+> **适用项目**：仅 uni-app（`mp-harmony`）。完整平台对照见 [CLI 概述](/cli/README?id=project-platform)。
 
 ## 命令说明
 

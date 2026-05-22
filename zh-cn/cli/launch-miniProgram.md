@@ -1,16 +1,16 @@
-# CLI uni-app 运行 - 小程序@launch-miniProgram
+# CLI uni-app / uni-app x 运行 - 小程序@launch-miniProgram
 
 > 需HBuilderX 5.0+ 版本
 
 > 您也可以通过 npm 包使用此功能：[@dcloudio/hbuilderx-cli](https://www.npmjs.com/package/@dcloudio/hbuilderx-cli)
 
-通过 CLI 运行到各平台小程序的 uni-app 应用，支持微信、支付宝、百度、字节跳动、QQ、360、京东、快手、飞书、小红书、鸿蒙元服务、快应用等平台。[HBuilderX CLI](/cli/README?id=cli)
+通过 CLI 将 **uni-app** 或 **uni-app x** 项目运行到各平台小程序。**uni-app** 项目支持更多小程序平台；**uni-app x** 项目目前仅支持微信小程序（`mp-weixin`）。其余平台命令标注为「仅适用于 uni-app」。完整平台对照见 [CLI 概述](/cli/README?id=project-platform)。[HBuilderX CLI](/cli/README?id=cli)
 
 ## 命令说明
 
 ### launch mp-weixin
 
-运行到小程序-微信
+运行到小程序-微信（uni-app / uni-app x）
 
 **用法：**
 

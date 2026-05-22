@@ -1,8 +1,10 @@
-# CLI uni-app 发行 - App 制作应用 wgt 包@wgt
+# CLI uni-app / uni-app x 发行 - App 制作应用 wgt 包@wgt
 
 > HBuilderX cli 命令行工具
 
-通过 CLI 导出 wgt 包，支持 uni-app、Wap2App、5+App 项目。
+通过 CLI 导出 wgt 包，支持 **uni-app**、**uni-app x**、Wap2App、5+App 项目。
+
+> **适用项目**：uni-app、uni-app x（`app-android` / `app-ios`）；另支持 Wap2App、5+App。完整平台对照见 [CLI 概述](/cli/README?id=project-platform)。
 
 ## 命令说明
 

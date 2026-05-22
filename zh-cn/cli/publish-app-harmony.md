@@ -1,8 +1,10 @@
-# CLI uni-app 发行 - App-Harmony-本地打包 App 资源@publishAppHarmony
+# CLI uni-app / uni-app x 发行 - App-Harmony-本地打包 App 资源@publishAppHarmony
 
 > HBuilderX cli 命令行工具
 
-通过 CLI 对鸿蒙平台生成本地打包 App 资源，支持 uni-app (x) 项目。
+通过 CLI 对鸿蒙平台生成本地打包 App 资源，支持 **uni-app**、**uni-app x** 项目。
+
+> **适用项目**：uni-app、uni-app x（`app-harmony`）。完整平台对照见 [CLI 概述](/cli/README?id=project-platform)。
 
 ## 命令说明
 

@@ -1,10 +1,12 @@
-# CLI uni-app 运行 - WEB@launch-web
+# CLI uni-app / uni-app x 运行 - WEB@launch-web
 
 > 需HBuilderX 5.0+ 版本
 
 > 您也可以通过 npm 包使用此功能：[@dcloudio/hbuilderx-cli](https://www.npmjs.com/package/@dcloudio/hbuilderx-cli)
 
-通过 CLI 运行到 Web 或手机 H5 的 uni-app 应用。[HBuilderX CLI](/cli/README?id=cli)
+通过 CLI 将 **uni-app** 或 **uni-app x** 项目运行到 Web 或手机 H5。[HBuilderX CLI](/cli/README?id=cli)
+
+> **适用项目**：uni-app、uni-app x（`web`）。完整平台对照见 [CLI 概述](/cli/README?id=project-platform)。
 
 ## 命令说明
 

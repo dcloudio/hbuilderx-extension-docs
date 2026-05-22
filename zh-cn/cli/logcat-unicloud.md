@@ -1,4 +1,4 @@
-# CLI uni-app 运行日志 - uniCloud
+# CLI uni-app / uni-app x 运行日志 - uniCloud
 
 > 需HBuilderX 4.87+ 版本
 

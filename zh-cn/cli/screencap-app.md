@@ -1,8 +1,10 @@
-# CLI uni-app 截图 - 手机、模拟器与 Web@screencap-app
+# CLI uni-app / uni-app x 截图 - 手机、模拟器与 Web@screencap-app
 
 > **手机或模拟器**截图需 HBuilderX **5.01+**；**Web** 截图自 **5.07** 起支持。
 
-通过 CLI 对已运行的 uni-app 项目进行截图：**手机或模拟器**端支持 Android、iOS、鸿蒙；**Web** 端支持对已运行到浏览器的项目进行截图（仅 **Chrome** 或 **HBuilderX 内置浏览器**）。该功能主要用于辅助 AI 通过截图判断页面显示是否准确，帮助开发者快速验证实际渲染效果。
+通过 CLI 对已运行的 **uni-app** / **uni-app x** 项目进行截图：**手机或模拟器**端支持 Android、iOS、鸿蒙；**Web** 端支持对已运行到浏览器的项目进行截图（仅 **Chrome** 或 **HBuilderX 内置浏览器**）。该功能主要用于辅助 AI 通过截图判断页面显示是否准确，帮助开发者快速验证实际渲染效果。
+
+> **适用项目**：uni-app、uni-app x（`app-android` / `app-ios` / `app-harmony` / `web`）。完整平台对照见 [CLI 概述](/cli/README?id=project-platform)。
 
 ## 命令说明
 

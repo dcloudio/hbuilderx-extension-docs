@@ -1,18 +1,20 @@
-# CLI uni-app 运行日志 - 小程序@launch-miniProgram
+# CLI uni-app / uni-app x 运行日志 - 小程序@launch-miniProgram
 
 > 需HBuilderX 4.87+ 版本
 
 > 您也可以通过 npm 包使用此功能：[@dcloudio/hbuilderx-cli](https://www.npmjs.com/package/@dcloudio/hbuilderx-cli)
 
-通过 CLI 查看运行到各平台小程序的 uni-app 应用日志，支持微信、支付宝、百度、字节跳动、QQ、360、京东、快手、飞书、小红书、鸿蒙元服务、快应用等平台。[HBuilderX CLI](/cli/README?id=cli)
+通过 CLI 查看运行到各平台小程序的 **uni-app** / **uni-app x** 应用日志。**uni-app** 项目支持更多小程序平台；**uni-app x** 项目目前仅支持微信小程序（`mp-weixin`）。其余平台命令标注为「仅适用于 uni-app」。[HBuilderX CLI](/cli/README?id=cli)
 
 您可以将cli加入到环境变量，这样您就可以在任意目录、任意终端上，随时随地调用cli， 而无需通过输入cli绝对路径的方式来使用它。[详情](/cli/env)
+
+完整平台对照见 [CLI 概述](/cli/README?id=project-platform)。
 
 ## 命令说明
 
 ### logcat mp-weixin
 
-查看运行到小程序-微信日志
+查看运行到小程序-微信日志（uni-app / uni-app x）
 
 **用法：**
 

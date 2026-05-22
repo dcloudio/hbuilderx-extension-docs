@@ -1,8 +1,10 @@
-# CLI uni-app 发行 - Android/iOS 云打包@pack
+# CLI uni-app / uni-app x 发行 - Android/iOS 云打包@pack
 
 > HBuilderX cli 命令行工具
 
-通过 CLI 进行 Android/iOS 云打包，仅适用于 HBuilderX 3.1.5+ 版本。
+通过 CLI 对 **uni-app** 或 **uni-app x** 项目进行 Android/iOS 云打包，仅适用于 HBuilderX 3.1.5+ 版本。
+
+> **适用项目**：uni-app、uni-app x（`app-android` / `app-ios`）。完整平台对照见 [CLI 概述](/cli/README?id=project-platform)。
 
 ## 命令说明
 
@@ -78,6 +80,31 @@ localhost:MacOS hx$ ./cli pack --config /Users/hx/Documents/HBuilderProjects/测
 16:44:46.579 项目 pca [__UNI__EB87FB4]打包成功：
     类型: iOS Appstore 下载地址: https://service.dcloud.net.cn/build/download/40c60580-7fea-11eb-af55-b9c5ccd8a1ee （注意该地址为临时下载地址，只能下载5次）当前应用 IDFA 已经开启，在提交 AppStore 审核时需要在后台开启 IDFA，[详细操作查看](https://ask.dcloud.net.cn/article/36107)
 ```
+
+### pack status@pack-query
+
+> 需 HBuilderX **5.11+** 版本
+
+查询 App 云打包状态。
+
+**用法：**
+
+```shell
+cli pack status --help
+cli pack status --project D:/projects/demo-app
+cli pack status --project demo-app
+```
+
+**参数：**
+
+| 参数名称  | 描述                                    |
+| --------- | --------------------------------------- |
+| --help    | cli 命令帮助                            |
+| --project | HBuilder X 里导入的项目绝对路径或目录名 |
+
+> 查询云打包状态前，需先启动 HBuilderX（**5.11+**）。
+
+打包过程的控制台日志，请使用 [logcat pack](/cli/logcat-pack)（需 HBuilderX **5.11+**）。
 
 ## 打包配置文件格式@config
 
