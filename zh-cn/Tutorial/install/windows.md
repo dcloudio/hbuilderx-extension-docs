@@ -10,6 +10,8 @@ keyword:安装,安装HBuilderX,下载
 
 在Windows 32位系统上进行后续升级将会弹出建议升级的提示。
 
+HBuilderX 从5.11版本起，内置node升级至v22.22.2，Windows 平台仅支持 Windows 8.1 及以上系统。
+
 ### 下载@download
 
 HBuilderX下载地址: [下载地址](https://www.dcloud.io/hbuilderx.html)

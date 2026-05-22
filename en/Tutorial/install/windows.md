@@ -6,6 +6,7 @@ Starting from March 2025, HBuilderX 4.61+ will only support 64-bit Windows opera
 
 Subsequent upgrades on Windows 32-bit systems will display a prompt recommending an upgrade.
 
+Starting from HBuilderX 5.11, the built-in Node.js has been upgraded to v22.22.2, and the Windows platform only supports Windows 8.1 or later.
 
 ### DownLoad@download
 

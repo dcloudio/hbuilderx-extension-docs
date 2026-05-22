@@ -107,6 +107,7 @@
     * [uniapp發行服務器響應異常](/Tutorial/faq/uniapp_publish_server_error.md)
     * [终端空白及无法输入的问题](/Tutorial/Questions/Terminal-input-problem.md)
     * [macOS切換用戶後升級時提示權限不足](/Tutorial/Questions/MacPermissiondenied.md)
+    * [Windows 系統支援](/Tutorial/Questions/systemSupport.md)
     <!-- * [WebView2 執行時的问题](/Tutorial/Questions/Webview2Runtime.md) 功能上线时打开-->
 * [崩潰報告](/Tutorial/CrashReporter.md)
 * [歷史版本](/Tutorial/HistoryVersion.md)
