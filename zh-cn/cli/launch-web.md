@@ -8,6 +8,12 @@
 
 > **适用项目**：uni-app、uni-app x（`web`）。完整平台对照见 [CLI 概述](/cli/README?id=project-platform)。
 
+## 运行模式说明@launch-ui
+
+> 需 HBuilderX **5.11+** 版本
+
+`--ui` 用于切换运行方式：默认纯 CLI 运行；传 `--ui true` 时与点击 HBuilderX 工具栏「运行」按钮效果相同。详见 [运行 - 手机或模拟器](/cli/launch-app?id=launch-ui)。
+
 ## 命令说明
 
 ### launch web
@@ -24,8 +30,9 @@
 
 | 参数名称            | 描述                                                                       |
 | ------------------- | -------------------------------------------------------------------------- |
-| --help              | 显示 cli 命令帮助                                                          |
+| --help              | cli 命令帮助                                                               |
 | --project           | HBuilder X 里导入的项目名称或绝对路径                                      |
+| --ui                | 切换为界面运行模式（需 HBuilderX 5.11+）。默认纯 CLI 运行，传 `--ui true` 后通过界面启动。取值：true 或 false，默认值为 false |
 | --compile           | 编译模式运行（只编译代码），取值：true 或 false，默认值为 false            |
 | --browser           | 浏览器类型，取值：Built、Chrome、Firefox、Ie、Edge、Safari，默认值为 Built |
 | --continue-on-error | 编译错误后继续运行，取值：true 或 false，默认值为 false                    |
@@ -35,6 +42,9 @@
 ```shell
 # 运行到Web（使用默认浏览器）
 ./cli launch web --project 项目名称
+
+# 运行到Web（界面运行）
+./cli launch web --project 项目名称 --ui true
 
 # 运行到Web（指定Chrome浏览器）
 ./cli launch web --project 项目名称 --browser Chrome

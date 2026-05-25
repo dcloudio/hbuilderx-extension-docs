@@ -6,9 +6,15 @@
 
 通过 CLI 将 **uni-app** 或 **uni-app x** 项目运行到各平台小程序。**uni-app** 项目支持更多小程序平台；**uni-app x** 项目目前仅支持微信小程序（`mp-weixin`）。其余平台命令标注为「仅适用于 uni-app」。完整平台对照见 [CLI 概述](/cli/README?id=project-platform)。[HBuilderX CLI](/cli/README?id=cli)
 
+## 运行模式说明@launch-ui
+
+> 需 HBuilderX **5.11+** 版本
+
+`--ui` 用于切换运行方式：默认纯 CLI 运行；传 `--ui true` 时与点击 HBuilderX 工具栏「运行」按钮效果相同。详见 [运行 - 手机或模拟器](/cli/launch-app?id=launch-ui)。
+
 ## 命令说明
 
-### launch mp-weixin
+### launch mp-weixin@launch-mp-weixin
 
 运行到小程序-微信（uni-app / uni-app x）
 
@@ -22,8 +28,9 @@
 
 | 参数名称            | 描述                                                            |
 | ------------------- | --------------------------------------------------------------- |
-| --help              | 显示 cli 命令帮助                                               |
+| --help              | cli 命令帮助                                                    |
 | --project           | HBuilder X 里导入的项目名称或绝对路径                           |
+| --ui                | 切换为界面运行模式（需 HBuilderX 5.11+）。默认纯 CLI 运行，传 `--ui true` 后通过界面启动。取值：true 或 false，默认值为 false |
 | --compile           | 编译模式运行（只编译代码），取值：true 或 false，默认值为 false |
 | --continue-on-error | 编译错误后继续运行，取值：true 或 false，默认值为 false         |
 | --runtime-log       | 回显运行时日志，取值：true 或 false，默认值为 false             |
@@ -33,6 +40,9 @@
 ```shell
 # 运行到微信小程序
 ./cli launch mp-weixin --project 项目名称
+
+# 运行到微信小程序（界面运行）
+./cli launch mp-weixin --project 项目名称 --ui true
 
 # 运行到微信小程序（编译模式）
 ./cli launch mp-weixin --project 项目名称 --compile true
@@ -47,7 +57,7 @@
 ./cli launch mp-weixin --project 项目名称 --compile true --runtime-log true
 ```
 
-### launch mp-alipay
+### launch mp-alipay@launch-mp-alipay
 
 运行到小程序-支付宝(仅适用于 uni-app)
 
@@ -61,8 +71,9 @@
 
 | 参数名称            | 描述                                                            |
 | ------------------- | --------------------------------------------------------------- |
-| --help              | 显示 cli 命令帮助                                               |
+| --help              | cli 命令帮助                                                    |
 | --project           | HBuilder X 里导入的项目名称或绝对路径                           |
+| --ui                | 切换为界面运行模式（需 HBuilderX 5.11+）。默认纯 CLI 运行，传 `--ui true` 后通过界面启动。取值：true 或 false，默认值为 false |
 | --compile           | 编译模式运行（只编译代码），取值：true 或 false，默认值为 false |
 | --continue-on-error | 编译错误后继续运行，取值：true 或 false，默认值为 false         |
 | --runtime-log       | 回显运行时日志，取值：true 或 false，默认值为 false             |
@@ -86,7 +97,7 @@
 ./cli launch mp-alipay --project 项目名称 --compile true --runtime-log true
 ```
 
-### launch mp-baidu
+### launch mp-baidu@launch-mp-baidu
 
 运行到小程序-百度(仅适用于 uni-app)
 
@@ -100,8 +111,9 @@
 
 | 参数名称            | 描述                                                            |
 | ------------------- | --------------------------------------------------------------- |
-| --help              | 显示 cli 命令帮助                                               |
+| --help              | cli 命令帮助                                                    |
 | --project           | HBuilder X 里导入的项目名称或绝对路径                           |
+| --ui                | 切换为界面运行模式（需 HBuilderX 5.11+）。默认纯 CLI 运行，传 `--ui true` 后通过界面启动。取值：true 或 false，默认值为 false |
 | --compile           | 编译模式运行（只编译代码），取值：true 或 false，默认值为 false |
 | --continue-on-error | 编译错误后继续运行，取值：true 或 false，默认值为 false         |
 | --runtime-log       | 回显运行时日志，取值：true 或 false，默认值为 false             |
@@ -125,7 +137,7 @@
 ./cli launch mp-baidu --project 项目名称 --compile true --runtime-log true
 ```
 
-### launch mp-toutiao
+### launch mp-toutiao@launch-mp-toutiao
 
 运行到小程序-抖音(仅适用于 uni-app)
 
@@ -139,8 +151,9 @@
 
 | 参数名称            | 描述                                                            |
 | ------------------- | --------------------------------------------------------------- |
-| --help              | 显示 cli 命令帮助                                               |
+| --help              | cli 命令帮助                                                    |
 | --project           | HBuilder X 里导入的项目名称或绝对路径                           |
+| --ui                | 切换为界面运行模式（需 HBuilderX 5.11+）。默认纯 CLI 运行，传 `--ui true` 后通过界面启动。取值：true 或 false，默认值为 false |
 | --compile           | 编译模式运行（只编译代码），取值：true 或 false，默认值为 false |
 | --continue-on-error | 编译错误后继续运行，取值：true 或 false，默认值为 false         |
 | --runtime-log       | 回显运行时日志，取值：true 或 false，默认值为 false             |
@@ -164,7 +177,7 @@
 ./cli launch mp-toutiao --project 项目名称 --compile true --runtime-log true
 ```
 
-### launch mp-qq
+### launch mp-qq@launch-mp-qq
 
 运行到小程序-QQ(仅适用于 uni-app)
 
@@ -178,8 +191,9 @@
 
 | 参数名称            | 描述                                                            |
 | ------------------- | --------------------------------------------------------------- |
-| --help              | 显示 cli 命令帮助                                               |
+| --help              | cli 命令帮助                                                    |
 | --project           | HBuilder X 里导入的项目名称或绝对路径                           |
+| --ui                | 切换为界面运行模式（需 HBuilderX 5.11+）。默认纯 CLI 运行，传 `--ui true` 后通过界面启动。取值：true 或 false，默认值为 false |
 | --compile           | 编译模式运行（只编译代码），取值：true 或 false，默认值为 false |
 | --continue-on-error | 编译错误后继续运行，取值：true 或 false，默认值为 false         |
 
@@ -199,7 +213,7 @@
 ./cli launch mp-qq --project 项目名称 --compile true --continue-on-error true
 ```
 
-### launch mp-360
+### launch mp-360@launch-mp-360
 
 运行到小程序-360(仅适用于 uni-app)
 
@@ -213,8 +227,9 @@
 
 | 参数名称            | 描述                                                            |
 | ------------------- | --------------------------------------------------------------- |
-| --help              | 显示 cli 命令帮助                                               |
+| --help              | cli 命令帮助                                                    |
 | --project           | HBuilder X 里导入的项目名称或绝对路径                           |
+| --ui                | 切换为界面运行模式（需 HBuilderX 5.11+）。默认纯 CLI 运行，传 `--ui true` 后通过界面启动。取值：true 或 false，默认值为 false |
 | --compile           | 编译模式运行（只编译代码），取值：true 或 false，默认值为 false |
 | --continue-on-error | 编译错误后继续运行，取值：true 或 false，默认值为 false         |
 
@@ -234,7 +249,7 @@
 ./cli launch mp-360 --project 项目名称 --compile true --continue-on-error true
 ```
 
-### launch mp-jd
+### launch mp-jd@launch-mp-jd
 
 运行到小程序-京东(仅适用于 uni-app)
 
@@ -248,8 +263,9 @@
 
 | 参数名称            | 描述                                                            |
 | ------------------- | --------------------------------------------------------------- |
-| --help              | 显示 cli 命令帮助                                               |
+| --help              | cli 命令帮助                                                    |
 | --project           | HBuilder X 里导入的项目名称或绝对路径                           |
+| --ui                | 切换为界面运行模式（需 HBuilderX 5.11+）。默认纯 CLI 运行，传 `--ui true` 后通过界面启动。取值：true 或 false，默认值为 false |
 | --compile           | 编译模式运行（只编译代码），取值：true 或 false，默认值为 false |
 | --continue-on-error | 编译错误后继续运行，取值：true 或 false，默认值为 false         |
 
@@ -269,7 +285,7 @@
 ./cli launch mp-jd --project 项目名称 --compile true --continue-on-error true
 ```
 
-### launch mp-kuaishou
+### launch mp-kuaishou@launch-mp-kuaishou
 
 运行到小程序-快手(仅适用于 uni-app)
 
@@ -283,8 +299,9 @@
 
 | 参数名称            | 描述                                                            |
 | ------------------- | --------------------------------------------------------------- |
-| --help              | 显示 cli 命令帮助                                               |
+| --help              | cli 命令帮助                                                    |
 | --project           | HBuilder X 里导入的项目名称或绝对路径                           |
+| --ui                | 切换为界面运行模式（需 HBuilderX 5.11+）。默认纯 CLI 运行，传 `--ui true` 后通过界面启动。取值：true 或 false，默认值为 false |
 | --compile           | 编译模式运行（只编译代码），取值：true 或 false，默认值为 false |
 | --continue-on-error | 编译错误后继续运行，取值：true 或 false，默认值为 false         |
 
@@ -304,7 +321,7 @@
 ./cli launch mp-kuaishou --project 项目名称 --compile true --continue-on-error true
 ```
 
-### launch mp-lark
+### launch mp-lark@launch-mp-lark
 
 运行到小程序-飞书(仅适用于 uni-app)
 
@@ -318,8 +335,9 @@
 
 | 参数名称            | 描述                                                            |
 | ------------------- | --------------------------------------------------------------- |
-| --help              | 显示 cli 命令帮助                                               |
+| --help              | cli 命令帮助                                                    |
 | --project           | HBuilder X 里导入的项目名称或绝对路径                           |
+| --ui                | 切换为界面运行模式（需 HBuilderX 5.11+）。默认纯 CLI 运行，传 `--ui true` 后通过界面启动。取值：true 或 false，默认值为 false |
 | --compile           | 编译模式运行（只编译代码），取值：true 或 false，默认值为 false |
 | --continue-on-error | 编译错误后继续运行，取值：true 或 false，默认值为 false         |
 
@@ -339,7 +357,7 @@
 ./cli launch mp-lark --project 项目名称 --compile true --continue-on-error true
 ```
 
-### launch mp-xhs
+### launch mp-xhs@launch-mp-xhs
 
 运行到小程序-小红书(仅适用于 uni-app)
 
@@ -353,8 +371,9 @@
 
 | 参数名称            | 描述                                                            |
 | ------------------- | --------------------------------------------------------------- |
-| --help              | 显示 cli 命令帮助                                               |
+| --help              | cli 命令帮助                                                    |
 | --project           | HBuilder X 里导入的项目名称或绝对路径                           |
+| --ui                | 切换为界面运行模式（需 HBuilderX 5.11+）。默认纯 CLI 运行，传 `--ui true` 后通过界面启动。取值：true 或 false，默认值为 false |
 | --compile           | 编译模式运行（只编译代码），取值：true 或 false，默认值为 false |
 | --continue-on-error | 编译错误后继续运行，取值：true 或 false，默认值为 false         |
 
@@ -374,7 +393,7 @@
 ./cli launch mp-xhs --project 项目名称 --compile true --continue-on-error true
 ```
 
-### launch mp-harmony
+### launch mp-harmony@launch-mp-harmony
 
 运行到鸿蒙元服务(仅适用于 uni-app)
 
@@ -390,7 +409,8 @@ cli launch mp-harmony --help
 | ------------------- | ---------------------------------------------------------------------------- |
 | --help              | cli 命令帮助                                                                 |
 | --project           | HBuilder X 里导入的项目绝对路径或目录名                                      |
-| --target            | 指定要使用的设备序列号，默认使用第一个设备，可通过 devices list 获取设备列表 |
+| --ui                | 切换为界面运行模式（需 HBuilderX 5.11+）。默认纯 CLI 运行，传 `--ui true` 后通过界面启动。取值：true 或 false，默认值为 false |
+| --deviceId          | 指定要使用的设备序列号，默认使用第一个设备，可通过 devices list 获取设备列表 |
 | --cleanCache        | 清理构建缓存，取值：true 或 false，默认值为 false                            |
 | --compile           | 编译模式运行（只编译代码），取值：true 或 false，默认值为 false              |
 | --continue-on-error | 编译错误后继续运行，取值：true 或 false，默认值为 false                      |
@@ -401,8 +421,11 @@ cli launch mp-harmony --help
 # 运行到鸿蒙元服务
 cli launch mp-harmony --project 项目名称
 
+# 运行到鸿蒙元服务（界面运行）
+cli launch mp-harmony --project 项目名称 --ui true
+
 # 运行到鸿蒙元服务（指定设备）
-cli launch mp-harmony --project 项目名称 --target 设备序列号
+cli launch mp-harmony --project 项目名称 --deviceId 设备序列号
 
 # 运行到鸿蒙元服务（清理构建缓存）
 cli launch mp-harmony --project 项目名称 --cleanCache true
@@ -414,13 +437,13 @@ cli launch mp-harmony --project 项目名称 --compile true
 cli launch mp-harmony --project 项目名称 --continue-on-error true
 
 # 运行到鸿蒙元服务（组合参数：指定设备 + 清理构建缓存）
-cli launch mp-harmony --project 项目名称 --target 设备序列号 --cleanCache true
+cli launch mp-harmony --project 项目名称 --deviceId 设备序列号 --cleanCache true
 
 # 运行到鸿蒙元服务（组合参数：编译模式 + 清理构建缓存）
 cli launch mp-harmony --project 项目名称 --compile true --cleanCache true
 ```
 
-### launch quickapp-webview-huawei
+### launch quickapp-webview-huawei@launch-quickapp-webview-huawei
 
 运行到快应用-华为(仅适用于 uni-app)
 
@@ -434,8 +457,9 @@ cli launch mp-harmony --project 项目名称 --compile true --cleanCache true
 
 | 参数名称            | 描述                                                            |
 | ------------------- | --------------------------------------------------------------- |
-| --help              | 显示 cli 命令帮助                                               |
+| --help              | cli 命令帮助                                                    |
 | --project           | HBuilder X 里导入的项目名称或绝对路径                           |
+| --ui                | 切换为界面运行模式（需 HBuilderX 5.11+）。默认纯 CLI 运行，传 `--ui true` 后通过界面启动。取值：true 或 false，默认值为 false |
 | --compile           | 编译模式运行（只编译代码），取值：true 或 false，默认值为 false |
 | --continue-on-error | 编译错误后继续运行，取值：true 或 false，默认值为 false         |
 
@@ -455,7 +479,7 @@ cli launch mp-harmony --project 项目名称 --compile true --cleanCache true
 ./cli launch quickapp-webview-huawei --project 项目名称 --compile true --continue-on-error true
 ```
 
-### launch quickapp-webview-union
+### launch quickapp-webview-union@launch-quickapp-webview-union
 
 运行到快应用-联盟(仅适用于 uni-app)
 
@@ -469,8 +493,9 @@ cli launch mp-harmony --project 项目名称 --compile true --cleanCache true
 
 | 参数名称            | 描述                                                            |
 | ------------------- | --------------------------------------------------------------- |
-| --help              | 显示 cli 命令帮助                                               |
+| --help              | cli 命令帮助                                                    |
 | --project           | HBuilder X 里导入的项目名称或绝对路径                           |
+| --ui                | 切换为界面运行模式（需 HBuilderX 5.11+）。默认纯 CLI 运行，传 `--ui true` 后通过界面启动。取值：true 或 false，默认值为 false |
 | --compile           | 编译模式运行（只编译代码），取值：true 或 false，默认值为 false |
 | --continue-on-error | 编译错误后继续运行，取值：true 或 false，默认值为 false         |
 
