@@ -1,3 +1,19 @@
+## 5.11.2026052520-alpha
+* Fixed language service support for easycom components using the `defineComponent` syntax
+* Added cloud packaging support for querying build records via `CLI pack status` [Documentation](https://hx.dcloud.net.cn/cli/pack?id=pack-query) [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=29355)
+* Added cloud packaging support for retrieving packaging console logs via `CLI logcat pack` [Documentation](https://hx.dcloud.net.cn/cli/logcat-pack) [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=29356)
+* Added `CLI launch` support for running uni-app (x) projects, including the new `--ui` parameter for improved uni-agent integration [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=29509)
+* Added Vapor Mode support for running uni-app x projects on iOS [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=29506)
+* Added optional `uni-oauth` and `uni-share` module configuration support for uni-app x Android/iOS platforms in `manifest.json` [Documentation](https://doc.dcloud.net.cn/uni-app-x/collocation/manifest-ios.html#modulesoauth) [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=29135)
+* Added a new âView Layer Compilation Targetâ option in the `manifest.json` editor [Documentation](https://uniapp.dcloud.net.cn/collocation/manifest.html) [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=29150)
+* Increased the default compiler memory allocation to 5GB when running uni-app (x) projects [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=29501)
+* Improved the âAI Fixâ and âBug Reportâ interaction flow for uni-app (x) compilation errors [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=29510)
+* Fixed a false âNode.js not installedâ prompt when running uni-app CLI projects [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=29505)
+* Fixed Android log link parsing issues for `Object` logs and incorrect source mapping offsets in error logs for uni-app [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=29513)
+* Optimized device wake-up and installation authorization workflows for uni-app (x) Android runtime [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=29512)
+* Optimized the runtime logging experience for uni-app (x) Web platform [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=29511)
+
+
 ## 5.08.2026050815-alpha
 * Fixed an issue introduced in version 4.55 on macOS (Arm) where text entered with the Sogou Input Method disappeared after switching from Chinese to English input. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=22901&ask_id=214698)
 * Fixed an issue introduced in version 5.07 where the language service reported errors in component property hints after using specific syntax. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=29057)
@@ -59,8 +75,8 @@
 
 
 ## 5.0.2026013113-alpha
-* 【Important】Added AI Chat plugin. Supports integration with Claude Code, Gemini, Copilot and other CLI tools [Documentation](https://hx.dcloud.net.cn/Tutorial/AI/AIChat) <https://issues.dcloud.net.cn/pages/issues/detail?id=25161>
-* 【Important】Added Copilot for HBuilder plugin. Supports AI code completion [Documentation](https://hx.dcloud.net.cn/Tutorial/AI/github-copilot) <https://issues.dcloud.net.cn/pages/issues/detail?id=24781>
+* ãImportantãAdded AI Chat plugin. Supports integration with Claude Code, Gemini, Copilot and other CLI tools [Documentation](https://hx.dcloud.net.cn/Tutorial/AI/AIChat) <https://issues.dcloud.net.cn/pages/issues/detail?id=25161>
+* ãImportantãAdded Copilot for HBuilder plugin. Supports AI code completion [Documentation](https://hx.dcloud.net.cn/Tutorial/AI/github-copilot) <https://issues.dcloud.net.cn/pages/issues/detail?id=24781>
 * Added uni-app (x) run via `CLI launch`, facilitating AI automatic problem fixing [Documentation](https://hx.dcloud.net.cn/cli/launch-app) <https://issues.dcloud.net.cn/pages/issues/detail?id=24793>
 * Added Language Service uni-app x project style supports externalClasses [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=25784)
 * Added command(workbench.action.autoUpdate) supports user-configured shortcuts for automatic updates [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=26043)
@@ -142,7 +158,7 @@
 
 
 ## 4.81.2025091909-alpha
-* Added a restart function to the HBuilder main menu. Menu location: 【File】-【Restart】 [Doc](https://issues.dcloud.net.cn/pages/issues/detail?id=20854) <https://issues.dcloud.net.cn/pages/issues/detail?id=20854>
+* Added a restart function to the HBuilder main menu. Menu location: ãFileã-ãRestartã [Doc](https://issues.dcloud.net.cn/pages/issues/detail?id=20854) <https://issues.dcloud.net.cn/pages/issues/detail?id=20854>
 * Added HBuilder core plugin version validation to ensure that the plugin version matches the HBuilder version. [Doc](https://issues.dcloud.net.cn/pages/issues/detail?id=20862) <https://issues.dcloud.net.cn/pages/issues/detail?id=20862>
 * Fixed the issue where the console automatically scrolls to the bottom when new content is output while scrolling up to view logs. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=20331)
 * Fixed an issue where the breakpoint position did not match the expected location when double-clicking the line number to set a breakpoint. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=20823)
@@ -199,7 +215,7 @@
 * Fixed AI repair issues caused by version 4.72, where HBuilder crashes during the repair process under certain circumstances. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=20838)
 * Fixed AI repair caused by version 4.72: No code coloring for new content in the comparison interface. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=20883)
 * Fixed Linux HBuilder CLI login error for overseas accounts. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=17471)
-* manifest.json: Added support for visual configuration of WeChat login and WeChat sharing in 【HarmonyOS App Configuration】. [Doc](https://uniapp.dcloud.net.cn/collocation/manifest.html#app-harmony) <https://issues.dcloud.net.cn/pages/issues/detail?id=19316>
+* manifest.json: Added support for visual configuration of WeChat login and WeChat sharing in ãHarmonyOS App Configurationã. [Doc](https://uniapp.dcloud.net.cn/collocation/manifest.html#app-harmony) <https://issues.dcloud.net.cn/pages/issues/detail?id=19316>
 * manifest.json: Added uni-app x Android platform now supports configuring dark mode colors for the splash screen background. [Doc](https://issues.dcloud.net.cn/pages/issues/detail?id=19668) <https://issues.dcloud.net.cn/pages/issues/detail?id=19668>
 * manifest.json: Added support for certificate configuration for HarmonyOS Meta Services in manifest.json. [Doc](https://uniapp.dcloud.net.cn/collocation/manifest.html#mp-harmony) <https://issues.dcloud.net.cn/pages/issues/detail?id=19805>
 * manifest.json: Added uni-app x Android platform optional module configuration uni-push. [Doc](https://issues.dcloud.net.cn/pages/issues/detail?id=18885) <https://issues.dcloud.net.cn/pages/issues/detail?id=20860>
@@ -219,7 +235,7 @@
 * Mobile App Playground: Fixed the bug where the debug process did not exit after iOS debugging was stopped. debug process did not exit after stopping iOS debugging. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=20172)
 * Fixed an issue where submitting an App cloud build for uni-app had a certain probability of causing HBuilder to crash. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=20851)
 * Added App Cloud Packaging for uni-app (x): New AppLovin Channel for Overseas Ads. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=20877)
-* Fixed issue where the "Build Custom Debug Base" option in the App cloud packaging interface was not automatically checked when selecting "Run to Phone or Emulator" → "Build Custom Base" during the "Run" process. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=19745)
+* Fixed issue where the "Build Custom Debug Base" option in the App cloud packaging interface was not automatically checked when selecting "Run to Phone or Emulator" â "Build Custom Base" during the "Run" process. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=19745)
 * Added support for CLI packaging of HarmonyOS atomic services. [Doc](https://hx.dcloud.net.cn/cli/pack-mp-harmony) <https://issues.dcloud.net.cn/pages/issues/detail?id=21467>
 * Fixed the bug where the cloud platform compatibility option in the uni_modules plugin was incorrectly selected by default. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=20781)
 
@@ -266,7 +282,7 @@
 * Add AI Fix for uni-app x: When running on Android/iOS platforms, compilation errors can be automatically fixed through AI [Details](https://doc.dcloud.net.cn/uni-app-x/tutorial/bug_repair.html)
 * Language Server: Added support for symbol renaming. [Details](https://hx.dcloud.net.cn/Tutorial/Language/refactor)
 * Fixed a bug where HBuilderX would crash when closing an editor tab after using AI code completion. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=18507)
-* Fixed an issue introduced in version 4.62 where typing `(,` in certain situations caused the editor to freeze for 1–2 seconds. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=16804)
+* Fixed an issue introduced in version 4.62 where typing `(,` in certain situations caused the editor to freeze for 1â2 seconds. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=16804)
 * Language Server: Fixed an issue in uni-app x where conditional compilation code blocks were not grayed out when using the subpackage configuration in pages.json [Details](https://hx.dcloud.net.cn/Tutorial/Language/language_service_target_support?id=%e6%9d%a1%e4%bb%b6%e7%bc%96%e8%af%91%e4%bb%a3%e7%a0%81%e5%9d%97%e7%bd%ae%e7%81%b0)
 * Language Server: Added error codes to the UTS error message popup, allowing users to click and navigate to the corresponding documentation. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=18231)
 * Language Server: Fixed an issue introduced in version 4.63 where the button descriptions in the Vue usage tips popup were incorrect.[Details](https://issues.dcloud.net.cn/pages/issues/detail?id=17960)
@@ -285,8 +301,8 @@
 * Fixed a bug introduced in version 4.64 where copying an ordered list in Markdown, pressing Enter for a new line, and then pasting would cause a crash.[Details](https://issues.dcloud.net.cn/pages/issues/detail?id=18002)
 * Fixed an issue introduced in version 4.64 where the built-in file explorer's large icon view was not working on macOS (Intel) and Windows. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=18188)
 * Fixed a bug in version 4.55 where on macOS (Arm) the toolbar multi-file text search did not respond after entering content and clicking search. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=18129)
-* Fixed a bug in version 4.64 where on macOS (Arm), the editor’s favorite theme selection did not take effect on first installation. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=18186)
-* Fixed a bug in version 4.55 where on macOS (Arm), after the computer wakes from sleep, the editor’s main view became unclickable. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=16829)
+* Fixed a bug in version 4.64 where on macOS (Arm), the editorâs favorite theme selection did not take effect on first installation. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=18186)
+* Fixed a bug in version 4.55 where on macOS (Arm), after the computer wakes from sleep, the editorâs main view became unclickable. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=16829)
 * manifest.json: Added a visual interface for uni-app manifest, supporting Android/iOS module configuration and Maps, including an entry for Baidu Maps configuration.
 * manifest.json: Added visual configuration for iOS and Android in uni-app x manifest.json.  [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=15976)
 * manifest.json: Adjusted HarmonyOS platform run and build process so that if uni-push and one-click login modules are enabled but the services are not activated or configuration parameters are insufficient, only warnings are issued without blocking the process. [Details](https://doc.dcloud.net.cn/uni-app-x/collocation/manifest-harmony.html)
@@ -557,10 +573,10 @@
 * Language Server: Fixed the bug that the vue tag prompt shows the Emmet code block under the text tag[Details](https://issues.dcloud.net.cn/pages/issues/detail?id=1791)
 * Language Server: Fixed a bug in some cases where the code prompts an error after going to the definition in the HTML file [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=4126)
 * Language Server: Fixed a bug in which when using easycom components in vue files, the component path was recognized as a folder in some cases, causing the language service to report an error. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=2589)
-* Language Server: Fixed the bug that after the Vue file goes to the definition of a certain Easycom component tag, the script area of ​​the opened component file becomes invalid [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=2527)
+* Language Server: Fixed the bug that after the Vue file goes to the definition of a certain Easycom component tag, the script area of ââthe opened component file becomes invalid [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=2527)
 * Language Server: Fixed a bug in the vue file code that caused the language service to report an error when there was an automatic package guide prompt item [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=2550)
 * Language Server: Fixed a bug in which the detailed information on the right side of the code assistant was not displayed correctly in some cases in vue files [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=2573)
-* Language Server: Fixed the bug that caused the language service to report an error when some variable boundaries were moved to definitions in the template area of ​​the vue file. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=2529)
+* Language Server: Fixed the bug that caused the language service to report an error when some variable boundaries were moved to definitions in the template area of ââthe vue file. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=2529)
 * Language Server: Fixed a bug in the uniCloud directory where, when file A is referenced by file B, if file B is opened first and then file A, the code prompt and other functions of file A will become invalid. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=2698)
 * Language Server: Fixed the bug that there is no uniCloud related prompt in uniCloud environment in uniapp x project [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=2853)
 * Language Server: Fixed a bug that caused the language service to report an error in some cases when there was a tsconfig.json file in the cli project [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=2603)
@@ -685,7 +701,7 @@
 * Language Server: Fixed the bug of language service uts syntax verification when the special value range string and string type variables are assigned to each other.
 * Language Server: Fixed the bug that when the language service uni-app x platform verification error prompts, the platform error order is inconsistent with the order when setting the platform.
 * Fixed the bug that the F11 shortcut key does not take effect in the default shortcut key scheme when switching windows to do not disturb mode
-* Fixed the bug that Chinese ￥ cannot be input after vue file `{{}}` [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=924)
+* Fixed the bug that Chinese ï¿¥ cannot be input after vue file `{{}}` [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=924)
 * Fixed the bug of inserting a blank line upward when the cursor is on the first line, inserting incorrect content
 * Fixed the bug where go to a newly opened file defined when the file is relatively large may cause the cursor to return to the beginning of the file when it rolls back.
 * Fixed the bug that after uninstalling and reinstalling the Prettier plug-in, if there is a formatting conflict, the plug-in name will appear repeatedly in the pop-up box [Details](https://issues.dcloud.net.cn/pages/issues/detail?id =849)
