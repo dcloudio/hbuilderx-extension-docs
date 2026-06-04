@@ -1,12 +1,17 @@
+## 5.12.2026060409-alpha
+* 修复 5.11版本引发的 雅蓝主题下关闭 uni-agent 后，编辑器右侧残留白色边框 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=29759)
+* 修复 5.11版本引发的 语言服务 uni-app x项目下，css校验误报错 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=29657)
+
 ## 5.11.2026052520-alpha
+* 调整 内置node版本由v18.20.0升级到v22.22.2；macOS支持macOS 11+，Windows支持Windows 8.1+ [详情](https://hx.dcloud.net.cn/Tutorial/install/windows)
+* 调整 macOS(Intel) HBuilder升级Qt6，仅支持macOS 11+ [详情](https://hx.dcloud.net.cn/Tutorial/install/macosx)
 * 修复 语言服务 easycom组件不支持defineComponent写法 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=29065)
 * 新增 云打包 通过`CLI pack status`查询打包记录 [文档](https://hx.dcloud.net.cn/cli/pack?id=pack-query) <https://issues.dcloud.net.cn/pages/issues/detail?id=29355>
 * 新增 云打包 通过`CLI logcat pack`获取打包控制台日志 [文档](https://hx.dcloud.net.cn/cli/logcat-pack) <https://issues.dcloud.net.cn/pages/issues/detail?id=29356>
-* 新增 uni-app (x) 运行 `CLI launch` 能力，新增 `--ui` 参数，更好支持 uni-agent [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=29509)
-* 新增 uni-app x 运行到 iOS 支持蒸汽模式 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=29506)
+* 新增 uni-app (x) 运行 `CLI launch` 能力，新增 `--ui` 参数，更好支持 uni-agent [文档](https://hx.dcloud.net.cn/cli/launch-app?id=launch-ui) <https://issues.dcloud.net.cn/pages/issues/detail?id=29509>
 * 新增 manifest.json uni-app x Android/iOS平台可选模块配置uni-oauth和uni-share [文档](https://doc.dcloud.net.cn/uni-app-x/collocation/manifest-ios.html#modulesoauth) <https://issues.dcloud.net.cn/pages/issues/detail?id=29135>
 * 新增 manifest.json 编辑界面增加“视图层编译目标”选项 [文档](https://uniapp.dcloud.net.cn/collocation/manifest.html) <https://issues.dcloud.net.cn/pages/issues/detail?id=29150>
-* 新增 uni-app (x) 运行 编译器默认内存调整至 5GB [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=29501)
+* 优化 uni-app (x) 运行 编译器默认内存调整至 5GB [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=29501)
 * 优化 uni-app (x) 运行 编译报错后的“AI修复”和“Bug上报”交互 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=29510)
 * 修复 uni-app 运行 CLI 项目时误提示未安装 Node.js [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=29505)
 * 修复 uni-app Android平台 Object 日志链接解析异常和错误日志链接定位偏移 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=29513)

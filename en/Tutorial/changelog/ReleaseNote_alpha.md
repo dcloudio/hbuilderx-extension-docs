@@ -1,4 +1,10 @@
+## 5.12.2026060409-alpha
+- Fix the false-positive CSS validation errors in uni-app x projects introduced in version 5.11 of the language service. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=29657)
+
+
 ## 5.11.2026052520-alpha
+- Updated the built-in Node.js version from **v18.20.0** to **v22.22.2**. macOS now supports **macOS 11+**, and Windows now supports **Windows 8.1+**.  
+- Updated **HBuilder for macOS (Intel)** to **Qt 6**, and it now supports only **macOS 11+**.
 * Fixed language service support for easycom components using the `defineComponent` syntax
 * Added cloud packaging support for querying build records via `CLI pack status` [Documentation](https://hx.dcloud.net.cn/cli/pack?id=pack-query) [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=29355)
 * Added cloud packaging support for retrieving packaging console logs via `CLI logcat pack` [Documentation](https://hx.dcloud.net.cn/cli/logcat-pack) [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=29356)
