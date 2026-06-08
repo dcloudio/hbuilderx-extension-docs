@@ -23,7 +23,7 @@ cli pack --help
 | 参数名称 | 描述 |
 | --- | --- |
 | --help | 查看打包 CLI 命令帮助 |
-| --config | 配置文件的绝对路径，配置项参考 [配置文件](/cli/pack?id=config)。使用 `--config` 时，打包参数以配置文件为准，请勿与命令行参数混用 |
+| --config | 配置文件的绝对路径，配置项参考 [配置文件](/cli/pack?id=config)。使用 `--config` 时 |
 | --project | HBuilderX 中已导入项目的绝对路径或目录名 |
 | --platform | 打包平台，默认值为 `android`。可选值：`android`、`ios`；多个平台用英文逗号分隔 |
 | --iscustom | 是否使用自定义基座，仅值为 `true` 时启用 |
