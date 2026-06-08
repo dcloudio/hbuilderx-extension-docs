@@ -12,55 +12,176 @@
 
 Android/iOS 云打包
 
+**用法：**
+
+```shell
+cli pack --help
+```
+
 **参数：**
 
-| 参数名称                  | 描述                                                                                                  |
-| ------------------------- | ----------------------------------------------------------------------------------------------------- |
-| --help                    | 打包命令帮助                                                                                          |
-| --config                  | 配置文件绝对路径，配置文件配置，参考[配置文件](/cli/pack?id=config)                                   |
-| --project                 | HBuilder X 里导入的项目名或绝对路径                                                                   |
-| --platform                | 配打包平台,默认值 android,取值有"android","ios"如果要打多个逗号隔开                                   |
-| --iscustom                | 是否使用自定义基座 默认值 false, true 自定义基座 false 自定义证书                                     |
-| --safemode                | 打包方式是否为安心打包,默认值 false,true 安心打包,false 传统打包                                      |
-| --isconfusion             | 是否对配置的 js/nvue 文件进行原生混淆，true 打开 false 关闭                                           |
-| --splashads               | 开屏广告,默认值 false, true 打开 false 关闭                                                           |
-| --rpads                   | 悬浮红包广告,默认值 false, true 打开 false 关闭                                                       |
-| --pushads                 | push 广告,默认值 false, true 打开 false 关闭                                                          |
-| --exchange                | 加入换量联盟,默认值 false, true 加入 false 不加入                                                     |
-| --android.packagename     | 安卓包名，打安卓包填写                                                                                |
-| --android.androidpacktype | 安卓打包类型 默认值 0,0 使用自有证书 1 使用公共证书 2 使用 DCloud 老版证书                            |
-| --android.certalias       | 安卓打包证书别名,自有证书打包填写的参数                                                               |
-| --android.certfile        | 安卓打包证书文件路径,自有证书打包填写的参数                                                           |
-| --android.certpassword    | 安卓打包证书密码,自有证书打包填写的参数                                                               |
-| --android.storepassword   | 安卓打包证书库密码（HBuilderx4.41 支持）,自有证书打包填写的参数                                       |
-| --android.channels        | 安卓平台要打的渠道包,取值有"google","yyb","360","huawei","xiaomi","oppo","vivo"，如果要打多个逗号隔开 |
-| --ios.bundle              | iOS appid 打 ios 包填写                                                                               |
-| --ios.supporteddevice     | iOS 打包支持的设备类型,默认值 iPhone 值有"iPhone","iPad" 如果要打多个逗号隔开打包平台                 |
-| --ios.isprisonbreak       | iOS 打包是否打越狱包,true 打越狱包,false 正式包。HBuilderX 3.2.3+版本起，不再支持构建越狱包。         |
-| --ios.profile             | iOS 使用自定义证书打包的 profile 文件路径                                                             |
-| --ios.certfile            | iOS 使用自定义证书打包的 p12 文件路径                                                                 |
-| --ios.certpassword        | iOS 使用自定义证书打包的证书密码                                                                      |
+| 参数名称 | 描述 |
+| --- | --- |
+| --help | 查看打包 CLI 命令帮助 |
+| --config | 配置文件的绝对路径，配置项参考 [配置文件](/cli/pack?id=config)。使用 `--config` 时，打包参数以配置文件为准，请勿与命令行参数混用 |
+| --project | HBuilderX 中已导入项目的绝对路径或目录名 |
+| --platform | 打包平台，默认值为 `android`。可选值：`android`、`ios`；多个平台用英文逗号分隔 |
+| --iscustom | 是否使用自定义基座，仅值为 `true` 时启用 |
+| --safemode | 是否使用安心打包，仅值为 `true` 时启用；否则使用传统打包（**仅适用于 uni-app** 项目） |
+| --sourceMap | 是否生成 SourceMap，默认值为 `false` |
+| --isconfusion | 是否启用代码混淆，仅值为 `true` 时启用（**仅适用于 uni-app** 项目） |
+| --splashads | 是否启用开屏广告，仅值为 `true` 时启用（Android / iOS 均支持） |
+| --rpads | 是否启用悬浮红包广告，仅值为 `true` 时启用（**仅适用于 uni-app** 项目，Android / iOS 均支持） |
+| --unimpads | 是否启用激励视频广告，仅值为 `true` 时启用（Android / iOS 均支持） |
+| --ad.domestic | 集成国内广告 SDK（Android / iOS 均支持）。可选值：`gdt`、`gm`、`ks`、`bd`、`hw`、`sigmob`、`zy`、`bz`、`fl`、`jl`、`yt`；多个 SDK 用英文逗号分隔 |
+| --ad.international | 集成海外广告 SDK（Android / iOS 均支持）。可选值：`pg`、`gg`、`unity`、`liftoff`、`inmobi`、`ironsource`、`mintegral`；多个 SDK 用英文逗号分隔 |
+| --ad.content | 集成三方内容场景变现 SDK（**仅适用于 uni-app** 项目，Android / iOS 均支持）。可选值：`ks-content`、`gm-content`；多个 SDK 用英文逗号分隔 |
+| --ignoreWarnings | 打包过程中遇到 warning 时仅输出提示，不中断流程，仅值为 `true` 时生效 |
+| --android.packagename | Android 包名，打包 Android 时必填 |
+| --android.androidpacktype | Android 打包证书类型，默认值为 `0`。`0` 使用自有证书，`1` 使用公共证书，`2` 使用 DCloud 老版证书（**仅适用于 uni-app** 项目），`3` 使用云端证书（**仅适用于 uni-app** 项目） |
+| --android.certalias | Android 自有证书别名，使用自有证书打包时填写 |
+| --android.certfile | Android 自有证书文件路径，使用自有证书打包时填写 |
+| --android.certpassword | Android 自有证书密码，使用自有证书打包时填写 |
+| --android.storepassword | Android 自有证书库密码，使用自有证书打包时填写 |
+| --android.channels | Android 渠道包。可选值：`google`、`yyb`、`360`、`huawei`、`xiaomi`、`oppo`、`vivo`；多个渠道用英文逗号分隔 |
+| --android.antiResignAppid | Android 防重签：绑定 appid，仅值为 `true` 时生效（**仅适用于 uni-app** 项目） |
+| --android.antiResignPackageName | Android 防重签：绑定包名，仅值为 `true` 时生效（**仅适用于 uni-app** 项目） |
+| --android.antiResignCertificate | Android 防重签：绑定签名，仅值为 `true` 时生效（**仅适用于 uni-app** 项目） |
+| --ios.bundle | iOS App ID，打包 iOS 时必填 |
+| --ios.supporteddevice | iOS 支持的设备类型，默认值为 `iPhone`。可选值：`iPhone`、`iPad`；多个设备类型用英文逗号分隔 |
+| --ios.channels | iOS 渠道包。可选值：`phone`、`simulator`；多个渠道用英文逗号分隔（**仅 macOS 生效**） |
+| --ios.profile | iOS 自定义证书打包使用的 profile 文件路径 |
+| --ios.certfile | iOS 自定义证书打包使用的 p12 文件路径 |
+| --ios.certpassword | iOS 自定义证书打包使用的证书密码 |
 
 **使用示例：**
 
+> 以下示例中，`demo-app` 可为 HBuilderX 导入的项目目录名，也可换为项目绝对路径。标记 **uni-app** 的参数或证书类型不适用于 uni-app x。
+
+#### 配置文件与命令行
+
 ```shell
-# 通过配置文件打包
-cli pack --config 配置文件
+# 配置文件打包（参数均在 JSON 中，勿与命令行参数混用）
+cli pack --config ./configure.json
 
-# Android打包：项目名称（apps）、传统打包、包名（io.test)、打包证书（自有证书、别名：testalias、密码123456）
-cli pack --project apps --platform android --safemode false --android.packagename io.test --android.androidpacktype 0 --android.certalias testalias --android.certfile /Users/hx/Desktop/cert/jdk13/test.key --android.certpassword 123456 --android.storepassword 123456
+# 命令行打包：项目目录名
+cli pack --project demo-app --platform android --android.packagename com.example.app --android.androidpacktype 1
 
-# iOS打包
-cli pack --project 项目名称 --platform ios --safemode false --iscustom true --ios.bundle 包名 --ios.supporteddevice iPhone,iPad --ios.isprisonbreak false --ios.profile profile文件路径 --ios.certfile p12文件路径 --ios.certpassword 证书密码
+# 命令行打包：项目绝对路径
+cli pack --project D:/HBuilderProjects/demo-app --platform android --android.packagename com.example.app --android.androidpacktype 1
+```
+
+#### Android 证书与打包方式
+
+```shell
+# 公共证书（androidpacktype 1，uni-app / uni-app x）
+cli pack --project demo-app --platform android --android.packagename com.example.app --android.androidpacktype 1
+
+# 自有证书（androidpacktype 0）
+cli pack --project demo-app --platform android --android.packagename com.example.app --android.androidpacktype 0 --android.certalias myalias --android.certfile /path/to/cert.keystore --android.certpassword 123456 --android.storepassword 123456
+
+# 老版证书（androidpacktype 2，uni-app）
+cli pack --project demo-app --platform android --android.packagename com.example.app --android.androidpacktype 2
+
+# 云端证书（androidpacktype 3，uni-app）
+cli pack --project demo-app --platform android --android.packagename com.example.app --android.androidpacktype 3
+
+# 安心打包（safemode，uni-app）
+cli pack --project demo-app --platform android --safemode true --android.packagename com.example.app --android.androidpacktype 1
+
+# 自定义基座
+cli pack --project demo-app --platform android --iscustom true --android.packagename com.example.app --android.androidpacktype 1
+```
+
+#### Android 渠道与 SourceMap
+
+```shell
+# 多渠道包
+cli pack --project demo-app --platform android --android.packagename com.example.app --android.androidpacktype 1 --android.channels google,huawei,xiaomi,oppo,vivo
+
+# 生成 SourceMap
+cli pack --project demo-app --platform android --android.packagename com.example.app --android.androidpacktype 1 --sourceMap true
+```
+
+#### Android 防重签
+
+```shell
+# 防重签：绑定 appid（仅 uni-app）
+cli pack --project demo-app --platform android --android.packagename com.example.app --android.androidpacktype 1 --android.antiResignAppid true
+
+# 防重签：绑定包名（仅 uni-app）
+cli pack --project demo-app --platform android --android.packagename com.example.app --android.androidpacktype 1 --android.antiResignPackageName true
+
+# 防重签：绑定签名（仅 uni-app）
+cli pack --project demo-app --platform android --android.packagename com.example.app --android.androidpacktype 1 --android.antiResignCertificate true
+```
+
+#### iOS 证书与打包方式
+
+```shell
+# 自定义证书打包
+cli pack --project demo-app --platform ios --ios.bundle com.example.app --ios.supporteddevice iPhone,iPad --ios.profile /path/to/profile.mobileprovision --ios.certfile /path/to/cert.p12 --ios.certpassword 123456
+
+# 仅支持 iPhone
+cli pack --project demo-app --platform ios --ios.bundle com.example.app --ios.supporteddevice iPhone --ios.profile /path/to/profile.mobileprovision --ios.certfile /path/to/cert.p12 --ios.certpassword 123456
+
+# 仅支持 iPad
+cli pack --project demo-app --platform ios --ios.bundle com.example.app --ios.supporteddevice iPad --ios.profile /path/to/profile.mobileprovision --ios.certfile /path/to/cert.p12 --ios.certpassword 123456
+
+# 自定义基座
+cli pack --project demo-app --platform ios --iscustom true --ios.bundle com.example.app --ios.supporteddevice iPhone
+```
+
+#### iOS 渠道与 SourceMap
+
+```shell
+# 模拟器渠道（ios.channels simulator，仅 macOS）
+cli pack --project demo-app --platform ios --ios.bundle com.example.app --ios.channels simulator --ios.profile /path/to/profile.mobileprovision --ios.certfile /path/to/cert.p12 --ios.certpassword 123456
+
+# 生成 SourceMap
+cli pack --project demo-app --platform ios --ios.bundle com.example.app --sourceMap true --ios.profile /path/to/profile.mobileprovision --ios.certfile /path/to/cert.p12 --ios.certpassword 123456
+```
+
+#### 广告与变现（Android / iOS）
+
+> 以下广告参数 **Android、iOS 均支持**。`rpads`、`ad.content` 仅 uni-app 项目可用。iOS 示例需同时指定 `--ios.profile`、`--ios.certfile`、`--ios.certpassword`。
+
+```shell
+# 开屏 + 激励视频 + 悬浮红包（rpads 仅 uni-app）
+cli pack --project demo-app --platform android --android.packagename com.example.app --android.androidpacktype 1 --splashads true --unimpads true --rpads true
+cli pack --project demo-app --platform ios --ios.bundle com.example.app --ios.profile /path/to/profile.mobileprovision --ios.certfile /path/to/cert.p12 --ios.certpassword 123456 --splashads true --unimpads true --rpads true
+
+# 国内广告 SDK
+cli pack --project demo-app --platform android --android.packagename com.example.app --android.androidpacktype 1 --ad.domestic gdt,ks,bd
+cli pack --project demo-app --platform ios --ios.bundle com.example.app --ios.profile /path/to/profile.mobileprovision --ios.certfile /path/to/cert.p12 --ios.certpassword 123456 --ad.domestic gdt,ks,bd
+
+# 海外广告 SDK
+cli pack --project demo-app --platform android --android.packagename com.example.app --android.androidpacktype 1 --ad.international gg,unity,ironsource
+cli pack --project demo-app --platform ios --ios.bundle com.example.app --ios.profile /path/to/profile.mobileprovision --ios.certfile /path/to/cert.p12 --ios.certpassword 123456 --ad.international gg,unity,ironsource
+
+# 内容变现 SDK（ad.content，仅 uni-app）
+cli pack --project demo-app --platform android --android.packagename com.example.app --android.androidpacktype 1 --ad.content ks-content
+cli pack --project demo-app --platform ios --ios.bundle com.example.app --ios.profile /path/to/profile.mobileprovision --ios.certfile /path/to/cert.p12 --ios.certpassword 123456 --ad.content ks-content
+```
+
+#### CI 自动化@pack-ci
+
+> 需 HBuilderX **5.11+**（`logcat pack`、`pack status`）
+
+```shell
+cli open
+cli pack --project demo-app --platform android --android.packagename com.example.app --android.androidpacktype 1
+cli logcat pack                              # 另开终端查看打包日志
+cli pack status --project demo-app           # 查询状态（支持目录名或绝对路径）
 ```
 
 **注意事项：**
 
-> 首先, 需要启动 HBuilderX. (进入 HBuilderX 安装目录根目录, 终端输入 `cli.exe open`)
+> 首先，需要启动 HBuilderX。（进入 HBuilderX 安装目录根目录，终端输入 `cli open`）
 
-> 如果配置文件与配置参数都配置了相同参数，以命令行参数为准
+> `--config` 与命令行参数请勿混用：使用配置文件打包时，参数均在 JSON 中配置；使用命令行打包时，通过 `--project`、`--platform` 等参数指定。
 
-> 打包过程中如果有错误会给出相应的错误信息并中断操作，打包成功后传统打包会输出打包成功的下载地址，安心打包会输出打包成功后的路径。
+> 打包过程中如有错误会给出相应错误信息并中断操作；可通过 `--ignoreWarnings true` 使 warning 不中断流程。打包成功后，传统打包会输出下载地址，安心打包会输出打包成功后的路径。
 
 **打包输出示例：**
 
@@ -91,8 +212,8 @@ localhost:MacOS hx$ ./cli pack --config /Users/hx/Documents/HBuilderProjects/测
 
 ```shell
 cli pack status --help
-cli pack status --project D:/projects/demo-app
 cli pack status --project demo-app
+cli pack status --project D:/HBuilderProjects/demo-app
 ```
 
 **参数：**
@@ -102,67 +223,61 @@ cli pack status --project demo-app
 | --help    | cli 命令帮助                            |
 | --project | HBuilder X 里导入的项目绝对路径或目录名 |
 
-> 查询云打包状态前，需先启动 HBuilderX（**5.11+**）。
-
-打包过程的控制台日志，请使用 [logcat pack](/cli/logcat-pack)（需 HBuilderX **5.11+**）。
+> `--project` 支持目录名或绝对路径。查询前需先启动 HBuilderX。打包日志见 [logcat pack](/cli/logcat-pack)；CI 流程见上文 [CI 自动化](/cli/pack?id=pack-ci)。
 
 ## 打包配置文件格式@config
 
-配置文件格式为 json,将下面内容保存在文件 json 文件，编码为 utf-8，根据说明配置所需参数
+配置文件格式为 JSON，编码为 UTF-8。各字段说明见上文 [pack 命令参数](#pack)。使用 `--config` 打包时，所有参数在 JSON 中配置，**不要**与 `--project`、`--platform` 等命令行参数混用。
+
+**配置示例：**
 
 ```json
 {
-    //项目名字或项目绝对路径
-    "project": "test-pack",
-    //打包平台 默认值android  值有"android","ios" 如果要打多个逗号隔开打包平台
-    "platform": "ios,android",
-    //是否使用自定义基座 默认值false  true自定义基座 false自定义证书
-    "iscustom": false,
-    //打包方式是否为安心打包默认值false,true安心打包,false传统打包
-    "safemode": false,
-    //android打包参数
-    "android": {
-        //安卓包名
-        "packagename": "com.test.android",
-        //安卓打包类型 默认值0 0 使用自有证书 1 使用公共证书 2 使用老版证书 3 使用云端证书
-        "androidpacktype": "1",
-        //安卓使用自有证书自有打包证书参数
-        //安卓打包证书别名,自有证书打包填写的参数
-        "certalias": "",
-        //安卓打包证书文件路径,自有证书打包填写的参数
-        "certfile": "",
-        //安卓打包证书密码,自有证书打包填写的参数
-        "certpassword": "",
-        //安卓打包证书库密码（HBuilderx4.41支持）,自有证书打包填写的参数
-        "storePassword": "",
-        //安卓平台要打的渠道包 取值有"google","yyb","360","huawei","xiaomi","oppo","vivo"，如果要打多个逗号隔开
-        "channels": ""
-    },
-    //ios打包参数
-    "ios": {
-        //ios appid
-        "bundle": "com.test.ios",
-        //ios打包支持的设备类型 默认值iPhone 值有"iPhone","iPad" 如果要打多个逗号隔开打包平台
-        "supporteddevice": "iPhone,iPad",
-        //iOS使用自定义证书打包的profile文件路径
-        "profile": "",
-        //iOS使用自定义证书打包的p12文件路径
-        "certfile": "",
-        //iOS使用自定义证书打包的证书密码
-        "certpassword": "123"
-    },
-    //是否混淆 true混淆 false关闭
-    "isconfusion": false,
-    //开屏广告 true打开 false关闭
-    "splashads": false,
-    //悬浮红包广告true打开 false关闭
-    "rpads": false,
-    //push广告 true打开 false关闭
-    "pushads": false,
-    //加入换量联盟 true加入 false不加入
-    "exchange": false
+  "project": "test-pack",
+  "platform": "ios,android",
+  "iscustom": false,
+  "safemode": false,
+  "sourceMap": false,
+  "isconfusion": false,
+  "splashads": false,
+  "rpads": false,
+  "unimpads": false,
+  "ad": {
+    "domestic": "",
+    "international": "",
+    "content": ""
+  },
+  "ignoreWarnings": false,
+  "android": {
+    "packagename": "com.test.android",
+    "androidpacktype": "1",
+    "certalias": "",
+    "certfile": "",
+    "certpassword": "",
+    "storePassword": "",
+    "channels": "",
+    "antiResignAppid": false,
+    "antiResignPackageName": false,
+    "antiResignCertificate": false
+  },
+  "ios": {
+    "bundle": "com.test.ios",
+    "supporteddevice": "iPhone,iPad",
+    "channels": "",
+    "profile": "",
+    "certfile": "",
+    "certpassword": ""
+  }
 }
 ```
+
+**使用方式：**
+
+```shell
+cli pack --config ./configure.json
+```
+
+> 将下方 JSON 保存为 `configure.json` 后执行上述命令。`--config` 与命令行参数请勿混用。
 
 ## 扩展@extend
 
