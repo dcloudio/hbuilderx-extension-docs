@@ -62,6 +62,8 @@ ls ./cli
 ./cli app quit
 ```
 
+更多命令说明见：[CLI 概述](/cli/README)
+
 ## 4. 登录 HBuilderX 账号
 
 执行以下命令登录：
@@ -75,6 +77,8 @@ ls ./cli
 ```shell
 ./cli user info
 ```
+
+详见：[用户账号操作](/cli/user)
 
 ## 5. 导入项目
 
@@ -90,11 +94,15 @@ ls ./cli
 ./cli project list
 ```
 
+详见：[关闭/打开项目](/cli/project)
+
 ## 6. 编译 UTS 插件
 
 > 需 HBuilderX 5.14+ 版本
 
 `cli compile` 用于编译 UTS 插件。
+
+详见：[UTS 插件编译 - Android/iOS](/cli/compile-uts.md)
 
 ### 按 `uni_modules` 模块编译
 
@@ -128,6 +136,8 @@ Linux 下通常使用 `launch` 的编译模式做构建验证，无需连接设�
 
 该命令只编译代码，不运行到真机或模拟器。
 
+详见：[uni-app / uni-app x 运行 - 手机或模拟器](/cli/launch-app?id=launch-app-android)
+
 ## 8. 生成发行资源
 
 ### 生成本地打包 App 资源
@@ -138,6 +148,8 @@ Linux 下通常使用 `launch` 的编译模式做构建验证，无需连接设�
 
 该命令会生成 Android 本地打包所需的 App 资源。
 
+详见：[uni-app / uni-app x 发行 - App 生成本地打包资源](/cli/publish-app-appResource)
+
 ### 导出 wgt 包
 
 ```shell
@@ -145,6 +157,8 @@ Linux 下通常使用 `launch` 的编译模式做构建验证，无需连接设�
 ```
 
 如需自定义导出名称或路径，可继续添加 `--name`、`--path` 等参数。
+
+详见：[uni-app / uni-app x 发行 - App 制作应用 wgt 包](/cli/publish-app-wgt)
 
 ## 9. 执行云打包
 
@@ -174,6 +188,8 @@ Linux 下通常使用 `launch` 的编译模式做构建验证，无需连接设�
 ```shell
 ./cli pack status --project /home/ubuntu/workspace/hello-uts-demo
 ```
+
+详见：[App 云打包日志](/cli/logcat-pack)、[uni-app / uni-app x 发行 - Android/iOS 云打包](/cli/pack)
 
 ## 11. 一组完整示例命令
 
