@@ -26,6 +26,7 @@
     * [uni_modules](/cli/uniModules.md)
 * 扩展
     * [配置环境变量](/cli/env.md)
+    * [Linux CLI 环境配置](/cli/linux-env.md)
     * [Linux 安装插件市场插件](/cli/linux-install-market-plugin.md)
 <div class="contact-box">
   <a href="https://www.dcloud.io/hbuilderx.html" target="_blank" class="contact-item">
