@@ -1,6 +1,6 @@
-# Linux CLI 使用示例：从安装到编译、发行@linux-uts-workflow
+# Linux CLI 使用示例：编译与发行@linux-uts-workflow
 
-本文以一个已准备好的 uni-app x 项目 `hello-uts-demo` 为例，介绍在 Linux 上如何从安装 HBuilderX CLI，到登录账号、导入项目，再到编译 UTS 插件、执行编译模式运行、生成发行资源、云打包和查看打包日志的完整流程。
+本文以一个已准备好的 uni-app x 项目 `hello-uts-demo` 为例，介绍在 Linux 上如何使用 HBuilderX CLI 完成基础准备、项目导入、项目编译，以及常见的几种发行方式。
 
 > 目前我们仅在 **Ubuntu** 系统上进行了测试，并未在其他 Linux 发行版上验证。如有问题，请及时反馈。
 
@@ -14,7 +14,7 @@
 
 如果你的实际路径或模块名不同，请替换为自己的值。
 
-## 1. 安装 HBuilderX Linux CLI
+## 基础准备
 
 从 HBuilderX 官方下载 Linux CLI 安装包后，在服务器上解压到任意目录。例如：
 
@@ -29,8 +29,6 @@ tar -zxvf HBuilderX-Linux-CLI-*.tar.gz -C /home/ubuntu/software
 cd /home/ubuntu/software/HBuilderX
 ```
 
-## 2. 找到 CLI 程序
-
 Linux 下的 CLI 程序位于 HBuilderX 安装目录根目录，文件名为 `cli`。
 
 例如：
@@ -41,8 +39,6 @@ ls ./cli
 ```
 
 如果你已经将 `cli` 加入环境变量，则后续命令也可以直接写成 `cli`。
-
-## 3. 启动 HBuilderX
 
 首次使用前，先启动 HBuilderX：
 
@@ -62,9 +58,9 @@ ls ./cli
 ./cli app quit
 ```
 
-更多命令说明见：[CLI 概述](/cli/README)
+相关文档：[CLI 概述](/cli/README)
 
-## 4. 登录 HBuilderX 账号
+## 账号与项目
 
 执行以下命令登录：
 
@@ -78,9 +74,7 @@ ls ./cli
 ./cli user info
 ```
 
-详见：[用户账号操作](/cli/user)
-
-## 5. 导入项目
+相关文档：[用户账号操作](/cli/user)
 
 将示例项目导入到 HBuilderX：
 
@@ -94,17 +88,15 @@ ls ./cli
 ./cli project list
 ```
 
-详见：[关闭/打开项目](/cli/project)
+相关文档：[关闭/打开项目](/cli/project)
 
-## 6. 编译 UTS 插件
+## 项目编译
 
 > 需 HBuilderX 5.14+ 版本
 
-`cli compile` 用于编译 UTS 插件。
+Linux 下可以通过 `cli compile` 编译项目中的 UTS 插件，也可以通过 `launch` 的编译模式做整体验证。
 
-详见：[UTS 插件编译 - Android/iOS](/cli/compile-uts.md)
-
-### 按 `uni_modules` 模块编译
+按 `uni_modules` 模块编译：
 
 ```shell
 ./cli compile app-android --project /home/ubuntu/workspace/hello-uts-demo --uni_module hello-uts-plugin
@@ -112,7 +104,7 @@ ls ./cli
 
 当 `--uni_module` 只传模块名时，CLI 会自动按项目源码根目录下的 `uni_modules/hello-uts-plugin` 查找模块。
 
-### 按单文件编译
+按单文件编译：
 
 ```shell
 ./cli compile app-android --project /home/ubuntu/workspace/hello-uts-demo --file uni_modules/hello-uts-plugin/utssdk/app-android/index.uts
@@ -120,9 +112,7 @@ ls ./cli
 
 `--file` 与 `--uni_module` 不能同时使用，二选一即可。
 
-## 7. 执行编译模式运行
-
-Linux 下通常使用 `launch` 的编译模式做构建验证，无需连接设备：
+Linux 下也可以通过 `launch` 的编译模式做构建验证，无需连接设备：
 
 ```shell
 ./cli launch app-android --project /home/ubuntu/workspace/hello-uts-demo --compile true
@@ -134,11 +124,11 @@ Linux 下通常使用 `launch` 的编译模式做构建验证，无需连接设�
 ./cli launch app-android --project /home/ubuntu/workspace/hello-uts-demo --compile true --cleanCache true
 ```
 
-该命令只编译代码，不运行到真机或模拟器。
+该命令只编译项目代码，不运行到真机或模拟器。
 
-详见：[uni-app / uni-app x 运行 - 手机或模拟器](/cli/launch-app?id=launch-app-android)
+相关文档：[UTS 插件编译 - Android/iOS](/cli/compile-uts.md)、[uni-app / uni-app x 运行 - 手机或模拟器](/cli/launch-app?id=launch-app-android)
 
-## 8. 生成发行资源
+## 发行方式
 
 ### 生成本地打包 App 资源
 
@@ -148,8 +138,6 @@ Linux 下通常使用 `launch` 的编译模式做构建验证，无需连接设�
 
 该命令会生成 Android 本地打包所需的 App 资源。
 
-详见：[uni-app / uni-app x 发行 - App 生成本地打包资源](/cli/publish-app-appResource)
-
 ### 导出 wgt 包
 
 ```shell
@@ -157,10 +145,8 @@ Linux 下通常使用 `launch` 的编译模式做构建验证，无需连接设�
 ```
 
 如需自定义导出名称或路径，可继续添加 `--name`、`--path` 等参数。
-
-详见：[uni-app / uni-app x 发行 - App 制作应用 wgt 包](/cli/publish-app-wgt)
-
-## 9. 执行云打包
+ 
+### 云打包
 
 如果需要直接生成 Android 安装包，可执行云打包：
 
@@ -175,9 +161,7 @@ Linux 下通常使用 `launch` 的编译模式做构建验证，无需连接设�
 
 如果使用自有证书，可按 [App 云打包](/cli/pack) 文档补充证书参数。
 
-## 10. 查看云打包日志
-
-云打包发起后，可在另一个终端查看打包日志：
+如果执行了云打包，可在另一个终端查看打包日志：
 
 ```shell
 ./cli logcat pack
@@ -189,11 +173,11 @@ Linux 下通常使用 `launch` 的编译模式做构建验证，无需连接设�
 ./cli pack status --project /home/ubuntu/workspace/hello-uts-demo
 ```
 
-详见：[App 云打包日志](/cli/logcat-pack)、[uni-app / uni-app x 发行 - Android/iOS 云打包](/cli/pack)
+相关文档：[uni-app / uni-app x 发行 - App 生成本地打包资源](/cli/publish-app-appResource)、[uni-app / uni-app x 发行 - App 制作应用 wgt 包](/cli/publish-app-wgt)、[uni-app / uni-app x 发行 - Android/iOS 云打包](/cli/pack)、[App 云打包日志](/cli/logcat-pack)
 
-## 11. 一组完整示例命令
+## 示例命令组合
 
-下面是一组可直接参考的完整流程命令：
+下面是一组可直接参考的命令组合：
 
 ```shell
 cd /home/ubuntu/software/HBuilderX
@@ -208,7 +192,7 @@ cd /home/ubuntu/software/HBuilderX
 ./cli logcat pack
 ```
 
-## 12. 什么时候需要准备 Android 编译环境
+## 什么时候需要准备 Android 编译环境
 
 如果项目中的 UTS 插件依赖第三方 Gradle，则需要先配置 Android SDK 和 Gradle，再执行 `cli compile app-android` 或 `cli launch app-android --compile true` 等命令。详情见：
 

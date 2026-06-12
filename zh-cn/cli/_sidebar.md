@@ -28,7 +28,6 @@
 * 扩展
     * [配置环境变量](/cli/env.md)
     * [Linux CLI 环境配置](/cli/linux-env.md)
-    * [Linux CLI 使用示例：从安装到编译、发行](/cli/linux-uts-workflow.md)
     * [Linux 安装插件市场插件](/cli/linux-install-market-plugin.md)
 <div class="contact-box">
   <a href="https://www.dcloud.io/hbuilderx.html" target="_blank" class="contact-item">
