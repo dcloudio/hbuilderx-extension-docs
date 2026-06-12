@@ -30,6 +30,8 @@ cli的用途是让开发者可以在linux服务器上调用HBuilderX cli，来�
 
 扩展：[Linux CLI 环境配置](/cli/linux-env)、[Linux 安装插件市场插件](/cli/linux-install-market-plugin)
 
+如果你希望直接参考一个从安装、登录、导入项目到编译、发行的完整示例，可查看：[Linux CLI 使用示例：从安装到编译、发行](/cli/linux-uts-workflow)
+
 #### 查看帮助文档
 
 > 查看帮助文档，需要先启动HBuilderX。
