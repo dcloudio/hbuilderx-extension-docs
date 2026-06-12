@@ -71,7 +71,6 @@ CLI 的运行、发行等命令面向 **uni-app** 与 **uni-app x** 项目。各
 |用户账号操作，登录、退出等			|[详情](/cli/user)						|
 |文件操作，打开文件并跳转指定行列				|[详情](/cli/file)					|
 |项目操作，导入、关闭项目				|[详情](/cli/project)					|
-|UTS插件编译										|[详情](/cli/compile-uts)			|
 |app打包												|[详情](/cli/pack)						|
 |uniCloud操作，比如云函数上传等	|[详情](/cli/uniCloud)				|
 |uniCloud 前端网页托管					|[详情](/cli/uniCloud-hosting)|
