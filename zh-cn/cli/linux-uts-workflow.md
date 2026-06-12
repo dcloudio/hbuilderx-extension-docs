@@ -202,5 +202,5 @@ cd /home/ubuntu/software/HBuilderX
 
 ## 补充说明
 
-- `--project` 可以传项目在 HBuilderX 中的名称，也可以传项目绝对路径。Linux 环境下更推荐使用**绝对路径**。
+- `--project` 可以传项目在 HBuilderX 中的名称，也可以传项目绝对路径。
 - 如果你已经将 `cli` 加入环境变量，可将示例中的 `./cli` 替换为 `cli`。
