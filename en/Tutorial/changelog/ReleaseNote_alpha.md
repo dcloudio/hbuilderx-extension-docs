@@ -1,3 +1,6 @@
+## 5.13.2026061207-alpha
+* Fixed some minor issues
+
 ## 5.12.2026060409-alpha
 - Fix the false-positive CSS validation errors in uni-app x projects introduced in version 5.11 of the language service. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=29657)
 

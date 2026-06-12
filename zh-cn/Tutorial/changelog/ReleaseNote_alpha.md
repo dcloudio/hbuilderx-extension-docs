@@ -1,3 +1,6 @@
+## 5.13.2026061207-alpha
+* 修复 uniapp框架的一些Bug
+
 ## 5.12.2026060409-alpha
 * 修复 5.11版本引发的 雅蓝主题下关闭 uni-agent 后，编辑器右侧残留白色边框 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=29759)
 * 修复 5.11版本引发的 语言服务 uni-app x项目下，css校验误报错 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=29657)
