@@ -14,6 +14,7 @@
     * [uni-app / uni-app x 运行 - 手机或模拟器](cli/launch-app.md)
     * [uni-app / uni-app x 运行 - WEB](cli/launch-web.md)
     * [uni-app / uni-app x 运行 - 小程序](cli/launch-miniProgram.md)
+    * [UTS 插件编译 - Android/iOS](/cli/compile-uts.md)
     * [App 云打包日志](cli/logcat-pack.md)
     * [uni-app / uni-app x 运行日志 - 手机或模拟器](cli/logcat-app.md)
     * [uni-app / uni-app x 运行日志 - WEB](cli/logcat-web.md)
