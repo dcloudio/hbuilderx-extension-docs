@@ -82,6 +82,8 @@ adb --version
 
 ## 5. 配置 HBuilderX
 
+> `cli config set` 需 HBuilderX 5.14+ 版本
+
 完成上述安装后，还需要将 Gradle 和 Android SDK 的路径写入 HBuilderX 配置。仅在 Shell 中设置环境变量并不够，因为 HBuilderX 不会自动读取当前终端中的这些变量。
 
 配置前请先启动 HBuilderX，然后在 CLI 中执行以下命令更新配置：
@@ -97,5 +99,20 @@ cli config set --key uts-development-android.sdkDir --value /home/your-user/andr
 - `uts-development-android.sdkDir`：填写 Android SDK **根目录的绝对路径**，如 `/home/your-user/android-sdk`
 
 如果后续升级了 Gradle，请同步更新 `uts-development-android.gradleHome`。
+
+如果当前版本暂不支持 `cli config set`，也可以直接编辑用户配置文件：
+
+```shell
+~/.local/share/HBuilder\ X/user/settings.json
+```
+
+示例：
+
+```json
+{
+  "uts-development-android.gradleHome": "/opt/gradle/gradle-8.7/bin/gradle",
+  "uts-development-android.sdkDir": "/home/ubuntu/android-sdk",
+}
+```
 
 配置完成后，HBuilderX 在执行 Android 本地编译相关任务时，会按上述路径查找 Gradle 和 Android SDK。
