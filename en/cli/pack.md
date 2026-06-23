@@ -134,6 +134,30 @@ cli pack --project apps --platform android --safemode false --android.packagenam
 cli pack --project <projectname> --platform iOS --safemode false --iscustom true --ios.bundle <bundle> --ios.supporteddevice iPhone,iPad --ios.isprisonbreak false --ios.profile <profile> --ios.certfile <p12 file> --ios.certpassword <passwd>
 ```
 
+## cli pack cancel@pack-cancel
+
+> Supported from HBuilderX **5.14+**
+
+Cancel an App cloud packaging task.
+
+**Usage:**
+
+```shell
+cli pack cancel --help
+cli pack cancel --project D:/projects/demo-app --platform app-android
+cli pack cancel --project demo-app --platform app-ios
+```
+
+**Parameters:**
+
+| name | description |
+| -- | -- |
+| --help | Show CLI command help |
+| --project | Absolute path or directory name of a project already imported in HBuilderX |
+| --platform | Platform type of the packaging task to cancel. Options: `app-ios`, `app-android` |
+
+> `--project` supports either a directory name or an absolute path. `--platform` supports one platform per command. Start HBuilderX before running this command.
+
 ## Extension@extend
 ------
 

@@ -79,6 +79,30 @@ localhost:MacOS hx$ ./cli pack --config /Users/hx/Documents/HBuilderProjects/測
     類型: iOS Appstore 下載地址: https://service.dcloud.net.cn/build/download/40c60580-7fea-11eb-af55-b9c5ccd8a1ee （注意該地址爲臨時下載地址，只能下載5次）當前應用 IDFA 已經開啓，在提交 AppStore 審覈時需要在後臺開啓 IDFA，[詳細操作查看](https://ask.dcloud.net.cn/article/36107)
 ```
 
+### pack cancel@pack-cancel
+
+> 需 HBuilderX **5.14+** 版本
+
+取消 App 雲打包任務。
+
+**用法：**
+
+```shell
+cli pack cancel --help
+cli pack cancel --project D:/projects/demo-app --platform app-android
+cli pack cancel --project demo-app --platform app-ios
+```
+
+**參數：**
+
+| 參數名稱 | 描述 |
+| --- | --- |
+| --help | 查看 CLI 命令幫助 |
+| --project | HBuilderX 中已導入項目的絕對路徑或目錄名 |
+| --platform | 要取消打包的平臺類型，可選值：`app-ios`、`app-android` |
+
+> `--project` 支持目錄名或絕對路徑。`--platform` 一次僅支持一個平臺。執行前需先啓動 HBuilderX。
+
 ## 打包配置文件格式@config
 
 配置文件格式爲 json,將下面內容保存在文件 json 文件，編碼爲 utf-8，根據說明配置所需參數

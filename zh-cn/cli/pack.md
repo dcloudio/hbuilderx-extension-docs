@@ -134,13 +134,14 @@ cli pack --project demo-app --platform ios --ios.bundle com.example.app --ios.pr
 
 #### CI 自动化@pack-ci
 
-> 需 HBuilderX **5.11+**（`logcat pack`、`pack status`）
+> 需 HBuilderX **5.11+**（`logcat pack`、`pack status`）；`pack cancel` 需 HBuilderX **5.14+**
 
 ```shell
 cli open
 cli pack --project demo-app --platform android --android.packagename com.example.app --android.androidpacktype 1
 cli logcat pack                              # 另开终端查看打包日志
 cli pack status --project demo-app           # 查询状态（支持目录名或绝对路径）
+cli pack cancel --project demo-app --platform app-android  # 取消 Android 云打包任务
 ```
 
 **注意事项：**
@@ -192,6 +193,30 @@ cli pack status --project D:/HBuilderProjects/demo-app
 | --project | HBuilder X 里导入的项目绝对路径或目录名 |
 
 > `--project` 支持目录名或绝对路径。查询前需先启动 HBuilderX。打包日志见 [logcat pack](/cli/logcat-pack)；CI 流程见上文 [CI 自动化](/cli/pack?id=pack-ci)。
+
+### pack cancel@pack-cancel
+
+> 需 HBuilderX **5.14+** 版本
+
+取消 App 云打包任务。
+
+**用法：**
+
+```shell
+cli pack cancel --help
+cli pack cancel --project D:/projects/demo-app --platform app-android
+cli pack cancel --project demo-app --platform app-ios
+```
+
+**参数：**
+
+| 参数名称 | 描述 |
+| --- | --- |
+| --help | 查看 CLI 命令帮助 |
+| --project | HBuilderX 中已导入项目的绝对路径或目录名 |
+| --platform | 要取消打包的平台类型，可选值：`app-ios`、`app-android` |
+
+> `--project` 支持目录名或绝对路径。`--platform` 一次仅支持一个平台。执行前需先启动 HBuilderX；可结合 [pack status](/cli/pack?id=pack-query) 查询当前打包状态。
 
 ## 打包配置文件格式@config
 
