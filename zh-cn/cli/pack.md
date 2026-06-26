@@ -29,10 +29,15 @@ cli pack --help
 | --iscustom | 是否使用自定义基座，仅值为 `true` 时启用 |
 | --safemode | 是否使用安心打包，仅值为 `true` 时启用；否则使用传统打包（**仅适用于 uni-app** 项目） |
 | --sourceMap | 是否生成 SourceMap，默认值为 `false` |
+| --dsyms | 是否生成 iOS 符号表（dSYM）文件。可选值：`true`、`false`；仅值为 `true` 时启用（**仅适用于 uni-app** 项目，需 HBuilderX **5.14+**） |
 | --isconfusion | 是否启用代码混淆，仅值为 `true` 时启用（**仅适用于 uni-app** 项目） |
 | --splashads | 是否启用开屏广告，仅值为 `true` 时启用（Android / iOS 均支持） |
 | --rpads | 是否启用悬浮红包广告，仅值为 `true` 时启用（**仅适用于 uni-app** 项目，Android / iOS 均支持） |
 | --unimpads | 是否启用激励视频广告，仅值为 `true` 时启用（Android / iOS 均支持） |
+| --ad.domestic | 集成国内广告 SDK（Android / iOS 均支持，需 HBuilderX **5.14+**）。可选值：`gdt`、`gm`、`ks`、`bd`、`hw`、`sigmob`、`zy`、`bz`、`fl`、`yt`、`jt`、`wa`；多个 SDK 用英文逗号分隔 |
+| --ad.international | 集成海外广告 SDK（Android / iOS 均支持，需 HBuilderX **5.14+**）。可选值：`pg`、`gg`、`unity`、`liftoff`、`inmobi`、`ironsource`、`mintegral`、`applovin`；多个 SDK 用英文逗号分隔 |
+| --ad.content | 集成三方内容场景变现 SDK（**仅适用于 uni-app** 项目，Android / iOS 均支持，需 HBuilderX **5.14+**）。可选值：`ks-content`、`gm-content`；多个 SDK 用英文逗号分隔 |
+| --ignoreWarnings | 打包过程中遇到 warning 时仅输出提示，不中断流程，仅值为 `true` 时生效（需 HBuilderX **5.14+**） |
 | --android.packagename | Android 包名，打包 Android 时必填 |
 | --android.androidpacktype | Android 打包证书类型，默认值为 `0`。`0` 使用自有证书，`1` 使用公共证书，`2` 使用 DCloud 老版证书（**仅适用于 uni-app** 项目），`3` 使用云端证书（**仅适用于 uni-app** 项目） |
 | --android.certalias | Android 自有证书别名，使用自有证书打包时填写 |
@@ -40,12 +45,17 @@ cli pack --help
 | --android.certpassword | Android 自有证书密码，使用自有证书打包时填写 |
 | --android.storepassword | Android 自有证书库密码，使用自有证书打包时填写 |
 | --android.channels | Android 渠道包。可选值：`google`、`yyb`、`360`、`huawei`、`xiaomi`、`oppo`、`vivo`；多个渠道用英文逗号分隔 |
+| --android.antiResignAppid | Android 防重签：绑定 appid，仅值为 `true` 时生效（**仅适用于 uni-app** 项目，需 HBuilderX **5.14+**） |
+| --android.antiResignPackageName | Android 防重签：绑定包名，仅值为 `true` 时生效（**仅适用于 uni-app** 项目，需 HBuilderX **5.14+**） |
+| --android.antiResignCertificate | Android 防重签：绑定签名，仅值为 `true` 时生效（**仅适用于 uni-app** 项目，需 HBuilderX **5.14+**） |
 | --ios.bundle | iOS App ID，打包 iOS 时必填 |
 | --ios.supporteddevice | iOS 支持的设备类型，默认值为 `iPhone`。可选值：`iPhone`、`iPad`；多个设备类型用英文逗号分隔 |
 | --ios.channels | iOS 渠道包。可选值：`phone`、`simulator`；多个渠道用英文逗号分隔（**仅 macOS 生效**） |
 | --ios.profile | iOS 自定义证书打包使用的 profile 文件路径 |
 | --ios.certfile | iOS 自定义证书打包使用的 p12 文件路径 |
 | --ios.certpassword | iOS 自定义证书打包使用的证书密码 |
+
+> 以下参数需 HBuilderX **5.14+**：`--dsyms`、`--ad.domestic`、`--ad.international`、`--ad.content`、`--ignoreWarnings`、`--android.antiResignAppid`、`--android.antiResignPackageName`、`--android.antiResignCertificate`。
 
 **使用示例：**
 
@@ -96,6 +106,19 @@ cli pack --project demo-app --platform android --android.packagename com.example
 cli pack --project demo-app --platform android --android.packagename com.example.app --android.androidpacktype 1 --sourceMap true
 ```
 
+#### Android 防重签
+
+```shell
+# 防重签：绑定 appid（仅 uni-app，需 HBuilderX 5.14+）
+cli pack --project demo-app --platform android --android.packagename com.example.app --android.androidpacktype 1 --android.antiResignAppid true
+
+# 防重签：绑定包名（仅 uni-app，需 HBuilderX 5.14+）
+cli pack --project demo-app --platform android --android.packagename com.example.app --android.androidpacktype 1 --android.antiResignPackageName true
+
+# 防重签：绑定签名（仅 uni-app，需 HBuilderX 5.14+）
+cli pack --project demo-app --platform android --android.packagename com.example.app --android.androidpacktype 1 --android.antiResignCertificate true
+```
+
 #### iOS 证书与打包方式
 
 ```shell
@@ -112,7 +135,7 @@ cli pack --project demo-app --platform ios --ios.bundle com.example.app --ios.su
 cli pack --project demo-app --platform ios --iscustom true --ios.bundle com.example.app --ios.supporteddevice iPhone
 ```
 
-#### iOS 渠道与 SourceMap
+#### iOS 渠道、SourceMap 与 dSYM
 
 ```shell
 # 模拟器渠道（ios.channels simulator，仅 macOS）
@@ -120,16 +143,31 @@ cli pack --project demo-app --platform ios --ios.bundle com.example.app --ios.ch
 
 # 生成 SourceMap
 cli pack --project demo-app --platform ios --ios.bundle com.example.app --sourceMap true --ios.profile /path/to/profile.mobileprovision --ios.certfile /path/to/cert.p12 --ios.certpassword 123456
+
+# 生成 dSYM（仅 uni-app，需 HBuilderX 5.14+）
+cli pack --project demo-app --platform ios --ios.bundle com.example.app --dsyms true --ios.profile /path/to/profile.mobileprovision --ios.certfile /path/to/cert.p12 --ios.certpassword 123456
 ```
 
-#### 广告（Android / iOS）
+#### 广告与变现（Android / iOS）
 
-> 以下参数 **Android、iOS 均支持**。`rpads` 仅 uni-app 项目可用。iOS 示例需同时指定 `--ios.profile`、`--ios.certfile`、`--ios.certpassword`。
+> 以下广告参数 **Android、iOS 均支持**。`rpads`、`ad.content` 仅 uni-app 项目可用；`ad.domestic`、`ad.international`、`ad.content` 需 HBuilderX **5.14+**。iOS 示例需同时指定 `--ios.profile`、`--ios.certfile`、`--ios.certpassword`。
 
 ```shell
 # 开屏 + 激励视频 + 悬浮红包（rpads 仅 uni-app）
 cli pack --project demo-app --platform android --android.packagename com.example.app --android.androidpacktype 1 --splashads true --unimpads true --rpads true
 cli pack --project demo-app --platform ios --ios.bundle com.example.app --ios.profile /path/to/profile.mobileprovision --ios.certfile /path/to/cert.p12 --ios.certpassword 123456 --splashads true --unimpads true --rpads true
+
+# 国内广告 SDK
+cli pack --project demo-app --platform android --android.packagename com.example.app --android.androidpacktype 1 --ad.domestic gdt,ks,bd
+cli pack --project demo-app --platform ios --ios.bundle com.example.app --ios.profile /path/to/profile.mobileprovision --ios.certfile /path/to/cert.p12 --ios.certpassword 123456 --ad.domestic gdt,ks,bd
+
+# 海外广告 SDK
+cli pack --project demo-app --platform android --android.packagename com.example.app --android.androidpacktype 1 --ad.international gg,unity,applovin
+cli pack --project demo-app --platform ios --ios.bundle com.example.app --ios.profile /path/to/profile.mobileprovision --ios.certfile /path/to/cert.p12 --ios.certpassword 123456 --ad.international gg,unity,applovin
+
+# 内容变现 SDK（ad.content，仅 uni-app）
+cli pack --project demo-app --platform android --android.packagename com.example.app --android.androidpacktype 1 --ad.content ks-content
+cli pack --project demo-app --platform ios --ios.bundle com.example.app --ios.profile /path/to/profile.mobileprovision --ios.certfile /path/to/cert.p12 --ios.certpassword 123456 --ad.content ks-content
 ```
 
 #### CI 自动化@pack-ci
@@ -150,7 +188,7 @@ cli pack cancel --project demo-app --platform app-android  # 取消 Android 云�
 
 > `--config` 与命令行参数请勿混用：使用配置文件打包时，参数均在 JSON 中配置；使用命令行打包时，通过 `--project`、`--platform` 等参数指定。
 
-> 打包过程中如有错误会给出相应错误信息并中断操作。打包成功后，传统打包会输出下载地址，安心打包会输出打包成功后的路径。
+> 打包过程中如有错误会给出相应错误信息并中断操作；可通过 `--ignoreWarnings true` 使 warning 不中断流程（需 HBuilderX **5.14+**）。打包成功后，传统打包会输出下载地址，安心打包会输出打包成功后的路径。
 
 **打包输出示例：**
 
@@ -231,10 +269,17 @@ cli pack cancel --project demo-app --platform app-ios
   "iscustom": false,
   "safemode": false,
   "sourceMap": false,
+  "dsyms": false,
   "isconfusion": false,
   "splashads": false,
   "rpads": false,
   "unimpads": false,
+  "ad": {
+    "domestic": "",
+    "international": "",
+    "content": ""
+  },
+  "ignoreWarnings": false,
   "android": {
     "packagename": "com.test.android",
     "androidpacktype": "1",
@@ -242,7 +287,10 @@ cli pack cancel --project demo-app --platform app-ios
     "certfile": "",
     "certpassword": "",
     "storePassword": "",
-    "channels": ""
+    "channels": "",
+    "antiResignAppid": false,
+    "antiResignPackageName": false,
+    "antiResignCertificate": false
   },
   "ios": {
     "bundle": "com.test.ios",
