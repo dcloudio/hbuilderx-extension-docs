@@ -1,3 +1,8 @@
+## 5.14.2026062614-alpha
+* 新增 云打包 通过`CLI pack cancel`取消打包 [文档](https://hx.dcloud.net.cn/cli/pack) <https://issues.dcloud.net.cn/pages/issues/detail?id=30500>
+* 新增 鸿蒙平台本地打包时先弹框修改应用版本号等参数 [文档](https://uniapp.dcloud.net.cn/tutorial/harmony/runbuild.html#publish) <https://issues.dcloud.net.cn/pages/issues/detail?id=29610>
+* Windows平台 修复 DevEco Studio 6.1.1 不兼容变更导致 uni-app x 鸿蒙版热更新功能失效 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=30127)
+
 ## 5.13.2026061207-alpha
 * 修复 uniapp框架的一些Bug
 
