@@ -1,3 +1,25 @@
+## 5.14.2026070214
+* Updated the built-in Node.js version from **v18.20.0** to **v22.22.2**. macOS now supports **macOS 11+**, and Windows now supports **Windows 8.1+**.  
+* Updated **HBuilder for macOS (Intel)** to **Qt 6**, and it now supports only **macOS 11+**.
+* Fixed language service support for easycom components using the `defineComponent` syntax
+* Added support for canceling cloud packaging via `CLI pack cancel`. [Documentation](https://hx.dcloud.net.cn/cli/pack) <https://issues.dcloud.net.cn/pages/issues/detail?id=30500>
+* Added support for more cloud packaging parameters, including ads, via `CLI pack`. [Documentation](https://hx.dcloud.net.cn/cli/pack) <https://issues.dcloud.net.cn/pages/issues/detail?id=30645>
+* Added cloud packaging support for querying build records via `CLI pack status` [Documentation](https://hx.dcloud.net.cn/cli/pack?id=pack-query) [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=29355)
+* Added cloud packaging support for retrieving packaging console logs via `CLI logcat pack` [Documentation](https://hx.dcloud.net.cn/cli/logcat-pack) [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=29356)
+* Added `CLI launch` support for running uni-app (x) projects, including the new `--ui` parameter for improved uni-agent integration [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=29509)
+* Added Vapor Mode support for running uni-app x projects on iOS [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=29506)
+* Added optional `uni-oauth` and `uni-share` module configuration support for uni-app x Android/iOS platforms in `manifest.json` [Documentation](https://doc.dcloud.net.cn/uni-app-x/collocation/manifest-ios.html#modulesoauth) [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=29135)
+* Added a new “View Layer Compilation Target” option in the `manifest.json` editor [Documentation](https://uniapp.dcloud.net.cn/collocation/manifest.html) [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=29150)
+* Increased the default compiler memory allocation to 5GB when running uni-app (x) projects [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=29501)
+* Improved the “AI Fix” and “Bug Report” interaction flow for uni-app (x) compilation errors [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=29510)
+* Fixed a false “Node.js not installed” prompt when running uni-app CLI projects [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=29505)
+* Fixed Android log link parsing issues for `Object` logs and incorrect source mapping offsets in error logs for uni-app [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=29513)
+* Optimized device wake-up and installation authorization workflows for uni-app (x) Android runtime [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=29512)
+* Optimized the runtime logging experience for uni-app (x) Web platform [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=29511)
+* Added a prompt to modify the app version number and other parameters before local packaging for the HarmonyOS platform. [Documentation](https://uniapp.dcloud.net.cn/tutorial/harmony/runbuild.html#publish) <https://issues.dcloud.net.cn/pages/issues/detail?id=29610>
+* Fixed an incompatibility change in DevEco Studio 6.1.1 on Windows that caused the hot update feature of the uni-app x HarmonyOS version to stop working. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=30127)
+
+
 ## 5.07.2026041006
 * Fixed the issue where the iOS icon for the Uni-app package did not take effect caused by version 5.0. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=27902)
 

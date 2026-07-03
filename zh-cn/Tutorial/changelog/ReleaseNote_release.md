@@ -1,3 +1,23 @@
+## 5.14.2026070214
+* 调整 内置node版本由v18.20.0升级到v22.22.2；macOS支持macOS 11+，Windows支持Windows 8.1+ [详情](https://hx.dcloud.net.cn/Tutorial/install/windows)
+* 调整 macOS(Intel) HBuilder升级Qt6，仅支持macOS 11+ [详情](https://hx.dcloud.net.cn/Tutorial/install/macosx)
+* 修复 语言服务 easycom组件不支持defineComponent写法 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=29065)
+* 新增 云打包 通过`CLI pack cancel`取消打包 [文档](https://hx.dcloud.net.cn/cli/pack) <https://issues.dcloud.net.cn/pages/issues/detail?id=30500>
+* 新增 云打包 通过`CLI pack`支持广告等更多参数 [文档](https://hx.dcloud.net.cn/cli/pack) <https://issues.dcloud.net.cn/pages/issues/detail?id=30645>
+* 新增 云打包 通过`CLI pack status`查询打包记录 [文档](https://hx.dcloud.net.cn/cli/pack?id=pack-query) <https://issues.dcloud.net.cn/pages/issues/detail?id=29355>
+* 新增 云打包 通过`CLI logcat pack`获取打包控制台日志 [文档](https://hx.dcloud.net.cn/cli/logcat-pack) <https://issues.dcloud.net.cn/pages/issues/detail?id=29356>
+* 新增 uni-app (x) 运行 `CLI launch` 能力，新增 `--ui` 参数，更好支持 uni-agent [文档](https://hx.dcloud.net.cn/cli/launch-app?id=launch-ui) <https://issues.dcloud.net.cn/pages/issues/detail?id=29509>
+* 新增 manifest.json uni-app x Android/iOS平台可选模块配置uni-oauth和uni-share [文档](https://doc.dcloud.net.cn/uni-app-x/collocation/manifest-ios.html#modulesoauth) <https://issues.dcloud.net.cn/pages/issues/detail?id=29135>
+* 新增 manifest.json 编辑界面增加“视图层编译目标”选项 [文档](https://uniapp.dcloud.net.cn/collocation/manifest.html) <https://issues.dcloud.net.cn/pages/issues/detail?id=29150>
+* 优化 uni-app (x) 运行 编译器默认内存调整至 5GB [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=29501)
+* 优化 uni-app (x) 运行 编译报错后的“AI修复”和“Bug上报”交互 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=29510)
+* 修复 uni-app 运行 CLI 项目时误提示未安装 Node.js [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=29505)
+* 修复 uni-app Android平台 Object 日志链接解析异常和错误日志链接定位偏移 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=29513)
+* 优化 uni-app (x) Android平台 运行时设备唤醒和安装授权流程 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=29512)
+* 优化 uni-app (x) Web平台 运行日志体验 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=29511)
+* 新增 鸿蒙平台本地打包时先弹框修改应用版本号等参数 [文档](https://uniapp.dcloud.net.cn/tutorial/harmony/runbuild.html#publish) <https://issues.dcloud.net.cn/pages/issues/detail?id=29610>
+* Windows平台 修复 DevEco Studio 6.1.1 不兼容变更导致 uni-app x 鸿蒙版热更新功能失效 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=30127)
+
 ## 5.07.2026041006
 * 修复 5.0版本引发的 uni-app iOS安心打包图标没有生效 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=27902)
 
