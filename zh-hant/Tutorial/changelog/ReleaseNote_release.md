@@ -1,3 +1,8 @@
+## 5.15.2026070915
+* macOS平台(Intel) 修复 5.14版本引发的 uni-app 项目误显示 Bug上报入口 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=31071)
+* macOS平台(Intel) 修复 优化 node-sass 错误提示 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=31072)
+* Windows平台 修复 5.14版本引发的 HBuilderX可执行程序启用兼容模式后，uni-app项目无法运行 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=31073)
+
 ## 5.14.2026070214
 * 调整 内置node版本由v18.20.0升级到v22.22.2；macOS支持macOS 11+，Windows支持Windows 8.1+ [详情](https://hx.dcloud.net.cn/Tutorial/install/windows)
 * 调整 macOS(Intel) HBuilder升级Qt6，仅支持macOS 11+ [详情](https://hx.dcloud.net.cn/Tutorial/install/macosx)

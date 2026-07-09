@@ -1,3 +1,8 @@
+## 5.15.2026070915
+* macOS (Intel): Fixed an issue in version 5.14 where the Bug Report entry was incorrectly shown in uni-app projects [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=31071)
+* macOS (Intel): Fixed and improved the node-sass error messag [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=31072)
+
+
 ## 5.14.2026070214
 * Updated the built-in Node.js version from **v18.20.0** to **v22.22.2**. macOS now supports **macOS 11+**, and Windows now supports **Windows 8.1+**.  
 * Updated **HBuilder for macOS (Intel)** to **Qt 6**, and it now supports only **macOS 11+**.
