@@ -82,7 +82,7 @@ adb --version
 
 ## 5. 配置 HBuilderX
 
-> `cli config set` 需 HBuilderX 5.14+ 版本
+> `cli config set` 需 HBuilderX 5.21+ 版本
 
 完成上述安装后，还需要将 Gradle 和 Android SDK 的路径写入 HBuilderX 配置。仅在 Shell 中设置环境变量并不够，因为 HBuilderX 不会自动读取当前终端中的这些变量。
 

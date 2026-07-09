@@ -1,6 +1,6 @@
 # CLI 编译 UTS 插件 - Android/iOS@compile-uts
 
-> 需 HBuilderX 5.14+ 版本
+> 需 HBuilderX 5.21+ 版本
 
 通过 CLI 编译 **Android** 或 **iOS** 平台的 UTS **单文件**，或单个 `uni_modules` 模块。
 

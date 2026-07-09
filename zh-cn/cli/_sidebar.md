@@ -3,6 +3,7 @@
     * [用户账号操作](/cli/user.md)
     * [关闭/打开项目](/cli/project.md)
     * [打开文件](/cli/file.md)
+    * [配置项操作](/cli/config.md)
     * [uni-app / uni-app x 发行 - Android/iOS 云打包](/cli/pack.md)
     * [uni-app / uni-app x 发行 - App 生成本地打包资源](/cli/publish-app-appResource.md)
     * [uni-app / uni-app x 发行 - 鸿蒙-本地打包](/cli/pack-app-harmony.md)
