@@ -1,5 +1,11 @@
+## 5.21.2026071110-alpha
+* macOS平台(Intel) 修复 5.14版本引发的 uni-app 项目误显示 Bug上报入口 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=31071)
+* macOS平台(Intel) 修复 优化 node-sass 错误提示 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=31072)
+* Windows平台 修复 5.14版本引发的 HBuilderX可执行程序启用兼容模式后，uni-app项目无法运行 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=31073)
+
 ## 5.14.2026062614-alpha
 * 新增 云打包 通过`CLI pack cancel`取消打包 [文档](https://hx.dcloud.net.cn/cli/pack) <https://issues.dcloud.net.cn/pages/issues/detail?id=30500>
+* 新增 云打包 通过`CLI pack`支持广告等更多参数 [文档](https://hx.dcloud.net.cn/cli/pack) <https://issues.dcloud.net.cn/pages/issues/detail?id=30645>
 * 新增 鸿蒙平台本地打包时先弹框修改应用版本号等参数 [文档](https://uniapp.dcloud.net.cn/tutorial/harmony/runbuild.html#publish) <https://issues.dcloud.net.cn/pages/issues/detail?id=29610>
 * Windows平台 修复 DevEco Studio 6.1.1 不兼容变更导致 uni-app x 鸿蒙版热更新功能失效 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=30127)
 

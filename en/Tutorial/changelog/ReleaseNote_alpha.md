@@ -1,5 +1,11 @@
+## 5.21.2026071110-alpha
+* Fixed some minor issues
+
 ## 5.14.2026062614-alpha
-* Fixed some Bugs
+* Added support for canceling cloud packaging via `CLI pack cancel`. [Documentation](https://hx.dcloud.net.cn/cli/pack) <https://issues.dcloud.net.cn/pages/issues/detail?id=30500>
+* Added support for more cloud packaging parameters, including ads, via `CLI pack`. [Documentation](https://hx.dcloud.net.cn/cli/pack) <https://issues.dcloud.net.cn/pages/issues/detail?id=30645>
+* Added a prompt to modify the app version number and other parameters before local packaging for the HarmonyOS platform. [Documentation](https://uniapp.dcloud.net.cn/tutorial/harmony/runbuild.html#publish) <https://issues.dcloud.net.cn/pages/issues/detail?id=29610>
+* Fixed an incompatibility change in DevEco Studio 6.1.1 on Windows that caused the hot update feature of the uni-app x HarmonyOS version to stop working. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=30127)
 
 
 ## 5.13.2026061207-alpha
