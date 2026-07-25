@@ -1,5 +1,19 @@
+## 5.22.2026072503-alpha
+* Fixed a preview style conflict between **conditional compilation dimming** and code changes in **Compare Selected File / uni-agent plugin**. ([Details](https://issues.dcloud.net.cn/pages/issues/detail?id=26579))
+* Fixed issues introduced in **v5.0** where the **AI comparison toolbar** did not follow movement, and in multi-window scenarios some operations caused the toolbar to remain visible instead of disappearing. ([Details](https://issues.dcloud.net.cn/pages/issues/detail?id=31128))
+* Added support in **HBuilderX CLI** for dynamically querying and managing global configuration items via `config get` / `config set` commands. ([Details](https://issues.dcloud.net.cn/pages/issues/detail?id=31115))
+* Added support in **HBuilderX CLI** for standalone compilation of **App-side UTS files** and **uni_modules** modules. ([Details](https://issues.dcloud.net.cn/pages/issues/detail?id=31116))
+* Added a visual option in `manifest.json` for **uni-app x Android** to control whether `.so` libraries are compressed during packaging. ([Details](https://issues.dcloud.net.cn/pages/issues/detail?id=31099))
+* Added optional module configuration in `manifest.json` for **uni-app x iOS**: `uni-oauth` Apple Sign-In. ([Details](https://issues.dcloud.net.cn/pages/issues/detail?id=31102))
+* Added optional module configuration for **uni-app x Steam mode (Android)** in `manifest.json`: `uni-network-cronet`. ([Docs](https://doc.dcloud.net.cn/uni-app-x/collocation/manifest-ios.html#modulesoauth), [Issue](https://issues.dcloud.net.cn/pages/issues/detail?id=31450))
+* Added optional module configuration for **HarmonyOS App**: `uni-requestMerchantTransfer`. ([Docs](https://doc.dcloud.net.cn/uni-app-x/api/request-merchant-transfer.html), [Issue](https://issues.dcloud.net.cn/pages/issues/detail?id=31481))
+* Added size optimization for dynamic libraries included in app packaging. ([Details](https://issues.dcloud.net.cn/pages/issues/detail?id=31285))
+
+
 ## 5.21.2026071110-alpha
-* Fixed some minor issues
+* macOS (Intel): Fixed an issue in version 5.14 where the Bug Report entry was incorrectly shown in uni-app projects [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=31071)
+* macOS (Intel): Fixed and improved the node-sass error messag [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=31072)
+
 
 ## 5.14.2026062614-alpha
 * Added support for canceling cloud packaging via `CLI pack cancel`. [Documentation](https://hx.dcloud.net.cn/cli/pack) <https://issues.dcloud.net.cn/pages/issues/detail?id=30500>
