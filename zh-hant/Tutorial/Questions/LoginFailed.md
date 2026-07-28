@@ -22,6 +22,10 @@
 
 <img src="https://web-ext-storage.dcloud.net.cn/hx/questions/hx_login_failed_ssl.png" style="zoom:50%" />
 
+部分系统安装上面的证书后还是会报错SslHandshakeFailedError，需要下载下面的证书，macOS需要将证书设置为始终信任
+
+<a download href="https://web-ext-storage.dcloud.net.cn/hx/questions/20260728/liuyingyong.pem" target="_blank">证书下载地址</a>
+
 ##如果以上都嘗試了，還未解决，請聯系官方：
 1. Email: ide@dcloud.io
 2. QQ:搜群，群關鍵字：HBuilderX，加入群後，找群管理員幫您解決。

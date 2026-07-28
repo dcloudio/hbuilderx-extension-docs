@@ -22,6 +22,10 @@ As shown in the image below, when an SslHandshakeFailedError occurs during login
 
 <img src="https://web-ext-storage.dcloud.net.cn/hx/questions/hx_login_failed_ssl.png" style="zoom:50%" />
 
+Some systems may still report SslHandshakeFailedError after installing the certificate above. You need to download the certificate below. On macOS, set the certificate to Always Trust.
+
+<a download href="https://web-ext-storage.dcloud.net.cn/hx/questions/20260728/liuyingyong.pem" target="_blank">Certificate download URL.</a>
+
 ## If you have tried all of the above and still cannot solve the problem, please contact the official:
 1. Email: ide@dcloud.io
 2. QQ: Search the group, group keyword: HBuilderX, after joining the group, ask the group administrator to help you solve the problem.
