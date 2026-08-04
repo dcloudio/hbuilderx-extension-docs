@@ -1,3 +1,6 @@
+## 5.23.2026080313-alpha
+* 修复 cli launch 命令运行鸿蒙元服务时会卡住 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=31740)
+
 ## 5.22.2026072503-alpha
 * 修复 条件编译置灰和 对比选中文件/uni-agent插件代码修改 的预览样式冲突 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=26579)
 * 修复 5.0版本引发的 AI对比工具栏缺少跟随移动，多窗口下进行部分操作导致工具栏不消失 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=31128)

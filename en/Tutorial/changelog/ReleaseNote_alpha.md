@@ -1,3 +1,7 @@
+## 5.23.2026080313-alpha
+* Fixed some Bugs
+
+
 ## 5.22.2026072503-alpha
 * Fixed a preview style conflict between **conditional compilation dimming** and code changes in **Compare Selected File / uni-agent plugin**. ([Details](https://issues.dcloud.net.cn/pages/issues/detail?id=26579))
 * Fixed issues introduced in **v5.0** where the **AI comparison toolbar** did not follow movement, and in multi-window scenarios some operations caused the toolbar to remain visible instead of disappearing. ([Details](https://issues.dcloud.net.cn/pages/issues/detail?id=31128))
