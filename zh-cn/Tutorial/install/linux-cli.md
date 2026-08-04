@@ -17,7 +17,7 @@ cli的用途是让开发者可以在linux服务器上调用HBuilderX cli，来�
 <!-- <div style="display: block; line-height: 40px;" id="hx_alpha_download"></div>
 <div style="display: block; line-height: 40px;" id="hx_release_download"></div> -->
 
-<a id="download_alpha" download="" href="https://download1.dcloud.net.cn/download/HBuilderX.5.22.2026072503-alpha.linux_x64.full.tar.gz" target="_blank"> v5.22 alpha 下载地址</a>
+<a id="download_alpha" download="" href="https://download1.dcloud.net.cn/download/HBuilderX.5.23.2026080313-alpha.linux_x64.full.tar.gz" target="_blank"> v5.23 alpha 下载地址</a>
 
 <a id="download_release" download="" href="https://download1.dcloud.net.cn/download/HBuilderX.5.15.2026070915.linux_x64.full.tar.gz" target="_blank"> v5.15 正式版 下载地址</a>
 
