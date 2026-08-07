@@ -1,10 +1,26 @@
+## 5.23.2026080626
+* Windows平台 修复 Windows 上使用在外部资源管理器打开文件时未选中目标文件 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=29907)
+* 修复 5.0版本引发的 AI对比工具栏缺少跟随移动，多窗口下进行部分操作导致工具栏不消失 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=31128)
+* 修复 4.81版本引发的 部分git操作导致的文件变更无法在editor内同步 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=28392)
+* 修复 条件编译置灰和 对比选中文件/uni-agent插件代码修改 的预览样式冲突 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=26579)
+* 新增 HBuilderX CLI 支持通过 config get/set 命令行工具动态查询与管理全局配置项 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=31115)
+* 新增 HBuilderX CLI 独立编译 App 端 UTS 文件及 uni_modules 模块 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=31116)
+* 修复 HBuilderX cli launch 命令运行鸿蒙元服务时会卡住 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=31740)
+* 新增 manifest.json uni-app x Android平台 打包是否压缩so库的可视化选项 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=31099)
+* 新增 manifest.json uni-app x iOS平台可选模块配置 uni-oauth apple登录 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=31102)
+* 新增 manifest.json uni-app x 蒸汽模式 Android平台 可选模块配置 uni-network-cronet [文档](https://doc.dcloud.net.cn/uni-app-x/collocation/manifest-ios.html#modulesoauth) <https://issues.dcloud.net.cn/pages/issues/detail?id=31450>
+* 新增 鸿蒙App配置增加可选模块配置uni-requestMerchantTransfer [文档](https://doc.dcloud.net.cn/uni-app-x/api/request-merchant-transfer.html) <https://issues.dcloud.net.cn/pages/issues/detail?id=31481>
+* 新增 对应用打包所包含的动态库进行体积优化 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=31285)
+* 新增 uni-app x 蒸汽模式 iOS云打包 支持 arm64 模拟器打包 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=31101)
+
 ## 5.15.2026070915
 * macOS平台(Intel) 修复 5.14版本引发的 uni-app 项目误显示 Bug上报入口 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=31071)
 * macOS平台(Intel) 修复 优化 node-sass 错误提示 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=31072)
 * Windows平台 修复 5.14版本引发的 HBuilderX可执行程序启用兼容模式后，uni-app项目无法运行 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=31073)
 
 ## 5.14.2026070214
-* 调整 内置node版本由v18.20.0升级到v22.22.2；macOS支持macOS 11+，Windows支持Windows 8.1+ [详情](https://hx.dcloud.net.cn/Tutorial/install/windows)
+* 【重要】 调整 内置node版本由v18.20.0升级到v22.22.2；macOS支持macOS 11+，Windows支持Windows 8.1+ [详情](https://hx.dcloud.net.cn/Tutorial/install/windows)
+* 【重要】 uni-agent 手机版支持打包apk、上传云函数。至此可以在手机端指挥ai完成web、Android、和uniCloud的完整开发和效果查看。[详情](https://doc.dcloud.net.cn/uni-app-x/ai/uni-agent.html#mobile)
 * 调整 macOS(Intel) HBuilder升级Qt6，仅支持macOS 11+ [详情](https://hx.dcloud.net.cn/Tutorial/install/macosx)
 * 修复 语言服务 easycom组件不支持defineComponent写法 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=29065)
 * 新增 云打包 通过`CLI pack cancel`取消打包 [文档](https://hx.dcloud.net.cn/cli/pack) <https://issues.dcloud.net.cn/pages/issues/detail?id=30500>
