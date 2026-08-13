@@ -1,17 +1,21 @@
+## 5.24.2026081301
+* Fixed some Bugs
+
+
 ## 5.23.2026080626
-- **Windows platform:** Fixed an issue where using **“Open in External File Explorer”** on Windows did not select the target file. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=29907)  
-- Fixed an issue introduced in **v5.0** where the **AI comparison toolbar** did not move along properly, and in multi-window scenarios some actions caused the toolbar not to disappear. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=31128)  
-- Fixed an issue introduced in **v4.81** where some Git operations caused file changes to not sync in the editor. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=28392)  
-- Fixed a style conflict between **conditional-compilation dimming** and the preview style for **“Compare selected files / uni-agent plugin code changes.”** [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=26579)  
-- Added support in **HBuilderX CLI** for dynamically querying and managing global configuration items via `config get/set` commands. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=31115)  
-- Added support in **HBuilderX CLI** for independently compiling **UTS files** and **uni_modules** modules for the App side. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=31116)  
-- Fixed an issue where `hbuilderx cli launch` could hang when running **HarmonyOS Atomic Services**. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=31740)  
-- Added a visual option in `manifest.json` (uni-app x, Android) to control whether `.so` libraries are compressed during packaging. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=31099)  
-- Added optional module configuration in `manifest.json` (uni-app x, iOS) for **`uni-oauth` Apple Sign-In**. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=31102)  
-- Added optional module configuration in `manifest.json` (uni-app x Steam mode, Android) for **`uni-network-cronet`**. [Docs](https://doc.dcloud.net.cn/uni-app-x/collocation/manifest-ios.html#modulesoauth) | [Issue](https://issues.dcloud.net.cn/pages/issues/detail?id=31450)  
-- Added optional module configuration **`uni-requestMerchantTransfer`** for **HarmonyOS app configuration**. [Docs](https://doc.dcloud.net.cn/uni-app-x/api/request-merchant-transfer.html) | [Issue](https://issues.dcloud.net.cn/pages/issues/detail?id=31481)  
-- Added size optimization for dynamic libraries included in app packaging. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=31285)  
-- Added support for **arm64 simulator builds** in **uni-app x Steam mode iOS cloud packaging**. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=31101)  
+* **Windows platform:** Fixed an issue where using **“Open in External File Explorer”** on Windows did not select the target file. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=29907)  
+* Fixed an issue introduced in **v5.0** where the **AI comparison toolbar** did not move along properly, and in multi-window scenarios some actions caused the toolbar not to disappear. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=31128)  
+* Fixed an issue introduced in **v4.81** where some Git operations caused file changes to not sync in the editor. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=28392)  
+* Fixed a style conflict between **conditional-compilation dimming** and the preview style for **“Compare selected files / uni-agent plugin code changes.”** [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=26579)  
+* Added support in **HBuilderX CLI** for dynamically querying and managing global configuration items via `config get/set` commands. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=31115)  
+* Added support in **HBuilderX CLI** for independently compiling **UTS files** and **uni_modules** modules for the App side. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=31116)  
+* Fixed an issue where `hbuilderx cli launch` could hang when running **HarmonyOS Atomic Services**. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=31740)  
+* Added a visual option in `manifest.json` (uni-app x, Android) to control whether `.so` libraries are compressed during packaging. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=31099)  
+* Added optional module configuration in `manifest.json` (uni-app x, iOS) for **`uni-oauth` Apple Sign-In**. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=31102)  
+* Added optional module configuration in `manifest.json` (uni-app x Steam mode, Android) for **`uni-network-cronet`**. [Docs](https://doc.dcloud.net.cn/uni-app-x/collocation/manifest-ios.html#modulesoauth) | [Issue](https://issues.dcloud.net.cn/pages/issues/detail?id=31450)  
+* Added optional module configuration **`uni-requestMerchantTransfer`** for **HarmonyOS app configuration**. [Docs](https://doc.dcloud.net.cn/uni-app-x/api/request-merchant-transfer.html) | [Issue](https://issues.dcloud.net.cn/pages/issues/detail?id=31481)  
+* Added size optimization for dynamic libraries included in app packaging. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=31285)  
+* Added support for **arm64 simulator builds** in **uni-app x Steam mode iOS cloud packaging**. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=31101)  
 
 
 ## 5.15.2026070915
