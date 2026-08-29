@@ -1,3 +1,21 @@
+## 5.25.2026082902-alpha
+- **[Important]** Added/adjusted the new project type: **uni-app x** has been added and set as the default option. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=32494)
+- Added support for **code completion** in the Language Service for local test files of **cloud functions** and **cloud objects**. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=31711)
+- Fixed an issue where **code completion did not work in JQL files** in the Language Service. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=32111)
+- Fixed a **type mismatch error** in `main.uts` in the Language Service. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=32187)
+- Fixed an issue where **path suggestions in Markdown** failed under certain writing patterns in the Language Service. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=30050)
+- Fixed an issue where, after asserting a type with the `satisfies` keyword in **cloud objects**, **type properties were no longer suggested** in the Language Service. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=30852)
+- Fixed an issue where **type-checking errors for cloud objects and cloud functions** could not find the related types in the Language Service. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=30860)
+- Fixed an issue where **worktree projects could not display branches**. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=31004)
+- Added **uni-stat 2.0 configuration** for `manifest.json` in **uni-app x**. [Documentation](https://uniapp.dcloud.net.cn/uni-stat-uniappx.html) [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=32441)
+- Added support for the **runtime inspection tool** on the **App platform** in **uni-app x Steam mode**. [Documentation](https://doc.dcloud.net.cn/uni-app-x/tutorial/debug/devtools.html) [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=32424)
+- Fixed a problem where devices running **HarmonyOS below API 23** did not support hot updates; they now fall back to a full build. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=32374)
+- **macOS:** Fixed an issue where opening a virtual file from a console link and then closing it caused blank entries to appear in the “recently opened files” list in the Dock right-click menu. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=31445)
+- **Windows:** Fixed an issue where some open pages did not respond to **mouse side-button cursor-position navigation**. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=30862)
+- **Windows:** Fixed a crash in HBuilderX when opening a project in **multiple windows**. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=31525)
+- **Windows:** Fixed the Language Service error: `at Object.statSync (node:fs:1746:25)`. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=30830)
+
+
 ## 5.23.2026080313-alpha
 * Fixed some Bugs
 
