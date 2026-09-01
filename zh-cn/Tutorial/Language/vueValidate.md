@@ -8,8 +8,17 @@
 </div>
 
 ### 设置入口
-* 设置 -> 语言服务设置 -> vue语言设置 -> 启用uvue标签语法校验(仅uni-app-x项目生效)
-
+* 底部语言服务状态栏(仅uni-app-x项目生效)
 <div>
-  <img src="https://web-ext-storage.dcloud.net.cn/hx/uniappxlint/vueSetting-zh.png" style="border:1px solid #eee; border-radius: 5px;"/>
+  <img src="https://web-ext-storage.dcloud.net.cn/hx/uniappxlint/bottom-status-bar-zh.png" style="border:1px solid #eee; border-radius: 5px;"/>
+</div>
+
+* 项目右键 `语法提示和校验平台选择`
+<div>
+  <img src="https://web-ext-storage.dcloud.net.cn/hx/uniappxlint/project-context-menu-zh.png" style="border:1px solid #eee; border-radius: 5px;"/>
+</div>
+
+* 设置界面
+<div>
+  <img src="https://web-ext-storage.dcloud.net.cn/hx/uniappxlint/setting-zh.png" style="border:1px solid #eee; border-radius: 5px;"/>
 </div>
