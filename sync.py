@@ -29,10 +29,8 @@ def sync_all():
         if not os.path.exists(en_target_path):
             en_target_dir = os.path.dirname(en_target_path)
             if not os.path.exists(en_target_dir):
-                mkdir_cmd = "mkdir -p {0}".format(en_target_dir)
-                os.system(mkdir_cmd)
-            cp_cmd = "cp -pf {0} {1}".format(i,en_target_path)
-            os.system(cp_cmd)
+                os.makedirs(en_target_dir)
+            shutil.copy2(i, en_target_path)
 
     # 同步至繁体中文目录
     for i in zh_cn_all_files:
@@ -41,10 +39,8 @@ def sync_all():
         if not os.path.exists(zh_hant_target_path):
             zh_hant_target_dir = os.path.dirname(zh_hant_target_path)
             if not os.path.exists(zh_hant_target_dir):
-                mkdir_cmd = "mkdir -p {0}".format(zh_hant_target_dir)
-                os.system(mkdir_cmd)
-            cp_cmd = "cp -pf {0} {1}".format(i,zh_hant_target_path)
-            os.system(cp_cmd)
+                os.makedirs(zh_hant_target_dir)
+            shutil.copy2(i, zh_hant_target_path)
 
 
 if __name__ == "__main__":
