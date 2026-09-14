@@ -1,3 +1,7 @@
+## 5.26.2026091402-alpha
+* Fixed some Bugs
+
+
 ## 5.25.2026082902-alpha
 - **[Important]** Added/adjusted the new project type: **uni-app x** has been added and set as the default option. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=32494)
 - Added support for **code completion** in the Language Service for local test files of **cloud functions** and **cloud objects**. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=31711)

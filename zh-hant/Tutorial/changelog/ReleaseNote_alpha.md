@@ -1,5 +1,10 @@
+## 5.26.2026091402-alpha
+* 新增 语言服务 uniapp x项目支持选择支付宝小程序平台 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=25247)
+* 新增 鸿蒙App配置添加可视化配置 App Linking 和 Deep Linking [文档](https://doc.dcloud.net.cn/uni-app-x/collocation/manifest-harmony.html) <https://issues.dcloud.net.cn/pages/issues/detail?id=32557>
+* 修复 DevEco Studio 26.0.0 不兼容变更导致热更新功能失效 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=32691)
+
 ## 5.25.2026082902-alpha
-* 【重要】调整 新建项目 默认为 uni-app x 蒸汽模式 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=32494)
+* 【重要】调整 新建项目类型，默认为 uni-app x 蒸汽模式 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=32494)
 * 新增 语言服务 云函数、云对象本地测试文件支持代码提示等功能 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=31711)
 * 修复 语言服务 JQL文件代码提示不生效 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=32111)
 * 修复 语言服务 main.uts中报错类型不匹配 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=32187)
@@ -8,7 +13,7 @@
 * 修复 语言服务 云对象、云函数类型校验报错找不到相关类型的问题 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=30860)
 * 修复 worktree项目无法显示分支 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=31004)
 * 新增 manifest.json uni-app x uni统计2.0配置 [文档](https://uniapp.dcloud.net.cn/uni-stat-uniappx.html) <https://issues.dcloud.net.cn/pages/issues/detail?id=32441>
-* 新增 uni-app x 蒸汽模式 App 平台 支持运行时审查工具 [文档](https://doc.dcloud.net.cn/uni-app-x/tutorial/debug/devtools.html) <https://issues.dcloud.net.cn/pages/issues/detail?id=32424>
+* 新增 uni-app x 蒸汽模式 App 平台 支持运行时devtools工具 [文档](https://doc.dcloud.net.cn/uni-app-x/tutorial/debug/devtools.html) <https://issues.dcloud.net.cn/pages/issues/detail?id=32424>
 * 修复 低于API23的鸿蒙设备不支持热更新，回退为全量构建 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=32374)
 * macOS平台 修复 打开控制台链接指向的虚拟文件,关闭虚拟文件后任务栏右键菜单显示的最近打开文件列表多出空白记录 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=31445)
 * Windows平台 修复 部分打开的页面不响应鼠标侧键的光标位置导航 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=30862)
