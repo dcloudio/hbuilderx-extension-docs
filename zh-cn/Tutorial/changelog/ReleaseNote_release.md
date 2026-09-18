@@ -1,23 +1,5 @@
-## 5.26.2026091702
-* 【重要】调整 新建项目类型，默认为 uni-app x 蒸汽模式 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=32494)
-* 新增 语言服务 云函数、云对象本地测试文件支持代码提示等功能 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=31711)
-* 修复 语言服务 JQL文件代码提示不生效 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=32111)
-* 修复 语言服务 main.uts中报错类型不匹配 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=32187)
-* 修复 语言服务 md的路径提示在特定写法下失效 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=30050)
-* 修复 语言服务 云对象中使用`satisfies`关键字断言类型后，不提示类型属性 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=30852)
-* 修复 语言服务 云对象、云函数类型校验报错找不到相关类型的问题 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=30860)
-* 修复 worktree项目无法显示分支 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=31004)
-* macOS平台 修复 打开控制台链接指向的虚拟文件,关闭虚拟文件后任务栏右键菜单显示的最近打开文件列表多出空白记录 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=31445)
-* Windows平台 修复 部分打开的页面不响应鼠标侧键的光标位置导航 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=30862)
-* Windows平台 修复 打开多窗口项目时HBuilderX闪退 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=31525)
-* Windows平台 修复 语言服务报错：at Object.statSync (node:fs:1746:25) [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=30830)
-* 新增 uni-app x 蒸汽模式 App 平台 支持运行时devtools工具 [文档](https://doc.dcloud.net.cn/uni-app-x/tutorial/debug/devtools.html) <https://issues.dcloud.net.cn/pages/issues/detail?id=32424>
-* 新增 manifest.json uni-app x uni统计2.0配置 [文档](https://uniapp.dcloud.net.cn/uni-stat-uniappx.html) <https://issues.dcloud.net.cn/pages/issues/detail?id=32441>
-* 新增 鸿蒙App配置添加可视化配置 App Linking 和 Deep Linking [文档](https://doc.dcloud.net.cn/uni-app-x/collocation/manifest-harmony.html) <https://issues.dcloud.net.cn/pages/issues/detail?id=32557>
-* 修复 鸿蒙DevEco Studio 26.0.0 不兼容变更导致热更新功能失效 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=32691)
-
 ## 5.24.2026081301
-* 新增 云打包 支持取消打包 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=32070)
+* 修复 uniapp框架的一些Bug
 
 ## 5.23.2026080626
 * Windows平台 修复 Windows 上使用在外部资源管理器打开文件时未选中目标文件 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=29907)
