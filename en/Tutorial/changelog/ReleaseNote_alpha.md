@@ -1,3 +1,12 @@
+## 5.31.2026093020-alpha
+* Fixed an issue where the AI comparison toolbar was displayed incorrectly when the left-side view was hidden [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=32258)
+* Fixed an issue where enabling “Automatically close open tabs under a project when the project is closed or removed” in Settings did not take effect [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=32644)
+* Fixed an issue where enabling uni-agent and using the “Switch to Clean Mode” feature in the view would launch the built-in browser when exiting Clean Mode [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=32899)
+* Fixed a crash that occurred after clicking “Reinstall” when reinstalling a plugin from the installation dialog [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=32893)
+* Fixed a crash that occurred when selecting “Open” from the right-click menu in the built-in resource explorer under certain circumstances [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=33002)
+* Fixed an issue introduced in version 4.61 where the update notification in the lower-right corner was displayed over other applications [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=21461)
+
+
 ## 5.26.2026091402-alpha
 * Fixed some Bugs
 

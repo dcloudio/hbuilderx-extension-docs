@@ -1,5 +1,7 @@
+## 5.31.2026093020-alpha
+* 新增 HBuilder V 基于 vscode 内核二开的新一代IDE，更好的支持uni-app x蒸汽跨端开发 [文档](https://doc.dcloud.net.cn/hbuilderv/)
+
 ## 5.26.2026091402-alpha
-* 新增 语言服务 uniapp x项目支持选择支付宝小程序平台 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=25247)
 * 新增 鸿蒙App配置添加可视化配置 App Linking 和 Deep Linking [文档](https://doc.dcloud.net.cn/uni-app-x/collocation/manifest-harmony.html) <https://issues.dcloud.net.cn/pages/issues/detail?id=32557>
 * 修复 DevEco Studio 26.0.0 不兼容变更导致热更新功能失效 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=32691)
 
