@@ -11,7 +11,8 @@ function getLanguageText(lan) {
         "uniapp_doc": "uni-app文档",
         "unicloud_doc": "uniCloud文档",
         "natives_doc": "原生开发者支持文档",
-        "hx_doc": "HBuilder文档",
+        "hbuilderv_doc": "HBuilder V文档",
+        "hx_doc": "HBuilder X文档",
         "ecology": "生态服务",
         "marketplace": "插件市场",
         "oauth": "OAuth用户开放平台",
@@ -46,7 +47,8 @@ function getLanguageText(lan) {
             data["uniapp_doc"] = "uni-app文檔";
             data["unicloud_doc"] = "uniCloud文檔";
             data["natives_doc"] = "原生開發者支持文檔";
-            data["hx_doc"] = "HBuilder文檔";
+            data["hbuilderv_doc"] = "HBuilder V文檔";
+            data["hx_doc"] = "HBuilder X文檔";
             data["ecology"] = "生態服務";
             data["marketplace"] = "插件市場";
             data["oauth"] = "OAuth用戶開放平臺";
@@ -173,7 +175,7 @@ function initFootLeftNavBar(lan=undefined) {
 // 右侧
 function initFootRightNavBar(lan=undefined) {
     let data = getLanguageText(lan);
-    let {operations_product,uni_statistics,uni_publish,developer_services,ask,backstage,technical_doc,uniapp_doc,unicloud_doc,natives_doc,hx_doc,ecology,marketplace,oauth,about,dcloud,app_case,demand_for_wall,license,join_us,sponsor_us,contact_us,business_cooperation,cooperation} = data;
+    let {operations_product,uni_statistics,uni_publish,developer_services,ask,backstage,technical_doc,uniapp_doc,unicloud_doc,natives_doc,hbuilderv_doc,hx_doc,ecology,marketplace,oauth,about,dcloud,app_case,demand_for_wall,license,join_us,sponsor_us,contact_us,business_cooperation,cooperation} = data;
     var aboutusList = [{
             'title': operations_product,
             'content': [{
@@ -227,6 +229,10 @@ function initFootRightNavBar(lan=undefined) {
                 {
                     'subTitle': natives_doc,
                     'url': 'https://nativesupport.dcloud.net.cn/'
+                },
+                {
+                    'subTitle': hbuilderv_doc,
+                    'url': 'https://doc.dcloud.net.cn/hbuilderv/'
                 },
                 {
                     'subTitle': hx_doc,

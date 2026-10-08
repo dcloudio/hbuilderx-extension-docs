@@ -2,6 +2,7 @@
 * [插件教程](/ExtensionTutorial/README.md)
 * [插件API](/ExtensionDocs/Api/README.md)
 * [CLI命令行工具](/cli/README.md)
+* [HBuilder V](https://doc.dcloud.net.cn/hbuilderv/)
 
 <ul class="nav-href">
     <li class="dropdown">
