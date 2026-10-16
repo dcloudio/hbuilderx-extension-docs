@@ -1,3 +1,10 @@
+## 5.32.2026101609-alpha
+- **Fixed:** The right-side view displayed incorrectly; the web browser and `uni-agent` views did not correspond to their tab titles. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=33214)
+- **Fixed:** In version 5.31, the **New Component** option was displayed repeatedly in the context menu when right-clicking the `components` directory. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=33414)
+- **Added:** Updated the language service for uni-app x projects in Vapor Mode to use the standard ES syntax library. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=33705)
+- **macOS:** **Fixed:** In version 5.31, moving the mouse into the Project Manager area on the left while in full-screen mode caused full-screen mode to exit and returned the user to the desktop. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=33450)
+
+
 ## 5.31.2026093020-alpha
 * Fixed an issue where the AI comparison toolbar was displayed incorrectly when the left-side view was hidden [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=32258)
 * Fixed an issue where enabling “Automatically close open tabs under a project when the project is closed or removed” in Settings did not take effect [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=32644)

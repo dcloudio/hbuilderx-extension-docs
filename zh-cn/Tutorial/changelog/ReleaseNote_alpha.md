@@ -1,3 +1,11 @@
+## 5.32.2026101609-alpha
+* 修复 右侧视图显示异常；web浏览器和uni-agent显示时和tab标题不对应 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=33214)
+* 修复 5.31版本引发的 components 目录右键菜单重复显示新建组件选项 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=33414)
+* 修复 uni-app x Bug上报选择Android平台且未勾选渲染模式时，上报后平台显示全部 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=33800)
+* 调整 语言服务 uni-app x 蒸汽模式 调整为使用ES标准语法库 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=33705)
+* macOS平台 修复 5.31版本引发的 全屏状态下，鼠标移入左侧项目管理器区域时触发退出全屏回到桌面 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=33450)
+* macOS平台(Apple Silicon) 修复 本地调试不支持Headers、Request等Nodejs 18+的全局对象 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=33593)
+
 ## 5.31.2026093020-alpha
 * 新增 HBuilder V 基于 vscode 内核二开的新一代IDE，更好的支持uni-app x蒸汽跨端开发 [文档](https://doc.dcloud.net.cn/hbuilderv/)
 
