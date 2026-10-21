@@ -1,3 +1,9 @@
+## 5.33.2026102115-alpha
+* 新增 语言服务 调整uniapp x项目蒸汽模式默认开启平台为：`WEB`、`MP-WEIXIN` [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=33993)
+* 修复 语言服务 style校验在特定情况下误报错 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=33988)
+* macOS平台(Apple Silicon) 修复 语言服务 首次启动时条件编译置可能不生效 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=33995)
+* 修复 DevTools 界面一直显示等待应用连接 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=33983)
+
 ## 5.32.2026101609-alpha
 * 修复 右侧视图显示异常；web浏览器和uni-agent显示时和tab标题不对应 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=33214)
 * 修复 5.31版本引发的 components 目录右键菜单重复显示新建组件选项 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=33414)

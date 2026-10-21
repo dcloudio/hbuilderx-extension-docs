@@ -1,3 +1,10 @@
+## 5.33.2026102115-alpha
+* Added Language Service: Adjusted the default enabled platforms for steam mode in uni-app x projects to: `WEB`, `MP-WEIXIN` [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=33993)
+* Fixed Language Service: Style validation falsely reporting errors in specific cases [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=33988)
+* macOS platform (Apple Silicon): Fixed an issue where conditional compilation might not take effect on first launch of the Language Service [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=33995)
+* Fixed DevTools interface continuously showing "Waiting for app connection" [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=33983)
+
+
 ## 5.32.2026101609-alpha
 - **Fixed:** The right-side view displayed incorrectly; the web browser and `uni-agent` views did not correspond to their tab titles. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=33214)
 - **Fixed:** In version 5.31, the **New Component** option was displayed repeatedly in the context menu when right-clicking the `components` directory. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=33414)
