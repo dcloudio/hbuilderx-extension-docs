@@ -238,6 +238,7 @@
 |View Running Logs|workbench.action.openlog|
 |Release Notes|update.showCurrentReleaseNotes|
 |Check for Updates|update.checkForUpdate|
+|Auto Update|workbench.action.autoUpdate|
 |License|workbench.action.openLicense|
 |Readme|workbench.action.openReadme|
 |Sponsor Us ...|workbench.action.opensponsor|

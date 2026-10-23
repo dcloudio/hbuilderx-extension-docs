@@ -238,6 +238,7 @@
 |查看运行日志|workbench.action.openlog|
 |历次更新说明|update.showCurrentReleaseNotes|
 |检查更新|update.checkForUpdate|
+|自动更新|workbench.action.autoUpdate|
 |许可协议|workbench.action.openLicense|
 |自述文件|workbench.action.openReadme|
 |赞助我们 ...|workbench.action.opensponsor|
