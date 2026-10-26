@@ -1,6 +1,6 @@
 # CLI uni-app x 蒸汽模式 DevTools@uniappx-vapor-devtools
 
-> 需 HBuilderX **5.33+** 版本，且需先安装 `uniappx-vapor-devtools` 插件
+> 需 HBuilderX **5.31+** 版本，且需先安装 `uniappx-vapor-devtools` 插件
 
 通过 CLI 创建、复用 uni-app x **蒸汽模式** App 的 DevTools 调试会话，并在不打开 DevTools 窗口的情况下读取或修改应用的调试数据（DOM、样式、页面、Network、Storage 等），可用于无人值守调试、自动化脚本等场景。
 
