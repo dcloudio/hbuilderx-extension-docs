@@ -19,7 +19,7 @@ It provides support for continuous integration, automated releases, and automate
 
 <a id="download_alpha" download="" href="https://download1.dcloud.net.cn/download/HBuilderX.5.33.2026102115-alpha.linux_x64.full.tar.gz" target="_blank"> v5.33 alpha 下载地址</a>
 
-<a id="download_release" download="" href="https://download1.dcloud.net.cn/download/HBuilderX.5.26.2026091802.linux_x64.full.tar.gz" target="_blank"> v5.26 正式版 下载地址</a>
+<a id="download_release" download="" href="https://download1.dcloud.net.cn/download/HBuilderX.5.33.2026102401.linux_x64.full.tar.gz" target="_blank"> v5.33 正式版 下载地址</a>
 
 For historical versions, you can download from Baidu Netdisk, [Netdisk Access](https://pan.baidu.com/s/1kvigifhSaEImD-gCx_DQ8Q)
 Extraction code: bmnh
