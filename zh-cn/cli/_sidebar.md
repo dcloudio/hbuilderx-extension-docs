@@ -21,6 +21,7 @@
     * [uni-app / uni-app x 运行日志 - 小程序](cli/logcat-miniProgram.md)
     * [uni-app / uni-app x 运行日志 - uniCloud](cli/logcat-unicloud.md)
     * [uni-app / uni-app x 截图 - 手机、模拟器与 Web](cli/screencap-app.md)
+    * [uni-app x 蒸汽模式 DevTools](/cli/uniappx-vapor-devtools.md)
     * [获取设备列表](/cli/devices-list.md)
     * [uniCloud](/cli/uniCloud.md)
     * [前端网页托管](/cli/uniCloud-hosting.md)

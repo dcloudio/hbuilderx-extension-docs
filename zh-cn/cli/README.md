@@ -78,3 +78,4 @@ CLI 的运行、发行等命令面向 **uni-app** 与 **uni-app x** 项目。各
 |app打包												|[详情](/cli/pack)						|
 |uniCloud操作，比如云函数上传等	|[详情](/cli/uniCloud)				|
 |uniCloud 前端网页托管					|[详情](/cli/uniCloud-hosting)|
+|uni-app x 蒸汽模式 DevTools	|[详情](/cli/uniappx-vapor-devtools)|
