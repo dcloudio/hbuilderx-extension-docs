@@ -1,3 +1,26 @@
+## 5.33.2026102401
+* Adjusted Language Service uni-app x Steam mode default enabled platforms to: `WEB`, `MP-WEIXIN` [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=33993)
+* Added Language Service uni-app x Steam mode js/ts syntax support [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=33369)
+* Adjusted Language Service uni-app x Steam mode to use the ES standard syntax library [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=33705)
+* Fixed Language Service style validation false errors in certain cases [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=33988)
+* macOS platform (Apple Silicon) Fixed Language Service conditional compilation possibly not taking effect on first startup [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=33995)
+* Fixed AI comparison toolbar displaying in the wrong position when the left view is hidden [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=32258)
+* Fixed the setting "Automatically close open tabs under the project when the project is closed or removed" not taking effect [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=32644)
+* Fixed an issue where, after enabling uni-agent, using the "Toggle Pure Mode" feature in the view would launch the built-in browser when exiting the feature [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=32899)
+* Fixed software crash after clicking reinstall in the reinstall plugin dialog [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=32893)
+* Fixed software crash when selecting "Open" from the context menu in the built-in resource manager in certain cases [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=33002)
+* Fixed an issue introduced in version 4.61 where the update notification in the lower-right corner was displayed over other program windows [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=21461)
+* Added uni_modules CLI mode features such as plugin publishing and modifying basic plugin information, bringing it in line with GUI mode [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=32035)
+* Added uni_modules support for UASM category plugins, including features such as creation and publishing to the plugin marketplace [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=32927)
+* Fixed abnormal display of the right view; web browser and uni-agent display did not match the tab title [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=33214)
+* Fixed uni-app x iOS DevTools continuously showing waiting for application connection when multiple network cards are present [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=33983)
+* Fixed uni-app x Bug reporting showing all platforms after submission when the Android platform was selected and no rendering mode was checked [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=33800)
+* macOS platform Fixed inability to automatically open the simulator under macOS 28 [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=33374)
+* macOS platform (Apple Silicon) Fixed local debugging not supporting Node.js 18+ global objects such as Headers and Request [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=33593)
+* Added visual configuration of App Linking and Deep Linking in HarmonyOS app configuration [Documentation](https://doc.dcloud.net.cn/uni-app-x/collocation/manifest-harmony.html) <https://issues.dcloud.net.cn/pages/issues/detail?id=32557>
+* Fixed hot update functionality failure caused by incompatible changes in DevEco Studio 26.0.0 [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=32691)
+
+
 ## 5.26.2026091802
 - **[Important]** Added/adjusted the new project type: **uni-app x** has been added and set as the default option. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=32494)
 - Added support for **code completion** in the Language Service for local test files of **cloud functions** and **cloud objects**. [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=31711)
