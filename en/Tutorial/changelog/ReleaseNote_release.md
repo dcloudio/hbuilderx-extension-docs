@@ -1,4 +1,11 @@
+## 5.34.2026102909
+* Fixed Language Service i18n internationalization hover tooltip not working in uni-app x projects [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=34072)
+* Fixed an issue introduced in version 5.33 where, in some scenarios, the compiler could not find the TypeScript compilation plugin, causing compilation to fail [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=34194)
+* Fixed an issue introduced in version 5.33 where Chrome debugging breakpoints did not take effect after running Web to the browser and clicking to debug [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=34199)
+
+
 ## 5.33.2026102401
+* Added uni-app x Steam mode App platform devtools tool providing CLI invocation [Documentation](https://hx.dcloud.net.cn/cli/uniappx-vapor-devtools)
 * Adjusted Language Service uni-app x Steam mode default enabled platforms to: `WEB`, `MP-WEIXIN` [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=33993)
 * Added Language Service uni-app x Steam mode js/ts syntax support [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=33369)
 * Adjusted Language Service uni-app x Steam mode to use the ES standard syntax library [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=33705)
@@ -15,7 +22,7 @@
 * Fixed abnormal display of the right view; web browser and uni-agent display did not match the tab title [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=33214)
 * Fixed uni-app x iOS DevTools continuously showing waiting for application connection when multiple network cards are present [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=33983)
 * Fixed uni-app x Bug reporting showing all platforms after submission when the Android platform was selected and no rendering mode was checked [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=33800)
-* macOS platform Fixed inability to automatically open the simulator under macOS 28 [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=33374)
+* macOS platform Fixed inability to automatically open the simulator under macOS 27 [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=33374)
 * macOS platform (Apple Silicon) Fixed local debugging not supporting Node.js 18+ global objects such as Headers and Request [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=33593)
 * Added visual configuration of App Linking and Deep Linking in HarmonyOS app configuration [Documentation](https://doc.dcloud.net.cn/uni-app-x/collocation/manifest-harmony.html) <https://issues.dcloud.net.cn/pages/issues/detail?id=32557>
 * Fixed hot update functionality failure caused by incompatible changes in DevEco Studio 26.0.0 [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=32691)

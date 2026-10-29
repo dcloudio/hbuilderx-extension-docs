@@ -1,4 +1,10 @@
+## 5.34.2026102909
+* 修复 语言服务 uniapp x项目i18n国际化悬浮提示失效 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=34072)
+* 修复 5.33版本引发的 在部分场景下，编译器无法找到 TypeScript 编译插件，导致编译失败 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=34194)
+* 修复 5.33版本引发的 Web 运行到浏览器后点击 Chrome 调试断点没有生效 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=34199)
+
 ## 5.33.2026102401
+* 【重要】新增 uni-app x 蒸汽模式 App 平台 devtools工具提供CLI调用 [文档](https://hx.dcloud.net.cn/cli/uniappx-vapor-devtools)
 * 调整 语言服务 uni-app x 蒸汽模式 默认开启平台为：`WEB`、`MP-WEIXIN` [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=33993)
 * 新增 语言服务 uni-app x 蒸汽模式 js/ts语法支持 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=33369)
 * 调整 语言服务 uni-app x 蒸汽模式 调整为使用ES标准语法库 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=33705)
@@ -15,7 +21,7 @@
 * 修复 右侧视图显示异常；web浏览器和uni-agent显示时和tab标题不对应 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=33214)
 * 修复 uni-app x iOS DevTools 在多网卡时一直显示等待应用连接 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=33983)
 * 修复 uni-app x Bug上报 选择Android平台且未勾选渲染模式时，上报后平台显示全部 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=33800)
-* macOS平台 修复 macOS 28 下无法自动打开模拟器 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=33374)
+* macOS平台 修复 macOS 27 下无法自动打开模拟器 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=33374)
 * macOS平台(Apple Silicon) 修复 本地调试不支持Headers、Request等Nodejs 18+的全局对象 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=33593)
 * 新增 鸿蒙App配置添加可视化配置 App Linking 和 Deep Linking [文档](https://doc.dcloud.net.cn/uni-app-x/collocation/manifest-harmony.html) <https://issues.dcloud.net.cn/pages/issues/detail?id=32557>
 * 修复 DevEco Studio 26.0.0 不兼容变更导致热更新功能失效 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=32691)
