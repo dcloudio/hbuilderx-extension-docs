@@ -1,8 +1,18 @@
+## 5.36.2026111207-alpha
+* 新增 HBuilderX 支持 无头CLI [文档](https://hx.dcloud.net.cn/cli/headless) <https://issues.dcloud.net.cn/pages/issues/detail?id=34721>
+* 修复 丢弃uni-agent插件新建的文件时出现另存为/是否保存多余弹窗，弹窗的某些选择造成闪退 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=34049)
+* 修复 5.22版本引发的 同名变量在editor垂直滚动条上的色块跳转功能失效 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=34426)
+* 修复 蒸汽模式下，代码提示的平台兼容性描述不正确 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=34682)
+* 新增 鸿蒙App配置添加“华为支付”的可视化配置选项 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=34265)
+* 修复 鸿蒙App配置中的版本号设置不能适应新的鸿蒙版本号格式 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=34655)
+* Windows平台 修复 保存新文件时，在保存文件弹窗内右键使用HBuilderX打开另一文件，发生闪退或重启 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=34126)
+* Windows平台 修复 5.22版本引发的 打开内置终端后，AI修改工具栏无法鼠标点击 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=34461)
+
 ## 5.33.2026102115-alpha
-* 新增 语言服务 调整uniapp x项目蒸汽模式默认开启平台为：`WEB`、`MP-WEIXIN` [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=33993)
+* 新增 语言服务 调整uni-app x项目蒸汽模式默认开启平台为：`WEB`、`MP-WEIXIN` [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=33993)
 * 修复 语言服务 style校验在特定情况下误报错 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=33988)
 * macOS平台(Apple Silicon) 修复 语言服务 首次启动时条件编译置可能不生效 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=33995)
-* 修复 DevTools 界面一直显示等待应用连接 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=33983)
+* 修复 uni-app x iOS DevTools 在多网卡时一直显示等待应用连接 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=33983)
 
 ## 5.32.2026101609-alpha
 * 修复 右侧视图显示异常；web浏览器和uni-agent显示时和tab标题不对应 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=33214)

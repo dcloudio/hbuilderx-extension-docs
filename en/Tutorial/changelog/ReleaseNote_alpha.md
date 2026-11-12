@@ -1,3 +1,14 @@
+## 5.36.2026111207-alpha
+* Added HBuilderX support for headless CLI [Documentation](https://hx.dcloud.net.cn/cli/headless) <https://issues.dcloud.net.cn/pages/issues/detail?id=34721>
+* Fixed an issue where discarding a newly created file from the uni-agent plugin showed extra "Save As"/"Save?" popups, and certain choices in the popup caused a crash [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=34049)
+* Fixed an issue introduced in version 5.22 where the color-block jump feature for same-name variables on the editor vertical scrollbar stopped working [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=34426)
+* Fixed incorrect platform compatibility descriptions in code hints in Steam mode [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=34682)
+* Added a visual configuration option for "Huawei Pay" in HarmonyOS app configuration [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=34265)
+* Fixed the version number setting in HarmonyOS app configuration not adapting to the new HarmonyOS version number format [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=34655)
+* Windows platform Fixed a crash or restart when saving a new file if you right-click in the save file dialog to open another file with HBuilderX [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=34126)
+* Windows platform Fixed an issue introduced in version 5.22 where the AI modification toolbar could not be clicked with the mouse after opening the built-in terminal [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=34461)
+
+
 ## 5.33.2026102115-alpha
 * Added Language Service: Adjusted the default enabled platforms for steam mode in uni-app x projects to: `WEB`, `MP-WEIXIN` [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=33993)
 * Fixed Language Service: Style validation falsely reporting errors in specific cases [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=33988)
