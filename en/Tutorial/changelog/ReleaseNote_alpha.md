@@ -1,3 +1,7 @@
+## 5.37.2026112003-alpha
+* Fixed some Bugs
+
+
 ## 5.36.2026111207-alpha
 * Added HBuilderX support for headless CLI [Documentation](https://hx.dcloud.net.cn/cli/headless) <https://issues.dcloud.net.cn/pages/issues/detail?id=34721>
 * Fixed an issue where discarding a newly created file from the uni-agent plugin showed extra "Save As"/"Save?" popups, and certain choices in the popup caused a crash [Details](https://issues.dcloud.net.cn/pages/issues/detail?id=34049)

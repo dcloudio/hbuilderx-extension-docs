@@ -1,3 +1,7 @@
+## 5.37.2026112003-alpha
+* 修复 语言服务 进程崩溃提示信息遮挡状态栏 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=34959)
+* 新增 uniCloud schema2code 生成代码支持 uni-app x 蒸汽模式 [详情](https://ext.dcloud.net.cn/plugin?id=4684)
+
 ## 5.36.2026111207-alpha
 * 新增 HBuilderX 支持 无头CLI [文档](https://hx.dcloud.net.cn/cli/headless) <https://issues.dcloud.net.cn/pages/issues/detail?id=34721>
 * 修复 丢弃uni-agent插件新建的文件时出现另存为/是否保存多余弹窗，弹窗的某些选择造成闪退 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=34049)
