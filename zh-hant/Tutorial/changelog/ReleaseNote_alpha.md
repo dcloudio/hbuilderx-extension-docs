@@ -1,3 +1,6 @@
+## 5.38.2026112503-alpha
+* 修复 uniapp框架的一些Bug
+
 ## 5.37.2026112003-alpha
 * 修复 语言服务 进程崩溃提示信息遮挡状态栏 [详情](https://issues.dcloud.net.cn/pages/issues/detail?id=34959)
 * 新增 uniCloud schema2code 生成代码支持 uni-app x 蒸汽模式 [详情](https://ext.dcloud.net.cn/plugin?id=4684)
